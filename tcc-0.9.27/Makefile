@@ -359,7 +359,6 @@ clean:
 	rm -f tcc$(EXESUF) tcc_p$(EXESUF) *-tcc$(EXESUF) tcc.pod
 	rm -f  *~ *.o *.a *.so* *.i *.s *.out *.log lib*.def *.exe *.dll a.out tags TAGS
 	@$(MAKE) -C lib $@
-	@$(MAKE) -C tests $@
 
 distclean: clean
 	rm -f config.h config.mak config.texi tcc.1 tcc-doc.info tcc-doc.html
