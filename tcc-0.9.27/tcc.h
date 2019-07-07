@@ -35,78 +35,85 @@
 #include <time.h>
 
 #ifndef _WIN32
-# include <unistd.h>
-# include <sys/time.h>
-# ifndef CONFIG_TCC_STATIC
-#  include <dlfcn.h>
-# endif
-/* XXX: need to define this to use them in non ISOC99 context */
-extern float strtof (const char *__nptr, char **__endptr);
-extern long double strtold (const char *__nptr, char **__endptr);
+	#include <unistd.h>
+	#include <sys/time.h>
+	#ifndef CONFIG_TCC_STATIC
+		#include <dlfcn.h>
+	#endif
+	/* XXX: need to define this to use them in non ISOC99 context */
+	extern float strtof (const char *__nptr, char **__endptr);
+	extern long double strtold (const char *__nptr, char **__endptr);
 #endif
 
 #ifdef _WIN32
-# include <windows.h>
-# include <io.h> /* open, close etc. */
-# include <direct.h> /* getcwd */
-# ifdef __GNUC__
-#  include <stdint.h>
-# endif
-# define inline __inline
-# define snprintf _snprintf
-# define vsnprintf _vsnprintf
-# ifndef __GNUC__
-#  define strtold (long double)strtod
-#  define strtof (float)strtod
-#  define strtoll _strtoi64
-#  define strtoull _strtoui64
-# endif
-# ifdef LIBTCC_AS_DLL
-#  define LIBTCCAPI __declspec(dllexport)
-#  define PUB_FUNC LIBTCCAPI
-# endif
-# define inp next_inp /* inp is an intrinsic on msvc/mingw */
-# ifdef _MSC_VER
-#  pragma warning (disable : 4244)  // conversion from 'uint64_t' to 'int', possible loss of data
-#  pragma warning (disable : 4267)  // conversion from 'size_t' to 'int', possible loss of data
-#  pragma warning (disable : 4996)  // The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name
-#  pragma warning (disable : 4018)  // signed/unsigned mismatch
-#  pragma warning (disable : 4146)  // unary minus operator applied to unsigned type, result still unsigned
-#  define ssize_t intptr_t
-# endif
-# undef CONFIG_TCC_STATIC
+	#include <windows.h>
+	#include <io.h> /* open, close etc. */
+	#include <direct.h> /* getcwd */
+
+	#ifdef __GNUC__
+		#include <stdint.h>
+	#endif
+
+	#define inline __inline
+	#define snprintf _snprintf
+	#define vsnprintf _vsnprintf
+
+	#ifndef __GNUC__
+		#define strtold (long double)strtod
+		#define strtof (float)strtod
+		#define strtoll _strtoi64
+		#define strtoull _strtoui64
+	#endif
+
+	#ifdef LIBTCC_AS_DLL
+		#define LIBTCCAPI __declspec(dllexport)
+		#define PUB_FUNC LIBTCCAPI
+	#endif
+
+	# define inp next_inp /* inp is an intrinsic on msvc/mingw */
+
+	#ifdef _MSC_VER
+		#pragma warning (disable : 4244)  // conversion from 'uint64_t' to 'int', possible loss of data
+		#pragma warning (disable : 4267)  // conversion from 'size_t' to 'int', possible loss of data
+		#pragma warning (disable : 4996)  // The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name
+		#pragma warning (disable : 4018)  // signed/unsigned mismatch
+		#pragma warning (disable : 4146)  // unary minus operator applied to unsigned type, result still unsigned
+		#define ssize_t intptr_t
+	#endif
+
+	#undef CONFIG_TCC_STATIC
 #endif
 
 #ifndef O_BINARY
-# define O_BINARY 0
+	#define O_BINARY 0
 #endif
 
 #ifndef offsetof
-#define offsetof(type, field) ((size_t) &((type *)0)->field)
+	#define offsetof(type, field) ((size_t) &((type *)0)->field)
 #endif
 
 #ifndef countof
-#define countof(tab) (sizeof(tab) / sizeof((tab)[0]))
+	#define countof(tab) (sizeof(tab) / sizeof((tab)[0]))
 #endif
 
 #ifdef _MSC_VER
-# define NORETURN __declspec(noreturn)
-# define ALIGNED(x) __declspec(align(x))
+	#define NORETURN __declspec(noreturn)
+	#define ALIGNED(x) __declspec(align(x))
 #else
-# define NORETURN __attribute__((noreturn))
-# define ALIGNED(x) __attribute__((aligned(x)))
+	#define NORETURN __attribute__((noreturn))
+	#define ALIGNED(x) __attribute__((aligned(x)))
 #endif
 
 #ifdef _WIN32
-# define IS_DIRSEP(c) (c == '/' || c == '\\')
-# define IS_ABSPATH(p) (IS_DIRSEP(p[0]) || (p[0] && p[1] == ':' && IS_DIRSEP(p[2])))
-# define PATHCMP stricmp
-# define PATHSEP ";"
+	#define IS_DIRSEP(c) (c == '/' || c == '\\')
+	#define IS_ABSPATH(p) (IS_DIRSEP(p[0]) || (p[0] && p[1] == ':' && IS_DIRSEP(p[2])))
+	#define PATHCMP stricmp
+	#define PATHSEP ";"
 #else
-# define IS_DIRSEP(c) (c == '/')
-# define IS_ABSPATH(p) IS_DIRSEP(p[0])
-# define PATHCMP strcmp
-# define PATHSEP ":"
+	#define IS_DIRSEP(c) (c == '/')
+	#define IS_ABSPATH(p) IS_DIRSEP(p[0])
+	#define PATHCMP strcmp
+	#define PATHSEP ":"
 #endif
 
 /* -------------------------------------------- */
@@ -312,33 +319,35 @@ extern long double strtold (const char *__nptr, char **__endptr);
 /* include the target specific definitions */
 
 #define TARGET_DEFS_ONLY
-	#ifdef TCC_TARGET_I386
-		#include "i386-gen.c"
-		#include "i386-link.c"
-	#endif
 
-	#ifdef TCC_TARGET_X86_64
-		#include "x86_64-gen.c"
-		#include "x86_64-link.c"
-	#endif
+#ifdef TCC_TARGET_I386
+	#include "i386-gen.c"
+	#include "i386-link.c"
+#endif
 
-	#ifdef TCC_TARGET_ARM
-		#include "arm-gen.c"
-		#include "arm-link.c"
-		#include "arm-asm.c"
-	#endif
+#ifdef TCC_TARGET_X86_64
+	#include "x86_64-gen.c"
+	#include "x86_64-link.c"
+#endif
 
-	#ifdef TCC_TARGET_ARM64
-		#include "arm64-gen.c"
-		#include "arm64-link.c"
-	#endif
+#ifdef TCC_TARGET_ARM
+	#include "arm-gen.c"
+	#include "arm-link.c"
+	#include "arm-asm.c"
+#endif
 
-	#ifdef TCC_TARGET_C67
-		#define TCC_TARGET_COFF
-		#include "coff.h"
-		#include "c67-gen.c"
-		#include "c67-link.c"
-	#endif
+#ifdef TCC_TARGET_ARM64
+	#include "arm64-gen.c"
+	#include "arm64-link.c"
+#endif
+
+#ifdef TCC_TARGET_C67
+	#define TCC_TARGET_COFF
+	#include "coff.h"
+	#include "c67-gen.c"
+	#include "c67-link.c"
+#endif
+
 #undef TARGET_DEFS_ONLY
 
 /* -------------------------------------------- */
