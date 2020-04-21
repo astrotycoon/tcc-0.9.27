@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1242' type='void tok_str_free(TokenString * s)'/>
+<use f='tcc/tccgen.c' l='5030' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='7137' u='c' c='free_inline_functions'/>
+<def f='tcc/tccpp.c' l='1071' ll='1075' type='void tok_str_free(TokenString * str)'/>
+<use f='tcc/tccpp.c' l='1125' u='c' c='end_macro'/>

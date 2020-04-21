@@ -1,0 +1,12 @@
+<def f='tcc/tccgen.c' l='66' ll='72' type='struct switch_t *'/>
+<use f='tcc/tccgen.c' l='5841' u='r' c='gcase'/>
+<use f='tcc/tccgen.c' l='5842' u='r' c='gcase'/>
+<use f='tcc/tccgen.c' l='6109' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='6110' u='w' c='block'/>
+<use f='tcc/tccgen.c' l='6130' u='w' c='block'/>
+<use f='tcc/tccgen.c' l='6136' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='6148' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='6148' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='6156' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='6158' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='6160' u='r' c='block'/>

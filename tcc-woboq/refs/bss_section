@@ -1,0 +1,17 @@
+<dec f='tcc/tcc.h' l='1383' type='Section *'/>
+<def f='tcc/tccelf.c' l='29' type='Section *'/>
+<use f='tcc/tccelf.c' l='63' u='w' c='tccelf_new'/>
+<use f='tcc/tccelf.c' l='538' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='540' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='543' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='1228' u='r' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1230' u='r' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1280' u='r' c='resolve_common_syms'/>
+<use f='tcc/tccelf.c' l='1282' u='r' c='resolve_common_syms'/>
+<use f='tcc/tccelf.c' l='1418' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1422' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1424' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1436' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1442' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1445' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccgen.c' l='6958' u='r' c='decl_initializer_alloc'/>

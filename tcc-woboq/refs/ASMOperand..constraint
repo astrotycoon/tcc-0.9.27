@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='629' type='char *'/>
+<use f='tcc/i386-asm.c' l='1249' u='r' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='1302' u='r' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='1425' u='r' c='asm_compute_constraints'/>
+<offset>64</offset>
+<use f='tcc/tccasm.c' l='1112' u='w' c='parse_asm_operands'/>
+<use f='tcc/tccasm.c' l='1113' u='r' c='parse_asm_operands'/>
+<use f='tcc/tccasm.c' l='1128' u='r' c='parse_asm_operands'/>
+<use f='tcc/tccasm.c' l='1239' u='r' c='asm_instr'/>

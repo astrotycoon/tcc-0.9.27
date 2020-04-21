@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='826' type='int'/>
+<offset>11168</offset>
+<doc f='tcc/tcc.h' l='826'>/* number of libs thereof */</doc>
+<use f='tcc/libtcc.c' l='1753' u='w' c='tcc_parse_args'/>
+<use f='tcc/tcc.c' l='296' u='r' c='main'/>

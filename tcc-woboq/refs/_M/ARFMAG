@@ -1,0 +1,4 @@
+<dec f='tcc/tcctools.c' l='34'/>
+<use f='tcc/tcctools.c' l='78' u='c'/>
+<use f='tcc/tcctools.c' l='88' u='c'/>
+<doc f='tcc/tcctools.c' l='33'>//#define ARMAG  &quot;!&lt;arch&gt;\n&quot;</doc>

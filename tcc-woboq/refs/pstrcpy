@@ -1,0 +1,14 @@
+<dec f='tcc/tcc.h' l='1103' type='char * pstrcpy(char * buf, int buf_size, const char * s)'/>
+<doc f='tcc/tcc.h' l='1102'>/* public functions currently used by the tcc main function */</doc>
+<def f='tcc/libtcc.c' l='141' ll='158' type='char * pstrcpy(char * buf, int buf_size, const char * s)'/>
+<use f='tcc/libtcc.c' l='166' u='c' c='pstrcat'/>
+<use f='tcc/libtcc.c' l='587' u='c' c='tcc_open_bf'/>
+<doc f='tcc/libtcc.c' l='140'>/* copy a string and truncate it. */</doc>
+<use f='tcc/tccelf.c' l='2970' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccgen.c' l='405' u='c' c='put_extern_sym2'/>
+<use f='tcc/tccgen.c' l='2955' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='7114' u='c' c='gen_inline_functions'/>
+<use f='tcc/tccpp.c' l='1830' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1956' u='c' c='preprocess'/>
+<use f='tcc/tccrun.c' l='382' u='c' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='445' u='c' c='rt_printline'/>

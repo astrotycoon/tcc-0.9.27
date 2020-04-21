@@ -1,0 +1,23 @@
+<dec f='tcc/elf.h' l='509' type='Elf32_Addr'/>
+<dec f='tcc/elf.h' l='520' type='Elf64_Addr'/>
+<dec f='tcc/elf.h' l='528' type='Elf32_Addr'/>
+<dec f='tcc/elf.h' l='535' type='Elf64_Addr'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='509'>/* Address */</doc>
+<doc f='tcc/elf.h' l='520'>/* Address */</doc>
+<doc f='tcc/elf.h' l='528'>/* Address */</doc>
+<doc f='tcc/elf.h' l='535'>/* Address */</doc>
+<use f='tcc/tccelf.c' l='597' u='w' c='put_elf_reloca'/>
+<use f='tcc/tccelf.c' l='631' u='r' c='squeeze_multi_relocs'/>
+<use f='tcc/tccelf.c' l='633' u='r' c='squeeze_multi_relocs'/>
+<use f='tcc/tccelf.c' l='643' u='r' c='squeeze_multi_relocs'/>
+<use f='tcc/tccelf.c' l='643' u='r' c='squeeze_multi_relocs'/>
+<use f='tcc/tccelf.c' l='837' u='r' c='relocate_section'/>
+<use f='tcc/tccelf.c' l='845' u='r' c='relocate_section'/>
+<use f='tcc/tccelf.c' l='861' u='w' c='relocate_rel'/>
+<use f='tcc/tccelf.c' l='1368' u='r' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='2534' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2539' u='w' c='tcc_load_object_file'/>
+<use f='tcc/tccgen.c' l='6505' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6507' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6516' u='r' c='init_putv'/>

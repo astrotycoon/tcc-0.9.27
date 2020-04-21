@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1180' type='int tcc_add_dll(TCCState * s, const char * filename, int flags)'/>
+<def f='tcc/libtcc.c' l='1124' ll='1128' type='int tcc_add_dll(TCCState * s, const char * filename, int flags)'/>
+<doc f='tcc/libtcc.c' l='1123'>/* XXX: add &apos;-rpath&apos; option support ? */</doc>
+<use f='tcc/tccelf.c' l='2784' u='c' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2931' u='c' c='ld_add_file'/>

@@ -1,0 +1,14 @@
+<def f='tcc/tcc.h' l='588' ll='599'/>
+<use f='tcc/tcc.h' l='596'/>
+<use f='tcc/tcc.h' l='588'/>
+<size>56</size>
+<doc f='tcc/tcc.h' l='587'>/* used to record tokens */</doc>
+<mbr r='TokenString::str' o='0' t='int *'/>
+<mbr r='TokenString::len' o='64' t='int'/>
+<mbr r='TokenString::lastlen' o='96' t='int'/>
+<mbr r='TokenString::allocated_len' o='128' t='int'/>
+<mbr r='TokenString::last_line_num' o='160' t='int'/>
+<mbr r='TokenString::save_line_num' o='192' t='int'/>
+<mbr r='TokenString::prev' o='256' t='struct TokenString *'/>
+<mbr r='TokenString::prev_ptr' o='320' t='const int *'/>
+<mbr r='TokenString::alloc' o='384' t='char'/>

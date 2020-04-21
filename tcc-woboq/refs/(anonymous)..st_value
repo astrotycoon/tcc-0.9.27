@@ -1,0 +1,46 @@
+<dec f='tcc/elf.h' l='395' type='Elf32_Addr'/>
+<dec f='tcc/elf.h' l='408' type='Elf64_Addr'/>
+<use f='tcc/i386-asm.c' l='509' u='r' c='gen_disp32'/>
+<use f='tcc/i386-asm.c' l='1038' u='r' c='asm_opcode'/>
+<offset>64</offset>
+<doc f='tcc/elf.h' l='395'>/* Symbol value */</doc>
+<doc f='tcc/elf.h' l='408'>/* Symbol value */</doc>
+<use f='tcc/tccasm.c' l='172' u='r' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='293' u='r' c='asm_expr_sum'/>
+<use f='tcc/tccasm.c' l='293' u='r' c='asm_expr_sum'/>
+<use f='tcc/tccasm.c' l='298' u='r' c='asm_expr_sum'/>
+<use f='tcc/tccasm.c' l='395' u='w' c='asm_new_label1'/>
+<use f='tcc/tccasm.c' l='419' u='r' c='set_symbol'/>
+<use f='tcc/tccasm.c' l='653' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccelf.c' l='173' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='403' u='w' c='put_elf_sym'/>
+<use f='tcc/tccelf.c' l='471' u='r' c='get_elf_sym_addr'/>
+<use f='tcc/tccelf.c' l='507' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='563' u='w' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='794' u='w' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='812' u='w' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='817' u='w' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='841' u='r' c='relocate_section'/>
+<use f='tcc/tccelf.c' l='982' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1280' u='w' c='resolve_common_syms'/>
+<use f='tcc/tccelf.c' l='1281' u='r' c='resolve_common_syms'/>
+<use f='tcc/tccelf.c' l='1323' u='r' c='fill_got_entry'/>
+<use f='tcc/tccelf.c' l='1372' u='r' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1430' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1430' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1459' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1482' u='r' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='1505' u='r' c='export_global_syms'/>
+<use f='tcc/tccelf.c' l='2205' u='w' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2495' u='w' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2499' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2770' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccgen.c' l='414' u='w' c='put_extern_sym2'/>
+<use f='tcc/tccgen.c' l='6495' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6505' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6507' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6516' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='7352' u='r' c='decl0'/>
+<use f='tcc/tccrun.c' l='443' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='444' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='447' u='r' c='rt_printline'/>

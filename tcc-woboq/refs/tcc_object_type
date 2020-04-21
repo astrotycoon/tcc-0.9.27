@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1437' type='int tcc_object_type(int fd, Elf64_Ehdr * h)'/>
+<use f='tcc/libtcc.c' l='1025' u='c' c='tcc_add_file_internal'/>
+<def f='tcc/tccelf.c' l='2262' ll='2279' type='int tcc_object_type(int fd, Elf64_Ehdr * h)'/>
+<use f='tcc/tccelf.c' l='2303' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2677' u='c' c='tcc_load_archive'/>

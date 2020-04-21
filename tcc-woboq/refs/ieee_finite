@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1321' type='int ieee_finite(double d)'/>
+<def f='tcc/tccgen.c' l='112' ll='117' type='int ieee_finite(double d)'/>
+<use f='tcc/tccgen.c' l='2043' u='c' c='gen_opif'/>
+<use f='tcc/tccgen.c' l='2043' u='c' c='gen_opif'/>
+<doc f='tcc/tccgen.c' l='111'>/* XXX: endianness dependent */</doc>

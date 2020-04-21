@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='658' type='int'/>
+<offset>96</offset>
+<doc f='tcc/tcc.h' l='658'>/* if true, do not use common symbols for .bss data */</doc>
+<use f='tcc/libtcc.c' l='744' u='w' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='1576' u='a'/>
+<use f='tcc/libtcc.c' l='1576' u='a'/>
+<use f='tcc/libtcc.c' l='1576' u='a'/>
+<use f='tcc/libtcc.c' l='1576' u='a'/>
+<use f='tcc/tccgen.c' l='6957' u='r' c='decl_initializer_alloc'/>

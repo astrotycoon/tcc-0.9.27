@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='632' type='int'/>
+<use f='tcc/i386-asm.c' l='1240' u='w' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='1257' u='w' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='1304' u='r' c='asm_compute_constraints'/>
+<offset>320</offset>
+<doc f='tcc/tcc.h' l='632'>/* if &gt;= 0, gives reference to a output constraint */</doc>

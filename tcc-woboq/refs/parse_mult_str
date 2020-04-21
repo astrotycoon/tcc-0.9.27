@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1351' type='void parse_mult_str(CString * astr, const char * msg)'/>
+<use f='tcc/tccasm.c' l='1111' u='c' c='parse_asm_operands'/>
+<def f='tcc/tccgen.c' l='3258' ll='3270' type='void parse_mult_str(CString * astr, const char * msg)'/>
+<use f='tcc/tccgen.c' l='3311' u='c' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3319' u='c' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3328' u='c' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='4235' u='c' c='parse_asm_str'/>

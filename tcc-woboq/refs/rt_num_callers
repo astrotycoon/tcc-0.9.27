@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1648' type='int'/>
+<def f='tcc/tccrun.c' l='39' type='int'/>
+<use f='tcc/tccrun.c' l='333' u='w' c='tcc_set_num_callers'/>
+<use f='tcc/tccrun.c' l='492' u='r' c='rt_error'/>

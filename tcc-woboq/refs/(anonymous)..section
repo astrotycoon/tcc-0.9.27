@@ -1,0 +1,4 @@
+<dec f='tcc/elf.h' l='1519' type='Elf32_Section'/>
+<offset>16</offset>
+<doc f='tcc/elf.h' l='1519'>/* Section header index of section affected,
+				   0 for global options.  */</doc>

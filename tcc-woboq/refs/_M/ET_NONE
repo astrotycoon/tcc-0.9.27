@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='172'/>
+<doc f='tcc/elf.h' l='170'>/* Legal values for e_type (object file type).  */</doc>

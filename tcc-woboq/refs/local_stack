@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='1291' type='Sym *'/>
+<use f='tcc/libtcc.c' l='665' u='a' c='tcc_compile'/>
+<def f='tcc/tccgen.c' l='38' type='Sym *'/>
+<use f='tcc/tccgen.c' l='554' u='r' c='sym_push'/>
+<use f='tcc/tccgen.c' l='555' u='a' c='sym_push'/>
+<use f='tcc/tccgen.c' l='3819' u='r' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='4343' u='r' c='post_type'/>
+<use f='tcc/tccgen.c' l='5946' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='5988' u='a' c='block'/>
+<use f='tcc/tccgen.c' l='6035' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='6073' u='a' c='block'/>
+<use f='tcc/tccgen.c' l='7068' u='a' c='gen_function'/>
+<use f='tcc/tccgen.c' l='7081' u='a' c='gen_function'/>

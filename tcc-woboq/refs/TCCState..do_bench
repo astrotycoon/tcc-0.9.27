@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='830' type='int'/>
+<offset>11360</offset>
+<doc f='tcc/tcc.h' l='830'>/* option -bench */</doc>
+<use f='tcc/libtcc.c' l='1760' u='w' c='tcc_parse_args'/>
+<use f='tcc/tcc.c' l='305' u='r' c='main'/>
+<use f='tcc/tcc.c' l='361' u='r' c='main'/>

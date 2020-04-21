@@ -1,0 +1,22 @@
+<dec f='tcc/tcc.h' l='1320' type='int is_float(int t)'/>
+<def f='tcc/tccgen.c' l='102' ll='107' type='int is_float(int t)'/>
+<use f='tcc/tccgen.c' l='993' u='c' c='save_reg_upstack'/>
+<use f='tcc/tccgen.c' l='1293' u='c' c='gv'/>
+<use f='tcc/tccgen.c' l='1398' u='c' c='gv'/>
+<use f='tcc/tccgen.c' l='1581' u='c' c='gv_dup'/>
+<use f='tcc/tccgen.c' l='2273' u='c' c='gen_op'/>
+<use f='tcc/tccgen.c' l='2273' u='c' c='gen_op'/>
+<use f='tcc/tccgen.c' l='2341' u='c' c='gen_op'/>
+<use f='tcc/tccgen.c' l='2354' u='c' c='gen_op'/>
+<use f='tcc/tccgen.c' l='2480' u='c' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2481' u='c' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='3184' u='c' c='vstore'/>
+<use f='tcc/tccgen.c' l='4783' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4953' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5215' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5494' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5547' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5547' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5611' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5778' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='5800' u='c' c='gfunc_return'/>

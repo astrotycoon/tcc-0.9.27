@@ -1,0 +1,2 @@
+<dec f='include/fcntl.h' l='227'/>
+<use f='include/unistd.h' l='1064' u='a'/>

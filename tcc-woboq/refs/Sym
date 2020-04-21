@@ -1,0 +1,19 @@
+<use f='tcc/tcc.h' l='396'/>
+<use f='tcc/tcc.h' l='397'/>
+<use f='tcc/tcc.h' l='398'/>
+<use f='tcc/tcc.h' l='399'/>
+<use f='tcc/tcc.h' l='420'/>
+<use f='tcc/tcc.h' l='443'/>
+<def f='tcc/tcc.h' l='478' ll='502'/>
+<use f='tcc/tcc.h' l='497'/>
+<use f='tcc/tcc.h' l='500'/>
+<use f='tcc/tcc.h' l='501'/>
+<use f='tcc/tcc.h' l='478'/>
+<size>56</size>
+<doc f='tcc/tcc.h' l='477'>/* symbol management */</doc>
+<mbr r='Sym::v' o='0' t='int'/>
+<mbr r='Sym::r' o='32' t='unsigned short'/>
+<mbr r='Sym::a' o='48' t='struct SymAttr'/>
+<mbr r='Sym::type' o='128' t='CType'/>
+<mbr r='Sym::prev' o='320' t='struct Sym *'/>
+<mbr r='Sym::prev_tok' o='384' t='struct Sym *'/>

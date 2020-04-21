@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>tcctok.h source code [tcc/tcctok.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tcc/tcctok.h'; var root_path = '..'; var data_path = '../../data'; var ecma_script_api_version = 2;</script>
+<script src='../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>tcc</a>/<a href='tcctok.h.html'>tcctok.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/* keywords */</i></td></tr>
+<tr><th id="2">2</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_INT" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_INT" title='TOK_INT' data-ref="TOK_INT" data-ref-filename="TOK_INT">TOK_INT</dfn>, <q>"int"</q>)</td></tr>
+<tr><th id="3">3</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_VOID" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_VOID" title='TOK_VOID' data-ref="TOK_VOID" data-ref-filename="TOK_VOID">TOK_VOID</dfn>, <q>"void"</q>)</td></tr>
+<tr><th id="4">4</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_CHAR" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_CHAR" title='TOK_CHAR' data-ref="TOK_CHAR" data-ref-filename="TOK_CHAR">TOK_CHAR</dfn>, <q>"char"</q>)</td></tr>
+<tr><th id="5">5</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_IF" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_IF" title='TOK_IF' data-ref="TOK_IF" data-ref-filename="TOK_IF">TOK_IF</dfn>, <q>"if"</q>)</td></tr>
+<tr><th id="6">6</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ELSE" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ELSE" title='TOK_ELSE' data-ref="TOK_ELSE" data-ref-filename="TOK_ELSE">TOK_ELSE</dfn>, <q>"else"</q>)</td></tr>
+<tr><th id="7">7</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_WHILE" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_WHILE" title='TOK_WHILE' data-ref="TOK_WHILE" data-ref-filename="TOK_WHILE">TOK_WHILE</dfn>, <q>"while"</q>)</td></tr>
+<tr><th id="8">8</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_BREAK" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_BREAK" title='TOK_BREAK' data-ref="TOK_BREAK" data-ref-filename="TOK_BREAK">TOK_BREAK</dfn>, <q>"break"</q>)</td></tr>
+<tr><th id="9">9</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_RETURN" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_RETURN" title='TOK_RETURN' data-ref="TOK_RETURN" data-ref-filename="TOK_RETURN">TOK_RETURN</dfn>, <q>"return"</q>)</td></tr>
+<tr><th id="10">10</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_FOR" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_FOR" title='TOK_FOR' data-ref="TOK_FOR" data-ref-filename="TOK_FOR">TOK_FOR</dfn>, <q>"for"</q>)</td></tr>
+<tr><th id="11">11</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_EXTERN" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_EXTERN" title='TOK_EXTERN' data-ref="TOK_EXTERN" data-ref-filename="TOK_EXTERN">TOK_EXTERN</dfn>, <q>"extern"</q>)</td></tr>
+<tr><th id="12">12</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_STATIC" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_STATIC" title='TOK_STATIC' data-ref="TOK_STATIC" data-ref-filename="TOK_STATIC">TOK_STATIC</dfn>, <q>"static"</q>)</td></tr>
+<tr><th id="13">13</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_UNSIGNED" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_UNSIGNED" title='TOK_UNSIGNED' data-ref="TOK_UNSIGNED" data-ref-filename="TOK_UNSIGNED">TOK_UNSIGNED</dfn>, <q>"unsigned"</q>)</td></tr>
+<tr><th id="14">14</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_GOTO" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_GOTO" title='TOK_GOTO' data-ref="TOK_GOTO" data-ref-filename="TOK_GOTO">TOK_GOTO</dfn>, <q>"goto"</q>)</td></tr>
+<tr><th id="15">15</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_DO" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_DO" title='TOK_DO' data-ref="TOK_DO" data-ref-filename="TOK_DO">TOK_DO</dfn>, <q>"do"</q>)</td></tr>
+<tr><th id="16">16</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_CONTINUE" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_CONTINUE" title='TOK_CONTINUE' data-ref="TOK_CONTINUE" data-ref-filename="TOK_CONTINUE">TOK_CONTINUE</dfn>, <q>"continue"</q>)</td></tr>
+<tr><th id="17">17</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_SWITCH" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_SWITCH" title='TOK_SWITCH' data-ref="TOK_SWITCH" data-ref-filename="TOK_SWITCH">TOK_SWITCH</dfn>, <q>"switch"</q>)</td></tr>
+<tr><th id="18">18</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_CASE" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_CASE" title='TOK_CASE' data-ref="TOK_CASE" data-ref-filename="TOK_CASE">TOK_CASE</dfn>, <q>"case"</q>)</td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_CONST1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_CONST1" title='TOK_CONST1' data-ref="TOK_CONST1" data-ref-filename="TOK_CONST1">TOK_CONST1</dfn>, <q>"const"</q>)</td></tr>
+<tr><th id="21">21</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_CONST2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_CONST2" title='TOK_CONST2' data-ref="TOK_CONST2" data-ref-filename="TOK_CONST2">TOK_CONST2</dfn>, <q>"__const"</q>) <i>/* gcc keyword */</i></td></tr>
+<tr><th id="22">22</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_CONST3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_CONST3" title='TOK_CONST3' data-ref="TOK_CONST3" data-ref-filename="TOK_CONST3">TOK_CONST3</dfn>, <q>"__const__"</q>) <i>/* gcc keyword */</i></td></tr>
+<tr><th id="23">23</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_VOLATILE1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_VOLATILE1" title='TOK_VOLATILE1' data-ref="TOK_VOLATILE1" data-ref-filename="TOK_VOLATILE1">TOK_VOLATILE1</dfn>, <q>"volatile"</q>)</td></tr>
+<tr><th id="24">24</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_VOLATILE2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_VOLATILE2" title='TOK_VOLATILE2' data-ref="TOK_VOLATILE2" data-ref-filename="TOK_VOLATILE2">TOK_VOLATILE2</dfn>, <q>"__volatile"</q>) <i>/* gcc keyword */</i></td></tr>
+<tr><th id="25">25</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_VOLATILE3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_VOLATILE3" title='TOK_VOLATILE3' data-ref="TOK_VOLATILE3" data-ref-filename="TOK_VOLATILE3">TOK_VOLATILE3</dfn>, <q>"__volatile__"</q>) <i>/* gcc keyword */</i></td></tr>
+<tr><th id="26">26</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_LONG" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_LONG" title='TOK_LONG' data-ref="TOK_LONG" data-ref-filename="TOK_LONG">TOK_LONG</dfn>, <q>"long"</q>)</td></tr>
+<tr><th id="27">27</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_REGISTER" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_REGISTER" title='TOK_REGISTER' data-ref="TOK_REGISTER" data-ref-filename="TOK_REGISTER">TOK_REGISTER</dfn>, <q>"register"</q>)</td></tr>
+<tr><th id="28">28</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_SIGNED1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_SIGNED1" title='TOK_SIGNED1' data-ref="TOK_SIGNED1" data-ref-filename="TOK_SIGNED1">TOK_SIGNED1</dfn>, <q>"signed"</q>)</td></tr>
+<tr><th id="29">29</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_SIGNED2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_SIGNED2" title='TOK_SIGNED2' data-ref="TOK_SIGNED2" data-ref-filename="TOK_SIGNED2">TOK_SIGNED2</dfn>, <q>"__signed"</q>) <i>/* gcc keyword */</i></td></tr>
+<tr><th id="30">30</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_SIGNED3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_SIGNED3" title='TOK_SIGNED3' data-ref="TOK_SIGNED3" data-ref-filename="TOK_SIGNED3">TOK_SIGNED3</dfn>, <q>"__signed__"</q>) <i>/* gcc keyword */</i></td></tr>
+<tr><th id="31">31</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_AUTO" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_AUTO" title='TOK_AUTO' data-ref="TOK_AUTO" data-ref-filename="TOK_AUTO">TOK_AUTO</dfn>, <q>"auto"</q>)</td></tr>
+<tr><th id="32">32</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_INLINE1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_INLINE1" title='TOK_INLINE1' data-ref="TOK_INLINE1" data-ref-filename="TOK_INLINE1">TOK_INLINE1</dfn>, <q>"inline"</q>)</td></tr>
+<tr><th id="33">33</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_INLINE2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_INLINE2" title='TOK_INLINE2' data-ref="TOK_INLINE2" data-ref-filename="TOK_INLINE2">TOK_INLINE2</dfn>, <q>"__inline"</q>) <i>/* gcc keyword */</i></td></tr>
+<tr><th id="34">34</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_INLINE3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_INLINE3" title='TOK_INLINE3' data-ref="TOK_INLINE3" data-ref-filename="TOK_INLINE3">TOK_INLINE3</dfn>, <q>"__inline__"</q>) <i>/* gcc keyword */</i></td></tr>
+<tr><th id="35">35</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_RESTRICT1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_RESTRICT1" title='TOK_RESTRICT1' data-ref="TOK_RESTRICT1" data-ref-filename="TOK_RESTRICT1">TOK_RESTRICT1</dfn>, <q>"restrict"</q>)</td></tr>
+<tr><th id="36">36</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_RESTRICT2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_RESTRICT2" title='TOK_RESTRICT2' data-ref="TOK_RESTRICT2" data-ref-filename="TOK_RESTRICT2">TOK_RESTRICT2</dfn>, <q>"__restrict"</q>)</td></tr>
+<tr><th id="37">37</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_RESTRICT3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_RESTRICT3" title='TOK_RESTRICT3' data-ref="TOK_RESTRICT3" data-ref-filename="TOK_RESTRICT3">TOK_RESTRICT3</dfn>, <q>"__restrict__"</q>)</td></tr>
+<tr><th id="38">38</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_EXTENSION" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_EXTENSION" title='TOK_EXTENSION' data-ref="TOK_EXTENSION" data-ref-filename="TOK_EXTENSION">TOK_EXTENSION</dfn>, <q>"__extension__"</q>) <i>/* gcc keyword */</i></td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_GENERIC" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_GENERIC" title='TOK_GENERIC' data-ref="TOK_GENERIC" data-ref-filename="TOK_GENERIC">TOK_GENERIC</dfn>, <q>"_Generic"</q>)</td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_FLOAT" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_FLOAT" title='TOK_FLOAT' data-ref="TOK_FLOAT" data-ref-filename="TOK_FLOAT">TOK_FLOAT</dfn>, <q>"float"</q>)</td></tr>
+<tr><th id="43">43</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_DOUBLE" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_DOUBLE" title='TOK_DOUBLE' data-ref="TOK_DOUBLE" data-ref-filename="TOK_DOUBLE">TOK_DOUBLE</dfn>, <q>"double"</q>)</td></tr>
+<tr><th id="44">44</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_BOOL" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_BOOL" title='TOK_BOOL' data-ref="TOK_BOOL" data-ref-filename="TOK_BOOL">TOK_BOOL</dfn>, <q>"_Bool"</q>)</td></tr>
+<tr><th id="45">45</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_SHORT" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_SHORT" title='TOK_SHORT' data-ref="TOK_SHORT" data-ref-filename="TOK_SHORT">TOK_SHORT</dfn>, <q>"short"</q>)</td></tr>
+<tr><th id="46">46</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_STRUCT" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_STRUCT" title='TOK_STRUCT' data-ref="TOK_STRUCT" data-ref-filename="TOK_STRUCT">TOK_STRUCT</dfn>, <q>"struct"</q>)</td></tr>
+<tr><th id="47">47</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_UNION" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_UNION" title='TOK_UNION' data-ref="TOK_UNION" data-ref-filename="TOK_UNION">TOK_UNION</dfn>, <q>"union"</q>)</td></tr>
+<tr><th id="48">48</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_TYPEDEF" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_TYPEDEF" title='TOK_TYPEDEF' data-ref="TOK_TYPEDEF" data-ref-filename="TOK_TYPEDEF">TOK_TYPEDEF</dfn>, <q>"typedef"</q>)</td></tr>
+<tr><th id="49">49</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_DEFAULT" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_DEFAULT" title='TOK_DEFAULT' data-ref="TOK_DEFAULT" data-ref-filename="TOK_DEFAULT">TOK_DEFAULT</dfn>, <q>"default"</q>)</td></tr>
+<tr><th id="50">50</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ENUM" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ENUM" title='TOK_ENUM' data-ref="TOK_ENUM" data-ref-filename="TOK_ENUM">TOK_ENUM</dfn>, <q>"enum"</q>)</td></tr>
+<tr><th id="51">51</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_SIZEOF" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_SIZEOF" title='TOK_SIZEOF' data-ref="TOK_SIZEOF" data-ref-filename="TOK_SIZEOF">TOK_SIZEOF</dfn>, <q>"sizeof"</q>)</td></tr>
+<tr><th id="52">52</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ATTRIBUTE1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ATTRIBUTE1" title='TOK_ATTRIBUTE1' data-ref="TOK_ATTRIBUTE1" data-ref-filename="TOK_ATTRIBUTE1">TOK_ATTRIBUTE1</dfn>, <q>"__attribute"</q>)</td></tr>
+<tr><th id="53">53</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ATTRIBUTE2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ATTRIBUTE2" title='TOK_ATTRIBUTE2' data-ref="TOK_ATTRIBUTE2" data-ref-filename="TOK_ATTRIBUTE2">TOK_ATTRIBUTE2</dfn>, <q>"__attribute__"</q>)</td></tr>
+<tr><th id="54">54</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ALIGNOF1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ALIGNOF1" title='TOK_ALIGNOF1' data-ref="TOK_ALIGNOF1" data-ref-filename="TOK_ALIGNOF1">TOK_ALIGNOF1</dfn>, <q>"__alignof"</q>)</td></tr>
+<tr><th id="55">55</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ALIGNOF2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ALIGNOF2" title='TOK_ALIGNOF2' data-ref="TOK_ALIGNOF2" data-ref-filename="TOK_ALIGNOF2">TOK_ALIGNOF2</dfn>, <q>"__alignof__"</q>)</td></tr>
+<tr><th id="56">56</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_TYPEOF1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_TYPEOF1" title='TOK_TYPEOF1' data-ref="TOK_TYPEOF1" data-ref-filename="TOK_TYPEOF1">TOK_TYPEOF1</dfn>, <q>"typeof"</q>)</td></tr>
+<tr><th id="57">57</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_TYPEOF2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_TYPEOF2" title='TOK_TYPEOF2' data-ref="TOK_TYPEOF2" data-ref-filename="TOK_TYPEOF2">TOK_TYPEOF2</dfn>, <q>"__typeof"</q>)</td></tr>
+<tr><th id="58">58</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_TYPEOF3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_TYPEOF3" title='TOK_TYPEOF3' data-ref="TOK_TYPEOF3" data-ref-filename="TOK_TYPEOF3">TOK_TYPEOF3</dfn>, <q>"__typeof__"</q>)</td></tr>
+<tr><th id="59">59</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_LABEL" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_LABEL" title='TOK_LABEL' data-ref="TOK_LABEL" data-ref-filename="TOK_LABEL">TOK_LABEL</dfn>, <q>"__label__"</q>)</td></tr>
+<tr><th id="60">60</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ASM1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ASM1" title='TOK_ASM1' data-ref="TOK_ASM1" data-ref-filename="TOK_ASM1">TOK_ASM1</dfn>, <q>"asm"</q>)</td></tr>
+<tr><th id="61">61</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ASM2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ASM2" title='TOK_ASM2' data-ref="TOK_ASM2" data-ref-filename="TOK_ASM2">TOK_ASM2</dfn>, <q>"__asm"</q>)</td></tr>
+<tr><th id="62">62</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ASM3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ASM3" title='TOK_ASM3' data-ref="TOK_ASM3" data-ref-filename="TOK_ASM3">TOK_ASM3</dfn>, <q>"__asm__"</q>)</td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td><u>#<span data-ppcond="64">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_ARM64">TCC_TARGET_ARM64</span></u></td></tr>
+<tr><th id="65">65</th><td>     DEF(TOK_UINT128, <q>"__uint128_t"</q>)</td></tr>
+<tr><th id="66">66</th><td><u>#<span data-ppcond="64">endif</span></u></td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td><i>/*********************************************************************/</i></td></tr>
+<tr><th id="69">69</th><td><i>/* the following are not keywords. They are included to ease parsing */</i></td></tr>
+<tr><th id="70">70</th><td><i>/* preprocessor only */</i></td></tr>
+<tr><th id="71">71</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_DEFINE" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_DEFINE" title='TOK_DEFINE' data-ref="TOK_DEFINE" data-ref-filename="TOK_DEFINE">TOK_DEFINE</dfn>, <q>"define"</q>)</td></tr>
+<tr><th id="72">72</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_INCLUDE" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_INCLUDE" title='TOK_INCLUDE' data-ref="TOK_INCLUDE" data-ref-filename="TOK_INCLUDE">TOK_INCLUDE</dfn>, <q>"include"</q>)</td></tr>
+<tr><th id="73">73</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_INCLUDE_NEXT" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_INCLUDE_NEXT" title='TOK_INCLUDE_NEXT' data-ref="TOK_INCLUDE_NEXT" data-ref-filename="TOK_INCLUDE_NEXT">TOK_INCLUDE_NEXT</dfn>, <q>"include_next"</q>)</td></tr>
+<tr><th id="74">74</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_IFDEF" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_IFDEF" title='TOK_IFDEF' data-ref="TOK_IFDEF" data-ref-filename="TOK_IFDEF">TOK_IFDEF</dfn>, <q>"ifdef"</q>)</td></tr>
+<tr><th id="75">75</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_IFNDEF" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_IFNDEF" title='TOK_IFNDEF' data-ref="TOK_IFNDEF" data-ref-filename="TOK_IFNDEF">TOK_IFNDEF</dfn>, <q>"ifndef"</q>)</td></tr>
+<tr><th id="76">76</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ELIF" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ELIF" title='TOK_ELIF' data-ref="TOK_ELIF" data-ref-filename="TOK_ELIF">TOK_ELIF</dfn>, <q>"elif"</q>)</td></tr>
+<tr><th id="77">77</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ENDIF" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ENDIF" title='TOK_ENDIF' data-ref="TOK_ENDIF" data-ref-filename="TOK_ENDIF">TOK_ENDIF</dfn>, <q>"endif"</q>)</td></tr>
+<tr><th id="78">78</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_DEFINED" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_DEFINED" title='TOK_DEFINED' data-ref="TOK_DEFINED" data-ref-filename="TOK_DEFINED">TOK_DEFINED</dfn>, <q>"defined"</q>)</td></tr>
+<tr><th id="79">79</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_UNDEF" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_UNDEF" title='TOK_UNDEF' data-ref="TOK_UNDEF" data-ref-filename="TOK_UNDEF">TOK_UNDEF</dfn>, <q>"undef"</q>)</td></tr>
+<tr><th id="80">80</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ERROR" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ERROR" title='TOK_ERROR' data-ref="TOK_ERROR" data-ref-filename="TOK_ERROR">TOK_ERROR</dfn>, <q>"error"</q>)</td></tr>
+<tr><th id="81">81</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_WARNING" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_WARNING" title='TOK_WARNING' data-ref="TOK_WARNING" data-ref-filename="TOK_WARNING">TOK_WARNING</dfn>, <q>"warning"</q>)</td></tr>
+<tr><th id="82">82</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_LINE" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_LINE" title='TOK_LINE' data-ref="TOK_LINE" data-ref-filename="TOK_LINE">TOK_LINE</dfn>, <q>"line"</q>)</td></tr>
+<tr><th id="83">83</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_PRAGMA" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_PRAGMA" title='TOK_PRAGMA' data-ref="TOK_PRAGMA" data-ref-filename="TOK_PRAGMA">TOK_PRAGMA</dfn>, <q>"pragma"</q>)</td></tr>
+<tr><th id="84">84</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___LINE__" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___LINE__" title='TOK___LINE__' data-ref="TOK___LINE__" data-ref-filename="TOK___LINE__">TOK___LINE__</dfn>, <q>"__LINE__"</q>)</td></tr>
+<tr><th id="85">85</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___FILE__" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___FILE__" title='TOK___FILE__' data-ref="TOK___FILE__" data-ref-filename="TOK___FILE__">TOK___FILE__</dfn>, <q>"__FILE__"</q>)</td></tr>
+<tr><th id="86">86</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___DATE__" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___DATE__" title='TOK___DATE__' data-ref="TOK___DATE__" data-ref-filename="TOK___DATE__">TOK___DATE__</dfn>, <q>"__DATE__"</q>)</td></tr>
+<tr><th id="87">87</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___TIME__" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___TIME__" title='TOK___TIME__' data-ref="TOK___TIME__" data-ref-filename="TOK___TIME__">TOK___TIME__</dfn>, <q>"__TIME__"</q>)</td></tr>
+<tr><th id="88">88</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___FUNCTION__" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___FUNCTION__" title='TOK___FUNCTION__' data-ref="TOK___FUNCTION__" data-ref-filename="TOK___FUNCTION__">TOK___FUNCTION__</dfn>, <q>"__FUNCTION__"</q>)</td></tr>
+<tr><th id="89">89</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___VA_ARGS__" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___VA_ARGS__" title='TOK___VA_ARGS__' data-ref="TOK___VA_ARGS__" data-ref-filename="TOK___VA_ARGS__">TOK___VA_ARGS__</dfn>, <q>"__VA_ARGS__"</q>)</td></tr>
+<tr><th id="90">90</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___COUNTER__" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___COUNTER__" title='TOK___COUNTER__' data-ref="TOK___COUNTER__" data-ref-filename="TOK___COUNTER__">TOK___COUNTER__</dfn>, <q>"__COUNTER__"</q>)</td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td><i>/* special identifiers */</i></td></tr>
+<tr><th id="93">93</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___FUNC__" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___FUNC__" title='TOK___FUNC__' data-ref="TOK___FUNC__" data-ref-filename="TOK___FUNC__">TOK___FUNC__</dfn>, <q>"__func__"</q>)</td></tr>
+<tr><th id="94">94</th><td></td></tr>
+<tr><th id="95">95</th><td><i>/* special floating point values */</i></td></tr>
+<tr><th id="96">96</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___NAN__" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___NAN__" title='TOK___NAN__' data-ref="TOK___NAN__" data-ref-filename="TOK___NAN__">TOK___NAN__</dfn>, <q>"__nan__"</q>)</td></tr>
+<tr><th id="97">97</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___SNAN__" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___SNAN__" title='TOK___SNAN__' data-ref="TOK___SNAN__" data-ref-filename="TOK___SNAN__">TOK___SNAN__</dfn>, <q>"__snan__"</q>)</td></tr>
+<tr><th id="98">98</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___INF__" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___INF__" title='TOK___INF__' data-ref="TOK___INF__" data-ref-filename="TOK___INF__">TOK___INF__</dfn>, <q>"__inf__"</q>)</td></tr>
+<tr><th id="99">99</th><td></td></tr>
+<tr><th id="100">100</th><td><i>/* attribute identifiers */</i></td></tr>
+<tr><th id="101">101</th><td><i>/* XXX: handle all tokens generically since speed is not critical */</i></td></tr>
+<tr><th id="102">102</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_SECTION1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_SECTION1" title='TOK_SECTION1' data-ref="TOK_SECTION1" data-ref-filename="TOK_SECTION1">TOK_SECTION1</dfn>, <q>"section"</q>)</td></tr>
+<tr><th id="103">103</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_SECTION2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_SECTION2" title='TOK_SECTION2' data-ref="TOK_SECTION2" data-ref-filename="TOK_SECTION2">TOK_SECTION2</dfn>, <q>"__section__"</q>)</td></tr>
+<tr><th id="104">104</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ALIGNED1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ALIGNED1" title='TOK_ALIGNED1' data-ref="TOK_ALIGNED1" data-ref-filename="TOK_ALIGNED1">TOK_ALIGNED1</dfn>, <q>"aligned"</q>)</td></tr>
+<tr><th id="105">105</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ALIGNED2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ALIGNED2" title='TOK_ALIGNED2' data-ref="TOK_ALIGNED2" data-ref-filename="TOK_ALIGNED2">TOK_ALIGNED2</dfn>, <q>"__aligned__"</q>)</td></tr>
+<tr><th id="106">106</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_PACKED1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_PACKED1" title='TOK_PACKED1' data-ref="TOK_PACKED1" data-ref-filename="TOK_PACKED1">TOK_PACKED1</dfn>, <q>"packed"</q>)</td></tr>
+<tr><th id="107">107</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_PACKED2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_PACKED2" title='TOK_PACKED2' data-ref="TOK_PACKED2" data-ref-filename="TOK_PACKED2">TOK_PACKED2</dfn>, <q>"__packed__"</q>)</td></tr>
+<tr><th id="108">108</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_WEAK1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_WEAK1" title='TOK_WEAK1' data-ref="TOK_WEAK1" data-ref-filename="TOK_WEAK1">TOK_WEAK1</dfn>, <q>"weak"</q>)</td></tr>
+<tr><th id="109">109</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_WEAK2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_WEAK2" title='TOK_WEAK2' data-ref="TOK_WEAK2" data-ref-filename="TOK_WEAK2">TOK_WEAK2</dfn>, <q>"__weak__"</q>)</td></tr>
+<tr><th id="110">110</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ALIAS1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ALIAS1" title='TOK_ALIAS1' data-ref="TOK_ALIAS1" data-ref-filename="TOK_ALIAS1">TOK_ALIAS1</dfn>, <q>"alias"</q>)</td></tr>
+<tr><th id="111">111</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_ALIAS2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_ALIAS2" title='TOK_ALIAS2' data-ref="TOK_ALIAS2" data-ref-filename="TOK_ALIAS2">TOK_ALIAS2</dfn>, <q>"__alias__"</q>)</td></tr>
+<tr><th id="112">112</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_UNUSED1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_UNUSED1" title='TOK_UNUSED1' data-ref="TOK_UNUSED1" data-ref-filename="TOK_UNUSED1">TOK_UNUSED1</dfn>, <q>"unused"</q>)</td></tr>
+<tr><th id="113">113</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_UNUSED2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_UNUSED2" title='TOK_UNUSED2' data-ref="TOK_UNUSED2" data-ref-filename="TOK_UNUSED2">TOK_UNUSED2</dfn>, <q>"__unused__"</q>)</td></tr>
+<tr><th id="114">114</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_CDECL1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_CDECL1" title='TOK_CDECL1' data-ref="TOK_CDECL1" data-ref-filename="TOK_CDECL1">TOK_CDECL1</dfn>, <q>"cdecl"</q>)</td></tr>
+<tr><th id="115">115</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_CDECL2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_CDECL2" title='TOK_CDECL2' data-ref="TOK_CDECL2" data-ref-filename="TOK_CDECL2">TOK_CDECL2</dfn>, <q>"__cdecl"</q>)</td></tr>
+<tr><th id="116">116</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_CDECL3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_CDECL3" title='TOK_CDECL3' data-ref="TOK_CDECL3" data-ref-filename="TOK_CDECL3">TOK_CDECL3</dfn>, <q>"__cdecl__"</q>)</td></tr>
+<tr><th id="117">117</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_STDCALL1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_STDCALL1" title='TOK_STDCALL1' data-ref="TOK_STDCALL1" data-ref-filename="TOK_STDCALL1">TOK_STDCALL1</dfn>, <q>"stdcall"</q>)</td></tr>
+<tr><th id="118">118</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_STDCALL2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_STDCALL2" title='TOK_STDCALL2' data-ref="TOK_STDCALL2" data-ref-filename="TOK_STDCALL2">TOK_STDCALL2</dfn>, <q>"__stdcall"</q>)</td></tr>
+<tr><th id="119">119</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_STDCALL3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_STDCALL3" title='TOK_STDCALL3' data-ref="TOK_STDCALL3" data-ref-filename="TOK_STDCALL3">TOK_STDCALL3</dfn>, <q>"__stdcall__"</q>)</td></tr>
+<tr><th id="120">120</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_FASTCALL1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_FASTCALL1" title='TOK_FASTCALL1' data-ref="TOK_FASTCALL1" data-ref-filename="TOK_FASTCALL1">TOK_FASTCALL1</dfn>, <q>"fastcall"</q>)</td></tr>
+<tr><th id="121">121</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_FASTCALL2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_FASTCALL2" title='TOK_FASTCALL2' data-ref="TOK_FASTCALL2" data-ref-filename="TOK_FASTCALL2">TOK_FASTCALL2</dfn>, <q>"__fastcall"</q>)</td></tr>
+<tr><th id="122">122</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_FASTCALL3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_FASTCALL3" title='TOK_FASTCALL3' data-ref="TOK_FASTCALL3" data-ref-filename="TOK_FASTCALL3">TOK_FASTCALL3</dfn>, <q>"__fastcall__"</q>)</td></tr>
+<tr><th id="123">123</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_REGPARM1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_REGPARM1" title='TOK_REGPARM1' data-ref="TOK_REGPARM1" data-ref-filename="TOK_REGPARM1">TOK_REGPARM1</dfn>, <q>"regparm"</q>)</td></tr>
+<tr><th id="124">124</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_REGPARM2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_REGPARM2" title='TOK_REGPARM2' data-ref="TOK_REGPARM2" data-ref-filename="TOK_REGPARM2">TOK_REGPARM2</dfn>, <q>"__regparm__"</q>)</td></tr>
+<tr><th id="125">125</th><td></td></tr>
+<tr><th id="126">126</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_MODE" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_MODE" title='TOK_MODE' data-ref="TOK_MODE" data-ref-filename="TOK_MODE">TOK_MODE</dfn>, <q>"__mode__"</q>)</td></tr>
+<tr><th id="127">127</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_MODE_QI" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_MODE_QI" title='TOK_MODE_QI' data-ref="TOK_MODE_QI" data-ref-filename="TOK_MODE_QI">TOK_MODE_QI</dfn>, <q>"__QI__"</q>)</td></tr>
+<tr><th id="128">128</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_MODE_DI" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_MODE_DI" title='TOK_MODE_DI' data-ref="TOK_MODE_DI" data-ref-filename="TOK_MODE_DI">TOK_MODE_DI</dfn>, <q>"__DI__"</q>)</td></tr>
+<tr><th id="129">129</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_MODE_HI" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_MODE_HI" title='TOK_MODE_HI' data-ref="TOK_MODE_HI" data-ref-filename="TOK_MODE_HI">TOK_MODE_HI</dfn>, <q>"__HI__"</q>)</td></tr>
+<tr><th id="130">130</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_MODE_SI" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_MODE_SI" title='TOK_MODE_SI' data-ref="TOK_MODE_SI" data-ref-filename="TOK_MODE_SI">TOK_MODE_SI</dfn>, <q>"__SI__"</q>)</td></tr>
+<tr><th id="131">131</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_MODE_word" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_MODE_word" title='TOK_MODE_word' data-ref="TOK_MODE_word" data-ref-filename="TOK_MODE_word">TOK_MODE_word</dfn>, <q>"__word__"</q>)</td></tr>
+<tr><th id="132">132</th><td></td></tr>
+<tr><th id="133">133</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_DLLEXPORT" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_DLLEXPORT" title='TOK_DLLEXPORT' data-ref="TOK_DLLEXPORT" data-ref-filename="TOK_DLLEXPORT">TOK_DLLEXPORT</dfn>, <q>"dllexport"</q>)</td></tr>
+<tr><th id="134">134</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_DLLIMPORT" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_DLLIMPORT" title='TOK_DLLIMPORT' data-ref="TOK_DLLIMPORT" data-ref-filename="TOK_DLLIMPORT">TOK_DLLIMPORT</dfn>, <q>"dllimport"</q>)</td></tr>
+<tr><th id="135">135</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_NORETURN1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_NORETURN1" title='TOK_NORETURN1' data-ref="TOK_NORETURN1" data-ref-filename="TOK_NORETURN1">TOK_NORETURN1</dfn>, <q>"noreturn"</q>)</td></tr>
+<tr><th id="136">136</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_NORETURN2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_NORETURN2" title='TOK_NORETURN2' data-ref="TOK_NORETURN2" data-ref-filename="TOK_NORETURN2">TOK_NORETURN2</dfn>, <q>"__noreturn__"</q>)</td></tr>
+<tr><th id="137">137</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_VISIBILITY1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_VISIBILITY1" title='TOK_VISIBILITY1' data-ref="TOK_VISIBILITY1" data-ref-filename="TOK_VISIBILITY1">TOK_VISIBILITY1</dfn>, <q>"visibility"</q>)</td></tr>
+<tr><th id="138">138</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_VISIBILITY2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_VISIBILITY2" title='TOK_VISIBILITY2' data-ref="TOK_VISIBILITY2" data-ref-filename="TOK_VISIBILITY2">TOK_VISIBILITY2</dfn>, <q>"__visibility__"</q>)</td></tr>
+<tr><th id="139">139</th><td></td></tr>
+<tr><th id="140">140</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_builtin_types_compatible_p" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_builtin_types_compatible_p" title='TOK_builtin_types_compatible_p' data-ref="TOK_builtin_types_compatible_p" data-ref-filename="TOK_builtin_types_compatible_p">TOK_builtin_types_compatible_p</dfn>, <q>"__builtin_types_compatible_p"</q>)</td></tr>
+<tr><th id="141">141</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_builtin_choose_expr" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_builtin_choose_expr" title='TOK_builtin_choose_expr' data-ref="TOK_builtin_choose_expr" data-ref-filename="TOK_builtin_choose_expr">TOK_builtin_choose_expr</dfn>, <q>"__builtin_choose_expr"</q>)</td></tr>
+<tr><th id="142">142</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_builtin_constant_p" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_builtin_constant_p" title='TOK_builtin_constant_p' data-ref="TOK_builtin_constant_p" data-ref-filename="TOK_builtin_constant_p">TOK_builtin_constant_p</dfn>, <q>"__builtin_constant_p"</q>)</td></tr>
+<tr><th id="143">143</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_builtin_frame_address" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_builtin_frame_address" title='TOK_builtin_frame_address' data-ref="TOK_builtin_frame_address" data-ref-filename="TOK_builtin_frame_address">TOK_builtin_frame_address</dfn>, <q>"__builtin_frame_address"</q>)</td></tr>
+<tr><th id="144">144</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_builtin_return_address" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_builtin_return_address" title='TOK_builtin_return_address' data-ref="TOK_builtin_return_address" data-ref-filename="TOK_builtin_return_address">TOK_builtin_return_address</dfn>, <q>"__builtin_return_address"</q>)</td></tr>
+<tr><th id="145">145</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_builtin_expect" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_builtin_expect" title='TOK_builtin_expect' data-ref="TOK_builtin_expect" data-ref-filename="TOK_builtin_expect">TOK_builtin_expect</dfn>, <q>"__builtin_expect"</q>)</td></tr>
+<tr><th id="146">146</th><td>     <i>/*DEF(TOK_builtin_va_list, "__builtin_va_list")*/</i></td></tr>
+<tr><th id="147">147</th><td><u>#<span data-ppcond="147">if</span> defined <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span> &amp;&amp; defined <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="148">148</th><td>     DEF(TOK_builtin_va_start, <q>"__builtin_va_start"</q>)</td></tr>
+<tr><th id="149">149</th><td><u>#<span data-ppcond="147">elif</span> defined <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="150">150</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_builtin_va_arg_types" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_builtin_va_arg_types" title='TOK_builtin_va_arg_types' data-ref="TOK_builtin_va_arg_types" data-ref-filename="TOK_builtin_va_arg_types">TOK_builtin_va_arg_types</dfn>, <q>"__builtin_va_arg_types"</q>)</td></tr>
+<tr><th id="151">151</th><td><u>#<span data-ppcond="147">elif</span> defined TCC_TARGET_ARM64</u></td></tr>
+<tr><th id="152">152</th><td>     DEF(TOK___va_start, <q>"__va_start"</q>)</td></tr>
+<tr><th id="153">153</th><td>     DEF(TOK___va_arg, <q>"__va_arg"</q>)</td></tr>
+<tr><th id="154">154</th><td><u>#<span data-ppcond="147">endif</span></u></td></tr>
+<tr><th id="155">155</th><td></td></tr>
+<tr><th id="156">156</th><td><i>/* pragma */</i></td></tr>
+<tr><th id="157">157</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_pack" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_pack" title='TOK_pack' data-ref="TOK_pack" data-ref-filename="TOK_pack">TOK_pack</dfn>, <q>"pack"</q>)</td></tr>
+<tr><th id="158">158</th><td><u>#<span data-ppcond="158">if</span> !defined(<span class="macro" data-ref="_M/TCC_TARGET_I386">TCC_TARGET_I386</span>) &amp;&amp; !defined(<span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span>)</u></td></tr>
+<tr><th id="159">159</th><td>     <i>/* already defined for assembler */</i></td></tr>
+<tr><th id="160">160</th><td>     DEF(TOK_ASM_push, <q>"push"</q>)</td></tr>
+<tr><th id="161">161</th><td>     DEF(TOK_ASM_pop, <q>"pop"</q>)</td></tr>
+<tr><th id="162">162</th><td><u>#<span data-ppcond="158">endif</span></u></td></tr>
+<tr><th id="163">163</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_comment" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_comment" title='TOK_comment' data-ref="TOK_comment" data-ref-filename="TOK_comment">TOK_comment</dfn>, <q>"comment"</q>)</td></tr>
+<tr><th id="164">164</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_lib" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_lib" title='TOK_lib' data-ref="TOK_lib" data-ref-filename="TOK_lib">TOK_lib</dfn>, <q>"lib"</q>)</td></tr>
+<tr><th id="165">165</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_push_macro" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_push_macro" title='TOK_push_macro' data-ref="TOK_push_macro" data-ref-filename="TOK_push_macro">TOK_push_macro</dfn>, <q>"push_macro"</q>)</td></tr>
+<tr><th id="166">166</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_pop_macro" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_pop_macro" title='TOK_pop_macro' data-ref="TOK_pop_macro" data-ref-filename="TOK_pop_macro">TOK_pop_macro</dfn>, <q>"pop_macro"</q>)</td></tr>
+<tr><th id="167">167</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_once" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_once" title='TOK_once' data-ref="TOK_once" data-ref-filename="TOK_once">TOK_once</dfn>, <q>"once"</q>)</td></tr>
+<tr><th id="168">168</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_option" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_option" title='TOK_option' data-ref="TOK_option" data-ref-filename="TOK_option">TOK_option</dfn>, <q>"option"</q>)</td></tr>
+<tr><th id="169">169</th><td></td></tr>
+<tr><th id="170">170</th><td><i>/* builtin functions or variables */</i></td></tr>
+<tr><th id="171">171</th><td><u>#<span data-ppcond="171">ifndef</span> <span class="macro" data-ref="_M/TCC_ARM_EABI">TCC_ARM_EABI</span></u></td></tr>
+<tr><th id="172">172</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_memcpy" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_memcpy" title='TOK_memcpy' data-ref="TOK_memcpy" data-ref-filename="TOK_memcpy">TOK_memcpy</dfn>, <q>"memcpy"</q>)</td></tr>
+<tr><th id="173">173</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_memmove" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_memmove" title='TOK_memmove' data-ref="TOK_memmove" data-ref-filename="TOK_memmove">TOK_memmove</dfn>, <q>"memmove"</q>)</td></tr>
+<tr><th id="174">174</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_memset" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_memset" title='TOK_memset' data-ref="TOK_memset" data-ref-filename="TOK_memset">TOK_memset</dfn>, <q>"memset"</q>)</td></tr>
+<tr><th id="175">175</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___divdi3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___divdi3" title='TOK___divdi3' data-ref="TOK___divdi3" data-ref-filename="TOK___divdi3">TOK___divdi3</dfn>, <q>"__divdi3"</q>)</td></tr>
+<tr><th id="176">176</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___moddi3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___moddi3" title='TOK___moddi3' data-ref="TOK___moddi3" data-ref-filename="TOK___moddi3">TOK___moddi3</dfn>, <q>"__moddi3"</q>)</td></tr>
+<tr><th id="177">177</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___udivdi3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___udivdi3" title='TOK___udivdi3' data-ref="TOK___udivdi3" data-ref-filename="TOK___udivdi3">TOK___udivdi3</dfn>, <q>"__udivdi3"</q>)</td></tr>
+<tr><th id="178">178</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___umoddi3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___umoddi3" title='TOK___umoddi3' data-ref="TOK___umoddi3" data-ref-filename="TOK___umoddi3">TOK___umoddi3</dfn>, <q>"__umoddi3"</q>)</td></tr>
+<tr><th id="179">179</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___ashrdi3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___ashrdi3" title='TOK___ashrdi3' data-ref="TOK___ashrdi3" data-ref-filename="TOK___ashrdi3">TOK___ashrdi3</dfn>, <q>"__ashrdi3"</q>)</td></tr>
+<tr><th id="180">180</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___lshrdi3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___lshrdi3" title='TOK___lshrdi3' data-ref="TOK___lshrdi3" data-ref-filename="TOK___lshrdi3">TOK___lshrdi3</dfn>, <q>"__lshrdi3"</q>)</td></tr>
+<tr><th id="181">181</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___ashldi3" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___ashldi3" title='TOK___ashldi3' data-ref="TOK___ashldi3" data-ref-filename="TOK___ashldi3">TOK___ashldi3</dfn>, <q>"__ashldi3"</q>)</td></tr>
+<tr><th id="182">182</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___floatundisf" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___floatundisf" title='TOK___floatundisf' data-ref="TOK___floatundisf" data-ref-filename="TOK___floatundisf">TOK___floatundisf</dfn>, <q>"__floatundisf"</q>)</td></tr>
+<tr><th id="183">183</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___floatundidf" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___floatundidf" title='TOK___floatundidf' data-ref="TOK___floatundidf" data-ref-filename="TOK___floatundidf">TOK___floatundidf</dfn>, <q>"__floatundidf"</q>)</td></tr>
+<tr><th id="184">184</th><td><u># <span data-ppcond="184">ifndef</span> <span class="macro" data-ref="_M/TCC_ARM_VFP">TCC_ARM_VFP</span></u></td></tr>
+<tr><th id="185">185</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___floatundixf" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___floatundixf" title='TOK___floatundixf' data-ref="TOK___floatundixf" data-ref-filename="TOK___floatundixf">TOK___floatundixf</dfn>, <q>"__floatundixf"</q>)</td></tr>
+<tr><th id="186">186</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___fixunsxfdi" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___fixunsxfdi" title='TOK___fixunsxfdi' data-ref="TOK___fixunsxfdi" data-ref-filename="TOK___fixunsxfdi">TOK___fixunsxfdi</dfn>, <q>"__fixunsxfdi"</q>)</td></tr>
+<tr><th id="187">187</th><td><u># <span data-ppcond="184">endif</span></u></td></tr>
+<tr><th id="188">188</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___fixunssfdi" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___fixunssfdi" title='TOK___fixunssfdi' data-ref="TOK___fixunssfdi" data-ref-filename="TOK___fixunssfdi">TOK___fixunssfdi</dfn>, <q>"__fixunssfdi"</q>)</td></tr>
+<tr><th id="189">189</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___fixunsdfdi" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___fixunsdfdi" title='TOK___fixunsdfdi' data-ref="TOK___fixunsdfdi" data-ref-filename="TOK___fixunsdfdi">TOK___fixunsdfdi</dfn>, <q>"__fixunsdfdi"</q>)</td></tr>
+<tr><th id="190">190</th><td><u>#<span data-ppcond="171">endif</span></u></td></tr>
+<tr><th id="191">191</th><td></td></tr>
+<tr><th id="192">192</th><td><u>#<span data-ppcond="192">if</span> defined <span class="macro" data-ref="_M/TCC_TARGET_ARM">TCC_TARGET_ARM</span></u></td></tr>
+<tr><th id="193">193</th><td><u># ifdef TCC_ARM_EABI</u></td></tr>
+<tr><th id="194">194</th><td>     DEF(TOK_memcpy, <q>"__aeabi_memcpy"</q>)</td></tr>
+<tr><th id="195">195</th><td>     DEF(TOK_memcpy4, <q>"__aeabi_memcpy4"</q>)</td></tr>
+<tr><th id="196">196</th><td>     DEF(TOK_memcpy8, <q>"__aeabi_memcpy8"</q>)</td></tr>
+<tr><th id="197">197</th><td>     DEF(TOK_memmove, <q>"__aeabi_memmove"</q>)</td></tr>
+<tr><th id="198">198</th><td>     DEF(TOK_memset, <q>"__aeabi_memset"</q>)</td></tr>
+<tr><th id="199">199</th><td>     DEF(TOK___aeabi_ldivmod, <q>"__aeabi_ldivmod"</q>)</td></tr>
+<tr><th id="200">200</th><td>     DEF(TOK___aeabi_uldivmod, <q>"__aeabi_uldivmod"</q>)</td></tr>
+<tr><th id="201">201</th><td>     DEF(TOK___aeabi_idivmod, <q>"__aeabi_idivmod"</q>)</td></tr>
+<tr><th id="202">202</th><td>     DEF(TOK___aeabi_uidivmod, <q>"__aeabi_uidivmod"</q>)</td></tr>
+<tr><th id="203">203</th><td>     DEF(TOK___divsi3, <q>"__aeabi_idiv"</q>)</td></tr>
+<tr><th id="204">204</th><td>     DEF(TOK___udivsi3, <q>"__aeabi_uidiv"</q>)</td></tr>
+<tr><th id="205">205</th><td>     DEF(TOK___floatdisf, <q>"__aeabi_l2f"</q>)</td></tr>
+<tr><th id="206">206</th><td>     DEF(TOK___floatdidf, <q>"__aeabi_l2d"</q>)</td></tr>
+<tr><th id="207">207</th><td>     DEF(TOK___fixsfdi, <q>"__aeabi_f2lz"</q>)</td></tr>
+<tr><th id="208">208</th><td>     DEF(TOK___fixdfdi, <q>"__aeabi_d2lz"</q>)</td></tr>
+<tr><th id="209">209</th><td>     DEF(TOK___ashrdi3, <q>"__aeabi_lasr"</q>)</td></tr>
+<tr><th id="210">210</th><td>     DEF(TOK___lshrdi3, <q>"__aeabi_llsr"</q>)</td></tr>
+<tr><th id="211">211</th><td>     DEF(TOK___ashldi3, <q>"__aeabi_llsl"</q>)</td></tr>
+<tr><th id="212">212</th><td>     DEF(TOK___floatundisf, <q>"__aeabi_ul2f"</q>)</td></tr>
+<tr><th id="213">213</th><td>     DEF(TOK___floatundidf, <q>"__aeabi_ul2d"</q>)</td></tr>
+<tr><th id="214">214</th><td>     DEF(TOK___fixunssfdi, <q>"__aeabi_f2ulz"</q>)</td></tr>
+<tr><th id="215">215</th><td>     DEF(TOK___fixunsdfdi, <q>"__aeabi_d2ulz"</q>)</td></tr>
+<tr><th id="216">216</th><td><u># else</u></td></tr>
+<tr><th id="217">217</th><td>     DEF(TOK___modsi3, <q>"__modsi3"</q>)</td></tr>
+<tr><th id="218">218</th><td>     DEF(TOK___umodsi3, <q>"__umodsi3"</q>)</td></tr>
+<tr><th id="219">219</th><td>     DEF(TOK___divsi3, <q>"__divsi3"</q>)</td></tr>
+<tr><th id="220">220</th><td>     DEF(TOK___udivsi3, <q>"__udivsi3"</q>)</td></tr>
+<tr><th id="221">221</th><td>     DEF(TOK___floatdisf, <q>"__floatdisf"</q>)</td></tr>
+<tr><th id="222">222</th><td>     DEF(TOK___floatdidf, <q>"__floatdidf"</q>)</td></tr>
+<tr><th id="223">223</th><td><u>#  ifndef TCC_ARM_VFP</u></td></tr>
+<tr><th id="224">224</th><td>     DEF(TOK___floatdixf, <q>"__floatdixf"</q>)</td></tr>
+<tr><th id="225">225</th><td>     DEF(TOK___fixunssfsi, <q>"__fixunssfsi"</q>)</td></tr>
+<tr><th id="226">226</th><td>     DEF(TOK___fixunsdfsi, <q>"__fixunsdfsi"</q>)</td></tr>
+<tr><th id="227">227</th><td>     DEF(TOK___fixunsxfsi, <q>"__fixunsxfsi"</q>)</td></tr>
+<tr><th id="228">228</th><td>     DEF(TOK___fixxfdi, <q>"__fixxfdi"</q>)</td></tr>
+<tr><th id="229">229</th><td><u>#  endif</u></td></tr>
+<tr><th id="230">230</th><td>     DEF(TOK___fixsfdi, <q>"__fixsfdi"</q>)</td></tr>
+<tr><th id="231">231</th><td>     DEF(TOK___fixdfdi, <q>"__fixdfdi"</q>)</td></tr>
+<tr><th id="232">232</th><td><u># endif</u></td></tr>
+<tr><th id="233">233</th><td><u>#<span data-ppcond="192">endif</span></u></td></tr>
+<tr><th id="234">234</th><td></td></tr>
+<tr><th id="235">235</th><td><u>#<span data-ppcond="235">if</span> defined <span class="macro" data-ref="_M/TCC_TARGET_C67">TCC_TARGET_C67</span></u></td></tr>
+<tr><th id="236">236</th><td>     DEF(TOK__divi, <q>"_divi"</q>)</td></tr>
+<tr><th id="237">237</th><td>     DEF(TOK__divu, <q>"_divu"</q>)</td></tr>
+<tr><th id="238">238</th><td>     DEF(TOK__divf, <q>"_divf"</q>)</td></tr>
+<tr><th id="239">239</th><td>     DEF(TOK__divd, <q>"_divd"</q>)</td></tr>
+<tr><th id="240">240</th><td>     DEF(TOK__remi, <q>"_remi"</q>)</td></tr>
+<tr><th id="241">241</th><td>     DEF(TOK__remu, <q>"_remu"</q>)</td></tr>
+<tr><th id="242">242</th><td><u>#<span data-ppcond="235">endif</span></u></td></tr>
+<tr><th id="243">243</th><td></td></tr>
+<tr><th id="244">244</th><td><u>#<span data-ppcond="244">if</span> defined <span class="macro" data-ref="_M/TCC_TARGET_I386">TCC_TARGET_I386</span></u></td></tr>
+<tr><th id="245">245</th><td>     DEF(TOK___fixsfdi, <q>"__fixsfdi"</q>)</td></tr>
+<tr><th id="246">246</th><td>     DEF(TOK___fixdfdi, <q>"__fixdfdi"</q>)</td></tr>
+<tr><th id="247">247</th><td>     DEF(TOK___fixxfdi, <q>"__fixxfdi"</q>)</td></tr>
+<tr><th id="248">248</th><td><u>#<span data-ppcond="244">endif</span></u></td></tr>
+<tr><th id="249">249</th><td></td></tr>
+<tr><th id="250">250</th><td><u>#<span data-ppcond="250">if</span> defined <span class="macro" data-ref="_M/TCC_TARGET_I386">TCC_TARGET_I386</span> || defined <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="251">251</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_alloca" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_alloca" title='TOK_alloca' data-ref="TOK_alloca" data-ref-filename="TOK_alloca">TOK_alloca</dfn>, <q>"alloca"</q>)</td></tr>
+<tr><th id="252">252</th><td><u>#<span data-ppcond="250">endif</span></u></td></tr>
+<tr><th id="253">253</th><td></td></tr>
+<tr><th id="254">254</th><td><u>#<span data-ppcond="254">if</span> defined <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span></u></td></tr>
+<tr><th id="255">255</th><td>     DEF(TOK___chkstk, <q>"__chkstk"</q>)</td></tr>
+<tr><th id="256">256</th><td><u>#<span data-ppcond="254">endif</span></u></td></tr>
+<tr><th id="257">257</th><td><u>#<span data-ppcond="257">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_ARM64">TCC_TARGET_ARM64</span></u></td></tr>
+<tr><th id="258">258</th><td>     DEF(TOK___arm64_clear_cache, <q>"__arm64_clear_cache"</q>)</td></tr>
+<tr><th id="259">259</th><td>     DEF(TOK___addtf3, <q>"__addtf3"</q>)</td></tr>
+<tr><th id="260">260</th><td>     DEF(TOK___subtf3, <q>"__subtf3"</q>)</td></tr>
+<tr><th id="261">261</th><td>     DEF(TOK___multf3, <q>"__multf3"</q>)</td></tr>
+<tr><th id="262">262</th><td>     DEF(TOK___divtf3, <q>"__divtf3"</q>)</td></tr>
+<tr><th id="263">263</th><td>     DEF(TOK___extendsftf2, <q>"__extendsftf2"</q>)</td></tr>
+<tr><th id="264">264</th><td>     DEF(TOK___extenddftf2, <q>"__extenddftf2"</q>)</td></tr>
+<tr><th id="265">265</th><td>     DEF(TOK___trunctfsf2, <q>"__trunctfsf2"</q>)</td></tr>
+<tr><th id="266">266</th><td>     DEF(TOK___trunctfdf2, <q>"__trunctfdf2"</q>)</td></tr>
+<tr><th id="267">267</th><td>     DEF(TOK___fixtfsi, <q>"__fixtfsi"</q>)</td></tr>
+<tr><th id="268">268</th><td>     DEF(TOK___fixtfdi, <q>"__fixtfdi"</q>)</td></tr>
+<tr><th id="269">269</th><td>     DEF(TOK___fixunstfsi, <q>"__fixunstfsi"</q>)</td></tr>
+<tr><th id="270">270</th><td>     DEF(TOK___fixunstfdi, <q>"__fixunstfdi"</q>)</td></tr>
+<tr><th id="271">271</th><td>     DEF(TOK___floatsitf, <q>"__floatsitf"</q>)</td></tr>
+<tr><th id="272">272</th><td>     DEF(TOK___floatditf, <q>"__floatditf"</q>)</td></tr>
+<tr><th id="273">273</th><td>     DEF(TOK___floatunsitf, <q>"__floatunsitf"</q>)</td></tr>
+<tr><th id="274">274</th><td>     DEF(TOK___floatunditf, <q>"__floatunditf"</q>)</td></tr>
+<tr><th id="275">275</th><td>     DEF(TOK___eqtf2, <q>"__eqtf2"</q>)</td></tr>
+<tr><th id="276">276</th><td>     DEF(TOK___netf2, <q>"__netf2"</q>)</td></tr>
+<tr><th id="277">277</th><td>     DEF(TOK___lttf2, <q>"__lttf2"</q>)</td></tr>
+<tr><th id="278">278</th><td>     DEF(TOK___letf2, <q>"__letf2"</q>)</td></tr>
+<tr><th id="279">279</th><td>     DEF(TOK___gttf2, <q>"__gttf2"</q>)</td></tr>
+<tr><th id="280">280</th><td>     DEF(TOK___getf2, <q>"__getf2"</q>)</td></tr>
+<tr><th id="281">281</th><td><u>#<span data-ppcond="257">endif</span></u></td></tr>
+<tr><th id="282">282</th><td></td></tr>
+<tr><th id="283">283</th><td><i>/* bound checking symbols */</i></td></tr>
+<tr><th id="284">284</th><td><u>#<span data-ppcond="284">ifdef</span> <a class="macro" href="tcc.h.html#176" data-ref="_M/CONFIG_TCC_BCHECK">CONFIG_TCC_BCHECK</a></u></td></tr>
+<tr><th id="285">285</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___bound_ptr_add" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___bound_ptr_add" title='TOK___bound_ptr_add' data-ref="TOK___bound_ptr_add" data-ref-filename="TOK___bound_ptr_add">TOK___bound_ptr_add</dfn>, <q>"__bound_ptr_add"</q>)</td></tr>
+<tr><th id="286">286</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___bound_ptr_indir1" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___bound_ptr_indir1" title='TOK___bound_ptr_indir1' data-ref="TOK___bound_ptr_indir1" data-ref-filename="TOK___bound_ptr_indir1">TOK___bound_ptr_indir1</dfn>, <q>"__bound_ptr_indir1"</q>)</td></tr>
+<tr><th id="287">287</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___bound_ptr_indir2" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___bound_ptr_indir2" title='TOK___bound_ptr_indir2' data-ref="TOK___bound_ptr_indir2" data-ref-filename="TOK___bound_ptr_indir2">TOK___bound_ptr_indir2</dfn>, <q>"__bound_ptr_indir2"</q>)</td></tr>
+<tr><th id="288">288</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___bound_ptr_indir4" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___bound_ptr_indir4" title='TOK___bound_ptr_indir4' data-ref="TOK___bound_ptr_indir4" data-ref-filename="TOK___bound_ptr_indir4">TOK___bound_ptr_indir4</dfn>, <q>"__bound_ptr_indir4"</q>)</td></tr>
+<tr><th id="289">289</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___bound_ptr_indir8" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___bound_ptr_indir8" title='TOK___bound_ptr_indir8' data-ref="TOK___bound_ptr_indir8" data-ref-filename="TOK___bound_ptr_indir8">TOK___bound_ptr_indir8</dfn>, <q>"__bound_ptr_indir8"</q>)</td></tr>
+<tr><th id="290">290</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___bound_ptr_indir12" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___bound_ptr_indir12" title='TOK___bound_ptr_indir12' data-ref="TOK___bound_ptr_indir12" data-ref-filename="TOK___bound_ptr_indir12">TOK___bound_ptr_indir12</dfn>, <q>"__bound_ptr_indir12"</q>)</td></tr>
+<tr><th id="291">291</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___bound_ptr_indir16" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___bound_ptr_indir16" title='TOK___bound_ptr_indir16' data-ref="TOK___bound_ptr_indir16" data-ref-filename="TOK___bound_ptr_indir16">TOK___bound_ptr_indir16</dfn>, <q>"__bound_ptr_indir16"</q>)</td></tr>
+<tr><th id="292">292</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___bound_main_arg" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___bound_main_arg" title='TOK___bound_main_arg' data-ref="TOK___bound_main_arg" data-ref-filename="TOK___bound_main_arg">TOK___bound_main_arg</dfn>, <q>"__bound_main_arg"</q>)</td></tr>
+<tr><th id="293">293</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___bound_local_new" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___bound_local_new" title='TOK___bound_local_new' data-ref="TOK___bound_local_new" data-ref-filename="TOK___bound_local_new">TOK___bound_local_new</dfn>, <q>"__bound_local_new"</q>)</td></tr>
+<tr><th id="294">294</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK___bound_local_delete" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK___bound_local_delete" title='TOK___bound_local_delete' data-ref="TOK___bound_local_delete" data-ref-filename="TOK___bound_local_delete">TOK___bound_local_delete</dfn>, <q>"__bound_local_delete"</q>)</td></tr>
+<tr><th id="295">295</th><td><u># <span data-ppcond="295">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span></u></td></tr>
+<tr><th id="296">296</th><td>     DEF(TOK_malloc, <q>"malloc"</q>)</td></tr>
+<tr><th id="297">297</th><td>     DEF(TOK_free, <q>"free"</q>)</td></tr>
+<tr><th id="298">298</th><td>     DEF(TOK_realloc, <q>"realloc"</q>)</td></tr>
+<tr><th id="299">299</th><td>     DEF(TOK_memalign, <q>"memalign"</q>)</td></tr>
+<tr><th id="300">300</th><td>     DEF(TOK_calloc, <q>"calloc"</q>)</td></tr>
+<tr><th id="301">301</th><td><u># <span data-ppcond="295">endif</span></u></td></tr>
+<tr><th id="302">302</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_strlen" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_strlen" title='TOK_strlen' data-ref="TOK_strlen" data-ref-filename="TOK_strlen">TOK_strlen</dfn>, <q>"strlen"</q>)</td></tr>
+<tr><th id="303">303</th><td>     <a class="macro" href="tcc.h.html#1085" title=",TOK_strcpy" data-ref="_M/DEF">DEF</a>(<dfn class="enum" id="TOK_strcpy" title='TOK_strcpy' data-ref="TOK_strcpy" data-ref-filename="TOK_strcpy">TOK_strcpy</dfn>, <q>"strcpy"</q>)</td></tr>
+<tr><th id="304">304</th><td><u>#<span data-ppcond="284">endif</span></u></td></tr>
+<tr><th id="305">305</th><td></td></tr>
+<tr><th id="306">306</th><td><i>/* Tiny Assembler */</i></td></tr>
+<tr><th id="307">307</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_byte" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(byte)              <i>/* must be first directive */</i></td></tr>
+<tr><th id="308">308</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_word" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(word)</td></tr>
+<tr><th id="309">309</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_align" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(align)</td></tr>
+<tr><th id="310">310</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_balign" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(balign)</td></tr>
+<tr><th id="311">311</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_p2align" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(p2align)</td></tr>
+<tr><th id="312">312</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_set" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(set)</td></tr>
+<tr><th id="313">313</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_skip" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(skip)</td></tr>
+<tr><th id="314">314</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_space" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(space)</td></tr>
+<tr><th id="315">315</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_string" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(string)</td></tr>
+<tr><th id="316">316</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_asciz" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(asciz)</td></tr>
+<tr><th id="317">317</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_ascii" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(ascii)</td></tr>
+<tr><th id="318">318</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_file" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(file)</td></tr>
+<tr><th id="319">319</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_globl" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(globl)</td></tr>
+<tr><th id="320">320</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_global" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(global)</td></tr>
+<tr><th id="321">321</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_weak" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(weak)</td></tr>
+<tr><th id="322">322</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_hidden" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(hidden)</td></tr>
+<tr><th id="323">323</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_ident" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(ident)</td></tr>
+<tr><th id="324">324</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_size" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(size)</td></tr>
+<tr><th id="325">325</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_type" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(type)</td></tr>
+<tr><th id="326">326</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_text" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(text)</td></tr>
+<tr><th id="327">327</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_data" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(data)</td></tr>
+<tr><th id="328">328</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_bss" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(bss)</td></tr>
+<tr><th id="329">329</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_previous" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(previous)</td></tr>
+<tr><th id="330">330</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_pushsection" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(pushsection)</td></tr>
+<tr><th id="331">331</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_popsection" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(popsection)</td></tr>
+<tr><th id="332">332</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_fill" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(fill)</td></tr>
+<tr><th id="333">333</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_rept" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(rept)</td></tr>
+<tr><th id="334">334</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_endr" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(endr)</td></tr>
+<tr><th id="335">335</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_org" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(org)</td></tr>
+<tr><th id="336">336</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_quad" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(quad)</td></tr>
+<tr><th id="337">337</th><td><u>#<span data-ppcond="337">if</span> defined(<span class="macro" data-ref="_M/TCC_TARGET_I386">TCC_TARGET_I386</span>)</u></td></tr>
+<tr><th id="338">338</th><td> DEF_ASMDIR(code16)</td></tr>
+<tr><th id="339">339</th><td> DEF_ASMDIR(code32)</td></tr>
+<tr><th id="340">340</th><td><u>#<span data-ppcond="337">elif</span> defined(<span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span>)</u></td></tr>
+<tr><th id="341">341</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_code64" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(code64)</td></tr>
+<tr><th id="342">342</th><td><u>#<span data-ppcond="337">endif</span></u></td></tr>
+<tr><th id="343">343</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_short" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(<em>short</em>)</td></tr>
+<tr><th id="344">344</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_long" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(<em>long</em>)</td></tr>
+<tr><th id="345">345</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_int" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(<em>int</em>)</td></tr>
+<tr><th id="346">346</th><td> <a class="macro" href="tcc.h.html#1000" title=",TOK_ASMDIR_section" data-ref="_M/DEF_ASMDIR">DEF_ASMDIR</a>(section)            <i>/* must be last directive */</i></td></tr>
+<tr><th id="347">347</th><td></td></tr>
+<tr><th id="348">348</th><td><u>#<span data-ppcond="348">if</span> defined <span class="macro" data-ref="_M/TCC_TARGET_I386">TCC_TARGET_I386</span> || defined <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="349">349</th><td><u>#include <a href="i386-tok.h.html">"i386-tok.h"</a></u></td></tr>
+<tr><th id="350">350</th><td><u>#<span data-ppcond="348">endif</span></u></td></tr>
+<tr><th id="351">351</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='i386-asm.c.html'>tcc/i386-asm.c</a><br/>Generated on <em>2020-Apr-21</em> from project tcc revision <em>0.9.27</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

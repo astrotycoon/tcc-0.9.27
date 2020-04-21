@@ -1,0 +1,4 @@
+<dec f='tcc/x86_64-gen.c' l='88'/>
+<doc f='tcc/x86_64-gen.c' l='87'>/* return registers for function */</doc>
+<use f='tcc/tccgen.c' l='2408' u='c'/>
+<use f='tcc/tccgen.c' l='5230' u='c'/>

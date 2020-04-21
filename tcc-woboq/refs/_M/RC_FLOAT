@@ -1,0 +1,8 @@
+<dec f='tcc/x86_64-gen.c' l='34'/>
+<use f='tcc/tccgen.c' l='1313' u='c'/>
+<use f='tcc/tccgen.c' l='1313' u='c'/>
+<use f='tcc/tccgen.c' l='1582' u='c'/>
+<use f='tcc/tccgen.c' l='2354' u='c'/>
+<use f='tcc/tccgen.c' l='3185' u='c'/>
+<use f='tcc/tccgen.c' l='5495' u='c'/>
+<use f='tcc/tccgen.c' l='5612' u='c'/>

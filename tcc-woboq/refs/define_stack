@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1294' type='Sym *'/>
+<use f='tcc/libtcc.c' l='636' u='r' c='tcc_compile'/>
+<def f='tcc/tccgen.c' l='39' type='Sym *'/>
+<use f='tcc/tccpp.c' l='1307' u='a' c='define_push'/>
+<use f='tcc/tccpp.c' l='1335' u='r' c='free_defines'/>
+<use f='tcc/tccpp.c' l='1336' u='r' c='free_defines'/>
+<use f='tcc/tccpp.c' l='1337' u='w' c='free_defines'/>
+<use f='tcc/tccpp.c' l='1509' u='a' c='parse_define'/>
+<use f='tcc/tccpp.c' l='1623' u='r' c='pragma_parse'/>

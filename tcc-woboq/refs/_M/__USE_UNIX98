@@ -1,0 +1,14 @@
+<dec f='include/features.h' l='333'/>
+<use f='include/x86_64-linux-gnu/sys/types.h' l='210' u='a'/>
+<use f='include/x86_64-linux-gnu/sys/types.h' l='253' u='a'/>
+<use f='include/x86_64-linux-gnu/bits/pthreadtypes.h' l='83' u='a'/>
+<use f='include/stdio.h' l='54' u='a'/>
+<use f='include/stdio.h' l='338' u='a'/>
+<use f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='157' u='a'/>
+<use f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='178' u='a'/>
+<use f='include/fcntl.h' l='91' u='a'/>
+<use f='include/unistd.h' l='208' u='a'/>
+<use f='include/unistd.h' l='371' u='a'/>
+<use f='include/unistd.h' l='1115' u='a'/>
+<use f='include/unistd.h' l='1158' u='a'/>
+<use f='include/signal.h' l='355' u='a'/>

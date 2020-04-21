@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='418' type='Elf32_Half'/>
+<dec f='tcc/elf.h' l='424' type='Elf64_Half'/>
+<offset>16</offset>
+<doc f='tcc/elf.h' l='418'>/* Per symbol flags */</doc>
+<doc f='tcc/elf.h' l='424'>/* Per symbol flags */</doc>

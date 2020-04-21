@@ -1,0 +1,7 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='32' type='36'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='29'>/* Function name or text-segment variable for C.  Value is its address.
+   Desc is supposedly starting line number, but GCC doesn&apos;t set it
+   and DBX seems not to miss it.  */</doc>
+<use f='tcc/tccgen.c' l='217' u='r' c='tcc_debug_funcstart'/>
+<use f='tcc/tccgen.c' l='231' u='r' c='tcc_debug_funcend'/>
+<use f='tcc/tccrun.c' l='370' c='rt_printline'/>

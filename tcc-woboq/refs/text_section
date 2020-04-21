@@ -1,0 +1,17 @@
+<dec f='tcc/tcc.h' l='1383' type='Section *'/>
+<use f='tcc/tccasm.c' l='972' u='r' c='tcc_assemble'/>
+<use f='tcc/tccasm.c' l='1263' u='r' c='asm_global_instr'/>
+<def f='tcc/tccelf.c' l='29' type='Section *'/>
+<use f='tcc/tccelf.c' l='61' u='w' c='tccelf_new'/>
+<use f='tcc/tccelf.c' l='1220' u='r' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1222' u='r' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1916' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccgen.c' l='162' u='r' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='169' u='r' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='169' u='r' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='171' u='r' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='171' u='r' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='189' u='r' c='tcc_debug_end'/>
+<use f='tcc/tccgen.c' l='189' u='r' c='tcc_debug_end'/>
+<use f='tcc/tccgen.c' l='7119' u='r' c='gen_inline_functions'/>
+<use f='tcc/tccgen.c' l='7283' u='r' c='decl0'/>

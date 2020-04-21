@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1161' type='int tcc_add_file_internal(TCCState * s1, const char * filename, int flags)'/>
+<def f='tcc/libtcc.c' l='1004' ll='1075' type='int tcc_add_file_internal(TCCState * s1, const char * filename, int flags)'/>
+<use f='tcc/libtcc.c' l='1099' u='c' c='tcc_add_file'/>
+<use f='tcc/libtcc.c' l='1116' u='c' c='tcc_add_library_internal'/>
+<use f='tcc/tccelf.c' l='2927' u='c' c='ld_add_file'/>

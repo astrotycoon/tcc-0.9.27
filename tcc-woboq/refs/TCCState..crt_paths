@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='731' type='char **'/>
+<offset>1856</offset>
+<doc f='tcc/tcc.h' l='730'>/* crt?.o object path */</doc>
+<use f='tcc/libtcc.c' l='911' u='a' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='980' u='a' c='tcc_set_output_type'/>
+<use f='tcc/libtcc.c' l='1133' u='r' c='tcc_add_crt'/>
+<use f='tcc/tcc.c' l='187' u='r' c='print_search_dirs'/>

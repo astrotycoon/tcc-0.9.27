@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1290' type='Sym *'/>
+<use f='tcc/libtcc.c' l='664' u='a' c='tcc_compile'/>
+<def f='tcc/tccgen.c' l='37' type='Sym *'/>
+<use f='tcc/tccgen.c' l='557' u='a' c='sym_push'/>
+<use f='tcc/tccgen.c' l='584' u='a' c='global_identifier_push'/>

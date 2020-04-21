@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='1457' type='void inp()'/>
+<use f='tcc/tccelf.c' l='2819' u='c' c='ld_next'/>
+<use f='tcc/tccelf.c' l='2917' u='c' c='ld_next'/>
+<def f='tcc/tccpp.c' l='620' ll='626' type='void inp()'/>
+<use f='tcc/tccpp.c' l='632' u='c' c='handle_stray_noerror'/>
+<use f='tcc/tccpp.c' l='635' u='c' c='handle_stray_noerror'/>
+<use f='tcc/tccpp.c' l='637' u='c' c='handle_stray_noerror'/>
+<use f='tcc/tccpp.c' l='641' u='c' c='handle_stray_noerror'/>
+<use f='tcc/tccpp.c' l='708' u='c' c='minp'/>
+<use f='tcc/tccpp.c' l='1758' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1767' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1982' u='c' c='preprocess'/>
+<doc f='tcc/tccpp.c' l='619'>/* read next char from current input file and handle end of input buffer */</doc>

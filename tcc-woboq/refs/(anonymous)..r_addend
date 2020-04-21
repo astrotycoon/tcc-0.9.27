@@ -1,0 +1,9 @@
+<dec f='tcc/elf.h' l='530' type='Elf32_Sword'/>
+<dec f='tcc/elf.h' l='537' type='Elf64_Sxword'/>
+<offset>128</offset>
+<doc f='tcc/elf.h' l='530'>/* Addend */</doc>
+<doc f='tcc/elf.h' l='537'>/* Addend */</doc>
+<use f='tcc/tccelf.c' l='600' u='w' c='put_elf_reloca'/>
+<use f='tcc/tccelf.c' l='843' u='r' c='relocate_section'/>
+<use f='tcc/tccelf.c' l='1372' u='w' c='fill_local_got_entries'/>
+<use f='tcc/tccgen.c' l='6520' u='r' c='init_putv'/>

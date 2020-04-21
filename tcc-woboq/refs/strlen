@@ -1,0 +1,33 @@
+<dec f='include/string.h' l='384' type='unsigned long strlen(const char * __s)'/>
+<use f='tcc/i386-asm.c' l='1209' u='c' c='asm_parse_regvar'/>
+<use f='tcc/i386-asm.c' l='1490' u='c' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1707' u='c' c='asm_clobber'/>
+<doc f='include/string.h' l='383'>/* Return the length of S.  */</doc>
+<use f='tcc/libtcc.c' l='164' u='c' c='pstrcat'/>
+<use f='tcc/libtcc.c' l='240' u='c' c='tcc_strdup'/>
+<use f='tcc/libtcc.c' l='471' u='c' c='strcat_vprintf'/>
+<use f='tcc/libtcc.c' l='674' u='c' c='tcc_compile_string'/>
+<use f='tcc/libtcc.c' l='689' u='c' c='tcc_define_symbol'/>
+<use f='tcc/libtcc.c' l='690' u='c' c='tcc_define_symbol'/>
+<use f='tcc/libtcc.c' l='709' u='c' c='tcc_undefine_symbol'/>
+<use f='tcc/libtcc.c' l='1315' u='c' c='skip_linker_arg'/>
+<use f='tcc/libtcc.c' l='1325' u='c' c='copy_linker_arg'/>
+<use f='tcc/libtcc.c' l='1603' u='c' c='args_parser_add_file'/>
+<use f='tcc/tcctools.c' l='212' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='229' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tccasm.c' l='30' u='c' c='asm_get_local_label_name'/>
+<use f='tcc/tccelf.c' l='196' u='c' c='new_section'/>
+<use f='tcc/tccelf.c' l='328' u='c' c='put_elf_str'/>
+<use f='tcc/tccelf.c' l='1002' u='c' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='2092' u='c' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2610' u='c' c='tcc_load_alacarte'/>
+<use f='tcc/tccelf.c' l='2759' u='c' c='tcc_load_dll'/>
+<use f='tcc/tccgen.c' l='2883' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2884' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='4657' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='7273' u='c' c='decl0'/>
+<use f='tcc/tccpp.c' l='353' u='c' c='cstr_cat'/>
+<use f='tcc/tccpp.c' l='1591' u='c' c='search_cached_include'/>
+<use f='tcc/tccpp.c' l='1791' u='c' c='preprocess'/>
+<use f='tcc/tccrun.c' l='156' u='c' c='tcc_run'/>
+<use f='tcc/tccrun.c' l='421' u='c' c='rt_printline'/>

@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='981'/>
+<doc f='tcc/tcc.h' l='980'>/* assignment operators : normal operator or 0x80 */</doc>
+<use f='tcc/tccgen.c' l='5661' u='c'/>
+<use f='tcc/tccpp.c' l='87' u='c'/>
+<use f='tcc/tccpp.c' l='2914' u='c'/>

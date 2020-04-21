@@ -1,0 +1,14 @@
+<dec f='tcc/elf.h' l='337'/>
+<use f='tcc/tccasm.c' l='498' u='c'/>
+<use f='tcc/tccasm.c' l='552' u='c'/>
+<use f='tcc/tccelf.c' l='63' u='c'/>
+<use f='tcc/tccelf.c' l='64' u='c'/>
+<use f='tcc/tccelf.c' l='281' u='c'/>
+<use f='tcc/tccelf.c' l='1299' u='c'/>
+<use f='tcc/tccelf.c' l='1653' u='c'/>
+<use f='tcc/tccelf.c' l='1694' u='c'/>
+<use f='tcc/tccelf.c' l='1734' u='c'/>
+<use f='tcc/tccelf.c' l='1937' u='c'/>
+<use f='tcc/tccelf.c' l='2362' u='c'/>
+<use f='tcc/tccelf.c' l='2429' u='c'/>
+<use f='tcc/tccrun.c' l='261' u='c'/>

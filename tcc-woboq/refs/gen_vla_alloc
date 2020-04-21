@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='1512' type='void gen_vla_alloc(CType * type, int align)'/>
+<use f='tcc/tccgen.c' l='7019' u='c' c='decl_initializer_alloc'/>

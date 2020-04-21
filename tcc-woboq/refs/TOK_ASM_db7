@@ -1,0 +1,2 @@
+<dec f='tcc/i386-tok.h' l='78' macro='1' type='522'/>
+<use f='tcc/i386-asm.c' l='363' u='r' c='parse_operand'/>

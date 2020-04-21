@@ -1,0 +1,20 @@
+<dec f='include/string.h' l='121' type='char * strcpy(char *restrict __dest, const char *restrict __src)'/>
+<doc f='include/string.h' l='120'>/* Copy SRC to DEST.  */</doc>
+<use f='tcc/libtcc.c' l='241' u='c' c='tcc_strdup'/>
+<use f='tcc/libtcc.c' l='1606' u='c' c='args_parser_add_file'/>
+<use f='tcc/tcctools.c' l='214' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcc.c' l='229' u='c' c='default_outputfile'/>
+<use f='tcc/tcc.c' l='231' u='c' c='default_outputfile'/>
+<use f='tcc/tccasm.c' l='1113' u='c' c='parse_asm_operands'/>
+<use f='tcc/tccelf.c' l='197' u='c' c='new_section'/>
+<use f='tcc/tccelf.c' l='1006' u='c' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='2093' u='c' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2761' u='c' c='tcc_load_dll'/>
+<use f='tcc/tccgen.c' l='372' u='c' c='put_extern_sym2'/>
+<use f='tcc/tccgen.c' l='7274' u='c' c='decl0'/>
+<use f='tcc/tccpp.c' l='544' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='546' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='548' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='550' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='1592' u='c' c='search_cached_include'/>
+<use f='tcc/tccrun.c' l='401' u='c' c='rt_printline'/>

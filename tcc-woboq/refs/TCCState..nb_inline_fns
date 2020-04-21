@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='780' type='int'/>
+<offset>10112</offset>
+<use f='tcc/tccgen.c' l='7106' u='r' c='gen_inline_functions'/>
+<use f='tcc/tccgen.c' l='7134' u='r' c='free_inline_functions'/>
+<use f='tcc/tccgen.c' l='7139' u='a' c='free_inline_functions'/>
+<use f='tcc/tccgen.c' l='7278' u='a' c='decl0'/>

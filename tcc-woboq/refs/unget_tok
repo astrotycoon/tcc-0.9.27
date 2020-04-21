@@ -1,0 +1,15 @@
+<dec f='tcc/tcc.h' l='1257' type='void unget_tok(int last_tok)'/>
+<use f='tcc/i386-asm.c' l='441' u='c' c='parse_operand'/>
+<use f='tcc/i386-asm.c' l='697' u='c' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='1210' u='c' c='asm_parse_regvar'/>
+<use f='tcc/i386-asm.c' l='1211' u='c' c='asm_parse_regvar'/>
+<use f='tcc/tccgen.c' l='5738' u='c' c='is_label'/>
+<use f='tcc/tccgen.c' l='5968' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6869' u='c' c='decl_initializer_alloc'/>
+<use f='tcc/tccpp.c' l='1640' u='c' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1641' u='c' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1642' u='c' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1643' u='c' c='pragma_parse'/>
+<def f='tcc/tccpp.c' l='3571' ll='3579' type='void unget_tok(int last_tok)'/>
+<doc f='tcc/tccpp.c' l='3569'>/* push back current token and set current token to &apos;last_tok&apos;. Only
+   identifier case handled for labels. */</doc>

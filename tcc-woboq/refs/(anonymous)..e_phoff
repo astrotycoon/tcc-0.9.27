@@ -1,0 +1,6 @@
+<dec f='tcc/elf.h' l='84' type='Elf32_Off'/>
+<dec f='tcc/elf.h' l='102' type='Elf64_Off'/>
+<offset>256</offset>
+<doc f='tcc/elf.h' l='84'>/* Program header table file offset */</doc>
+<doc f='tcc/elf.h' l='102'>/* Program header table file offset */</doc>
+<use f='tcc/tccelf.c' l='1876' u='w' c='tcc_output_elf'/>

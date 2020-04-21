@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1314' type='void tcc_debug_line(TCCState * s1)'/>
+<use f='tcc/tccasm.c' l='919' u='c' c='tcc_assemble_internal'/>
+<def f='tcc/tccgen.c' l='194' ll='203' type='void tcc_debug_line(TCCState * s1)'/>
+<use f='tcc/tccgen.c' l='5883' u='c' c='block'/>
+<doc f='tcc/tccgen.c' l='193'>/* generate line number info */</doc>

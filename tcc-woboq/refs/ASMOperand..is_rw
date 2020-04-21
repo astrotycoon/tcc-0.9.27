@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='638' type='int'/>
+<use f='tcc/i386-asm.c' l='1243' u='w' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='1326' u='w' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='1643' u='r' c='asm_gen_code'/>
+<offset>512</offset>
+<doc f='tcc/tcc.h' l='638'>/* for &apos;+&apos; modifier */</doc>

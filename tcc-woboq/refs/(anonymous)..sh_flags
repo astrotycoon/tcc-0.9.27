@@ -1,0 +1,8 @@
+<dec f='tcc/elf.h' l='286' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='300' type='Elf64_Xword'/>
+<offset>64</offset>
+<doc f='tcc/elf.h' l='286'>/* Section flags */</doc>
+<doc f='tcc/elf.h' l='300'>/* Section flags */</doc>
+<use f='tcc/tccelf.c' l='1962' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2344' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2395' u='r' c='tcc_load_object_file'/>

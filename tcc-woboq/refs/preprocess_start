@@ -1,0 +1,3 @@
+<dec f='tcc/tcc.h' l='1258' type='void preprocess_start(TCCState * s1, int is_asm)'/>
+<use f='tcc/libtcc.c' l='645' u='c' c='tcc_compile'/>
+<def f='tcc/tccpp.c' l='3581' ll='3624' type='void preprocess_start(TCCState * s1, int is_asm)'/>

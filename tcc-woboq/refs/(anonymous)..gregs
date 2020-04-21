@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/sys/ucontext.h' l='135' type='gregset_t'/>
+<use f='tcc/tccrun.c' l='634' u='r' c='rt_get_caller_pc'/>
+<use f='tcc/tccrun.c' l='645' u='r' c='rt_get_caller_pc'/>
+<offset>0</offset>

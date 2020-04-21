@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='500' type='struct Sym *'/>
+<offset>320</offset>
+<doc f='tcc/tcc.h' l='500'>/* prev symbol in stack */</doc>
+<use f='tcc/tccgen.c' l='511' u='w' c='sym_push2'/>
+<use f='tcc/tccgen.c' l='525' u='r' c='sym_find2'/>
+<use f='tcc/tccgen.c' l='608' u='r' c='sym_pop'/>
+<use f='tcc/tccpp.c' l='1337' u='r' c='free_defines'/>
+<use f='tcc/tccpp.c' l='1352' u='r' c='free_defines'/>
+<use f='tcc/tccpp.c' l='1388' u='r' c='label_pop'/>
+<use f='tcc/tccpp.c' l='1623' u='r' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='3238' u='r' c='next_argstream'/>
+<use f='tcc/tccpp.c' l='3429' u='r' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3447' u='r' c='macro_subst_tok'/>

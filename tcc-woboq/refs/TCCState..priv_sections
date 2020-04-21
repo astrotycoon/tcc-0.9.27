@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='786' type='Section **'/>
+<offset>10304</offset>
+<use f='tcc/tccelf.c' l='117' u='r' c='tccelf_delete'/>
+<use f='tcc/tccelf.c' l='118' u='a' c='tccelf_delete'/>
+<use f='tcc/tccelf.c' l='218' u='a' c='new_section'/>

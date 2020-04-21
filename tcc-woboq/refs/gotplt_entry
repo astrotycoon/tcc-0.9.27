@@ -1,0 +1,3 @@
+<def f='tcc/tcc.h' l='1465' ll='1470'/>
+<doc f='tcc/tcc.h' l='1463'>/* Whether to generate a GOT/PLT entry and when. NO_GOTPLT_ENTRY is first so
+   that unknown relocation don&apos;t create a GOT or PLT entry */</doc>

@@ -1,0 +1,12 @@
+<dec f='tcc/tcc.h' l='952'/>
+<use f='tcc/tccgen.c' l='4671' u='c'/>
+<use f='tcc/tccgen.c' l='6652' u='c'/>
+<use f='tcc/tccgen.c' l='6672' u='c'/>
+<use f='tcc/tccgen.c' l='6683' u='c'/>
+<use f='tcc/tccgen.c' l='6691' u='c'/>
+<use f='tcc/tccgen.c' l='6803' u='c'/>
+<use f='tcc/tccgen.c' l='6860' u='c'/>
+<use f='tcc/tccpp.c' l='506' u='c'/>
+<use f='tcc/tccpp.c' l='1156' u='c'/>
+<use f='tcc/tccpp.c' l='1244' u='c'/>
+<use f='tcc/tccpp.c' l='2231' u='c'/>

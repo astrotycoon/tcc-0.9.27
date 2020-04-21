@@ -1,0 +1,23 @@
+<dec f='tcc/tcc.h' l='1134' type='void tcc_error_noabort(const char * fmt)'/>
+<def f='tcc/libtcc.c' l='535' ll='543' type='void tcc_error_noabort(const char * fmt)'/>
+<use f='tcc/libtcc.c' l='1012' u='c' c='tcc_add_file_internal'/>
+<use f='tcc/libtcc.c' l='1067' u='c' c='tcc_add_file_internal'/>
+<use f='tcc/libtcc.c' l='1134' u='c' c='tcc_add_crt'/>
+<use f='tcc/libtcc.c' l='1164' u='c' c='tcc_add_library_err'/>
+<doc f='tcc/libtcc.c' l='534'>/* error without aborting current compilation */</doc>
+<use f='tcc/tccelf.c' l='556' u='c' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='814' u='c' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='1369' u='c' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1453' u='c' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1991' u='c' c='tcc_write_elf_file'/>
+<use f='tcc/tccelf.c' l='2309' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2331' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2403' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2533' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2653' u='c' c='tcc_load_archive'/>
+<use f='tcc/tccelf.c' l='2707' u='c' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2785' u='c' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2958' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccelf.c' l='2966' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccelf.c' l='2977' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccelf.c' l='3046' u='c' c='tcc_load_ldscript'/>

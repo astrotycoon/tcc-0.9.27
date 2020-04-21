@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='396' type='struct Sym *'/>
+<offset>64</offset>
+<doc f='tcc/tcc.h' l='396'>/* direct pointer to define */</doc>
+<use f='tcc/tccpp.c' l='431' u='w' c='tok_alloc_new'/>
+<use f='tcc/tccpp.c' l='1310' u='w' c='define_push'/>
+<use f='tcc/tccpp.c' l='1321' u='w' c='define_undef'/>
+<use f='tcc/tccpp.c' l='1329' u='r' c='define_find'/>
+<use f='tcc/tccpp.c' l='1348' u='a' c='free_defines'/>
+<use f='tcc/tccpp.c' l='1630' u='w' c='pragma_parse'/>

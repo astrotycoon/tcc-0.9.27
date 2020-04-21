@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='329'/>
+<doc f='tcc/elf.h' l='327'>/* Legal values for sh_type (section type).  */</doc>

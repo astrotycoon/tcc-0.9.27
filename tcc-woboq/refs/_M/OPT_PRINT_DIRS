@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1193'/>
+<use f='tcc/libtcc.c' l='1919' u='c'/>
+<use f='tcc/libtcc.c' l='1958' u='c'/>
+<use f='tcc/tcc.c' l='277' u='c'/>

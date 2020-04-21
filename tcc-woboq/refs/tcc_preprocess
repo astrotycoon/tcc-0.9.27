@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1262' type='int tcc_preprocess(TCCState * s1)'/>
+<use f='tcc/libtcc.c' l='647' u='c' c='tcc_compile'/>
+<def f='tcc/tccpp.c' l='3831' ll='3901' type='int tcc_preprocess(TCCState * s1)'/>
+<doc f='tcc/tccpp.c' l='3830'>/* Preprocess the current file */</doc>

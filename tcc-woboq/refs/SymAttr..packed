@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='451' type='unsigned short'/>
+<offset>5</offset>
+<use f='tcc/tccgen.c' l='3360' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3520' u='r' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3520' u='r' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3933' u='r' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='3933' u='r' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='3983' u='r' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='3984' u='w' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='6895' u='r' c='decl_initializer_alloc'/>

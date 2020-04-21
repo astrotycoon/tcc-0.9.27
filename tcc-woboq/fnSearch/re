@@ -1,0 +1,6 @@
+read16le|read16le
+read32le|read32le
+read64le|read64le
+relocate_section|relocate_section
+relocate_syms|relocate_syms
+resolve_common_syms|resolve_common_syms

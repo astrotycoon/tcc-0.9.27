@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1155' type='Sym * global_identifier_push(int v, int t, int c)'/>
+<use f='tcc/tccasm.c' l='51' u='c' c='asm_label_push'/>
+<def f='tcc/tccgen.c' l='581' ll='596' type='Sym * global_identifier_push(int v, int t, int c)'/>
+<use f='tcc/tccgen.c' l='815' u='c' c='get_sym_ref'/>
+<use f='tcc/tccgen.c' l='836' u='c' c='external_global_sym'/>
+<doc f='tcc/tccgen.c' l='580'>/* push a global identifier */</doc>

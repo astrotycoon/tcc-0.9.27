@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1403' type='void tccelf_begin_file(TCCState * s1)'/>
+<use f='tcc/libtcc.c' l='639' u='c' c='tcc_compile'/>
+<def f='tcc/tccelf.c' l='140' ll='152' type='void tccelf_begin_file(TCCState * s1)'/>
+<doc f='tcc/tccelf.c' l='139'>/* save section data state */</doc>

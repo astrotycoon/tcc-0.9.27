@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='23' type='32'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='21'>/* Global variable.  Only the name is significant.
+   To find the address, look in the corresponding external symbol.  */</doc>

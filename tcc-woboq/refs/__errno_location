@@ -1,0 +1,4 @@
+<dec f='include/errno.h' l='37' type='int * __errno_location()'/>
+<doc f='include/errno.h' l='36'>/* The error code set by various library functions.  */</doc>
+<use f='tcc/tccpp.c' l='2437' macro='1' u='c' c='parse_number'/>
+<use f='tcc/tccrun.c' l='134' macro='1' u='c' c='tcc_run'/>

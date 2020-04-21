@@ -1,0 +1,3 @@
+<dec f='tcc/tcc.h' l='1431' type='void put_stabd(int type, int other, int desc)'/>
+<def f='tcc/tccelf.c' l='683' ll='686' type='void put_stabd(int type, int other, int desc)'/>
+<use f='tcc/tccpp.c' l='2625' u='c' c='next_nomacro1'/>

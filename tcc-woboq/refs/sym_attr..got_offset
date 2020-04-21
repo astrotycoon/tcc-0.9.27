@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='644' type='unsigned int'/>
+<offset>0</offset>
+<use f='tcc/tccelf.c' l='944' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1011' u='w' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1317' u='r' c='fill_got_entry'/>
+<use f='tcc/tccelf.c' l='1367' u='r' c='fill_local_got_entries'/>

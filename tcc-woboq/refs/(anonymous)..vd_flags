@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='837' type='Elf32_Half'/>
+<dec f='tcc/elf.h' l='849' type='Elf64_Half'/>
+<offset>16</offset>
+<doc f='tcc/elf.h' l='837'>/* Version information */</doc>
+<doc f='tcc/elf.h' l='849'>/* Version information */</doc>

@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='570' type='int'/>
+<offset>128</offset>
+<use f='tcc/libtcc.c' l='591' u='w' c='tcc_open_bf'/>
+<use f='tcc/libtcc.c' l='600' u='r' c='tcc_close'/>
+<use f='tcc/libtcc.c' l='601' u='r' c='tcc_close'/>
+<use f='tcc/libtcc.c' l='626' u='w' c='tcc_open'/>
+<use f='tcc/libtcc.c' l='1024' u='r' c='tcc_add_file_internal'/>
+<use f='tcc/tccpp.c' l='594' u='r' c='handle_eob'/>
+<use f='tcc/tccpp.c' l='600' u='r' c='handle_eob'/>
+<use f='tcc/tccpp.c' l='1963' u='r' c='preprocess'/>

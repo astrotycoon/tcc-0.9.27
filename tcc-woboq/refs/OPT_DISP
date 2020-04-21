@@ -1,0 +1,12 @@
+<dec f='tcc/i386-asm.c' l='98' type='29'/>
+<use f='tcc/x86_64-asm.h' l='214'/>
+<use f='tcc/x86_64-asm.h' l='214'/>
+<use f='tcc/x86_64-asm.h' l='214'/>
+<use f='tcc/x86_64-asm.h' l='214'/>
+<use f='tcc/x86_64-asm.h' l='214'/>
+<use f='tcc/x86_64-asm.h' l='214'/>
+<use f='tcc/x86_64-asm.h' l='214'/>
+<use f='tcc/x86_64-asm.h' l='214'/>
+<use f='tcc/i386-asm.c' l='818' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='1126' u='r' c='asm_opcode'/>
+<doc f='tcc/i386-asm.c' l='98'>/* Like OPT_ADDR, but emitted as displacement (for jumps) */</doc>

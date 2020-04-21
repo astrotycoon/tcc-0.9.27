@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1330' type='void vrote(SValue * e, int n)'/>
+<def f='tcc/tccgen.c' l='780' ll='789' type='void vrote(SValue * e, int n)'/>
+<use f='tcc/tccgen.c' l='796' u='c' c='vrott'/>
+<doc f='tcc/tccgen.c' l='777'>/* rotate the n elements before entry e towards the top
+   I1 ... In ... -&gt; In I1 ... I(n-1) ... [top is right]
+ */</doc>

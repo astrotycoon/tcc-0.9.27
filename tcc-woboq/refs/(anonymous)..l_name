@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='1728' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='1737' type='Elf64_Word'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='1728'>/* Name (string table index) */</doc>
+<doc f='tcc/elf.h' l='1737'>/* Name (string table index) */</doc>

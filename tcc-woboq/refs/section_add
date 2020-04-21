@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1408' type='size_t section_add(Section * sec, Elf64_Addr size, int align)'/>
+<def f='tcc/tccelf.c' l='275' ll='287' type='size_t section_add(Section * sec, Elf64_Addr size, int align)'/>
+<use f='tcc/tccelf.c' l='293' u='c' c='section_ptr_add'/>
+<use f='tcc/tccelf.c' l='1280' u='c' c='resolve_common_syms'/>
+<doc f='tcc/tccelf.c' l='273'>/* reserve at least &apos;size&apos; bytes aligned per &apos;align&apos; in section
+   &apos;sec&apos; from current offset, and return the aligned offset */</doc>
+<use f='tcc/tccgen.c' l='1301' u='c' c='gv'/>
+<use f='tcc/tccgen.c' l='6962' u='c' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='6966' u='c' c='decl_initializer_alloc'/>

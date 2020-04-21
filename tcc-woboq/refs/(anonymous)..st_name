@@ -1,0 +1,22 @@
+<dec f='tcc/elf.h' l='394' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='404' type='Elf64_Word'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='394'>/* Symbol name (string tbl index) */</doc>
+<doc f='tcc/elf.h' l='404'>/* Symbol name (string tbl index) */</doc>
+<use f='tcc/tcctools.c' l='212' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='214' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tccelf.c' l='174' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='376' u='r' c='rebuild_hash'/>
+<use f='tcc/tccelf.c' l='402' u='w' c='put_elf_sym'/>
+<use f='tcc/tccelf.c' l='450' u='r' c='find_elf_sym'/>
+<use f='tcc/tccelf.c' l='788' u='r' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='960' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1396' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1433' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1458' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1477' u='r' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='1504' u='r' c='export_global_syms'/>
+<use f='tcc/tccelf.c' l='2482' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2498' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2769' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccrun.c' l='446' u='r' c='rt_printline'/>

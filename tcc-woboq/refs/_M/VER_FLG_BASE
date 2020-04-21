@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='865'/>
+<doc f='tcc/elf.h' l='864'>/* Legal values for vd_flags (version information flags).  */</doc>

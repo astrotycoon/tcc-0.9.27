@@ -1,0 +1,5 @@
+<dec f='tcc/i386-tok.h' l='153' macro='1' type='688'/>
+<use f='tcc/i386-asm.c' l='879' u='r' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='882' u='r' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='931' u='r' c='asm_opcode'/>
+<use f='tcc/tccpp.c' l='1653' u='r' c='pragma_parse'/>

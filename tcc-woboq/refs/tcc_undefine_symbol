@@ -1,0 +1,5 @@
+<dec f='tcc/libtcc.h' l='45' type='void tcc_undefine_symbol(TCCState * s, const char * sym)'/>
+<doc f='tcc/libtcc.h' l='44'>/* undefine preprocess symbol &apos;sym&apos; */</doc>
+<def f='tcc/libtcc.c' l='705' ll='714' type='void tcc_undefine_symbol(TCCState * s1, const char * sym)'/>
+<use f='tcc/libtcc.c' l='1742' u='c' c='tcc_parse_args'/>
+<doc f='tcc/libtcc.c' l='704'>/* undefine a preprocessor symbol */</doc>

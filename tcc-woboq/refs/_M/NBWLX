@@ -1,0 +1,17 @@
+<dec f='tcc/tcc.h' l='1030'/>
+<use f='tcc/i386-asm.c' l='741' u='c'/>
+<use f='tcc/i386-asm.c' l='743' u='c'/>
+<use f='tcc/i386-asm.c' l='749' u='c'/>
+<use f='tcc/i386-asm.c' l='754' u='c'/>
+<use f='tcc/i386-asm.c' l='756' u='c'/>
+<use f='tcc/i386-asm.c' l='765' u='c'/>
+<use f='tcc/i386-asm.c' l='771' u='c'/>
+<use f='tcc/i386-asm.c' l='774' u='c'/>
+<use f='tcc/i386-asm.c' l='778' u='c'/>
+<use f='tcc/i386-asm.c' l='862' u='c'/>
+<use f='tcc/i386-asm.c' l='867' u='c'/>
+<use f='tcc/i386-asm.c' l='884' u='c'/>
+<use f='tcc/i386-asm.c' l='968' u='c'/>
+<use f='tcc/i386-asm.c' l='1067' u='c'/>
+<use f='tcc/i386-asm.c' l='1071' u='c'/>
+<doc f='tcc/tcc.h' l='1029'>/* number of sizes + 1 */</doc>

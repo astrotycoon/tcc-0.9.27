@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='1543' type='void gen_le32(int c)'/>
+<use f='tcc/i386-asm.c' l='509' u='c' c='gen_disp32'/>

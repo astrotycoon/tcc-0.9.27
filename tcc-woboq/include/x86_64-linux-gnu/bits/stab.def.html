@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>stab.def source code [include/x86_64-linux-gnu/bits/stab.def] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'include/x86_64-linux-gnu/bits/stab.def'; var root_path = '../../..'; var data_path = '../../../../data'; var ecma_script_api_version = 2;</script>
+<script src='../../../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>include</a>/<a href='..'>x86_64-linux-gnu</a>/<a href='./'>bits</a>/<a href='stab.def.html'>stab.def</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/* Table of DBX symbol codes for the GNU system.</i></td></tr>
+<tr><th id="2">2</th><td><i>   Copyright (C) 1988, 1997-2018 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="3">3</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
+<tr><th id="4">4</th><td><i></i></td></tr>
+<tr><th id="5">5</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
+<tr><th id="6">6</th><td><i>   modify it under the terms of the GNU Lesser General Public</i></td></tr>
+<tr><th id="7">7</th><td><i>   License as published by the Free Software Foundation; either</i></td></tr>
+<tr><th id="8">8</th><td><i>   version 2.1 of the License, or (at your option) any later version.</i></td></tr>
+<tr><th id="9">9</th><td><i></i></td></tr>
+<tr><th id="10">10</th><td><i>   The GNU C Library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="11">11</th><td><i>   but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="12">12</th><td><i>   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</i></td></tr>
+<tr><th id="13">13</th><td><i>   Lesser General Public License for more details.</i></td></tr>
+<tr><th id="14">14</th><td><i></i></td></tr>
+<tr><th id="15">15</th><td><i>   You should have received a copy of the GNU Lesser General Public</i></td></tr>
+<tr><th id="16">16</th><td><i>   License along with the GNU C Library; if not, see</i></td></tr>
+<tr><th id="17">17</th><td><i>   &lt;<a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.  */</i></td></tr>
+<tr><th id="18">18</th><td></td></tr>
+<tr><th id="19">19</th><td><i>/* This contains contribution from Cygnus Support.  */</i></td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td><i>/* Global variable.  Only the name is significant.</i></td></tr>
+<tr><th id="22">22</th><td><i>   To find the address, look in the corresponding external symbol.  */</i></td></tr>
+<tr><th id="23">23</th><td><a class="macro" href="../../stab.h.html#7" title="N_GSYM=0x20," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_GSYM" title='N_GSYM' data-ref="N_GSYM" data-ref-filename="N_GSYM">N_GSYM</dfn>, <var>0x20</var>, <q>"GSYM"</q>)</td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><i>/* Function name for BSD Fortran.  Only the name is significant.</i></td></tr>
+<tr><th id="26">26</th><td><i>   To find the address, look in the corresponding external symbol.  */</i></td></tr>
+<tr><th id="27">27</th><td><a class="macro" href="../../stab.h.html#7" title="N_FNAME=0x22," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_FNAME" title='N_FNAME' data-ref="N_FNAME" data-ref-filename="N_FNAME">N_FNAME</dfn>, <var>0x22</var>, <q>"FNAME"</q>)</td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><i>/* Function name or text-segment variable for C.  Value is its address.</i></td></tr>
+<tr><th id="30">30</th><td><i>   Desc is supposedly starting line number, but GCC doesn't set it</i></td></tr>
+<tr><th id="31">31</th><td><i>   and DBX seems not to miss it.  */</i></td></tr>
+<tr><th id="32">32</th><td><a class="macro" href="../../stab.h.html#7" title="N_FUN=0x24," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_FUN" title='N_FUN' data-ref="N_FUN" data-ref-filename="N_FUN">N_FUN</dfn>, <var>0x24</var>, <q>"FUN"</q>)</td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><i>/* Data-segment variable with internal linkage.  Value is its address.</i></td></tr>
+<tr><th id="35">35</th><td><i>   "Static Sym".  */</i></td></tr>
+<tr><th id="36">36</th><td><a class="macro" href="../../stab.h.html#7" title="N_STSYM=0x26," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_STSYM" title='N_STSYM' data-ref="N_STSYM" data-ref-filename="N_STSYM">N_STSYM</dfn>, <var>0x26</var>, <q>"STSYM"</q>)</td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td><i>/* BSS-segment variable with internal linkage.  Value is its address.  */</i></td></tr>
+<tr><th id="39">39</th><td><a class="macro" href="../../stab.h.html#7" title="N_LCSYM=0x28," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_LCSYM" title='N_LCSYM' data-ref="N_LCSYM" data-ref-filename="N_LCSYM">N_LCSYM</dfn>, <var>0x28</var>, <q>"LCSYM"</q>)</td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><i>/* Name of main routine.  Only the name is significant.</i></td></tr>
+<tr><th id="42">42</th><td><i>   This is not used in C.  */</i></td></tr>
+<tr><th id="43">43</th><td><a class="macro" href="../../stab.h.html#7" title="N_MAIN=0x2a," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_MAIN" title='N_MAIN' data-ref="N_MAIN" data-ref-filename="N_MAIN">N_MAIN</dfn>, <var>0x2a</var>, <q>"MAIN"</q>)</td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td><i>/* Global symbol in Pascal.</i></td></tr>
+<tr><th id="46">46</th><td><i>   Supposedly the value is its line number; I'm skeptical.  */</i></td></tr>
+<tr><th id="47">47</th><td><a class="macro" href="../../stab.h.html#7" title="N_PC=0x30," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_PC" title='N_PC' data-ref="N_PC" data-ref-filename="N_PC">N_PC</dfn>, <var>0x30</var>, <q>"PC"</q>)</td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><i>/* Number of symbols:  0, files,,funcs,lines according to Ultrix V4.0. */</i></td></tr>
+<tr><th id="50">50</th><td><a class="macro" href="../../stab.h.html#7" title="N_NSYMS=0x32," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_NSYMS" title='N_NSYMS' data-ref="N_NSYMS" data-ref-filename="N_NSYMS">N_NSYMS</dfn>, <var>0x32</var>, <q>"NSYMS"</q>)</td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><i>/* "No DST map for sym: name, ,0,type,ignored"  according to Ultrix V4.0. */</i></td></tr>
+<tr><th id="53">53</th><td><a class="macro" href="../../stab.h.html#7" title="N_NOMAP=0x34," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_NOMAP" title='N_NOMAP' data-ref="N_NOMAP" data-ref-filename="N_NOMAP">N_NOMAP</dfn>, <var>0x34</var>, <q>"NOMAP"</q>)</td></tr>
+<tr><th id="54">54</th><td></td></tr>
+<tr><th id="55">55</th><td><i>/* New stab from Solaris.  I don't know what it means, but it</i></td></tr>
+<tr><th id="56">56</th><td><i>   don't seem to contain useful information.  */</i></td></tr>
+<tr><th id="57">57</th><td><a class="macro" href="../../stab.h.html#7" title="N_OBJ=0x38," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_OBJ" title='N_OBJ' data-ref="N_OBJ" data-ref-filename="N_OBJ">N_OBJ</dfn>, <var>0x38</var>, <q>"OBJ"</q>)</td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td><i>/* New stab from Solaris.  I don't know what it means, but it</i></td></tr>
+<tr><th id="60">60</th><td><i>   don't seem to contain useful information.  Possibly related to the</i></td></tr>
+<tr><th id="61">61</th><td><i>   optimization flags used in this module.  */</i></td></tr>
+<tr><th id="62">62</th><td><a class="macro" href="../../stab.h.html#7" title="N_OPT=0x3c," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_OPT" title='N_OPT' data-ref="N_OPT" data-ref-filename="N_OPT">N_OPT</dfn>, <var>0x3c</var>, <q>"OPT"</q>)</td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td><i>/* Register variable.  Value is number of register.  */</i></td></tr>
+<tr><th id="65">65</th><td><a class="macro" href="../../stab.h.html#7" title="N_RSYM=0x40," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_RSYM" title='N_RSYM' data-ref="N_RSYM" data-ref-filename="N_RSYM">N_RSYM</dfn>, <var>0x40</var>, <q>"RSYM"</q>)</td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td><i>/* Modula-2 compilation unit.  Can someone say what info it contains?  */</i></td></tr>
+<tr><th id="68">68</th><td><a class="macro" href="../../stab.h.html#7" title="N_M2C=0x42," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_M2C" title='N_M2C' data-ref="N_M2C" data-ref-filename="N_M2C">N_M2C</dfn>, <var>0x42</var>, <q>"M2C"</q>)</td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td><i>/* Line number in text segment.  Desc is the line number;</i></td></tr>
+<tr><th id="71">71</th><td><i>   value is corresponding address.  */</i></td></tr>
+<tr><th id="72">72</th><td><a class="macro" href="../../stab.h.html#7" title="N_SLINE=0x44," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_SLINE" title='N_SLINE' data-ref="N_SLINE" data-ref-filename="N_SLINE">N_SLINE</dfn>, <var>0x44</var>, <q>"SLINE"</q>)</td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td><i>/* Similar, for data segment.  */</i></td></tr>
+<tr><th id="75">75</th><td><a class="macro" href="../../stab.h.html#7" title="N_DSLINE=0x46," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_DSLINE" title='N_DSLINE' data-ref="N_DSLINE" data-ref-filename="N_DSLINE">N_DSLINE</dfn>, <var>0x46</var>, <q>"DSLINE"</q>)</td></tr>
+<tr><th id="76">76</th><td></td></tr>
+<tr><th id="77">77</th><td><i>/* Similar, for bss segment.  */</i></td></tr>
+<tr><th id="78">78</th><td><a class="macro" href="../../stab.h.html#7" title="N_BSLINE=0x48," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_BSLINE" title='N_BSLINE' data-ref="N_BSLINE" data-ref-filename="N_BSLINE">N_BSLINE</dfn>, <var>0x48</var>, <q>"BSLINE"</q>)</td></tr>
+<tr><th id="79">79</th><td></td></tr>
+<tr><th id="80">80</th><td><i>/* Sun's source-code browser stabs.  ?? Don't know what the fields are.</i></td></tr>
+<tr><th id="81">81</th><td><i>   Supposedly the field is "path to associated .cb file".  THIS VALUE</i></td></tr>
+<tr><th id="82">82</th><td><i>   OVERLAPS WITH N_BSLINE!  */</i></td></tr>
+<tr><th id="83">83</th><td><a class="macro" href="../../stab.h.html#7" title="N_BROWS=0x48," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_BROWS" title='N_BROWS' data-ref="N_BROWS" data-ref-filename="N_BROWS">N_BROWS</dfn>, <var>0x48</var>, <q>"BROWS"</q>)</td></tr>
+<tr><th id="84">84</th><td></td></tr>
+<tr><th id="85">85</th><td><i>/* GNU Modula-2 definition module dependency.  Value is the modification time</i></td></tr>
+<tr><th id="86">86</th><td><i>   of the definition file.  Other is non-zero if it is imported with the</i></td></tr>
+<tr><th id="87">87</th><td><i>   GNU M2 keyword %INITIALIZE.  Perhaps N_M2C can be used if there</i></td></tr>
+<tr><th id="88">88</th><td><i>   are enough empty fields? */</i></td></tr>
+<tr><th id="89">89</th><td><a class="macro" href="../../stab.h.html#7" title="N_DEFD=0x4a," data-ref="_M/__define_stab">__define_stab</a>(<dfn class="enum" id="N_DEFD" title='N_DEFD' data-ref="N_DEFD" data-ref-filename="N_DEFD">N_DEFD</dfn>, <var>0x4a</var>, <q>"DEFD"</q>)</td></tr>
+<tr><th id="90">90</th><td></td></tr>
+<tr><th id="91">91</th><td><i>/* THE FOLLOWING TWO STAB VALUES CONFLICT.  Happily, one is for Modula-2</i></td></tr>
+<tr><th id="92">92</th><td><i>   and one is for C++.   Still,... */</i></td></tr>
+<tr><th id="93">93</th><td><i>/* GNU C++ exception variable.  Name is variable name.  */</i></td></tr>
+<tr><th id="94">94</th><td><a class="macro" href="../../stab.h.html#7" title="N_EHDECL=0x50," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_EHDECL" title='N_EHDECL' data-ref="N_EHDECL" data-ref-filename="N_EHDECL">N_EHDECL</dfn>, <var>0x50</var>, <q>"EHDECL"</q>)</td></tr>
+<tr><th id="95">95</th><td><i>/* Modula2 info "for imc":  name,,0,0,0  according to Ultrix V4.0.  */</i></td></tr>
+<tr><th id="96">96</th><td><a class="macro" href="../../stab.h.html#7" title="N_MOD2=0x50," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_MOD2" title='N_MOD2' data-ref="N_MOD2" data-ref-filename="N_MOD2">N_MOD2</dfn>, <var>0x50</var>, <q>"MOD2"</q>)</td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td><i>/* GNU C++ `catch' clause.  Value is its address.  Desc is nonzero if</i></td></tr>
+<tr><th id="99">99</th><td><i>   this entry is immediately followed by a CAUGHT stab saying what exception</i></td></tr>
+<tr><th id="100">100</th><td><i>   was caught.  Multiple CAUGHT stabs means that multiple exceptions</i></td></tr>
+<tr><th id="101">101</th><td><i>   can be caught here.  If Desc is 0, it means all exceptions are caught</i></td></tr>
+<tr><th id="102">102</th><td><i>   here.  */</i></td></tr>
+<tr><th id="103">103</th><td><a class="macro" href="../../stab.h.html#7" title="N_CATCH=0x54," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_CATCH" title='N_CATCH' data-ref="N_CATCH" data-ref-filename="N_CATCH">N_CATCH</dfn>, <var>0x54</var>, <q>"CATCH"</q>)</td></tr>
+<tr><th id="104">104</th><td></td></tr>
+<tr><th id="105">105</th><td><i>/* Structure or union element.  Value is offset in the structure.  */</i></td></tr>
+<tr><th id="106">106</th><td><a class="macro" href="../../stab.h.html#7" title="N_SSYM=0x60," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_SSYM" title='N_SSYM' data-ref="N_SSYM" data-ref-filename="N_SSYM">N_SSYM</dfn>, <var>0x60</var>, <q>"SSYM"</q>)</td></tr>
+<tr><th id="107">107</th><td></td></tr>
+<tr><th id="108">108</th><td><i>/* Name of main source file.</i></td></tr>
+<tr><th id="109">109</th><td><i>   Value is starting text address of the compilation.  */</i></td></tr>
+<tr><th id="110">110</th><td><a class="macro" href="../../stab.h.html#7" title="N_SO=0x64," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_SO" title='N_SO' data-ref="N_SO" data-ref-filename="N_SO">N_SO</dfn>, <var>0x64</var>, <q>"SO"</q>)</td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td><i>/* Automatic variable in the stack.  Value is offset from frame pointer.</i></td></tr>
+<tr><th id="113">113</th><td><i>   Also used for type descriptions.  */</i></td></tr>
+<tr><th id="114">114</th><td><a class="macro" href="../../stab.h.html#7" title="N_LSYM=0x80," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_LSYM" title='N_LSYM' data-ref="N_LSYM" data-ref-filename="N_LSYM">N_LSYM</dfn>, <var>0x80</var>, <q>"LSYM"</q>)</td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td><i>/* Beginning of an include file.  Only Sun uses this.</i></td></tr>
+<tr><th id="117">117</th><td><i>   In an object file, only the name is significant.</i></td></tr>
+<tr><th id="118">118</th><td><i>   The Sun linker puts data into some of the other fields.  */</i></td></tr>
+<tr><th id="119">119</th><td><a class="macro" href="../../stab.h.html#7" title="N_BINCL=0x82," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_BINCL" title='N_BINCL' data-ref="N_BINCL" data-ref-filename="N_BINCL">N_BINCL</dfn>, <var>0x82</var>, <q>"BINCL"</q>)</td></tr>
+<tr><th id="120">120</th><td></td></tr>
+<tr><th id="121">121</th><td><i>/* Name of sub-source file (#include file).</i></td></tr>
+<tr><th id="122">122</th><td><i>   Value is starting text address of the compilation.  */</i></td></tr>
+<tr><th id="123">123</th><td><a class="macro" href="../../stab.h.html#7" title="N_SOL=0x84," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_SOL" title='N_SOL' data-ref="N_SOL" data-ref-filename="N_SOL">N_SOL</dfn>, <var>0x84</var>, <q>"SOL"</q>)</td></tr>
+<tr><th id="124">124</th><td></td></tr>
+<tr><th id="125">125</th><td><i>/* Parameter variable.  Value is offset from argument pointer.</i></td></tr>
+<tr><th id="126">126</th><td><i>   (On most machines the argument pointer is the same as the frame pointer.  */</i></td></tr>
+<tr><th id="127">127</th><td><a class="macro" href="../../stab.h.html#7" title="N_PSYM=0xa0," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_PSYM" title='N_PSYM' data-ref="N_PSYM" data-ref-filename="N_PSYM">N_PSYM</dfn>, <var>0xa0</var>, <q>"PSYM"</q>)</td></tr>
+<tr><th id="128">128</th><td></td></tr>
+<tr><th id="129">129</th><td><i>/* End of an include file.  No name.</i></td></tr>
+<tr><th id="130">130</th><td><i>   This and N_BINCL act as brackets around the file's output.</i></td></tr>
+<tr><th id="131">131</th><td><i>   In an object file, there is no significant data in this entry.</i></td></tr>
+<tr><th id="132">132</th><td><i>   The Sun linker puts data into some of the fields.  */</i></td></tr>
+<tr><th id="133">133</th><td><a class="macro" href="../../stab.h.html#7" title="N_EINCL=0xa2," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_EINCL" title='N_EINCL' data-ref="N_EINCL" data-ref-filename="N_EINCL">N_EINCL</dfn>, <var>0xa2</var>, <q>"EINCL"</q>)</td></tr>
+<tr><th id="134">134</th><td></td></tr>
+<tr><th id="135">135</th><td><i>/* Alternate entry point.  Value is its address.  */</i></td></tr>
+<tr><th id="136">136</th><td><a class="macro" href="../../stab.h.html#7" title="N_ENTRY=0xa4," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_ENTRY" title='N_ENTRY' data-ref="N_ENTRY" data-ref-filename="N_ENTRY">N_ENTRY</dfn>, <var>0xa4</var>, <q>"ENTRY"</q>)</td></tr>
+<tr><th id="137">137</th><td></td></tr>
+<tr><th id="138">138</th><td><i>/* Beginning of lexical block.</i></td></tr>
+<tr><th id="139">139</th><td><i>   The desc is the nesting level in lexical blocks.</i></td></tr>
+<tr><th id="140">140</th><td><i>   The value is the address of the start of the text for the block.</i></td></tr>
+<tr><th id="141">141</th><td><i>   The variables declared inside the block *precede* the N_LBRAC symbol.  */</i></td></tr>
+<tr><th id="142">142</th><td><a class="macro" href="../../stab.h.html#7" title="N_LBRAC=0xc0," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_LBRAC" title='N_LBRAC' data-ref="N_LBRAC" data-ref-filename="N_LBRAC">N_LBRAC</dfn>, <var>0xc0</var>, <q>"LBRAC"</q>)</td></tr>
+<tr><th id="143">143</th><td></td></tr>
+<tr><th id="144">144</th><td><i>/* Place holder for deleted include file.  Replaces a N_BINCL and everything</i></td></tr>
+<tr><th id="145">145</th><td><i>   up to the corresponding N_EINCL.  The Sun linker generates these when</i></td></tr>
+<tr><th id="146">146</th><td><i>   it finds multiple identical copies of the symbols from an include file.</i></td></tr>
+<tr><th id="147">147</th><td><i>   This appears only in output from the Sun linker.  */</i></td></tr>
+<tr><th id="148">148</th><td><a class="macro" href="../../stab.h.html#7" title="N_EXCL=0xc2," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_EXCL" title='N_EXCL' data-ref="N_EXCL" data-ref-filename="N_EXCL">N_EXCL</dfn>, <var>0xc2</var>, <q>"EXCL"</q>)</td></tr>
+<tr><th id="149">149</th><td></td></tr>
+<tr><th id="150">150</th><td><i>/* Modula-2 scope information.  Can someone say what info it contains?  */</i></td></tr>
+<tr><th id="151">151</th><td><a class="macro" href="../../stab.h.html#7" title="N_SCOPE=0xc4," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_SCOPE" title='N_SCOPE' data-ref="N_SCOPE" data-ref-filename="N_SCOPE">N_SCOPE</dfn>, <var>0xc4</var>, <q>"SCOPE"</q>)</td></tr>
+<tr><th id="152">152</th><td></td></tr>
+<tr><th id="153">153</th><td><i>/* End of a lexical block.  Desc matches the N_LBRAC's desc.</i></td></tr>
+<tr><th id="154">154</th><td><i>   The value is the address of the end of the text for the block.  */</i></td></tr>
+<tr><th id="155">155</th><td><a class="macro" href="../../stab.h.html#7" title="N_RBRAC=0xe0," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_RBRAC" title='N_RBRAC' data-ref="N_RBRAC" data-ref-filename="N_RBRAC">N_RBRAC</dfn>, <var>0xe0</var>, <q>"RBRAC"</q>)</td></tr>
+<tr><th id="156">156</th><td></td></tr>
+<tr><th id="157">157</th><td><i>/* Begin named common block.  Only the name is significant.  */</i></td></tr>
+<tr><th id="158">158</th><td><a class="macro" href="../../stab.h.html#7" title="N_BCOMM=0xe2," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_BCOMM" title='N_BCOMM' data-ref="N_BCOMM" data-ref-filename="N_BCOMM">N_BCOMM</dfn>, <var>0xe2</var>, <q>"BCOMM"</q>)</td></tr>
+<tr><th id="159">159</th><td></td></tr>
+<tr><th id="160">160</th><td><i>/* End named common block.  Only the name is significant</i></td></tr>
+<tr><th id="161">161</th><td><i>   (and it should match the N_BCOMM).  */</i></td></tr>
+<tr><th id="162">162</th><td><a class="macro" href="../../stab.h.html#7" title="N_ECOMM=0xe4," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_ECOMM" title='N_ECOMM' data-ref="N_ECOMM" data-ref-filename="N_ECOMM">N_ECOMM</dfn>, <var>0xe4</var>, <q>"ECOMM"</q>)</td></tr>
+<tr><th id="163">163</th><td></td></tr>
+<tr><th id="164">164</th><td><i>/* End common (local name): value is address.</i></td></tr>
+<tr><th id="165">165</th><td><i>   I'm not sure how this is used.  */</i></td></tr>
+<tr><th id="166">166</th><td><a class="macro" href="../../stab.h.html#7" title="N_ECOML=0xe8," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_ECOML" title='N_ECOML' data-ref="N_ECOML" data-ref-filename="N_ECOML">N_ECOML</dfn>, <var>0xe8</var>, <q>"ECOML"</q>)</td></tr>
+<tr><th id="167">167</th><td></td></tr>
+<tr><th id="168">168</th><td><i>/* These STAB's are used on Gould systems for Non-Base register symbols</i></td></tr>
+<tr><th id="169">169</th><td><i>   or something like that.  FIXME.  I have assigned the values at random</i></td></tr>
+<tr><th id="170">170</th><td><i>   since I don't have a Gould here.  Fixups from Gould folk welcome... */</i></td></tr>
+<tr><th id="171">171</th><td><a class="macro" href="../../stab.h.html#7" title="N_NBTEXT=0xF0," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_NBTEXT" title='N_NBTEXT' data-ref="N_NBTEXT" data-ref-filename="N_NBTEXT">N_NBTEXT</dfn>, <var>0xF0</var>, <q>"NBTEXT"</q>)</td></tr>
+<tr><th id="172">172</th><td><a class="macro" href="../../stab.h.html#7" title="N_NBDATA=0xF2," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_NBDATA" title='N_NBDATA' data-ref="N_NBDATA" data-ref-filename="N_NBDATA">N_NBDATA</dfn>, <var>0xF2</var>, <q>"NBDATA"</q>)</td></tr>
+<tr><th id="173">173</th><td><a class="macro" href="../../stab.h.html#7" title="N_NBBSS=0xF4," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_NBBSS" title='N_NBBSS' data-ref="N_NBBSS" data-ref-filename="N_NBBSS">N_NBBSS</dfn>,  <var>0xF4</var>, <q>"NBBSS"</q>)</td></tr>
+<tr><th id="174">174</th><td><a class="macro" href="../../stab.h.html#7" title="N_NBSTS=0xF6," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_NBSTS" title='N_NBSTS' data-ref="N_NBSTS" data-ref-filename="N_NBSTS">N_NBSTS</dfn>,  <var>0xF6</var>, <q>"NBSTS"</q>)</td></tr>
+<tr><th id="175">175</th><td><a class="macro" href="../../stab.h.html#7" title="N_NBLCS=0xF8," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_NBLCS" title='N_NBLCS' data-ref="N_NBLCS" data-ref-filename="N_NBLCS">N_NBLCS</dfn>,  <var>0xF8</var>, <q>"NBLCS"</q>)</td></tr>
+<tr><th id="176">176</th><td></td></tr>
+<tr><th id="177">177</th><td><i>/* Second symbol entry containing a length-value for the preceding entry.</i></td></tr>
+<tr><th id="178">178</th><td><i>   The value is the length.  */</i></td></tr>
+<tr><th id="179">179</th><td><a class="macro" href="../../stab.h.html#7" title="N_LENG=0xfe," data-ref="_M/__define_stab">__define_stab</a> (<dfn class="enum" id="N_LENG" title='N_LENG' data-ref="N_LENG" data-ref-filename="N_LENG">N_LENG</dfn>, <var>0xfe</var>, <q>"LENG"</q>)</td></tr>
+<tr><th id="180">180</th><td></td></tr>
+<tr><th id="181">181</th><td><i>/* The above information, in matrix format.</i></td></tr>
+<tr><th id="182">182</th><td><i></i></td></tr>
+<tr><th id="183">183</th><td><i>			STAB MATRIX</i></td></tr>
+<tr><th id="184">184</th><td><i>	_________________________________________________</i></td></tr>
+<tr><th id="185">185</th><td><i>	| 00 - 1F are not dbx stab symbols		|</i></td></tr>
+<tr><th id="186">186</th><td><i>	| In most cases, the low bit is the EXTernal bit|</i></td></tr>
+<tr><th id="187">187</th><td><i></i></td></tr>
+<tr><th id="188">188</th><td><i>	| 00 UNDEF  | 02 ABS	| 04 TEXT   | 06 DATA	|</i></td></tr>
+<tr><th id="189">189</th><td><i>	| 01  |EXT  | 03  |EXT	| 05  |EXT  | 07  |EXT	|</i></td></tr>
+<tr><th id="190">190</th><td><i></i></td></tr>
+<tr><th id="191">191</th><td><i>	| 08 BSS    | 0A INDR	| 0C FN_SEQ | 0E   	|</i></td></tr>
+<tr><th id="192">192</th><td><i>	| 09  |EXT  | 0B 	| 0D	    | 0F	|</i></td></tr>
+<tr><th id="193">193</th><td><i></i></td></tr>
+<tr><th id="194">194</th><td><i>	| 10 	    | 12 COMM	| 14 SETA   | 16 SETT	|</i></td></tr>
+<tr><th id="195">195</th><td><i>	| 11	    | 13	| 15 	    | 17	|</i></td></tr>
+<tr><th id="196">196</th><td><i></i></td></tr>
+<tr><th id="197">197</th><td><i>	| 18 SETD   | 1A SETB	| 1C SETV   | 1E WARNING|</i></td></tr>
+<tr><th id="198">198</th><td><i>	| 19	    | 1B	| 1D 	    | 1F FN	|</i></td></tr>
+<tr><th id="199">199</th><td><i></i></td></tr>
+<tr><th id="200">200</th><td><i>	|_______________________________________________|</i></td></tr>
+<tr><th id="201">201</th><td><i>	| Debug entries with bit 01 set are unused.	|</i></td></tr>
+<tr><th id="202">202</th><td><i>	| 20 GSYM   | 22 FNAME	| 24 FUN    | 26 STSYM	|</i></td></tr>
+<tr><th id="203">203</th><td><i>	| 28 LCSYM  | 2A MAIN	| 2C	    | 2E	|</i></td></tr>
+<tr><th id="204">204</th><td><i>	| 30 PC	    | 32 NSYMS	| 34 NOMAP  | 36	|</i></td></tr>
+<tr><th id="205">205</th><td><i>	| 38 OBJ    | 3A	| 3C OPT    | 3E	|</i></td></tr>
+<tr><th id="206">206</th><td><i>	| 40 RSYM   | 42 M2C	| 44 SLINE  | 46 DSLINE |</i></td></tr>
+<tr><th id="207">207</th><td><i>	| 48 BSLINE*| 4A DEFD	| 4C        | 4E	|</i></td></tr>
+<tr><th id="208">208</th><td><i>	| 50 EHDECL*| 52	| 54 CATCH  | 56        |</i></td></tr>
+<tr><th id="209">209</th><td><i>	| 58        | 5A        | 5C        | 5E	|</i></td></tr>
+<tr><th id="210">210</th><td><i>	| 60 SSYM   | 62	| 64 SO	    | 66 	|</i></td></tr>
+<tr><th id="211">211</th><td><i>	| 68 	    | 6A	| 6C	    | 6E	|</i></td></tr>
+<tr><th id="212">212</th><td><i>	| 70	    | 72	| 74	    | 76	|</i></td></tr>
+<tr><th id="213">213</th><td><i>	| 78	    | 7A	| 7C	    | 7E	|</i></td></tr>
+<tr><th id="214">214</th><td><i>	| 80 LSYM   | 82 BINCL	| 84 SOL    | 86	|</i></td></tr>
+<tr><th id="215">215</th><td><i>	| 88	    | 8A	| 8C	    | 8E	|</i></td></tr>
+<tr><th id="216">216</th><td><i>	| 90	    | 92	| 94	    | 96	|</i></td></tr>
+<tr><th id="217">217</th><td><i>	| 98	    | 9A	| 9C	    | 9E	|</i></td></tr>
+<tr><th id="218">218</th><td><i>	| A0 PSYM   | A2 EINCL	| A4 ENTRY  | A6	|</i></td></tr>
+<tr><th id="219">219</th><td><i>	| A8	    | AA	| AC	    | AE	|</i></td></tr>
+<tr><th id="220">220</th><td><i>	| B0	    | B2	| B4	    | B6	|</i></td></tr>
+<tr><th id="221">221</th><td><i>	| B8	    | BA	| BC	    | BE	|</i></td></tr>
+<tr><th id="222">222</th><td><i>	| C0 LBRAC  | C2 EXCL	| C4 SCOPE  | C6	|</i></td></tr>
+<tr><th id="223">223</th><td><i>	| C8	    | CA	| CC	    | CE	|</i></td></tr>
+<tr><th id="224">224</th><td><i>	| D0	    | D2	| D4	    | D6	|</i></td></tr>
+<tr><th id="225">225</th><td><i>	| D8	    | DA	| DC	    | DE	|</i></td></tr>
+<tr><th id="226">226</th><td><i>	| E0 RBRAC  | E2 BCOMM	| E4 ECOMM  | E6	|</i></td></tr>
+<tr><th id="227">227</th><td><i>	| E8 ECOML  | EA	| EC	    | EE	|</i></td></tr>
+<tr><th id="228">228</th><td><i>	| F0	    | F2	| F4	    | F6	|</i></td></tr>
+<tr><th id="229">229</th><td><i>	| F8	    | FA	| FC	    | FE LENG	|</i></td></tr>
+<tr><th id="230">230</th><td><i>	+-----------------------------------------------+</i></td></tr>
+<tr><th id="231">231</th><td><i> * 50 EHDECL is also MOD2.</i></td></tr>
+<tr><th id="232">232</th><td><i> * 48 BSLINE is also BROWS.</i></td></tr>
+<tr><th id="233">233</th><td><i> */</i></td></tr>
+<tr><th id="234">234</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../tcc/i386-asm.c.html'>tcc/i386-asm.c</a><br/>Generated on <em>2020-Apr-21</em> from project include<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

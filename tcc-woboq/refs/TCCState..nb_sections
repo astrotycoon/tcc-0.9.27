@@ -1,0 +1,39 @@
+<dec f='tcc/tcc.h' l='784' type='int'/>
+<offset>10240</offset>
+<doc f='tcc/tcc.h' l='784'>/* number of sections, including first dummy section */</doc>
+<use f='tcc/tccasm.c' l='824' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='858' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccelf.c' l='58' u='a' c='tccelf_new'/>
+<use f='tcc/tccelf.c' l='112' u='r' c='tccelf_delete'/>
+<use f='tcc/tccelf.c' l='114' u='a' c='tccelf_delete'/>
+<use f='tcc/tccelf.c' l='143' u='r' c='tccelf_begin_file'/>
+<use f='tcc/tccelf.c' l='177' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='220' u='r' c='new_section'/>
+<use f='tcc/tccelf.c' l='221' u='a' c='new_section'/>
+<use f='tcc/tccelf.c' l='312' u='r' c='find_section'/>
+<use f='tcc/tccelf.c' l='762' u='r' c='sort_syms'/>
+<use f='tcc/tccelf.c' l='1026' u='r' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1240' u='r' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1297' u='r' c='tcc_output_binary'/>
+<use f='tcc/tccelf.c' l='1336' u='r' c='fill_got'/>
+<use f='tcc/tccelf.c' l='1523' u='r' c='alloc_sec_names'/>
+<use f='tcc/tccelf.c' l='1537' u='r' c='alloc_sec_names'/>
+<use f='tcc/tccelf.c' l='1630' u='r' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1725' u='r' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1833' u='r' c='final_sections_reloc'/>
+<use f='tcc/tccelf.c' l='1848' u='r' c='final_sections_reloc'/>
+<use f='tcc/tccelf.c' l='1869' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1935' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1955' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2020' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2021' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2022' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2022' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2050' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2054' u='w' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2177' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2226' u='w' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2378' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccrun.c' l='204' u='r' c='tcc_relocate_ex'/>
+<use f='tcc/tccrun.c' l='246' u='r' c='tcc_relocate_ex'/>
+<use f='tcc/tccrun.c' l='253' u='r' c='tcc_relocate_ex'/>

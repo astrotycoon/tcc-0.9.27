@@ -1,0 +1,3 @@
+<dec f='tcc/tcc.h' l='1344' type='void gv2(int rc1, int rc2)'/>
+<def f='tcc/tccgen.c' l='1431' ll='1460' type='void gv2(int rc1, int rc2)'/>
+<doc f='tcc/tccgen.c' l='1430'>/* generate vtop[-1] and vtop[0] in resp. classes rc1 and rc2 */</doc>

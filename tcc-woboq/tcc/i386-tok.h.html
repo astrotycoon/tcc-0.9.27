@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>i386-tok.h source code [tcc/i386-tok.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tcc/i386-tok.h'; var root_path = '..'; var data_path = '../../data'; var ecma_script_api_version = 2;</script>
+<script src='../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>tcc</a>/<a href='i386-tok.h.html'>i386-tok.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/* ------------------------------------------------------------------ */</i></td></tr>
+<tr><th id="2">2</th><td><i>/* WARNING: relative order of tokens is important. */</i></td></tr>
+<tr><th id="3">3</th><td></td></tr>
+<tr><th id="4">4</th><td><i>/* register */</i></td></tr>
+<tr><th id="5">5</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_al" data-ref="_M/DEF_ASM">DEF_ASM</a>(al)</td></tr>
+<tr><th id="6">6</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_cl" data-ref="_M/DEF_ASM">DEF_ASM</a>(cl)</td></tr>
+<tr><th id="7">7</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_dl" data-ref="_M/DEF_ASM">DEF_ASM</a>(dl)</td></tr>
+<tr><th id="8">8</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_bl" data-ref="_M/DEF_ASM">DEF_ASM</a>(bl)</td></tr>
+<tr><th id="9">9</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_ah" data-ref="_M/DEF_ASM">DEF_ASM</a>(ah)</td></tr>
+<tr><th id="10">10</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_ch" data-ref="_M/DEF_ASM">DEF_ASM</a>(ch)</td></tr>
+<tr><th id="11">11</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_dh" data-ref="_M/DEF_ASM">DEF_ASM</a>(dh)</td></tr>
+<tr><th id="12">12</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_bh" data-ref="_M/DEF_ASM">DEF_ASM</a>(bh)</td></tr>
+<tr><th id="13">13</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_ax" data-ref="_M/DEF_ASM">DEF_ASM</a>(ax)</td></tr>
+<tr><th id="14">14</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_cx" data-ref="_M/DEF_ASM">DEF_ASM</a>(cx)</td></tr>
+<tr><th id="15">15</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_dx" data-ref="_M/DEF_ASM">DEF_ASM</a>(dx)</td></tr>
+<tr><th id="16">16</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_bx" data-ref="_M/DEF_ASM">DEF_ASM</a>(bx)</td></tr>
+<tr><th id="17">17</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_sp" data-ref="_M/DEF_ASM">DEF_ASM</a>(sp)</td></tr>
+<tr><th id="18">18</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_bp" data-ref="_M/DEF_ASM">DEF_ASM</a>(bp)</td></tr>
+<tr><th id="19">19</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_si" data-ref="_M/DEF_ASM">DEF_ASM</a>(si)</td></tr>
+<tr><th id="20">20</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_di" data-ref="_M/DEF_ASM">DEF_ASM</a>(di)</td></tr>
+<tr><th id="21">21</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_eax" data-ref="_M/DEF_ASM">DEF_ASM</a>(eax)</td></tr>
+<tr><th id="22">22</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_ecx" data-ref="_M/DEF_ASM">DEF_ASM</a>(ecx)</td></tr>
+<tr><th id="23">23</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_edx" data-ref="_M/DEF_ASM">DEF_ASM</a>(edx)</td></tr>
+<tr><th id="24">24</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_ebx" data-ref="_M/DEF_ASM">DEF_ASM</a>(ebx)</td></tr>
+<tr><th id="25">25</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_esp" data-ref="_M/DEF_ASM">DEF_ASM</a>(esp)</td></tr>
+<tr><th id="26">26</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_ebp" data-ref="_M/DEF_ASM">DEF_ASM</a>(ebp)</td></tr>
+<tr><th id="27">27</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_esi" data-ref="_M/DEF_ASM">DEF_ASM</a>(esi)</td></tr>
+<tr><th id="28">28</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_edi" data-ref="_M/DEF_ASM">DEF_ASM</a>(edi)</td></tr>
+<tr><th id="29">29</th><td><u>#<span data-ppcond="29">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="30">30</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_rax" data-ref="_M/DEF_ASM">DEF_ASM</a>(rax)</td></tr>
+<tr><th id="31">31</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_rcx" data-ref="_M/DEF_ASM">DEF_ASM</a>(rcx)</td></tr>
+<tr><th id="32">32</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_rdx" data-ref="_M/DEF_ASM">DEF_ASM</a>(rdx)</td></tr>
+<tr><th id="33">33</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_rbx" data-ref="_M/DEF_ASM">DEF_ASM</a>(rbx)</td></tr>
+<tr><th id="34">34</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_rsp" data-ref="_M/DEF_ASM">DEF_ASM</a>(rsp)</td></tr>
+<tr><th id="35">35</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_rbp" data-ref="_M/DEF_ASM">DEF_ASM</a>(rbp)</td></tr>
+<tr><th id="36">36</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_rsi" data-ref="_M/DEF_ASM">DEF_ASM</a>(rsi)</td></tr>
+<tr><th id="37">37</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_rdi" data-ref="_M/DEF_ASM">DEF_ASM</a>(rdi)</td></tr>
+<tr><th id="38">38</th><td><u>#<span data-ppcond="29">endif</span></u></td></tr>
+<tr><th id="39">39</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_mm0" data-ref="_M/DEF_ASM">DEF_ASM</a>(mm0)</td></tr>
+<tr><th id="40">40</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_mm1" data-ref="_M/DEF_ASM">DEF_ASM</a>(mm1)</td></tr>
+<tr><th id="41">41</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_mm2" data-ref="_M/DEF_ASM">DEF_ASM</a>(mm2)</td></tr>
+<tr><th id="42">42</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_mm3" data-ref="_M/DEF_ASM">DEF_ASM</a>(mm3)</td></tr>
+<tr><th id="43">43</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_mm4" data-ref="_M/DEF_ASM">DEF_ASM</a>(mm4)</td></tr>
+<tr><th id="44">44</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_mm5" data-ref="_M/DEF_ASM">DEF_ASM</a>(mm5)</td></tr>
+<tr><th id="45">45</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_mm6" data-ref="_M/DEF_ASM">DEF_ASM</a>(mm6)</td></tr>
+<tr><th id="46">46</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_mm7" data-ref="_M/DEF_ASM">DEF_ASM</a>(mm7)</td></tr>
+<tr><th id="47">47</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_xmm0" data-ref="_M/DEF_ASM">DEF_ASM</a>(xmm0)</td></tr>
+<tr><th id="48">48</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_xmm1" data-ref="_M/DEF_ASM">DEF_ASM</a>(xmm1)</td></tr>
+<tr><th id="49">49</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_xmm2" data-ref="_M/DEF_ASM">DEF_ASM</a>(xmm2)</td></tr>
+<tr><th id="50">50</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_xmm3" data-ref="_M/DEF_ASM">DEF_ASM</a>(xmm3)</td></tr>
+<tr><th id="51">51</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_xmm4" data-ref="_M/DEF_ASM">DEF_ASM</a>(xmm4)</td></tr>
+<tr><th id="52">52</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_xmm5" data-ref="_M/DEF_ASM">DEF_ASM</a>(xmm5)</td></tr>
+<tr><th id="53">53</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_xmm6" data-ref="_M/DEF_ASM">DEF_ASM</a>(xmm6)</td></tr>
+<tr><th id="54">54</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_xmm7" data-ref="_M/DEF_ASM">DEF_ASM</a>(xmm7)</td></tr>
+<tr><th id="55">55</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_cr0" data-ref="_M/DEF_ASM">DEF_ASM</a>(cr0)</td></tr>
+<tr><th id="56">56</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_cr1" data-ref="_M/DEF_ASM">DEF_ASM</a>(cr1)</td></tr>
+<tr><th id="57">57</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_cr2" data-ref="_M/DEF_ASM">DEF_ASM</a>(cr2)</td></tr>
+<tr><th id="58">58</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_cr3" data-ref="_M/DEF_ASM">DEF_ASM</a>(cr3)</td></tr>
+<tr><th id="59">59</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_cr4" data-ref="_M/DEF_ASM">DEF_ASM</a>(cr4)</td></tr>
+<tr><th id="60">60</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_cr5" data-ref="_M/DEF_ASM">DEF_ASM</a>(cr5)</td></tr>
+<tr><th id="61">61</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_cr6" data-ref="_M/DEF_ASM">DEF_ASM</a>(cr6)</td></tr>
+<tr><th id="62">62</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_cr7" data-ref="_M/DEF_ASM">DEF_ASM</a>(cr7)</td></tr>
+<tr><th id="63">63</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_tr0" data-ref="_M/DEF_ASM">DEF_ASM</a>(tr0)</td></tr>
+<tr><th id="64">64</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_tr1" data-ref="_M/DEF_ASM">DEF_ASM</a>(tr1)</td></tr>
+<tr><th id="65">65</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_tr2" data-ref="_M/DEF_ASM">DEF_ASM</a>(tr2)</td></tr>
+<tr><th id="66">66</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_tr3" data-ref="_M/DEF_ASM">DEF_ASM</a>(tr3)</td></tr>
+<tr><th id="67">67</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_tr4" data-ref="_M/DEF_ASM">DEF_ASM</a>(tr4)</td></tr>
+<tr><th id="68">68</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_tr5" data-ref="_M/DEF_ASM">DEF_ASM</a>(tr5)</td></tr>
+<tr><th id="69">69</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_tr6" data-ref="_M/DEF_ASM">DEF_ASM</a>(tr6)</td></tr>
+<tr><th id="70">70</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_tr7" data-ref="_M/DEF_ASM">DEF_ASM</a>(tr7)</td></tr>
+<tr><th id="71">71</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_db0" data-ref="_M/DEF_ASM">DEF_ASM</a>(db0)</td></tr>
+<tr><th id="72">72</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_db1" data-ref="_M/DEF_ASM">DEF_ASM</a>(db1)</td></tr>
+<tr><th id="73">73</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_db2" data-ref="_M/DEF_ASM">DEF_ASM</a>(db2)</td></tr>
+<tr><th id="74">74</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_db3" data-ref="_M/DEF_ASM">DEF_ASM</a>(db3)</td></tr>
+<tr><th id="75">75</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_db4" data-ref="_M/DEF_ASM">DEF_ASM</a>(db4)</td></tr>
+<tr><th id="76">76</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_db5" data-ref="_M/DEF_ASM">DEF_ASM</a>(db5)</td></tr>
+<tr><th id="77">77</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_db6" data-ref="_M/DEF_ASM">DEF_ASM</a>(db6)</td></tr>
+<tr><th id="78">78</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_db7" data-ref="_M/DEF_ASM">DEF_ASM</a>(db7)</td></tr>
+<tr><th id="79">79</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_dr0" data-ref="_M/DEF_ASM">DEF_ASM</a>(dr0)</td></tr>
+<tr><th id="80">80</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_dr1" data-ref="_M/DEF_ASM">DEF_ASM</a>(dr1)</td></tr>
+<tr><th id="81">81</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_dr2" data-ref="_M/DEF_ASM">DEF_ASM</a>(dr2)</td></tr>
+<tr><th id="82">82</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_dr3" data-ref="_M/DEF_ASM">DEF_ASM</a>(dr3)</td></tr>
+<tr><th id="83">83</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_dr4" data-ref="_M/DEF_ASM">DEF_ASM</a>(dr4)</td></tr>
+<tr><th id="84">84</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_dr5" data-ref="_M/DEF_ASM">DEF_ASM</a>(dr5)</td></tr>
+<tr><th id="85">85</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_dr6" data-ref="_M/DEF_ASM">DEF_ASM</a>(dr6)</td></tr>
+<tr><th id="86">86</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_dr7" data-ref="_M/DEF_ASM">DEF_ASM</a>(dr7)</td></tr>
+<tr><th id="87">87</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_es" data-ref="_M/DEF_ASM">DEF_ASM</a>(es)</td></tr>
+<tr><th id="88">88</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_cs" data-ref="_M/DEF_ASM">DEF_ASM</a>(cs)</td></tr>
+<tr><th id="89">89</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_ss" data-ref="_M/DEF_ASM">DEF_ASM</a>(ss)</td></tr>
+<tr><th id="90">90</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_ds" data-ref="_M/DEF_ASM">DEF_ASM</a>(ds)</td></tr>
+<tr><th id="91">91</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_fs" data-ref="_M/DEF_ASM">DEF_ASM</a>(fs)</td></tr>
+<tr><th id="92">92</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_gs" data-ref="_M/DEF_ASM">DEF_ASM</a>(gs)</td></tr>
+<tr><th id="93">93</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_st" data-ref="_M/DEF_ASM">DEF_ASM</a>(st)</td></tr>
+<tr><th id="94">94</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_rip" data-ref="_M/DEF_ASM">DEF_ASM</a>(rip)</td></tr>
+<tr><th id="95">95</th><td></td></tr>
+<tr><th id="96">96</th><td><u>#<span data-ppcond="96">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="97">97</th><td> <i>/* The four low parts of sp/bp/si/di that exist only on</i></td></tr>
+<tr><th id="98">98</th><td><i>    x86-64 (encoding aliased to ah,ch,dh,dh when not using REX). */</i></td></tr>
+<tr><th id="99">99</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_spl" data-ref="_M/DEF_ASM">DEF_ASM</a>(spl)</td></tr>
+<tr><th id="100">100</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_bpl" data-ref="_M/DEF_ASM">DEF_ASM</a>(bpl)</td></tr>
+<tr><th id="101">101</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_sil" data-ref="_M/DEF_ASM">DEF_ASM</a>(sil)</td></tr>
+<tr><th id="102">102</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_dil" data-ref="_M/DEF_ASM">DEF_ASM</a>(dil)</td></tr>
+<tr><th id="103">103</th><td><u>#<span data-ppcond="96">endif</span></u></td></tr>
+<tr><th id="104">104</th><td> <i>/* generic two operands */</i></td></tr>
+<tr><th id="105">105</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(mov)</td></tr>
+<tr><th id="106">106</th><td></td></tr>
+<tr><th id="107">107</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(add)</td></tr>
+<tr><th id="108">108</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(or)</td></tr>
+<tr><th id="109">109</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(adc)</td></tr>
+<tr><th id="110">110</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(sbb)</td></tr>
+<tr><th id="111">111</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(and)</td></tr>
+<tr><th id="112">112</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(sub)</td></tr>
+<tr><th id="113">113</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(xor)</td></tr>
+<tr><th id="114">114</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(cmp)</td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td> <i>/* unary ops */</i></td></tr>
+<tr><th id="117">117</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(inc)</td></tr>
+<tr><th id="118">118</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(dec)</td></tr>
+<tr><th id="119">119</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(not)</td></tr>
+<tr><th id="120">120</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(neg)</td></tr>
+<tr><th id="121">121</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(mul)</td></tr>
+<tr><th id="122">122</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(imul)</td></tr>
+<tr><th id="123">123</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(div)</td></tr>
+<tr><th id="124">124</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(idiv)</td></tr>
+<tr><th id="125">125</th><td></td></tr>
+<tr><th id="126">126</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(xchg)</td></tr>
+<tr><th id="127">127</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(test)</td></tr>
+<tr><th id="128">128</th><td></td></tr>
+<tr><th id="129">129</th><td> <i>/* shifts */</i></td></tr>
+<tr><th id="130">130</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(rol)</td></tr>
+<tr><th id="131">131</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(ror)</td></tr>
+<tr><th id="132">132</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(rcl)</td></tr>
+<tr><th id="133">133</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(rcr)</td></tr>
+<tr><th id="134">134</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(shl)</td></tr>
+<tr><th id="135">135</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(shr)</td></tr>
+<tr><th id="136">136</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(sar)</td></tr>
+<tr><th id="137">137</th><td></td></tr>
+<tr><th id="138">138</th><td> <a class="macro" href="tcc.h.html#1028" title="DEF_WLQ" data-ref="_M/DEF_WLX">DEF_WLX</a>(shld)</td></tr>
+<tr><th id="139">139</th><td> <a class="macro" href="tcc.h.html#1028" title="DEF_WLQ" data-ref="_M/DEF_WLX">DEF_WLX</a>(shrd)</td></tr>
+<tr><th id="140">140</th><td></td></tr>
+<tr><th id="141">141</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_pushw" data-ref="_M/DEF_ASM">DEF_ASM</a>(pushw)</td></tr>
+<tr><th id="142">142</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_pushl" data-ref="_M/DEF_ASM">DEF_ASM</a>(pushl)</td></tr>
+<tr><th id="143">143</th><td><u>#<span data-ppcond="143">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="144">144</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_pushq" data-ref="_M/DEF_ASM">DEF_ASM</a>(pushq)</td></tr>
+<tr><th id="145">145</th><td><u>#<span data-ppcond="143">endif</span></u></td></tr>
+<tr><th id="146">146</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_push" data-ref="_M/DEF_ASM">DEF_ASM</a>(push)</td></tr>
+<tr><th id="147">147</th><td></td></tr>
+<tr><th id="148">148</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_popw" data-ref="_M/DEF_ASM">DEF_ASM</a>(popw)</td></tr>
+<tr><th id="149">149</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_popl" data-ref="_M/DEF_ASM">DEF_ASM</a>(popl)</td></tr>
+<tr><th id="150">150</th><td><u>#<span data-ppcond="150">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="151">151</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_popq" data-ref="_M/DEF_ASM">DEF_ASM</a>(popq)</td></tr>
+<tr><th id="152">152</th><td><u>#<span data-ppcond="150">endif</span></u></td></tr>
+<tr><th id="153">153</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_pop" data-ref="_M/DEF_ASM">DEF_ASM</a>(pop)</td></tr>
+<tr><th id="154">154</th><td></td></tr>
+<tr><th id="155">155</th><td> <a class="macro" href="tcc.h.html#1006" title=",TOK_ASM_inb ,TOK_ASM_inw ,TOK_ASM_inl ,TOK_ASM_in" data-ref="_M/DEF_BWL">DEF_BWL</a>(in)</td></tr>
+<tr><th id="156">156</th><td> <a class="macro" href="tcc.h.html#1006" title=",TOK_ASM_outb ,TOK_ASM_outw ,TOK_ASM_outl ,TOK_ASM_out" data-ref="_M/DEF_BWL">DEF_BWL</a>(out)</td></tr>
+<tr><th id="157">157</th><td></td></tr>
+<tr><th id="158">158</th><td> <a class="macro" href="tcc.h.html#1028" title="DEF_WLQ" data-ref="_M/DEF_WLX">DEF_WLX</a>(movzb)</td></tr>
+<tr><th id="159">159</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_movzwl" data-ref="_M/DEF_ASM">DEF_ASM</a>(movzwl)</td></tr>
+<tr><th id="160">160</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_movsbw" data-ref="_M/DEF_ASM">DEF_ASM</a>(movsbw)</td></tr>
+<tr><th id="161">161</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_movsbl" data-ref="_M/DEF_ASM">DEF_ASM</a>(movsbl)</td></tr>
+<tr><th id="162">162</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_movswl" data-ref="_M/DEF_ASM">DEF_ASM</a>(movswl)</td></tr>
+<tr><th id="163">163</th><td><u>#<span data-ppcond="163">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="164">164</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_movsbq" data-ref="_M/DEF_ASM">DEF_ASM</a>(movsbq)</td></tr>
+<tr><th id="165">165</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_movswq" data-ref="_M/DEF_ASM">DEF_ASM</a>(movswq)</td></tr>
+<tr><th id="166">166</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_movzwq" data-ref="_M/DEF_ASM">DEF_ASM</a>(movzwq)</td></tr>
+<tr><th id="167">167</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_movslq" data-ref="_M/DEF_ASM">DEF_ASM</a>(movslq)</td></tr>
+<tr><th id="168">168</th><td><u>#<span data-ppcond="163">endif</span></u></td></tr>
+<tr><th id="169">169</th><td></td></tr>
+<tr><th id="170">170</th><td> <a class="macro" href="tcc.h.html#1028" title="DEF_WLQ" data-ref="_M/DEF_WLX">DEF_WLX</a>(lea)</td></tr>
+<tr><th id="171">171</th><td></td></tr>
+<tr><th id="172">172</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_les" data-ref="_M/DEF_ASM">DEF_ASM</a>(les)</td></tr>
+<tr><th id="173">173</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_lds" data-ref="_M/DEF_ASM">DEF_ASM</a>(lds)</td></tr>
+<tr><th id="174">174</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_lss" data-ref="_M/DEF_ASM">DEF_ASM</a>(lss)</td></tr>
+<tr><th id="175">175</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_lfs" data-ref="_M/DEF_ASM">DEF_ASM</a>(lfs)</td></tr>
+<tr><th id="176">176</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_lgs" data-ref="_M/DEF_ASM">DEF_ASM</a>(lgs)</td></tr>
+<tr><th id="177">177</th><td></td></tr>
+<tr><th id="178">178</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_call" data-ref="_M/DEF_ASM">DEF_ASM</a>(call)</td></tr>
+<tr><th id="179">179</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_jmp" data-ref="_M/DEF_ASM">DEF_ASM</a>(jmp)</td></tr>
+<tr><th id="180">180</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_lcall" data-ref="_M/DEF_ASM">DEF_ASM</a>(lcall)</td></tr>
+<tr><th id="181">181</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_ljmp" data-ref="_M/DEF_ASM">DEF_ASM</a>(ljmp)</td></tr>
+<tr><th id="182">182</th><td></td></tr>
+<tr><th id="183">183</th><td> <a class="macro" href="tcc.h.html#1049" title=",TOK_ASM_jo ,TOK_ASM_jno ,TOK_ASM_jb ,TOK_ASM_jc ,TOK_ASM_jnae ,TOK_ASM_jnb ,TOK_ASM_jnc ,TOK_ASM_jae ,TOK_ASM_je ,TOK_ASM_jz ,TOK_ASM_jne ,TOK_ASM_jnz ,TOK_ASM_jbe ,TOK_ASM_jna ,TOK_ASM_jnbe ,TOK_ASM_ja ,TOK_ASM_js ,TOK_ASM_jns ,TOK_ASM_jp ,TOK_ASM_jpe ,TOK_ASM_jnp ,TOK_ASM_jpo ,TOK_ASM_jl ,TOK_ASM_jnge ,TOK_ASM_jnl ,TOK_ASM_jge ,TOK_ASM_jle ,TOK_ASM_jng ,TOK_ASM_jnle ,TOK_ASM_jg" data-ref="_M/DEF_ASMTEST">DEF_ASMTEST</a>(j,)</td></tr>
+<tr><th id="184">184</th><td></td></tr>
+<tr><th id="185">185</th><td> <a class="macro" href="tcc.h.html#1049" title=",TOK_ASM_seto ,TOK_ASM_setno ,TOK_ASM_setb ,TOK_ASM_setc ,TOK_ASM_setnae ,TOK_ASM_setnb ,TOK_ASM_setnc ,TOK_ASM_setae ,TOK_ASM_sete ,TOK_ASM_setz ,TOK_ASM_setne ,TOK_ASM_setnz ,TOK_ASM_setbe ,TOK_ASM_setna ,TOK_ASM_setnbe ,TOK_ASM_seta ,TOK_ASM_sets ,TOK_ASM_setns ,TOK_ASM_setp ,TOK_ASM_setpe ,TOK_ASM_setnp ,TOK_ASM_setpo ,TOK_ASM_setl ,TOK_ASM_setnge ,TOK_ASM_setnl ,TOK_ASM_setge ,TOK_ASM_setle ,TOK_ASM_setng ,TOK_ASM_setnle ,TOK_ASM_setg" data-ref="_M/DEF_ASMTEST">DEF_ASMTEST</a>(set,)</td></tr>
+<tr><th id="186">186</th><td> <a class="macro" href="tcc.h.html#1049" title=",TOK_ASM_setob ,TOK_ASM_setnob ,TOK_ASM_setbb ,TOK_ASM_setcb ,TOK_ASM_setnaeb ,TOK_ASM_setnbb ,TOK_ASM_setncb ,TOK_ASM_setaeb ,TOK_ASM_seteb ,TOK_ASM_setzb ,TOK_ASM_setneb ,TOK_ASM_setnzb ,TOK_ASM_setbeb ,TOK_ASM_setnab ,TOK_ASM_setnbeb ,TOK_ASM_setab ,TOK_ASM_setsb ,TOK_ASM_setnsb ,TOK_ASM_setpb ,TOK_ASM_setpeb ,TOK_ASM_setnpb ,TOK_ASM_setpob ,TOK_ASM_setlb ,TOK_ASM_setngeb ,TOK_ASM_setnlb ,TOK_ASM_setgeb ,TOK_ASM_setleb ,TOK_ASM_setngb ,TOK_ASM_setnleb ,TOK_ASM_setgb" data-ref="_M/DEF_ASMTEST">DEF_ASMTEST</a>(set,b)</td></tr>
+<tr><th id="187">187</th><td> <a class="macro" href="tcc.h.html#1049" title=",TOK_ASM_cmovo ,TOK_ASM_cmovno ,TOK_ASM_cmovb ,TOK_ASM_cmovc ,TOK_ASM_cmovnae ,TOK_ASM_cmovnb ,TOK_ASM_cmovnc ,TOK_ASM_cmovae ,TOK_ASM_cmove ,TOK_ASM_cmovz ,TOK_ASM_cmovne ,TOK_ASM_cmovnz ,TOK_ASM_cmovbe ,TOK_ASM_cmovna ,TOK_ASM_cmovnbe ,TOK_ASM_cmova ,TOK_ASM_cmovs ,TOK_ASM_cmovns ,TOK_ASM_cmovp ,TOK_ASM_cmovpe ,TOK_ASM_cmovnp ,TOK_ASM_cmovpo ,TOK_ASM_cmovl ,TOK_ASM_cmovnge ,TOK_ASM_cmovnl ,TOK_ASM_cmovge ,TOK_ASM_cmovle ,TOK_ASM_cmovng ,TOK_ASM_cmovnle ,TOK_ASM_cmovg" data-ref="_M/DEF_ASMTEST">DEF_ASMTEST</a>(cmov,)</td></tr>
+<tr><th id="188">188</th><td></td></tr>
+<tr><th id="189">189</th><td> <a class="macro" href="tcc.h.html#1028" title="DEF_WLQ" data-ref="_M/DEF_WLX">DEF_WLX</a>(bsf)</td></tr>
+<tr><th id="190">190</th><td> <a class="macro" href="tcc.h.html#1028" title="DEF_WLQ" data-ref="_M/DEF_WLX">DEF_WLX</a>(bsr)</td></tr>
+<tr><th id="191">191</th><td> <a class="macro" href="tcc.h.html#1028" title="DEF_WLQ" data-ref="_M/DEF_WLX">DEF_WLX</a>(bt)</td></tr>
+<tr><th id="192">192</th><td> <a class="macro" href="tcc.h.html#1028" title="DEF_WLQ" data-ref="_M/DEF_WLX">DEF_WLX</a>(bts)</td></tr>
+<tr><th id="193">193</th><td> <a class="macro" href="tcc.h.html#1028" title="DEF_WLQ" data-ref="_M/DEF_WLX">DEF_WLX</a>(btr)</td></tr>
+<tr><th id="194">194</th><td> <a class="macro" href="tcc.h.html#1028" title="DEF_WLQ" data-ref="_M/DEF_WLX">DEF_WLX</a>(btc)</td></tr>
+<tr><th id="195">195</th><td></td></tr>
+<tr><th id="196">196</th><td> <a class="macro" href="tcc.h.html#1028" title="DEF_WLQ" data-ref="_M/DEF_WLX">DEF_WLX</a>(lar)</td></tr>
+<tr><th id="197">197</th><td> <a class="macro" href="tcc.h.html#1028" title="DEF_WLQ" data-ref="_M/DEF_WLX">DEF_WLX</a>(lsl)</td></tr>
+<tr><th id="198">198</th><td></td></tr>
+<tr><th id="199">199</th><td> <i>/* generic FP ops */</i></td></tr>
+<tr><th id="200">200</th><td> <a class="macro" href="tcc.h.html#1044" title=",TOK_ASM_fadd ,TOK_ASM_faddp ,TOK_ASM_fadds ,TOK_ASM_fiaddl ,TOK_ASM_faddl ,TOK_ASM_fiadds" data-ref="_M/DEF_FP">DEF_FP</a>(add)</td></tr>
+<tr><th id="201">201</th><td> <a class="macro" href="tcc.h.html#1044" title=",TOK_ASM_fmul ,TOK_ASM_fmulp ,TOK_ASM_fmuls ,TOK_ASM_fimull ,TOK_ASM_fmull ,TOK_ASM_fimuls" data-ref="_M/DEF_FP">DEF_FP</a>(mul)</td></tr>
+<tr><th id="202">202</th><td></td></tr>
+<tr><th id="203">203</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_fcom" data-ref="_M/DEF_ASM">DEF_ASM</a>(fcom)</td></tr>
+<tr><th id="204">204</th><td> <a class="macro" href="tcc.h.html#998" title=",TOK_ASM_fcom_1" data-ref="_M/DEF_ASM">DEF_ASM</a>(fcom_1) <i>/* non existent op, just to have a regular table */</i></td></tr>
+<tr><th id="205">205</th><td> <a class="macro" href="tcc.h.html#1038" title=",TOK_ASM_fcoms ,TOK_ASM_ficoml ,TOK_ASM_fcoml ,TOK_ASM_ficoms" data-ref="_M/DEF_FP1">DEF_FP1</a>(com)</td></tr>
+<tr><th id="206">206</th><td></td></tr>
+<tr><th id="207">207</th><td> <a class="macro" href="tcc.h.html#1044" title=",TOK_ASM_fcomp ,TOK_ASM_fcompp ,TOK_ASM_fcomps ,TOK_ASM_ficompl ,TOK_ASM_fcompl ,TOK_ASM_ficomps" data-ref="_M/DEF_FP">DEF_FP</a>(comp)</td></tr>
+<tr><th id="208">208</th><td> <a class="macro" href="tcc.h.html#1044" title=",TOK_ASM_fsub ,TOK_ASM_fsubp ,TOK_ASM_fsubs ,TOK_ASM_fisubl ,TOK_ASM_fsubl ,TOK_ASM_fisubs" data-ref="_M/DEF_FP">DEF_FP</a>(sub)</td></tr>
+<tr><th id="209">209</th><td> <a class="macro" href="tcc.h.html#1044" title=",TOK_ASM_fsubr ,TOK_ASM_fsubrp ,TOK_ASM_fsubrs ,TOK_ASM_fisubrl ,TOK_ASM_fsubrl ,TOK_ASM_fisubrs" data-ref="_M/DEF_FP">DEF_FP</a>(subr)</td></tr>
+<tr><th id="210">210</th><td> <a class="macro" href="tcc.h.html#1044" title=",TOK_ASM_fdiv ,TOK_ASM_fdivp ,TOK_ASM_fdivs ,TOK_ASM_fidivl ,TOK_ASM_fdivl ,TOK_ASM_fidivs" data-ref="_M/DEF_FP">DEF_FP</a>(div)</td></tr>
+<tr><th id="211">211</th><td> <a class="macro" href="tcc.h.html#1044" title=",TOK_ASM_fdivr ,TOK_ASM_fdivrp ,TOK_ASM_fdivrs ,TOK_ASM_fidivrl ,TOK_ASM_fdivrl ,TOK_ASM_fidivrs" data-ref="_M/DEF_FP">DEF_FP</a>(divr)</td></tr>
+<tr><th id="212">212</th><td></td></tr>
+<tr><th id="213">213</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(xadd)</td></tr>
+<tr><th id="214">214</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(cmpxchg)</td></tr>
+<tr><th id="215">215</th><td></td></tr>
+<tr><th id="216">216</th><td> <i>/* string ops */</i></td></tr>
+<tr><th id="217">217</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(cmps)</td></tr>
+<tr><th id="218">218</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(scmp)</td></tr>
+<tr><th id="219">219</th><td> <a class="macro" href="tcc.h.html#1006" title=",TOK_ASM_insb ,TOK_ASM_insw ,TOK_ASM_insl ,TOK_ASM_ins" data-ref="_M/DEF_BWL">DEF_BWL</a>(ins)</td></tr>
+<tr><th id="220">220</th><td> <a class="macro" href="tcc.h.html#1006" title=",TOK_ASM_outsb ,TOK_ASM_outsw ,TOK_ASM_outsl ,TOK_ASM_outs" data-ref="_M/DEF_BWL">DEF_BWL</a>(outs)</td></tr>
+<tr><th id="221">221</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(lods)</td></tr>
+<tr><th id="222">222</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(slod)</td></tr>
+<tr><th id="223">223</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(movs)</td></tr>
+<tr><th id="224">224</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(smov)</td></tr>
+<tr><th id="225">225</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(scas)</td></tr>
+<tr><th id="226">226</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(ssca)</td></tr>
+<tr><th id="227">227</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(stos)</td></tr>
+<tr><th id="228">228</th><td> <a class="macro" href="tcc.h.html#1027" title="DEF_BWLQ" data-ref="_M/DEF_BWLX">DEF_BWLX</a>(ssto)</td></tr>
+<tr><th id="229">229</th><td></td></tr>
+<tr><th id="230">230</th><td> <i>/* generic asm ops */</i></td></tr>
+<tr><th id="231">231</th><td><u>#define <dfn class="macro" id="_M/ALT" data-ref="_M/ALT">ALT</dfn>(x)</u></td></tr>
+<tr><th id="232">232</th><td><u>#define <dfn class="macro" id="_M/DEF_ASM_OP0" data-ref="_M/DEF_ASM_OP0">DEF_ASM_OP0</dfn>(name, opcode) DEF_ASM(name)</u></td></tr>
+<tr><th id="233">233</th><td><u>#define <dfn class="macro" id="_M/DEF_ASM_OP0L" data-ref="_M/DEF_ASM_OP0L">DEF_ASM_OP0L</dfn>(name, opcode, group, instr_type)</u></td></tr>
+<tr><th id="234">234</th><td><u>#define <dfn class="macro" id="_M/DEF_ASM_OP1" data-ref="_M/DEF_ASM_OP1">DEF_ASM_OP1</dfn>(name, opcode, group, instr_type, op0)</u></td></tr>
+<tr><th id="235">235</th><td><u>#define <dfn class="macro" id="_M/DEF_ASM_OP2" data-ref="_M/DEF_ASM_OP2">DEF_ASM_OP2</dfn>(name, opcode, group, instr_type, op0, op1)</u></td></tr>
+<tr><th id="236">236</th><td><u>#define <dfn class="macro" id="_M/DEF_ASM_OP3" data-ref="_M/DEF_ASM_OP3">DEF_ASM_OP3</dfn>(name, opcode, group, instr_type, op0, op1, op2)</u></td></tr>
+<tr><th id="237">237</th><td><u>#<span data-ppcond="237">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="238">238</th><td><u># include <a href="x86_64-asm.h.html">"x86_64-asm.h"</a></u></td></tr>
+<tr><th id="239">239</th><td><u>#<span data-ppcond="237">else</span></u></td></tr>
+<tr><th id="240">240</th><td><u># include "i386-asm.h"</u></td></tr>
+<tr><th id="241">241</th><td><u>#<span data-ppcond="237">endif</span></u></td></tr>
+<tr><th id="242">242</th><td></td></tr>
+<tr><th id="243">243</th><td><u>#define <dfn class="macro" id="_M/ALT" data-ref="_M/ALT">ALT</dfn>(x)</u></td></tr>
+<tr><th id="244">244</th><td><u>#define <dfn class="macro" id="_M/DEF_ASM_OP0" data-ref="_M/DEF_ASM_OP0">DEF_ASM_OP0</dfn>(name, opcode)</u></td></tr>
+<tr><th id="245">245</th><td><u>#define <dfn class="macro" id="_M/DEF_ASM_OP0L" data-ref="_M/DEF_ASM_OP0L">DEF_ASM_OP0L</dfn>(name, opcode, group, instr_type) DEF_ASM(name)</u></td></tr>
+<tr><th id="246">246</th><td><u>#define <dfn class="macro" id="_M/DEF_ASM_OP1" data-ref="_M/DEF_ASM_OP1">DEF_ASM_OP1</dfn>(name, opcode, group, instr_type, op0) DEF_ASM(name)</u></td></tr>
+<tr><th id="247">247</th><td><u>#define <dfn class="macro" id="_M/DEF_ASM_OP2" data-ref="_M/DEF_ASM_OP2">DEF_ASM_OP2</dfn>(name, opcode, group, instr_type, op0, op1) DEF_ASM(name)</u></td></tr>
+<tr><th id="248">248</th><td><u>#define <dfn class="macro" id="_M/DEF_ASM_OP3" data-ref="_M/DEF_ASM_OP3">DEF_ASM_OP3</dfn>(name, opcode, group, instr_type, op0, op1, op2) DEF_ASM(name)</u></td></tr>
+<tr><th id="249">249</th><td><u>#<span data-ppcond="249">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="250">250</th><td><u># include <a href="x86_64-asm.h.html">"x86_64-asm.h"</a></u></td></tr>
+<tr><th id="251">251</th><td><u>#<span data-ppcond="249">else</span></u></td></tr>
+<tr><th id="252">252</th><td><u># include "i386-asm.h"</u></td></tr>
+<tr><th id="253">253</th><td><u>#<span data-ppcond="249">endif</span></u></td></tr>
+<tr><th id="254">254</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='i386-asm.c.html'>tcc/i386-asm.c</a><br/>Generated on <em>2020-Apr-21</em> from project tcc revision <em>0.9.27</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

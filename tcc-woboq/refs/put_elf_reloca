@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1426' type='void put_elf_reloca(Section * symtab, Section * s, unsigned long offset, int type, int symbol, Elf64_Addr addend)'/>
+<def f='tcc/tccelf.c' l='577' ll='605' type='void put_elf_reloca(Section * symtab, Section * s, unsigned long offset, int type, int symbol, Elf64_Addr addend)'/>
+<use f='tcc/tccelf.c' l='610' u='c' c='put_elf_reloc'/>
+<doc f='tcc/tccelf.c' l='576'>/* put relocation */</doc>
+<use f='tcc/tccgen.c' l='444' u='c' c='greloca'/>
+<use f='tcc/tccgen.c' l='6515' u='c' c='init_putv'/>

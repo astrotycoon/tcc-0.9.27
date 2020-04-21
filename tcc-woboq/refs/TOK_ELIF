@@ -1,0 +1,3 @@
+<dec f='tcc/tcctok.h' l='76' type='319'/>
+<use f='tcc/tccpp.c' l='981' u='r' c='preprocess_skip'/>
+<use f='tcc/tccpp.c' l='1900' c='preprocess'/>

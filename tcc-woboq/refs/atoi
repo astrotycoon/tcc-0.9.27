@@ -1,0 +1,7 @@
+<dec f='include/stdlib.h' l='104' type='int atoi(const char * __nptr)'/>
+<doc f='include/stdlib.h' l='103'>/* Convert a string to an integer.  */</doc>
+<use f='tcc/libtcc.c' l='1764' u='c' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1791' u='c' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1862' u='c' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1893' u='c' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1916' u='c' c='tcc_parse_args'/>

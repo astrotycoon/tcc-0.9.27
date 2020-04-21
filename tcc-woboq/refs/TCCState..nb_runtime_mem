@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='820' type='int'/>
+<offset>11008</offset>
+<use f='tcc/tccrun.c' l='92' u='a' c='tcc_relocate'/>
+<use f='tcc/tccrun.c' l='100' u='r' c='tcc_run_free'/>

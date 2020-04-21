@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1247' type='void define_undef(Sym * s)'/>
+<use f='tcc/libtcc.c' l='713' u='c' c='tcc_undefine_symbol'/>
+<def f='tcc/tccpp.c' l='1317' ll='1322' type='void define_undef(Sym * s)'/>
+<use f='tcc/tccpp.c' l='1339' u='c' c='free_defines'/>
+<use f='tcc/tccpp.c' l='1745' u='c' c='preprocess'/>
+<doc f='tcc/tccpp.c' l='1316'>/* undefined a define symbol. Its name is just set to zero */</doc>

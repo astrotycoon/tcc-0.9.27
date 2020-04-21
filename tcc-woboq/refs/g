@@ -1,0 +1,26 @@
+<dec f='tcc/tcc.h' l='1541' type='void g(int c)'/>
+<use f='tcc/i386-asm.c' l='525' u='c' c='asm_modrm'/>
+<use f='tcc/i386-asm.c' l='529' u='c' c='asm_modrm'/>
+<use f='tcc/i386-asm.c' l='530' u='c' c='asm_modrm'/>
+<use f='tcc/i386-asm.c' l='538' u='c' c='asm_modrm'/>
+<use f='tcc/i386-asm.c' l='559' u='c' c='asm_modrm'/>
+<use f='tcc/i386-asm.c' l='565' u='c' c='asm_modrm'/>
+<use f='tcc/i386-asm.c' l='569' u='c' c='asm_modrm'/>
+<use f='tcc/i386-asm.c' l='635' u='c' c='asm_rex'/>
+<use f='tcc/i386-asm.c' l='842' u='c' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='843' u='c' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='894' u='c' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='913' u='c' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='943' u='c' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='945' u='c' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='1060' u='c' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='1063' u='c' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='1064' u='c' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='1119' u='c' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='1625' u='c' c='asm_gen_code'/>
+<use f='tcc/i386-asm.c' l='1626' u='c' c='asm_gen_code'/>
+<use f='tcc/i386-asm.c' l='1688' u='c' c='asm_gen_code'/>
+<use f='tcc/i386-asm.c' l='1689' u='c' c='asm_gen_code'/>
+<use f='tcc/tccasm.c' l='563' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='612' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='707' u='c' c='asm_parse_directive'/>

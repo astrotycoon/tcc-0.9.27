@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='56'/>
+<use f='tcc/tccelf.c' l='1989' u='c'/>

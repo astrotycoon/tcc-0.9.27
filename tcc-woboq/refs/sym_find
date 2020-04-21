@@ -1,0 +1,12 @@
+<dec f='tcc/tcc.h' l='1154' type='Sym * sym_find(int v)'/>
+<use f='tcc/tccasm.c' l='40' u='c' c='asm_label_find'/>
+<def f='tcc/tccgen.c' l='540' ll='546' type='Sym * sym_find(int v)'/>
+<use f='tcc/tccgen.c' l='833' u='c' c='external_global_sym'/>
+<use f='tcc/tccgen.c' l='929' u='c' c='external_sym'/>
+<use f='tcc/tccgen.c' l='3818' u='c' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='4182' u='c' c='parse_btype'/>
+<use f='tcc/tccgen.c' l='5072' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='6943' u='c' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7307' u='c' c='decl0'/>
+<use f='tcc/tccgen.c' l='7345' u='c' c='decl0'/>
+<doc f='tcc/tccgen.c' l='539'>/* find an identifier */</doc>

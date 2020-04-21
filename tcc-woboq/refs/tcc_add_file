@@ -1,0 +1,5 @@
+<dec f='tcc/libtcc.h' l='51' type='int tcc_add_file(TCCState * s, const char * filename)'/>
+<doc f='tcc/libtcc.h' l='50'>/* add a file (C file, dll, object, library, ld script). Return -1 if error. */</doc>
+<def f='tcc/libtcc.c' l='1077' ll='1100' type='int tcc_add_file(TCCState * s, const char * filename)'/>
+<use f='tcc/tcc.c' l='332' u='c' c='main'/>
+<use f='tcc/tccelf.c' l='1153' u='c' c='tcc_add_support'/>

@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='474' type='char'/>
+<offset>192</offset>
+<doc f='tcc/tcc.h' l='474'>/* __attribute__((__mode__(...))) */</doc>
+<use f='tcc/tccgen.c' l='3409' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3412' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3415' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3419' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='4163' u='r' c='parse_btype'/>
+<use f='tcc/tccgen.c' l='4164' u='r' c='parse_btype'/>

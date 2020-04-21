@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1428' type='void put_stabs(const char * str, int type, int other, int desc, unsigned long value)'/>
+<use f='tcc/tccelf.c' l='99' u='c' c='tccelf_stab_new'/>
+<def f='tcc/tccelf.c' l='652' ll='667' type='void put_stabs(const char * str, int type, int other, int desc, unsigned long value)'/>
+<use f='tcc/tccelf.c' l='672' u='c' c='put_stabs_r'/>
+<use f='tcc/tccelf.c' l='680' u='c' c='put_stabn'/>
+<use f='tcc/tccelf.c' l='685' u='c' c='put_stabd'/>
+<doc f='tcc/tccelf.c' l='650'>/* put stab debug information */</doc>
+<use f='tcc/tccpp.c' l='1859' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1967' u='c' c='preprocess'/>

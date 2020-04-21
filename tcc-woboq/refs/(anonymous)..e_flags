@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='86' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='104' type='Elf64_Word'/>
+<offset>384</offset>
+<doc f='tcc/elf.h' l='86'>/* Processor-specific flags */</doc>
+<doc f='tcc/elf.h' l='104'>/* Processor-specific flags */</doc>

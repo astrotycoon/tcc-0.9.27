@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1488' type='void gfunc_call(int nb_args)'/>
+<use f='tcc/tccgen.c' l='2376' u='c' c='gen_cvt_itof1'/>
+<use f='tcc/tccgen.c' l='2406' u='c' c='gen_cvt_ftoi1'/>
+<use f='tcc/tccgen.c' l='3120' u='c' c='vstore'/>
+<use f='tcc/tccgen.c' l='5249' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='6319' u='c' c='init_putz'/>

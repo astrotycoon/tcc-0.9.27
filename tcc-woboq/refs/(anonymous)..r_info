@@ -1,0 +1,34 @@
+<dec f='tcc/elf.h' l='510' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='521' type='Elf64_Xword'/>
+<dec f='tcc/elf.h' l='529' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='536' type='Elf64_Xword'/>
+<offset>64</offset>
+<doc f='tcc/elf.h' l='510'>/* Relocation type and symbol index */</doc>
+<doc f='tcc/elf.h' l='521'>/* Relocation type and symbol index */</doc>
+<doc f='tcc/elf.h' l='529'>/* Relocation type and symbol index */</doc>
+<doc f='tcc/elf.h' l='536'>/* Relocation type and symbol index */</doc>
+<use f='tcc/tccelf.c' l='183' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='185' u='w' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='185' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='598' u='w' c='put_elf_reloca'/>
+<use f='tcc/tccelf.c' l='766' u='r' c='sort_syms'/>
+<use f='tcc/tccelf.c' l='767' u='r' c='sort_syms'/>
+<use f='tcc/tccelf.c' l='769' u='w' c='sort_syms'/>
+<use f='tcc/tccelf.c' l='838' u='r' c='relocate_section'/>
+<use f='tcc/tccelf.c' l='840' u='r' c='relocate_section'/>
+<use f='tcc/tccelf.c' l='873' u='r' c='prepare_dynamic_rel'/>
+<use f='tcc/tccelf.c' l='874' u='r' c='prepare_dynamic_rel'/>
+<use f='tcc/tccelf.c' l='1034' u='r' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1036' u='r' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1085' u='w' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1105' u='w' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1314' u='r' c='fill_got_entry'/>
+<use f='tcc/tccelf.c' l='1344' u='r' c='fill_got'/>
+<use f='tcc/tccelf.c' l='1363' u='r' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1364' u='r' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1370' u='w' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='2520' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2521' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2537' u='w' c='tcc_load_object_file'/>
+<use f='tcc/tccgen.c' l='6517' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6518' u='r' c='init_putv'/>

@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1439' type='int tcc_load_archive(TCCState * s1, int fd)'/>
+<use f='tcc/libtcc.c' l='1052' u='c' c='tcc_add_file_internal'/>
+<def f='tcc/tccelf.c' l='2636' ll='2685' type='int tcc_load_archive(TCCState * s1, int fd)'/>
+<doc f='tcc/tccelf.c' l='2635'>/* load a &apos;.a&apos; file */</doc>

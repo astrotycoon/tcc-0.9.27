@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1253' type='void parse_define()'/>
+<use f='tcc/libtcc.c' l='700' u='c' c='tcc_define_symbol'/>
+<def f='tcc/tccpp.c' l='1472' ll='1558' type='void parse_define()'/>
+<use f='tcc/tccpp.c' l='1736' u='c' c='preprocess'/>
+<doc f='tcc/tccpp.c' l='1471'>/* parse after #define */</doc>

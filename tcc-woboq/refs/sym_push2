@@ -1,0 +1,12 @@
+<dec f='tcc/tcc.h' l='1149' type='Sym * sym_push2(Sym ** ps, int v, int t, int c)'/>
+<def f='tcc/tccgen.c' l='501' ll='514' type='Sym * sym_push2(Sym ** ps, int v, int t, int c)'/>
+<use f='tcc/tccgen.c' l='558' u='c' c='sym_push'/>
+<use f='tcc/tccgen.c' l='584' u='c' c='global_identifier_push'/>
+<use f='tcc/tccgen.c' l='7068' u='c' c='gen_function'/>
+<doc f='tcc/tccgen.c' l='500'>/* push, without hashing */</doc>
+<use f='tcc/tccpp.c' l='1307' u='c' c='define_push'/>
+<use f='tcc/tccpp.c' l='1368' u='c' c='label_push'/>
+<use f='tcc/tccpp.c' l='1509' u='c' c='parse_define'/>
+<use f='tcc/tccpp.c' l='3089' u='c' c='macro_arg_subst'/>
+<use f='tcc/tccpp.c' l='3404' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3440' u='c' c='macro_subst_tok'/>

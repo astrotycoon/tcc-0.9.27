@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='451'/>
+<doc f='tcc/elf.h' l='450'>/* Both Elf32_Sym and Elf64_Sym use the same one-byte st_info field.  */</doc>

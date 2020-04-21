@@ -1,0 +1,3 @@
+<dec f='tcc/tcctok.h' l='310' macro='1' type='419'/>
+<use f='tcc/tccasm.c' l='465' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='479' u='r' c='asm_parse_directive'/>

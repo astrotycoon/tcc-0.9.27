@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1538'/>
+<doc f='tcc/elf.h' l='1536'>/* Values for `info&apos; in Elf_Options for ODK_EXCEPTIONS entries.  */</doc>

@@ -1,0 +1,16 @@
+<dec f='tcc/tcc.h' l='400' type='int'/>
+<use f='tcc/i386-asm.c' l='855' u='r' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='1209' u='r' c='asm_parse_regvar'/>
+<use f='tcc/i386-asm.c' l='1490' u='r' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1708' u='r' c='asm_clobber'/>
+<offset>320</offset>
+<doc f='tcc/tcc.h' l='400'>/* token number */</doc>
+<use f='tcc/libtcc.c' l='710' u='r' c='tcc_undefine_symbol'/>
+<use f='tcc/tccasm.c' l='31' u='r' c='asm_get_local_label_name'/>
+<use f='tcc/tccasm.c' l='82' u='r' c='asm_section_sym'/>
+<use f='tcc/tccasm.c' l='1026' u='r' c='find_constraint'/>
+<use f='tcc/tccgen.c' l='3321' u='r' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='4250' u='r' c='asm_label_instr'/>
+<use f='tcc/tccpp.c' l='430' u='w' c='tok_alloc_new'/>
+<use f='tcc/tccpp.c' l='1615' u='r' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='2731' u='r' c='next_nomacro1'/>

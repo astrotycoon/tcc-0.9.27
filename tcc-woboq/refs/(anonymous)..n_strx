@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='1376' type='unsigned int'/>
+<offset>0</offset>
+<doc f='tcc/tcc.h' l='1376'>/* index into string table of name */</doc>
+<use f='tcc/tccelf.c' l='659' u='w' c='put_stabs'/>
+<use f='tcc/tccelf.c' l='661' u='w' c='put_stabs'/>
+<use f='tcc/tccelf.c' l='2449' u='w' c='tcc_load_object_file'/>
+<use f='tcc/tccrun.c' l='371' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='379' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='405' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='416' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='419' u='r' c='rt_printline'/>

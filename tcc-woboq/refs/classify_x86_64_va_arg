@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='1364' type='int classify_x86_64_va_arg(CType * ty)'/>
+<use f='tcc/tccgen.c' l='4908' u='c' c='unary'/>

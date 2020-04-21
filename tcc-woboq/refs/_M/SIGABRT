@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/signum-generic.h' l='50'/>
+<use f='tcc/tccrun.c' l='531' u='c'/>
+<use f='tcc/tccrun.c' l='558' u='c'/>

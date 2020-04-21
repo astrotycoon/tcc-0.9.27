@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='2577'/>
+<doc f='tcc/elf.h' l='2576'>/* Processor specific values for the Shdr sh_type field.  */</doc>

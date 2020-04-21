@@ -1,0 +1,5 @@
+<dec f='tcc/x86_64-gen.c' l='27'/>
+<use f='tcc/i386-asm.c' l='1234' u='c'/>
+<use f='tcc/i386-asm.c' l='1287' u='c'/>
+<use f='tcc/i386-asm.c' l='1596' u='c'/>
+<use f='tcc/tccasm.c' l='1150' u='c'/>

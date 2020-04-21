@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='667' type='int'/>
+<offset>448</offset>
+<doc f='tcc/tcc.h' l='667'>/* ditto, (-Wl,--enable-new-dtags) */</doc>
+<use f='tcc/libtcc.c' l='1381' u='w' c='tcc_set_linker'/>
+<use f='tcc/tccelf.c' l='2139' u='r' c='elf_output_file'/>

@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1157' type='void tcc_open_bf(TCCState * s1, const char * filename, int initlen)'/>
+<def f='tcc/libtcc.c' l='578' ll='595' type='void tcc_open_bf(TCCState * s1, const char * filename, int initlen)'/>
+<use f='tcc/libtcc.c' l='622' u='c' c='tcc_open'/>
+<use f='tcc/libtcc.c' l='675' u='c' c='tcc_compile_string'/>
+<use f='tcc/libtcc.c' l='693' u='c' c='tcc_define_symbol'/>
+<doc f='tcc/libtcc.c' l='576'>/* I/O layer */</doc>
+<use f='tcc/tccasm.c' l='992' u='c' c='tcc_assemble_inline'/>
+<use f='tcc/tccpp.c' l='3137' u='c' c='paste_tokens'/>
+<use f='tcc/tccpp.c' l='3614' u='c' c='preprocess_start'/>

@@ -1,0 +1,7 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='119' type='130'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='116'>/* Beginning of an include file.  Only Sun uses this.
+   In an object file, only the name is significant.
+   The Sun linker puts data into some of the other fields.  */</doc>
+<use f='tcc/tccpp.c' l='1859' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1967' u='r' c='preprocess'/>
+<use f='tcc/tccrun.c' l='404' c='rt_printline'/>

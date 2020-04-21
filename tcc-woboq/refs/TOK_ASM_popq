@@ -1,0 +1,2 @@
+<dec f='tcc/i386-tok.h' l='151' macro='1' type='687'/>
+<use f='tcc/i386-asm.c' l='934' u='r' c='asm_opcode'/>

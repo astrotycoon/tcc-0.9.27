@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='509' type='int'/>
+<offset>192</offset>
+<doc f='tcc/tcc.h' l='509'>/* elf section name (only used during output) */</doc>
+<use f='tcc/tccelf.c' l='1542' u='w' c='alloc_sec_names'/>
+<use f='tcc/tccelf.c' l='1960' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2024' u='r' c='tidy_section_headers'/>

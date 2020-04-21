@@ -1,0 +1,6 @@
+<dec f='tcc/libtcc.h' l='82' type='int tcc_run(TCCState * s, int argc, char ** argv)'/>
+<doc f='tcc/libtcc.h' l='80'>/* link and run main() function and return its value. DO NOT call
+   tcc_relocate() before. */</doc>
+<use f='tcc/tcc.c' l='349' u='c' c='main'/>
+<def f='tcc/tccrun.c' l='116' ll='169' type='int tcc_run(TCCState * s1, int argc, char ** argv)'/>
+<doc f='tcc/tccrun.c' l='115'>/* launch the compiled program with the given arguments */</doc>

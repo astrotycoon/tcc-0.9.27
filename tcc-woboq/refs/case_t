@@ -1,0 +1,9 @@
+<def f='tcc/tccgen.c' l='67' ll='70'/>
+<use f='tcc/tccgen.c' l='67'/>
+<use f='tcc/tccgen.c' l='5811' c='case_cmp'/>
+<use f='tcc/tccgen.c' l='5812' c='case_cmp'/>
+<use f='tcc/tccgen.c' l='5816' c='gcase'/>
+<use f='tcc/tccgen.c' l='5818' c='gcase'/>
+<use f='tcc/tccgen.c' l='6135' c='block'/>
+<use f='tcc/tccgen.c' l='6135' c='block'/>
+<size>24</size>

@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='878' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='885' type='Elf64_Word'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='878'>/* Version or dependency names */</doc>
+<doc f='tcc/elf.h' l='885'>/* Version or dependency names */</doc>

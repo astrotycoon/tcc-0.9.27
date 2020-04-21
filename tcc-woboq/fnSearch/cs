@@ -1,0 +1,6 @@
+cstr_cat|cstr_cat
+cstr_ccat|cstr_ccat
+cstr_free|cstr_free
+cstr_new|cstr_new
+cstr_reset|cstr_reset
+cstr_wccat|cstr_wccat

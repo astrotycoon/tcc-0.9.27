@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1414' type='void put_extern_sym2(Sym * sym, int sh_num, Elf64_Addr value, unsigned long size, int can_add_underscore)'/>
+<use f='tcc/tccasm.c' l='392' u='c' c='asm_new_label1'/>
+<def f='tcc/tccgen.c' l='338' ll='419' type='void put_extern_sym2(Sym * sym, int sh_num, Elf64_Addr value, unsigned long size, int can_add_underscore)'/>
+<use f='tcc/tccgen.c' l='425' u='c' c='put_extern_sym'/>
+<use f='tcc/tccgen.c' l='7352' u='c' c='decl0'/>
+<doc f='tcc/tccgen.c' l='335'>/* update sym-&gt;c so that it points to an external symbol in section
+   &apos;section&apos; with value &apos;value&apos; */</doc>

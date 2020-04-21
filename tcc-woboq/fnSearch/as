@@ -1,0 +1,10 @@
+asm_clobber|asm_clobber
+asm_compute_constraints|asm_compute_constraints
+asm_gen_code|asm_gen_code
+asm_opcode|asm_opcode
+asm_parse_regvar|asm_parse_regvar
+asm_expr|asm_expr
+asm_get_local_label_name|asm_get_local_label_name
+asm_global_instr|asm_global_instr
+asm_instr|asm_instr
+asm_int_expr|asm_int_expr

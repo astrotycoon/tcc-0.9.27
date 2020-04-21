@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='612' type='int'/>
+<offset>32</offset>
+<use f='tcc/tccpp.c' l='1593' u='w' c='search_cached_include'/>
+<use f='tcc/tccpp.c' l='1636' u='w' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1836' u='r' c='preprocess'/>

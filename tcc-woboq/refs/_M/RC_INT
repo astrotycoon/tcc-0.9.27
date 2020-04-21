@@ -1,0 +1,19 @@
+<dec f='tcc/x86_64-gen.c' l='33'/>
+<doc f='tcc/x86_64-gen.c' l='30'>/* a register can belong to several classes. The classes must be
+   sorted from more general to more precise (see gv2() code which does
+   assumptions on it). */</doc>
+<use f='tcc/tccasm.c' l='1129' u='c'/>
+<use f='tcc/tccgen.c' l='652' u='c'/>
+<use f='tcc/tccgen.c' l='670' u='c'/>
+<use f='tcc/tccgen.c' l='1313' u='c'/>
+<use f='tcc/tccgen.c' l='1579' u='c'/>
+<use f='tcc/tccgen.c' l='2354' u='c'/>
+<use f='tcc/tccgen.c' l='2473' u='c'/>
+<use f='tcc/tccgen.c' l='2609' u='c'/>
+<use f='tcc/tccgen.c' l='2614' u='c'/>
+<use f='tcc/tccgen.c' l='3183' u='c'/>
+<use f='tcc/tccgen.c' l='3198' u='c'/>
+<use f='tcc/tccgen.c' l='4496' u='c'/>
+<use f='tcc/tccgen.c' l='5502' u='c'/>
+<use f='tcc/tccgen.c' l='5610' u='c'/>
+<use f='tcc/tccgen.c' l='5821' u='c'/>

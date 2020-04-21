@@ -1,0 +1,24 @@
+<dec f='tcc/tcc.h' l='1111' type='void * tcc_malloc(unsigned long size)'/>
+<def f='tcc/libtcc.c' l='211' ll='218' type='void * tcc_malloc(unsigned long size)'/>
+<use f='tcc/libtcc.c' l='223' u='c' c='tcc_mallocz'/>
+<use f='tcc/libtcc.c' l='240' u='c' c='tcc_strdup'/>
+<use f='tcc/libtcc.c' l='1603' u='c' c='args_parser_add_file'/>
+<use f='tcc/libtcc.c' l='1657' u='c' c='args_parser_listfile'/>
+<use f='tcc/tcctools.c' l='165' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='263' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tccasm.c' l='1112' u='c' c='parse_asm_operands'/>
+<use f='tcc/tccelf.c' l='730' u='c' c='sort_syms'/>
+<use f='tcc/tccelf.c' l='731' u='c' c='sort_syms'/>
+<use f='tcc/tccelf.c' l='2020' u='c' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2021' u='c' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2180' u='c' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2249' u='c' c='load_data'/>
+<use f='tcc/tccelf.c' l='2601' u='c' c='tcc_load_alacarte'/>
+<use f='tcc/tccgen.c' l='461' u='c' c='__sym_malloc'/>
+<use f='tcc/tccgen.c' l='6135' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='7273' u='c' c='decl0'/>
+<use f='tcc/tccpp.c' l='170' u='c' c='tal_new'/>
+<use f='tcc/tccpp.c' l='304' u='c' c='tal_realloc_impl'/>
+<use f='tcc/tccpp.c' l='1591' u='c' c='search_cached_include'/>
+<use f='tcc/tccpp.c' l='2197' u='c' c='parse_string'/>
+<use f='tcc/tccrun.c' l='89' u='c' c='tcc_relocate'/>

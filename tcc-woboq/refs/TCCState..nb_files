@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='825' type='int'/>
+<offset>11136</offset>
+<doc f='tcc/tcc.h' l='825'>/* number thereof */</doc>
+<use f='tcc/libtcc.c' l='926' u='a' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='1607' u='a' c='args_parser_add_file'/>
+<use f='tcc/tcc.c' l='285' u='r' c='main'/>
+<use f='tcc/tcc.c' l='317' u='r' c='main'/>
+<use f='tcc/tcc.c' l='321' u='r' c='main'/>

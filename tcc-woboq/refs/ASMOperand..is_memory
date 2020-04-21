@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='637' type='int'/>
+<use f='tcc/i386-asm.c' l='1242' u='w' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='1419' u='w' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='1442' u='r' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='1635' u='r' c='asm_gen_code'/>
+<use f='tcc/i386-asm.c' l='1661' u='r' c='asm_gen_code'/>
+<offset>480</offset>
+<doc f='tcc/tcc.h' l='637'>/* true if memory operand */</doc>
+<use f='tcc/tccasm.c' l='1075' u='r' c='subst_asm_operands'/>

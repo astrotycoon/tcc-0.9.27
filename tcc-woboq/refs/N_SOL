@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='123' type='132'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='121'>/* Name of sub-source file (#include file).
+   Value is starting text address of the compilation.  */</doc>

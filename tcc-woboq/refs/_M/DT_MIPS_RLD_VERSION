@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1645'/>
+<doc f='tcc/elf.h' l='1643'>/* Legal values for d_tag field of Elf32_Dyn.  */</doc>

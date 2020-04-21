@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='824' type='struct filespec **'/>
+<offset>11072</offset>
+<doc f='tcc/tcc.h' l='823'>/* used by main and tcc_parse_args only */</doc>
+<doc f='tcc/tcc.h' l='824'>/* files seen on command line */</doc>
+<use f='tcc/libtcc.c' l='926' u='a' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='1607' u='a' c='args_parser_add_file'/>
+<use f='tcc/tcc.c' l='321' u='r' c='main'/>

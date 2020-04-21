@@ -1,0 +1,5 @@
+<dec f='tcc/libtcc.h' l='60' type='int tcc_set_output_type(TCCState * s, int output_type)'/>
+<doc f='tcc/libtcc.h' l='59'>/* set output type. MUST BE CALLED before any compilation */</doc>
+<def f='tcc/libtcc.c' l='941' ll='990' type='int tcc_set_output_type(TCCState * s, int output_type)'/>
+<use f='tcc/tcc.c' l='280' u='c' c='main'/>
+<use f='tcc/tcc.c' l='312' u='c' c='main'/>

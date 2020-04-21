@@ -1,0 +1,15 @@
+<dec f='tcc/tcc.h' l='828' type='char *'/>
+<offset>11264</offset>
+<doc f='tcc/tcc.h' l='828'>/* output filename */</doc>
+<use f='tcc/libtcc.c' l='924' u='r' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='1809' u='r' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1811' u='r' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1813' u='w' c='tcc_parse_args'/>
+<use f='tcc/tcc.c' l='290' u='r' c='main'/>
+<use f='tcc/tcc.c' l='291' u='r' c='main'/>
+<use f='tcc/tcc.c' l='293' u='r' c='main'/>
+<use f='tcc/tcc.c' l='298' u='r' c='main'/>
+<use f='tcc/tcc.c' l='352' u='r' c='main'/>
+<use f='tcc/tcc.c' l='353' u='w' c='main'/>
+<use f='tcc/tcc.c' l='354' u='r' c='main'/>
+<use f='tcc/tcc.c' l='357' u='r' c='main'/>

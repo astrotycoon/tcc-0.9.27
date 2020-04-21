@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='832' type='char *'/>
+<offset>11456</offset>
+<doc f='tcc/tcc.h' l='832'>/* option -MF */</doc>
+<use f='tcc/libtcc.c' l='925' u='r' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='1899' u='w' c='tcc_parse_args'/>
+<use f='tcc/tcc.c' l='357' u='r' c='main'/>

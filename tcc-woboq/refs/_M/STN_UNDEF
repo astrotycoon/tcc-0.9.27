@@ -1,0 +1,4 @@
+<dec f='tcc/elf.h' l='488'/>
+<doc f='tcc/elf.h' l='484'>/* Symbol table indices are found in the hash buckets and chain table
+   of a symbol hash table section.  This special index value indicates
+   the end of a chain, meaning no further symbols are found in that bucket.  */</doc>

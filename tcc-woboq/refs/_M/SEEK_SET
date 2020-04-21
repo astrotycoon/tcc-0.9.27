@@ -1,0 +1,12 @@
+<dec f='include/stdio.h' l='107'/>
+<dec f='include/fcntl.h' l='137'/>
+<doc f='include/stdio.h' l='105'>/* The possibilities for the third argument to `fseek&apos;.
+   These values should not be changed.  */</doc>
+<use f='tcc/libtcc.c' l='1026' u='c'/>
+<use f='tcc/libtcc.c' l='1658' u='c'/>
+<use f='tcc/tcctools.c' l='164' u='c'/>
+<use f='tcc/tcctools.c' l='262' u='c'/>
+<use f='tcc/tccelf.c' l='2250' u='c'/>
+<use f='tcc/tccelf.c' l='2302' u='c'/>
+<use f='tcc/tccelf.c' l='2431' u='c'/>
+<use f='tcc/tccelf.c' l='2682' u='c'/>

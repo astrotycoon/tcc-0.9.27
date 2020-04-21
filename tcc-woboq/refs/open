@@ -1,0 +1,4 @@
+<dec f='include/fcntl.h' l='157' type='int open(const char * __file, int __oflag)'/>
+<use f='tcc/libtcc.c' l='616' u='c' c='tcc_open'/>
+<use f='tcc/libtcc.c' l='1652' u='c' c='args_parser_listfile'/>
+<use f='tcc/tccelf.c' l='1989' u='c' c='tcc_write_elf_file'/>

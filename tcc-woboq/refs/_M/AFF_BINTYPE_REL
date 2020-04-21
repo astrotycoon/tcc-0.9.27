@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1173'/>
+<doc f='tcc/tcc.h' l='1172'>/* values from tcc_object_type(...) */</doc>
+<use f='tcc/libtcc.c' l='1034' u='c'/>
+<use f='tcc/tccelf.c' l='2267' u='c'/>
+<use f='tcc/tccelf.c' l='2303' u='c'/>
+<use f='tcc/tccelf.c' l='2677' u='c'/>

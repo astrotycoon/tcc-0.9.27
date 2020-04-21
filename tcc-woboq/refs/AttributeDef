@@ -1,0 +1,10 @@
+<def f='tcc/tcc.h' l='468' ll='475'/>
+<use f='tcc/tcc.h' l='468'/>
+<size>32</size>
+<doc f='tcc/tcc.h' l='467'>/* GNUC attribute definition */</doc>
+<mbr r='AttributeDef::a' o='0' t='struct SymAttr'/>
+<mbr r='AttributeDef::f' o='32' t='struct FuncAttr'/>
+<mbr r='AttributeDef::section' o='64' t='struct Section *'/>
+<mbr r='AttributeDef::alias_target' o='128' t='int'/>
+<mbr r='AttributeDef::asm_label' o='160' t='int'/>
+<mbr r='AttributeDef::attr_mode' o='192' t='char'/>

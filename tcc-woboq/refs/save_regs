@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1341' type='void save_regs(int n)'/>
+<use f='tcc/tccasm.c' l='1200' u='c' c='asm_instr'/>
+<def f='tcc/tccgen.c' l='954' ll='959' type='void save_regs(int n)'/>
+<use f='tcc/tccgen.c' l='4723' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4765' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5407' u='c' c='expr_land'/>
+<use f='tcc/tccgen.c' l='5448' u='c' c='expr_lor'/>
+<use f='tcc/tccgen.c' l='5504' u='c' c='expr_cond'/>
+<doc f='tcc/tccgen.c' l='953'>/* save registers up to (vtop - n) stack entry */</doc>

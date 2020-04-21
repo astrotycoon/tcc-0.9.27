@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='530' type='char [1]'/>
+<offset>128</offset>
+<use f='tcc/tccelf.c' l='2135' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2749' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2761' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2781' u='r' c='tcc_load_dll'/>

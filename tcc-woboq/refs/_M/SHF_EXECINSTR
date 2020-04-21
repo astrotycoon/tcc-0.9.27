@@ -1,0 +1,8 @@
+<dec f='tcc/elf.h' l='370'/>
+<use f='tcc/tccelf.c' l='61' u='c'/>
+<use f='tcc/tccelf.c' l='995' u='c'/>
+<use f='tcc/tccelf.c' l='1532' u='c'/>
+<use f='tcc/tccrun.c' l='208' u='c'/>
+<use f='tcc/tccrun.c' l='213' u='c'/>
+<use f='tcc/tccrun.c' l='259' u='c'/>
+<use f='tcc/tccrun.c' l='266' u='c'/>

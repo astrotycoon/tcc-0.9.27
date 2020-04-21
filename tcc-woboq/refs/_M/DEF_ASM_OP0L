@@ -1,0 +1,18 @@
+<dec f='tcc/i386-tok.h' l='233'/>
+<use f='tcc/x86_64-asm.h' l='94' u='c'/>
+<use f='tcc/x86_64-asm.h' l='332' u='c'/>
+<use f='tcc/x86_64-asm.h' l='342' u='c'/>
+<use f='tcc/x86_64-asm.h' l='382' u='c'/>
+<use f='tcc/x86_64-asm.h' l='516' u='c'/>
+<use f='tcc/x86_64-asm.h' l='517' u='c'/>
+<use f='tcc/x86_64-asm.h' l='518' u='c'/>
+<use f='tcc/x86_64-asm.h' l='522' u='w'/>
+<dec f='tcc/i386-tok.h' l='245'/>
+<use f='tcc/x86_64-asm.h' l='94' u='c'/>
+<use f='tcc/x86_64-asm.h' l='332' u='c'/>
+<use f='tcc/x86_64-asm.h' l='342' u='c'/>
+<use f='tcc/x86_64-asm.h' l='382' u='c'/>
+<use f='tcc/x86_64-asm.h' l='516' u='c'/>
+<use f='tcc/x86_64-asm.h' l='517' u='c'/>
+<use f='tcc/x86_64-asm.h' l='518' u='c'/>
+<use f='tcc/x86_64-asm.h' l='522' u='w'/>

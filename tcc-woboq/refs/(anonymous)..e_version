@@ -1,0 +1,6 @@
+<dec f='tcc/elf.h' l='82' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='100' type='Elf64_Word'/>
+<offset>160</offset>
+<doc f='tcc/elf.h' l='82'>/* Object file version */</doc>
+<doc f='tcc/elf.h' l='100'>/* Object file version */</doc>
+<use f='tcc/tccelf.c' l='1923' u='w' c='tcc_output_elf'/>

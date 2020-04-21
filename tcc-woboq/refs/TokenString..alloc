@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='598' type='char'/>
+<offset>384</offset>
+<use f='tcc/tccpp.c' l='1108' u='w' c='begin_macro'/>
+<use f='tcc/tccpp.c' l='1122' u='r' c='end_macro'/>
+<use f='tcc/tccpp.c' l='1123' u='w' c='end_macro'/>
+<use f='tcc/tccpp.c' l='3497' u='r' c='macro_subst'/>

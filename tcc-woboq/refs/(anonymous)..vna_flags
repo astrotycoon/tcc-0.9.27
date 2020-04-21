@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='926' type='Elf32_Half'/>
+<dec f='tcc/elf.h' l='936' type='Elf64_Half'/>
+<offset>32</offset>
+<doc f='tcc/elf.h' l='926'>/* Dependency specific information */</doc>
+<doc f='tcc/elf.h' l='936'>/* Dependency specific information */</doc>

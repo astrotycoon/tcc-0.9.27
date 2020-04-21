@@ -1,0 +1,11 @@
+<dec f='include/stdio.h' l='199' type='int fclose(FILE * __stream)'/>
+<doc f='include/stdio.h' l='195'>/* Close STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='tcc/tcctools.c' l='167' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='274' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='276' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='543' u='c' c='gen_makedeps'/>
+<use f='tcc/tcc.c' l='369' u='c' c='main'/>
+<use f='tcc/tccelf.c' l='2007' u='c' c='tcc_write_elf_file'/>

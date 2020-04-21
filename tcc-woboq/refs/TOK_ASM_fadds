@@ -1,0 +1,5 @@
+<dec f='tcc/i386-tok.h' l='200' macro='1' type='876'/>
+<use f='tcc/x86_64-asm.h' l='256' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='256' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='256' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='256' macro='1'/>

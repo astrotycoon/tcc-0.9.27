@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='700' type='Elf64_Addr'/>
+<offset>1024</offset>
+<use f='tcc/libtcc.c' l='1349' u='w' c='tcc_set_linker'/>
+<use f='tcc/tccelf.c' l='1586' u='r' c='layout_sections'/>

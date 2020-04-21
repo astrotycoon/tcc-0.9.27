@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='453' type='unsigned short'/>
+<offset>7</offset>
+<use f='tcc/tccasm.c' l='685' u='w' c='asm_parse_directive'/>
+<use f='tcc/tccgen.c' l='301' u='r' c='update_storage'/>
+<use f='tcc/tccgen.c' l='303' u='r' c='update_storage'/>
+<use f='tcc/tccgen.c' l='909' u='r' c='patch_storage'/>
+<use f='tcc/tccgen.c' l='910' u='r' c='patch_storage'/>
+<use f='tcc/tccgen.c' l='911' u='r' c='patch_storage'/>
+<use f='tcc/tccgen.c' l='916' u='w' c='patch_storage'/>
+<use f='tcc/tccgen.c' l='3331' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3333' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3335' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3337' u='w' c='parse_attribute'/>

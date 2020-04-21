@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/types/struct_tm.h' l='12' type='int'/>
+<offset>96</offset>
+<doc f='include/x86_64-linux-gnu/bits/types/struct_tm.h' l='12'>/* Day.		[1-31] */</doc>
+<use f='tcc/tccpp.c' l='3314' u='r' c='macro_subst_tok'/>

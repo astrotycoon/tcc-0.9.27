@@ -1,0 +1,6 @@
+<dec f='tcc/libtcc.h' l='30' type='void tcc_set_options(TCCState * s, const char * str)'/>
+<doc f='tcc/libtcc.h' l='29'>/* set options as from command line (multiple supported) */</doc>
+<use f='tcc/libtcc.c' l='1702' u='c' c='tcc_parse_args'/>
+<def f='tcc/libtcc.c' l='1964' ll='1971' type='void tcc_set_options(TCCState * s, const char * r)'/>
+<use f='tcc/tcc.c' l='302' u='c' c='main'/>
+<use f='tcc/tccpp.c' l='1699' u='c' c='pragma_parse'/>

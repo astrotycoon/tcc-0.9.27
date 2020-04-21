@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/sigaction.h' l='33' type='void (*)(int, siginfo_t *, void *)'/>
+<use f='tcc/tccrun.c' l='552' macro='1' u='w' c='set_exception_handler'/>
+<offset>0</offset>
+<doc f='include/x86_64-linux-gnu/bits/sigaction.h' l='32'>/* Used if SA_SIGINFO is set.  */</doc>

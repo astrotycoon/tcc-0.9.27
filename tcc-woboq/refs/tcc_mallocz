@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='1112' type='void * tcc_mallocz(unsigned long size)'/>
+<def f='tcc/libtcc.c' l='220' ll='226' type='void * tcc_mallocz(unsigned long size)'/>
+<use f='tcc/libtcc.c' l='583' u='c' c='tcc_open_bf'/>
+<use f='tcc/libtcc.c' l='737' u='c' c='tcc_new'/>
+<use f='tcc/tccelf.c' l='166' u='c' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='196' u='c' c='new_section'/>
+<use f='tcc/tccelf.c' l='2174' u='c' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2315' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2470' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2759' u='c' c='tcc_load_dll'/>
+<use f='tcc/tccpp.c' l='169' u='c' c='tal_new'/>

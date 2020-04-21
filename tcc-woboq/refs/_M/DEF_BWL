@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1006'/>
+<use f='tcc/i386-tok.h' l='155' u='c'/>
+<use f='tcc/i386-tok.h' l='156' u='c'/>
+<use f='tcc/i386-tok.h' l='219' u='c'/>
+<use f='tcc/i386-tok.h' l='220' u='c'/>
+<doc f='tcc/tcc.h' l='1005'>/* only used for i386 asm opcodes definitions */</doc>

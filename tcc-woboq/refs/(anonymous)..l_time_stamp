@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='1729' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='1738' type='Elf64_Word'/>
+<offset>32</offset>
+<doc f='tcc/elf.h' l='1729'>/* Timestamp */</doc>
+<doc f='tcc/elf.h' l='1738'>/* Timestamp */</doc>

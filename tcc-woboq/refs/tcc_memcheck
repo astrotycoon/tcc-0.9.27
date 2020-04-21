@@ -1,0 +1,3 @@
+<dec f='tcc/tcc.h' l='1133' type='void tcc_memcheck()'/>
+<def f='tcc/libtcc.c' l='245' ll='247' type='void tcc_memcheck()'/>
+<use f='tcc/libtcc.c' l='938' u='c' c='tcc_delete'/>

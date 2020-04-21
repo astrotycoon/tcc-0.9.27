@@ -1,0 +1,25 @@
+<dec f='include/stdio.h' l='340' type='int snprintf(char *restrict __s, size_t __maxlen, const char *restrict __format)'/>
+<use f='tcc/i386-asm.c' l='1500' u='c' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1509' u='c' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1518' u='c' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1585' u='c' c='subst_asm_operand'/>
+<doc f='include/stdio.h' l='339'>/* Maximum chars of output to write in MAXLEN.  */</doc>
+<use f='tcc/libtcc.c' l='1115' u='c' c='tcc_add_library_internal'/>
+<use f='tcc/tcctools.c' l='488' u='c' c='tcc_tool_cross'/>
+<use f='tcc/tcctools.c' l='526' u='c' c='gen_makedeps'/>
+<use f='tcc/tcc.c' l='218' u='c' c='default_outputfile'/>
+<use f='tcc/tccasm.c' l='29' u='c' c='asm_get_local_label_name'/>
+<use f='tcc/tccasm.c' l='81' u='c' c='asm_section_sym'/>
+<use f='tcc/tccelf.c' l='587' u='c' c='put_elf_reloca'/>
+<use f='tcc/tccelf.c' l='1127' u='c' c='add_init_array_defines'/>
+<use f='tcc/tccelf.c' l='1128' u='c' c='add_init_array_defines'/>
+<use f='tcc/tccelf.c' l='1152' u='c' c='tcc_add_support'/>
+<use f='tcc/tccelf.c' l='1257' u='c' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1262' u='c' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='2972' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccelf.c' l='2974' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccgen.c' l='215' u='c' c='tcc_debug_funcstart'/>
+<use f='tcc/tccgen.c' l='2951' u='c' c='type_to_str'/>
+<use f='tcc/tccpp.c' l='3299' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3313' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3316' u='c' c='macro_subst_tok'/>

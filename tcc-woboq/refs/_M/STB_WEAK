@@ -1,0 +1,10 @@
+<dec f='tcc/elf.h' l='459'/>
+<use f='tcc/tccelf.c' l='528' u='c'/>
+<use f='tcc/tccelf.c' l='531' u='c'/>
+<use f='tcc/tccelf.c' l='533' u='c'/>
+<use f='tcc/tccelf.c' l='533' u='c'/>
+<use f='tcc/tccelf.c' l='811' u='c'/>
+<use f='tcc/tccelf.c' l='1428' u='c'/>
+<use f='tcc/tccelf.c' l='1450' u='c'/>
+<use f='tcc/tccelf.c' l='1486' u='c'/>
+<use f='tcc/tccgen.c' l='308' u='c'/>

@@ -1,0 +1,16 @@
+<dec f='tcc/tcc.h' l='581' type='unsigned char [1]'/>
+<offset>8800</offset>
+<doc f='tcc/tcc.h' l='581'>/* extra size for CH_EOB char */</doc>
+<use f='tcc/libtcc.c' l='584' u='r' c='tcc_open_bf'/>
+<use f='tcc/libtcc.c' l='585' u='r' c='tcc_open_bf'/>
+<use f='tcc/libtcc.c' l='676' u='r' c='tcc_compile_string'/>
+<use f='tcc/libtcc.c' l='694' u='r' c='tcc_define_symbol'/>
+<use f='tcc/libtcc.c' l='695' u='w' c='tcc_define_symbol'/>
+<use f='tcc/libtcc.c' l='696' u='r' c='tcc_define_symbol'/>
+<use f='tcc/tccasm.c' l='993' u='r' c='tcc_assemble_inline'/>
+<use f='tcc/tccpp.c' l='600' u='r' c='handle_eob'/>
+<use f='tcc/tccpp.c' l='607' u='r' c='handle_eob'/>
+<use f='tcc/tccpp.c' l='608' u='r' c='handle_eob'/>
+<use f='tcc/tccpp.c' l='2631' u='r' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3138' u='r' c='paste_tokens'/>
+<use f='tcc/tccpp.c' l='3615' u='r' c='preprocess_start'/>

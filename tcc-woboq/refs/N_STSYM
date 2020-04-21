@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='36' type='38'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='34'>/* Data-segment variable with internal linkage.  Value is its address.
+   &quot;Static Sym&quot;.  */</doc>

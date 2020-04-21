@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='1332' type='void vrotb(int n)'/>
+<def f='tcc/tccgen.c' l='766' ll='775' type='void vrotb(int n)'/>
+<use f='tcc/tccgen.c' l='1189' u='c' c='load_packed_bf'/>
+<use f='tcc/tccgen.c' l='3247' u='c' c='inc'/>
+<use f='tcc/tccgen.c' l='3248' u='c' c='inc'/>
+<doc f='tcc/tccgen.c' l='763'>/* rotate n first stack elements to the bottom
+   I1 ... In -&gt; I2 ... In I1 [top is right]
+*/</doc>

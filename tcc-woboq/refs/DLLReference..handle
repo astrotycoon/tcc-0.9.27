@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='529' type='void *'/>
+<offset>64</offset>
+<use f='tcc/tccelf.c' l='124' u='r' c='tccelf_delete'/>
+<use f='tcc/tccelf.c' l='128' u='r' c='tccelf_delete'/>

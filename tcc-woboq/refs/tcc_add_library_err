@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1182' type='int tcc_add_library_err(TCCState * s, const char * f)'/>
+<def f='tcc/libtcc.c' l='1160' ll='1166' type='int tcc_add_library_err(TCCState * s, const char * libname)'/>
+<use f='tcc/libtcc.c' l='1173' u='c' c='tcc_add_pragma_libs'/>
+<use f='tcc/tcc.c' l='325' u='c' c='main'/>
+<use f='tcc/tccelf.c' l='1194' u='c' c='tcc_add_runtime'/>

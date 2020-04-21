@@ -1,0 +1,10 @@
+<dec f='include/stdio.h' l='232' type='FILE * fopen(const char *restrict __filename, const char *restrict __modes)'/>
+<doc f='include/stdio.h' l='228'>/* Open a file and create a new stream for it.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='tcc/tcctools.c' l='131' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='138' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='155' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='535' u='c' c='gen_makedeps'/>
+<use f='tcc/tcc.c' l='291' u='c' c='main'/>

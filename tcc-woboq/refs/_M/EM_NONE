@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='185'/>
+<doc f='tcc/elf.h' l='183'>/* Legal values for e_machine (architecture).  */</doc>

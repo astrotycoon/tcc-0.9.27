@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1447' type='Elf64_Addr get_elf_sym_addr(TCCState * s, const char * name, int err)'/>
+<def f='tcc/tccelf.c' l='459' ll='472' macro='1' type='Elf64_Addr get_elf_sym_addr(TCCState * s, const char * name, int err)'/>
+<use f='tcc/tccelf.c' l='477' u='c' c='tcc_get_symbol'/>
+<use f='tcc/tccelf.c' l='484' u='c' c='tcc_get_symbol_err'/>
+<use f='tcc/tccelf.c' l='1912' u='c' c='tcc_output_elf'/>

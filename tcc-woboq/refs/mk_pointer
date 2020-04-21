@@ -1,0 +1,19 @@
+<dec f='tcc/tcc.h' l='1348' type='void mk_pointer(CType * type)'/>
+<use f='tcc/tccgen.c' l='247' u='c' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='2169' u='c' c='gen_op'/>
+<use f='tcc/tccgen.c' l='2174' u='c' c='gen_op'/>
+<def f='tcc/tccgen.c' l='2754' ll='2760' type='void mk_pointer(CType * type)'/>
+<use f='tcc/tccgen.c' l='4228' u='c' c='convert_parameter_type'/>
+<use f='tcc/tccgen.c' l='4323' u='c' c='post_type'/>
+<use f='tcc/tccgen.c' l='4436' u='c' c='type_decl'/>
+<use f='tcc/tccgen.c' l='4660' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4687' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4753' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4876' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4879' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4886' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4984' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5604' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5637' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5755' u='c' c='gfunc_return'/>
+<doc f='tcc/tccgen.c' l='2753'>/* modify type so that its it is a pointer to type. */</doc>

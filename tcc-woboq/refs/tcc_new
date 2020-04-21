@@ -1,0 +1,4 @@
+<dec f='tcc/libtcc.h' l='17' type='TCCState * tcc_new()'/>
+<doc f='tcc/libtcc.h' l='16'>/* create a new TCC compilation context */</doc>
+<def f='tcc/libtcc.c' l='731' ll='900' type='TCCState * tcc_new()'/>
+<use f='tcc/tcc.c' l='257' u='c' c='main'/>

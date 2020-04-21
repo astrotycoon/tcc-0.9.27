@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='106' type='96'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='105'>/* Structure or union element.  Value is offset in the structure.  */</doc>

@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='562'/>
+<doc f='tcc/tcc.h' l='561'>/* type_decl() types */</doc>
+<use f='tcc/tccgen.c' l='4265' u='c'/>
+<use f='tcc/tccgen.c' l='4284' u='c'/>
+<use f='tcc/tccgen.c' l='4460' u='c'/>
+<use f='tcc/tccgen.c' l='4555' u='c'/>
+<use f='tcc/tccgen.c' l='4570' u='c'/>
+<use f='tcc/tccgen.c' l='4696' u='c'/>
+<use f='tcc/tccgen.c' l='5018' u='c'/>

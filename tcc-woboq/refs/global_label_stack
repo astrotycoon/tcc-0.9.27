@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1293' type='Sym *'/>
+<def f='tcc/tccgen.c' l='40' type='Sym *'/>
+<use f='tcc/tccgen.c' l='4977' u='a' c='unary'/>
+<use f='tcc/tccgen.c' l='6177' u='a' c='block'/>
+<use f='tcc/tccgen.c' l='6206' u='a' c='block'/>
+<use f='tcc/tccgen.c' l='7078' u='a' c='gen_function'/>
+<use f='tcc/tccpp.c' l='1371' u='a' c='label_push'/>

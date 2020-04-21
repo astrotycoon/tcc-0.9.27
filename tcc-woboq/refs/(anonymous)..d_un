@@ -1,0 +1,6 @@
+<dec f='tcc/elf.h' l='665' type='union (anonymous union at /tmp/tcc-0.9.27/tcc-0.9.27/./elf.h:661:3)'/>
+<dec f='tcc/elf.h' l='675' type='union (anonymous union at /tmp/tcc-0.9.27/tcc-0.9.27/./elf.h:671:3)'/>
+<offset>64</offset>
+<use f='tcc/tccelf.c' l='1116' u='m' c='put_dt'/>
+<use f='tcc/tccelf.c' l='2742' u='m' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2778' u='m' c='tcc_load_dll'/>

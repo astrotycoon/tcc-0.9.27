@@ -1,0 +1,5 @@
+<dec f='tcc/libtcc.h' l='36' type='int tcc_add_include_path(TCCState * s, const char * pathname)'/>
+<doc f='tcc/libtcc.h' l='35'>/* add include path */</doc>
+<def f='tcc/libtcc.c' l='992' ll='996' type='int tcc_add_include_path(TCCState * s, const char * pathname)'/>
+<use f='tcc/libtcc.c' l='1736' u='c' c='tcc_parse_args'/>
+<use f='tcc/tcc.c' l='202' u='c' c='set_environment'/>

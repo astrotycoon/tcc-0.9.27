@@ -1,0 +1,17 @@
+<dec f='tcc/elf.h' l='289' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='303' type='Elf64_Xword'/>
+<offset>256</offset>
+<doc f='tcc/elf.h' l='289'>/* Section size in bytes */</doc>
+<doc f='tcc/elf.h' l='303'>/* Section size in bytes */</doc>
+<use f='tcc/tcctools.c' l='187' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tccelf.c' l='1970' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2319' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2336' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2337' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2342' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2428' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2723' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2724' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2727' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2728' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2730' u='r' c='tcc_load_dll'/>

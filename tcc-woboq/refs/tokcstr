@@ -1,0 +1,33 @@
+<dec f='tcc/tcc.h' l='1207' type='CString'/>
+<def f='tcc/tccpp.c' l='33' type='CString'/>
+<use f='tcc/tccpp.c' l='2201' u='a' c='parse_string'/>
+<use f='tcc/tccpp.c' l='2202' u='a' c='parse_string'/>
+<use f='tcc/tccpp.c' l='2213' u='m' c='parse_string'/>
+<use f='tcc/tccpp.c' l='2220' u='m' c='parse_string'/>
+<use f='tcc/tccpp.c' l='2222' u='m' c='parse_string'/>
+<use f='tcc/tccpp.c' l='2226' u='m' c='parse_string'/>
+<use f='tcc/tccpp.c' l='2227' u='m' c='parse_string'/>
+<use f='tcc/tccpp.c' l='2719' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2720' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2726' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2729' u='m' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2729' u='m' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2744' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2745' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2759' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2761' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2768' u='m' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2769' u='m' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2776' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2777' u='m' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2778' u='m' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2809' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2811' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2812' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2813' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2814' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2815' u='a' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2816' u='m' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2817' u='m' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3694' u='a' c='tccpp_delete'/>
+<doc f='tcc/tccpp.c' l='33'>/* current parsed string, if any */</doc>

@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='1444' type='struct sym_attr * get_sym_attr(TCCState * s1, int index, int alloc)'/>
+<use f='tcc/tccelf.c' l='77' u='c' c='tccelf_new'/>
+<def f='tcc/tccelf.c' l='688' ll='707' type='struct sym_attr * get_sym_attr(TCCState * s1, int index, int alloc)'/>
+<use f='tcc/tccelf.c' l='896' u='c' c='prepare_dynamic_rel'/>
+<use f='tcc/tccelf.c' l='939' u='c' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1065' u='c' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1316' u='c' c='fill_got_entry'/>
+<use f='tcc/tccelf.c' l='1366' u='c' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1414' u='c' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1508' u='c' c='export_global_syms'/>

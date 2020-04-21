@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1250' type='Sym * label_find(int v)'/>
+<use f='tcc/tccgen.c' l='4975' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='6174' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6199' u='c' c='block'/>
+<def f='tcc/tccpp.c' l='1357' ll='1363' type='Sym * label_find(int v)'/>
+<doc f='tcc/tccpp.c' l='1356'>/* label lookup */</doc>

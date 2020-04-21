@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='1355' type='void unary()'/>
+<def f='tcc/tccgen.c' l='4594' ll='5284' type='void unary()'/>
+<use f='tcc/tccgen.c' l='4715' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4739' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4744' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4758' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4771' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4777' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4794' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='4946' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4951' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5290' u='c' c='expr_prod'/>
+<use f='tcc/tccgen.c' l='5294' u='c' c='expr_prod'/>

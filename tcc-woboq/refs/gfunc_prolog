@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='1489' type='void gfunc_prolog(CType * func_type)'/>
+<use f='tcc/tccgen.c' l='7070' u='c' c='gen_function'/>

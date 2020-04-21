@@ -1,0 +1,25 @@
+<dec f='include/stdio.h' l='137' type='struct _IO_FILE *'/>
+<doc f='include/stdio.h' l='137'>/* Standard error output stream.  */</doc>
+<use f='tcc/libtcc.c' l='518' macro='1' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='519' macro='1' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='1979' macro='1' u='r' c='tcc_print_stats'/>
+<use f='tcc/tcctools.c' l='64' macro='1' u='r' c='ar_usage'/>
+<use f='tcc/tcctools.c' l='65' macro='1' u='r' c='ar_usage'/>
+<use f='tcc/tcctools.c' l='133' macro='1' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='140' macro='1' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='156' macro='1' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='173' macro='1' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tccrun.c' l='454' macro='1' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='455' macro='1' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='460' macro='1' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='461' macro='1' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='463' macro='1' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='465' macro='1' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='467' macro='1' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='470' macro='1' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='472' macro='1' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='474' macro='1' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='475' macro='1' u='r' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='486' macro='1' u='r' c='rt_error'/>
+<use f='tcc/tccrun.c' l='488' macro='1' u='r' c='rt_error'/>
+<use f='tcc/tccrun.c' l='490' macro='1' u='r' c='rt_error'/>

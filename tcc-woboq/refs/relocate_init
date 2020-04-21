@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='1475' type='void relocate_init(Section * sr)'/>
+<use f='tcc/tccelf.c' l='834' u='c' c='relocate_section'/>

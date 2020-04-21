@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1610' type='void asm_gen_code(ASMOperand * operands, int nb_operands, int nb_outputs, int is_output, uint8_t * clobber_regs, int out_reg)'/>
+<def f='tcc/i386-asm.c' l='1591' ll='1693' type='void asm_gen_code(ASMOperand * operands, int nb_operands, int nb_outputs, int is_output, uint8_t * clobber_regs, int out_reg)'/>
+<doc f='tcc/i386-asm.c' l='1590'>/* generate prolog and epilog code for asm statement */</doc>
+<use f='tcc/tccasm.c' l='1222' u='c' c='asm_instr'/>
+<use f='tcc/tccasm.c' l='1232' u='c' c='asm_instr'/>

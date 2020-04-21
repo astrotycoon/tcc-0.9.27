@@ -1,0 +1,21 @@
+<def f='tcc/tcc.h' l='567' ll='582'/>
+<use f='tcc/tcc.h' l='571'/>
+<use f='tcc/tcc.h' l='567'/>
+<use f='tcc/tcc.h' l='1201'/>
+<size>1104</size>
+<mbr r='BufferedFile::buf_ptr' o='0' t='uint8_t *'/>
+<mbr r='BufferedFile::buf_end' o='64' t='uint8_t *'/>
+<mbr r='BufferedFile::fd' o='128' t='int'/>
+<mbr r='BufferedFile::prev' o='192' t='struct BufferedFile *'/>
+<mbr r='BufferedFile::line_num' o='256' t='int'/>
+<mbr r='BufferedFile::line_ref' o='288' t='int'/>
+<mbr r='BufferedFile::ifndef_macro' o='320' t='int'/>
+<mbr r='BufferedFile::ifndef_macro_saved' o='352' t='int'/>
+<mbr r='BufferedFile::ifdef_stack_ptr' o='384' t='int *'/>
+<mbr r='BufferedFile::include_next_index' o='448' t='int'/>
+<mbr r='BufferedFile::filename' o='480' t='char [1024]'/>
+<mbr r='BufferedFile::true_filename' o='8704' t='char *'/>
+<mbr r='BufferedFile::unget' o='8768' t='unsigned char [4]'/>
+<mbr r='BufferedFile::buffer' o='8800' t='unsigned char [1]'/>
+<use f='tcc/tccpp.c' l='29'/>
+<size>1104</size>

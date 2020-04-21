@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='613' type='int'/>
+<offset>64</offset>
+<doc f='tcc/tcc.h' l='613'>/* -1 if none */</doc>
+<use f='tcc/tccpp.c' l='1586' u='r' c='search_cached_include'/>
+<use f='tcc/tccpp.c' l='1596' u='w' c='search_cached_include'/>

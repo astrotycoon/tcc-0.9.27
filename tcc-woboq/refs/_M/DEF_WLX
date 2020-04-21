@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='1028'/>
+<use f='tcc/i386-tok.h' l='138' u='c'/>
+<use f='tcc/i386-tok.h' l='139' u='c'/>
+<use f='tcc/i386-tok.h' l='158' u='c'/>
+<use f='tcc/i386-tok.h' l='170' u='c'/>
+<use f='tcc/i386-tok.h' l='189' u='c'/>
+<use f='tcc/i386-tok.h' l='190' u='c'/>
+<use f='tcc/i386-tok.h' l='191' u='c'/>
+<use f='tcc/i386-tok.h' l='192' u='c'/>
+<use f='tcc/i386-tok.h' l='193' u='c'/>
+<use f='tcc/i386-tok.h' l='194' u='c'/>
+<use f='tcc/i386-tok.h' l='196' u='c'/>
+<use f='tcc/i386-tok.h' l='197' u='c'/>

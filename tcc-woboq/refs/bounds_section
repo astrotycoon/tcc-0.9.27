@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='1391' type='Section *'/>
+<def f='tcc/tccelf.c' l='37' type='Section *'/>
+<use f='tcc/tccelf.c' l='84' u='w' c='tccelf_bounds_new'/>
+<use f='tcc/tccelf.c' l='1165' u='r' c='tcc_add_bcheck'/>
+<use f='tcc/tccelf.c' l='1169' u='r' c='tcc_add_bcheck'/>
+<doc f='tcc/tccelf.c' l='36'>/* bound check related sections */</doc>
+<doc f='tcc/tccelf.c' l='37'>/* contains global data bound description */</doc>
+<use f='tcc/tccgen.c' l='6996' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='6996' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='6998' u='r' c='decl_initializer_alloc'/>

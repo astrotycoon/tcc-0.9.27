@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1412' type='Section * new_symtab(TCCState * s1, const char * symtab_name, int sh_type, int sh_flags, const char * strtab_name, const char * hash_name, int hash_sh_flags)'/>
+<use f='tcc/tccelf.c' l='68' u='c' c='tccelf_new'/>
+<use f='tcc/tccelf.c' l='74' u='c' c='tccelf_new'/>
+<def f='tcc/tccelf.c' l='227' ll='254' type='Section * new_symtab(TCCState * s1, const char * symtab_name, int sh_type, int sh_flags, const char * strtab_name, const char * hash_name, int hash_sh_flags)'/>
+<use f='tcc/tccelf.c' l='2097' u='c' c='elf_output_file'/>

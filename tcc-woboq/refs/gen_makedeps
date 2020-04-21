@@ -1,0 +1,3 @@
+<def f='tcc/tcctools.c' l='518' ll='544' type='void gen_makedeps(TCCState * s, const char * target, const char * filename)'/>
+<use f='tcc/tcc.c' l='357' u='c' c='main'/>
+<doc f='tcc/tcctools.c' l='516'>/* generate xxx.d file */</doc>

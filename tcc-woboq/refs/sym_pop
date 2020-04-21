@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1152' type='void sym_pop(Sym ** ptop, Sym * b, int keep)'/>
+<use f='tcc/libtcc.c' l='664' u='c' c='tcc_compile'/>
+<use f='tcc/libtcc.c' l='665' u='c' c='tcc_compile'/>
+<def f='tcc/tccgen.c' l='600' ll='626' type='void sym_pop(Sym ** ptop, Sym * b, int keep)'/>
+<use f='tcc/tccgen.c' l='5988' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6073' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='7081' u='c' c='gen_function'/>
+<doc f='tcc/tccgen.c' l='598'>/* pop symbols until top reaches &apos;b&apos;.  If KEEP is non-zero don&apos;t really
+   pop them yet from the list, but do remove them from the token array.  */</doc>

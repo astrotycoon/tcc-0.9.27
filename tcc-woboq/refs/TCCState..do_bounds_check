@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='693' type='int'/>
+<offset>928</offset>
+<doc f='tcc/tcc.h' l='692'>/* compile with built-in memory and bounds checker */</doc>
+<use f='tcc/libtcc.c' l='959' u='r' c='tcc_set_output_type'/>
+<use f='tcc/libtcc.c' l='1769' u='w' c='tcc_parse_args'/>
+<use f='tcc/tccelf.c' l='1162' u='r' c='tcc_add_bcheck'/>
+<use f='tcc/tccgen.c' l='353' u='r' c='put_extern_sym2'/>
+<use f='tcc/tccgen.c' l='4504' u='r' c='indir'/>
+<use f='tcc/tccgen.c' l='5146' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='6829' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccrun.c' l='137' u='r' c='tcc_run'/>

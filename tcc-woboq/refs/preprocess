@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1254' type='void preprocess(int is_bof)'/>
+<def f='tcc/tccpp.c' l='1714' ll='2012' type='void preprocess(int is_bof)'/>
+<use f='tcc/tccpp.c' l='2654' u='c' c='next_nomacro1'/>
+<doc f='tcc/tccpp.c' l='1713'>/* is_bof is true if first non space token at beginning of file */</doc>

@@ -1,0 +1,7 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='133' type='162'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='129'>/* End of an include file.  No name.
+   This and N_BINCL act as brackets around the file&apos;s output.
+   In an object file, there is no significant data in this entry.
+   The Sun linker puts data into some of the fields.  */</doc>
+<use f='tcc/tccpp.c' l='2625' u='r' c='next_nomacro1'/>
+<use f='tcc/tccrun.c' l='411' c='rt_printline'/>

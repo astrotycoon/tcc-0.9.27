@@ -1,0 +1,10 @@
+put_elf_reloc|put_elf_reloc
+put_elf_reloca|put_elf_reloca
+put_elf_str|put_elf_str
+put_elf_sym|put_elf_sym
+put_stabd|put_stabd
+put_stabn|put_stabn
+put_stabs|put_stabs
+put_stabs_r|put_stabs_r
+put_extern_sym|put_extern_sym
+put_extern_sym2|put_extern_sym2

@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='912'/>
+<doc f='tcc/tcc.h' l='911'>/* type mask (except storage) */</doc>
+<use f='tcc/tccgen.c' l='2758' u='c'/>
+<use f='tcc/tccgen.c' l='3903' u='c'/>
+<use f='tcc/tccgen.c' l='4175' u='c'/>
+<use f='tcc/tccgen.c' l='4407' u='c'/>
+<use f='tcc/tccgen.c' l='4408' u='c'/>
+<use f='tcc/tccgen.c' l='7296' u='c'/>

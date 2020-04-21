@@ -1,0 +1,32 @@
+<dec f='tcc/tcc.h' l='520' type='struct Section *'/>
+<offset>704</offset>
+<doc f='tcc/tcc.h' l='520'>/* link to another section */</doc>
+<use f='tcc/tccelf.c' l='97' u='w' c='tccelf_stab_new'/>
+<use f='tcc/tccelf.c' l='164' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='164' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='174' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='179' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='239' u='w' c='new_symtab'/>
+<use f='tcc/tccelf.c' l='247' u='w' c='new_symtab'/>
+<use f='tcc/tccelf.c' l='358' u='r' c='rebuild_hash'/>
+<use f='tcc/tccelf.c' l='398' u='r' c='put_elf_sym'/>
+<use f='tcc/tccelf.c' l='418' u='r' c='put_elf_sym'/>
+<use f='tcc/tccelf.c' l='450' u='r' c='find_elf_sym'/>
+<use f='tcc/tccelf.c' l='592' u='w' c='put_elf_reloca'/>
+<use f='tcc/tccelf.c' l='764' u='r' c='sort_syms'/>
+<use f='tcc/tccelf.c' l='788' u='r' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='850' u='w' c='relocate_section'/>
+<use f='tcc/tccelf.c' l='960' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1031' u='r' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1341' u='r' c='fill_got'/>
+<use f='tcc/tccelf.c' l='1396' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1432' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1458' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1477' u='r' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='1504' u='r' c='export_global_syms'/>
+<use f='tcc/tccelf.c' l='1965' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1966' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2100' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2105' u='w' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2460' u='w' c='tcc_load_object_file'/>
+<use f='tcc/tccrun.c' l='446' u='r' c='rt_printline'/>

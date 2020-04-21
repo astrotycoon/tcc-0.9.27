@@ -1,0 +1,23 @@
+<dec f='tcc/tcc.h' l='521' type='struct Section *'/>
+<offset>768</offset>
+<doc f='tcc/tcc.h' l='521'>/* corresponding section for relocation, if any */</doc>
+<use f='tcc/tccelf.c' l='148' u='w' c='tccelf_begin_file'/>
+<use f='tcc/tccelf.c' l='165' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='165' u='w' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='584' u='r' c='put_elf_reloca'/>
+<use f='tcc/tccelf.c' l='594' u='w' c='put_elf_reloca'/>
+<use f='tcc/tccelf.c' l='618' u='r' c='squeeze_multi_relocs'/>
+<use f='tcc/tccelf.c' l='827' u='r' c='relocate_section'/>
+<use f='tcc/tccelf.c' l='1362' u='r' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1362' u='r' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1362' u='r' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1840' u='r' c='final_sections_reloc'/>
+<use f='tcc/tccelf.c' l='2464' u='w' c='tcc_load_object_file'/>
+<use f='tcc/tccgen.c' l='6496' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6501' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6502' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6502' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='7031' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7032' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7034' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccrun.c' l='248' u='r' c='tcc_relocate_ex'/>

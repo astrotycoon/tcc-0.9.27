@@ -1,0 +1,21 @@
+<dec f='include/string.h' l='60' type='void * memset(void * __s, int __c, size_t __n)'/>
+<use f='tcc/i386-asm.c' l='653' u='c' c='maybe_print_stats'/>
+<doc f='include/string.h' l='59'>/* Set N bytes of S to C.  */</doc>
+<use f='tcc/libtcc.c' l='224' u='c' c='tcc_mallocz'/>
+<use f='tcc/tcctools.c' l='232' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tccasm.c' l='501' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='1162' u='c' c='asm_instr'/>
+<use f='tcc/tccelf.c' l='252' u='c' c='new_symtab'/>
+<use f='tcc/tccelf.c' l='268' u='c' c='section_realloc'/>
+<use f='tcc/tccelf.c' l='370' u='c' c='rebuild_hash'/>
+<use f='tcc/tccelf.c' l='702' u='c' c='get_sym_attr'/>
+<use f='tcc/tccelf.c' l='1871' u='c' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1957' u='c' c='tcc_output_elf'/>
+<use f='tcc/tccgen.c' l='506' u='c' c='sym_push2'/>
+<use f='tcc/tccgen.c' l='3771' u='c' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='4007' u='c' c='parse_btype'/>
+<use f='tcc/tccgen.c' l='4689' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4708' u='c' c='unary'/>
+<use f='tcc/tccpp.c' l='374' u='c' c='cstr_new'/>
+<use f='tcc/tccpp.c' l='3659' u='c' c='tccpp_new'/>
+<use f='tcc/tccrun.c' l='262' u='c' c='tcc_relocate_ex'/>

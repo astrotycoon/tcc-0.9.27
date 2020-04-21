@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='723' type='char **'/>
+<offset>1600</offset>
+<use f='tcc/libtcc.c' l='916' u='a' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='1000' u='a' c='tcc_add_sysinclude_path'/>
+<use f='tcc/tcc.c' l='183' u='r' c='print_search_dirs'/>
+<use f='tcc/tccpp.c' l='1829' u='r' c='preprocess'/>

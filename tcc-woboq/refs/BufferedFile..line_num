@@ -1,0 +1,42 @@
+<dec f='tcc/tcc.h' l='572' type='int'/>
+<offset>256</offset>
+<doc f='tcc/tcc.h' l='572'>/* current line number - here to simplify code */</doc>
+<use f='tcc/libtcc.c' l='495' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='498' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='589' u='w' c='tcc_open_bf'/>
+<use f='tcc/libtcc.c' l='602' u='r' c='tcc_close'/>
+<use f='tcc/tccgen.c' l='198' u='r' c='tcc_debug_line'/>
+<use f='tcc/tccgen.c' l='199' u='r' c='tcc_debug_line'/>
+<use f='tcc/tccgen.c' l='201' u='r' c='tcc_debug_line'/>
+<use f='tcc/tccgen.c' l='217' u='r' c='tcc_debug_funcstart'/>
+<use f='tcc/tccgen.c' l='220' u='r' c='tcc_debug_funcstart'/>
+<use f='tcc/tccgen.c' l='7102' u='r' c='gen_inline_functions'/>
+<use f='tcc/tccgen.c' l='7127' u='w' c='gen_inline_functions'/>
+<use f='tcc/tccpp.c' l='634' u='w' c='handle_stray_noerror'/>
+<use f='tcc/tccpp.c' l='640' u='w' c='handle_stray_noerror'/>
+<use f='tcc/tccpp.c' l='731' u='w' c='parse_line_comment'/>
+<use f='tcc/tccpp.c' l='736' u='w' c='parse_line_comment'/>
+<use f='tcc/tccpp.c' l='770' u='w' c='parse_comment'/>
+<use f='tcc/tccpp.c' l='791' u='w' c='parse_comment'/>
+<use f='tcc/tccpp.c' l='796' u='w' c='parse_comment'/>
+<use f='tcc/tccpp.c' l='874' u='w' c='parse_pp_string'/>
+<use f='tcc/tccpp.c' l='880' u='w' c='parse_pp_string'/>
+<use f='tcc/tccpp.c' l='893' u='w' c='parse_pp_string'/>
+<use f='tcc/tccpp.c' l='901' u='w' c='parse_pp_string'/>
+<use f='tcc/tccpp.c' l='939' u='w' c='preprocess_skip'/>
+<use f='tcc/tccpp.c' l='1111' u='r' c='begin_macro'/>
+<use f='tcc/tccpp.c' l='1121' u='w' c='end_macro'/>
+<use f='tcc/tccpp.c' l='1208' u='r' c='tok_str_add_tok'/>
+<use f='tcc/tccpp.c' l='1209' u='r' c='tok_str_add_tok'/>
+<use f='tcc/tccpp.c' l='1964' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1965' u='w' c='preprocess'/>
+<use f='tcc/tccpp.c' l='2639' u='w' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2980' u='w' c='next_nomacro_spc'/>
+<use f='tcc/tccpp.c' l='3262' u='w' c='next_argstream'/>
+<use f='tcc/tccpp.c' l='3298' u='r' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3730' u='r' c='pp_line'/>
+<use f='tcc/tccpp.c' l='3741' u='r' c='pp_line'/>
+<use f='tcc/tccpp.c' l='3743' u='r' c='pp_line'/>
+<use f='tcc/tccpp.c' l='3746' u='r' c='pp_line'/>
+<use f='tcc/tccpp.c' l='3785' u='w' c='pp_debug_defines'/>
+<use f='tcc/tccpp.c' l='3787' u='w' c='pp_debug_defines'/>

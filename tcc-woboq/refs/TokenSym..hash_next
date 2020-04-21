@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='395' type='struct TokenSym *'/>
+<offset>0</offset>
+<use f='tcc/tccpp.c' l='436' u='w' c='tok_alloc_new'/>
+<use f='tcc/tccpp.c' l='466' u='a' c='tok_alloc'/>
+<use f='tcc/tccpp.c' l='2713' u='a' c='next_nomacro1'/>

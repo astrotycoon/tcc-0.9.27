@@ -1,0 +1,9 @@
+<def f='tcc/tcc.h' l='1267' ll='1269' type='int is_space(int ch)'/>
+<doc f='tcc/tcc.h' l='1266'>/* space excluding newline */</doc>
+<use f='tcc/tccpp.c' l='3144' u='c' c='paste_tokens'/>
+<use f='tcc/tccpp.c' l='3230' u='c' c='next_argstream'/>
+<use f='tcc/tccpp.c' l='3246' u='c' c='next_argstream'/>
+<use f='tcc/tccpp.c' l='3373' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3506' u='c' c='macro_subst'/>
+<use f='tcc/tccpp.c' l='3646' u='c' c='tccpp_new'/>
+<use f='tcc/tccpp.c' l='3881' u='c' c='tcc_preprocess'/>

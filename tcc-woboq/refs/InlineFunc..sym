@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='604' type='Sym *'/>
+<offset>64</offset>
+<use f='tcc/tccgen.c' l='7108' u='r' c='gen_inline_functions'/>
+<use f='tcc/tccgen.c' l='7112' u='w' c='gen_inline_functions'/>
+<use f='tcc/tccgen.c' l='7136' u='r' c='free_inline_functions'/>
+<use f='tcc/tccgen.c' l='7275' u='w' c='decl0'/>

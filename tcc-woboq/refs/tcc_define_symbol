@@ -1,0 +1,28 @@
+<dec f='tcc/libtcc.h' l='42' type='void tcc_define_symbol(TCCState * s, const char * sym, const char * value)'/>
+<doc f='tcc/libtcc.h' l='41'>/* define preprocessor symbol &apos;sym&apos;. Can put optional value */</doc>
+<def f='tcc/libtcc.c' l='683' ll='702' type='void tcc_define_symbol(TCCState * s1, const char * sym, const char * value)'/>
+<use f='tcc/libtcc.c' l='778' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='782' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='783' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='784' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='792' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='824' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='825' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='826' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='828' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='829' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='860' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='861' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='862' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='869' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='884' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='886' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='888' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='897' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='950' u='c' c='tcc_set_output_type'/>
+<use f='tcc/libtcc.c' l='963' u='c' c='tcc_set_output_type'/>
+<use f='tcc/libtcc.c' l='1597' u='c' c='parse_option_D'/>
+<use f='tcc/libtcc.c' l='1946' u='c' c='tcc_parse_args'/>
+<doc f='tcc/libtcc.c' l='682'>/* define a preprocessor symbol. A value can also be provided with the &apos;=&apos; operator */</doc>
+<use f='tcc/tccpp.c' l='3604' u='c' c='preprocess_start'/>
+<use f='tcc/tccpp.c' l='3620' u='c' c='preprocess_start'/>

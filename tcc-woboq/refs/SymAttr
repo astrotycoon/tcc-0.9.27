@@ -1,0 +1,12 @@
+<def f='tcc/tcc.h' l='448' ll='457'/>
+<use f='tcc/tcc.h' l='469'/>
+<use f='tcc/tcc.h' l='481'/>
+<size>2</size>
+<doc f='tcc/tcc.h' l='447'>/* symbol attributes */</doc>
+<mbr r='SymAttr::aligned' o='0' t='unsigned short'/>
+<mbr r='SymAttr::packed' o='5' t='unsigned short'/>
+<mbr r='SymAttr::weak' o='6' t='unsigned short'/>
+<mbr r='SymAttr::visibility' o='7' t='unsigned short'/>
+<mbr r='SymAttr::dllexport' o='9' t='unsigned short'/>
+<mbr r='SymAttr::dllimport' o='10' t='unsigned short'/>
+<mbr r='SymAttr::unused' o='11' t='unsigned short'/>

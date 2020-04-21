@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='321'/>
+<use f='tcc/x86_64-gen.c' l='23' u='a'/>
+<use f='tcc/x86_64-link.c' l='1' u='a'/>
+<use f='tcc/tcc.h' l='351' u='w'/>
+<doc f='tcc/tcc.h' l='319'>/* include the target specific definitions */</doc>

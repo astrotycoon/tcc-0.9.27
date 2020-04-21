@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1184' type='int tcc_parse_args(TCCState * s, int * argc, char *** argv, int optind)'/>
+<def f='tcc/libtcc.c' l='1671' ll='1962' type='int tcc_parse_args(TCCState * s, int * pargc, char *** pargv, int optind)'/>
+<use f='tcc/libtcc.c' l='1969' u='c' c='tcc_set_options'/>
+<use f='tcc/tcc.c' l='258' u='c' c='main'/>

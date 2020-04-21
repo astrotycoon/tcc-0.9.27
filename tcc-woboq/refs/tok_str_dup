@@ -1,0 +1,2 @@
+<def f='tcc/tccpp.c' l='1057' ll='1064' type='int * tok_str_dup(TokenString * s)'/>
+<use f='tcc/tccpp.c' l='1557' u='c' c='parse_define'/>

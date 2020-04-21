@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1143' type='void cstr_wccat(CString * cstr, int ch)'/>
+<def f='tcc/tccpp.c' l='362' ll='370' type='void cstr_wccat(CString * cstr, int ch)'/>
+<use f='tcc/tccpp.c' l='2176' u='c' c='parse_escape_string'/>
+<use f='tcc/tccpp.c' l='2184' u='c' c='parse_escape_string'/>
+<doc f='tcc/tccpp.c' l='361'>/* add a wide char */</doc>

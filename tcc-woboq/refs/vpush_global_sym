@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='1329' type='void vpush_global_sym(CType * type, int v)'/>
+<def f='tcc/tccgen.c' l='948' ll='951' type='void vpush_global_sym(CType * type, int v)'/>
+<use f='tcc/tccgen.c' l='2368' u='c' c='gen_cvt_itof1'/>
+<use f='tcc/tccgen.c' l='2371' u='c' c='gen_cvt_itof1'/>
+<use f='tcc/tccgen.c' l='2374' u='c' c='gen_cvt_itof1'/>
+<use f='tcc/tccgen.c' l='2398' u='c' c='gen_cvt_ftoi1'/>
+<use f='tcc/tccgen.c' l='2401' u='c' c='gen_cvt_ftoi1'/>
+<use f='tcc/tccgen.c' l='2404' u='c' c='gen_cvt_ftoi1'/>
+<use f='tcc/tccgen.c' l='3111' u='c' c='vstore'/>
+<use f='tcc/tccgen.c' l='6310' u='c' c='init_putz'/>
+<doc f='tcc/tccgen.c' l='947'>/* push a reference to global symbol v */</doc>

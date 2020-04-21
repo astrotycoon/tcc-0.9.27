@@ -1,0 +1,10 @@
+<def f='tcc/tcc.h' l='1273' ll='1275' type='int isnum(int c)'/>
+<use f='tcc/i386-asm.c' l='1251' u='c' c='asm_compute_constraints'/>
+<use f='tcc/libtcc.c' l='1790' u='c' c='tcc_parse_args'/>
+<use f='tcc/tccasm.c' l='1012' u='c' c='find_constraint'/>
+<use f='tcc/tccasm.c' l='1014' u='c' c='find_constraint'/>
+<use f='tcc/tccelf.c' l='1253' u='c' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccpp.c' l='2058' u='c' c='parse_escape_string'/>
+<use f='tcc/tccpp.c' l='2294' u='c' c='parse_number'/>
+<use f='tcc/tccpp.c' l='2785' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3648' u='c' c='tccpp_new'/>

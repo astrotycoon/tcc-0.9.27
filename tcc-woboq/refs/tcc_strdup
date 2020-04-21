@@ -1,0 +1,18 @@
+<dec f='tcc/tcc.h' l='1114' type='char * tcc_strdup(const char * str)'/>
+<def f='tcc/libtcc.c' l='237' ll='243' type='char * tcc_strdup(const char * str)'/>
+<use f='tcc/libtcc.c' l='459' u='c' c='tcc_split_path'/>
+<use f='tcc/libtcc.c' l='1018' u='c' c='tcc_add_file_internal'/>
+<use f='tcc/libtcc.c' l='1193' u='c' c='tcc_set_lib_path'/>
+<use f='tcc/libtcc.c' l='1593' u='c' c='parse_option_D'/>
+<use f='tcc/libtcc.c' l='1635' u='c' c='args_parser_make_argv'/>
+<use f='tcc/libtcc.c' l='1664' u='c' c='args_parser_listfile'/>
+<use f='tcc/libtcc.c' l='1806' u='c' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1813' u='c' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1825' u='c' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1899' u='c' c='tcc_parse_args'/>
+<use f='tcc/tcc.c' l='232' u='c' c='default_outputfile'/>
+<use f='tcc/tccelf.c' l='2993' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccelf.c' l='2995' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccpp.c' l='1691' u='c' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1854' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1955' u='c' c='preprocess'/>

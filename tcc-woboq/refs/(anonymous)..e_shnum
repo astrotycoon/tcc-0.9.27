@@ -1,0 +1,15 @@
+<dec f='tcc/elf.h' l='91' type='Elf32_Half'/>
+<dec f='tcc/elf.h' l='109' type='Elf64_Half'/>
+<offset>480</offset>
+<doc f='tcc/elf.h' l='91'>/* Section header table entry count */</doc>
+<doc f='tcc/elf.h' l='109'>/* Section header table entry count */</doc>
+<use f='tcc/tcctools.c' l='179' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tccelf.c' l='1927' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2314' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2315' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2327' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2350' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2454' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2506' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2712' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2720' u='r' c='tcc_load_dll'/>

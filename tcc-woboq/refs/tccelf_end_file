@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1404' type='void tccelf_end_file(TCCState * s1)'/>
+<use f='tcc/libtcc.c' l='666' u='c' c='tcc_compile'/>
+<def f='tcc/tccelf.c' l='156' ll='190' type='void tccelf_end_file(TCCState * s1)'/>
+<doc f='tcc/tccelf.c' l='154'>/* At the end of compilation, convert any UNDEF syms to global, and merge
+   with previously existing symbols */</doc>

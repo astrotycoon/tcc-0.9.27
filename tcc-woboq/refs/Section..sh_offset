@@ -1,0 +1,15 @@
+<dec f='tcc/tcc.h' l='518' type='unsigned long'/>
+<offset>576</offset>
+<doc f='tcc/tcc.h' l='518'>/* file offset */</doc>
+<use f='tcc/tccelf.c' l='145' u='w' c='tccelf_begin_file'/>
+<use f='tcc/tccelf.c' l='161' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='163' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='164' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='180' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='1301' u='r' c='tcc_output_binary'/>
+<use f='tcc/tccelf.c' l='1667' u='w' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1733' u='w' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1760' u='r' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1774' u='r' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1938' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1969' u='r' c='tcc_output_elf'/>

@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1919'/>
+<doc f='tcc/elf.h' l='1917'>/* Legal values for p_type field of Elf32_Phdr/Elf64_Phdr.  */</doc>

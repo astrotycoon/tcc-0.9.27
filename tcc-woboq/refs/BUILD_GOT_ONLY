@@ -1,0 +1,3 @@
+<dec f='tcc/tcc.h' l='1467' type='1'/>
+<doc f='tcc/tcc.h' l='1467'>/* only build GOT (eg. TPOFF relocs) */</doc>
+<use f='tcc/tccelf.c' l='1098' u='r' c='build_got_entries'/>

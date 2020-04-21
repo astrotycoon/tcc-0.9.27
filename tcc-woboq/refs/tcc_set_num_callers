@@ -1,0 +1,3 @@
+<dec f='tcc/tcc.h' l='1651' type='void tcc_set_num_callers(int n)'/>
+<use f='tcc/libtcc.c' l='1764' u='c' c='tcc_parse_args'/>
+<def f='tcc/tccrun.c' l='331' ll='334' type='void tcc_set_num_callers(int n)'/>

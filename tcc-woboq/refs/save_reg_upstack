@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='1339' type='void save_reg_upstack(int r, int n)'/>
+<use f='tcc/tccgen.c' l='964' u='c' c='save_reg'/>
+<def f='tcc/tccgen.c' l='969' ll='1034' type='void save_reg_upstack(int r, int n)'/>
+<use f='tcc/tccgen.c' l='1172' u='c' c='load_packed_bf'/>
+<use f='tcc/tccgen.c' l='1208' u='c' c='store_packed_bf'/>
+<use f='tcc/tccgen.c' l='1369' u='c' c='gv'/>
+<doc f='tcc/tccgen.c' l='967'>/* save r to the memory stack, and mark it as being free,
+   if seen up to (vtop - n) stack entry */</doc>

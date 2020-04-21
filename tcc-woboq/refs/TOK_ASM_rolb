@@ -1,0 +1,13 @@
+<dec f='tcc/i386-tok.h' l='130' macro='1' type='638'/>
+<use f='tcc/x86_64-asm.h' l='202' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='202' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='203' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='203' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='204' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='204' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='202' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='202' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='203' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='203' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='204' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='204' macro='1'/>

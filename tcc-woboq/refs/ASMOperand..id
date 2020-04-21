@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='628' type='int'/>
+<offset>0</offset>
+<doc f='tcc/tcc.h' l='628'>/* GCC 3 optional identifier (0 if number only supported */</doc>
+<use f='tcc/tccasm.c' l='1026' u='r' c='find_constraint'/>
+<use f='tcc/tccasm.c' l='1102' u='w' c='parse_asm_operands'/>
+<use f='tcc/tccasm.c' l='1107' u='w' c='parse_asm_operands'/>

@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1361' type='Sym * get_sym_ref(CType * type, Section * sec, unsigned long offset, unsigned long size)'/>
+<def f='tcc/tccgen.c' l='809' ll='820' type='Sym * get_sym_ref(CType * type, Section * sec, unsigned long offset, unsigned long size)'/>
+<use f='tcc/tccgen.c' l='825' u='c' c='vpush_ref'/>
+<use f='tcc/tccgen.c' l='6985' u='c' c='decl_initializer_alloc'/>
+<doc f='tcc/tccgen.c' l='808'>/* Return a static symbol pointing to a section */</doc>

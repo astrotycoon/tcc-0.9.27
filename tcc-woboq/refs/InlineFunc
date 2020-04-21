@@ -1,0 +1,12 @@
+<def f='tcc/tcc.h' l='602' ll='606'/>
+<use f='tcc/tcc.h' l='602'/>
+<use f='tcc/tcc.h' l='779'/>
+<size>24</size>
+<doc f='tcc/tcc.h' l='601'>/* inline functions */</doc>
+<mbr r='InlineFunc::func_str' o='0' t='TokenString *'/>
+<mbr r='InlineFunc::sym' o='64' t='Sym *'/>
+<mbr r='InlineFunc::filename' o='128' t='char [1]'/>
+<use f='tcc/tccgen.c' l='7100' c='gen_inline_functions'/>
+<use f='tcc/tccgen.c' l='7135' c='free_inline_functions'/>
+<use f='tcc/tccgen.c' l='7269' c='decl0'/>
+<size>24</size>

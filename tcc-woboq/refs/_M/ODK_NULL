@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1526'/>
+<doc f='tcc/elf.h' l='1524'>/* Values for `kind&apos; field in Elf_Options.  */</doc>

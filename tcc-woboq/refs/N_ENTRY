@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='136' type='164'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='135'>/* Alternate entry point.  Value is its address.  */</doc>

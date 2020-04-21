@@ -1,0 +1,5 @@
+<dec f='tcc/libtcc.h' l='78' type='int tcc_output_file(TCCState * s, const char * filename)'/>
+<doc f='tcc/libtcc.h' l='76'>/* output an executable, library or object file. DO NOT call
+   tcc_relocate() before. */</doc>
+<use f='tcc/tcc.c' l='354' u='c' c='main'/>
+<def f='tcc/tccelf.c' l='2233' ll='2243' type='int tcc_output_file(TCCState * s, const char * filename)'/>

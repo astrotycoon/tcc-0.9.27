@@ -1,0 +1,17 @@
+<dec f='tcc/tcc.h' l='1327' type='void vset(CType * type, int r, int v)'/>
+<use f='tcc/tccgen.c' l='698' u='c' c='vpush'/>
+<def f='tcc/tccgen.c' l='734' ll='740' type='void vset(CType * type, int r, int v)'/>
+<use f='tcc/tccgen.c' l='747' u='c' c='vseti'/>
+<use f='tcc/tccgen.c' l='2729' u='c' c='vla_runtime_type_size'/>
+<use f='tcc/tccgen.c' l='4377' u='c' c='post_type'/>
+<use f='tcc/tccgen.c' l='4877' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5096' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5270' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5278' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5756' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='5771' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='5775' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='6415' u='c' c='decl_designator'/>
+<use f='tcc/tccgen.c' l='6417' u='c' c='decl_designator'/>
+<use f='tcc/tccgen.c' l='6623' u='c' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6938' u='c' c='decl_initializer_alloc'/>

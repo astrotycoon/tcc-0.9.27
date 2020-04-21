@@ -1,0 +1,101 @@
+<use f='tcc/libtcc.h' l='14'/>
+<def f='tcc/tcc.h' l='653' ll='836'/>
+<use f='tcc/tcc.h' l='1100'/>
+<size>1456</size>
+<mbr r='TCCState::verbose' o='0' t='int'/>
+<mbr r='TCCState::nostdinc' o='32' t='int'/>
+<mbr r='TCCState::nostdlib' o='64' t='int'/>
+<mbr r='TCCState::nocommon' o='96' t='int'/>
+<mbr r='TCCState::static_link' o='128' t='int'/>
+<mbr r='TCCState::rdynamic' o='160' t='int'/>
+<mbr r='TCCState::symbolic' o='192' t='int'/>
+<mbr r='TCCState::alacarte_link' o='224' t='int'/>
+<mbr r='TCCState::tcc_lib_path' o='256' t='char *'/>
+<mbr r='TCCState::soname' o='320' t='char *'/>
+<mbr r='TCCState::rpath' o='384' t='char *'/>
+<mbr r='TCCState::enable_new_dtags' o='448' t='int'/>
+<mbr r='TCCState::output_type' o='480' t='int'/>
+<mbr r='TCCState::output_format' o='512' t='int'/>
+<mbr r='TCCState::char_is_unsigned' o='544' t='int'/>
+<mbr r='TCCState::leading_underscore' o='576' t='int'/>
+<mbr r='TCCState::ms_extensions' o='608' t='int'/>
+<mbr r='TCCState::dollars_in_identifiers' o='640' t='int'/>
+<mbr r='TCCState::ms_bitfields' o='672' t='int'/>
+<mbr r='TCCState::warn_write_strings' o='704' t='int'/>
+<mbr r='TCCState::warn_unsupported' o='736' t='int'/>
+<mbr r='TCCState::warn_error' o='768' t='int'/>
+<mbr r='TCCState::warn_none' o='800' t='int'/>
+<mbr r='TCCState::warn_implicit_function_declaration' o='832' t='int'/>
+<mbr r='TCCState::warn_gcc_compat' o='864' t='int'/>
+<mbr r='TCCState::do_debug' o='896' t='int'/>
+<mbr r='TCCState::do_bounds_check' o='928' t='int'/>
+<mbr r='TCCState::run_test' o='960' t='int'/>
+<mbr r='TCCState::text_addr' o='1024' t='Elf64_Addr'/>
+<mbr r='TCCState::has_text_addr' o='1088' t='int'/>
+<mbr r='TCCState::section_align' o='1120' t='unsigned int'/>
+<mbr r='TCCState::init_symbol' o='1152' t='char *'/>
+<mbr r='TCCState::fini_symbol' o='1216' t='char *'/>
+<mbr r='TCCState::nosse' o='1280' t='int'/>
+<mbr r='TCCState::loaded_dlls' o='1344' t='DLLReference **'/>
+<mbr r='TCCState::nb_loaded_dlls' o='1408' t='int'/>
+<mbr r='TCCState::include_paths' o='1472' t='char **'/>
+<mbr r='TCCState::nb_include_paths' o='1536' t='int'/>
+<mbr r='TCCState::sysinclude_paths' o='1600' t='char **'/>
+<mbr r='TCCState::nb_sysinclude_paths' o='1664' t='int'/>
+<mbr r='TCCState::library_paths' o='1728' t='char **'/>
+<mbr r='TCCState::nb_library_paths' o='1792' t='int'/>
+<mbr r='TCCState::crt_paths' o='1856' t='char **'/>
+<mbr r='TCCState::nb_crt_paths' o='1920' t='int'/>
+<mbr r='TCCState::cmd_include_files' o='1984' t='char **'/>
+<mbr r='TCCState::nb_cmd_include_files' o='2048' t='int'/>
+<mbr r='TCCState::error_opaque' o='2112' t='void *'/>
+<mbr r='TCCState::error_func' o='2176' t='void (*)(void *, const char *)'/>
+<mbr r='TCCState::error_set_jmp_enabled' o='2240' t='int'/>
+<mbr r='TCCState::error_jmp_buf' o='2304' t='jmp_buf'/>
+<mbr r='TCCState::nb_errors' o='3904' t='int'/>
+<mbr r='TCCState::ppfp' o='3968' t='FILE *'/>
+<mbr r='TCCState::Pflag' o='4032' t='enum (anonymous enum at /tmp/tcc-0.9.27/tcc-0.9.27/./tcc.h:747:5)'/>
+<mbr r='TCCState::dflag' o='4064' t='char'/>
+<mbr r='TCCState::target_deps' o='4096' t='char **'/>
+<mbr r='TCCState::nb_target_deps' o='4160' t='int'/>
+<mbr r='TCCState::include_stack' o='4224' t='BufferedFile *[32]'/>
+<mbr r='TCCState::include_stack_ptr' o='6272' t='BufferedFile **'/>
+<mbr r='TCCState::ifdef_stack' o='6336' t='int [64]'/>
+<mbr r='TCCState::ifdef_stack_ptr' o='8384' t='int *'/>
+<mbr r='TCCState::cached_includes_hash' o='8448' t='int [32]'/>
+<mbr r='TCCState::cached_includes' o='9472' t='CachedInclude **'/>
+<mbr r='TCCState::nb_cached_includes' o='9536' t='int'/>
+<mbr r='TCCState::pack_stack' o='9568' t='int [8]'/>
+<mbr r='TCCState::pack_stack_ptr' o='9856' t='int *'/>
+<mbr r='TCCState::pragma_libs' o='9920' t='char **'/>
+<mbr r='TCCState::nb_pragma_libs' o='9984' t='int'/>
+<mbr r='TCCState::inline_fns' o='10048' t='struct InlineFunc **'/>
+<mbr r='TCCState::nb_inline_fns' o='10112' t='int'/>
+<mbr r='TCCState::sections' o='10176' t='Section **'/>
+<mbr r='TCCState::nb_sections' o='10240' t='int'/>
+<mbr r='TCCState::priv_sections' o='10304' t='Section **'/>
+<mbr r='TCCState::nb_priv_sections' o='10368' t='int'/>
+<mbr r='TCCState::got' o='10432' t='Section *'/>
+<mbr r='TCCState::plt' o='10496' t='Section *'/>
+<mbr r='TCCState::dynsymtab_section' o='10560' t='Section *'/>
+<mbr r='TCCState::dynsym' o='10624' t='Section *'/>
+<mbr r='TCCState::symtab' o='10688' t='Section *'/>
+<mbr r='TCCState::sym_attrs' o='10752' t='struct sym_attr *'/>
+<mbr r='TCCState::nb_sym_attrs' o='10816' t='int'/>
+<mbr r='TCCState::runtime_main' o='10880' t='const char *'/>
+<mbr r='TCCState::runtime_mem' o='10944' t='void **'/>
+<mbr r='TCCState::nb_runtime_mem' o='11008' t='int'/>
+<mbr r='TCCState::files' o='11072' t='struct filespec **'/>
+<mbr r='TCCState::nb_files' o='11136' t='int'/>
+<mbr r='TCCState::nb_libraries' o='11168' t='int'/>
+<mbr r='TCCState::filetype' o='11200' t='int'/>
+<mbr r='TCCState::outfile' o='11264' t='char *'/>
+<mbr r='TCCState::option_r' o='11328' t='int'/>
+<mbr r='TCCState::do_bench' o='11360' t='int'/>
+<mbr r='TCCState::gen_deps' o='11392' t='int'/>
+<mbr r='TCCState::deps_outfile' o='11456' t='char *'/>
+<mbr r='TCCState::option_pthread' o='11520' t='int'/>
+<mbr r='TCCState::argc' o='11552' t='int'/>
+<mbr r='TCCState::argv' o='11584' t='char **'/>
+<use f='tcc/libtcc.c' l='33'/>
+<size>1456</size>

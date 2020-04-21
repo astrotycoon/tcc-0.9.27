@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='1556' type='void gen_opl(int op)'/>
+<use f='tcc/tccgen.c' l='2006' u='c' c='gen_opic'/>

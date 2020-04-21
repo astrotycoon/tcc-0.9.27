@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/sys/ucontext.h' l='84' type='16'/>
+<use f='tcc/tccrun.c' l='634' macro='1' u='r' c='rt_get_caller_pc'/>

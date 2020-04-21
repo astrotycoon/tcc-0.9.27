@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='767' type='int [32]'/>
+<offset>8448</offset>
+<doc f='tcc/tcc.h' l='766'>/* included files enclosed with #ifndef MACRO */</doc>
+<use f='tcc/tccpp.c' l='1579' u='r' c='search_cached_include'/>
+<use f='tcc/tccpp.c' l='1596' u='r' c='search_cached_include'/>
+<use f='tcc/tccpp.c' l='1597' u='w' c='search_cached_include'/>

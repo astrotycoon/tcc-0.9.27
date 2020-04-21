@@ -1,0 +1,3 @@
+<dec f='tcc/tcctok.h' l='29' type='282'/>
+<doc f='tcc/tcctok.h' l='29'>/* gcc keyword */</doc>
+<use f='tcc/tccgen.c' l='4113' c='parse_btype'/>

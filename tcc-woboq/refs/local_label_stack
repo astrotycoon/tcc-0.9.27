@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1292' type='Sym *'/>
+<def f='tcc/tccgen.c' l='41' type='Sym *'/>
+<use f='tcc/tccgen.c' l='5947' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='5956' u='a' c='block'/>
+<use f='tcc/tccgen.c' l='5978' u='a' c='block'/>

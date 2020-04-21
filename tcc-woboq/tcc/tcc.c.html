@@ -1,0 +1,390 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>tcc.c source code [tcc/tcc.c] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="main "/>
+<link rel="stylesheet" href="../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tcc/tcc.c'; var root_path = '..'; var data_path = '../../data'; var ecma_script_api_version = 2;</script>
+<script src='../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>tcc</a>/<a href='tcc.c.html'>tcc.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> *  TCC - Tiny C Compiler</i></td></tr>
+<tr><th id="3">3</th><td><i> * </i></td></tr>
+<tr><th id="4">4</th><td><i> *  Copyright (c) 2001-2004 Fabrice Bellard</i></td></tr>
+<tr><th id="5">5</th><td><i> *</i></td></tr>
+<tr><th id="6">6</th><td><i> * This library is free software; you can redistribute it and/or</i></td></tr>
+<tr><th id="7">7</th><td><i> * modify it under the terms of the GNU Lesser General Public</i></td></tr>
+<tr><th id="8">8</th><td><i> * License as published by the Free Software Foundation; either</i></td></tr>
+<tr><th id="9">9</th><td><i> * version 2 of the License, or (at your option) any later version.</i></td></tr>
+<tr><th id="10">10</th><td><i> *</i></td></tr>
+<tr><th id="11">11</th><td><i> * This library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="12">12</th><td><i> * but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="13">13</th><td><i> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</i></td></tr>
+<tr><th id="14">14</th><td><i> * Lesser General Public License for more details.</i></td></tr>
+<tr><th id="15">15</th><td><i> *</i></td></tr>
+<tr><th id="16">16</th><td><i> * You should have received a copy of the GNU Lesser General Public</i></td></tr>
+<tr><th id="17">17</th><td><i> * License along with this library; if not, write to the Free Software</i></td></tr>
+<tr><th id="18">18</th><td><i> * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA</i></td></tr>
+<tr><th id="19">19</th><td><i> */</i></td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td><u>#include <a href="tcc.h.html">"tcc.h"</a></u></td></tr>
+<tr><th id="22">22</th><td><u>#<span data-ppcond="22">if</span> <span class="macro" title="0" data-ref="_M/ONE_SOURCE">ONE_SOURCE</span></u></td></tr>
+<tr><th id="23">23</th><td><u># include "libtcc.c"</u></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="22">endif</span></u></td></tr>
+<tr><th id="25">25</th><td><u>#include <a href="tcctools.c.html">"tcctools.c"</a></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><em>static</em> <em>const</em> <em>char</em> <dfn class="tu decl def" id="help" title='help' data-type='const char [1847]' data-ref="help" data-ref-filename="help">help</dfn>[] =</td></tr>
+<tr><th id="28">28</th><td>    <q>"Tiny C Compiler "</q><a class="macro" href="config.h.html#5" title="&quot;0.9.27&quot;" data-ref="_M/TCC_VERSION">TCC_VERSION</a><q>" - Copyright (C) 2001-2006 Fabrice Bellard\n"</q></td></tr>
+<tr><th id="29">29</th><td>    <q>"Usage: tcc [options...] [-o outfile] [-c] infile(s)...\n"</q></td></tr>
+<tr><th id="30">30</th><td>    <q>"       tcc [options...] -run infile [arguments...]\n"</q></td></tr>
+<tr><th id="31">31</th><td>    <q>"General options:\n"</q></td></tr>
+<tr><th id="32">32</th><td>    <q>"  -c          compile only - generate an object file\n"</q></td></tr>
+<tr><th id="33">33</th><td>    <q>"  -o outfile  set output filename\n"</q></td></tr>
+<tr><th id="34">34</th><td>    <q>"  -run        run compiled source\n"</q></td></tr>
+<tr><th id="35">35</th><td>    <q>"  -fflag      set or reset (with 'no-' prefix) 'flag' (see tcc -hh)\n"</q></td></tr>
+<tr><th id="36">36</th><td>    <q>"  -Wwarning   set or reset (with 'no-' prefix) 'warning' (see tcc -hh)\n"</q></td></tr>
+<tr><th id="37">37</th><td>    <q>"  -w          disable all warnings\n"</q></td></tr>
+<tr><th id="38">38</th><td>    <q>"  -v -vv      show version, show search paths or loaded files\n"</q></td></tr>
+<tr><th id="39">39</th><td>    <q>"  -h -hh      show this, show more help\n"</q></td></tr>
+<tr><th id="40">40</th><td>    <q>"  -bench      show compilation statistics\n"</q></td></tr>
+<tr><th id="41">41</th><td>    <q>"  -           use stdin pipe as infile\n"</q></td></tr>
+<tr><th id="42">42</th><td>    <q>"  @listfile   read arguments from listfile\n"</q></td></tr>
+<tr><th id="43">43</th><td>    <q>"Preprocessor options:\n"</q></td></tr>
+<tr><th id="44">44</th><td>    <q>"  -Idir       add include path 'dir'\n"</q></td></tr>
+<tr><th id="45">45</th><td>    <q>"  -Dsym[=val] define 'sym' with value 'val'\n"</q></td></tr>
+<tr><th id="46">46</th><td>    <q>"  -Usym       undefine 'sym'\n"</q></td></tr>
+<tr><th id="47">47</th><td>    <q>"  -E          preprocess only\n"</q></td></tr>
+<tr><th id="48">48</th><td>    <q>"Linker options:\n"</q></td></tr>
+<tr><th id="49">49</th><td>    <q>"  -Ldir       add library path 'dir'\n"</q></td></tr>
+<tr><th id="50">50</th><td>    <q>"  -llib       link with dynamic or static library 'lib'\n"</q></td></tr>
+<tr><th id="51">51</th><td>    <q>"  -r          generate (relocatable) object file\n"</q></td></tr>
+<tr><th id="52">52</th><td>    <q>"  -shared     generate a shared library/dll\n"</q></td></tr>
+<tr><th id="53">53</th><td>    <q>"  -rdynamic   export all global symbols to dynamic linker\n"</q></td></tr>
+<tr><th id="54">54</th><td>    <q>"  -soname     set name for shared library to be used at runtime\n"</q></td></tr>
+<tr><th id="55">55</th><td>    <q>"  -Wl,-opt[=val]  set linker option (see tcc -hh)\n"</q></td></tr>
+<tr><th id="56">56</th><td>    <q>"Debugger options:\n"</q></td></tr>
+<tr><th id="57">57</th><td>    <q>"  -g          generate runtime debug info\n"</q></td></tr>
+<tr><th id="58">58</th><td><u>#<span data-ppcond="58">ifdef</span> <a class="macro" href="tcc.h.html#176" data-ref="_M/CONFIG_TCC_BCHECK">CONFIG_TCC_BCHECK</a></u></td></tr>
+<tr><th id="59">59</th><td>    <q>"  -b          compile with built-in memory and bounds checker (implies -g)\n"</q></td></tr>
+<tr><th id="60">60</th><td><u>#<span data-ppcond="58">endif</span></u></td></tr>
+<tr><th id="61">61</th><td><u>#<span data-ppcond="61">ifdef</span> <a class="macro" href="tcc.h.html#173" data-ref="_M/CONFIG_TCC_BACKTRACE">CONFIG_TCC_BACKTRACE</a></u></td></tr>
+<tr><th id="62">62</th><td>    <q>"  -bt N       show N callers in stack traces\n"</q></td></tr>
+<tr><th id="63">63</th><td><u>#<span data-ppcond="61">endif</span></u></td></tr>
+<tr><th id="64">64</th><td>    <q>"Misc. options:\n"</q></td></tr>
+<tr><th id="65">65</th><td>    <q>"  -x[c|a|n]   specify type of the next infile\n"</q></td></tr>
+<tr><th id="66">66</th><td>    <q>"  -nostdinc   do not use standard system include paths\n"</q></td></tr>
+<tr><th id="67">67</th><td>    <q>"  -nostdlib   do not link with standard crt and libraries\n"</q></td></tr>
+<tr><th id="68">68</th><td>    <q>"  -Bdir       set tcc's private include/library dir\n"</q></td></tr>
+<tr><th id="69">69</th><td>    <q>"  -MD         generate dependency file for make\n"</q></td></tr>
+<tr><th id="70">70</th><td>    <q>"  -MF file    specify dependency file name\n"</q></td></tr>
+<tr><th id="71">71</th><td>    <q>"  -m32/64     defer to i386/x86_64 cross compiler\n"</q></td></tr>
+<tr><th id="72">72</th><td>    <q>"Tools:\n"</q></td></tr>
+<tr><th id="73">73</th><td>    <q>"  create library  : tcc -ar [rcsv] lib.a files\n"</q></td></tr>
+<tr><th id="74">74</th><td><u>#<span data-ppcond="74">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span></u></td></tr>
+<tr><th id="75">75</th><td>    <q>"  create def file : tcc -impdef lib.dll [-v] [-o lib.def]\n"</q></td></tr>
+<tr><th id="76">76</th><td><u>#<span data-ppcond="74">endif</span></u></td></tr>
+<tr><th id="77">77</th><td>    ;</td></tr>
+<tr><th id="78">78</th><td></td></tr>
+<tr><th id="79">79</th><td><em>static</em> <em>const</em> <em>char</em> <dfn class="tu decl def" id="help2" title='help2' data-type='const char [2420]' data-ref="help2" data-ref-filename="help2">help2</dfn>[] =</td></tr>
+<tr><th id="80">80</th><td>    <q>"Tiny C Compiler "</q><a class="macro" href="config.h.html#5" title="&quot;0.9.27&quot;" data-ref="_M/TCC_VERSION">TCC_VERSION</a><q>" - More Options\n"</q></td></tr>
+<tr><th id="81">81</th><td>    <q>"Special options:\n"</q></td></tr>
+<tr><th id="82">82</th><td>    <q>"  -P -P1                        with -E: no/alternative #line output\n"</q></td></tr>
+<tr><th id="83">83</th><td>    <q>"  -dD -dM                       with -E: output #define directives\n"</q></td></tr>
+<tr><th id="84">84</th><td>    <q>"  -pthread                      same as -D_REENTRANT and -lpthread\n"</q></td></tr>
+<tr><th id="85">85</th><td>    <q>"  -On                           same as -D__OPTIMIZE__ for n &gt; 0\n"</q></td></tr>
+<tr><th id="86">86</th><td>    <q>"  -Wp,-opt                      same as -opt\n"</q></td></tr>
+<tr><th id="87">87</th><td>    <q>"  -include file                 include 'file' above each input file\n"</q></td></tr>
+<tr><th id="88">88</th><td>    <q>"  -isystem dir                  add 'dir' to system include path\n"</q></td></tr>
+<tr><th id="89">89</th><td>    <q>"  -static                       link to static libraries (not recommended)\n"</q></td></tr>
+<tr><th id="90">90</th><td>    <q>"  -dumpversion                  print version\n"</q></td></tr>
+<tr><th id="91">91</th><td>    <q>"  -print-search-dirs            print search paths\n"</q></td></tr>
+<tr><th id="92">92</th><td>    <q>"  -dt                           with -run/-E: auto-define 'test_...' macros\n"</q></td></tr>
+<tr><th id="93">93</th><td>    <q>"Ignored options:\n"</q></td></tr>
+<tr><th id="94">94</th><td>    <q>"  --param  -pedantic  -pipe  -s  -std  -traditional\n"</q></td></tr>
+<tr><th id="95">95</th><td>    <q>"-W... warnings:\n"</q></td></tr>
+<tr><th id="96">96</th><td>    <q>"  all                           turn on some (*) warnings\n"</q></td></tr>
+<tr><th id="97">97</th><td>    <q>"  error                         stop after first warning\n"</q></td></tr>
+<tr><th id="98">98</th><td>    <q>"  unsupported                   warn about ignored options, pragmas, etc.\n"</q></td></tr>
+<tr><th id="99">99</th><td>    <q>"  write-strings                 strings are const\n"</q></td></tr>
+<tr><th id="100">100</th><td>    <q>"  implicit-function-declaration warn for missing prototype (*)\n"</q></td></tr>
+<tr><th id="101">101</th><td>    <q>"-f[no-]... flags:\n"</q></td></tr>
+<tr><th id="102">102</th><td>    <q>"  unsigned-char                 default char is unsigned\n"</q></td></tr>
+<tr><th id="103">103</th><td>    <q>"  signed-char                   default char is signed\n"</q></td></tr>
+<tr><th id="104">104</th><td>    <q>"  common                        use common section instead of bss\n"</q></td></tr>
+<tr><th id="105">105</th><td>    <q>"  leading-underscore            decorate extern symbols\n"</q></td></tr>
+<tr><th id="106">106</th><td>    <q>"  ms-extensions                 allow anonymous struct in struct\n"</q></td></tr>
+<tr><th id="107">107</th><td>    <q>"  dollars-in-identifiers        allow '$' in C symbols\n"</q></td></tr>
+<tr><th id="108">108</th><td>    <q>"-m... target specific options:\n"</q></td></tr>
+<tr><th id="109">109</th><td>    <q>"  ms-bitfields                  use MSVC bitfield layout\n"</q></td></tr>
+<tr><th id="110">110</th><td><u>#<span data-ppcond="110">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_ARM">TCC_TARGET_ARM</span></u></td></tr>
+<tr><th id="111">111</th><td>    <q>"  float-abi                     hard/softfp on arm\n"</q></td></tr>
+<tr><th id="112">112</th><td><u>#<span data-ppcond="110">endif</span></u></td></tr>
+<tr><th id="113">113</th><td><u>#<span data-ppcond="113">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="114">114</th><td>    <q>"  no-sse                        disable floats on x86_64\n"</q></td></tr>
+<tr><th id="115">115</th><td><u>#<span data-ppcond="113">endif</span></u></td></tr>
+<tr><th id="116">116</th><td>    <q>"-Wl,... linker options:\n"</q></td></tr>
+<tr><th id="117">117</th><td>    <q>"  -nostdlib                     do not link with standard crt/libs\n"</q></td></tr>
+<tr><th id="118">118</th><td>    <q>"  -[no-]whole-archive           load lib(s) fully/only as needed\n"</q></td></tr>
+<tr><th id="119">119</th><td>    <q>"  -export-all-symbols           same as -rdynamic\n"</q></td></tr>
+<tr><th id="120">120</th><td>    <q>"  -image-base= -Ttext=          set base address of executable\n"</q></td></tr>
+<tr><th id="121">121</th><td>    <q>"  -section-alignment=           set section alignment in executable\n"</q></td></tr>
+<tr><th id="122">122</th><td><u>#<span data-ppcond="122">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span></u></td></tr>
+<tr><th id="123">123</th><td>    <q>"  -file-alignment=              set PE file alignment\n"</q></td></tr>
+<tr><th id="124">124</th><td>    <q>"  -stack=                       set PE stack reserve\n"</q></td></tr>
+<tr><th id="125">125</th><td>    <q>"  -large-address-aware          set related PE option\n"</q></td></tr>
+<tr><th id="126">126</th><td>    <q>"  -subsystem=[console/windows]  set PE subsystem\n"</q></td></tr>
+<tr><th id="127">127</th><td>    <q>"  -oformat=[pe-* binary]        set executable output format\n"</q></td></tr>
+<tr><th id="128">128</th><td>    <q>"Predefined macros:\n"</q></td></tr>
+<tr><th id="129">129</th><td>    <q>"  tcc -E -dM - &lt; nul\n"</q></td></tr>
+<tr><th id="130">130</th><td><u>#<span data-ppcond="122">else</span></u></td></tr>
+<tr><th id="131">131</th><td>    <q>"  -rpath=                       set dynamic library search path\n"</q></td></tr>
+<tr><th id="132">132</th><td>    <q>"  -enable-new-dtags             set DT_RUNPATH instead of DT_RPATH\n"</q></td></tr>
+<tr><th id="133">133</th><td>    <q>"  -soname=                      set DT_SONAME elf tag\n"</q></td></tr>
+<tr><th id="134">134</th><td>    <q>"  -Bsymbolic                    set DT_SYMBOLIC elf tag\n"</q></td></tr>
+<tr><th id="135">135</th><td>    <q>"  -oformat=[elf32/64-* binary]  set executable output format\n"</q></td></tr>
+<tr><th id="136">136</th><td>    <q>"  -init= -fini= -as-needed -O   (ignored)\n"</q></td></tr>
+<tr><th id="137">137</th><td>    <q>"Predefined macros:\n"</q></td></tr>
+<tr><th id="138">138</th><td>    <q>"  tcc -E -dM - &lt; /dev/null\n"</q></td></tr>
+<tr><th id="139">139</th><td><u>#<span data-ppcond="122">endif</span></u></td></tr>
+<tr><th id="140">140</th><td>    <q>"See also the manual for more details.\n"</q></td></tr>
+<tr><th id="141">141</th><td>    ;</td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td><em>static</em> <em>const</em> <em>char</em> <dfn class="tu decl def" id="version" title='version' data-type='const char [35]' data-ref="version" data-ref-filename="version">version</dfn>[] =</td></tr>
+<tr><th id="144">144</th><td>    <q>"tcc version "</q><a class="macro" href="config.h.html#5" title="&quot;0.9.27&quot;" data-ref="_M/TCC_VERSION">TCC_VERSION</a><q>" ("</q></td></tr>
+<tr><th id="145">145</th><td><u>#<span data-ppcond="145">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_I386">TCC_TARGET_I386</span></u></td></tr>
+<tr><th id="146">146</th><td>        <q>"i386"</q></td></tr>
+<tr><th id="147">147</th><td><u>#<span data-ppcond="145">elif</span> defined <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="148">148</th><td>        <q>"x86_64"</q></td></tr>
+<tr><th id="149">149</th><td><u>#<span data-ppcond="145">elif</span> defined TCC_TARGET_C67</u></td></tr>
+<tr><th id="150">150</th><td>        <q>"C67"</q></td></tr>
+<tr><th id="151">151</th><td><u>#elif defined TCC_TARGET_ARM</u></td></tr>
+<tr><th id="152">152</th><td>        <q>"ARM"</q></td></tr>
+<tr><th id="153">153</th><td><u>#elif defined TCC_TARGET_ARM64</u></td></tr>
+<tr><th id="154">154</th><td>        <q>"AArch64"</q></td></tr>
+<tr><th id="155">155</th><td><u>#<span data-ppcond="145">endif</span></u></td></tr>
+<tr><th id="156">156</th><td><u>#<span data-ppcond="156">ifdef</span> <span class="macro" data-ref="_M/TCC_ARM_HARDFLOAT">TCC_ARM_HARDFLOAT</span></u></td></tr>
+<tr><th id="157">157</th><td>        <q>" Hard Float"</q></td></tr>
+<tr><th id="158">158</th><td><u>#<span data-ppcond="156">endif</span></u></td></tr>
+<tr><th id="159">159</th><td><u>#<span data-ppcond="159">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span></u></td></tr>
+<tr><th id="160">160</th><td>        <q>" Windows"</q></td></tr>
+<tr><th id="161">161</th><td><u>#<span data-ppcond="159">elif</span> defined(<span class="macro" data-ref="_M/TCC_TARGET_MACHO">TCC_TARGET_MACHO</span>)</u></td></tr>
+<tr><th id="162">162</th><td>        <q>" Darwin"</q></td></tr>
+<tr><th id="163">163</th><td><u>#<span data-ppcond="159">elif</span> defined(<span class="macro" data-ref="_M/__FreeBSD__">__FreeBSD__</span>) || defined(<span class="macro" data-ref="_M/__FreeBSD_kernel__">__FreeBSD_kernel__</span>)</u></td></tr>
+<tr><th id="164">164</th><td>        <q>" FreeBSD"</q></td></tr>
+<tr><th id="165">165</th><td><u>#<span data-ppcond="159">else</span></u></td></tr>
+<tr><th id="166">166</th><td>        <q>" Linux"</q></td></tr>
+<tr><th id="167">167</th><td><u>#<span data-ppcond="159">endif</span></u></td></tr>
+<tr><th id="168">168</th><td>    <q>")\n"</q></td></tr>
+<tr><th id="169">169</th><td>    ;</td></tr>
+<tr><th id="170">170</th><td></td></tr>
+<tr><th id="171">171</th><td><em>static</em> <em>void</em> <dfn class="tu decl def fn" id="print_dirs" title='print_dirs' data-type='void print_dirs(const char * msg, char ** paths, int nb_paths)' data-ref="print_dirs" data-ref-filename="print_dirs">print_dirs</dfn>(<em>const</em> <em>char</em> *<dfn class="local col6 decl" id="56msg" title='msg' data-type='const char *' data-ref="56msg" data-ref-filename="56msg">msg</dfn>, <em>char</em> **<dfn class="local col7 decl" id="57paths" title='paths' data-type='char **' data-ref="57paths" data-ref-filename="57paths">paths</dfn>, <em>int</em> <dfn class="local col8 decl" id="58nb_paths" title='nb_paths' data-type='int' data-ref="58nb_paths" data-ref-filename="58nb_paths">nb_paths</dfn>)</td></tr>
+<tr><th id="172">172</th><td>{</td></tr>
+<tr><th id="173">173</th><td>    <em>int</em> <dfn class="local col9 decl" id="59i" title='i' data-type='int' data-ref="59i" data-ref-filename="59i">i</dfn>;</td></tr>
+<tr><th id="174">174</th><td>    <a class="ref fn" href="../include/stdio.h.html#printf" title='printf' data-ref="printf" data-ref-filename="printf">printf</a>(<q>"%s:\n%s"</q>, <a class="local col6 ref" href="#56msg" title='msg' data-ref="56msg" data-ref-filename="56msg">msg</a>, <a class="local col8 ref" href="#58nb_paths" title='nb_paths' data-ref="58nb_paths" data-ref-filename="58nb_paths">nb_paths</a> ? <q>""</q> : <q>"  -\n"</q>);</td></tr>
+<tr><th id="175">175</th><td>    <b>for</b>(<a class="local col9 ref" href="#59i" title='i' data-ref="59i" data-ref-filename="59i">i</a> = <var>0</var>; <a class="local col9 ref" href="#59i" title='i' data-ref="59i" data-ref-filename="59i">i</a> &lt; <a class="local col8 ref" href="#58nb_paths" title='nb_paths' data-ref="58nb_paths" data-ref-filename="58nb_paths">nb_paths</a>; <a class="local col9 ref" href="#59i" title='i' data-ref="59i" data-ref-filename="59i">i</a>++)</td></tr>
+<tr><th id="176">176</th><td>        <a class="ref fn" href="../include/stdio.h.html#printf" title='printf' data-ref="printf" data-ref-filename="printf">printf</a>(<q>"  %s\n"</q>, <a class="local col7 ref" href="#57paths" title='paths' data-ref="57paths" data-ref-filename="57paths">paths</a>[<a class="local col9 ref" href="#59i" title='i' data-ref="59i" data-ref-filename="59i">i</a>]);</td></tr>
+<tr><th id="177">177</th><td>}</td></tr>
+<tr><th id="178">178</th><td></td></tr>
+<tr><th id="179">179</th><td><em>static</em> <em>void</em> <dfn class="tu decl def fn" id="print_search_dirs" title='print_search_dirs' data-type='void print_search_dirs(TCCState * s)' data-ref="print_search_dirs" data-ref-filename="print_search_dirs">print_search_dirs</dfn>(<a class="typedef" href="libtcc.h.html#TCCState" title='TCCState' data-type='struct TCCState' data-ref="TCCState" data-ref-filename="TCCState">TCCState</a> *<dfn class="local col0 decl" id="60s" title='s' data-type='TCCState *' data-ref="60s" data-ref-filename="60s">s</dfn>)</td></tr>
+<tr><th id="180">180</th><td>{</td></tr>
+<tr><th id="181">181</th><td>    <a class="ref fn" href="../include/stdio.h.html#printf" title='printf' data-ref="printf" data-ref-filename="printf">printf</a>(<q>"install: %s\n"</q>, <a class="local col0 ref" href="#60s" title='s' data-ref="60s" data-ref-filename="60s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::tcc_lib_path" title='TCCState::tcc_lib_path' data-ref="TCCState::tcc_lib_path" data-ref-filename="TCCState..tcc_lib_path">tcc_lib_path</a>);</td></tr>
+<tr><th id="182">182</th><td>    <i>/* print_dirs("programs", NULL, 0); */</i></td></tr>
+<tr><th id="183">183</th><td>    <a class="tu ref fn" href="#print_dirs" title='print_dirs' data-use='c' data-ref="print_dirs" data-ref-filename="print_dirs">print_dirs</a>(<q>"include"</q>, <a class="local col0 ref" href="#60s" title='s' data-ref="60s" data-ref-filename="60s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::sysinclude_paths" title='TCCState::sysinclude_paths' data-ref="TCCState::sysinclude_paths" data-ref-filename="TCCState..sysinclude_paths">sysinclude_paths</a>, <a class="local col0 ref" href="#60s" title='s' data-ref="60s" data-ref-filename="60s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_sysinclude_paths" title='TCCState::nb_sysinclude_paths' data-ref="TCCState::nb_sysinclude_paths" data-ref-filename="TCCState..nb_sysinclude_paths">nb_sysinclude_paths</a>);</td></tr>
+<tr><th id="184">184</th><td>    <a class="tu ref fn" href="#print_dirs" title='print_dirs' data-use='c' data-ref="print_dirs" data-ref-filename="print_dirs">print_dirs</a>(<q>"libraries"</q>, <a class="local col0 ref" href="#60s" title='s' data-ref="60s" data-ref-filename="60s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::library_paths" title='TCCState::library_paths' data-ref="TCCState::library_paths" data-ref-filename="TCCState..library_paths">library_paths</a>, <a class="local col0 ref" href="#60s" title='s' data-ref="60s" data-ref-filename="60s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_library_paths" title='TCCState::nb_library_paths' data-ref="TCCState::nb_library_paths" data-ref-filename="TCCState..nb_library_paths">nb_library_paths</a>);</td></tr>
+<tr><th id="185">185</th><td>    <a class="ref fn" href="../include/stdio.h.html#printf" title='printf' data-ref="printf" data-ref-filename="printf">printf</a>(<q>"libtcc1:\n  %s/"</q><a class="macro" href="tcc.h.html#280" title="&quot;libtcc1.a&quot;" data-ref="_M/TCC_LIBTCC1">TCC_LIBTCC1</a><q>"\n"</q>, <a class="local col0 ref" href="#60s" title='s' data-ref="60s" data-ref-filename="60s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::tcc_lib_path" title='TCCState::tcc_lib_path' data-ref="TCCState::tcc_lib_path" data-ref-filename="TCCState..tcc_lib_path">tcc_lib_path</a>);</td></tr>
+<tr><th id="186">186</th><td><u>#<span data-ppcond="186">ifndef</span> <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span></u></td></tr>
+<tr><th id="187">187</th><td>    <a class="tu ref fn" href="#print_dirs" title='print_dirs' data-use='c' data-ref="print_dirs" data-ref-filename="print_dirs">print_dirs</a>(<q>"crt"</q>, <a class="local col0 ref" href="#60s" title='s' data-ref="60s" data-ref-filename="60s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::crt_paths" title='TCCState::crt_paths' data-ref="TCCState::crt_paths" data-ref-filename="TCCState..crt_paths">crt_paths</a>, <a class="local col0 ref" href="#60s" title='s' data-ref="60s" data-ref-filename="60s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_crt_paths" title='TCCState::nb_crt_paths' data-ref="TCCState::nb_crt_paths" data-ref-filename="TCCState..nb_crt_paths">nb_crt_paths</a>);</td></tr>
+<tr><th id="188">188</th><td>    <a class="ref fn" href="../include/stdio.h.html#printf" title='printf' data-ref="printf" data-ref-filename="printf">printf</a>(<q>"elfinterp:\n  %s\n"</q>,  <a class="macro" href="tcc.h.html#273" title="&quot;/lib64/ld-linux-x86-64.so.2&quot;" data-ref="_M/DEFAULT_ELFINTERP">DEFAULT_ELFINTERP</a>(s));</td></tr>
+<tr><th id="189">189</th><td><u>#<span data-ppcond="186">endif</span></u></td></tr>
+<tr><th id="190">190</th><td>}</td></tr>
+<tr><th id="191">191</th><td></td></tr>
+<tr><th id="192">192</th><td><em>static</em> <em>void</em> <dfn class="tu decl def fn" id="set_environment" title='set_environment' data-type='void set_environment(TCCState * s)' data-ref="set_environment" data-ref-filename="set_environment">set_environment</dfn>(<a class="typedef" href="libtcc.h.html#TCCState" title='TCCState' data-type='struct TCCState' data-ref="TCCState" data-ref-filename="TCCState">TCCState</a> *<dfn class="local col1 decl" id="61s" title='s' data-type='TCCState *' data-ref="61s" data-ref-filename="61s">s</dfn>)</td></tr>
+<tr><th id="193">193</th><td>{</td></tr>
+<tr><th id="194">194</th><td>    <em>char</em> * <dfn class="local col2 decl" id="62path" title='path' data-type='char *' data-ref="62path" data-ref-filename="62path">path</dfn>;</td></tr>
+<tr><th id="195">195</th><td></td></tr>
+<tr><th id="196">196</th><td>    <a class="local col2 ref" href="#62path" title='path' data-ref="62path" data-ref-filename="62path">path</a> = <a class="ref fn" href="../include/stdlib.h.html#getenv" title='getenv' data-ref="getenv" data-ref-filename="getenv">getenv</a>(<q>"C_INCLUDE_PATH"</q>);</td></tr>
+<tr><th id="197">197</th><td>    <b>if</b> (<a class="local col2 ref" href="#62path" title='path' data-ref="62path" data-ref-filename="62path">path</a> != <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="198">198</th><td>        <a class="ref fn" href="libtcc.h.html#tcc_add_sysinclude_path" title='tcc_add_sysinclude_path' data-ref="tcc_add_sysinclude_path" data-ref-filename="tcc_add_sysinclude_path">tcc_add_sysinclude_path</a>(<a class="local col1 ref" href="#61s" title='s' data-ref="61s" data-ref-filename="61s">s</a>, <a class="local col2 ref" href="#62path" title='path' data-ref="62path" data-ref-filename="62path">path</a>);</td></tr>
+<tr><th id="199">199</th><td>    }</td></tr>
+<tr><th id="200">200</th><td>    <a class="local col2 ref" href="#62path" title='path' data-ref="62path" data-ref-filename="62path">path</a> = <a class="ref fn" href="../include/stdlib.h.html#getenv" title='getenv' data-ref="getenv" data-ref-filename="getenv">getenv</a>(<q>"CPATH"</q>);</td></tr>
+<tr><th id="201">201</th><td>    <b>if</b> (<a class="local col2 ref" href="#62path" title='path' data-ref="62path" data-ref-filename="62path">path</a> != <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="202">202</th><td>        <a class="ref fn" href="libtcc.h.html#tcc_add_include_path" title='tcc_add_include_path' data-ref="tcc_add_include_path" data-ref-filename="tcc_add_include_path">tcc_add_include_path</a>(<a class="local col1 ref" href="#61s" title='s' data-ref="61s" data-ref-filename="61s">s</a>, <a class="local col2 ref" href="#62path" title='path' data-ref="62path" data-ref-filename="62path">path</a>);</td></tr>
+<tr><th id="203">203</th><td>    }</td></tr>
+<tr><th id="204">204</th><td>    <a class="local col2 ref" href="#62path" title='path' data-ref="62path" data-ref-filename="62path">path</a> = <a class="ref fn" href="../include/stdlib.h.html#getenv" title='getenv' data-ref="getenv" data-ref-filename="getenv">getenv</a>(<q>"LIBRARY_PATH"</q>);</td></tr>
+<tr><th id="205">205</th><td>    <b>if</b> (<a class="local col2 ref" href="#62path" title='path' data-ref="62path" data-ref-filename="62path">path</a> != <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="206">206</th><td>        <a class="ref fn" href="libtcc.h.html#tcc_add_library_path" title='tcc_add_library_path' data-ref="tcc_add_library_path" data-ref-filename="tcc_add_library_path">tcc_add_library_path</a>(<a class="local col1 ref" href="#61s" title='s' data-ref="61s" data-ref-filename="61s">s</a>, <a class="local col2 ref" href="#62path" title='path' data-ref="62path" data-ref-filename="62path">path</a>);</td></tr>
+<tr><th id="207">207</th><td>    }</td></tr>
+<tr><th id="208">208</th><td>}</td></tr>
+<tr><th id="209">209</th><td></td></tr>
+<tr><th id="210">210</th><td><em>static</em> <em>char</em> *<dfn class="tu decl def fn" id="default_outputfile" title='default_outputfile' data-type='char * default_outputfile(TCCState * s, const char * first_file)' data-ref="default_outputfile" data-ref-filename="default_outputfile">default_outputfile</dfn>(<a class="typedef" href="libtcc.h.html#TCCState" title='TCCState' data-type='struct TCCState' data-ref="TCCState" data-ref-filename="TCCState">TCCState</a> *<dfn class="local col3 decl" id="63s" title='s' data-type='TCCState *' data-ref="63s" data-ref-filename="63s">s</dfn>, <em>const</em> <em>char</em> *<dfn class="local col4 decl" id="64first_file" title='first_file' data-type='const char *' data-ref="64first_file" data-ref-filename="64first_file">first_file</dfn>)</td></tr>
+<tr><th id="211">211</th><td>{</td></tr>
+<tr><th id="212">212</th><td>    <em>char</em> <dfn class="local col5 decl" id="65buf" title='buf' data-type='char [1024]' data-ref="65buf" data-ref-filename="65buf">buf</dfn>[<var>1024</var>];</td></tr>
+<tr><th id="213">213</th><td>    <em>char</em> *<dfn class="local col6 decl" id="66ext" title='ext' data-type='char *' data-ref="66ext" data-ref-filename="66ext">ext</dfn>;</td></tr>
+<tr><th id="214">214</th><td>    <em>const</em> <em>char</em> *<dfn class="local col7 decl" id="67name" title='name' data-type='const char *' data-ref="67name" data-ref-filename="67name">name</dfn> = <q>"a"</q>;</td></tr>
+<tr><th id="215">215</th><td></td></tr>
+<tr><th id="216">216</th><td>    <b>if</b> (<a class="local col4 ref" href="#64first_file" title='first_file' data-ref="64first_file" data-ref-filename="64first_file">first_file</a> &amp;&amp; <a class="ref fn" href="../include/string.h.html#strcmp" title='strcmp' data-ref="strcmp" data-ref-filename="strcmp">strcmp</a>(<a class="local col4 ref" href="#64first_file" title='first_file' data-ref="64first_file" data-ref-filename="64first_file">first_file</a>, <q>"-"</q>))</td></tr>
+<tr><th id="217">217</th><td>        <a class="local col7 ref" href="#67name" title='name' data-ref="67name" data-ref-filename="67name">name</a> = <a class="ref fn" href="tcc.h.html#tcc_basename" title='tcc_basename' data-ref="tcc_basename" data-ref-filename="tcc_basename">tcc_basename</a>(<a class="local col4 ref" href="#64first_file" title='first_file' data-ref="64first_file" data-ref-filename="64first_file">first_file</a>);</td></tr>
+<tr><th id="218">218</th><td>    <a class="ref fn" href="../include/stdio.h.html#snprintf" title='snprintf' data-ref="snprintf" data-ref-filename="snprintf">snprintf</a>(<a class="local col5 ref" href="#65buf" title='buf' data-ref="65buf" data-ref-filename="65buf">buf</a>, <b>sizeof</b>(<a class="local col5 ref" href="#65buf" title='buf' data-ref="65buf" data-ref-filename="65buf">buf</a>), <q>"%s"</q>, <a class="local col7 ref" href="#67name" title='name' data-ref="67name" data-ref-filename="67name">name</a>);</td></tr>
+<tr><th id="219">219</th><td>    <a class="local col6 ref" href="#66ext" title='ext' data-ref="66ext" data-ref-filename="66ext">ext</a> = <a class="ref fn" href="tcc.h.html#tcc_fileextension" title='tcc_fileextension' data-ref="tcc_fileextension" data-ref-filename="tcc_fileextension">tcc_fileextension</a>(<a class="local col5 ref" href="#65buf" title='buf' data-ref="65buf" data-ref-filename="65buf">buf</a>);</td></tr>
+<tr><th id="220">220</th><td><u>#<span data-ppcond="220">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span></u></td></tr>
+<tr><th id="221">221</th><td>    <b>if</b> (s-&gt;output_type == TCC_OUTPUT_DLL)</td></tr>
+<tr><th id="222">222</th><td>        strcpy(ext, <q>".dll"</q>);</td></tr>
+<tr><th id="223">223</th><td>    <b>else</b></td></tr>
+<tr><th id="224">224</th><td>    <b>if</b> (s-&gt;output_type == TCC_OUTPUT_EXE)</td></tr>
+<tr><th id="225">225</th><td>        strcpy(ext, <q>".exe"</q>);</td></tr>
+<tr><th id="226">226</th><td>    <b>else</b></td></tr>
+<tr><th id="227">227</th><td><u>#<span data-ppcond="220">endif</span></u></td></tr>
+<tr><th id="228">228</th><td>    <b>if</b> (<a class="local col3 ref" href="#63s" title='s' data-ref="63s" data-ref-filename="63s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::output_type" title='TCCState::output_type' data-ref="TCCState::output_type" data-ref-filename="TCCState..output_type">output_type</a> == <a class="macro" href="libtcc.h.html#64" title="4" data-ref="_M/TCC_OUTPUT_OBJ">TCC_OUTPUT_OBJ</a> &amp;&amp; !<a class="local col3 ref" href="#63s" title='s' data-ref="63s" data-ref-filename="63s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::option_r" title='TCCState::option_r' data-ref="TCCState::option_r" data-ref-filename="TCCState..option_r">option_r</a> &amp;&amp; *<a class="local col6 ref" href="#66ext" title='ext' data-ref="66ext" data-ref-filename="66ext">ext</a>)</td></tr>
+<tr><th id="229">229</th><td>        <a class="ref fn" href="../include/string.h.html#strcpy" title='strcpy' data-ref="strcpy" data-ref-filename="strcpy">strcpy</a>(<a class="local col6 ref" href="#66ext" title='ext' data-ref="66ext" data-ref-filename="66ext">ext</a>, <q>".o"</q>);</td></tr>
+<tr><th id="230">230</th><td>    <b>else</b></td></tr>
+<tr><th id="231">231</th><td>        <a class="ref fn" href="../include/string.h.html#strcpy" title='strcpy' data-ref="strcpy" data-ref-filename="strcpy">strcpy</a>(<a class="local col5 ref" href="#65buf" title='buf' data-ref="65buf" data-ref-filename="65buf">buf</a>, <q>"a.out"</q>);</td></tr>
+<tr><th id="232">232</th><td>    <b>return</b> <a class="ref fn" href="tcc.h.html#tcc_strdup" title='tcc_strdup' data-ref="tcc_strdup" data-ref-filename="tcc_strdup">tcc_strdup</a>(<a class="local col5 ref" href="#65buf" title='buf' data-ref="65buf" data-ref-filename="65buf">buf</a>);</td></tr>
+<tr><th id="233">233</th><td>}</td></tr>
+<tr><th id="234">234</th><td></td></tr>
+<tr><th id="235">235</th><td><em>static</em> <em>unsigned</em> <dfn class="tu decl def fn" id="getclock_ms" title='getclock_ms' data-type='unsigned int getclock_ms()' data-ref="getclock_ms" data-ref-filename="getclock_ms">getclock_ms</dfn>(<em>void</em>)</td></tr>
+<tr><th id="236">236</th><td>{</td></tr>
+<tr><th id="237">237</th><td><u>#<span data-ppcond="237">ifdef</span> <span class="macro" data-ref="_M/_WIN32">_WIN32</span></u></td></tr>
+<tr><th id="238">238</th><td>    <b>return</b> GetTickCount();</td></tr>
+<tr><th id="239">239</th><td><u>#<span data-ppcond="237">else</span></u></td></tr>
+<tr><th id="240">240</th><td>    <b>struct</b> <a class="type" href="../include/x86_64-linux-gnu/bits/types/struct_timeval.h.html#timeval" title='timeval' data-ref="timeval" data-ref-filename="timeval">timeval</a> <dfn class="local col8 decl" id="68tv" title='tv' data-type='struct timeval' data-ref="68tv" data-ref-filename="68tv">tv</dfn>;</td></tr>
+<tr><th id="241">241</th><td>    <a class="ref fn" href="../include/x86_64-linux-gnu/sys/time.h.html#gettimeofday" title='gettimeofday' data-ref="gettimeofday" data-ref-filename="gettimeofday">gettimeofday</a>(&amp;<a class="local col8 ref" href="#68tv" title='tv' data-ref="68tv" data-ref-filename="68tv">tv</a>, <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>);</td></tr>
+<tr><th id="242">242</th><td>    <b>return</b> <a class="local col8 ref" href="#68tv" title='tv' data-ref="68tv" data-ref-filename="68tv">tv</a>.<a class="ref field" href="../include/x86_64-linux-gnu/bits/types/struct_timeval.h.html#timeval::tv_sec" title='timeval::tv_sec' data-ref="timeval::tv_sec" data-ref-filename="timeval..tv_sec">tv_sec</a>*<var>1000</var> + (<a class="local col8 ref" href="#68tv" title='tv' data-ref="68tv" data-ref-filename="68tv">tv</a>.<a class="ref field" href="../include/x86_64-linux-gnu/bits/types/struct_timeval.h.html#timeval::tv_usec" title='timeval::tv_usec' data-ref="timeval::tv_usec" data-ref-filename="timeval..tv_usec">tv_usec</a>+<var>500</var>)/<var>1000</var>;</td></tr>
+<tr><th id="243">243</th><td><u>#<span data-ppcond="237">endif</span></u></td></tr>
+<tr><th id="244">244</th><td>}</td></tr>
+<tr><th id="245">245</th><td></td></tr>
+<tr><th id="246">246</th><td><em>int</em> <dfn class="decl def fn" id="main" title='main' data-ref="main" data-ref-filename="main">main</dfn>(<em>int</em> <dfn class="local col9 decl" id="69argc0" title='argc0' data-type='int' data-ref="69argc0" data-ref-filename="69argc0">argc0</dfn>, <em>char</em> **<dfn class="local col0 decl" id="70argv0" title='argv0' data-type='char **' data-ref="70argv0" data-ref-filename="70argv0">argv0</dfn>)</td></tr>
+<tr><th id="247">247</th><td>{</td></tr>
+<tr><th id="248">248</th><td>    <a class="typedef" href="libtcc.h.html#TCCState" title='TCCState' data-type='struct TCCState' data-ref="TCCState" data-ref-filename="TCCState">TCCState</a> *<dfn class="local col1 decl" id="71s" title='s' data-type='TCCState *' data-ref="71s" data-ref-filename="71s">s</dfn>;</td></tr>
+<tr><th id="249">249</th><td>    <em>int</em> <dfn class="local col2 decl" id="72ret" title='ret' data-type='int' data-ref="72ret" data-ref-filename="72ret">ret</dfn>, <dfn class="local col3 decl" id="73opt" title='opt' data-type='int' data-ref="73opt" data-ref-filename="73opt">opt</dfn>, <dfn class="local col4 decl" id="74n" title='n' data-type='int' data-ref="74n" data-ref-filename="74n">n</dfn> = <var>0</var>, <dfn class="local col5 decl" id="75t" title='t' data-type='int' data-ref="75t" data-ref-filename="75t">t</dfn> = <var>0</var>;</td></tr>
+<tr><th id="250">250</th><td>    <em>unsigned</em> <dfn class="local col6 decl" id="76start_time" title='start_time' data-type='unsigned int' data-ref="76start_time" data-ref-filename="76start_time">start_time</dfn> = <var>0</var>;</td></tr>
+<tr><th id="251">251</th><td>    <em>const</em> <em>char</em> *<dfn class="local col7 decl" id="77first_file" title='first_file' data-type='const char *' data-ref="77first_file" data-ref-filename="77first_file">first_file</dfn>;</td></tr>
+<tr><th id="252">252</th><td>    <em>int</em> <dfn class="local col8 decl" id="78argc" title='argc' data-type='int' data-ref="78argc" data-ref-filename="78argc">argc</dfn>; <em>char</em> **<dfn class="local col9 decl" id="79argv" title='argv' data-type='char **' data-ref="79argv" data-ref-filename="79argv">argv</dfn>;</td></tr>
+<tr><th id="253">253</th><td>    <a class="typedef" href="../include/x86_64-linux-gnu/bits/types/FILE.h.html#FILE" title='FILE' data-type='struct _IO_FILE' data-ref="FILE" data-ref-filename="FILE">FILE</a> *<dfn class="local col0 decl" id="80ppfp" title='ppfp' data-type='FILE *' data-ref="80ppfp" data-ref-filename="80ppfp">ppfp</dfn> = <a class="macro" href="../include/stdio.h.html#140" title="stdout" data-ref="_M/stdout">stdout</a>;</td></tr>
+<tr><th id="254">254</th><td></td></tr>
+<tr><th id="255">255</th><td><dfn class="lbl" id="81redo" data-ref="81redo" data-ref-filename="81redo">redo</dfn>:</td></tr>
+<tr><th id="256">256</th><td>    <a class="local col8 ref" href="#78argc" title='argc' data-ref="78argc" data-ref-filename="78argc">argc</a> = <a class="local col9 ref" href="#69argc0" title='argc0' data-ref="69argc0" data-ref-filename="69argc0">argc0</a>, <a class="local col9 ref" href="#79argv" title='argv' data-ref="79argv" data-ref-filename="79argv">argv</a> = <a class="local col0 ref" href="#70argv0" title='argv0' data-ref="70argv0" data-ref-filename="70argv0">argv0</a>;</td></tr>
+<tr><th id="257">257</th><td>    <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a> = <a class="ref fn" href="libtcc.h.html#tcc_new" title='tcc_new' data-ref="tcc_new" data-ref-filename="tcc_new">tcc_new</a>();</td></tr>
+<tr><th id="258">258</th><td>    <a class="local col3 ref" href="#73opt" title='opt' data-ref="73opt" data-ref-filename="73opt">opt</a> = <a class="ref fn" href="tcc.h.html#tcc_parse_args" title='tcc_parse_args' data-ref="tcc_parse_args" data-ref-filename="tcc_parse_args">tcc_parse_args</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, &amp;<a class="local col8 ref" href="#78argc" title='argc' data-ref="78argc" data-ref-filename="78argc">argc</a>, &amp;<a class="local col9 ref" href="#79argv" title='argv' data-ref="79argv" data-ref-filename="79argv">argv</a>, <var>1</var>);</td></tr>
+<tr><th id="259">259</th><td></td></tr>
+<tr><th id="260">260</th><td>    <b>if</b> ((<a class="local col4 ref" href="#74n" title='n' data-ref="74n" data-ref-filename="74n">n</a> | <a class="local col5 ref" href="#75t" title='t' data-ref="75t" data-ref-filename="75t">t</a>) == <var>0</var>) {</td></tr>
+<tr><th id="261">261</th><td>        <b>if</b> (<a class="local col3 ref" href="#73opt" title='opt' data-ref="73opt" data-ref-filename="73opt">opt</a> == <a class="macro" href="tcc.h.html#1190" title="1" data-ref="_M/OPT_HELP">OPT_HELP</a>)</td></tr>
+<tr><th id="262">262</th><td>            <b>return</b> <a class="ref fn" href="../include/stdio.h.html#printf" title='printf' data-ref="printf" data-ref-filename="printf">printf</a>(<a class="tu ref" href="#help" title='help' data-use='r' data-ref="help" data-ref-filename="help">help</a>), <var>1</var>;</td></tr>
+<tr><th id="263">263</th><td>        <b>if</b> (<a class="local col3 ref" href="#73opt" title='opt' data-ref="73opt" data-ref-filename="73opt">opt</a> == <a class="macro" href="tcc.h.html#1191" title="2" data-ref="_M/OPT_HELP2">OPT_HELP2</a>)</td></tr>
+<tr><th id="264">264</th><td>            <b>return</b> <a class="ref fn" href="../include/stdio.h.html#printf" title='printf' data-ref="printf" data-ref-filename="printf">printf</a>(<a class="tu ref" href="#help2" title='help2' data-use='r' data-ref="help2" data-ref-filename="help2">help2</a>), <var>1</var>;</td></tr>
+<tr><th id="265">265</th><td>        <b>if</b> (<a class="local col3 ref" href="#73opt" title='opt' data-ref="73opt" data-ref-filename="73opt">opt</a> == <a class="macro" href="tcc.h.html#1196" title="32" data-ref="_M/OPT_M32">OPT_M32</a> || <a class="local col3 ref" href="#73opt" title='opt' data-ref="73opt" data-ref-filename="73opt">opt</a> == <a class="macro" href="tcc.h.html#1197" title="64" data-ref="_M/OPT_M64">OPT_M64</a>)</td></tr>
+<tr><th id="266">266</th><td>            <a class="ref fn" href="tcctools.c.html#tcc_tool_cross" title='tcc_tool_cross' data-ref="tcc_tool_cross" data-ref-filename="tcc_tool_cross">tcc_tool_cross</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, <a class="local col9 ref" href="#79argv" title='argv' data-ref="79argv" data-ref-filename="79argv">argv</a>, <a class="local col3 ref" href="#73opt" title='opt' data-ref="73opt" data-ref-filename="73opt">opt</a>); <i>/* never returns */</i></td></tr>
+<tr><th id="267">267</th><td>        <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::verbose" title='TCCState::verbose' data-ref="TCCState::verbose" data-ref-filename="TCCState..verbose">verbose</a>)</td></tr>
+<tr><th id="268">268</th><td>            <a class="ref fn" href="../include/stdio.h.html#printf" title='printf' data-ref="printf" data-ref-filename="printf">printf</a>(<a class="tu ref" href="#version" title='version' data-use='r' data-ref="version" data-ref-filename="version">version</a>);</td></tr>
+<tr><th id="269">269</th><td>        <b>if</b> (<a class="local col3 ref" href="#73opt" title='opt' data-ref="73opt" data-ref-filename="73opt">opt</a> == <a class="macro" href="tcc.h.html#1194" title="5" data-ref="_M/OPT_AR">OPT_AR</a>)</td></tr>
+<tr><th id="270">270</th><td>            <b>return</b> <a class="ref fn" href="tcctools.c.html#tcc_tool_ar" title='tcc_tool_ar' data-ref="tcc_tool_ar" data-ref-filename="tcc_tool_ar">tcc_tool_ar</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, <a class="local col8 ref" href="#78argc" title='argc' data-ref="78argc" data-ref-filename="78argc">argc</a>, <a class="local col9 ref" href="#79argv" title='argv' data-ref="79argv" data-ref-filename="79argv">argv</a>);</td></tr>
+<tr><th id="271">271</th><td><u>#<span data-ppcond="271">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span></u></td></tr>
+<tr><th id="272">272</th><td>        <b>if</b> (opt == OPT_IMPDEF)</td></tr>
+<tr><th id="273">273</th><td>            <b>return</b> tcc_tool_impdef(s, argc, argv);</td></tr>
+<tr><th id="274">274</th><td><u>#<span data-ppcond="271">endif</span></u></td></tr>
+<tr><th id="275">275</th><td>        <b>if</b> (<a class="local col3 ref" href="#73opt" title='opt' data-ref="73opt" data-ref-filename="73opt">opt</a> == <a class="macro" href="tcc.h.html#1192" title="3" data-ref="_M/OPT_V">OPT_V</a>)</td></tr>
+<tr><th id="276">276</th><td>            <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="277">277</th><td>        <b>if</b> (<a class="local col3 ref" href="#73opt" title='opt' data-ref="73opt" data-ref-filename="73opt">opt</a> == <a class="macro" href="tcc.h.html#1193" title="4" data-ref="_M/OPT_PRINT_DIRS">OPT_PRINT_DIRS</a>) {</td></tr>
+<tr><th id="278">278</th><td>            <i>/* initialize search dirs */</i></td></tr>
+<tr><th id="279">279</th><td>            <a class="tu ref fn" href="#set_environment" title='set_environment' data-use='c' data-ref="set_environment" data-ref-filename="set_environment">set_environment</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>);</td></tr>
+<tr><th id="280">280</th><td>            <a class="ref fn" href="libtcc.h.html#tcc_set_output_type" title='tcc_set_output_type' data-ref="tcc_set_output_type" data-ref-filename="tcc_set_output_type">tcc_set_output_type</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, <a class="macro" href="libtcc.h.html#61" title="1" data-ref="_M/TCC_OUTPUT_MEMORY">TCC_OUTPUT_MEMORY</a>);</td></tr>
+<tr><th id="281">281</th><td>            <a class="tu ref fn" href="#print_search_dirs" title='print_search_dirs' data-use='c' data-ref="print_search_dirs" data-ref-filename="print_search_dirs">print_search_dirs</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>);</td></tr>
+<tr><th id="282">282</th><td>            <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="283">283</th><td>        }</td></tr>
+<tr><th id="284">284</th><td></td></tr>
+<tr><th id="285">285</th><td>        <a class="local col4 ref" href="#74n" title='n' data-ref="74n" data-ref-filename="74n">n</a> = <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_files" title='TCCState::nb_files' data-ref="TCCState::nb_files" data-ref-filename="TCCState..nb_files">nb_files</a>;</td></tr>
+<tr><th id="286">286</th><td>        <b>if</b> (<a class="local col4 ref" href="#74n" title='n' data-ref="74n" data-ref-filename="74n">n</a> == <var>0</var>)</td></tr>
+<tr><th id="287">287</th><td>            <a class="ref fn" href="tcc.h.html#tcc_error" title='tcc_error' data-ref="tcc_error" data-ref-filename="tcc_error">tcc_error</a>(<q>"no input files\n"</q>);</td></tr>
+<tr><th id="288">288</th><td></td></tr>
+<tr><th id="289">289</th><td>        <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::output_type" title='TCCState::output_type' data-ref="TCCState::output_type" data-ref-filename="TCCState..output_type">output_type</a> == <a class="macro" href="libtcc.h.html#65" title="5" data-ref="_M/TCC_OUTPUT_PREPROCESS">TCC_OUTPUT_PREPROCESS</a>) {</td></tr>
+<tr><th id="290">290</th><td>            <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::outfile" title='TCCState::outfile' data-ref="TCCState::outfile" data-ref-filename="TCCState..outfile">outfile</a>) {</td></tr>
+<tr><th id="291">291</th><td>                <a class="local col0 ref" href="#80ppfp" title='ppfp' data-ref="80ppfp" data-ref-filename="80ppfp">ppfp</a> = <a class="ref fn" href="../include/stdio.h.html#fopen" title='fopen' data-ref="fopen" data-ref-filename="fopen">fopen</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::outfile" title='TCCState::outfile' data-ref="TCCState::outfile" data-ref-filename="TCCState..outfile">outfile</a>, <q>"w"</q>);</td></tr>
+<tr><th id="292">292</th><td>                <b>if</b> (!<a class="local col0 ref" href="#80ppfp" title='ppfp' data-ref="80ppfp" data-ref-filename="80ppfp">ppfp</a>)</td></tr>
+<tr><th id="293">293</th><td>                    <a class="ref fn" href="tcc.h.html#tcc_error" title='tcc_error' data-ref="tcc_error" data-ref-filename="tcc_error">tcc_error</a>(<q>"could not write '%s'"</q>, <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::outfile" title='TCCState::outfile' data-ref="TCCState::outfile" data-ref-filename="TCCState..outfile">outfile</a>);</td></tr>
+<tr><th id="294">294</th><td>            }</td></tr>
+<tr><th id="295">295</th><td>        } <b>else</b> <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::output_type" title='TCCState::output_type' data-ref="TCCState::output_type" data-ref-filename="TCCState..output_type">output_type</a> == <a class="macro" href="libtcc.h.html#64" title="4" data-ref="_M/TCC_OUTPUT_OBJ">TCC_OUTPUT_OBJ</a> &amp;&amp; !<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::option_r" title='TCCState::option_r' data-ref="TCCState::option_r" data-ref-filename="TCCState..option_r">option_r</a>) {</td></tr>
+<tr><th id="296">296</th><td>            <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_libraries" title='TCCState::nb_libraries' data-ref="TCCState::nb_libraries" data-ref-filename="TCCState..nb_libraries">nb_libraries</a>)</td></tr>
+<tr><th id="297">297</th><td>                <a class="ref fn" href="tcc.h.html#tcc_error" title='tcc_error' data-ref="tcc_error" data-ref-filename="tcc_error">tcc_error</a>(<q>"cannot specify libraries with -c"</q>);</td></tr>
+<tr><th id="298">298</th><td>            <b>if</b> (<a class="local col4 ref" href="#74n" title='n' data-ref="74n" data-ref-filename="74n">n</a> &gt; <var>1</var> &amp;&amp; <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::outfile" title='TCCState::outfile' data-ref="TCCState::outfile" data-ref-filename="TCCState..outfile">outfile</a>)</td></tr>
+<tr><th id="299">299</th><td>                <a class="ref fn" href="tcc.h.html#tcc_error" title='tcc_error' data-ref="tcc_error" data-ref-filename="tcc_error">tcc_error</a>(<q>"cannot specify output file with -c many files"</q>);</td></tr>
+<tr><th id="300">300</th><td>        } <b>else</b> {</td></tr>
+<tr><th id="301">301</th><td>            <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::option_pthread" title='TCCState::option_pthread' data-ref="TCCState::option_pthread" data-ref-filename="TCCState..option_pthread">option_pthread</a>)</td></tr>
+<tr><th id="302">302</th><td>                <a class="ref fn" href="libtcc.h.html#tcc_set_options" title='tcc_set_options' data-ref="tcc_set_options" data-ref-filename="tcc_set_options">tcc_set_options</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, <q>"-lpthread"</q>);</td></tr>
+<tr><th id="303">303</th><td>        }</td></tr>
+<tr><th id="304">304</th><td></td></tr>
+<tr><th id="305">305</th><td>        <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::do_bench" title='TCCState::do_bench' data-ref="TCCState::do_bench" data-ref-filename="TCCState..do_bench">do_bench</a>)</td></tr>
+<tr><th id="306">306</th><td>            <a class="local col6 ref" href="#76start_time" title='start_time' data-ref="76start_time" data-ref-filename="76start_time">start_time</a> = <a class="tu ref fn" href="#getclock_ms" title='getclock_ms' data-use='c' data-ref="getclock_ms" data-ref-filename="getclock_ms">getclock_ms</a>();</td></tr>
+<tr><th id="307">307</th><td>    }</td></tr>
+<tr><th id="308">308</th><td></td></tr>
+<tr><th id="309">309</th><td>    <a class="tu ref fn" href="#set_environment" title='set_environment' data-use='c' data-ref="set_environment" data-ref-filename="set_environment">set_environment</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>);</td></tr>
+<tr><th id="310">310</th><td>    <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::output_type" title='TCCState::output_type' data-ref="TCCState::output_type" data-ref-filename="TCCState..output_type">output_type</a> == <var>0</var>)</td></tr>
+<tr><th id="311">311</th><td>        <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::output_type" title='TCCState::output_type' data-ref="TCCState::output_type" data-ref-filename="TCCState..output_type">output_type</a> = <a class="macro" href="libtcc.h.html#62" title="2" data-ref="_M/TCC_OUTPUT_EXE">TCC_OUTPUT_EXE</a>;</td></tr>
+<tr><th id="312">312</th><td>    <a class="ref fn" href="libtcc.h.html#tcc_set_output_type" title='tcc_set_output_type' data-ref="tcc_set_output_type" data-ref-filename="tcc_set_output_type">tcc_set_output_type</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::output_type" title='TCCState::output_type' data-ref="TCCState::output_type" data-ref-filename="TCCState..output_type">output_type</a>);</td></tr>
+<tr><th id="313">313</th><td>    <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::ppfp" title='TCCState::ppfp' data-ref="TCCState::ppfp" data-ref-filename="TCCState..ppfp">ppfp</a> = <a class="local col0 ref" href="#80ppfp" title='ppfp' data-ref="80ppfp" data-ref-filename="80ppfp">ppfp</a>;</td></tr>
+<tr><th id="314">314</th><td></td></tr>
+<tr><th id="315">315</th><td>    <b>if</b> ((<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::output_type" title='TCCState::output_type' data-ref="TCCState::output_type" data-ref-filename="TCCState..output_type">output_type</a> == <a class="macro" href="libtcc.h.html#61" title="1" data-ref="_M/TCC_OUTPUT_MEMORY">TCC_OUTPUT_MEMORY</a></td></tr>
+<tr><th id="316">316</th><td>      || <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::output_type" title='TCCState::output_type' data-ref="TCCState::output_type" data-ref-filename="TCCState..output_type">output_type</a> == <a class="macro" href="libtcc.h.html#65" title="5" data-ref="_M/TCC_OUTPUT_PREPROCESS">TCC_OUTPUT_PREPROCESS</a>) &amp;&amp; (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::dflag" title='TCCState::dflag' data-ref="TCCState::dflag" data-ref-filename="TCCState..dflag">dflag</a> &amp; <var>16</var>))</td></tr>
+<tr><th id="317">317</th><td>        <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::dflag" title='TCCState::dflag' data-ref="TCCState::dflag" data-ref-filename="TCCState..dflag">dflag</a> |= <a class="local col5 ref" href="#75t" title='t' data-ref="75t" data-ref-filename="75t">t</a> ? <var>32</var> : <var>0</var>, <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::run_test" title='TCCState::run_test' data-ref="TCCState::run_test" data-ref-filename="TCCState..run_test">run_test</a> = ++<a class="local col5 ref" href="#75t" title='t' data-ref="75t" data-ref-filename="75t">t</a>, <a class="local col4 ref" href="#74n" title='n' data-ref="74n" data-ref-filename="74n">n</a> = <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_files" title='TCCState::nb_files' data-ref="TCCState::nb_files" data-ref-filename="TCCState..nb_files">nb_files</a>;</td></tr>
+<tr><th id="318">318</th><td></td></tr>
+<tr><th id="319">319</th><td>    <i>/* compile or add each files or library */</i></td></tr>
+<tr><th id="320">320</th><td>    <b>for</b> (<a class="local col7 ref" href="#77first_file" title='first_file' data-ref="77first_file" data-ref-filename="77first_file">first_file</a> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>, <a class="local col2 ref" href="#72ret" title='ret' data-ref="72ret" data-ref-filename="72ret">ret</a> = <var>0</var>;;) {</td></tr>
+<tr><th id="321">321</th><td>        <b>struct</b> <a class="type" href="tcc.h.html#filespec" title='filespec' data-ref="filespec" data-ref-filename="filespec">filespec</a> *<dfn class="local col2 decl" id="82f" title='f' data-type='struct filespec *' data-ref="82f" data-ref-filename="82f">f</dfn> = <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::files" title='TCCState::files' data-ref="TCCState::files" data-ref-filename="TCCState..files">files</a>[<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_files" title='TCCState::nb_files' data-ref="TCCState::nb_files" data-ref-filename="TCCState..nb_files">nb_files</a> - <a class="local col4 ref" href="#74n" title='n' data-ref="74n" data-ref-filename="74n">n</a>];</td></tr>
+<tr><th id="322">322</th><td>        <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::filetype" title='TCCState::filetype' data-ref="TCCState::filetype" data-ref-filename="TCCState..filetype">filetype</a> = <a class="local col2 ref" href="#82f" title='f' data-ref="82f" data-ref-filename="82f">f</a>-&gt;<a class="ref field" href="tcc.h.html#filespec::type" title='filespec::type' data-ref="filespec::type" data-ref-filename="filespec..type">type</a>;</td></tr>
+<tr><th id="323">323</th><td>        <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::alacarte_link" title='TCCState::alacarte_link' data-ref="TCCState::alacarte_link" data-ref-filename="TCCState..alacarte_link">alacarte_link</a> = <a class="local col2 ref" href="#82f" title='f' data-ref="82f" data-ref-filename="82f">f</a>-&gt;<a class="ref field" href="tcc.h.html#filespec::alacarte" title='filespec::alacarte' data-ref="filespec::alacarte" data-ref-filename="filespec..alacarte">alacarte</a>;</td></tr>
+<tr><th id="324">324</th><td>        <b>if</b> (<a class="local col2 ref" href="#82f" title='f' data-ref="82f" data-ref-filename="82f">f</a>-&gt;<a class="ref field" href="tcc.h.html#filespec::type" title='filespec::type' data-ref="filespec::type" data-ref-filename="filespec..type">type</a> == <a class="macro" href="tcc.h.html#1171" title="4" data-ref="_M/AFF_TYPE_LIB">AFF_TYPE_LIB</a>) {</td></tr>
+<tr><th id="325">325</th><td>            <b>if</b> (<a class="ref fn" href="tcc.h.html#tcc_add_library_err" title='tcc_add_library_err' data-ref="tcc_add_library_err" data-ref-filename="tcc_add_library_err">tcc_add_library_err</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, <a class="local col2 ref" href="#82f" title='f' data-ref="82f" data-ref-filename="82f">f</a>-&gt;<a class="ref field" href="tcc.h.html#filespec::name" title='filespec::name' data-ref="filespec::name" data-ref-filename="filespec..name">name</a>) &lt; <var>0</var>)</td></tr>
+<tr><th id="326">326</th><td>                <a class="local col2 ref" href="#72ret" title='ret' data-ref="72ret" data-ref-filename="72ret">ret</a> = <var>1</var>;</td></tr>
+<tr><th id="327">327</th><td>        } <b>else</b> {</td></tr>
+<tr><th id="328">328</th><td>            <b>if</b> (<var>1</var> == <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::verbose" title='TCCState::verbose' data-ref="TCCState::verbose" data-ref-filename="TCCState..verbose">verbose</a>)</td></tr>
+<tr><th id="329">329</th><td>                <a class="ref fn" href="../include/stdio.h.html#printf" title='printf' data-ref="printf" data-ref-filename="printf">printf</a>(<q>"-&gt; %s\n"</q>, <a class="local col2 ref" href="#82f" title='f' data-ref="82f" data-ref-filename="82f">f</a>-&gt;<a class="ref field" href="tcc.h.html#filespec::name" title='filespec::name' data-ref="filespec::name" data-ref-filename="filespec..name">name</a>);</td></tr>
+<tr><th id="330">330</th><td>            <b>if</b> (!<a class="local col7 ref" href="#77first_file" title='first_file' data-ref="77first_file" data-ref-filename="77first_file">first_file</a>)</td></tr>
+<tr><th id="331">331</th><td>                <a class="local col7 ref" href="#77first_file" title='first_file' data-ref="77first_file" data-ref-filename="77first_file">first_file</a> = <a class="local col2 ref" href="#82f" title='f' data-ref="82f" data-ref-filename="82f">f</a>-&gt;<a class="ref field" href="tcc.h.html#filespec::name" title='filespec::name' data-ref="filespec::name" data-ref-filename="filespec..name">name</a>;</td></tr>
+<tr><th id="332">332</th><td>            <b>if</b> (<a class="ref fn" href="libtcc.h.html#tcc_add_file" title='tcc_add_file' data-ref="tcc_add_file" data-ref-filename="tcc_add_file">tcc_add_file</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, <a class="local col2 ref" href="#82f" title='f' data-ref="82f" data-ref-filename="82f">f</a>-&gt;<a class="ref field" href="tcc.h.html#filespec::name" title='filespec::name' data-ref="filespec::name" data-ref-filename="filespec..name">name</a>) &lt; <var>0</var>)</td></tr>
+<tr><th id="333">333</th><td>                <a class="local col2 ref" href="#72ret" title='ret' data-ref="72ret" data-ref-filename="72ret">ret</a> = <var>1</var>;</td></tr>
+<tr><th id="334">334</th><td>        }</td></tr>
+<tr><th id="335">335</th><td>        <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::filetype" title='TCCState::filetype' data-ref="TCCState::filetype" data-ref-filename="TCCState..filetype">filetype</a> = <var>0</var>;</td></tr>
+<tr><th id="336">336</th><td>        <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::alacarte_link" title='TCCState::alacarte_link' data-ref="TCCState::alacarte_link" data-ref-filename="TCCState..alacarte_link">alacarte_link</a> = <var>1</var>;</td></tr>
+<tr><th id="337">337</th><td>        <b>if</b> (--<a class="local col4 ref" href="#74n" title='n' data-ref="74n" data-ref-filename="74n">n</a> == <var>0</var> || <a class="local col2 ref" href="#72ret" title='ret' data-ref="72ret" data-ref-filename="72ret">ret</a></td></tr>
+<tr><th id="338">338</th><td>            || (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::output_type" title='TCCState::output_type' data-ref="TCCState::output_type" data-ref-filename="TCCState..output_type">output_type</a> == <a class="macro" href="libtcc.h.html#64" title="4" data-ref="_M/TCC_OUTPUT_OBJ">TCC_OUTPUT_OBJ</a> &amp;&amp; !<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::option_r" title='TCCState::option_r' data-ref="TCCState::option_r" data-ref-filename="TCCState..option_r">option_r</a>))</td></tr>
+<tr><th id="339">339</th><td>            <b>break</b>;</td></tr>
+<tr><th id="340">340</th><td>    }</td></tr>
+<tr><th id="341">341</th><td></td></tr>
+<tr><th id="342">342</th><td>    <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::run_test" title='TCCState::run_test' data-ref="TCCState::run_test" data-ref-filename="TCCState..run_test">run_test</a>) {</td></tr>
+<tr><th id="343">343</th><td>        <a class="local col5 ref" href="#75t" title='t' data-ref="75t" data-ref-filename="75t">t</a> = <var>0</var>;</td></tr>
+<tr><th id="344">344</th><td>    } <b>else</b> <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::output_type" title='TCCState::output_type' data-ref="TCCState::output_type" data-ref-filename="TCCState..output_type">output_type</a> == <a class="macro" href="libtcc.h.html#65" title="5" data-ref="_M/TCC_OUTPUT_PREPROCESS">TCC_OUTPUT_PREPROCESS</a>) {</td></tr>
+<tr><th id="345">345</th><td>        ;</td></tr>
+<tr><th id="346">346</th><td>    } <b>else</b> <b>if</b> (<var>0</var> == <a class="local col2 ref" href="#72ret" title='ret' data-ref="72ret" data-ref-filename="72ret">ret</a>) {</td></tr>
+<tr><th id="347">347</th><td>        <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::output_type" title='TCCState::output_type' data-ref="TCCState::output_type" data-ref-filename="TCCState..output_type">output_type</a> == <a class="macro" href="libtcc.h.html#61" title="1" data-ref="_M/TCC_OUTPUT_MEMORY">TCC_OUTPUT_MEMORY</a>) {</td></tr>
+<tr><th id="348">348</th><td><u>#<span data-ppcond="348">ifdef</span> <a class="macro" href="tcc.h.html#164" data-ref="_M/TCC_IS_NATIVE">TCC_IS_NATIVE</a></u></td></tr>
+<tr><th id="349">349</th><td>            <a class="local col2 ref" href="#72ret" title='ret' data-ref="72ret" data-ref-filename="72ret">ret</a> = <a class="ref fn" href="libtcc.h.html#tcc_run" title='tcc_run' data-ref="tcc_run" data-ref-filename="tcc_run">tcc_run</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, <a class="local col8 ref" href="#78argc" title='argc' data-ref="78argc" data-ref-filename="78argc">argc</a>, <a class="local col9 ref" href="#79argv" title='argv' data-ref="79argv" data-ref-filename="79argv">argv</a>);</td></tr>
+<tr><th id="350">350</th><td><u>#<span data-ppcond="348">endif</span></u></td></tr>
+<tr><th id="351">351</th><td>        } <b>else</b> {</td></tr>
+<tr><th id="352">352</th><td>            <b>if</b> (!<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::outfile" title='TCCState::outfile' data-ref="TCCState::outfile" data-ref-filename="TCCState..outfile">outfile</a>)</td></tr>
+<tr><th id="353">353</th><td>                <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::outfile" title='TCCState::outfile' data-ref="TCCState::outfile" data-ref-filename="TCCState..outfile">outfile</a> = <a class="tu ref fn" href="#default_outputfile" title='default_outputfile' data-use='c' data-ref="default_outputfile" data-ref-filename="default_outputfile">default_outputfile</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, <a class="local col7 ref" href="#77first_file" title='first_file' data-ref="77first_file" data-ref-filename="77first_file">first_file</a>);</td></tr>
+<tr><th id="354">354</th><td>            <b>if</b> (<a class="ref fn" href="libtcc.h.html#tcc_output_file" title='tcc_output_file' data-ref="tcc_output_file" data-ref-filename="tcc_output_file">tcc_output_file</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::outfile" title='TCCState::outfile' data-ref="TCCState::outfile" data-ref-filename="TCCState..outfile">outfile</a>))</td></tr>
+<tr><th id="355">355</th><td>                <a class="local col2 ref" href="#72ret" title='ret' data-ref="72ret" data-ref-filename="72ret">ret</a> = <var>1</var>;</td></tr>
+<tr><th id="356">356</th><td>            <b>else</b> <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::gen_deps" title='TCCState::gen_deps' data-ref="TCCState::gen_deps" data-ref-filename="TCCState..gen_deps">gen_deps</a>)</td></tr>
+<tr><th id="357">357</th><td>                <a class="ref fn" href="tcctools.c.html#gen_makedeps" title='gen_makedeps' data-ref="gen_makedeps" data-ref-filename="gen_makedeps">gen_makedeps</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::outfile" title='TCCState::outfile' data-ref="TCCState::outfile" data-ref-filename="TCCState..outfile">outfile</a>, <a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::deps_outfile" title='TCCState::deps_outfile' data-ref="TCCState::deps_outfile" data-ref-filename="TCCState..deps_outfile">deps_outfile</a>);</td></tr>
+<tr><th id="358">358</th><td>        }</td></tr>
+<tr><th id="359">359</th><td>    }</td></tr>
+<tr><th id="360">360</th><td></td></tr>
+<tr><th id="361">361</th><td>    <b>if</b> (<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::do_bench" title='TCCState::do_bench' data-ref="TCCState::do_bench" data-ref-filename="TCCState..do_bench">do_bench</a> &amp;&amp; (<a class="local col4 ref" href="#74n" title='n' data-ref="74n" data-ref-filename="74n">n</a> | <a class="local col5 ref" href="#75t" title='t' data-ref="75t" data-ref-filename="75t">t</a> | <a class="local col2 ref" href="#72ret" title='ret' data-ref="72ret" data-ref-filename="72ret">ret</a>) == <var>0</var>)</td></tr>
+<tr><th id="362">362</th><td>        <a class="ref fn" href="tcc.h.html#tcc_print_stats" title='tcc_print_stats' data-ref="tcc_print_stats" data-ref-filename="tcc_print_stats">tcc_print_stats</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>, <a class="tu ref fn" href="#getclock_ms" title='getclock_ms' data-use='c' data-ref="getclock_ms" data-ref-filename="getclock_ms">getclock_ms</a>() - <a class="local col6 ref" href="#76start_time" title='start_time' data-ref="76start_time" data-ref-filename="76start_time">start_time</a>);</td></tr>
+<tr><th id="363">363</th><td>    <a class="ref fn" href="libtcc.h.html#tcc_delete" title='tcc_delete' data-ref="tcc_delete" data-ref-filename="tcc_delete">tcc_delete</a>(<a class="local col1 ref" href="#71s" title='s' data-ref="71s" data-ref-filename="71s">s</a>);</td></tr>
+<tr><th id="364">364</th><td>    <b>if</b> (<a class="local col2 ref" href="#72ret" title='ret' data-ref="72ret" data-ref-filename="72ret">ret</a> == <var>0</var> &amp;&amp; <a class="local col4 ref" href="#74n" title='n' data-ref="74n" data-ref-filename="74n">n</a>)</td></tr>
+<tr><th id="365">365</th><td>        <b>goto</b> <a class="lbl" href="#81redo" data-ref="81redo" data-ref-filename="81redo">redo</a>; <i>/* compile more files with -c */</i></td></tr>
+<tr><th id="366">366</th><td>    <b>if</b> (<a class="local col5 ref" href="#75t" title='t' data-ref="75t" data-ref-filename="75t">t</a>)</td></tr>
+<tr><th id="367">367</th><td>        <b>goto</b> <a class="lbl" href="#81redo" data-ref="81redo" data-ref-filename="81redo">redo</a>; <i>/* run more tests with -dt -run */</i></td></tr>
+<tr><th id="368">368</th><td>    <b>if</b> (<a class="local col0 ref" href="#80ppfp" title='ppfp' data-ref="80ppfp" data-ref-filename="80ppfp">ppfp</a> &amp;&amp; <a class="local col0 ref" href="#80ppfp" title='ppfp' data-ref="80ppfp" data-ref-filename="80ppfp">ppfp</a> != <a class="macro" href="../include/stdio.h.html#140" title="stdout" data-ref="_M/stdout">stdout</a>)</td></tr>
+<tr><th id="369">369</th><td>        <a class="ref fn" href="../include/stdio.h.html#fclose" title='fclose' data-ref="fclose" data-ref-filename="fclose">fclose</a>(<a class="local col0 ref" href="#80ppfp" title='ppfp' data-ref="80ppfp" data-ref-filename="80ppfp">ppfp</a>);</td></tr>
+<tr><th id="370">370</th><td>    <b>return</b> <a class="local col2 ref" href="#72ret" title='ret' data-ref="72ret" data-ref-filename="72ret">ret</a>;</td></tr>
+<tr><th id="371">371</th><td>}</td></tr>
+<tr><th id="372">372</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2020-Apr-21</em> from project tcc revision <em>0.9.27</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1190'/>
+<doc f='tcc/tcc.h' l='1189'>/* tcc_parse_args return codes: */</doc>
+<use f='tcc/libtcc.c' l='1732' u='c'/>
+<use f='tcc/libtcc.c' l='1961' u='c'/>
+<use f='tcc/tcc.c' l='261' u='c'/>

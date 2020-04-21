@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1298' type='int'/>
+<def f='tcc/tccgen.c' l='31' type='int'/>
+<use f='tcc/tccgen.c' l='239' u='w' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='814' u='w' c='get_sym_ref'/>
+<use f='tcc/tccgen.c' l='3657' u='w' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3789' u='w' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='3954' u='w' c='struct_decl'/>

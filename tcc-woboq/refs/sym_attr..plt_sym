@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='646' type='int'/>
+<offset>64</offset>
+<use f='tcc/tccelf.c' l='1007' u='w' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1105' u='r' c='build_got_entries'/>

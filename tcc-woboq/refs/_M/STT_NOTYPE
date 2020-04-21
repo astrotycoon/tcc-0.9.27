@@ -1,0 +1,14 @@
+<dec f='tcc/elf.h' l='469'/>
+<doc f='tcc/elf.h' l='467'>/* Legal values for ST_TYPE subfield of st_info (symbol type).  */</doc>
+<use f='tcc/libtcc.c' l='1184' u='c'/>
+<use f='tcc/tccelf.c' l='1069' u='c'/>
+<use f='tcc/tccelf.c' l='1140' u='c'/>
+<use f='tcc/tccelf.c' l='1144' u='c'/>
+<use f='tcc/tccelf.c' l='1168' u='c'/>
+<use f='tcc/tccelf.c' l='1172' u='c'/>
+<use f='tcc/tccelf.c' l='1221' u='c'/>
+<use f='tcc/tccelf.c' l='1225' u='c'/>
+<use f='tcc/tccelf.c' l='1229' u='c'/>
+<use f='tcc/tccelf.c' l='1260' u='c'/>
+<use f='tcc/tccelf.c' l='1265' u='c'/>
+<use f='tcc/tccgen.c' l='383' u='c'/>

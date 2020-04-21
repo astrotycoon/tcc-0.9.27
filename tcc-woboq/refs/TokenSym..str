@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='402' type='char [1]'/>
+<use f='tcc/i386-asm.c' l='285' u='r' c='asm_parse_numeric_reg'/>
+<use f='tcc/i386-asm.c' l='853' u='r' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='854' u='r' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='855' u='r' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='858' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='1206' u='r' c='asm_parse_regvar'/>
+<offset>384</offset>
+<use f='tcc/tccpp.c' l='437' u='r' c='tok_alloc_new'/>
+<use f='tcc/tccpp.c' l='438' u='w' c='tok_alloc_new'/>
+<use f='tcc/tccpp.c' l='464' u='r' c='tok_alloc'/>
+<use f='tcc/tccpp.c' l='572' u='r' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='2711' u='r' c='next_nomacro1'/>

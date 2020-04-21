@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1445' type='void squeeze_multi_relocs(Section * sec, size_t oldrelocoffset)'/>
+<def f='tcc/tccelf.c' l='616' ll='648' type='void squeeze_multi_relocs(Section * s, size_t oldrelocoffset)'/>
+<doc f='tcc/tccelf.c' l='613'>/* Remove relocations for section S-&gt;reloc starting at oldrelocoffset
+   that are to the same place, retaining the last of them.  As side effect
+   the relocations are sorted.  Possibly reduces the number of relocs.  */</doc>
+<use f='tcc/tccgen.c' l='7035' u='c' c='decl_initializer_alloc'/>

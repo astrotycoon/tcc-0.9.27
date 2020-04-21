@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1318' type='void check_vstack()'/>
+<def f='tcc/tccgen.c' l='131' ll='135' type='void check_vstack()'/>
+<use f='tcc/tccgen.c' l='277' u='c' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='7093' u='c' c='gen_function'/>

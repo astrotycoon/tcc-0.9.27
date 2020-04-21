@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='706' type='char *'/>
+<offset>1216</offset>
+<doc f='tcc/tcc.h' l='706'>/* symbols to call at unload-time (not used currently) */</doc>
+<use f='tcc/libtcc.c' l='923' u='r' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='1345' u='a' c='tcc_set_linker'/>

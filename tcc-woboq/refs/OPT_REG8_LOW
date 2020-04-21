@@ -1,0 +1,7 @@
+<dec f='tcc/i386-asm.c' l='75' type='11'/>
+<use f='tcc/i386-asm.c' l='126' u='r' c='parse_operand'/>
+<use f='tcc/i386-asm.c' l='126' u='r' c='asm_rex'/>
+<use f='tcc/i386-asm.c' l='126' u='r' c='asm_rex'/>
+<use f='tcc/i386-asm.c' l='126' u='r' c='asm_rex'/>
+<doc f='tcc/i386-asm.c' l='75'>/* %spl,%bpl,%sil,%dil, encoded like ah,ch,dh,bh, but
+		     with REX prefix, not used in insn templates */</doc>

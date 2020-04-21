@@ -1,0 +1,23 @@
+<dec f='tcc/tcc.h' l='1139' type='void dynarray_add(void * ptab, int * nb_ptr, void * data)'/>
+<doc f='tcc/tcc.h' l='1138'>/* other utilities */</doc>
+<def f='tcc/libtcc.c' l='410' ll='428' type='void dynarray_add(void * ptab, int * nb_ptr, void * data)'/>
+<use f='tcc/libtcc.c' l='459' u='c' c='tcc_split_path'/>
+<use f='tcc/libtcc.c' l='1017' u='c' c='tcc_add_file_internal'/>
+<use f='tcc/libtcc.c' l='1607' u='c' c='args_parser_add_file'/>
+<use f='tcc/libtcc.c' l='1635' u='c' c='args_parser_make_argv'/>
+<use f='tcc/libtcc.c' l='1664' u='c' c='args_parser_listfile'/>
+<use f='tcc/libtcc.c' l='1824' u='c' c='tcc_parse_args'/>
+<doc f='tcc/libtcc.c' l='408'>/* dynarrays */</doc>
+<use f='tcc/tccelf.c' l='58' u='c' c='tccelf_new'/>
+<use f='tcc/tccelf.c' l='218' u='c' c='new_section'/>
+<use f='tcc/tccelf.c' l='221' u='c' c='new_section'/>
+<use f='tcc/tccelf.c' l='2762' u='c' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2993' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccelf.c' l='2995' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccgen.c' l='462' u='c' c='__sym_malloc'/>
+<use f='tcc/tccgen.c' l='6148' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='7277' u='c' c='decl0'/>
+<use f='tcc/tccpp.c' l='1594' u='c' c='search_cached_include'/>
+<use f='tcc/tccpp.c' l='1696' u='c' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1853' u='c' c='preprocess'/>
+<use f='tcc/tccrun.c' l='92' u='c' c='tcc_relocate'/>

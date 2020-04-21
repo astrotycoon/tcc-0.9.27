@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/sys/cdefs.h' l='246'/>
+<use f='include/unistd.h' l='529' u='c'/>
+<use f='include/signal.h' l='170' u='c'/>
+<use f='include/signal.h' l='173' u='c'/>
+<use f='include/signal.h' l='176' u='c'/>
+<use f='include/signal.h' l='336' u='c'/>

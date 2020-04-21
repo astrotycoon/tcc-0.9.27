@@ -1,0 +1,14 @@
+<dec f='tcc/tcc.h' l='683' type='int'/>
+<offset>736</offset>
+<use f='tcc/libtcc.c' l='1427' u='r' c='tcc_set_linker'/>
+<use f='tcc/libtcc.c' l='1564' u='a'/>
+<use f='tcc/libtcc.c' l='1564' u='a'/>
+<use f='tcc/libtcc.c' l='1564' u='a'/>
+<use f='tcc/libtcc.c' l='1564' u='a'/>
+<use f='tcc/libtcc.c' l='1940' u='r' c='tcc_parse_args'/>
+<use f='tcc/tccasm.c' l='748' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='766' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='783' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='813' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccgen.c' l='3435' u='r' c='parse_attribute'/>
+<use f='tcc/tccpp.c' l='1703' u='r' c='pragma_parse'/>

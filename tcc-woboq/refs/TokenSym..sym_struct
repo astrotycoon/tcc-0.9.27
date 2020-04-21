@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='398' type='struct Sym *'/>
+<offset>192</offset>
+<doc f='tcc/tcc.h' l='398'>/* direct pointer to structure */</doc>
+<use f='tcc/tccgen.c' l='536' u='r' c='struct_find'/>
+<use f='tcc/tccgen.c' l='567' u='a' c='sym_push'/>
+<use f='tcc/tccgen.c' l='615' u='a' c='sym_pop'/>
+<use f='tcc/tccpp.c' l='433' u='w' c='tok_alloc_new'/>

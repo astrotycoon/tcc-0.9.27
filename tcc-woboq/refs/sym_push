@@ -1,0 +1,19 @@
+<dec f='tcc/tcc.h' l='1151' type='Sym * sym_push(int v, CType * type, int r, int c)'/>
+<use f='tcc/tccgen.c' l='259' u='c' c='tccgen_compile'/>
+<def f='tcc/tccgen.c' l='549' ll='578' type='Sym * sym_push(int v, CType * type, int r, int c)'/>
+<use f='tcc/tccgen.c' l='932' u='c' c='external_sym'/>
+<use f='tcc/tccgen.c' l='2757' u='c' c='mk_pointer'/>
+<use f='tcc/tccgen.c' l='3657' u='c' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3662' u='c' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3795' u='c' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='3827' u='c' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='3957' u='c' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='3992' u='c' c='parse_btype_qualify'/>
+<use f='tcc/tccgen.c' l='4296' u='c' c='post_type'/>
+<use f='tcc/tccgen.c' l='4328' u='c' c='post_type'/>
+<use f='tcc/tccgen.c' l='4387' u='c' c='post_type'/>
+<use f='tcc/tccgen.c' l='6934' u='c' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='6975' u='c' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7198' u='c' c='decl0'/>
+<use f='tcc/tccgen.c' l='7315' u='c' c='decl0'/>
+<doc f='tcc/tccgen.c' l='548'>/* push a given symbol on the symbol stack */</doc>

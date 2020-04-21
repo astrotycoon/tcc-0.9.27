@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='433' type='int [4]'/>
+<offset>0</offset>
+<use f='tcc/tccpp.c' l='1151' u='r' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='1178' u='r' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='1179' u='r' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='1188' u='r' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='1189' u='r' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='1190' u='r' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='1191' u='r' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='1223' u='r' c='TOK_GET'/>

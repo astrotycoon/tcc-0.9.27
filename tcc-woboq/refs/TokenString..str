@@ -1,0 +1,23 @@
+<dec f='tcc/tcc.h' l='589' type='int *'/>
+<offset>0</offset>
+<use f='tcc/tccasm.c' l='635' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccgen.c' l='6876' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccpp.c' l='1044' u='w' c='tok_str_new'/>
+<use f='tcc/tccpp.c' l='1062' u='r' c='tok_str_dup'/>
+<use f='tcc/tccpp.c' l='1073' u='r' c='tok_str_free'/>
+<use f='tcc/tccpp.c' l='1087' u='r' c='tok_str_realloc'/>
+<use f='tcc/tccpp.c' l='1089' u='w' c='tok_str_realloc'/>
+<use f='tcc/tccpp.c' l='1091' u='r' c='tok_str_realloc'/>
+<use f='tcc/tccpp.c' l='1099' u='r' c='tok_str_add'/>
+<use f='tcc/tccpp.c' l='1112' u='r' c='begin_macro'/>
+<use f='tcc/tccpp.c' l='1134' u='r' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='3093' u='r' c='macro_arg_subst'/>
+<use f='tcc/tccpp.c' l='3115' u='r' c='macro_arg_subst'/>
+<use f='tcc/tccpp.c' l='3215' u='r' c='macro_twosharps'/>
+<use f='tcc/tccpp.c' l='3355' u='r' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3357' u='r' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3360' u='r' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3405' u='r' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3491' u='w' c='macro_subst'/>
+<use f='tcc/tccpp.c' l='3506' u='r' c='macro_subst'/>
+<use f='tcc/tccpp.c' l='3697' u='r' c='tccpp_delete'/>

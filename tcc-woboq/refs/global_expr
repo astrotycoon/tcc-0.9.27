@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1302' type='int'/>
+<def f='tcc/tccgen.c' l='56' type='int'/>
+<use f='tcc/tccgen.c' l='4701' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='6283' u='r' c='parse_init_elem'/>
+<use f='tcc/tccgen.c' l='6284' u='w' c='parse_init_elem'/>
+<use f='tcc/tccgen.c' l='6286' u='w' c='parse_init_elem'/>
+<doc f='tcc/tccgen.c' l='56'>/* true if compound literals must be allocated globally (used during initializers parsing */</doc>

@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1325' type='void update_storage(Sym * sym)'/>
+<use f='tcc/tccasm.c' l='686' u='c' c='asm_parse_directive'/>
+<def f='tcc/tccgen.c' l='292' ll='332' type='void update_storage(Sym * sym)'/>
+<use f='tcc/tccgen.c' l='418' u='c' c='put_extern_sym2'/>
+<use f='tcc/tccgen.c' l='842' u='c' c='external_global_sym'/>
+<use f='tcc/tccgen.c' l='922' u='c' c='patch_storage'/>
+<doc f='tcc/tccgen.c' l='291'>/* apply storage attributes to Elf symbol */</doc>

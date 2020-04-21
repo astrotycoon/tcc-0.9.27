@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='1043' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='1050' type='Elf64_Word'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='1043'>/* Length of the note&apos;s name.  */</doc>
+<doc f='tcc/elf.h' l='1050'>/* Length of the note&apos;s name.  */</doc>

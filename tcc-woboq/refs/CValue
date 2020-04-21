@@ -1,0 +1,10 @@
+<def f='tcc/tcc.h' l='424' ll='434'/>
+<use f='tcc/tcc.h' l='424'/>
+<size>16</size>
+<doc f='tcc/tcc.h' l='423'>/* constant value */</doc>
+<mbr r='CValue::ld' o='0' t='long double'/>
+<mbr r='CValue::d' o='0' t='double'/>
+<mbr r='CValue::f' o='0' t='float'/>
+<mbr r='CValue::i' o='0' t='uint64_t'/>
+<mbr r='CValue::str' o='0' t='struct (anonymous struct at /tmp/tcc-0.9.27/tcc-0.9.27/./tcc.h:429:5)'/>
+<mbr r='CValue::tab' o='0' t='int [4]'/>

@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='701' type='int'/>
+<offset>1088</offset>
+<use f='tcc/libtcc.c' l='1350' u='w' c='tcc_set_linker'/>
+<use f='tcc/tccelf.c' l='1584' u='r' c='layout_sections'/>

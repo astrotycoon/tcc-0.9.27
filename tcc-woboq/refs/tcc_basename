@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1106' type='char * tcc_basename(const char * name)'/>
+<def f='tcc/libtcc.c' l='178' ll='184' type='char * tcc_basename(const char * name)'/>
+<use f='tcc/libtcc.c' l='192' u='c' c='tcc_fileextension'/>
+<doc f='tcc/libtcc.c' l='177'>/* extract the basename of a file */</doc>
+<use f='tcc/tcctools.c' l='486' u='c' c='tcc_tool_cross'/>
+<use f='tcc/tcc.c' l='217' u='c' c='default_outputfile'/>
+<use f='tcc/tccelf.c' l='2738' u='c' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2929' u='c' c='ld_add_file'/>
+<use f='tcc/tccpp.c' l='1824' u='c' c='preprocess'/>

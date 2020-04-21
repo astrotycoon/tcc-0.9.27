@@ -1,0 +1,41 @@
+<dec f='include/string.h' l='136' type='int strcmp(const char * __s1, const char * __s2)'/>
+<use f='tcc/i386-asm.c' l='1703' u='c' c='asm_clobber'/>
+<use f='tcc/i386-asm.c' l='1704' u='c' c='asm_clobber'/>
+<use f='tcc/i386-asm.c' l='1705' u='c' c='asm_clobber'/>
+<doc f='include/string.h' l='135'>/* Compare S1 and S2.  */</doc>
+<use f='tcc/libtcc.c' l='613' u='c' c='tcc_open'/>
+<use f='tcc/libtcc.c' l='1086' u='c' c='tcc_add_file'/>
+<use f='tcc/libtcc.c' l='1088' u='c' c='tcc_add_file'/>
+<use f='tcc/libtcc.c' l='1090' macro='1' u='c' c='tcc_add_file'/>
+<use f='tcc/libtcc.c' l='1090' macro='1' u='c' c='tcc_add_file'/>
+<use f='tcc/libtcc.c' l='1227' u='c' c='set_flag'/>
+<use f='tcc/libtcc.c' l='1363' u='c' c='tcc_set_linker'/>
+<use f='tcc/tcctools.c' l='191' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='499' u='c' c='tcc_tool_cross'/>
+<use f='tcc/tcc.c' l='216' u='c' c='default_outputfile'/>
+<use f='tcc/tccasm.c' l='810' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='810' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccelf.c' l='314' u='c' c='find_section'/>
+<use f='tcc/tccelf.c' l='451' u='c' c='find_elf_sym'/>
+<use f='tcc/tccelf.c' l='806' u='c' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='1451' u='c' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='2366' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2380' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2410' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2414' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2668' u='c' c='tcc_load_archive'/>
+<use f='tcc/tccelf.c' l='2672' u='c' c='tcc_load_archive'/>
+<use f='tcc/tccelf.c' l='2749' u='c' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2781' u='c' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2948' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccelf.c' l='2981' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccelf.c' l='3032' u='c' c='tcc_load_ldscript'/>
+<use f='tcc/tccelf.c' l='3033' u='c' c='tcc_load_ldscript'/>
+<use f='tcc/tccelf.c' l='3037' u='c' c='tcc_load_ldscript'/>
+<use f='tcc/tccelf.c' l='3038' u='c' c='tcc_load_ldscript'/>
+<use f='tcc/tccgen.c' l='3330' u='c' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3332' u='c' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3334' u='c' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3336' u='c' c='parse_attribute'/>
+<use f='tcc/tccpp.c' l='1295' u='c' c='macro_is_equal'/>
+<use f='tcc/tccpp.c' l='1584' macro='1' u='c' c='search_cached_include'/>

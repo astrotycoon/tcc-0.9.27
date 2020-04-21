@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1163'/>
+<doc f='tcc/tcc.h' l='1162'>/* flags: */</doc>
+<use f='tcc/libtcc.c' l='1011' u='c'/>
+<use f='tcc/libtcc.c' l='1080' u='c'/>

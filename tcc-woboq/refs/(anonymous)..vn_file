@@ -1,0 +1,7 @@
+<dec f='tcc/elf.h' l='897' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='908' type='Elf64_Word'/>
+<offset>32</offset>
+<doc f='tcc/elf.h' l='897'>/* Offset of filename for this
+					   dependency */</doc>
+<doc f='tcc/elf.h' l='908'>/* Offset of filename for this
+					   dependency */</doc>

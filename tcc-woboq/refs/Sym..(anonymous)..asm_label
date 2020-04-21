@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='498' type='int'/>
+<offset>0</offset>
+<doc f='tcc/tcc.h' l='498'>/* associated asm label */</doc>
+<use f='tcc/tccgen.c' l='408' u='r' c='put_extern_sym2'/>
+<use f='tcc/tccgen.c' l='409' u='r' c='put_extern_sym2'/>
+<use f='tcc/tccgen.c' l='921' u='w' c='patch_storage'/>

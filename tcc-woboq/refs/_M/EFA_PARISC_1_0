@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1775'/>
+<doc f='tcc/elf.h' l='1773'>/* Defined values for `e_flags &amp; EF_PARISC_ARCH&apos; are:  */</doc>

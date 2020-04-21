@@ -1,0 +1,4 @@
+<dec f='include/setjmp.h' l='58' type='int _setjmp(struct __jmp_buf_tag * __env)'/>
+<doc f='include/setjmp.h' l='56'>/* Store the calling environment in ENV, not saving the signal mask.
+   Return 0.  */</doc>
+<use f='tcc/libtcc.c' l='641' macro='1' u='c' c='tcc_compile'/>

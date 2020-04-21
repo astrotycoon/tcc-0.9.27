@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='103' type='84'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='98'>/* GNU C++ `catch&apos; clause.  Value is its address.  Desc is nonzero if
+   this entry is immediately followed by a CAUGHT stab saying what exception
+   was caught.  Multiple CAUGHT stabs means that multiple exceptions
+   can be caught here.  If Desc is 0, it means all exceptions are caught
+   here.  */</doc>

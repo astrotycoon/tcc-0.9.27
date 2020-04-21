@@ -1,0 +1,12 @@
+<dec f='include/string.h' l='225' type='char * strchr(const char * __s, int __c)'/>
+<use f='tcc/i386-asm.c' l='853' u='c' c='asm_opcode'/>
+<use f='tcc/libtcc.c' l='180' u='c' c='tcc_basename'/>
+<use f='tcc/libtcc.c' l='194' u='c' c='tcc_fileextension'/>
+<use f='tcc/libtcc.c' l='1314' u='c' c='skip_linker_arg'/>
+<use f='tcc/libtcc.c' l='1594' u='c' c='parse_option_D'/>
+<use f='tcc/tcctools.c' l='226' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tccasm.c' l='1022' u='c' c='find_constraint'/>
+<use f='tcc/tccasm.c' l='1128' u='c' c='parse_asm_operands'/>
+<use f='tcc/tccelf.c' l='2902' u='c' c='ld_next'/>
+<use f='tcc/tccpp.c' l='3825' u='c' c='pp_check_he0xE'/>
+<use f='tcc/tccrun.c' l='380' u='c' c='rt_printline'/>

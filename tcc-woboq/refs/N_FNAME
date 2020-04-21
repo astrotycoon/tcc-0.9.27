@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='27' type='34'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='25'>/* Function name for BSD Fortran.  Only the name is significant.
+   To find the address, look in the corresponding external symbol.  */</doc>

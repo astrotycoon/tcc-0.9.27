@@ -1,0 +1,63 @@
+<dec f='tcc/elf.h' l='399' type='Elf32_Section'/>
+<dec f='tcc/elf.h' l='407' type='Elf64_Section'/>
+<use f='tcc/i386-asm.c' l='504' u='r' c='gen_disp32'/>
+<use f='tcc/i386-asm.c' l='1036' u='r' c='asm_opcode'/>
+<offset>48</offset>
+<doc f='tcc/elf.h' l='399'>/* Section index */</doc>
+<doc f='tcc/elf.h' l='407'>/* Section index */</doc>
+<use f='tcc/tcctools.c' l='206' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tccasm.c' l='107' u='r' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='113' u='r' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='170' u='r' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='290' u='r' c='asm_expr_sum'/>
+<use f='tcc/tccasm.c' l='290' u='r' c='asm_expr_sum'/>
+<use f='tcc/tccasm.c' l='291' u='r' c='asm_expr_sum'/>
+<use f='tcc/tccasm.c' l='295' u='r' c='asm_expr_sum'/>
+<use f='tcc/tccasm.c' l='378' u='r' c='asm_new_label1'/>
+<use f='tcc/tccasm.c' l='394' u='w' c='asm_new_label1'/>
+<use f='tcc/tccasm.c' l='420' u='r' c='set_symbol'/>
+<use f='tcc/tccasm.c' l='651' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccelf.c' l='170' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='174' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='407' u='w' c='put_elf_sym'/>
+<use f='tcc/tccelf.c' l='466' u='r' c='get_elf_sym_addr'/>
+<use f='tcc/tccelf.c' l='508' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='510' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='537' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='538' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='561' u='w' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='786' u='r' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='817' u='r' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='983' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1048' u='r' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1073' u='r' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1278' u='r' c='resolve_common_syms'/>
+<use f='tcc/tccelf.c' l='1282' u='w' c='resolve_common_syms'/>
+<use f='tcc/tccelf.c' l='1395' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1460' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1480' u='r' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='1483' u='r' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='1484' u='r' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='1506' u='r' c='export_global_syms'/>
+<use f='tcc/tccelf.c' l='2043' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2043' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2044' u='w' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2044' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2047' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2047' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2048' u='w' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2048' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2203' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2203' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2205' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2474' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2475' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2476' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2493' u='w' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2501' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2614' u='r' c='tcc_load_alacarte'/>
+<use f='tcc/tccelf.c' l='2771' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccgen.c' l='416' u='w' c='put_extern_sym2'/>
+<use f='tcc/tccgen.c' l='6494' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6947' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7352' u='r' c='decl0'/>

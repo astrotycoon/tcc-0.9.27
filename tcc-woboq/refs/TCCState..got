@@ -1,0 +1,22 @@
+<dec f='tcc/tcc.h' l='790' type='Section *'/>
+<offset>10432</offset>
+<doc f='tcc/tcc.h' l='789'>/* got &amp; plt handling */</doc>
+<use f='tcc/tccelf.c' l='914' u='w' c='build_got'/>
+<use f='tcc/tccelf.c' l='915' u='r' c='build_got'/>
+<use f='tcc/tccelf.c' l='917' u='r' c='build_got'/>
+<use f='tcc/tccelf.c' l='919' u='r' c='build_got'/>
+<use f='tcc/tccelf.c' l='948' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='949' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='978' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='984' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='988' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1095' u='r' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1321' u='r' c='fill_got_entry'/>
+<use f='tcc/tccelf.c' l='1323' u='r' c='fill_got_entry'/>
+<use f='tcc/tccelf.c' l='1362' u='r' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1362' u='r' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1362' u='r' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1368' u='r' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1840' u='r' c='final_sections_reloc'/>
+<use f='tcc/tccelf.c' l='2196' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2220' u='r' c='elf_output_file'/>

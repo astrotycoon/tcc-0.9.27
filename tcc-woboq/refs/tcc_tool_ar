@@ -1,0 +1,2 @@
+<def f='tcc/tcctools.c' l='69' ll='278' type='int tcc_tool_ar(TCCState * s1, int argc, char ** argv)'/>
+<use f='tcc/tcc.c' l='270' u='c' c='main'/>

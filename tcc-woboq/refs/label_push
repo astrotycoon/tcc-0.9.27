@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1251' type='Sym * label_push(Sym ** ptop, int v, int flags)'/>
+<use f='tcc/tccgen.c' l='4977' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5956' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6177' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6206' u='c' c='block'/>
+<def f='tcc/tccpp.c' l='1365' ll='1380' type='Sym * label_push(Sym ** ptop, int v, int flags)'/>

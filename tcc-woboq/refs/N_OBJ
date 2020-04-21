@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='57' type='56'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='55'>/* New stab from Solaris.  I don&apos;t know what it means, but it
+   don&apos;t seem to contain useful information.  */</doc>

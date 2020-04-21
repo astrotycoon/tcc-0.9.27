@@ -1,0 +1,9 @@
+<def f='tcc/tcc.h' l='610' ll='615'/>
+<use f='tcc/tcc.h' l='610'/>
+<size>16</size>
+<doc f='tcc/tcc.h' l='608'>/* include file cache, used to find files faster and also to eliminate
+   inclusion if the include file is protected by #ifndef ... #endif */</doc>
+<mbr r='CachedInclude::ifndef_macro' o='0' t='int'/>
+<mbr r='CachedInclude::once' o='32' t='int'/>
+<mbr r='CachedInclude::hash_next' o='64' t='int'/>
+<mbr r='CachedInclude::filename' o='96' t='char [1]'/>

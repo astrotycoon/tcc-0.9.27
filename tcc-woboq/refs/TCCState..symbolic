@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='661' type='int'/>
+<offset>192</offset>
+<doc f='tcc/tcc.h' l='661'>/* if true, resolve symbols in the current module first */</doc>
+<use f='tcc/libtcc.c' l='1341' u='w' c='tcc_set_linker'/>
+<use f='tcc/tccelf.c' l='2151' u='r' c='elf_output_file'/>

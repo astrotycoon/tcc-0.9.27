@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1483' type='void gsym_addr(int t, int a)'/>
+<use f='tcc/tccgen.c' l='5939' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6071' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6091' u='c' c='block'/>

@@ -1,0 +1,4 @@
+<dec f='tcc/tcctools.c' l='42' type='char [10]'/>
+<use f='tcc/tcctools.c' l='236' u='a' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='250' u='a' c='tcc_tool_ar'/>
+<offset>384</offset>

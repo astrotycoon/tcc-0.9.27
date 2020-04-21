@@ -1,0 +1,55 @@
+<dec f='tcc/i386-asm.c' l='79' type='13'/>
+<use f='tcc/x86_64-asm.h' l='131'/>
+<use f='tcc/x86_64-asm.h' l='131'/>
+<use f='tcc/x86_64-asm.h' l='131'/>
+<use f='tcc/x86_64-asm.h' l='131'/>
+<use f='tcc/x86_64-asm.h' l='132'/>
+<use f='tcc/x86_64-asm.h' l='132'/>
+<use f='tcc/x86_64-asm.h' l='132'/>
+<use f='tcc/x86_64-asm.h' l='132'/>
+<use f='tcc/x86_64-asm.h' l='133'/>
+<use f='tcc/x86_64-asm.h' l='133'/>
+<use f='tcc/x86_64-asm.h' l='133'/>
+<use f='tcc/x86_64-asm.h' l='133'/>
+<use f='tcc/x86_64-asm.h' l='173'/>
+<use f='tcc/x86_64-asm.h' l='173'/>
+<use f='tcc/x86_64-asm.h' l='173'/>
+<use f='tcc/x86_64-asm.h' l='173'/>
+<use f='tcc/x86_64-asm.h' l='191'/>
+<use f='tcc/x86_64-asm.h' l='191'/>
+<use f='tcc/x86_64-asm.h' l='191'/>
+<use f='tcc/x86_64-asm.h' l='191'/>
+<use f='tcc/x86_64-asm.h' l='192'/>
+<use f='tcc/x86_64-asm.h' l='192'/>
+<use f='tcc/x86_64-asm.h' l='192'/>
+<use f='tcc/x86_64-asm.h' l='192'/>
+<use f='tcc/x86_64-asm.h' l='131'/>
+<use f='tcc/x86_64-asm.h' l='131'/>
+<use f='tcc/x86_64-asm.h' l='131'/>
+<use f='tcc/x86_64-asm.h' l='131'/>
+<use f='tcc/x86_64-asm.h' l='132'/>
+<use f='tcc/x86_64-asm.h' l='132'/>
+<use f='tcc/x86_64-asm.h' l='132'/>
+<use f='tcc/x86_64-asm.h' l='132'/>
+<use f='tcc/x86_64-asm.h' l='133'/>
+<use f='tcc/x86_64-asm.h' l='133'/>
+<use f='tcc/x86_64-asm.h' l='133'/>
+<use f='tcc/x86_64-asm.h' l='133'/>
+<use f='tcc/x86_64-asm.h' l='173'/>
+<use f='tcc/x86_64-asm.h' l='173'/>
+<use f='tcc/x86_64-asm.h' l='173'/>
+<use f='tcc/x86_64-asm.h' l='173'/>
+<use f='tcc/x86_64-asm.h' l='191'/>
+<use f='tcc/x86_64-asm.h' l='191'/>
+<use f='tcc/x86_64-asm.h' l='191'/>
+<use f='tcc/x86_64-asm.h' l='191'/>
+<use f='tcc/x86_64-asm.h' l='192'/>
+<use f='tcc/x86_64-asm.h' l='192'/>
+<use f='tcc/x86_64-asm.h' l='192'/>
+<use f='tcc/x86_64-asm.h' l='192'/>
+<use f='tcc/i386-asm.c' l='115' u='r' c='parse_operand'/>
+<use f='tcc/i386-asm.c' l='115' u='r' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='115' u='r' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='115' u='r' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='115' u='r' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='115' u='r' c='asm_opcode'/>

@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='679' type='int'/>
+<offset>672</offset>
+<doc f='tcc/tcc.h' l='679'>/* if true, emulate MS algorithm for aligning bitfields */</doc>
+<use f='tcc/libtcc.c' l='1584' u='a'/>
+<use f='tcc/libtcc.c' l='1584' u='a'/>
+<use f='tcc/libtcc.c' l='1584' u='a'/>
+<use f='tcc/libtcc.c' l='1584' u='a'/>
+<use f='tcc/tccgen.c' l='3493' u='r' c='struct_layout'/>

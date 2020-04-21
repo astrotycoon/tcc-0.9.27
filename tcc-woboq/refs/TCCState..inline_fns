@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='779' type='struct InlineFunc **'/>
+<offset>10048</offset>
+<doc f='tcc/tcc.h' l='777'>/* inline functions are stored as token lists and compiled last
+       only if referenced */</doc>
+<use f='tcc/tccgen.c' l='7107' u='r' c='gen_inline_functions'/>
+<use f='tcc/tccgen.c' l='7135' u='r' c='free_inline_functions'/>
+<use f='tcc/tccgen.c' l='7139' u='a' c='free_inline_functions'/>
+<use f='tcc/tccgen.c' l='7277' u='a' c='decl0'/>

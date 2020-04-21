@@ -1,0 +1,2 @@
+<dec f='tcc/x86_64-link.c' l='18'/>
+<use f='tcc/tccelf.c' l='1051' u='c'/>

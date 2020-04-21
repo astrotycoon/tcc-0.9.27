@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='557'/>
+<doc f='tcc/tcc.h' l='556'>/* field &apos;Sym.r&apos; for C labels */</doc>
+<use f='tcc/tccgen.c' l='6201' u='c'/>
+<use f='tcc/tccgen.c' l='6204' u='c'/>
+<use f='tcc/tccgen.c' l='6206' u='c'/>

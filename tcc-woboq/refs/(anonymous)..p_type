@@ -1,0 +1,9 @@
+<dec f='tcc/elf.h' l='554' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='566' type='Elf64_Word'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='554'>/* Segment type */</doc>
+<doc f='tcc/elf.h' l='566'>/* Segment type */</doc>
+<use f='tcc/tccelf.c' l='1617' u='w' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1750' u='w' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1759' u='w' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1773' u='w' c='fill_unloadable_phdr'/>

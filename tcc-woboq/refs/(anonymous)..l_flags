@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='1732' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='1741' type='Elf64_Word'/>
+<offset>128</offset>
+<doc f='tcc/elf.h' l='1732'>/* Flags */</doc>
+<doc f='tcc/elf.h' l='1741'>/* Flags */</doc>

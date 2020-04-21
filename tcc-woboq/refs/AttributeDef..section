@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='471' type='struct Section *'/>
+<offset>64</offset>
+<use f='tcc/tccgen.c' l='3312' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='6953' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7281' u='r' c='decl0'/>

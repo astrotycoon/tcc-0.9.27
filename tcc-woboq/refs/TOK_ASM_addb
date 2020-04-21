@@ -1,0 +1,18 @@
+<dec f='tcc/i386-tok.h' l='107' macro='1' type='548'/>
+<use f='tcc/x86_64-asm.h' l='170' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='170' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='171' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='171' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='172' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='172' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='174' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='174' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='170' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='170' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='171' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='171' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='172' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='172' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='174' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='174' macro='1'/>
+<use f='tcc/i386-asm.c' l='968' u='r' c='asm_opcode'/>

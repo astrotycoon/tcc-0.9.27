@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='326'/>
+<doc f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='325'>/* Flags for SYNC_FILE_RANGE.  */</doc>

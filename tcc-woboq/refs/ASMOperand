@@ -1,0 +1,14 @@
+<def f='tcc/tcc.h' l='627' ll='639'/>
+<use f='tcc/tcc.h' l='627'/>
+<size>72</size>
+<mbr r='ASMOperand::id' o='0' t='int'/>
+<mbr r='ASMOperand::constraint' o='64' t='char *'/>
+<mbr r='ASMOperand::asm_str' o='128' t='char [16]'/>
+<mbr r='ASMOperand::vt' o='256' t='SValue *'/>
+<mbr r='ASMOperand::ref_index' o='320' t='int'/>
+<mbr r='ASMOperand::input_index' o='352' t='int'/>
+<mbr r='ASMOperand::priority' o='384' t='int'/>
+<mbr r='ASMOperand::reg' o='416' t='int'/>
+<mbr r='ASMOperand::is_llong' o='448' t='int'/>
+<mbr r='ASMOperand::is_memory' o='480' t='int'/>
+<mbr r='ASMOperand::is_rw' o='512' t='int'/>

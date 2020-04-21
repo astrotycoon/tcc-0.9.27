@@ -1,0 +1,14 @@
+<dec f='tcc/tcc.h' l='675' type='int'/>
+<offset>544</offset>
+<doc f='tcc/tcc.h' l='674'>/* C language options */</doc>
+<use f='tcc/libtcc.c' l='949' u='r' c='tcc_set_output_type'/>
+<use f='tcc/libtcc.c' l='1574' u='a'/>
+<use f='tcc/libtcc.c' l='1574' u='a'/>
+<use f='tcc/libtcc.c' l='1575' u='a'/>
+<use f='tcc/libtcc.c' l='1575' u='a'/>
+<use f='tcc/libtcc.c' l='1574' u='a'/>
+<use f='tcc/libtcc.c' l='1574' u='a'/>
+<use f='tcc/libtcc.c' l='1575' u='a'/>
+<use f='tcc/libtcc.c' l='1575' u='a'/>
+<use f='tcc/tccgen.c' l='4202' u='r' c='parse_btype'/>
+<use f='tcc/tccgen.c' l='4681' u='r' c='unary'/>

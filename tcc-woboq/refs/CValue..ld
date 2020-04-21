@@ -1,0 +1,23 @@
+<dec f='tcc/tcc.h' l='425' type='long double'/>
+<offset>0</offset>
+<use f='tcc/tccgen.c' l='2037' u='r' c='gen_opif'/>
+<use f='tcc/tccgen.c' l='2038' u='r' c='gen_opif'/>
+<use f='tcc/tccgen.c' l='2068' u='w' c='gen_opif'/>
+<use f='tcc/tccgen.c' l='2491' u='w' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2493' u='w' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2498' u='w' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2500' u='w' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2503' u='w' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2505' u='w' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2509' u='r' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2511' u='r' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2513' u='r' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2515' u='r' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2518' u='r' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='4962' u='w' c='unary'/>
+<use f='tcc/tccgen.c' l='6566' u='a' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6571' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6576' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6578' u='r' c='init_putv'/>
+<use f='tcc/tccpp.c' l='2394' u='w' c='parse_number'/>
+<use f='tcc/tccpp.c' l='2449' u='w' c='parse_number'/>

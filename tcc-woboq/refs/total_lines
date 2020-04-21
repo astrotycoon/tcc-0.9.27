@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1210' type='int'/>
+<use f='tcc/libtcc.c' l='602' u='w' c='tcc_close'/>
+<use f='tcc/libtcc.c' l='1981' u='r' c='tcc_print_stats'/>
+<use f='tcc/libtcc.c' l='1983' u='r' c='tcc_print_stats'/>
+<def f='tcc/tccpp.c' l='36' type='int'/>
+<use f='tcc/tccpp.c' l='1964' u='w' c='preprocess'/>
+<doc f='tcc/tccpp.c' l='35'>/* display benchmark infos */</doc>

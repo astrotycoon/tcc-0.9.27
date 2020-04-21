@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='763' type='int [64]'/>
+<offset>6336</offset>
+<use f='tcc/tccpp.c' l='1889' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1894' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1901' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='3587' u='r' c='preprocess_start'/>

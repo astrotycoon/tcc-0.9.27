@@ -1,0 +1,3 @@
+<dec f='tcc/x86_64-gen.c' l='59' type='1'/>
+<use f='tcc/i386-asm.c' l='141' u='r' c='parse_operand'/>
+<use f='tcc/i386-asm.c' l='141' u='r' c='asm_compute_constraints'/>

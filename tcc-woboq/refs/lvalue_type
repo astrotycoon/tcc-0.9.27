@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='1353' type='int lvalue_type(int t)'/>
+<use f='tcc/tccgen.c' l='1028' u='c' c='save_reg_upstack'/>
+<use f='tcc/tccgen.c' l='1245' u='c' c='adjust_bf'/>
+<use f='tcc/tccgen.c' l='2653' u='c' c='gen_cast'/>
+<def f='tcc/tccgen.c' l='4471' ll='4485' type='int lvalue_type(int t)'/>
+<use f='tcc/tccgen.c' l='4501' u='c' c='indir'/>
+<use f='tcc/tccgen.c' l='4707' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5143' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='7327' u='c' c='decl0'/>
+<doc f='tcc/tccgen.c' l='4470'>/* compute the lvalue VT_LVAL_xxx needed to match type t. */</doc>

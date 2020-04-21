@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='596' type='struct TokenString *'/>
+<offset>256</offset>
+<doc f='tcc/tcc.h' l='595'>/* used to chain token-strings with begin/end_macro() */</doc>
+<use f='tcc/tccpp.c' l='1109' u='w' c='begin_macro'/>
+<use f='tcc/tccpp.c' l='1119' u='r' c='end_macro'/>

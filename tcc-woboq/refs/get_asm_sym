@@ -1,0 +1,16 @@
+<dec f='tcc/tcc.h' l='1597' type='Sym * get_asm_sym(int name, Sym * csym)'/>
+<use f='tcc/i386-asm.c' l='1490' u='c' c='subst_asm_operand'/>
+<def f='tcc/tccasm.c' l='66' ll='75' type='Sym * get_asm_sym(int name, Sym * csym)'/>
+<use f='tcc/tccasm.c' l='168' u='c' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='679' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='799' u='c' c='asm_parse_directive'/>
+<doc f='tcc/tccasm.c' l='56'>/* Return a symbol we can use inside the assembler, having name NAME.
+   Symbols from asm and C source share a namespace.  If we generate
+   an asm symbol it&apos;s also a (file-global) C symbol, but it&apos;s
+   either not accessible by name (like &quot;L.123&quot;), or its type information
+   is such that it&apos;s not usable without a proper C declaration.
+
+   Sometimes we need symbols accessible by name from asm, which
+   are anonymous in C, in this case CSYM can be used to transfer
+   all information from that symbol to the (possibly newly created)
+   asm symbol.  */</doc>

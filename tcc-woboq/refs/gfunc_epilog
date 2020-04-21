@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='1490' type='void gfunc_epilog()'/>
+<use f='tcc/tccgen.c' l='7076' u='c' c='gen_function'/>

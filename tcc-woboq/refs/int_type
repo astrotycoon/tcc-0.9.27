@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1295' type='CType'/>
+<def f='tcc/tccgen.c' l='64' type='CType'/>
+<use f='tcc/tccgen.c' l='245' u='m' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='259' u='a' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='706' u='a' c='vpushi'/>
+<use f='tcc/tccgen.c' l='2729' u='a' c='vla_runtime_type_size'/>
+<use f='tcc/tccgen.c' l='4371' u='a' c='post_type'/>
+<use f='tcc/tccgen.c' l='4377' u='a' c='post_type'/>
+<use f='tcc/tccgen.c' l='7252' u='r' c='decl0'/>

@@ -1,0 +1,21 @@
+<dec f='tcc/tcc.h' l='516' type='unsigned long'/>
+<offset>448</offset>
+<doc f='tcc/tcc.h' l='516'>/* section size (only used during output) */</doc>
+<use f='tcc/tccelf.c' l='744' u='r' c='sort_syms'/>
+<use f='tcc/tccelf.c' l='906' u='w' c='prepare_dynamic_rel'/>
+<use f='tcc/tccelf.c' l='1305' u='r' c='tcc_output_binary'/>
+<use f='tcc/tccelf.c' l='1539' u='w' c='alloc_sec_names'/>
+<use f='tcc/tccelf.c' l='1541' u='r' c='alloc_sec_names'/>
+<use f='tcc/tccelf.c' l='1544' u='w' c='alloc_sec_names'/>
+<use f='tcc/tccelf.c' l='1690' u='r' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1693' u='r' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1695' u='r' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1735' u='r' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1763' u='r' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1764' u='r' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1777' u='r' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1778' u='r' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1942' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1970' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2159' u='w' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2160' u='w' c='elf_output_file'/>

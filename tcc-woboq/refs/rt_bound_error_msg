@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1649' type='const char **'/>
+<def f='tcc/tccrun.c' l='40' type='const char **'/>
+<use f='tcc/tccrun.c' l='145' u='w' c='tcc_run'/>
+<use f='tcc/tccrun.c' l='523' u='r' c='sig_error'/>
+<use f='tcc/tccrun.c' l='523' u='r' c='sig_error'/>
+<use f='tcc/tccrun.c' l='524' u='r' c='sig_error'/>

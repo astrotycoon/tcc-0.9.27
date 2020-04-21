@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='743' type='int'/>
+<offset>3904</offset>
+<use f='tcc/libtcc.c' l='524' u='w' c='error1'/>
+<use f='tcc/libtcc.c' l='642' u='w' c='tcc_compile'/>
+<use f='tcc/libtcc.c' l='667' u='r' c='tcc_compile'/>
+<use f='tcc/tccelf.c' l='1828' u='r' c='final_sections_reloc'/>
+<use f='tcc/tccelf.c' l='2070' u='w' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2112' u='r' c='elf_output_file'/>
+<use f='tcc/tccrun.c' l='186' u='w' c='tcc_relocate_ex'/>
+<use f='tcc/tccrun.c' l='194' u='r' c='tcc_relocate_ex'/>
+<use f='tcc/tccrun.c' l='235' u='r' c='tcc_relocate_ex'/>

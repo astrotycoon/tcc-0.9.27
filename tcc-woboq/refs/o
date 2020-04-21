@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1505' type='void o(unsigned int c)'/>
+<use f='tcc/tccgen.c' l='685' u='c' c='vpop'/>
+<use f='tcc/tccgen.c' l='1008' u='c' c='save_reg_upstack'/>
+<use f='tcc/tccgen.c' l='2616' u='c' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2617' u='c' c='gen_cast'/>

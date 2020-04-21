@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='983'/>
+<doc f='tcc/elf.h' l='981'>/* Legal values for a_type (entry type).  */</doc>

@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1410' type='void section_reserve(Section * sec, unsigned long size)'/>
+<def f='tcc/tccelf.c' l='298' ll='304' type='void section_reserve(Section * sec, unsigned long size)'/>
+<use f='tcc/tccelf.c' l='1321' u='c' c='fill_got_entry'/>
+<doc f='tcc/tccelf.c' l='297'>/* reserve at least &apos;size&apos; bytes from section start */</doc>
+<use f='tcc/tccgen.c' l='6472' u='c' c='init_putv'/>

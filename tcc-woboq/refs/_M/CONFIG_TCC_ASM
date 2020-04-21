@@ -1,0 +1,9 @@
+<dec f='tcc/x86_64-gen.c' l='28'/>
+<use f='tcc/tcc.h' l='619' u='a'/>
+<use f='tcc/tcc.h' l='1386' u='a'/>
+<use f='tcc/tcc.h' l='1595' u='a'/>
+<use f='tcc/libtcc.c' l='84' u='a'/>
+<use f='tcc/libtcc.c' l='649' u='a'/>
+<use f='tcc/tccasm.c' l='22' u='a'/>
+<use f='tcc/tccelf.c' l='32' u='a'/>
+<use f='tcc/tccgen.c' l='6927' u='a'/>

@@ -1,0 +1,20 @@
+<dec f='tcc/tcc.h' l='1324' type='Elf64_Sym * elfsym(Sym * )'/>
+<use f='tcc/i386-asm.c' l='503' u='c' c='gen_disp32'/>
+<use f='tcc/i386-asm.c' l='1035' u='c' c='asm_opcode'/>
+<use f='tcc/tccasm.c' l='107' u='c' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='113' u='c' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='169' u='c' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='288' u='c' c='asm_expr_sum'/>
+<use f='tcc/tccasm.c' l='289' u='c' c='asm_expr_sum'/>
+<use f='tcc/tccasm.c' l='374' u='c' c='asm_new_label1'/>
+<use f='tcc/tccasm.c' l='393' u='c' c='asm_new_label1'/>
+<use f='tcc/tccasm.c' l='417' u='c' c='set_symbol'/>
+<use f='tcc/tccasm.c' l='421' u='c' c='set_symbol'/>
+<use f='tcc/tccasm.c' l='649' u='c' c='asm_parse_directive'/>
+<def f='tcc/tccgen.c' l='284' ll='289' macro='1' type='Elf64_Sym * elfsym(Sym * s)'/>
+<use f='tcc/tccgen.c' l='297' u='c' c='update_storage'/>
+<use f='tcc/tccgen.c' l='413' u='c' c='put_extern_sym2'/>
+<use f='tcc/tccgen.c' l='6493' u='c' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6947' u='c' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7084' u='c' c='gen_function'/>
+<use f='tcc/tccgen.c' l='7346' u='c' c='decl0'/>

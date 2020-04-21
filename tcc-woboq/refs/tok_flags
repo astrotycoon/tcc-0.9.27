@@ -1,0 +1,19 @@
+<dec f='tcc/tcc.h' l='1206' type='int'/>
+<use f='tcc/libtcc.c' l='498' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='594' u='w' c='tcc_open_bf'/>
+<def f='tcc/tccpp.c' l='26' type='int'/>
+<use f='tcc/tccpp.c' l='1860' u='w' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1937' u='w' c='preprocess'/>
+<use f='tcc/tccpp.c' l='2597' u='r' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2598' u='w' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2609' u='w' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2614' u='r' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2620' u='w' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2632' u='w' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2640' u='w' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2651' u='r' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2654' u='r' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2962' u='w' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3139' u='w' c='paste_tokens'/>
+<use f='tcc/tccpp.c' l='3623' u='w' c='preprocess_start'/>
+<doc f='tcc/tccpp.c' l='24'>/* global variables */</doc>

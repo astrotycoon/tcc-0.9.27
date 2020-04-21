@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='472' type='int'/>
+<offset>128</offset>
+<doc f='tcc/tcc.h' l='472'>/* token */</doc>
+<use f='tcc/tccgen.c' l='3320' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='7342' u='r' c='decl0'/>
+<use f='tcc/tccgen.c' l='7345' u='r' c='decl0'/>

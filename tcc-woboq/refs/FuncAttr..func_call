@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='462' type='unsigned int'/>
+<offset>0</offset>
+<use f='tcc/tccgen.c' l='260' u='w' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='2772' u='r' c='is_compatible_func'/>
+<use f='tcc/tccgen.c' l='2772' u='r' c='is_compatible_func'/>
+<use f='tcc/tccgen.c' l='3379' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3384' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3979' u='r' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='3979' u='r' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='3980' u='w' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='3980' u='r' c='sym_to_attr'/>

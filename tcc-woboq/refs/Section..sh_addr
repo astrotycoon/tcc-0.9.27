@@ -1,0 +1,21 @@
+<dec f='tcc/tcc.h' l='517' type='Elf64_Addr'/>
+<offset>512</offset>
+<use f='tcc/tccelf.c' l='817' u='r' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='845' u='r' c='relocate_section'/>
+<use f='tcc/tccelf.c' l='861' u='r' c='relocate_rel'/>
+<use f='tcc/tccelf.c' l='1368' u='r' c='fill_local_got_entries'/>
+<use f='tcc/tccelf.c' l='1668' u='w' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1753' u='r' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1761' u='r' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1775' u='r' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1791' u='r' c='fill_dynamic'/>
+<use f='tcc/tccelf.c' l='1792' u='r' c='fill_dynamic'/>
+<use f='tcc/tccelf.c' l='1793' u='r' c='fill_dynamic'/>
+<use f='tcc/tccelf.c' l='1916' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1968' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2196' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2205' u='r' c='elf_output_file'/>
+<use f='tcc/tccrun.c' l='212' u='w' c='tcc_relocate_ex'/>
+<use f='tcc/tccrun.c' l='214' u='w' c='tcc_relocate_ex'/>
+<use f='tcc/tccrun.c' l='216' u='w' c='tcc_relocate_ex'/>
+<use f='tcc/tccrun.c' l='258' u='r' c='tcc_relocate_ex'/>

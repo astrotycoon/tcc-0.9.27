@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1259' type='void preprocess_end(TCCState * s1)'/>
+<use f='tcc/libtcc.c' l='660' u='c' c='tcc_compile'/>
+<def f='tcc/tccpp.c' l='3627' ll='3632' type='void preprocess_end(TCCState * s1)'/>
+<doc f='tcc/tccpp.c' l='3626'>/* cleanup from error/setjmp */</doc>

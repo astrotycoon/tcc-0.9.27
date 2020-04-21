@@ -1,0 +1,4 @@
+<dec f='include/stdlib.h' l='827' type='void qsort(void * __base, size_t __nmemb, size_t __size, __compar_fn_t __compar)'/>
+<doc f='include/stdlib.h' l='825'>/* Sort NMEMB elements of BASE, of SIZE bytes each,
+   using COMPAR to perform the comparisons.  */</doc>
+<use f='tcc/tccgen.c' l='6116' u='c' c='block'/>

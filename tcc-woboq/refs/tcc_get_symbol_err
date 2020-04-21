@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1449' type='void * tcc_get_symbol_err(TCCState * s, const char * name)'/>
+<def f='tcc/tccelf.c' l='482' ll='485' type='void * tcc_get_symbol_err(TCCState * s, const char * name)'/>
+<doc f='tcc/tccelf.c' l='481'>/* return elf symbol value or error */</doc>
+<use f='tcc/tccrun.c' l='125' u='c' c='tcc_run'/>
+<use f='tcc/tccrun.c' l='145' u='c' c='tcc_run'/>
+<use f='tcc/tccrun.c' l='147' u='c' c='tcc_run'/>
+<use f='tcc/tccrun.c' l='148' u='c' c='tcc_run'/>
+<use f='tcc/tccrun.c' l='149' u='c' c='tcc_run'/>
+<use f='tcc/tccrun.c' l='150' u='c' c='tcc_run'/>

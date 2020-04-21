@@ -1,0 +1,10 @@
+<dec f='tcc/elf.h' l='284' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='298' type='Elf64_Word'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='284'>/* Section name (string tbl index) */</doc>
+<doc f='tcc/elf.h' l='298'>/* Section name (string tbl index) */</doc>
+<use f='tcc/tcctools.c' l='191' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tccelf.c' l='1960' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2355' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2372' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2534' u='r' c='tcc_load_object_file'/>

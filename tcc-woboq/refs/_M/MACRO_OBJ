@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='553'/>
+<doc f='tcc/tcc.h' l='552'>/* field &apos;Sym.t&apos; for macros */</doc>
+<use f='tcc/libtcc.c' l='768' u='c'/>
+<use f='tcc/libtcc.c' l='769' u='c'/>
+<use f='tcc/libtcc.c' l='770' u='c'/>
+<use f='tcc/libtcc.c' l='771' u='c'/>
+<use f='tcc/libtcc.c' l='772' u='c'/>
+<use f='tcc/tccpp.c' l='1422' u='c'/>
+<use f='tcc/tccpp.c' l='1483' u='c'/>

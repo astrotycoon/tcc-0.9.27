@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='647' type='int'/>
+<offset>96</offset>
+<use f='tcc/tccelf.c' l='896' u='r' c='prepare_dynamic_rel'/>
+<use f='tcc/tccelf.c' l='981' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='982' u='w' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='985' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1065' u='r' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1414' u='w' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1508' u='w' c='export_global_syms'/>

@@ -1,0 +1,4 @@
+<dec f='tcc/tcctok.h' l='23' type='276'/>
+<use f='tcc/tccasm.c' l='1155' u='r' c='asm_instr'/>
+<use f='tcc/tccgen.c' l='4104' c='parse_btype'/>
+<use f='tcc/tccgen.c' l='4421' c='type_decl'/>

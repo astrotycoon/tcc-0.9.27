@@ -1,0 +1,15 @@
+<dec f='tcc/tcc.h' l='761' type='BufferedFile **'/>
+<offset>6272</offset>
+<use f='tcc/libtcc.c' l='493' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='619' u='r' c='tcc_open'/>
+<use f='tcc/tccpp.c' l='1414' u='r' c='maybe_run_test'/>
+<use f='tcc/tccpp.c' l='1801' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1804' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1856' u='w' c='preprocess'/>
+<use f='tcc/tccpp.c' l='2605' u='r' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2629' u='w' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3586' u='w' c='preprocess_start'/>
+<use f='tcc/tccpp.c' l='3613' u='w' c='preprocess_start'/>
+<use f='tcc/tccpp.c' l='3640' u='w' c='tccpp_new'/>
+<use f='tcc/tccpp.c' l='3864' u='r' c='tcc_preprocess'/>
+<use f='tcc/tccpp.c' l='3869' u='r' c='tcc_preprocess'/>

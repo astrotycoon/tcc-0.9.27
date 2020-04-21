@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='1243' type='void tok_str_free_str(int * str)'/>
+<def f='tcc/tccpp.c' l='1066' ll='1069' type='void tok_str_free_str(int * str)'/>
+<use f='tcc/tccpp.c' l='1073' u='c' c='tok_str_free'/>
+<use f='tcc/tccpp.c' l='1338' u='c' c='free_defines'/>
+<use f='tcc/tccpp.c' l='3357' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3360' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3430' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3432' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3450' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3452' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3697' u='c' c='tccpp_delete'/>

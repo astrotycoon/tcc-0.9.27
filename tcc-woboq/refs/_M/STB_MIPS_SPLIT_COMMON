@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1485'/>
+<doc f='tcc/elf.h' l='1484'>/* MIPS specific values for `st_info&apos;.  */</doc>

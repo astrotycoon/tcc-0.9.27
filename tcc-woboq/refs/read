@@ -1,0 +1,15 @@
+<dec f='include/unistd.h' l='363' type='ssize_t read(int __fd, void * __buf, size_t __nbytes)'/>
+<doc f='include/unistd.h' l='358'>/* Read NBYTES into BUF from FD.  Return the
+   number read, -1 for errors or 0 for EOF.
+
+   This function is a cancellation point and therefore not marked with
+   __THROW.  */</doc>
+<use f='tcc/libtcc.c' l='1658' u='c' c='args_parser_listfile'/>
+<use f='tcc/tccelf.c' l='2251' u='c' c='load_data'/>
+<use f='tcc/tccelf.c' l='2264' u='c' c='tcc_object_type'/>
+<use f='tcc/tccelf.c' l='2433' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2602' u='c' c='tcc_load_alacarte'/>
+<use f='tcc/tccelf.c' l='2646' u='c' c='tcc_load_archive'/>
+<use f='tcc/tccelf.c' l='2649' u='c' c='tcc_load_archive'/>
+<use f='tcc/tccelf.c' l='2702' u='c' c='tcc_load_dll'/>
+<use f='tcc/tccpp.c' l='600' u='c' c='handle_eob'/>

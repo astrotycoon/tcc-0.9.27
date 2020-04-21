@@ -1,0 +1,2 @@
+<dec f='tcc/i386-tok.h' l='20' macro='1' type='466'/>
+<use f='tcc/i386-asm.c' l='1711' u='r' c='asm_clobber'/>

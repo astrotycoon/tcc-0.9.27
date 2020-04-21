@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='62' type='60'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='59'>/* New stab from Solaris.  I don&apos;t know what it means, but it
+   don&apos;t seem to contain useful information.  Possibly related to the
+   optimization flags used in this module.  */</doc>

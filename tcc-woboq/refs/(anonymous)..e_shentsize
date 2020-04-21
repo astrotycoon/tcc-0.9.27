@@ -1,0 +1,8 @@
+<dec f='tcc/elf.h' l='90' type='Elf32_Half'/>
+<dec f='tcc/elf.h' l='108' type='Elf64_Half'/>
+<offset>464</offset>
+<doc f='tcc/elf.h' l='90'>/* Section header table entry size */</doc>
+<doc f='tcc/elf.h' l='108'>/* Section header table entry size */</doc>
+<use f='tcc/tcctools.c' l='177' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='181' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tccelf.c' l='1926' u='w' c='tcc_output_elf'/>

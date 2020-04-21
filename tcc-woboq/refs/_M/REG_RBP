@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/sys/ucontext.h' l='73'/>
+<use f='tcc/tccrun.c' l='645' u='c'/>

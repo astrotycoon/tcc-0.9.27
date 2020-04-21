@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1707'/>
+<doc f='tcc/elf.h' l='1705'>/* Legal values for DT_MIPS_FLAGS Elf32_Dyn entry.  */</doc>

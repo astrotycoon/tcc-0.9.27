@@ -1,0 +1,3 @@
+<dec f='tcc/elf.h' l='866'/>
+<dec f='tcc/elf.h' l='945'/>
+<doc f='tcc/elf.h' l='944'>/* Legal values for vna_flags.  */</doc>

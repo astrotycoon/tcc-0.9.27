@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='1422' type='int put_elf_sym(Section * s, Elf64_Addr value, unsigned long size, int info, int other, int shndx, const char * name)'/>
+<use f='tcc/tccelf.c' l='240' u='c' c='new_symtab'/>
+<def f='tcc/tccelf.c' l='388' ll='433' type='int put_elf_sym(Section * s, Elf64_Addr value, unsigned long size, int info, int other, int shndx, const char * name)'/>
+<use f='tcc/tccelf.c' l='569' u='c' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='1007' u='c' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1410' u='c' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1423' u='c' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1434' u='c' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1505' u='c' c='export_global_syms'/>
+<doc f='tcc/tccelf.c' l='387'>/* return the symbol number */</doc>
+<use f='tcc/tccgen.c' l='160' u='c' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='178' u='c' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='411' u='c' c='put_extern_sym2'/>

@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='593' type='int'/>
+<offset>160</offset>
+<use f='tcc/tccpp.c' l='1047' u='w' c='tok_str_new'/>
+<use f='tcc/tccpp.c' l='1208' u='r' c='tok_str_add_tok'/>
+<use f='tcc/tccpp.c' l='1209' u='w' c='tok_str_add_tok'/>
+<use f='tcc/tccpp.c' l='1210' u='r' c='tok_str_add_tok'/>

@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='1502' type='void gen_cvt_ftof(int t)'/>
+<use f='tcc/tccgen.c' l='2555' u='c' c='gen_cast'/>

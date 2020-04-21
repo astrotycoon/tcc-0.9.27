@@ -1,0 +1,7 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='110' type='100'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='108'>/* Name of main source file.
+   Value is starting text address of the compilation.  */</doc>
+<use f='tcc/tccgen.c' l='168' u='r' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='170' u='r' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='188' u='r' c='tcc_debug_end'/>
+<use f='tcc/tccrun.c' l='415' c='rt_printline'/>

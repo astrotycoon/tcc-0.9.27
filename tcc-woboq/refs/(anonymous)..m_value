@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='1107' type='Elf32_Xword'/>
+<dec f='tcc/elf.h' l='1116' type='Elf64_Xword'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='1107'>/* Symbol value.  */</doc>
+<doc f='tcc/elf.h' l='1116'>/* Symbol value.  */</doc>

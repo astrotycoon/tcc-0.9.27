@@ -1,0 +1,6 @@
+<def f='tcc/tcc.h' l='411' ll='415'/>
+<use f='tcc/tcc.h' l='411'/>
+<size>24</size>
+<mbr r='CString::size' o='0' t='int'/>
+<mbr r='CString::data' o='64' t='void *'/>
+<mbr r='CString::size_allocated' o='128' t='int'/>

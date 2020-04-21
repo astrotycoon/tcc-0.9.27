@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1464'/>
+<doc f='tcc/elf.h' l='1462'>/* Legal values for sh_flags field of Elf32_Shdr.  */</doc>

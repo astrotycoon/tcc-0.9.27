@@ -1,0 +1,4 @@
+<dec f='tcc/tcctok.h' l='78' type='321'/>
+<use f='tcc/tccpp.c' l='1435' u='r' c='expr_preprocess'/>
+<use f='tcc/tccpp.c' l='1479' u='r' c='parse_define'/>
+<use f='tcc/tccpp.c' l='3523' u='r' c='macro_subst'/>

@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='1238' type='void end_macro()'/>
+<use f='tcc/tccasm.c' l='637' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccgen.c' l='5048' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='7045' u='c' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7121' u='c' c='gen_inline_functions'/>
+<def f='tcc/tccpp.c' l='1116' ll='1127' type='void end_macro()'/>
+<use f='tcc/tccpp.c' l='1466' u='c' c='expr_preprocess'/>
+<use f='tcc/tccpp.c' l='3234' u='c' c='next_argstream'/>
+<use f='tcc/tccpp.c' l='3503' u='c' c='macro_subst'/>
+<use f='tcc/tccpp.c' l='3543' u='c' c='next'/>
+<use f='tcc/tccpp.c' l='3630' u='c' c='preprocess_end'/>

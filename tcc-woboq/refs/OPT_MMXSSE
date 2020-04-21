@@ -1,0 +1,883 @@
+<dec f='tcc/i386-asm.c' l='97' type='28'/>
+<use f='tcc/x86_64-asm.h' l='419'/>
+<use f='tcc/x86_64-asm.h' l='419'/>
+<use f='tcc/x86_64-asm.h' l='419'/>
+<use f='tcc/x86_64-asm.h' l='419'/>
+<use f='tcc/x86_64-asm.h' l='422'/>
+<use f='tcc/x86_64-asm.h' l='422'/>
+<use f='tcc/x86_64-asm.h' l='422'/>
+<use f='tcc/x86_64-asm.h' l='422'/>
+<use f='tcc/x86_64-asm.h' l='423'/>
+<use f='tcc/x86_64-asm.h' l='423'/>
+<use f='tcc/x86_64-asm.h' l='423'/>
+<use f='tcc/x86_64-asm.h' l='423'/>
+<use f='tcc/x86_64-asm.h' l='425'/>
+<use f='tcc/x86_64-asm.h' l='425'/>
+<use f='tcc/x86_64-asm.h' l='425'/>
+<use f='tcc/x86_64-asm.h' l='425'/>
+<use f='tcc/x86_64-asm.h' l='426'/>
+<use f='tcc/x86_64-asm.h' l='426'/>
+<use f='tcc/x86_64-asm.h' l='426'/>
+<use f='tcc/x86_64-asm.h' l='426'/>
+<use f='tcc/x86_64-asm.h' l='430'/>
+<use f='tcc/x86_64-asm.h' l='430'/>
+<use f='tcc/x86_64-asm.h' l='430'/>
+<use f='tcc/x86_64-asm.h' l='430'/>
+<use f='tcc/x86_64-asm.h' l='432' u='r'/>
+<use f='tcc/x86_64-asm.h' l='432'/>
+<use f='tcc/x86_64-asm.h' l='432' u='r'/>
+<use f='tcc/x86_64-asm.h' l='432'/>
+<use f='tcc/x86_64-asm.h' l='432' u='r'/>
+<use f='tcc/x86_64-asm.h' l='432'/>
+<use f='tcc/x86_64-asm.h' l='432' u='r'/>
+<use f='tcc/x86_64-asm.h' l='432'/>
+<use f='tcc/x86_64-asm.h' l='433' u='r'/>
+<use f='tcc/x86_64-asm.h' l='433'/>
+<use f='tcc/x86_64-asm.h' l='433' u='r'/>
+<use f='tcc/x86_64-asm.h' l='433'/>
+<use f='tcc/x86_64-asm.h' l='433' u='r'/>
+<use f='tcc/x86_64-asm.h' l='433'/>
+<use f='tcc/x86_64-asm.h' l='433' u='r'/>
+<use f='tcc/x86_64-asm.h' l='433'/>
+<use f='tcc/x86_64-asm.h' l='434' u='r'/>
+<use f='tcc/x86_64-asm.h' l='434'/>
+<use f='tcc/x86_64-asm.h' l='434' u='r'/>
+<use f='tcc/x86_64-asm.h' l='434'/>
+<use f='tcc/x86_64-asm.h' l='434' u='r'/>
+<use f='tcc/x86_64-asm.h' l='434'/>
+<use f='tcc/x86_64-asm.h' l='434' u='r'/>
+<use f='tcc/x86_64-asm.h' l='434'/>
+<use f='tcc/x86_64-asm.h' l='435' u='r'/>
+<use f='tcc/x86_64-asm.h' l='435'/>
+<use f='tcc/x86_64-asm.h' l='435' u='r'/>
+<use f='tcc/x86_64-asm.h' l='435'/>
+<use f='tcc/x86_64-asm.h' l='435' u='r'/>
+<use f='tcc/x86_64-asm.h' l='435'/>
+<use f='tcc/x86_64-asm.h' l='435' u='r'/>
+<use f='tcc/x86_64-asm.h' l='435'/>
+<use f='tcc/x86_64-asm.h' l='436' u='r'/>
+<use f='tcc/x86_64-asm.h' l='436'/>
+<use f='tcc/x86_64-asm.h' l='436' u='r'/>
+<use f='tcc/x86_64-asm.h' l='436'/>
+<use f='tcc/x86_64-asm.h' l='436' u='r'/>
+<use f='tcc/x86_64-asm.h' l='436'/>
+<use f='tcc/x86_64-asm.h' l='436' u='r'/>
+<use f='tcc/x86_64-asm.h' l='436'/>
+<use f='tcc/x86_64-asm.h' l='437' u='r'/>
+<use f='tcc/x86_64-asm.h' l='437'/>
+<use f='tcc/x86_64-asm.h' l='437' u='r'/>
+<use f='tcc/x86_64-asm.h' l='437'/>
+<use f='tcc/x86_64-asm.h' l='437' u='r'/>
+<use f='tcc/x86_64-asm.h' l='437'/>
+<use f='tcc/x86_64-asm.h' l='437' u='r'/>
+<use f='tcc/x86_64-asm.h' l='437'/>
+<use f='tcc/x86_64-asm.h' l='438' u='r'/>
+<use f='tcc/x86_64-asm.h' l='438'/>
+<use f='tcc/x86_64-asm.h' l='438' u='r'/>
+<use f='tcc/x86_64-asm.h' l='438'/>
+<use f='tcc/x86_64-asm.h' l='438' u='r'/>
+<use f='tcc/x86_64-asm.h' l='438'/>
+<use f='tcc/x86_64-asm.h' l='438' u='r'/>
+<use f='tcc/x86_64-asm.h' l='438'/>
+<use f='tcc/x86_64-asm.h' l='439' u='r'/>
+<use f='tcc/x86_64-asm.h' l='439'/>
+<use f='tcc/x86_64-asm.h' l='439' u='r'/>
+<use f='tcc/x86_64-asm.h' l='439'/>
+<use f='tcc/x86_64-asm.h' l='439' u='r'/>
+<use f='tcc/x86_64-asm.h' l='439'/>
+<use f='tcc/x86_64-asm.h' l='439' u='r'/>
+<use f='tcc/x86_64-asm.h' l='439'/>
+<use f='tcc/x86_64-asm.h' l='440' u='r'/>
+<use f='tcc/x86_64-asm.h' l='440'/>
+<use f='tcc/x86_64-asm.h' l='440' u='r'/>
+<use f='tcc/x86_64-asm.h' l='440'/>
+<use f='tcc/x86_64-asm.h' l='440' u='r'/>
+<use f='tcc/x86_64-asm.h' l='440'/>
+<use f='tcc/x86_64-asm.h' l='440' u='r'/>
+<use f='tcc/x86_64-asm.h' l='440'/>
+<use f='tcc/x86_64-asm.h' l='441' u='r'/>
+<use f='tcc/x86_64-asm.h' l='441'/>
+<use f='tcc/x86_64-asm.h' l='441' u='r'/>
+<use f='tcc/x86_64-asm.h' l='441'/>
+<use f='tcc/x86_64-asm.h' l='441' u='r'/>
+<use f='tcc/x86_64-asm.h' l='441'/>
+<use f='tcc/x86_64-asm.h' l='441' u='r'/>
+<use f='tcc/x86_64-asm.h' l='441'/>
+<use f='tcc/x86_64-asm.h' l='442' u='r'/>
+<use f='tcc/x86_64-asm.h' l='442'/>
+<use f='tcc/x86_64-asm.h' l='442' u='r'/>
+<use f='tcc/x86_64-asm.h' l='442'/>
+<use f='tcc/x86_64-asm.h' l='442' u='r'/>
+<use f='tcc/x86_64-asm.h' l='442'/>
+<use f='tcc/x86_64-asm.h' l='442' u='r'/>
+<use f='tcc/x86_64-asm.h' l='442'/>
+<use f='tcc/x86_64-asm.h' l='443' u='r'/>
+<use f='tcc/x86_64-asm.h' l='443'/>
+<use f='tcc/x86_64-asm.h' l='443' u='r'/>
+<use f='tcc/x86_64-asm.h' l='443'/>
+<use f='tcc/x86_64-asm.h' l='443' u='r'/>
+<use f='tcc/x86_64-asm.h' l='443'/>
+<use f='tcc/x86_64-asm.h' l='443' u='r'/>
+<use f='tcc/x86_64-asm.h' l='443'/>
+<use f='tcc/x86_64-asm.h' l='444' u='r'/>
+<use f='tcc/x86_64-asm.h' l='444'/>
+<use f='tcc/x86_64-asm.h' l='444' u='r'/>
+<use f='tcc/x86_64-asm.h' l='444'/>
+<use f='tcc/x86_64-asm.h' l='444' u='r'/>
+<use f='tcc/x86_64-asm.h' l='444'/>
+<use f='tcc/x86_64-asm.h' l='444' u='r'/>
+<use f='tcc/x86_64-asm.h' l='444'/>
+<use f='tcc/x86_64-asm.h' l='445' u='r'/>
+<use f='tcc/x86_64-asm.h' l='445'/>
+<use f='tcc/x86_64-asm.h' l='445' u='r'/>
+<use f='tcc/x86_64-asm.h' l='445'/>
+<use f='tcc/x86_64-asm.h' l='445' u='r'/>
+<use f='tcc/x86_64-asm.h' l='445'/>
+<use f='tcc/x86_64-asm.h' l='445' u='r'/>
+<use f='tcc/x86_64-asm.h' l='445'/>
+<use f='tcc/x86_64-asm.h' l='446' u='r'/>
+<use f='tcc/x86_64-asm.h' l='446'/>
+<use f='tcc/x86_64-asm.h' l='446' u='r'/>
+<use f='tcc/x86_64-asm.h' l='446'/>
+<use f='tcc/x86_64-asm.h' l='446' u='r'/>
+<use f='tcc/x86_64-asm.h' l='446'/>
+<use f='tcc/x86_64-asm.h' l='446' u='r'/>
+<use f='tcc/x86_64-asm.h' l='446'/>
+<use f='tcc/x86_64-asm.h' l='447' u='r'/>
+<use f='tcc/x86_64-asm.h' l='447'/>
+<use f='tcc/x86_64-asm.h' l='447' u='r'/>
+<use f='tcc/x86_64-asm.h' l='447'/>
+<use f='tcc/x86_64-asm.h' l='447' u='r'/>
+<use f='tcc/x86_64-asm.h' l='447'/>
+<use f='tcc/x86_64-asm.h' l='447' u='r'/>
+<use f='tcc/x86_64-asm.h' l='447'/>
+<use f='tcc/x86_64-asm.h' l='448' u='r'/>
+<use f='tcc/x86_64-asm.h' l='448'/>
+<use f='tcc/x86_64-asm.h' l='448' u='r'/>
+<use f='tcc/x86_64-asm.h' l='448'/>
+<use f='tcc/x86_64-asm.h' l='448' u='r'/>
+<use f='tcc/x86_64-asm.h' l='448'/>
+<use f='tcc/x86_64-asm.h' l='448' u='r'/>
+<use f='tcc/x86_64-asm.h' l='448'/>
+<use f='tcc/x86_64-asm.h' l='449' u='r'/>
+<use f='tcc/x86_64-asm.h' l='449'/>
+<use f='tcc/x86_64-asm.h' l='449' u='r'/>
+<use f='tcc/x86_64-asm.h' l='449'/>
+<use f='tcc/x86_64-asm.h' l='449' u='r'/>
+<use f='tcc/x86_64-asm.h' l='449'/>
+<use f='tcc/x86_64-asm.h' l='449' u='r'/>
+<use f='tcc/x86_64-asm.h' l='449'/>
+<use f='tcc/x86_64-asm.h' l='450' u='r'/>
+<use f='tcc/x86_64-asm.h' l='450'/>
+<use f='tcc/x86_64-asm.h' l='450' u='r'/>
+<use f='tcc/x86_64-asm.h' l='450'/>
+<use f='tcc/x86_64-asm.h' l='450' u='r'/>
+<use f='tcc/x86_64-asm.h' l='450'/>
+<use f='tcc/x86_64-asm.h' l='450' u='r'/>
+<use f='tcc/x86_64-asm.h' l='450'/>
+<use f='tcc/x86_64-asm.h' l='451' u='r'/>
+<use f='tcc/x86_64-asm.h' l='451'/>
+<use f='tcc/x86_64-asm.h' l='451' u='r'/>
+<use f='tcc/x86_64-asm.h' l='451'/>
+<use f='tcc/x86_64-asm.h' l='451' u='r'/>
+<use f='tcc/x86_64-asm.h' l='451'/>
+<use f='tcc/x86_64-asm.h' l='451' u='r'/>
+<use f='tcc/x86_64-asm.h' l='451'/>
+<use f='tcc/x86_64-asm.h' l='452' u='r'/>
+<use f='tcc/x86_64-asm.h' l='452'/>
+<use f='tcc/x86_64-asm.h' l='452' u='r'/>
+<use f='tcc/x86_64-asm.h' l='452'/>
+<use f='tcc/x86_64-asm.h' l='452' u='r'/>
+<use f='tcc/x86_64-asm.h' l='452'/>
+<use f='tcc/x86_64-asm.h' l='452' u='r'/>
+<use f='tcc/x86_64-asm.h' l='452'/>
+<use f='tcc/x86_64-asm.h' l='453' u='r'/>
+<use f='tcc/x86_64-asm.h' l='453'/>
+<use f='tcc/x86_64-asm.h' l='453' u='r'/>
+<use f='tcc/x86_64-asm.h' l='453'/>
+<use f='tcc/x86_64-asm.h' l='453' u='r'/>
+<use f='tcc/x86_64-asm.h' l='453'/>
+<use f='tcc/x86_64-asm.h' l='453' u='r'/>
+<use f='tcc/x86_64-asm.h' l='453'/>
+<use f='tcc/x86_64-asm.h' l='454' u='r'/>
+<use f='tcc/x86_64-asm.h' l='454'/>
+<use f='tcc/x86_64-asm.h' l='454' u='r'/>
+<use f='tcc/x86_64-asm.h' l='454'/>
+<use f='tcc/x86_64-asm.h' l='454' u='r'/>
+<use f='tcc/x86_64-asm.h' l='454'/>
+<use f='tcc/x86_64-asm.h' l='454' u='r'/>
+<use f='tcc/x86_64-asm.h' l='454'/>
+<use f='tcc/x86_64-asm.h' l='455'/>
+<use f='tcc/x86_64-asm.h' l='455'/>
+<use f='tcc/x86_64-asm.h' l='455'/>
+<use f='tcc/x86_64-asm.h' l='455'/>
+<use f='tcc/x86_64-asm.h' l='456' u='r'/>
+<use f='tcc/x86_64-asm.h' l='456'/>
+<use f='tcc/x86_64-asm.h' l='456' u='r'/>
+<use f='tcc/x86_64-asm.h' l='456'/>
+<use f='tcc/x86_64-asm.h' l='456' u='r'/>
+<use f='tcc/x86_64-asm.h' l='456'/>
+<use f='tcc/x86_64-asm.h' l='456' u='r'/>
+<use f='tcc/x86_64-asm.h' l='456'/>
+<use f='tcc/x86_64-asm.h' l='457'/>
+<use f='tcc/x86_64-asm.h' l='457'/>
+<use f='tcc/x86_64-asm.h' l='457'/>
+<use f='tcc/x86_64-asm.h' l='457'/>
+<use f='tcc/x86_64-asm.h' l='458' u='r'/>
+<use f='tcc/x86_64-asm.h' l='458'/>
+<use f='tcc/x86_64-asm.h' l='458' u='r'/>
+<use f='tcc/x86_64-asm.h' l='458'/>
+<use f='tcc/x86_64-asm.h' l='458' u='r'/>
+<use f='tcc/x86_64-asm.h' l='458'/>
+<use f='tcc/x86_64-asm.h' l='458' u='r'/>
+<use f='tcc/x86_64-asm.h' l='458'/>
+<use f='tcc/x86_64-asm.h' l='459'/>
+<use f='tcc/x86_64-asm.h' l='459'/>
+<use f='tcc/x86_64-asm.h' l='459'/>
+<use f='tcc/x86_64-asm.h' l='459'/>
+<use f='tcc/x86_64-asm.h' l='460' u='r'/>
+<use f='tcc/x86_64-asm.h' l='460'/>
+<use f='tcc/x86_64-asm.h' l='460' u='r'/>
+<use f='tcc/x86_64-asm.h' l='460'/>
+<use f='tcc/x86_64-asm.h' l='460' u='r'/>
+<use f='tcc/x86_64-asm.h' l='460'/>
+<use f='tcc/x86_64-asm.h' l='460' u='r'/>
+<use f='tcc/x86_64-asm.h' l='460'/>
+<use f='tcc/x86_64-asm.h' l='461'/>
+<use f='tcc/x86_64-asm.h' l='461'/>
+<use f='tcc/x86_64-asm.h' l='461'/>
+<use f='tcc/x86_64-asm.h' l='461'/>
+<use f='tcc/x86_64-asm.h' l='462' u='r'/>
+<use f='tcc/x86_64-asm.h' l='462'/>
+<use f='tcc/x86_64-asm.h' l='462' u='r'/>
+<use f='tcc/x86_64-asm.h' l='462'/>
+<use f='tcc/x86_64-asm.h' l='462' u='r'/>
+<use f='tcc/x86_64-asm.h' l='462'/>
+<use f='tcc/x86_64-asm.h' l='462' u='r'/>
+<use f='tcc/x86_64-asm.h' l='462'/>
+<use f='tcc/x86_64-asm.h' l='463'/>
+<use f='tcc/x86_64-asm.h' l='463'/>
+<use f='tcc/x86_64-asm.h' l='463'/>
+<use f='tcc/x86_64-asm.h' l='463'/>
+<use f='tcc/x86_64-asm.h' l='464' u='r'/>
+<use f='tcc/x86_64-asm.h' l='464'/>
+<use f='tcc/x86_64-asm.h' l='464' u='r'/>
+<use f='tcc/x86_64-asm.h' l='464'/>
+<use f='tcc/x86_64-asm.h' l='464' u='r'/>
+<use f='tcc/x86_64-asm.h' l='464'/>
+<use f='tcc/x86_64-asm.h' l='464' u='r'/>
+<use f='tcc/x86_64-asm.h' l='464'/>
+<use f='tcc/x86_64-asm.h' l='465'/>
+<use f='tcc/x86_64-asm.h' l='465'/>
+<use f='tcc/x86_64-asm.h' l='465'/>
+<use f='tcc/x86_64-asm.h' l='465'/>
+<use f='tcc/x86_64-asm.h' l='466' u='r'/>
+<use f='tcc/x86_64-asm.h' l='466'/>
+<use f='tcc/x86_64-asm.h' l='466' u='r'/>
+<use f='tcc/x86_64-asm.h' l='466'/>
+<use f='tcc/x86_64-asm.h' l='466' u='r'/>
+<use f='tcc/x86_64-asm.h' l='466'/>
+<use f='tcc/x86_64-asm.h' l='466' u='r'/>
+<use f='tcc/x86_64-asm.h' l='466'/>
+<use f='tcc/x86_64-asm.h' l='467'/>
+<use f='tcc/x86_64-asm.h' l='467'/>
+<use f='tcc/x86_64-asm.h' l='467'/>
+<use f='tcc/x86_64-asm.h' l='467'/>
+<use f='tcc/x86_64-asm.h' l='468' u='r'/>
+<use f='tcc/x86_64-asm.h' l='468'/>
+<use f='tcc/x86_64-asm.h' l='468' u='r'/>
+<use f='tcc/x86_64-asm.h' l='468'/>
+<use f='tcc/x86_64-asm.h' l='468' u='r'/>
+<use f='tcc/x86_64-asm.h' l='468'/>
+<use f='tcc/x86_64-asm.h' l='468' u='r'/>
+<use f='tcc/x86_64-asm.h' l='468'/>
+<use f='tcc/x86_64-asm.h' l='469'/>
+<use f='tcc/x86_64-asm.h' l='469'/>
+<use f='tcc/x86_64-asm.h' l='469'/>
+<use f='tcc/x86_64-asm.h' l='469'/>
+<use f='tcc/x86_64-asm.h' l='470' u='r'/>
+<use f='tcc/x86_64-asm.h' l='470'/>
+<use f='tcc/x86_64-asm.h' l='470' u='r'/>
+<use f='tcc/x86_64-asm.h' l='470'/>
+<use f='tcc/x86_64-asm.h' l='470' u='r'/>
+<use f='tcc/x86_64-asm.h' l='470'/>
+<use f='tcc/x86_64-asm.h' l='470' u='r'/>
+<use f='tcc/x86_64-asm.h' l='470'/>
+<use f='tcc/x86_64-asm.h' l='471' u='r'/>
+<use f='tcc/x86_64-asm.h' l='471'/>
+<use f='tcc/x86_64-asm.h' l='471' u='r'/>
+<use f='tcc/x86_64-asm.h' l='471'/>
+<use f='tcc/x86_64-asm.h' l='471' u='r'/>
+<use f='tcc/x86_64-asm.h' l='471'/>
+<use f='tcc/x86_64-asm.h' l='471' u='r'/>
+<use f='tcc/x86_64-asm.h' l='471'/>
+<use f='tcc/x86_64-asm.h' l='472' u='r'/>
+<use f='tcc/x86_64-asm.h' l='472'/>
+<use f='tcc/x86_64-asm.h' l='472' u='r'/>
+<use f='tcc/x86_64-asm.h' l='472'/>
+<use f='tcc/x86_64-asm.h' l='472' u='r'/>
+<use f='tcc/x86_64-asm.h' l='472'/>
+<use f='tcc/x86_64-asm.h' l='472' u='r'/>
+<use f='tcc/x86_64-asm.h' l='472'/>
+<use f='tcc/x86_64-asm.h' l='473' u='r'/>
+<use f='tcc/x86_64-asm.h' l='473'/>
+<use f='tcc/x86_64-asm.h' l='473' u='r'/>
+<use f='tcc/x86_64-asm.h' l='473'/>
+<use f='tcc/x86_64-asm.h' l='473' u='r'/>
+<use f='tcc/x86_64-asm.h' l='473'/>
+<use f='tcc/x86_64-asm.h' l='473' u='r'/>
+<use f='tcc/x86_64-asm.h' l='473'/>
+<use f='tcc/x86_64-asm.h' l='474' u='r'/>
+<use f='tcc/x86_64-asm.h' l='474'/>
+<use f='tcc/x86_64-asm.h' l='474' u='r'/>
+<use f='tcc/x86_64-asm.h' l='474'/>
+<use f='tcc/x86_64-asm.h' l='474' u='r'/>
+<use f='tcc/x86_64-asm.h' l='474'/>
+<use f='tcc/x86_64-asm.h' l='474' u='r'/>
+<use f='tcc/x86_64-asm.h' l='474'/>
+<use f='tcc/x86_64-asm.h' l='475' u='r'/>
+<use f='tcc/x86_64-asm.h' l='475'/>
+<use f='tcc/x86_64-asm.h' l='475' u='r'/>
+<use f='tcc/x86_64-asm.h' l='475'/>
+<use f='tcc/x86_64-asm.h' l='475' u='r'/>
+<use f='tcc/x86_64-asm.h' l='475'/>
+<use f='tcc/x86_64-asm.h' l='475' u='r'/>
+<use f='tcc/x86_64-asm.h' l='475'/>
+<use f='tcc/x86_64-asm.h' l='476' u='r'/>
+<use f='tcc/x86_64-asm.h' l='476'/>
+<use f='tcc/x86_64-asm.h' l='476' u='r'/>
+<use f='tcc/x86_64-asm.h' l='476'/>
+<use f='tcc/x86_64-asm.h' l='476' u='r'/>
+<use f='tcc/x86_64-asm.h' l='476'/>
+<use f='tcc/x86_64-asm.h' l='476' u='r'/>
+<use f='tcc/x86_64-asm.h' l='476'/>
+<use f='tcc/x86_64-asm.h' l='477' u='r'/>
+<use f='tcc/x86_64-asm.h' l='477'/>
+<use f='tcc/x86_64-asm.h' l='477' u='r'/>
+<use f='tcc/x86_64-asm.h' l='477'/>
+<use f='tcc/x86_64-asm.h' l='477' u='r'/>
+<use f='tcc/x86_64-asm.h' l='477'/>
+<use f='tcc/x86_64-asm.h' l='477' u='r'/>
+<use f='tcc/x86_64-asm.h' l='477'/>
+<use f='tcc/x86_64-asm.h' l='478' u='r'/>
+<use f='tcc/x86_64-asm.h' l='478'/>
+<use f='tcc/x86_64-asm.h' l='478' u='r'/>
+<use f='tcc/x86_64-asm.h' l='478'/>
+<use f='tcc/x86_64-asm.h' l='478' u='r'/>
+<use f='tcc/x86_64-asm.h' l='478'/>
+<use f='tcc/x86_64-asm.h' l='478' u='r'/>
+<use f='tcc/x86_64-asm.h' l='478'/>
+<use f='tcc/x86_64-asm.h' l='479' u='r'/>
+<use f='tcc/x86_64-asm.h' l='479'/>
+<use f='tcc/x86_64-asm.h' l='479' u='r'/>
+<use f='tcc/x86_64-asm.h' l='479'/>
+<use f='tcc/x86_64-asm.h' l='479' u='r'/>
+<use f='tcc/x86_64-asm.h' l='479'/>
+<use f='tcc/x86_64-asm.h' l='479' u='r'/>
+<use f='tcc/x86_64-asm.h' l='479'/>
+<use f='tcc/x86_64-asm.h' l='480' u='r'/>
+<use f='tcc/x86_64-asm.h' l='480'/>
+<use f='tcc/x86_64-asm.h' l='480' u='r'/>
+<use f='tcc/x86_64-asm.h' l='480'/>
+<use f='tcc/x86_64-asm.h' l='480' u='r'/>
+<use f='tcc/x86_64-asm.h' l='480'/>
+<use f='tcc/x86_64-asm.h' l='480' u='r'/>
+<use f='tcc/x86_64-asm.h' l='480'/>
+<use f='tcc/x86_64-asm.h' l='481' u='r'/>
+<use f='tcc/x86_64-asm.h' l='481'/>
+<use f='tcc/x86_64-asm.h' l='481' u='r'/>
+<use f='tcc/x86_64-asm.h' l='481'/>
+<use f='tcc/x86_64-asm.h' l='481' u='r'/>
+<use f='tcc/x86_64-asm.h' l='481'/>
+<use f='tcc/x86_64-asm.h' l='481' u='r'/>
+<use f='tcc/x86_64-asm.h' l='481'/>
+<use f='tcc/x86_64-asm.h' l='482' u='r'/>
+<use f='tcc/x86_64-asm.h' l='482'/>
+<use f='tcc/x86_64-asm.h' l='482' u='r'/>
+<use f='tcc/x86_64-asm.h' l='482'/>
+<use f='tcc/x86_64-asm.h' l='482' u='r'/>
+<use f='tcc/x86_64-asm.h' l='482'/>
+<use f='tcc/x86_64-asm.h' l='482' u='r'/>
+<use f='tcc/x86_64-asm.h' l='482'/>
+<use f='tcc/x86_64-asm.h' l='483' u='r'/>
+<use f='tcc/x86_64-asm.h' l='483'/>
+<use f='tcc/x86_64-asm.h' l='483' u='r'/>
+<use f='tcc/x86_64-asm.h' l='483'/>
+<use f='tcc/x86_64-asm.h' l='483' u='r'/>
+<use f='tcc/x86_64-asm.h' l='483'/>
+<use f='tcc/x86_64-asm.h' l='483' u='r'/>
+<use f='tcc/x86_64-asm.h' l='483'/>
+<use f='tcc/x86_64-asm.h' l='502' u='r'/>
+<use f='tcc/x86_64-asm.h' l='502'/>
+<use f='tcc/x86_64-asm.h' l='502' u='r'/>
+<use f='tcc/x86_64-asm.h' l='502'/>
+<use f='tcc/x86_64-asm.h' l='502' u='r'/>
+<use f='tcc/x86_64-asm.h' l='502'/>
+<use f='tcc/x86_64-asm.h' l='502' u='r'/>
+<use f='tcc/x86_64-asm.h' l='502'/>
+<use f='tcc/x86_64-asm.h' l='503' u='r'/>
+<use f='tcc/x86_64-asm.h' l='503'/>
+<use f='tcc/x86_64-asm.h' l='503' u='r'/>
+<use f='tcc/x86_64-asm.h' l='503'/>
+<use f='tcc/x86_64-asm.h' l='503' u='r'/>
+<use f='tcc/x86_64-asm.h' l='503'/>
+<use f='tcc/x86_64-asm.h' l='503' u='r'/>
+<use f='tcc/x86_64-asm.h' l='503'/>
+<use f='tcc/x86_64-asm.h' l='504' u='r'/>
+<use f='tcc/x86_64-asm.h' l='504'/>
+<use f='tcc/x86_64-asm.h' l='504' u='r'/>
+<use f='tcc/x86_64-asm.h' l='504'/>
+<use f='tcc/x86_64-asm.h' l='504' u='r'/>
+<use f='tcc/x86_64-asm.h' l='504'/>
+<use f='tcc/x86_64-asm.h' l='504' u='r'/>
+<use f='tcc/x86_64-asm.h' l='504'/>
+<use f='tcc/x86_64-asm.h' l='505' u='r'/>
+<use f='tcc/x86_64-asm.h' l='505'/>
+<use f='tcc/x86_64-asm.h' l='505' u='r'/>
+<use f='tcc/x86_64-asm.h' l='505'/>
+<use f='tcc/x86_64-asm.h' l='505' u='r'/>
+<use f='tcc/x86_64-asm.h' l='505'/>
+<use f='tcc/x86_64-asm.h' l='505' u='r'/>
+<use f='tcc/x86_64-asm.h' l='505'/>
+<use f='tcc/x86_64-asm.h' l='419'/>
+<use f='tcc/x86_64-asm.h' l='419'/>
+<use f='tcc/x86_64-asm.h' l='419'/>
+<use f='tcc/x86_64-asm.h' l='419'/>
+<use f='tcc/x86_64-asm.h' l='422'/>
+<use f='tcc/x86_64-asm.h' l='422'/>
+<use f='tcc/x86_64-asm.h' l='422'/>
+<use f='tcc/x86_64-asm.h' l='422'/>
+<use f='tcc/x86_64-asm.h' l='423'/>
+<use f='tcc/x86_64-asm.h' l='423'/>
+<use f='tcc/x86_64-asm.h' l='423'/>
+<use f='tcc/x86_64-asm.h' l='423'/>
+<use f='tcc/x86_64-asm.h' l='425'/>
+<use f='tcc/x86_64-asm.h' l='425'/>
+<use f='tcc/x86_64-asm.h' l='425'/>
+<use f='tcc/x86_64-asm.h' l='425'/>
+<use f='tcc/x86_64-asm.h' l='426'/>
+<use f='tcc/x86_64-asm.h' l='426'/>
+<use f='tcc/x86_64-asm.h' l='426'/>
+<use f='tcc/x86_64-asm.h' l='426'/>
+<use f='tcc/x86_64-asm.h' l='430'/>
+<use f='tcc/x86_64-asm.h' l='430'/>
+<use f='tcc/x86_64-asm.h' l='430'/>
+<use f='tcc/x86_64-asm.h' l='430'/>
+<use f='tcc/x86_64-asm.h' l='432' u='r'/>
+<use f='tcc/x86_64-asm.h' l='432'/>
+<use f='tcc/x86_64-asm.h' l='432' u='r'/>
+<use f='tcc/x86_64-asm.h' l='432'/>
+<use f='tcc/x86_64-asm.h' l='432' u='r'/>
+<use f='tcc/x86_64-asm.h' l='432'/>
+<use f='tcc/x86_64-asm.h' l='432' u='r'/>
+<use f='tcc/x86_64-asm.h' l='432'/>
+<use f='tcc/x86_64-asm.h' l='433' u='r'/>
+<use f='tcc/x86_64-asm.h' l='433'/>
+<use f='tcc/x86_64-asm.h' l='433' u='r'/>
+<use f='tcc/x86_64-asm.h' l='433'/>
+<use f='tcc/x86_64-asm.h' l='433' u='r'/>
+<use f='tcc/x86_64-asm.h' l='433'/>
+<use f='tcc/x86_64-asm.h' l='433' u='r'/>
+<use f='tcc/x86_64-asm.h' l='433'/>
+<use f='tcc/x86_64-asm.h' l='434' u='r'/>
+<use f='tcc/x86_64-asm.h' l='434'/>
+<use f='tcc/x86_64-asm.h' l='434' u='r'/>
+<use f='tcc/x86_64-asm.h' l='434'/>
+<use f='tcc/x86_64-asm.h' l='434' u='r'/>
+<use f='tcc/x86_64-asm.h' l='434'/>
+<use f='tcc/x86_64-asm.h' l='434' u='r'/>
+<use f='tcc/x86_64-asm.h' l='434'/>
+<use f='tcc/x86_64-asm.h' l='435' u='r'/>
+<use f='tcc/x86_64-asm.h' l='435'/>
+<use f='tcc/x86_64-asm.h' l='435' u='r'/>
+<use f='tcc/x86_64-asm.h' l='435'/>
+<use f='tcc/x86_64-asm.h' l='435' u='r'/>
+<use f='tcc/x86_64-asm.h' l='435'/>
+<use f='tcc/x86_64-asm.h' l='435' u='r'/>
+<use f='tcc/x86_64-asm.h' l='435'/>
+<use f='tcc/x86_64-asm.h' l='436' u='r'/>
+<use f='tcc/x86_64-asm.h' l='436'/>
+<use f='tcc/x86_64-asm.h' l='436' u='r'/>
+<use f='tcc/x86_64-asm.h' l='436'/>
+<use f='tcc/x86_64-asm.h' l='436' u='r'/>
+<use f='tcc/x86_64-asm.h' l='436'/>
+<use f='tcc/x86_64-asm.h' l='436' u='r'/>
+<use f='tcc/x86_64-asm.h' l='436'/>
+<use f='tcc/x86_64-asm.h' l='437' u='r'/>
+<use f='tcc/x86_64-asm.h' l='437'/>
+<use f='tcc/x86_64-asm.h' l='437' u='r'/>
+<use f='tcc/x86_64-asm.h' l='437'/>
+<use f='tcc/x86_64-asm.h' l='437' u='r'/>
+<use f='tcc/x86_64-asm.h' l='437'/>
+<use f='tcc/x86_64-asm.h' l='437' u='r'/>
+<use f='tcc/x86_64-asm.h' l='437'/>
+<use f='tcc/x86_64-asm.h' l='438' u='r'/>
+<use f='tcc/x86_64-asm.h' l='438'/>
+<use f='tcc/x86_64-asm.h' l='438' u='r'/>
+<use f='tcc/x86_64-asm.h' l='438'/>
+<use f='tcc/x86_64-asm.h' l='438' u='r'/>
+<use f='tcc/x86_64-asm.h' l='438'/>
+<use f='tcc/x86_64-asm.h' l='438' u='r'/>
+<use f='tcc/x86_64-asm.h' l='438'/>
+<use f='tcc/x86_64-asm.h' l='439' u='r'/>
+<use f='tcc/x86_64-asm.h' l='439'/>
+<use f='tcc/x86_64-asm.h' l='439' u='r'/>
+<use f='tcc/x86_64-asm.h' l='439'/>
+<use f='tcc/x86_64-asm.h' l='439' u='r'/>
+<use f='tcc/x86_64-asm.h' l='439'/>
+<use f='tcc/x86_64-asm.h' l='439' u='r'/>
+<use f='tcc/x86_64-asm.h' l='439'/>
+<use f='tcc/x86_64-asm.h' l='440' u='r'/>
+<use f='tcc/x86_64-asm.h' l='440'/>
+<use f='tcc/x86_64-asm.h' l='440' u='r'/>
+<use f='tcc/x86_64-asm.h' l='440'/>
+<use f='tcc/x86_64-asm.h' l='440' u='r'/>
+<use f='tcc/x86_64-asm.h' l='440'/>
+<use f='tcc/x86_64-asm.h' l='440' u='r'/>
+<use f='tcc/x86_64-asm.h' l='440'/>
+<use f='tcc/x86_64-asm.h' l='441' u='r'/>
+<use f='tcc/x86_64-asm.h' l='441'/>
+<use f='tcc/x86_64-asm.h' l='441' u='r'/>
+<use f='tcc/x86_64-asm.h' l='441'/>
+<use f='tcc/x86_64-asm.h' l='441' u='r'/>
+<use f='tcc/x86_64-asm.h' l='441'/>
+<use f='tcc/x86_64-asm.h' l='441' u='r'/>
+<use f='tcc/x86_64-asm.h' l='441'/>
+<use f='tcc/x86_64-asm.h' l='442' u='r'/>
+<use f='tcc/x86_64-asm.h' l='442'/>
+<use f='tcc/x86_64-asm.h' l='442' u='r'/>
+<use f='tcc/x86_64-asm.h' l='442'/>
+<use f='tcc/x86_64-asm.h' l='442' u='r'/>
+<use f='tcc/x86_64-asm.h' l='442'/>
+<use f='tcc/x86_64-asm.h' l='442' u='r'/>
+<use f='tcc/x86_64-asm.h' l='442'/>
+<use f='tcc/x86_64-asm.h' l='443' u='r'/>
+<use f='tcc/x86_64-asm.h' l='443'/>
+<use f='tcc/x86_64-asm.h' l='443' u='r'/>
+<use f='tcc/x86_64-asm.h' l='443'/>
+<use f='tcc/x86_64-asm.h' l='443' u='r'/>
+<use f='tcc/x86_64-asm.h' l='443'/>
+<use f='tcc/x86_64-asm.h' l='443' u='r'/>
+<use f='tcc/x86_64-asm.h' l='443'/>
+<use f='tcc/x86_64-asm.h' l='444' u='r'/>
+<use f='tcc/x86_64-asm.h' l='444'/>
+<use f='tcc/x86_64-asm.h' l='444' u='r'/>
+<use f='tcc/x86_64-asm.h' l='444'/>
+<use f='tcc/x86_64-asm.h' l='444' u='r'/>
+<use f='tcc/x86_64-asm.h' l='444'/>
+<use f='tcc/x86_64-asm.h' l='444' u='r'/>
+<use f='tcc/x86_64-asm.h' l='444'/>
+<use f='tcc/x86_64-asm.h' l='445' u='r'/>
+<use f='tcc/x86_64-asm.h' l='445'/>
+<use f='tcc/x86_64-asm.h' l='445' u='r'/>
+<use f='tcc/x86_64-asm.h' l='445'/>
+<use f='tcc/x86_64-asm.h' l='445' u='r'/>
+<use f='tcc/x86_64-asm.h' l='445'/>
+<use f='tcc/x86_64-asm.h' l='445' u='r'/>
+<use f='tcc/x86_64-asm.h' l='445'/>
+<use f='tcc/x86_64-asm.h' l='446' u='r'/>
+<use f='tcc/x86_64-asm.h' l='446'/>
+<use f='tcc/x86_64-asm.h' l='446' u='r'/>
+<use f='tcc/x86_64-asm.h' l='446'/>
+<use f='tcc/x86_64-asm.h' l='446' u='r'/>
+<use f='tcc/x86_64-asm.h' l='446'/>
+<use f='tcc/x86_64-asm.h' l='446' u='r'/>
+<use f='tcc/x86_64-asm.h' l='446'/>
+<use f='tcc/x86_64-asm.h' l='447' u='r'/>
+<use f='tcc/x86_64-asm.h' l='447'/>
+<use f='tcc/x86_64-asm.h' l='447' u='r'/>
+<use f='tcc/x86_64-asm.h' l='447'/>
+<use f='tcc/x86_64-asm.h' l='447' u='r'/>
+<use f='tcc/x86_64-asm.h' l='447'/>
+<use f='tcc/x86_64-asm.h' l='447' u='r'/>
+<use f='tcc/x86_64-asm.h' l='447'/>
+<use f='tcc/x86_64-asm.h' l='448' u='r'/>
+<use f='tcc/x86_64-asm.h' l='448'/>
+<use f='tcc/x86_64-asm.h' l='448' u='r'/>
+<use f='tcc/x86_64-asm.h' l='448'/>
+<use f='tcc/x86_64-asm.h' l='448' u='r'/>
+<use f='tcc/x86_64-asm.h' l='448'/>
+<use f='tcc/x86_64-asm.h' l='448' u='r'/>
+<use f='tcc/x86_64-asm.h' l='448'/>
+<use f='tcc/x86_64-asm.h' l='449' u='r'/>
+<use f='tcc/x86_64-asm.h' l='449'/>
+<use f='tcc/x86_64-asm.h' l='449' u='r'/>
+<use f='tcc/x86_64-asm.h' l='449'/>
+<use f='tcc/x86_64-asm.h' l='449' u='r'/>
+<use f='tcc/x86_64-asm.h' l='449'/>
+<use f='tcc/x86_64-asm.h' l='449' u='r'/>
+<use f='tcc/x86_64-asm.h' l='449'/>
+<use f='tcc/x86_64-asm.h' l='450' u='r'/>
+<use f='tcc/x86_64-asm.h' l='450'/>
+<use f='tcc/x86_64-asm.h' l='450' u='r'/>
+<use f='tcc/x86_64-asm.h' l='450'/>
+<use f='tcc/x86_64-asm.h' l='450' u='r'/>
+<use f='tcc/x86_64-asm.h' l='450'/>
+<use f='tcc/x86_64-asm.h' l='450' u='r'/>
+<use f='tcc/x86_64-asm.h' l='450'/>
+<use f='tcc/x86_64-asm.h' l='451' u='r'/>
+<use f='tcc/x86_64-asm.h' l='451'/>
+<use f='tcc/x86_64-asm.h' l='451' u='r'/>
+<use f='tcc/x86_64-asm.h' l='451'/>
+<use f='tcc/x86_64-asm.h' l='451' u='r'/>
+<use f='tcc/x86_64-asm.h' l='451'/>
+<use f='tcc/x86_64-asm.h' l='451' u='r'/>
+<use f='tcc/x86_64-asm.h' l='451'/>
+<use f='tcc/x86_64-asm.h' l='452' u='r'/>
+<use f='tcc/x86_64-asm.h' l='452'/>
+<use f='tcc/x86_64-asm.h' l='452' u='r'/>
+<use f='tcc/x86_64-asm.h' l='452'/>
+<use f='tcc/x86_64-asm.h' l='452' u='r'/>
+<use f='tcc/x86_64-asm.h' l='452'/>
+<use f='tcc/x86_64-asm.h' l='452' u='r'/>
+<use f='tcc/x86_64-asm.h' l='452'/>
+<use f='tcc/x86_64-asm.h' l='453' u='r'/>
+<use f='tcc/x86_64-asm.h' l='453'/>
+<use f='tcc/x86_64-asm.h' l='453' u='r'/>
+<use f='tcc/x86_64-asm.h' l='453'/>
+<use f='tcc/x86_64-asm.h' l='453' u='r'/>
+<use f='tcc/x86_64-asm.h' l='453'/>
+<use f='tcc/x86_64-asm.h' l='453' u='r'/>
+<use f='tcc/x86_64-asm.h' l='453'/>
+<use f='tcc/x86_64-asm.h' l='454' u='r'/>
+<use f='tcc/x86_64-asm.h' l='454'/>
+<use f='tcc/x86_64-asm.h' l='454' u='r'/>
+<use f='tcc/x86_64-asm.h' l='454'/>
+<use f='tcc/x86_64-asm.h' l='454' u='r'/>
+<use f='tcc/x86_64-asm.h' l='454'/>
+<use f='tcc/x86_64-asm.h' l='454' u='r'/>
+<use f='tcc/x86_64-asm.h' l='454'/>
+<use f='tcc/x86_64-asm.h' l='455'/>
+<use f='tcc/x86_64-asm.h' l='455'/>
+<use f='tcc/x86_64-asm.h' l='455'/>
+<use f='tcc/x86_64-asm.h' l='455'/>
+<use f='tcc/x86_64-asm.h' l='456' u='r'/>
+<use f='tcc/x86_64-asm.h' l='456'/>
+<use f='tcc/x86_64-asm.h' l='456' u='r'/>
+<use f='tcc/x86_64-asm.h' l='456'/>
+<use f='tcc/x86_64-asm.h' l='456' u='r'/>
+<use f='tcc/x86_64-asm.h' l='456'/>
+<use f='tcc/x86_64-asm.h' l='456' u='r'/>
+<use f='tcc/x86_64-asm.h' l='456'/>
+<use f='tcc/x86_64-asm.h' l='457'/>
+<use f='tcc/x86_64-asm.h' l='457'/>
+<use f='tcc/x86_64-asm.h' l='457'/>
+<use f='tcc/x86_64-asm.h' l='457'/>
+<use f='tcc/x86_64-asm.h' l='458' u='r'/>
+<use f='tcc/x86_64-asm.h' l='458'/>
+<use f='tcc/x86_64-asm.h' l='458' u='r'/>
+<use f='tcc/x86_64-asm.h' l='458'/>
+<use f='tcc/x86_64-asm.h' l='458' u='r'/>
+<use f='tcc/x86_64-asm.h' l='458'/>
+<use f='tcc/x86_64-asm.h' l='458' u='r'/>
+<use f='tcc/x86_64-asm.h' l='458'/>
+<use f='tcc/x86_64-asm.h' l='459'/>
+<use f='tcc/x86_64-asm.h' l='459'/>
+<use f='tcc/x86_64-asm.h' l='459'/>
+<use f='tcc/x86_64-asm.h' l='459'/>
+<use f='tcc/x86_64-asm.h' l='460' u='r'/>
+<use f='tcc/x86_64-asm.h' l='460'/>
+<use f='tcc/x86_64-asm.h' l='460' u='r'/>
+<use f='tcc/x86_64-asm.h' l='460'/>
+<use f='tcc/x86_64-asm.h' l='460' u='r'/>
+<use f='tcc/x86_64-asm.h' l='460'/>
+<use f='tcc/x86_64-asm.h' l='460' u='r'/>
+<use f='tcc/x86_64-asm.h' l='460'/>
+<use f='tcc/x86_64-asm.h' l='461'/>
+<use f='tcc/x86_64-asm.h' l='461'/>
+<use f='tcc/x86_64-asm.h' l='461'/>
+<use f='tcc/x86_64-asm.h' l='461'/>
+<use f='tcc/x86_64-asm.h' l='462' u='r'/>
+<use f='tcc/x86_64-asm.h' l='462'/>
+<use f='tcc/x86_64-asm.h' l='462' u='r'/>
+<use f='tcc/x86_64-asm.h' l='462'/>
+<use f='tcc/x86_64-asm.h' l='462' u='r'/>
+<use f='tcc/x86_64-asm.h' l='462'/>
+<use f='tcc/x86_64-asm.h' l='462' u='r'/>
+<use f='tcc/x86_64-asm.h' l='462'/>
+<use f='tcc/x86_64-asm.h' l='463'/>
+<use f='tcc/x86_64-asm.h' l='463'/>
+<use f='tcc/x86_64-asm.h' l='463'/>
+<use f='tcc/x86_64-asm.h' l='463'/>
+<use f='tcc/x86_64-asm.h' l='464' u='r'/>
+<use f='tcc/x86_64-asm.h' l='464'/>
+<use f='tcc/x86_64-asm.h' l='464' u='r'/>
+<use f='tcc/x86_64-asm.h' l='464'/>
+<use f='tcc/x86_64-asm.h' l='464' u='r'/>
+<use f='tcc/x86_64-asm.h' l='464'/>
+<use f='tcc/x86_64-asm.h' l='464' u='r'/>
+<use f='tcc/x86_64-asm.h' l='464'/>
+<use f='tcc/x86_64-asm.h' l='465'/>
+<use f='tcc/x86_64-asm.h' l='465'/>
+<use f='tcc/x86_64-asm.h' l='465'/>
+<use f='tcc/x86_64-asm.h' l='465'/>
+<use f='tcc/x86_64-asm.h' l='466' u='r'/>
+<use f='tcc/x86_64-asm.h' l='466'/>
+<use f='tcc/x86_64-asm.h' l='466' u='r'/>
+<use f='tcc/x86_64-asm.h' l='466'/>
+<use f='tcc/x86_64-asm.h' l='466' u='r'/>
+<use f='tcc/x86_64-asm.h' l='466'/>
+<use f='tcc/x86_64-asm.h' l='466' u='r'/>
+<use f='tcc/x86_64-asm.h' l='466'/>
+<use f='tcc/x86_64-asm.h' l='467'/>
+<use f='tcc/x86_64-asm.h' l='467'/>
+<use f='tcc/x86_64-asm.h' l='467'/>
+<use f='tcc/x86_64-asm.h' l='467'/>
+<use f='tcc/x86_64-asm.h' l='468' u='r'/>
+<use f='tcc/x86_64-asm.h' l='468'/>
+<use f='tcc/x86_64-asm.h' l='468' u='r'/>
+<use f='tcc/x86_64-asm.h' l='468'/>
+<use f='tcc/x86_64-asm.h' l='468' u='r'/>
+<use f='tcc/x86_64-asm.h' l='468'/>
+<use f='tcc/x86_64-asm.h' l='468' u='r'/>
+<use f='tcc/x86_64-asm.h' l='468'/>
+<use f='tcc/x86_64-asm.h' l='469'/>
+<use f='tcc/x86_64-asm.h' l='469'/>
+<use f='tcc/x86_64-asm.h' l='469'/>
+<use f='tcc/x86_64-asm.h' l='469'/>
+<use f='tcc/x86_64-asm.h' l='470' u='r'/>
+<use f='tcc/x86_64-asm.h' l='470'/>
+<use f='tcc/x86_64-asm.h' l='470' u='r'/>
+<use f='tcc/x86_64-asm.h' l='470'/>
+<use f='tcc/x86_64-asm.h' l='470' u='r'/>
+<use f='tcc/x86_64-asm.h' l='470'/>
+<use f='tcc/x86_64-asm.h' l='470' u='r'/>
+<use f='tcc/x86_64-asm.h' l='470'/>
+<use f='tcc/x86_64-asm.h' l='471' u='r'/>
+<use f='tcc/x86_64-asm.h' l='471'/>
+<use f='tcc/x86_64-asm.h' l='471' u='r'/>
+<use f='tcc/x86_64-asm.h' l='471'/>
+<use f='tcc/x86_64-asm.h' l='471' u='r'/>
+<use f='tcc/x86_64-asm.h' l='471'/>
+<use f='tcc/x86_64-asm.h' l='471' u='r'/>
+<use f='tcc/x86_64-asm.h' l='471'/>
+<use f='tcc/x86_64-asm.h' l='472' u='r'/>
+<use f='tcc/x86_64-asm.h' l='472'/>
+<use f='tcc/x86_64-asm.h' l='472' u='r'/>
+<use f='tcc/x86_64-asm.h' l='472'/>
+<use f='tcc/x86_64-asm.h' l='472' u='r'/>
+<use f='tcc/x86_64-asm.h' l='472'/>
+<use f='tcc/x86_64-asm.h' l='472' u='r'/>
+<use f='tcc/x86_64-asm.h' l='472'/>
+<use f='tcc/x86_64-asm.h' l='473' u='r'/>
+<use f='tcc/x86_64-asm.h' l='473'/>
+<use f='tcc/x86_64-asm.h' l='473' u='r'/>
+<use f='tcc/x86_64-asm.h' l='473'/>
+<use f='tcc/x86_64-asm.h' l='473' u='r'/>
+<use f='tcc/x86_64-asm.h' l='473'/>
+<use f='tcc/x86_64-asm.h' l='473' u='r'/>
+<use f='tcc/x86_64-asm.h' l='473'/>
+<use f='tcc/x86_64-asm.h' l='474' u='r'/>
+<use f='tcc/x86_64-asm.h' l='474'/>
+<use f='tcc/x86_64-asm.h' l='474' u='r'/>
+<use f='tcc/x86_64-asm.h' l='474'/>
+<use f='tcc/x86_64-asm.h' l='474' u='r'/>
+<use f='tcc/x86_64-asm.h' l='474'/>
+<use f='tcc/x86_64-asm.h' l='474' u='r'/>
+<use f='tcc/x86_64-asm.h' l='474'/>
+<use f='tcc/x86_64-asm.h' l='475' u='r'/>
+<use f='tcc/x86_64-asm.h' l='475'/>
+<use f='tcc/x86_64-asm.h' l='475' u='r'/>
+<use f='tcc/x86_64-asm.h' l='475'/>
+<use f='tcc/x86_64-asm.h' l='475' u='r'/>
+<use f='tcc/x86_64-asm.h' l='475'/>
+<use f='tcc/x86_64-asm.h' l='475' u='r'/>
+<use f='tcc/x86_64-asm.h' l='475'/>
+<use f='tcc/x86_64-asm.h' l='476' u='r'/>
+<use f='tcc/x86_64-asm.h' l='476'/>
+<use f='tcc/x86_64-asm.h' l='476' u='r'/>
+<use f='tcc/x86_64-asm.h' l='476'/>
+<use f='tcc/x86_64-asm.h' l='476' u='r'/>
+<use f='tcc/x86_64-asm.h' l='476'/>
+<use f='tcc/x86_64-asm.h' l='476' u='r'/>
+<use f='tcc/x86_64-asm.h' l='476'/>
+<use f='tcc/x86_64-asm.h' l='477' u='r'/>
+<use f='tcc/x86_64-asm.h' l='477'/>
+<use f='tcc/x86_64-asm.h' l='477' u='r'/>
+<use f='tcc/x86_64-asm.h' l='477'/>
+<use f='tcc/x86_64-asm.h' l='477' u='r'/>
+<use f='tcc/x86_64-asm.h' l='477'/>
+<use f='tcc/x86_64-asm.h' l='477' u='r'/>
+<use f='tcc/x86_64-asm.h' l='477'/>
+<use f='tcc/x86_64-asm.h' l='478' u='r'/>
+<use f='tcc/x86_64-asm.h' l='478'/>
+<use f='tcc/x86_64-asm.h' l='478' u='r'/>
+<use f='tcc/x86_64-asm.h' l='478'/>
+<use f='tcc/x86_64-asm.h' l='478' u='r'/>
+<use f='tcc/x86_64-asm.h' l='478'/>
+<use f='tcc/x86_64-asm.h' l='478' u='r'/>
+<use f='tcc/x86_64-asm.h' l='478'/>
+<use f='tcc/x86_64-asm.h' l='479' u='r'/>
+<use f='tcc/x86_64-asm.h' l='479'/>
+<use f='tcc/x86_64-asm.h' l='479' u='r'/>
+<use f='tcc/x86_64-asm.h' l='479'/>
+<use f='tcc/x86_64-asm.h' l='479' u='r'/>
+<use f='tcc/x86_64-asm.h' l='479'/>
+<use f='tcc/x86_64-asm.h' l='479' u='r'/>
+<use f='tcc/x86_64-asm.h' l='479'/>
+<use f='tcc/x86_64-asm.h' l='480' u='r'/>
+<use f='tcc/x86_64-asm.h' l='480'/>
+<use f='tcc/x86_64-asm.h' l='480' u='r'/>
+<use f='tcc/x86_64-asm.h' l='480'/>
+<use f='tcc/x86_64-asm.h' l='480' u='r'/>
+<use f='tcc/x86_64-asm.h' l='480'/>
+<use f='tcc/x86_64-asm.h' l='480' u='r'/>
+<use f='tcc/x86_64-asm.h' l='480'/>
+<use f='tcc/x86_64-asm.h' l='481' u='r'/>
+<use f='tcc/x86_64-asm.h' l='481'/>
+<use f='tcc/x86_64-asm.h' l='481' u='r'/>
+<use f='tcc/x86_64-asm.h' l='481'/>
+<use f='tcc/x86_64-asm.h' l='481' u='r'/>
+<use f='tcc/x86_64-asm.h' l='481'/>
+<use f='tcc/x86_64-asm.h' l='481' u='r'/>
+<use f='tcc/x86_64-asm.h' l='481'/>
+<use f='tcc/x86_64-asm.h' l='482' u='r'/>
+<use f='tcc/x86_64-asm.h' l='482'/>
+<use f='tcc/x86_64-asm.h' l='482' u='r'/>
+<use f='tcc/x86_64-asm.h' l='482'/>
+<use f='tcc/x86_64-asm.h' l='482' u='r'/>
+<use f='tcc/x86_64-asm.h' l='482'/>
+<use f='tcc/x86_64-asm.h' l='482' u='r'/>
+<use f='tcc/x86_64-asm.h' l='482'/>
+<use f='tcc/x86_64-asm.h' l='483' u='r'/>
+<use f='tcc/x86_64-asm.h' l='483'/>
+<use f='tcc/x86_64-asm.h' l='483' u='r'/>
+<use f='tcc/x86_64-asm.h' l='483'/>
+<use f='tcc/x86_64-asm.h' l='483' u='r'/>
+<use f='tcc/x86_64-asm.h' l='483'/>
+<use f='tcc/x86_64-asm.h' l='483' u='r'/>
+<use f='tcc/x86_64-asm.h' l='483'/>
+<use f='tcc/x86_64-asm.h' l='502' u='r'/>
+<use f='tcc/x86_64-asm.h' l='502'/>
+<use f='tcc/x86_64-asm.h' l='502' u='r'/>
+<use f='tcc/x86_64-asm.h' l='502'/>
+<use f='tcc/x86_64-asm.h' l='502' u='r'/>
+<use f='tcc/x86_64-asm.h' l='502'/>
+<use f='tcc/x86_64-asm.h' l='502' u='r'/>
+<use f='tcc/x86_64-asm.h' l='502'/>
+<use f='tcc/x86_64-asm.h' l='503' u='r'/>
+<use f='tcc/x86_64-asm.h' l='503'/>
+<use f='tcc/x86_64-asm.h' l='503' u='r'/>
+<use f='tcc/x86_64-asm.h' l='503'/>
+<use f='tcc/x86_64-asm.h' l='503' u='r'/>
+<use f='tcc/x86_64-asm.h' l='503'/>
+<use f='tcc/x86_64-asm.h' l='503' u='r'/>
+<use f='tcc/x86_64-asm.h' l='503'/>
+<use f='tcc/x86_64-asm.h' l='504' u='r'/>
+<use f='tcc/x86_64-asm.h' l='504'/>
+<use f='tcc/x86_64-asm.h' l='504' u='r'/>
+<use f='tcc/x86_64-asm.h' l='504'/>
+<use f='tcc/x86_64-asm.h' l='504' u='r'/>
+<use f='tcc/x86_64-asm.h' l='504'/>
+<use f='tcc/x86_64-asm.h' l='504' u='r'/>
+<use f='tcc/x86_64-asm.h' l='504'/>
+<use f='tcc/x86_64-asm.h' l='505' u='r'/>
+<use f='tcc/x86_64-asm.h' l='505'/>
+<use f='tcc/x86_64-asm.h' l='505' u='r'/>
+<use f='tcc/x86_64-asm.h' l='505'/>
+<use f='tcc/x86_64-asm.h' l='505' u='r'/>
+<use f='tcc/x86_64-asm.h' l='505'/>
+<use f='tcc/x86_64-asm.h' l='505' u='r'/>
+<use f='tcc/x86_64-asm.h' l='505'/>
+<use f='tcc/i386-asm.c' l='815' c='asm_opcode'/>
+<doc f='tcc/i386-asm.c' l='97'>/* MMX | SSE */</doc>

@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='1144' type='void cstr_new(CString * cstr)'/>
+<use f='tcc/libtcc.c' l='447' u='c' c='tcc_split_path'/>
+<use f='tcc/libtcc.c' l='1620' u='c' c='args_parser_make_argv'/>
+<use f='tcc/libtcc.c' l='1683' u='c' c='tcc_parse_args'/>
+<use f='tcc/tccasm.c' l='1051' u='c' c='subst_asm_operands'/>
+<use f='tcc/tccgen.c' l='3263' u='c' c='parse_mult_str'/>
+<def f='tcc/tccpp.c' l='372' ll='375' type='void cstr_new(CString * cstr)'/>
+<use f='tcc/tccpp.c' l='381' u='c' c='cstr_free'/>
+<use f='tcc/tccpp.c' l='3028' u='c' c='macro_arg_subst'/>
+<use f='tcc/tccpp.c' l='3129' u='c' c='paste_tokens'/>
+<use f='tcc/tccpp.c' l='3323' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3600' u='c' c='preprocess_start'/>
+<use f='tcc/tccpp.c' l='3660' u='c' c='tccpp_new'/>

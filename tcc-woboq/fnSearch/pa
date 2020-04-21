@@ -1,0 +1,4 @@
+parse_asm_str|parse_asm_str
+parse_mult_str|parse_mult_str
+parse_comment|parse_comment
+parse_define|parse_define

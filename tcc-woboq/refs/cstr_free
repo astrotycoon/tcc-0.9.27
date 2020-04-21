@@ -1,0 +1,21 @@
+<dec f='tcc/tcc.h' l='1145' type='void cstr_free(CString * cstr)'/>
+<use f='tcc/libtcc.c' l='461' u='c' c='tcc_split_path'/>
+<use f='tcc/libtcc.c' l='1636' u='c' c='args_parser_make_argv'/>
+<use f='tcc/libtcc.c' l='1884' u='c' c='tcc_parse_args'/>
+<use f='tcc/tccasm.c' l='1114' u='c' c='parse_asm_operands'/>
+<use f='tcc/tccasm.c' l='1213' u='c' c='asm_instr'/>
+<use f='tcc/tccasm.c' l='1242' u='c' c='asm_instr'/>
+<use f='tcc/tccasm.c' l='1274' u='c' c='asm_global_instr'/>
+<use f='tcc/tccgen.c' l='3314' u='c' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3323' u='c' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3341' u='c' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='4251' u='c' c='asm_label_instr'/>
+<def f='tcc/tccpp.c' l='378' ll='382' type='void cstr_free(CString * cstr)'/>
+<use f='tcc/tccpp.c' l='3057' u='c' c='macro_arg_subst'/>
+<use f='tcc/tccpp.c' l='3153' u='c' c='paste_tokens'/>
+<use f='tcc/tccpp.c' l='3328' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3617' u='c' c='preprocess_start'/>
+<use f='tcc/tccpp.c' l='3694' u='c' c='tccpp_delete'/>
+<use f='tcc/tccpp.c' l='3695' u='c' c='tccpp_delete'/>
+<use f='tcc/tccpp.c' l='3696' u='c' c='tccpp_delete'/>
+<doc f='tcc/tccpp.c' l='377'>/* free string and reset it to NULL */</doc>

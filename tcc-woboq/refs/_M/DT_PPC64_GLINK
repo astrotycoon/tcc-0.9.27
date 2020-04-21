@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='2266'/>
+<doc f='tcc/elf.h' l='2265'>/* PowerPC64 specific values for the Dyn d_tag field.  */</doc>

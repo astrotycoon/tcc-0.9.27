@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1153' type='Sym * struct_find(int v)'/>
+<def f='tcc/tccgen.c' l='531' ll='537' type='Sym * struct_find(int v)'/>
+<use f='tcc/tccgen.c' l='3780' u='c' c='struct_decl'/>
+<doc f='tcc/tccgen.c' l='530'>/* structure lookup */</doc>

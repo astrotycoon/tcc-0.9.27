@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='579' type='char *'/>
+<offset>8704</offset>
+<doc f='tcc/tcc.h' l='579'>/* filename not modified by # line directive */</doc>
+<use f='tcc/libtcc.c' l='588' u='w' c='tcc_open_bf'/>
+<use f='tcc/libtcc.c' l='604' u='r' c='tcc_close'/>
+<use f='tcc/libtcc.c' l='605' u='r' c='tcc_close'/>
+<use f='tcc/tccpp.c' l='1823' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1954' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1955' u='w' c='preprocess'/>

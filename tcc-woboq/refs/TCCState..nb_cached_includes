@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='769' type='int'/>
+<offset>9536</offset>
+<use f='tcc/libtcc.c' l='914' u='a' c='tcc_delete'/>
+<use f='tcc/tccpp.c' l='1594' u='a' c='search_cached_include'/>
+<use f='tcc/tccpp.c' l='1597' u='r' c='search_cached_include'/>

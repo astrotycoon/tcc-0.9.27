@@ -1,0 +1,46 @@
+<dec f='tcc/tcc.h' l='1141' type='void cstr_ccat(CString * cstr, int ch)'/>
+<use f='tcc/i386-asm.c' l='1481' u='c' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1495' u='c' c='subst_asm_operand'/>
+<use f='tcc/libtcc.c' l='454' u='c' c='tcc_split_path'/>
+<use f='tcc/libtcc.c' l='458' u='c' c='tcc_split_path'/>
+<use f='tcc/libtcc.c' l='1631' u='c' c='args_parser_make_argv'/>
+<use f='tcc/libtcc.c' l='1633' u='c' c='args_parser_make_argv'/>
+<use f='tcc/libtcc.c' l='1881' u='c' c='tcc_parse_args'/>
+<use f='tcc/tccasm.c' l='1081' u='c' c='subst_asm_operands'/>
+<use f='tcc/tccgen.c' l='3269' u='c' c='parse_mult_str'/>
+<def f='tcc/tccpp.c' l='339' ll='347' type='void cstr_ccat(CString * cstr, int ch)'/>
+<use f='tcc/tccpp.c' l='395' u='c' c='add_char'/>
+<use f='tcc/tccpp.c' l='398' u='c' c='add_char'/>
+<use f='tcc/tccpp.c' l='400' u='c' c='add_char'/>
+<use f='tcc/tccpp.c' l='402' u='c' c='add_char'/>
+<use f='tcc/tccpp.c' l='404' u='c' c='add_char'/>
+<use f='tcc/tccpp.c' l='405' u='c' c='add_char'/>
+<use f='tcc/tccpp.c' l='406' u='c' c='add_char'/>
+<use f='tcc/tccpp.c' l='496' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='498' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='500' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='501' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='507' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='509' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='519' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='520' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='886' u='c' c='parse_pp_string'/>
+<use f='tcc/tccpp.c' l='887' u='c' c='parse_pp_string'/>
+<use f='tcc/tccpp.c' l='899' u='c' c='parse_pp_string'/>
+<use f='tcc/tccpp.c' l='907' u='c' c='parse_pp_string'/>
+<use f='tcc/tccpp.c' l='2164' u='c' c='parse_escape_string'/>
+<use f='tcc/tccpp.c' l='2182' u='c' c='parse_escape_string'/>
+<use f='tcc/tccpp.c' l='2726' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2745' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2761' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2776' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2811' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2812' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2814' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2815' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3029' u='c' c='macro_arg_subst'/>
+<use f='tcc/tccpp.c' l='3042' u='c' c='macro_arg_subst'/>
+<use f='tcc/tccpp.c' l='3048' u='c' c='macro_arg_subst'/>
+<use f='tcc/tccpp.c' l='3049' u='c' c='macro_arg_subst'/>
+<use f='tcc/tccpp.c' l='3135' u='c' c='paste_tokens'/>
+<doc f='tcc/tccpp.c' l='338'>/* add a byte */</doc>

@@ -1,0 +1,22 @@
+<dec f='tcc/tcc.h' l='1409' type='void * section_ptr_add(Section * sec, Elf64_Addr size)'/>
+<use f='tcc/tccasm.c' l='500' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccelf.c' l='249' u='c' c='new_symtab'/>
+<def f='tcc/tccelf.c' l='291' ll='295' type='void * section_ptr_add(Section * sec, Elf64_Addr size)'/>
+<use f='tcc/tccelf.c' l='330' u='c' c='put_elf_str'/>
+<use f='tcc/tccelf.c' l='365' u='c' c='rebuild_hash'/>
+<use f='tcc/tccelf.c' l='396' u='c' c='put_elf_sym'/>
+<use f='tcc/tccelf.c' l='412' u='c' c='put_elf_sym'/>
+<use f='tcc/tccelf.c' l='596' u='c' c='put_elf_reloca'/>
+<use f='tcc/tccelf.c' l='657' u='c' c='put_stabs'/>
+<use f='tcc/tccelf.c' l='919' u='c' c='build_got'/>
+<use f='tcc/tccelf.c' l='949' u='c' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1114' u='c' c='put_dt'/>
+<use f='tcc/tccelf.c' l='1165' u='c' c='tcc_add_bcheck'/>
+<use f='tcc/tccelf.c' l='1177' u='c' c='tcc_add_bcheck'/>
+<use f='tcc/tccelf.c' l='2092' u='c' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2432' u='c' c='tcc_load_object_file'/>
+<doc f='tcc/tccelf.c' l='289'>/* reserve at least &apos;size&apos; bytes in section &apos;sec&apos; from
+   sec-&gt;data_offset. */</doc>
+<use f='tcc/tccgen.c' l='4665' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='6920' u='c' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='6998' u='c' c='decl_initializer_alloc'/>

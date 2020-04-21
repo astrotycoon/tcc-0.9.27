@@ -1,0 +1,4 @@
+<dec f='tcc/tcctok.h' l='165' type='383'/>
+<use f='tcc/tccpp.c' l='1607' u='r' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1618' u='r' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='3796' u='r' c='pp_debug_defines'/>

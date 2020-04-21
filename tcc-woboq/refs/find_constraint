@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1596' type='int find_constraint(ASMOperand * operands, int nb_operands, const char * name, const char ** pp)'/>
+<use f='tcc/i386-asm.c' l='1253' u='c' c='asm_compute_constraints'/>
+<def f='tcc/tccasm.c' l='1005' ll='1041' type='int find_constraint(ASMOperand * operands, int nb_operands, const char * name, const char ** pp)'/>
+<use f='tcc/tccasm.c' l='1068' u='c' c='subst_asm_operands'/>
+<doc f='tcc/tccasm.c' l='1002'>/* find a constraint by its number or id (gcc 3 extended
+   syntax). return -1 if not found. Return in *pp in char after the
+   constraint */</doc>

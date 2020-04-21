@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='703' type='unsigned int'/>
+<offset>1120</offset>
+<doc f='tcc/tcc.h' l='703'>/* section alignment */</doc>
+<use f='tcc/libtcc.c' l='1383' u='w' c='tcc_set_linker'/>
+<use f='tcc/tccelf.c' l='1580' u='r' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1581' u='r' c='layout_sections'/>

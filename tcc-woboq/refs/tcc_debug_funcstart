@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1312' type='void tcc_debug_funcstart(TCCState * s1, Sym * sym)'/>
+<def f='tcc/tccgen.c' l='206' ll='224' type='void tcc_debug_funcstart(TCCState * s1, Sym * sym)'/>
+<use f='tcc/tccgen.c' l='7066' u='c' c='gen_function'/>
+<doc f='tcc/tccgen.c' l='205'>/* put function symbol */</doc>

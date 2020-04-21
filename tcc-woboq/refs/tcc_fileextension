@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1107' type='char * tcc_fileextension(const char * name)'/>
+<def f='tcc/libtcc.c' l='190' ll='195' type='char * tcc_fileextension(const char * name)'/>
+<use f='tcc/libtcc.c' l='1083' u='c' c='tcc_add_file'/>
+<doc f='tcc/libtcc.c' l='186'>/* extract extension part of a file
+ *
+ * (if no extension, return pointer to end-of-string)
+ */</doc>
+<use f='tcc/tcctools.c' l='527' u='c' c='gen_makedeps'/>
+<use f='tcc/tcc.c' l='219' u='c' c='default_outputfile'/>

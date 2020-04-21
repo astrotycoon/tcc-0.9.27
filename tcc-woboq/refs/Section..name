@@ -1,0 +1,12 @@
+<dec f='tcc/tcc.h' l='524' type='char [1]'/>
+<offset>960</offset>
+<doc f='tcc/tcc.h' l='524'>/* section name */</doc>
+<use f='tcc/tccasm.c' l='81' c='asm_section_sym'/>
+<use f='tcc/tccelf.c' l='197' u='r' c='new_section'/>
+<use f='tcc/tccelf.c' l='314' u='r' c='find_section'/>
+<use f='tcc/tccelf.c' l='587' c='put_elf_reloca'/>
+<use f='tcc/tccelf.c' l='1248' u='r' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1257' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1262' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1542' u='r' c='alloc_sec_names'/>
+<use f='tcc/tccelf.c' l='2380' u='r' c='tcc_load_object_file'/>

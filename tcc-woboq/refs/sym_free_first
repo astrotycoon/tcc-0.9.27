@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1286' type='Sym *'/>
+<use f='tcc/libtcc.c' l='728' u='w' c='tcc_cleanup'/>
+<def f='tcc/tccgen.c' l='33' type='Sym *'/>
+<use f='tcc/tccgen.c' l='464' u='r' c='__sym_malloc'/>
+<use f='tcc/tccgen.c' l='471' u='w' c='__sym_malloc'/>
+<use f='tcc/tccgen.c' l='479' u='r' c='sym_malloc'/>
+<use f='tcc/tccgen.c' l='482' u='w' c='sym_malloc'/>
+<use f='tcc/tccgen.c' l='493' u='r' c='sym_free'/>
+<use f='tcc/tccgen.c' l='494' u='w' c='sym_free'/>

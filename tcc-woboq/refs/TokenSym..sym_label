@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='397' type='struct Sym *'/>
+<offset>128</offset>
+<doc f='tcc/tcc.h' l='397'>/* direct pointer to label */</doc>
+<use f='tcc/tccpp.c' l='432' u='w' c='tok_alloc_new'/>
+<use f='tcc/tccpp.c' l='1362' u='r' c='label_find'/>
+<use f='tcc/tccpp.c' l='1370' u='a' c='label_push'/>
+<use f='tcc/tccpp.c' l='1402' u='w' c='label_pop'/>

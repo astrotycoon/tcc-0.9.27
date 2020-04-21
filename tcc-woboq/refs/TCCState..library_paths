@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='727' type='char **'/>
+<offset>1728</offset>
+<doc f='tcc/tcc.h' l='726'>/* library paths */</doc>
+<use f='tcc/libtcc.c' l='910' u='a' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='1104' u='a' c='tcc_add_library_path'/>
+<use f='tcc/libtcc.c' l='1127' u='r' c='tcc_add_dll'/>
+<use f='tcc/libtcc.c' l='1153' u='r' c='tcc_add_library'/>
+<use f='tcc/tcc.c' l='184' u='r' c='print_search_dirs'/>

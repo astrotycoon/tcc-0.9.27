@@ -1,0 +1,29 @@
+<dec f='tcc/tcc.h' l='796' type='Section *'/>
+<offset>10624</offset>
+<doc f='tcc/tcc.h' l='795'>/* exported dynamic symbol section */</doc>
+<use f='tcc/tccelf.c' l='802' u='r' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='802' u='r' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='850' u='r' c='relocate_section'/>
+<use f='tcc/tccelf.c' l='962' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='978' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='982' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='984' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1063' u='r' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1066' u='r' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1410' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1423' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1434' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1442' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1459' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1482' u='r' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='1505' u='r' c='export_global_syms'/>
+<use f='tcc/tccelf.c' l='1791' u='r' c='fill_dynamic'/>
+<use f='tcc/tccelf.c' l='1793' u='r' c='fill_dynamic'/>
+<use f='tcc/tccelf.c' l='2046' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2046' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2046' u='r' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2097' u='w' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2100' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2202' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2202' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2202' u='r' c='elf_output_file'/>

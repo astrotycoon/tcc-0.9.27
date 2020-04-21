@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='614' type='char [1]'/>
+<offset>96</offset>
+<doc f='tcc/tcc.h' l='614'>/* path specified in #include */</doc>
+<use f='tcc/tccpp.c' l='1584' u='r' c='search_cached_include'/>
+<use f='tcc/tccpp.c' l='1592' u='r' c='search_cached_include'/>

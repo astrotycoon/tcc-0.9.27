@@ -1,0 +1,5 @@
+<dec f='include/string.h' l='139' type='int strncmp(const char * __s1, const char * __s2, size_t __n)'/>
+<doc f='include/string.h' l='138'>/* Compare N characters of S1 and S2.  */</doc>
+<use f='tcc/tccelf.c' l='2370' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2372' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2381' u='c' c='tcc_load_object_file'/>

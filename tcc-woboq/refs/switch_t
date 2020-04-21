@@ -1,0 +1,5 @@
+<def f='tcc/tccgen.c' l='66' ll='72'/>
+<use f='tcc/tccgen.c' l='66'/>
+<use f='tcc/tccgen.c' l='6098' c='block'/>
+<use f='tcc/tccgen.c' l='6098' c='block'/>
+<size>16</size>

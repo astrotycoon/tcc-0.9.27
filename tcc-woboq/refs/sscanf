@@ -1,0 +1,3 @@
+<dec f='include/stdio.h' l='385' type='int sscanf(const char *restrict __s, const char *restrict __format)'/>
+<doc f='include/stdio.h' l='384'>/* Read formatted input from S.  */</doc>
+<use f='tcc/libtcc.c' l='776' u='c' c='tcc_new'/>

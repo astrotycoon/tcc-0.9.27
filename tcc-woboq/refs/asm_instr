@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1593' type='void asm_instr()'/>
+<doc f='tcc/tcc.h' l='1592'>/* ------------ tccasm.c ------------ */</doc>
+<def f='tcc/tccasm.c' l='1145' ll='1243' type='void asm_instr()'/>
+<doc f='tcc/tccasm.c' l='1144'>/* parse the GCC asm() instruction */</doc>
+<use f='tcc/tccgen.c' l='6193' u='c' c='block'/>

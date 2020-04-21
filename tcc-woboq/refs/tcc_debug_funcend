@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1313' type='void tcc_debug_funcend(TCCState * s1, int size)'/>
+<def f='tcc/tccgen.c' l='227' ll='232' type='void tcc_debug_funcend(TCCState * s1, int size)'/>
+<use f='tcc/tccgen.c' l='7085' u='c' c='gen_function'/>
+<doc f='tcc/tccgen.c' l='226'>/* put function size */</doc>

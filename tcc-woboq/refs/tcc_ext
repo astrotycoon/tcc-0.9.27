@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1098' type='int'/>
+<def f='tcc/libtcc.c' l='30' type='int'/>
+<doc f='tcc/libtcc.c' l='29'>/* use TinyCC extensions */</doc>
+<use f='tcc/tccpp.c' l='2281' u='r' c='parse_number'/>

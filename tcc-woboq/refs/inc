@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1350' type='void inc(int post, int c)'/>
+<def f='tcc/tccgen.c' l='3241' ll='3256' type='void inc(int post, int c)'/>
+<use f='tcc/tccgen.c' l='4947' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5113' u='c' c='unary'/>
+<doc f='tcc/tccgen.c' l='3240'>/* post defines POST/PRE add. c is the token ++ or -- */</doc>

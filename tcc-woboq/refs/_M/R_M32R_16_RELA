@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='2970'/>
+<doc f='tcc/elf.h' l='2969'>/* M32R relocs use SHT_RELA.  */</doc>

@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='1491' type='int gjmp(int t)'/>
+<use f='tcc/tccgen.c' l='1615' u='c' c='gvtst'/>
+<use f='tcc/tccgen.c' l='5528' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5627' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5844' u='c' c='gcase'/>
+<use f='tcc/tccgen.c' l='5911' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6011' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6017' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6026' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6057' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6107' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6113' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6184' u='c' c='block'/>

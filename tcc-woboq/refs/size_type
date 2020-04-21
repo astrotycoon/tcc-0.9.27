@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1295' type='CType'/>
+<def f='tcc/tccgen.c' l='64' type='CType'/>
+<use f='tcc/tccgen.c' l='255' u='m' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='714' u='a' c='vpushs'/>

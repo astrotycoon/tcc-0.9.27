@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1433' type='void resolve_common_syms(TCCState * s1)'/>
+<def f='tcc/tccelf.c' l='1272' ll='1288' type='void resolve_common_syms(TCCState * s1)'/>
+<use f='tcc/tccelf.c' l='2080' u='c' c='elf_output_file'/>
+<use f='tcc/tccrun.c' l='191' u='c' c='tcc_relocate_ex'/>

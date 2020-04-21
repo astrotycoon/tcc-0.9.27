@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1181' type='void tcc_add_pragma_libs(TCCState * s1)'/>
+<def f='tcc/libtcc.c' l='1169' ll='1174' type='void tcc_add_pragma_libs(TCCState * s1)'/>
+<doc f='tcc/libtcc.c' l='1168'>/* handle #pragma comment(lib,) */</doc>
+<use f='tcc/tccelf.c' l='1191' u='c' c='tcc_add_runtime'/>

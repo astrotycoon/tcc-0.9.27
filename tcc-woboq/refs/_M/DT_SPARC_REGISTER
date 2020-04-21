@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1376'/>
+<doc f='tcc/elf.h' l='1374'>/* For Sparc64, legal values for d_tag of Elf64_Dyn.  */</doc>

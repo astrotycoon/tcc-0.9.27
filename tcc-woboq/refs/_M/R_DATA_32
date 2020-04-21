@@ -1,0 +1,3 @@
+<dec f='tcc/x86_64-link.c' l='6'/>
+<doc f='tcc/x86_64-link.c' l='5'>/* relocation type for 32 bit data relocation */</doc>
+<use f='tcc/tccelf.c' l='675' u='c'/>

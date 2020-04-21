@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1607' type='int asm_parse_regvar(int t)'/>
+<def f='tcc/i386-asm.c' l='1200' ll='1218' type='int asm_parse_regvar(int t)'/>
+<doc f='tcc/i386-asm.c' l='1198'>/* If T (a token) is of the form &quot;%reg&quot; returns the register
+   number and type, otherwise return -1.  */</doc>
+<use f='tcc/tccgen.c' l='6929' u='c' c='decl_initializer_alloc'/>

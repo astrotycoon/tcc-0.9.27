@@ -1,0 +1,7 @@
+<dec f='tcc/tcctok.h' l='2' type='256'/>
+<use f='tcc/x86_64-asm.h' l='223' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='223' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='223' macro='1'/>
+<use f='tcc/x86_64-asm.h' l='223' macro='1'/>
+<doc f='tcc/tcctok.h' l='1'>/* keywords */</doc>
+<use f='tcc/tccgen.c' l='4046' c='parse_btype'/>

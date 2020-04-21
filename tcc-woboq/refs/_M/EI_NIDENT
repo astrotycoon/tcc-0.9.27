@@ -1,0 +1,4 @@
+<dec f='tcc/elf.h' l='75'/>
+<use f='tcc/elf.h' l='79' u='c'/>
+<use f='tcc/elf.h' l='97' u='c'/>
+<doc f='tcc/elf.h' l='73'>/* The ELF file header.  This appears at the start of every ELF file.  */</doc>

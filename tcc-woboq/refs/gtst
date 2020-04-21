@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1493' type='int gtst(int inv, int t)'/>
+<use f='tcc/tccgen.c' l='1619' u='c' c='gvtst'/>
+<use f='tcc/tccgen.c' l='5831' u='c' c='gcase'/>
+<use f='tcc/tccgen.c' l='5863' u='c' c='gcase'/>

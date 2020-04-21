@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1411' type='Section * find_section(TCCState * s1, const char * name)'/>
+<use f='tcc/tccasm.c' l='435' u='c' c='use_section'/>
+<use f='tcc/tccasm.c' l='441' u='c' c='push_section'/>
+<def f='tcc/tccelf.c' l='308' ll='319' type='Section * find_section(TCCState * s1, const char * name)'/>
+<use f='tcc/tccelf.c' l='1130' u='c' c='add_init_array_defines'/>
+<use f='tcc/tccelf.c' l='1176' u='c' c='tcc_add_bcheck'/>
+<doc f='tcc/tccelf.c' l='306'>/* return a reference to a section, and create it if it does not
+   exists */</doc>
+<use f='tcc/tccgen.c' l='3312' u='c' c='parse_attribute'/>

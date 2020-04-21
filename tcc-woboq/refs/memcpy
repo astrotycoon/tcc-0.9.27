@@ -1,0 +1,32 @@
+<dec f='include/string.h' l='42' type='void * memcpy(void *restrict __dest, const void *restrict __src, size_t __n)'/>
+<use f='tcc/i386-asm.c' l='1613' u='c' c='asm_gen_code'/>
+<doc f='include/string.h' l='41'>/* Copy N bytes of SRC to DEST.  */</doc>
+<use f='tcc/libtcc.c' l='172' u='c' c='pstrncpy'/>
+<use f='tcc/libtcc.c' l='676' u='c' c='tcc_compile_string'/>
+<use f='tcc/libtcc.c' l='694' u='c' c='tcc_define_symbol'/>
+<use f='tcc/libtcc.c' l='696' u='c' c='tcc_define_symbol'/>
+<use f='tcc/tcctools.c' l='146' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='233' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='236' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='250' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tccasm.c' l='993' u='c' c='tcc_assemble_inline'/>
+<use f='tcc/tccelf.c' l='758' u='c' c='sort_syms'/>
+<use f='tcc/tccelf.c' l='1005' u='c' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='2656' u='c' c='tcc_load_archive'/>
+<use f='tcc/tccelf.c' l='2659' u='c' c='tcc_load_archive'/>
+<use f='tcc/tccgen.c' l='115' u='c' c='ieee_finite'/>
+<use f='tcc/tccgen.c' l='4666' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='6430' u='c' c='decl_designator'/>
+<use f='tcc/tccgen.c' l='6566' u='c' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6711' u='c' c='decl_initializer'/>
+<use f='tcc/tccpp.c' l='266' u='c' c='tal_realloc_impl'/>
+<use f='tcc/tccpp.c' l='285' u='c' c='tal_realloc_impl'/>
+<use f='tcc/tccpp.c' l='306' u='c' c='tal_realloc_impl'/>
+<use f='tcc/tccpp.c' l='437' u='c' c='tok_alloc_new'/>
+<use f='tcc/tccpp.c' l='1062' u='c' c='tok_str_dup'/>
+<use f='tcc/tccpp.c' l='1164' u='c' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='2198' u='c' c='parse_string'/>
+<use f='tcc/tccpp.c' l='3138' u='c' c='paste_tokens'/>
+<use f='tcc/tccpp.c' l='3615' u='c' c='preprocess_start'/>
+<use f='tcc/tccrun.c' l='264' u='c' c='tcc_relocate_ex'/>
+<use f='tcc/tccrun.c' l='387' u='c' c='rt_printline'/>

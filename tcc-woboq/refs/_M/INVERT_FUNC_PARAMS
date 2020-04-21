@@ -1,0 +1,2 @@
+<dec f='tcc/x86_64-gen.c' l='94'/>
+<doc f='tcc/x86_64-gen.c' l='93'>/* defined if function parameters must be evaluated in reverse order */</doc>

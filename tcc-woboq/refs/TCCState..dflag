@@ -1,0 +1,15 @@
+<dec f='tcc/tcc.h' l='753' type='char'/>
+<offset>4064</offset>
+<doc f='tcc/tcc.h' l='753'>/* -dX value */</doc>
+<use f='tcc/libtcc.c' l='1785' u='w' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1787' u='w' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1789' u='w' c='tcc_parse_args'/>
+<use f='tcc/tcc.c' l='316' u='r' c='main'/>
+<use f='tcc/tcc.c' l='317' u='w' c='main'/>
+<use f='tcc/tccpp.c' l='1421' u='r' c='maybe_run_test'/>
+<use f='tcc/tccpp.c' l='3732' u='r' c='pp_line'/>
+<use f='tcc/tccpp.c' l='3856' u='r' c='tcc_preprocess'/>
+<use f='tcc/tccpp.c' l='3858' u='w' c='tcc_preprocess'/>
+<use f='tcc/tccpp.c' l='3875' u='r' c='tcc_preprocess'/>
+<use f='tcc/tccpp.c' l='3877' u='r' c='tcc_preprocess'/>
+<use f='tcc/tccrun.c' l='121' u='r' c='tcc_run'/>

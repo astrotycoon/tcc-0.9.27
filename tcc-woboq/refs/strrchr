@@ -1,0 +1,2 @@
+<dec f='include/string.h' l='252' type='char * strrchr(const char * __s, int __c)'/>
+<use f='tcc/libtcc.c' l='193' u='c' c='tcc_fileextension'/>

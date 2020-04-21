@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1252' type='void label_pop(Sym ** ptop, Sym * slast, int keep)'/>
+<use f='tcc/tccgen.c' l='5978' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='7078' u='c' c='gen_function'/>
+<def f='tcc/tccpp.c' l='1384' ll='1408' type='void label_pop(Sym ** ptop, Sym * slast, int keep)'/>
+<doc f='tcc/tccpp.c' l='1382'>/* pop labels until element last is reached. Look if any labels are
+   undefined. Define symbols if &apos;&amp;&amp;label&apos; was used. */</doc>

@@ -1,0 +1,3 @@
+<dec f='tcc/i386-asm.c' l='70' type='7'/>
+<use f='tcc/i386-asm.c' l='110' u='r' c='asm_opcode'/>
+<doc f='tcc/i386-asm.c' l='70'>/* warning: value is hardcoded from TOK_ASM_xxx */</doc>

@@ -1,0 +1,4 @@
+<dec f='include/string.h' l='329' type='char * strstr(const char * __haystack, const char * __needle)'/>
+<use f='tcc/tcctools.c' l='110' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='112' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='115' u='c' c='tcc_tool_ar'/>

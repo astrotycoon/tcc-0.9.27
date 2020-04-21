@@ -1,0 +1,5 @@
+<dec f='tcc/i386-asm.c' l='89' type='21'/>
+<use f='tcc/i386-asm.c' l='122' u='r' c='parse_operand'/>
+<use f='tcc/i386-asm.c' l='122' u='r' c='asm_opcode'/>
+<use f='tcc/i386-asm.c' l='122' u='r' c='asm_opcode'/>
+<doc f='tcc/i386-asm.c' l='89'>/* OP_EA with only offset */</doc>

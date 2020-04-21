@@ -1,0 +1,7 @@
+<dec f='include/x86_64-linux-gnu/sys/time.h' l='68' type='int gettimeofday(struct timeval *restrict __tv, __timezone_ptr_t __tz)'/>
+<doc f='include/x86_64-linux-gnu/sys/time.h' l='63'>/* Get the current time of day and timezone information,
+   putting it into *TV and *TZ.  If TZ is NULL, *TZ is not filled.
+   Returns 0 on success, -1 on errors.
+   NOTE: This form of timezone information is obsolete.
+   Use the functions and variables declared in &lt;time.h&gt; instead.  */</doc>
+<use f='tcc/tcc.c' l='241' u='c' c='getclock_ms'/>

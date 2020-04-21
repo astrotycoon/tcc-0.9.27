@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='605' type='char [1]'/>
+<offset>128</offset>
+<use f='tcc/tccgen.c' l='7114' u='r' c='gen_inline_functions'/>
+<use f='tcc/tccgen.c' l='7274' u='r' c='decl0'/>

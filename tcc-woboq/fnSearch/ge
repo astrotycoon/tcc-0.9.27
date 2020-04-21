@@ -1,0 +1,11 @@
+gen_expr32|gen_expr32
+gen_expr64|gen_expr64
+gen_makedeps|gen_makedeps
+get_asm_sym|get_asm_sym
+get_elf_sym_addr|get_elf_sym_addr
+get_sym_attr|get_sym_attr
+gen_op|gen_op
+get_reg|get_reg
+get_sym_ref|get_sym_ref
+gexpr|gexpr
+get_tok_str|get_tok_str

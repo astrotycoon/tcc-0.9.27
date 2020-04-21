@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1158' type='int tcc_open(TCCState * s1, const char * filename)'/>
+<def f='tcc/libtcc.c' l='610' ll='628' type='int tcc_open(TCCState * s1, const char * filename)'/>
+<use f='tcc/libtcc.c' l='1009' u='c' c='tcc_add_file_internal'/>
+<use f='tcc/tccpp.c' l='1845' u='c' c='preprocess'/>

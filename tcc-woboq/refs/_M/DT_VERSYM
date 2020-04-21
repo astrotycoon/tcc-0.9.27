@@ -1,0 +1,3 @@
+<dec f='tcc/elf.h' l='764'/>
+<doc f='tcc/elf.h' l='762'>/* The versioning entry types.  The next are defined as part of the
+   GNU extension.  */</doc>

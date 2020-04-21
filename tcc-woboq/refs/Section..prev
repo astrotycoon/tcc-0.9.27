@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='523' type='struct Section *'/>
+<offset>896</offset>
+<doc f='tcc/tcc.h' l='523'>/* previous section on section stack */</doc>
+<use f='tcc/tccasm.c' l='442' u='w' c='push_section'/>
+<use f='tcc/tccasm.c' l='448' u='r' c='pop_section'/>
+<use f='tcc/tccasm.c' l='451' u='w' c='pop_section'/>

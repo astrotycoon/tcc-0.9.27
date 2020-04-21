@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1245' type='void tok_str_add_tok(TokenString * s)'/>
+<use f='tcc/tccasm.c' l='627' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccgen.c' l='6257' u='c' c='skip_or_save_block'/>
+<use f='tcc/tccgen.c' l='6861' u='c' c='decl_initializer_alloc'/>
+<def f='tcc/tccpp.c' l='1203' ll='1214' type='void tok_str_add_tok(TokenString * s)'/>
+<use f='tcc/tccpp.c' l='1457' u='c' c='expr_preprocess'/>
+<doc f='tcc/tccpp.c' l='1202'>/* add the current parse token in token string &apos;s&apos; */</doc>

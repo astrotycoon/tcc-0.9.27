@@ -1,0 +1,4 @@
+<dec f='tcc/elf.h' l='1516' type='unsigned char'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='1516'>/* Determines interpretation of the
+				   variable part of descriptor.  */</doc>

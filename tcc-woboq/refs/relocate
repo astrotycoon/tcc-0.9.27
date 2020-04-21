@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='1476' type='void relocate(TCCState * s1, Elf64_Rela * rel, int type, unsigned char * ptr, Elf64_Addr addr, Elf64_Addr val)'/>
+<use f='tcc/tccelf.c' l='846' u='c' c='relocate_section'/>

@@ -1,0 +1,4 @@
+<dec f='tcc/libtcc.h' l='20' type='void tcc_delete(TCCState * s)'/>
+<doc f='tcc/libtcc.h' l='19'>/* free a TCC compilation context */</doc>
+<def f='tcc/libtcc.c' l='902' ll='939' type='void tcc_delete(TCCState * s1)'/>
+<use f='tcc/tcc.c' l='363' u='c' c='main'/>

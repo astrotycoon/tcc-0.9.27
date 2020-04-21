@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='1424' type='int find_elf_sym(Section * s, const char * name)'/>
+<def f='tcc/tccelf.c' l='435' ll='456' type='int find_elf_sym(Section * s, const char * name)'/>
+<use f='tcc/tccelf.c' l='464' u='c' c='get_elf_sym_addr'/>
+<use f='tcc/tccelf.c' l='503' u='c' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='802' u='c' c='relocate_syms'/>
+<use f='tcc/tccelf.c' l='1397' u='c' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1478' u='c' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='2483' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2611' u='c' c='tcc_load_alacarte'/>
+<use f='tcc/tccrun.c' l='121' u='c' c='tcc_run'/>

@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1306' type='int'/>
+<def f='tcc/tccgen.c' l='60' type='int'/>
+<use f='tcc/tccgen.c' l='172' u='w' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='198' u='r' c='tcc_debug_line'/>
+<use f='tcc/tccgen.c' l='200' u='w' c='tcc_debug_line'/>
+<use f='tcc/tccgen.c' l='222' u='w' c='tcc_debug_funcstart'/>

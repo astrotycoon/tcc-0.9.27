@@ -1,0 +1,25 @@
+<def f='include/x86_64-linux-gnu/bits/types/struct_timespec.h' l='8' ll='12'/>
+<use f='include/x86_64-linux-gnu/sys/select.h' l='116' c='pselect'/>
+<use f='include/x86_64-linux-gnu/bits/stat.h' l='91'/>
+<use f='include/x86_64-linux-gnu/bits/stat.h' l='92'/>
+<use f='include/x86_64-linux-gnu/bits/stat.h' l='93'/>
+<use f='include/x86_64-linux-gnu/bits/stat.h' l='152'/>
+<use f='include/x86_64-linux-gnu/bits/stat.h' l='153'/>
+<use f='include/x86_64-linux-gnu/bits/stat.h' l='154'/>
+<use f='include/x86_64-linux-gnu/bits/types/struct_itimerspec.h' l='10'/>
+<use f='include/x86_64-linux-gnu/bits/types/struct_itimerspec.h' l='11'/>
+<use f='include/time.h' l='211' c='nanosleep'/>
+<use f='include/time.h' l='212' c='nanosleep'/>
+<use f='include/time.h' l='216' c='clock_getres'/>
+<use f='include/time.h' l='219' c='clock_gettime'/>
+<use f='include/time.h' l='222' c='clock_settime'/>
+<use f='include/time.h' l='231' c='clock_nanosleep'/>
+<use f='include/time.h' l='232' c='clock_nanosleep'/>
+<use f='include/time.h' l='263' c='timespec_get'/>
+<size>16</size>
+<doc f='include/x86_64-linux-gnu/bits/types/struct_timespec.h' l='6'>/* POSIX.1b structure for a time value.  This is like a `struct timeval&apos; but
+   has nanoseconds instead of microseconds.  */</doc>
+<mbr r='timespec::tv_sec' o='0' t='__time_t'/>
+<mbr r='timespec::tv_nsec' o='64' t='__syscall_slong_t'/>
+<use f='include/signal.h' l='271' c='sigtimedwait'/>
+<size>16</size>

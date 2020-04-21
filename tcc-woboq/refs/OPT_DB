@@ -1,0 +1,20 @@
+<dec f='tcc/i386-asm.c' l='71' type='8'/>
+<use f='tcc/x86_64-asm.h' l='117'/>
+<use f='tcc/x86_64-asm.h' l='117'/>
+<use f='tcc/x86_64-asm.h' l='117'/>
+<use f='tcc/x86_64-asm.h' l='117'/>
+<use f='tcc/x86_64-asm.h' l='119'/>
+<use f='tcc/x86_64-asm.h' l='119'/>
+<use f='tcc/x86_64-asm.h' l='119'/>
+<use f='tcc/x86_64-asm.h' l='119'/>
+<use f='tcc/x86_64-asm.h' l='117'/>
+<use f='tcc/x86_64-asm.h' l='117'/>
+<use f='tcc/x86_64-asm.h' l='117'/>
+<use f='tcc/x86_64-asm.h' l='117'/>
+<use f='tcc/x86_64-asm.h' l='119'/>
+<use f='tcc/x86_64-asm.h' l='119'/>
+<use f='tcc/x86_64-asm.h' l='119'/>
+<use f='tcc/x86_64-asm.h' l='119'/>
+<use f='tcc/i386-asm.c' l='111' u='r' c='parse_operand'/>
+<use f='tcc/i386-asm.c' l='111' u='r' c='asm_opcode'/>
+<doc f='tcc/i386-asm.c' l='71'>/* warning: value is hardcoded from TOK_ASM_xxx */</doc>

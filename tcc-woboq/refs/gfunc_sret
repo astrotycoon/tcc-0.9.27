@@ -1,0 +1,3 @@
+<dec f='tcc/tcc.h' l='1487' type='int gfunc_sret(CType * vt, int variadic, CType * ret, int * align, int * regsize)'/>
+<use f='tcc/tccgen.c' l='5185' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5749' u='c' c='gfunc_return'/>

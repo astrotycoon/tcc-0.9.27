@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1249' type='void free_defines(Sym * b)'/>
+<use f='tcc/libtcc.c' l='663' u='c' c='tcc_compile'/>
+<def f='tcc/tccpp.c' l='1333' ll='1354' type='void free_defines(Sym * b)'/>
+<use f='tcc/tccpp.c' l='3684' u='c' c='tccpp_delete'/>
+<doc f='tcc/tccpp.c' l='1332'>/* free define stack until top reaches &apos;b&apos; */</doc>

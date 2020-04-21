@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1600' type='int tcc_assemble(TCCState * s1, int do_preprocess)'/>
+<use f='tcc/libtcc.c' l='650' u='c' c='tcc_compile'/>
+<def f='tcc/tccasm.c' l='967' ll='979' type='int tcc_assemble(TCCState * s1, int do_preprocess)'/>
+<doc f='tcc/tccasm.c' l='966'>/* Assemble the current file */</doc>

@@ -1,0 +1,7 @@
+set_flag|set_flag
+section_add|section_add
+section_ptr_add|section_ptr_add
+section_realloc|section_realloc
+section_reserve|section_reserve
+set_elf_sym|set_elf_sym
+set_idnum|set_idnum

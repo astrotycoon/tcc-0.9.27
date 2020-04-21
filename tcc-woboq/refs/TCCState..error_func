@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='740' type='void (*)(void *, const char *)'/>
+<offset>2176</offset>
+<use f='tcc/libtcc.c' l='512' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='521' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='531' u='w' c='tcc_set_error_func'/>

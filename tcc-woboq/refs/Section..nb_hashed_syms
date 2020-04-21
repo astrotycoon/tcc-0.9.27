@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='519' type='int'/>
+<offset>640</offset>
+<doc f='tcc/tcc.h' l='519'>/* used to resize the hash table */</doc>
+<use f='tcc/tccelf.c' l='423' u='w' c='put_elf_sym'/>
+<use f='tcc/tccelf.c' l='424' u='r' c='put_elf_sym'/>

@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='487' type='int'/>
+<offset>0</offset>
+<doc f='tcc/tcc.h' l='487'>/* next jump label */</doc>
+<use f='tcc/tccgen.c' l='6184' u='w' c='block'/>
+<use f='tcc/tccgen.c' l='6184' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='6186' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='6203' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='6208' u='w' c='block'/>
+<use f='tcc/tccpp.c' l='1398' u='r' c='label_pop'/>

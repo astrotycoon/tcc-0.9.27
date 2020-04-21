@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='1296' type='SValue [257]'/>
+<def f='tcc/tccgen.c' l='50' type='SValue [257]'/>
+<use f='tcc/tccgen.c' l='634' macro='1' u='r' c='vsetc'/>
+<use f='tcc/tccgen.c' l='649' macro='1' u='r' c='vsetc'/>
+<use f='tcc/tccgen.c' l='667' macro='1' u='r' c='vswap'/>
+<use f='tcc/tccgen.c' l='752' macro='1' u='r' c='vpushv'/>
+<use f='tcc/tccgen.c' l='957' macro='1' u='r' c='save_regs'/>
+<use f='tcc/tccgen.c' l='983' macro='1' u='r' c='save_reg_upstack'/>
+<use f='tcc/tccgen.c' l='1072' macro='1' u='r' c='get_reg'/>
+<use f='tcc/tccgen.c' l='1085' macro='1' u='r' c='get_reg'/>
+<use f='tcc/tccpp.c' l='3593' macro='1' u='r' c='preprocess_start'/>

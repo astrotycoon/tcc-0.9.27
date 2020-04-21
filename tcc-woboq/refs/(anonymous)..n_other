@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1378' type='unsigned char'/>
+<offset>40</offset>
+<doc f='tcc/tcc.h' l='1378'>/* misc info (usually empty) */</doc>
+<use f='tcc/tccelf.c' l='664' u='w' c='put_stabs'/>

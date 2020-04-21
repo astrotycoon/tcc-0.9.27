@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1430' type='void put_stabn(int type, int other, int desc, int value)'/>
+<def f='tcc/tccelf.c' l='678' ll='681' type='void put_stabn(int type, int other, int desc, int value)'/>
+<use f='tcc/tccgen.c' l='199' u='c' c='tcc_debug_line'/>
+<use f='tcc/tccgen.c' l='220' u='c' c='tcc_debug_funcstart'/>
+<use f='tcc/tccgen.c' l='231' u='c' c='tcc_debug_funcend'/>

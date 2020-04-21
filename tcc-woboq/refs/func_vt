@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1303' type='CType'/>
+<def f='tcc/tccgen.c' l='57' type='CType'/>
+<use f='tcc/tccgen.c' l='6002' u='a' c='block'/>
+<use f='tcc/tccgen.c' l='6003' u='m' c='block'/>
+<use f='tcc/tccgen.c' l='6006' u='a' c='block'/>
+<use f='tcc/tccgen.c' l='7089' u='m' c='gen_function'/>
+<doc f='tcc/tccgen.c' l='57'>/* current function return type (used by return instruction) */</doc>

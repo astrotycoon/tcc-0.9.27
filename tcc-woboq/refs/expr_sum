@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1357' type='void expr_sum()'/>
+<def f='tcc/tccgen.c' l='5299' ll='5310' type='void expr_sum()'/>
+<use f='tcc/tccgen.c' l='5316' u='c' c='expr_shift'/>
+<use f='tcc/tccgen.c' l='5320' u='c' c='expr_shift'/>

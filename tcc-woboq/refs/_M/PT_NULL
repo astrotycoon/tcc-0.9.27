@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='584'/>
+<doc f='tcc/elf.h' l='582'>/* Legal values for p_type (segment type).  */</doc>

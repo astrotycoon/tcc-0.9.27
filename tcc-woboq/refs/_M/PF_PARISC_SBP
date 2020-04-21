@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1940'/>
+<doc f='tcc/elf.h' l='1938'>/* Legal values for p_flags field of Elf32_Phdr/Elf64_Phdr.  */</doc>

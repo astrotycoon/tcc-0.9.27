@@ -1,0 +1,4 @@
+<dec f='tcc/x86_64-gen.c' l='79' type='24'/>
+<use f='tcc/tccgen.c' l='684' u='r' c='vpop'/>
+<use f='tcc/tccgen.c' l='1007' u='r' c='save_reg_upstack'/>
+<use f='tcc/tccgen.c' l='1480' u='r' c='reg_fret'/>

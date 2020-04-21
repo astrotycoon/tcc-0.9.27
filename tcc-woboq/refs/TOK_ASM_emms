@@ -1,0 +1,2 @@
+<dec f='tcc/x86_64-asm.h' l='418' macro='1' type='1082'/>
+<use f='tcc/i386-asm.c' l='27' u='r' c='asm_opcode'/>

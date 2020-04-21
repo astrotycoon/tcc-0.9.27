@@ -1,0 +1,11 @@
+<dec f='tcc/elf.h' l='85' type='Elf32_Off'/>
+<dec f='tcc/elf.h' l='103' type='Elf64_Off'/>
+<offset>320</offset>
+<doc f='tcc/elf.h' l='85'>/* Section header table file offset */</doc>
+<doc f='tcc/elf.h' l='103'>/* Section header table file offset */</doc>
+<use f='tcc/tcctools.c' l='177' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='181' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tccelf.c' l='1924' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1950' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2313' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2712' u='r' c='tcc_load_dll'/>

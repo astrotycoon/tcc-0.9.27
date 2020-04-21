@@ -1,0 +1,30 @@
+<dec f='tcc/tcc.h' l='1343' type='int gv(int rc)'/>
+<use f='tcc/tccasm.c' l='1129' u='c' c='parse_asm_operands'/>
+<use f='tcc/tccgen.c' l='652' u='c' c='vsetc'/>
+<use f='tcc/tccgen.c' l='670' u='c' c='vswap'/>
+<def f='tcc/tccgen.c' l='1253' ll='1428' type='int gv(int rc)'/>
+<use f='tcc/tccgen.c' l='1291' u='c' c='gv'/>
+<use f='tcc/tccgen.c' l='1441' u='c' c='gv2'/>
+<use f='tcc/tccgen.c' l='1443' u='c' c='gv2'/>
+<use f='tcc/tccgen.c' l='1447' u='c' c='gv2'/>
+<use f='tcc/tccgen.c' l='1451' u='c' c='gv2'/>
+<use f='tcc/tccgen.c' l='1453' u='c' c='gv2'/>
+<use f='tcc/tccgen.c' l='1457' u='c' c='gv2'/>
+<use f='tcc/tccgen.c' l='1590' u='c' c='gv_dup'/>
+<use f='tcc/tccgen.c' l='2354' u='c' c='gen_op'/>
+<use f='tcc/tccgen.c' l='2473' u='c' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2609' u='c' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='2614' u='c' c='gen_cast'/>
+<use f='tcc/tccgen.c' l='3194' u='c' c='vstore'/>
+<use f='tcc/tccgen.c' l='4496' u='c' c='indir'/>
+<use f='tcc/tccgen.c' l='5503' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5626' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5644' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5784' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='5788' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='5801' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='5803' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='5821' u='c' c='gcase'/>
+<doc f='tcc/tccgen.c' l='1250'>/* store vtop a register belonging to class &apos;rc&apos;. lvalues are
+   converted to values. Cannot be used if cannot be converted to
+   register value (such as structures). */</doc>

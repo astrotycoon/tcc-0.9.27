@@ -1,0 +1,22 @@
+<dec f='tcc/tcc.h' l='1423' type='int set_elf_sym(Section * s, Elf64_Addr value, unsigned long size, int info, int other, int shndx, const char * name)'/>
+<use f='tcc/libtcc.c' l='1183' u='c' c='tcc_add_symbol'/>
+<use f='tcc/tccelf.c' l='173' u='c' c='tccelf_end_file'/>
+<def f='tcc/tccelf.c' l='490' ll='574' type='int set_elf_sym(Section * s, Elf64_Addr value, unsigned long size, int info, int other, int shndx, const char * name)'/>
+<use f='tcc/tccelf.c' l='916' u='c' c='build_got'/>
+<use f='tcc/tccelf.c' l='982' u='c' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1138' u='c' c='add_init_array_defines'/>
+<use f='tcc/tccelf.c' l='1142' u='c' c='add_init_array_defines'/>
+<use f='tcc/tccelf.c' l='1167' u='c' c='tcc_add_bcheck'/>
+<use f='tcc/tccelf.c' l='1171' u='c' c='tcc_add_bcheck'/>
+<use f='tcc/tccelf.c' l='1219' u='c' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1223' u='c' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1227' u='c' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1258' u='c' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1263' u='c' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1421' u='c' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1459' u='c' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1482' u='c' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='2499' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2770' u='c' c='tcc_load_dll'/>
+<doc f='tcc/tccelf.c' l='488'>/* add an elf symbol : check if it is already defined and patch
+   it. Return symbol index. NOTE that sh_num can be SHN_UNDEF. */</doc>

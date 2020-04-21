@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1384' type='Section *'/>
+<def f='tcc/tccelf.c' l='30' type='Section *'/>
+<use f='tcc/tccelf.c' l='64' u='w' c='tccelf_new'/>
+<use f='tcc/tccelf.c' l='65' u='r' c='tccelf_new'/>
+<use f='tcc/tccgen.c' l='6970' u='r' c='decl_initializer_alloc'/>

@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='127' type='160'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='125'>/* Parameter variable.  Value is offset from argument pointer.
+   (On most machines the argument pointer is the same as the frame pointer.  */</doc>

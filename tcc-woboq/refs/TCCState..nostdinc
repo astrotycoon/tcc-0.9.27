@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='656' type='int'/>
+<offset>32</offset>
+<doc f='tcc/tcc.h' l='656'>/* if true, no standard headers are added */</doc>
+<use f='tcc/libtcc.c' l='952' u='r' c='tcc_set_output_type'/>
+<use f='tcc/libtcc.c' l='1828' u='w' c='tcc_parse_args'/>

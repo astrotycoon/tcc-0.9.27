@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='677' type='int'/>
+<offset>608</offset>
+<doc f='tcc/tcc.h' l='677'>/* allow nested named struct w/o identifier behave like unnamed */</doc>
+<use f='tcc/libtcc.c' l='746' u='w' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='1578' u='a'/>
+<use f='tcc/libtcc.c' l='1578' u='a'/>
+<use f='tcc/libtcc.c' l='1578' u='a'/>
+<use f='tcc/libtcc.c' l='1578' u='a'/>
+<use f='tcc/tccgen.c' l='3890' u='r' c='struct_decl'/>

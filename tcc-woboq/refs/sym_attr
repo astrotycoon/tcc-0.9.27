@@ -1,0 +1,18 @@
+<def f='tcc/tcc.h' l='643' ll='651'/>
+<use f='tcc/tcc.h' l='800'/>
+<use f='tcc/tcc.h' l='1444' c='get_sym_attr'/>
+<use f='tcc/tcc.h' l='1474' c='create_plt_entry'/>
+<size>16</size>
+<doc f='tcc/tcc.h' l='642'>/* extra symbol attributes (not in symbol table) */</doc>
+<mbr r='sym_attr::got_offset' o='0' t='unsigned int'/>
+<mbr r='sym_attr::plt_offset' o='32' t='unsigned int'/>
+<mbr r='sym_attr::plt_sym' o='64' t='int'/>
+<mbr r='sym_attr::dyn_index' o='96' t='int'/>
+<use f='tcc/tccelf.c' l='688' c='get_sym_attr'/>
+<use f='tcc/tccelf.c' l='691' c='get_sym_attr'/>
+<use f='tcc/tccelf.c' l='926' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='933' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1024' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1316' c='fill_got_entry'/>
+<use f='tcc/tccelf.c' l='1366' c='fill_local_got_entries'/>
+<size>16</size>

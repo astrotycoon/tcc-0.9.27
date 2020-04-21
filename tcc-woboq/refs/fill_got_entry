@@ -1,0 +1,2 @@
+<def f='tcc/tccelf.c' l='1312' ll='1327' type='void fill_got_entry(TCCState * s1, Elf64_Rela * rel)'/>
+<use f='tcc/tccelf.c' l='1350' u='c' c='fill_got'/>

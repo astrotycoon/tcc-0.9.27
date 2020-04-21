@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1435' type='void relocate_section(TCCState * s1, Section * s)'/>
+<def f='tcc/tccelf.c' l='825' ll='851' type='void relocate_section(TCCState * s1, Section * s)'/>
+<use f='tcc/tccelf.c' l='1843' u='c' c='final_sections_reloc'/>
+<doc f='tcc/tccelf.c' l='823'>/* relocate a given section (CPU dependent) by applying the relocations
+   in the associated relocation section */</doc>
+<use f='tcc/tccrun.c' l='249' u='c' c='tcc_relocate_ex'/>

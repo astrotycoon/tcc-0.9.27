@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1337' type='void vpushv(SValue * v)'/>
+<def f='tcc/tccgen.c' l='750' ll='756' type='void vpushv(SValue * v)'/>
+<use f='tcc/tccgen.c' l='760' u='c' c='vdup'/>
+<use f='tcc/tccgen.c' l='1225' u='c' c='store_packed_bf'/>
+<use f='tcc/tccgen.c' l='3115' u='c' c='vstore'/>
+<use f='tcc/tccgen.c' l='6124' u='c' c='block'/>

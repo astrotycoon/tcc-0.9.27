@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1650' type='void *'/>
+<def f='tcc/tccrun.c' l='41' type='void *'/>
+<use f='tcc/tccrun.c' l='130' u='w' c='tcc_run'/>
+<use f='tcc/tccrun.c' l='496' u='r' c='rt_error'/>

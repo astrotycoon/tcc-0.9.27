@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='39' type='40'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='38'>/* BSS-segment variable with internal linkage.  Value is its address.  */</doc>

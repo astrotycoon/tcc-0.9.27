@@ -1,0 +1,2 @@
+<dec f='tcc/x86_64-gen.c' l='71' type='17'/>
+<use f='tcc/tccgen.c' l='5219' macro='1' u='r' c='unary'/>

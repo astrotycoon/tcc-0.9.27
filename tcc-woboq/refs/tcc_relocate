@@ -1,0 +1,6 @@
+<dec f='tcc/libtcc.h' l='85' type='int tcc_relocate(TCCState * s1, void * ptr)'/>
+<doc f='tcc/libtcc.h' l='84'>/* do all relocations (needed before using tcc_get_symbol()) */</doc>
+<def f='tcc/tccrun.c' l='59' ll='94' type='int tcc_relocate(TCCState * s1, void * ptr)'/>
+<use f='tcc/tccrun.c' l='123' u='c' c='tcc_run'/>
+<doc f='tcc/tccrun.c' l='56'>/* Do all relocations (needed before using tcc_get_symbol())
+   Returns -1 on error. */</doc>

@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1058'/>
+<doc f='tcc/elf.h' l='1057'>/* Solaris entries in the note section have this name.  */</doc>

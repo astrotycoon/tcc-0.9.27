@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='577' type='int'/>
+<offset>448</offset>
+<doc f='tcc/tcc.h' l='577'>/* next search path */</doc>
+<use f='tcc/tccpp.c' l='1805' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1848' u='w' c='preprocess'/>

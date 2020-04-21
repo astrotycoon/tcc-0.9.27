@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1961'/>
+<doc f='tcc/elf.h' l='1960'>/* These two are primarily concerned with ECOFF debugging info.  */</doc>

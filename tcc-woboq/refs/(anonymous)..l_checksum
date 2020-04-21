@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='1730' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='1739' type='Elf64_Word'/>
+<offset>64</offset>
+<doc f='tcc/elf.h' l='1730'>/* Checksum */</doc>
+<doc f='tcc/elf.h' l='1739'>/* Checksum */</doc>

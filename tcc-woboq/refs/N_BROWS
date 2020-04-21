@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='83' type='72'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='80'>/* Sun&apos;s source-code browser stabs.  ?? Don&apos;t know what the fields are.
+   Supposedly the field is &quot;path to associated .cb file&quot;.  THIS VALUE
+   OVERLAPS WITH N_BSLINE!  */</doc>

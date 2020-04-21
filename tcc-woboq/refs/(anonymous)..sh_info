@@ -1,0 +1,9 @@
+<dec f='tcc/elf.h' l='291' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='305' type='Elf64_Word'/>
+<offset>352</offset>
+<doc f='tcc/elf.h' l='291'>/* Additional section information */</doc>
+<doc f='tcc/elf.h' l='305'>/* Additional section information */</doc>
+<use f='tcc/tccelf.c' l='1964' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2372' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2462' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2515' u='r' c='tcc_load_object_file'/>

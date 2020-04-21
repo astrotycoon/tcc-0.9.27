@@ -1,0 +1,21 @@
+<dec f='tcc/tcc.h' l='450' type='unsigned short'/>
+<offset>0</offset>
+<use f='tcc/tccgen.c' l='918' u='r' c='patch_storage'/>
+<use f='tcc/tccgen.c' l='919' u='w' c='patch_storage'/>
+<use f='tcc/tccgen.c' l='919' u='r' c='patch_storage'/>
+<use f='tcc/tccgen.c' l='3354' u='w' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3355' u='r' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3512' u='r' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3512' u='r' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3569' u='r' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3680' u='r' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3680' u='r' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3977' u='r' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='3977' u='r' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='3978' u='w' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='3978' u='r' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='4797' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='4798' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='6891' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='6892' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7375' u='w' c='decl0'/>

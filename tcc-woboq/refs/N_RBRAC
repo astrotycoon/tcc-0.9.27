@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='155' type='224'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='153'>/* End of a lexical block.  Desc matches the N_LBRAC&apos;s desc.
+   The value is the address of the end of the text for the block.  */</doc>

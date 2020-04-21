@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1434' type='void relocate_syms(TCCState * s1, Section * symtab, int do_resolve)'/>
+<def f='tcc/tccelf.c' l='779' ll='821' type='void relocate_syms(TCCState * s1, Section * symtab, int do_resolve)'/>
+<use f='tcc/tccelf.c' l='1826' u='c' c='final_sections_reloc'/>
+<doc f='tcc/tccelf.c' l='777'>/* relocate symbol table, resolve undefined symbols if do_resolve is
+   true and output error if undefined symbol. */</doc>
+<use f='tcc/tccrun.c' l='234' u='c' c='tcc_relocate_ex'/>

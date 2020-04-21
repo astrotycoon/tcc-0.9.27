@@ -1,0 +1,6 @@
+<def f='tcc/tcc.h' l='620' ll='624'/>
+<use f='tcc/tcc.h' l='620'/>
+<size>24</size>
+<mbr r='ExprValue::v' o='0' t='uint64_t'/>
+<mbr r='ExprValue::sym' o='64' t='Sym *'/>
+<mbr r='ExprValue::pcrel' o='128' t='int'/>

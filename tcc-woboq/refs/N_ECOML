@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='166' type='232'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='164'>/* End common (local name): value is address.
+   I&apos;m not sure how this is used.  */</doc>

@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1392' type='Section *'/>
+<def f='tcc/tccelf.c' l='38' type='Section *'/>
+<use f='tcc/tccelf.c' l='86' u='w' c='tccelf_bounds_new'/>
+<doc f='tcc/tccelf.c' l='38'>/* contains local data bound description */</doc>
+<use f='tcc/tccgen.c' l='6920' u='r' c='decl_initializer_alloc'/>

@@ -1,0 +1,5 @@
+<dec f='tcc/libtcc.h' l='71' type='int tcc_add_library(TCCState * s, const char * libraryname)'/>
+<doc f='tcc/libtcc.h' l='70'>/* the library name is the same as the argument of the &apos;-l&apos; option */</doc>
+<def f='tcc/libtcc.c' l='1139' ll='1158' type='int tcc_add_library(TCCState * s, const char * libraryname)'/>
+<use f='tcc/libtcc.c' l='1162' u='c' c='tcc_add_library_err'/>
+<doc f='tcc/libtcc.c' l='1138'>/* the library name is the same as the argument of the &apos;-l&apos; option */</doc>

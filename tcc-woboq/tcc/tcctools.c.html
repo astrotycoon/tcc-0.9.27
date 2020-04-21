@@ -1,0 +1,564 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>tcctools.c source code [tcc/tcctools.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tcc/tcctools.c'; var root_path = '..'; var data_path = '../../data'; var ecma_script_api_version = 2;</script>
+<script src='../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>tcc</a>/<a href='tcctools.c.html'>tcctools.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/* -------------------------------------------------------------- */</i></td></tr>
+<tr><th id="2">2</th><td><i>/*</i></td></tr>
+<tr><th id="3">3</th><td><i> *  TCC - Tiny C Compiler</i></td></tr>
+<tr><th id="4">4</th><td><i> *</i></td></tr>
+<tr><th id="5">5</th><td><i> *  tcctools.c - extra tools and and -m32/64 support</i></td></tr>
+<tr><th id="6">6</th><td><i> *</i></td></tr>
+<tr><th id="7">7</th><td><i> */</i></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><i>/* -------------------------------------------------------------- */</i></td></tr>
+<tr><th id="10">10</th><td><i>/*</i></td></tr>
+<tr><th id="11">11</th><td><i> * This program is for making libtcc1.a without ar</i></td></tr>
+<tr><th id="12">12</th><td><i> * tiny_libmaker - tiny elf lib maker</i></td></tr>
+<tr><th id="13">13</th><td><i> * usage: tiny_libmaker [lib] files...</i></td></tr>
+<tr><th id="14">14</th><td><i> * Copyright (c) 2007 Timppa</i></td></tr>
+<tr><th id="15">15</th><td><i> *</i></td></tr>
+<tr><th id="16">16</th><td><i> * This library is free software; you can redistribute it and/or</i></td></tr>
+<tr><th id="17">17</th><td><i> * modify it under the terms of the GNU Lesser General Public</i></td></tr>
+<tr><th id="18">18</th><td><i> * License as published by the Free Software Foundation; either</i></td></tr>
+<tr><th id="19">19</th><td><i> * version 2 of the License, or (at your option) any later version.</i></td></tr>
+<tr><th id="20">20</th><td><i> *</i></td></tr>
+<tr><th id="21">21</th><td><i> * This library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="22">22</th><td><i> * but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="23">23</th><td><i> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</i></td></tr>
+<tr><th id="24">24</th><td><i> * Lesser General Public License for more details.</i></td></tr>
+<tr><th id="25">25</th><td><i> *</i></td></tr>
+<tr><th id="26">26</th><td><i> * You should have received a copy of the GNU Lesser General Public</i></td></tr>
+<tr><th id="27">27</th><td><i> * License along with this library; if not, write to the Free Software</i></td></tr>
+<tr><th id="28">28</th><td><i> * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.</i></td></tr>
+<tr><th id="29">29</th><td><i> */</i></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="tcc.h.html">"tcc.h"</a></u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><i>//#define ARMAG  "!&lt;arch&gt;\n"</i></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/ARFMAG" data-ref="_M/ARFMAG">ARFMAG</dfn> "`\n"</u></td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="37">37</th><td>    <em>char</em> <dfn class="decl field" id="(anonymous)::ar_name" title='(anonymous struct)::ar_name' data-ref="(anonymous)::ar_name" data-ref-filename="(anonymous)..ar_name">ar_name</dfn>[<var>16</var>];</td></tr>
+<tr><th id="38">38</th><td>    <em>char</em> <dfn class="decl field" id="(anonymous)::ar_date" title='(anonymous struct)::ar_date' data-ref="(anonymous)::ar_date" data-ref-filename="(anonymous)..ar_date">ar_date</dfn>[<var>12</var>];</td></tr>
+<tr><th id="39">39</th><td>    <em>char</em> <dfn class="decl field" id="(anonymous)::ar_uid" title='(anonymous struct)::ar_uid' data-ref="(anonymous)::ar_uid" data-ref-filename="(anonymous)..ar_uid">ar_uid</dfn>[<var>6</var>];</td></tr>
+<tr><th id="40">40</th><td>    <em>char</em> <dfn class="decl field" id="(anonymous)::ar_gid" title='(anonymous struct)::ar_gid' data-ref="(anonymous)::ar_gid" data-ref-filename="(anonymous)..ar_gid">ar_gid</dfn>[<var>6</var>];</td></tr>
+<tr><th id="41">41</th><td>    <em>char</em> <dfn class="decl field" id="(anonymous)::ar_mode" title='(anonymous struct)::ar_mode' data-ref="(anonymous)::ar_mode" data-ref-filename="(anonymous)..ar_mode">ar_mode</dfn>[<var>8</var>];</td></tr>
+<tr><th id="42">42</th><td>    <em>char</em> <dfn class="decl field" id="(anonymous)::ar_size" title='(anonymous struct)::ar_size' data-ref="(anonymous)::ar_size" data-ref-filename="(anonymous)..ar_size">ar_size</dfn>[<var>10</var>];</td></tr>
+<tr><th id="43">43</th><td>    <em>char</em> <dfn class="decl field" id="(anonymous)::ar_fmag" title='(anonymous struct)::ar_fmag' data-ref="(anonymous)::ar_fmag" data-ref-filename="(anonymous)..ar_fmag">ar_fmag</dfn>[<var>2</var>];</td></tr>
+<tr><th id="44">44</th><td>} <dfn class="typedef" id="ArHdr" title='ArHdr' data-type='struct ArHdr' data-ref="ArHdr" data-ref-filename="ArHdr">ArHdr</dfn>;</td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td><em>static</em> <em>unsigned</em> <em>long</em> <dfn class="decl def fn" id="le2belong" title='le2belong' data-ref="le2belong" data-ref-filename="le2belong">le2belong</dfn>(<em>unsigned</em> <em>long</em> <dfn class="local col1 decl" id="1ul" title='ul' data-type='unsigned long' data-ref="1ul" data-ref-filename="1ul">ul</dfn>) {</td></tr>
+<tr><th id="47">47</th><td>    <b>return</b> ((<a class="local col1 ref" href="#1ul" title='ul' data-ref="1ul" data-ref-filename="1ul">ul</a> &amp; <var>0xFF0000</var>)&gt;&gt;<var>8</var>)+((<a class="local col1 ref" href="#1ul" title='ul' data-ref="1ul" data-ref-filename="1ul">ul</a> &amp; <var>0xFF000000</var>)&gt;&gt;<var>24</var>) +</td></tr>
+<tr><th id="48">48</th><td>        ((<a class="local col1 ref" href="#1ul" title='ul' data-ref="1ul" data-ref-filename="1ul">ul</a> &amp; <var>0xFF</var>)&lt;&lt;<var>24</var>)+((<a class="local col1 ref" href="#1ul" title='ul' data-ref="1ul" data-ref-filename="1ul">ul</a> &amp; <var>0xFF00</var>)&lt;&lt;<var>8</var>);</td></tr>
+<tr><th id="49">49</th><td>}</td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td><i>/* Returns 1 if s contains any of the chars of list, else 0 */</i></td></tr>
+<tr><th id="52">52</th><td><em>static</em> <em>int</em> <dfn class="decl def fn" id="contains_any" title='contains_any' data-ref="contains_any" data-ref-filename="contains_any">contains_any</dfn>(<em>const</em> <em>char</em> *<dfn class="local col2 decl" id="2s" title='s' data-type='const char *' data-ref="2s" data-ref-filename="2s">s</dfn>, <em>const</em> <em>char</em> *<dfn class="local col3 decl" id="3list" title='list' data-type='const char *' data-ref="3list" data-ref-filename="3list">list</dfn>) {</td></tr>
+<tr><th id="53">53</th><td>  <em>const</em> <em>char</em> *<dfn class="local col4 decl" id="4l" title='l' data-type='const char *' data-ref="4l" data-ref-filename="4l">l</dfn>;</td></tr>
+<tr><th id="54">54</th><td>  <b>for</b> (; *<a class="local col2 ref" href="#2s" title='s' data-ref="2s" data-ref-filename="2s">s</a>; <a class="local col2 ref" href="#2s" title='s' data-ref="2s" data-ref-filename="2s">s</a>++) {</td></tr>
+<tr><th id="55">55</th><td>      <b>for</b> (<a class="local col4 ref" href="#4l" title='l' data-ref="4l" data-ref-filename="4l">l</a> = <a class="local col3 ref" href="#3list" title='list' data-ref="3list" data-ref-filename="3list">list</a>; *<a class="local col4 ref" href="#4l" title='l' data-ref="4l" data-ref-filename="4l">l</a>; <a class="local col4 ref" href="#4l" title='l' data-ref="4l" data-ref-filename="4l">l</a>++) {</td></tr>
+<tr><th id="56">56</th><td>          <b>if</b> (*<a class="local col2 ref" href="#2s" title='s' data-ref="2s" data-ref-filename="2s">s</a> == *<a class="local col4 ref" href="#4l" title='l' data-ref="4l" data-ref-filename="4l">l</a>)</td></tr>
+<tr><th id="57">57</th><td>              <b>return</b> <var>1</var>;</td></tr>
+<tr><th id="58">58</th><td>      }</td></tr>
+<tr><th id="59">59</th><td>  }</td></tr>
+<tr><th id="60">60</th><td>  <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="61">61</th><td>}</td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td><em>static</em> <em>int</em> <dfn class="decl def fn" id="ar_usage" title='ar_usage' data-ref="ar_usage" data-ref-filename="ar_usage">ar_usage</dfn>(<em>int</em> <dfn class="local col5 decl" id="5ret" title='ret' data-type='int' data-ref="5ret" data-ref-filename="5ret">ret</dfn>) {</td></tr>
+<tr><th id="64">64</th><td>    <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"usage: tcc -ar [rcsv] lib file...\n"</q>);</td></tr>
+<tr><th id="65">65</th><td>    <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"create library ([abdioptxN] not supported).\n"</q>);</td></tr>
+<tr><th id="66">66</th><td>    <b>return</b> <a class="local col5 ref" href="#5ret" title='ret' data-ref="5ret" data-ref-filename="5ret">ret</a>;</td></tr>
+<tr><th id="67">67</th><td>}</td></tr>
+<tr><th id="68">68</th><td></td></tr>
+<tr><th id="69">69</th><td><a class="macro" href="tcc.h.html#310" title="" data-ref="_M/ST_FUNC">ST_FUNC</a> <em>int</em> <dfn class="decl def fn" id="tcc_tool_ar" title='tcc_tool_ar' data-ref="tcc_tool_ar" data-ref-filename="tcc_tool_ar">tcc_tool_ar</dfn>(<a class="typedef" href="libtcc.h.html#TCCState" title='TCCState' data-type='struct TCCState' data-ref="TCCState" data-ref-filename="TCCState">TCCState</a> *<dfn class="local col6 decl" id="6s1" title='s1' data-type='TCCState *' data-ref="6s1" data-ref-filename="6s1">s1</dfn>, <em>int</em> <dfn class="local col7 decl" id="7argc" title='argc' data-type='int' data-ref="7argc" data-ref-filename="7argc">argc</dfn>, <em>char</em> **<dfn class="local col8 decl" id="8argv" title='argv' data-type='char **' data-ref="8argv" data-ref-filename="8argv">argv</dfn>)</td></tr>
+<tr><th id="70">70</th><td>{</td></tr>
+<tr><th id="71">71</th><td>    <em>static</em> <a class="typedef" href="#ArHdr" title='ArHdr' data-type='struct ArHdr' data-ref="ArHdr" data-ref-filename="ArHdr">ArHdr</a> <dfn class="local col9 decl" id="9arhdr" title='arhdr' data-type='ArHdr' data-ref="9arhdr" data-ref-filename="9arhdr">arhdr</dfn> = {</td></tr>
+<tr><th id="72">72</th><td>        <q>"/               "</q>,</td></tr>
+<tr><th id="73">73</th><td>        <q>"            "</q>,</td></tr>
+<tr><th id="74">74</th><td>        <q>"0     "</q>,</td></tr>
+<tr><th id="75">75</th><td>        <q>"0     "</q>,</td></tr>
+<tr><th id="76">76</th><td>        <q>"0       "</q>,</td></tr>
+<tr><th id="77">77</th><td>        <q>"          "</q>,</td></tr>
+<tr><th id="78">78</th><td>        <a class="macro" href="#34" title="&quot;`\n&quot;" data-ref="_M/ARFMAG">ARFMAG</a></td></tr>
+<tr><th id="79">79</th><td>        };</td></tr>
+<tr><th id="80">80</th><td></td></tr>
+<tr><th id="81">81</th><td>    <em>static</em> <a class="typedef" href="#ArHdr" title='ArHdr' data-type='struct ArHdr' data-ref="ArHdr" data-ref-filename="ArHdr">ArHdr</a> <dfn class="local col0 decl" id="10arhdro" title='arhdro' data-type='ArHdr' data-ref="10arhdro" data-ref-filename="10arhdro">arhdro</dfn> = {</td></tr>
+<tr><th id="82">82</th><td>        <q>"                "</q>,</td></tr>
+<tr><th id="83">83</th><td>        <q>"            "</q>,</td></tr>
+<tr><th id="84">84</th><td>        <q>"0     "</q>,</td></tr>
+<tr><th id="85">85</th><td>        <q>"0     "</q>,</td></tr>
+<tr><th id="86">86</th><td>        <q>"0       "</q>,</td></tr>
+<tr><th id="87">87</th><td>        <q>"          "</q>,</td></tr>
+<tr><th id="88">88</th><td>        <a class="macro" href="#34" title="&quot;`\n&quot;" data-ref="_M/ARFMAG">ARFMAG</a></td></tr>
+<tr><th id="89">89</th><td>        };</td></tr>
+<tr><th id="90">90</th><td></td></tr>
+<tr><th id="91">91</th><td>    <a class="typedef" href="../include/x86_64-linux-gnu/bits/types/FILE.h.html#FILE" title='FILE' data-type='struct _IO_FILE' data-ref="FILE" data-ref-filename="FILE">FILE</a> *<dfn class="local col1 decl" id="11fi" title='fi' data-type='FILE *' data-ref="11fi" data-ref-filename="11fi">fi</dfn>, *<dfn class="local col2 decl" id="12fh" title='fh' data-type='FILE *' data-ref="12fh" data-ref-filename="12fh">fh</dfn> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>, *<dfn class="local col3 decl" id="13fo" title='fo' data-type='FILE *' data-ref="13fo" data-ref-filename="13fo">fo</dfn> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="92">92</th><td>    <a class="macro" href="tcc.h.html#357" title="Elf64_Ehdr" data-ref="_M/ElfW">ElfW</a>(Ehdr) *<dfn class="local col4 decl" id="14ehdr" title='ehdr' data-type='Elf64_Ehdr *' data-ref="14ehdr" data-ref-filename="14ehdr">ehdr</dfn>;</td></tr>
+<tr><th id="93">93</th><td>    <a class="macro" href="tcc.h.html#357" title="Elf64_Shdr" data-ref="_M/ElfW">ElfW</a>(Shdr) *<dfn class="local col5 decl" id="15shdr" title='shdr' data-type='Elf64_Shdr *' data-ref="15shdr" data-ref-filename="15shdr">shdr</dfn>;</td></tr>
+<tr><th id="94">94</th><td>    <a class="macro" href="tcc.h.html#357" title="Elf64_Sym" data-ref="_M/ElfW">ElfW</a>(Sym) *<dfn class="local col6 decl" id="16sym" title='sym' data-type='Elf64_Sym *' data-ref="16sym" data-ref-filename="16sym">sym</dfn>;</td></tr>
+<tr><th id="95">95</th><td>    <em>int</em> <dfn class="local col7 decl" id="17i" title='i' data-type='int' data-ref="17i" data-ref-filename="17i">i</dfn>, <dfn class="local col8 decl" id="18fsize" title='fsize' data-type='int' data-ref="18fsize" data-ref-filename="18fsize">fsize</dfn>, <dfn class="local col9 decl" id="19i_lib" title='i_lib' data-type='int' data-ref="19i_lib" data-ref-filename="19i_lib">i_lib</dfn>, <dfn class="local col0 decl" id="20i_obj" title='i_obj' data-type='int' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</dfn>;</td></tr>
+<tr><th id="96">96</th><td>    <em>char</em> *<dfn class="local col1 decl" id="21buf" title='buf' data-type='char *' data-ref="21buf" data-ref-filename="21buf">buf</dfn>, *<dfn class="local col2 decl" id="22shstr" title='shstr' data-type='char *' data-ref="22shstr" data-ref-filename="22shstr">shstr</dfn>, *<dfn class="local col3 decl" id="23symtab" title='symtab' data-type='char *' data-ref="23symtab" data-ref-filename="23symtab">symtab</dfn> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>, *<dfn class="local col4 decl" id="24strtab" title='strtab' data-type='char *' data-ref="24strtab" data-ref-filename="24strtab">strtab</dfn> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="97">97</th><td>    <em>int</em> <dfn class="local col5 decl" id="25symtabsize" title='symtabsize' data-type='int' data-ref="25symtabsize" data-ref-filename="25symtabsize">symtabsize</dfn> = <var>0</var>;<i>//, strtabsize = 0;</i></td></tr>
+<tr><th id="98">98</th><td>    <em>char</em> *<dfn class="local col6 decl" id="26anames" title='anames' data-type='char *' data-ref="26anames" data-ref-filename="26anames">anames</dfn> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="99">99</th><td>    <em>int</em> *<dfn class="local col7 decl" id="27afpos" title='afpos' data-type='int *' data-ref="27afpos" data-ref-filename="27afpos">afpos</dfn> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="100">100</th><td>    <em>int</em> <dfn class="local col8 decl" id="28istrlen" title='istrlen' data-type='int' data-ref="28istrlen" data-ref-filename="28istrlen">istrlen</dfn>, <dfn class="local col9 decl" id="29strpos" title='strpos' data-type='int' data-ref="29strpos" data-ref-filename="29strpos">strpos</dfn> = <var>0</var>, <dfn class="local col0 decl" id="30fpos" title='fpos' data-type='int' data-ref="30fpos" data-ref-filename="30fpos">fpos</dfn> = <var>0</var>, <dfn class="local col1 decl" id="31funccnt" title='funccnt' data-type='int' data-ref="31funccnt" data-ref-filename="31funccnt">funccnt</dfn> = <var>0</var>, <dfn class="local col2 decl" id="32funcmax" title='funcmax' data-type='int' data-ref="32funcmax" data-ref-filename="32funcmax">funcmax</dfn>, <dfn class="local col3 decl" id="33hofs" title='hofs' data-type='int' data-ref="33hofs" data-ref-filename="33hofs">hofs</dfn>;</td></tr>
+<tr><th id="101">101</th><td>    <em>char</em> <dfn class="local col4 decl" id="34tfile" title='tfile' data-type='char [260]' data-ref="34tfile" data-ref-filename="34tfile">tfile</dfn>[<var>260</var>], <dfn class="local col5 decl" id="35stmp" title='stmp' data-type='char [20]' data-ref="35stmp" data-ref-filename="35stmp">stmp</dfn>[<var>20</var>];</td></tr>
+<tr><th id="102">102</th><td>    <em>char</em> *<dfn class="local col6 decl" id="36file" title='file' data-type='char *' data-ref="36file" data-ref-filename="36file">file</dfn>, *<dfn class="local col7 decl" id="37name" title='name' data-type='char *' data-ref="37name" data-ref-filename="37name">name</dfn>;</td></tr>
+<tr><th id="103">103</th><td>    <em>int</em> <dfn class="local col8 decl" id="38ret" title='ret' data-type='int' data-ref="38ret" data-ref-filename="38ret">ret</dfn> = <var>2</var>;</td></tr>
+<tr><th id="104">104</th><td>    <em>const</em> <em>char</em> *<dfn class="local col9 decl" id="39ops_conflict" title='ops_conflict' data-type='const char *' data-ref="39ops_conflict" data-ref-filename="39ops_conflict">ops_conflict</dfn> = <q>"habdioptxN"</q>;  <i>// unsupported but destructive if ignored.</i></td></tr>
+<tr><th id="105">105</th><td>    <em>int</em> <dfn class="local col0 decl" id="40verbose" title='verbose' data-type='int' data-ref="40verbose" data-ref-filename="40verbose">verbose</dfn> = <var>0</var>;</td></tr>
+<tr><th id="106">106</th><td></td></tr>
+<tr><th id="107">107</th><td>    <a class="local col9 ref" href="#19i_lib" title='i_lib' data-ref="19i_lib" data-ref-filename="19i_lib">i_lib</a> = <var>0</var>; <a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a> = <var>0</var>;  <i>// will hold the index of the lib and first obj</i></td></tr>
+<tr><th id="108">108</th><td>    <b>for</b> (<a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> = <var>1</var>; <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> &lt; <a class="local col7 ref" href="#7argc" title='argc' data-ref="7argc" data-ref-filename="7argc">argc</a>; <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>++) {</td></tr>
+<tr><th id="109">109</th><td>        <em>const</em> <em>char</em> *<dfn class="local col1 decl" id="41a" title='a' data-type='const char *' data-ref="41a" data-ref-filename="41a">a</dfn> = <a class="local col8 ref" href="#8argv" title='argv' data-ref="8argv" data-ref-filename="8argv">argv</a>[<a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>];</td></tr>
+<tr><th id="110">110</th><td>        <b>if</b> (*<a class="local col1 ref" href="#41a" title='a' data-ref="41a" data-ref-filename="41a">a</a> == <kbd>'-'</kbd> &amp;&amp; <a class="ref fn" href="../include/string.h.html#strstr" title='strstr' data-ref="strstr" data-ref-filename="strstr">strstr</a>(<a class="local col1 ref" href="#41a" title='a' data-ref="41a" data-ref-filename="41a">a</a>, <q>"."</q>))</td></tr>
+<tr><th id="111">111</th><td>            <a class="local col8 ref" href="#38ret" title='ret' data-ref="38ret" data-ref-filename="38ret">ret</a> = <var>1</var>; <i>// -x.y is always invalid (same as gnu ar)</i></td></tr>
+<tr><th id="112">112</th><td>        <b>if</b> ((*<a class="local col1 ref" href="#41a" title='a' data-ref="41a" data-ref-filename="41a">a</a> == <kbd>'-'</kbd>) || (<a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> == <var>1</var> &amp;&amp; !<a class="ref fn" href="../include/string.h.html#strstr" title='strstr' data-ref="strstr" data-ref-filename="strstr">strstr</a>(<a class="local col1 ref" href="#41a" title='a' data-ref="41a" data-ref-filename="41a">a</a>, <q>"."</q>))) {  <i>// options argument</i></td></tr>
+<tr><th id="113">113</th><td>            <b>if</b> (<a class="ref fn" href="#contains_any" title='contains_any' data-ref="contains_any" data-ref-filename="contains_any">contains_any</a>(<a class="local col1 ref" href="#41a" title='a' data-ref="41a" data-ref-filename="41a">a</a>, <a class="local col9 ref" href="#39ops_conflict" title='ops_conflict' data-ref="39ops_conflict" data-ref-filename="39ops_conflict">ops_conflict</a>))</td></tr>
+<tr><th id="114">114</th><td>                <a class="local col8 ref" href="#38ret" title='ret' data-ref="38ret" data-ref-filename="38ret">ret</a> = <var>1</var>;</td></tr>
+<tr><th id="115">115</th><td>            <b>if</b> (<a class="ref fn" href="../include/string.h.html#strstr" title='strstr' data-ref="strstr" data-ref-filename="strstr">strstr</a>(<a class="local col1 ref" href="#41a" title='a' data-ref="41a" data-ref-filename="41a">a</a>, <q>"v"</q>))</td></tr>
+<tr><th id="116">116</th><td>                <a class="local col0 ref" href="#40verbose" title='verbose' data-ref="40verbose" data-ref-filename="40verbose">verbose</a> = <var>1</var>;</td></tr>
+<tr><th id="117">117</th><td>        } <b>else</b> {  <i>// lib or obj files: don't abort - keep validating all args.</i></td></tr>
+<tr><th id="118">118</th><td>            <b>if</b> (!<a class="local col9 ref" href="#19i_lib" title='i_lib' data-ref="19i_lib" data-ref-filename="19i_lib">i_lib</a>)  <i>// first file is the lib</i></td></tr>
+<tr><th id="119">119</th><td>                <a class="local col9 ref" href="#19i_lib" title='i_lib' data-ref="19i_lib" data-ref-filename="19i_lib">i_lib</a> = <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>;</td></tr>
+<tr><th id="120">120</th><td>            <b>else</b> <b>if</b> (!<a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a>)  <i>// second file is the first obj</i></td></tr>
+<tr><th id="121">121</th><td>                <a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a> = <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>;</td></tr>
+<tr><th id="122">122</th><td>        }</td></tr>
+<tr><th id="123">123</th><td>    }</td></tr>
+<tr><th id="124">124</th><td></td></tr>
+<tr><th id="125">125</th><td>    <b>if</b> (!<a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a>)  <i>// i_obj implies also i_lib. we require both.</i></td></tr>
+<tr><th id="126">126</th><td>        <a class="local col8 ref" href="#38ret" title='ret' data-ref="38ret" data-ref-filename="38ret">ret</a> = <var>1</var>;</td></tr>
+<tr><th id="127">127</th><td></td></tr>
+<tr><th id="128">128</th><td>    <b>if</b> (<a class="local col8 ref" href="#38ret" title='ret' data-ref="38ret" data-ref-filename="38ret">ret</a> == <var>1</var>)</td></tr>
+<tr><th id="129">129</th><td>        <b>return</b> <a class="ref fn" href="#ar_usage" title='ar_usage' data-ref="ar_usage" data-ref-filename="ar_usage">ar_usage</a>(<a class="local col8 ref" href="#38ret" title='ret' data-ref="38ret" data-ref-filename="38ret">ret</a>);</td></tr>
+<tr><th id="130">130</th><td></td></tr>
+<tr><th id="131">131</th><td>    <b>if</b> ((<a class="local col2 ref" href="#12fh" title='fh' data-ref="12fh" data-ref-filename="12fh">fh</a> = <a class="ref fn" href="../include/stdio.h.html#fopen" title='fopen' data-ref="fopen" data-ref-filename="fopen">fopen</a>(<a class="local col8 ref" href="#8argv" title='argv' data-ref="8argv" data-ref-filename="8argv">argv</a>[<a class="local col9 ref" href="#19i_lib" title='i_lib' data-ref="19i_lib" data-ref-filename="19i_lib">i_lib</a>], <q>"wb"</q>)) == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>)</td></tr>
+<tr><th id="132">132</th><td>    {</td></tr>
+<tr><th id="133">133</th><td>        <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"tcc: ar: can't open file %s \n"</q>, <a class="local col8 ref" href="#8argv" title='argv' data-ref="8argv" data-ref-filename="8argv">argv</a>[<a class="local col9 ref" href="#19i_lib" title='i_lib' data-ref="19i_lib" data-ref-filename="19i_lib">i_lib</a>]);</td></tr>
+<tr><th id="134">134</th><td>        <b>goto</b> <a class="lbl" href="#42the_end" data-ref="42the_end" data-ref-filename="42the_end">the_end</a>;</td></tr>
+<tr><th id="135">135</th><td>    }</td></tr>
+<tr><th id="136">136</th><td></td></tr>
+<tr><th id="137">137</th><td>    <a class="ref fn" href="../include/stdio.h.html#sprintf" title='sprintf' data-ref="sprintf" data-ref-filename="sprintf">sprintf</a>(<a class="local col4 ref" href="#34tfile" title='tfile' data-ref="34tfile" data-ref-filename="34tfile">tfile</a>, <q>"%s.tmp"</q>, <a class="local col8 ref" href="#8argv" title='argv' data-ref="8argv" data-ref-filename="8argv">argv</a>[<a class="local col9 ref" href="#19i_lib" title='i_lib' data-ref="19i_lib" data-ref-filename="19i_lib">i_lib</a>]);</td></tr>
+<tr><th id="138">138</th><td>    <b>if</b> ((<a class="local col3 ref" href="#13fo" title='fo' data-ref="13fo" data-ref-filename="13fo">fo</a> = <a class="ref fn" href="../include/stdio.h.html#fopen" title='fopen' data-ref="fopen" data-ref-filename="fopen">fopen</a>(<a class="local col4 ref" href="#34tfile" title='tfile' data-ref="34tfile" data-ref-filename="34tfile">tfile</a>, <q>"wb+"</q>)) == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>)</td></tr>
+<tr><th id="139">139</th><td>    {</td></tr>
+<tr><th id="140">140</th><td>        <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"tcc: ar: can't create temporary file %s\n"</q>, <a class="local col4 ref" href="#34tfile" title='tfile' data-ref="34tfile" data-ref-filename="34tfile">tfile</a>);</td></tr>
+<tr><th id="141">141</th><td>        <b>goto</b> <a class="lbl" href="#42the_end" data-ref="42the_end" data-ref-filename="42the_end">the_end</a>;</td></tr>
+<tr><th id="142">142</th><td>    }</td></tr>
+<tr><th id="143">143</th><td></td></tr>
+<tr><th id="144">144</th><td>    <a class="local col2 ref" href="#32funcmax" title='funcmax' data-ref="32funcmax" data-ref-filename="32funcmax">funcmax</a> = <var>250</var>;</td></tr>
+<tr><th id="145">145</th><td>    <a class="local col7 ref" href="#27afpos" title='afpos' data-ref="27afpos" data-ref-filename="27afpos">afpos</a> = <a class="ref fn" href="tcc.h.html#tcc_realloc" title='tcc_realloc' data-ref="tcc_realloc" data-ref-filename="tcc_realloc">tcc_realloc</a>(<span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>, <a class="local col2 ref" href="#32funcmax" title='funcmax' data-ref="32funcmax" data-ref-filename="32funcmax">funcmax</a> * <b>sizeof</b> *<a class="local col7 ref" href="#27afpos" title='afpos' data-ref="27afpos" data-ref-filename="27afpos">afpos</a>); <i>// 250 func</i></td></tr>
+<tr><th id="146">146</th><td>    <a class="ref fn" href="../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy" data-ref-filename="memcpy">memcpy</a>(&amp;<a class="local col0 ref" href="#10arhdro" title='arhdro' data-ref="10arhdro" data-ref-filename="10arhdro">arhdro</a>.<a class="ref field" href="#(anonymous)::ar_mode" title='(anonymous struct)::ar_mode' data-ref="(anonymous)::ar_mode" data-ref-filename="(anonymous)..ar_mode">ar_mode</a>, <q>"100666"</q>, <var>6</var>);</td></tr>
+<tr><th id="147">147</th><td></td></tr>
+<tr><th id="148">148</th><td>    <i>// i_obj = first input object file</i></td></tr>
+<tr><th id="149">149</th><td>    <b>while</b> (<a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a> &lt; <a class="local col7 ref" href="#7argc" title='argc' data-ref="7argc" data-ref-filename="7argc">argc</a>)</td></tr>
+<tr><th id="150">150</th><td>    {</td></tr>
+<tr><th id="151">151</th><td>        <b>if</b> (*<a class="local col8 ref" href="#8argv" title='argv' data-ref="8argv" data-ref-filename="8argv">argv</a>[<a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a>] == <kbd>'-'</kbd>) {  <i>// by now, all options start with '-'</i></td></tr>
+<tr><th id="152">152</th><td>            <a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a>++;</td></tr>
+<tr><th id="153">153</th><td>            <b>continue</b>;</td></tr>
+<tr><th id="154">154</th><td>        }</td></tr>
+<tr><th id="155">155</th><td>        <b>if</b> ((<a class="local col1 ref" href="#11fi" title='fi' data-ref="11fi" data-ref-filename="11fi">fi</a> = <a class="ref fn" href="../include/stdio.h.html#fopen" title='fopen' data-ref="fopen" data-ref-filename="fopen">fopen</a>(<a class="local col8 ref" href="#8argv" title='argv' data-ref="8argv" data-ref-filename="8argv">argv</a>[<a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a>], <q>"rb"</q>)) == <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>) {</td></tr>
+<tr><th id="156">156</th><td>            <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"tcc: ar: can't open file %s \n"</q>, <a class="local col8 ref" href="#8argv" title='argv' data-ref="8argv" data-ref-filename="8argv">argv</a>[<a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a>]);</td></tr>
+<tr><th id="157">157</th><td>            <b>goto</b> <a class="lbl" href="#42the_end" data-ref="42the_end" data-ref-filename="42the_end">the_end</a>;</td></tr>
+<tr><th id="158">158</th><td>        }</td></tr>
+<tr><th id="159">159</th><td>        <b>if</b> (<a class="local col0 ref" href="#40verbose" title='verbose' data-ref="40verbose" data-ref-filename="40verbose">verbose</a>)</td></tr>
+<tr><th id="160">160</th><td>            <a class="ref fn" href="../include/stdio.h.html#printf" title='printf' data-ref="printf" data-ref-filename="printf">printf</a>(<q>"a - %s\n"</q>, <a class="local col8 ref" href="#8argv" title='argv' data-ref="8argv" data-ref-filename="8argv">argv</a>[<a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a>]);</td></tr>
+<tr><th id="161">161</th><td></td></tr>
+<tr><th id="162">162</th><td>        <a class="ref fn" href="../include/stdio.h.html#fseek" title='fseek' data-ref="fseek" data-ref-filename="fseek">fseek</a>(<a class="local col1 ref" href="#11fi" title='fi' data-ref="11fi" data-ref-filename="11fi">fi</a>, <var>0</var>, <a class="macro" href="../include/fcntl.h.html#139" title="2" data-ref="_M/SEEK_END">SEEK_END</a>);</td></tr>
+<tr><th id="163">163</th><td>        <a class="local col8 ref" href="#18fsize" title='fsize' data-ref="18fsize" data-ref-filename="18fsize">fsize</a> = <a class="ref fn" href="../include/stdio.h.html#ftell" title='ftell' data-ref="ftell" data-ref-filename="ftell">ftell</a>(<a class="local col1 ref" href="#11fi" title='fi' data-ref="11fi" data-ref-filename="11fi">fi</a>);</td></tr>
+<tr><th id="164">164</th><td>        <a class="ref fn" href="../include/stdio.h.html#fseek" title='fseek' data-ref="fseek" data-ref-filename="fseek">fseek</a>(<a class="local col1 ref" href="#11fi" title='fi' data-ref="11fi" data-ref-filename="11fi">fi</a>, <var>0</var>, <a class="macro" href="../include/fcntl.h.html#137" title="0" data-ref="_M/SEEK_SET">SEEK_SET</a>);</td></tr>
+<tr><th id="165">165</th><td>        <a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a> = <a class="ref fn" href="tcc.h.html#tcc_malloc" title='tcc_malloc' data-ref="tcc_malloc" data-ref-filename="tcc_malloc">tcc_malloc</a>(<a class="local col8 ref" href="#18fsize" title='fsize' data-ref="18fsize" data-ref-filename="18fsize">fsize</a> + <var>1</var>);</td></tr>
+<tr><th id="166">166</th><td>        <a class="ref fn" href="../include/stdio.h.html#fread" title='fread' data-ref="fread" data-ref-filename="fread">fread</a>(<a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a>, <a class="local col8 ref" href="#18fsize" title='fsize' data-ref="18fsize" data-ref-filename="18fsize">fsize</a>, <var>1</var>, <a class="local col1 ref" href="#11fi" title='fi' data-ref="11fi" data-ref-filename="11fi">fi</a>);</td></tr>
+<tr><th id="167">167</th><td>        <a class="ref fn" href="../include/stdio.h.html#fclose" title='fclose' data-ref="fclose" data-ref-filename="fclose">fclose</a>(<a class="local col1 ref" href="#11fi" title='fi' data-ref="11fi" data-ref-filename="11fi">fi</a>);</td></tr>
+<tr><th id="168">168</th><td></td></tr>
+<tr><th id="169">169</th><td>        <i>// elf header</i></td></tr>
+<tr><th id="170">170</th><td>        <a class="local col4 ref" href="#14ehdr" title='ehdr' data-ref="14ehdr" data-ref-filename="14ehdr">ehdr</a> = (<a class="macro" href="tcc.h.html#357" title="Elf64_Ehdr" data-ref="_M/ElfW">ElfW</a>(Ehdr) *)<a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a>;</td></tr>
+<tr><th id="171">171</th><td>        <b>if</b> (<a class="local col4 ref" href="#14ehdr" title='ehdr' data-ref="14ehdr" data-ref-filename="14ehdr">ehdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::e_ident" title='(anonymous struct)::e_ident' data-ref="(anonymous)::e_ident" data-ref-filename="(anonymous)..e_ident">e_ident</a>[<var>4</var>] != <a class="macro" href="tcc.h.html#356" title="2" data-ref="_M/ELFCLASSW">ELFCLASSW</a>)</td></tr>
+<tr><th id="172">172</th><td>        {</td></tr>
+<tr><th id="173">173</th><td>            <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"tcc: ar: Unsupported Elf Class: %s\n"</q>, <a class="local col8 ref" href="#8argv" title='argv' data-ref="8argv" data-ref-filename="8argv">argv</a>[<a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a>]);</td></tr>
+<tr><th id="174">174</th><td>            <b>goto</b> <a class="lbl" href="#42the_end" data-ref="42the_end" data-ref-filename="42the_end">the_end</a>;</td></tr>
+<tr><th id="175">175</th><td>        }</td></tr>
+<tr><th id="176">176</th><td></td></tr>
+<tr><th id="177">177</th><td>        <a class="local col5 ref" href="#15shdr" title='shdr' data-ref="15shdr" data-ref-filename="15shdr">shdr</a> = (<a class="macro" href="tcc.h.html#357" title="Elf64_Shdr" data-ref="_M/ElfW">ElfW</a>(Shdr) *) (<a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a> + <a class="local col4 ref" href="#14ehdr" title='ehdr' data-ref="14ehdr" data-ref-filename="14ehdr">ehdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::e_shoff" title='(anonymous struct)::e_shoff' data-ref="(anonymous)::e_shoff" data-ref-filename="(anonymous)..e_shoff">e_shoff</a> + <a class="local col4 ref" href="#14ehdr" title='ehdr' data-ref="14ehdr" data-ref-filename="14ehdr">ehdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::e_shstrndx" title='(anonymous struct)::e_shstrndx' data-ref="(anonymous)::e_shstrndx" data-ref-filename="(anonymous)..e_shstrndx">e_shstrndx</a> * <a class="local col4 ref" href="#14ehdr" title='ehdr' data-ref="14ehdr" data-ref-filename="14ehdr">ehdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::e_shentsize" title='(anonymous struct)::e_shentsize' data-ref="(anonymous)::e_shentsize" data-ref-filename="(anonymous)..e_shentsize">e_shentsize</a>);</td></tr>
+<tr><th id="178">178</th><td>        <a class="local col2 ref" href="#22shstr" title='shstr' data-ref="22shstr" data-ref-filename="22shstr">shstr</a> = (<em>char</em> *)(<a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a> + <a class="local col5 ref" href="#15shdr" title='shdr' data-ref="15shdr" data-ref-filename="15shdr">shdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::sh_offset" title='(anonymous struct)::sh_offset' data-ref="(anonymous)::sh_offset" data-ref-filename="(anonymous)..sh_offset">sh_offset</a>);</td></tr>
+<tr><th id="179">179</th><td>        <b>for</b> (<a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> = <var>0</var>; <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> &lt; <a class="local col4 ref" href="#14ehdr" title='ehdr' data-ref="14ehdr" data-ref-filename="14ehdr">ehdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::e_shnum" title='(anonymous struct)::e_shnum' data-ref="(anonymous)::e_shnum" data-ref-filename="(anonymous)..e_shnum">e_shnum</a>; <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>++)</td></tr>
+<tr><th id="180">180</th><td>        {</td></tr>
+<tr><th id="181">181</th><td>            <a class="local col5 ref" href="#15shdr" title='shdr' data-ref="15shdr" data-ref-filename="15shdr">shdr</a> = (<a class="macro" href="tcc.h.html#357" title="Elf64_Shdr" data-ref="_M/ElfW">ElfW</a>(Shdr) *) (<a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a> + <a class="local col4 ref" href="#14ehdr" title='ehdr' data-ref="14ehdr" data-ref-filename="14ehdr">ehdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::e_shoff" title='(anonymous struct)::e_shoff' data-ref="(anonymous)::e_shoff" data-ref-filename="(anonymous)..e_shoff">e_shoff</a> + <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> * <a class="local col4 ref" href="#14ehdr" title='ehdr' data-ref="14ehdr" data-ref-filename="14ehdr">ehdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::e_shentsize" title='(anonymous struct)::e_shentsize' data-ref="(anonymous)::e_shentsize" data-ref-filename="(anonymous)..e_shentsize">e_shentsize</a>);</td></tr>
+<tr><th id="182">182</th><td>            <b>if</b> (!<a class="local col5 ref" href="#15shdr" title='shdr' data-ref="15shdr" data-ref-filename="15shdr">shdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::sh_offset" title='(anonymous struct)::sh_offset' data-ref="(anonymous)::sh_offset" data-ref-filename="(anonymous)..sh_offset">sh_offset</a>)</td></tr>
+<tr><th id="183">183</th><td>                <b>continue</b>;</td></tr>
+<tr><th id="184">184</th><td>            <b>if</b> (<a class="local col5 ref" href="#15shdr" title='shdr' data-ref="15shdr" data-ref-filename="15shdr">shdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::sh_type" title='(anonymous struct)::sh_type' data-ref="(anonymous)::sh_type" data-ref-filename="(anonymous)..sh_type">sh_type</a> == <a class="macro" href="elf.h.html#331" title="2" data-ref="_M/SHT_SYMTAB">SHT_SYMTAB</a>)</td></tr>
+<tr><th id="185">185</th><td>            {</td></tr>
+<tr><th id="186">186</th><td>                <a class="local col3 ref" href="#23symtab" title='symtab' data-ref="23symtab" data-ref-filename="23symtab">symtab</a> = (<em>char</em> *)(<a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a> + <a class="local col5 ref" href="#15shdr" title='shdr' data-ref="15shdr" data-ref-filename="15shdr">shdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::sh_offset" title='(anonymous struct)::sh_offset' data-ref="(anonymous)::sh_offset" data-ref-filename="(anonymous)..sh_offset">sh_offset</a>);</td></tr>
+<tr><th id="187">187</th><td>                <a class="local col5 ref" href="#25symtabsize" title='symtabsize' data-ref="25symtabsize" data-ref-filename="25symtabsize">symtabsize</a> = <a class="local col5 ref" href="#15shdr" title='shdr' data-ref="15shdr" data-ref-filename="15shdr">shdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::sh_size" title='(anonymous struct)::sh_size' data-ref="(anonymous)::sh_size" data-ref-filename="(anonymous)..sh_size">sh_size</a>;</td></tr>
+<tr><th id="188">188</th><td>            }</td></tr>
+<tr><th id="189">189</th><td>            <b>if</b> (<a class="local col5 ref" href="#15shdr" title='shdr' data-ref="15shdr" data-ref-filename="15shdr">shdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::sh_type" title='(anonymous struct)::sh_type' data-ref="(anonymous)::sh_type" data-ref-filename="(anonymous)..sh_type">sh_type</a> == <a class="macro" href="elf.h.html#332" title="3" data-ref="_M/SHT_STRTAB">SHT_STRTAB</a>)</td></tr>
+<tr><th id="190">190</th><td>            {</td></tr>
+<tr><th id="191">191</th><td>                <b>if</b> (!<a class="ref fn" href="../include/string.h.html#strcmp" title='strcmp' data-ref="strcmp" data-ref-filename="strcmp">strcmp</a>(<a class="local col2 ref" href="#22shstr" title='shstr' data-ref="22shstr" data-ref-filename="22shstr">shstr</a> + <a class="local col5 ref" href="#15shdr" title='shdr' data-ref="15shdr" data-ref-filename="15shdr">shdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::sh_name" title='(anonymous struct)::sh_name' data-ref="(anonymous)::sh_name" data-ref-filename="(anonymous)..sh_name">sh_name</a>, <q>".strtab"</q>))</td></tr>
+<tr><th id="192">192</th><td>                {</td></tr>
+<tr><th id="193">193</th><td>                    <a class="local col4 ref" href="#24strtab" title='strtab' data-ref="24strtab" data-ref-filename="24strtab">strtab</a> = (<em>char</em> *)(<a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a> + <a class="local col5 ref" href="#15shdr" title='shdr' data-ref="15shdr" data-ref-filename="15shdr">shdr</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::sh_offset" title='(anonymous struct)::sh_offset' data-ref="(anonymous)::sh_offset" data-ref-filename="(anonymous)..sh_offset">sh_offset</a>);</td></tr>
+<tr><th id="194">194</th><td>                    <i>//strtabsize = shdr-&gt;sh_size;</i></td></tr>
+<tr><th id="195">195</th><td>                }</td></tr>
+<tr><th id="196">196</th><td>            }</td></tr>
+<tr><th id="197">197</th><td>        }</td></tr>
+<tr><th id="198">198</th><td></td></tr>
+<tr><th id="199">199</th><td>        <b>if</b> (<a class="local col3 ref" href="#23symtab" title='symtab' data-ref="23symtab" data-ref-filename="23symtab">symtab</a> &amp;&amp; <a class="local col5 ref" href="#25symtabsize" title='symtabsize' data-ref="25symtabsize" data-ref-filename="25symtabsize">symtabsize</a>)</td></tr>
+<tr><th id="200">200</th><td>        {</td></tr>
+<tr><th id="201">201</th><td>            <em>int</em> <dfn class="local col3 decl" id="43nsym" title='nsym' data-type='int' data-ref="43nsym" data-ref-filename="43nsym">nsym</dfn> = <a class="local col5 ref" href="#25symtabsize" title='symtabsize' data-ref="25symtabsize" data-ref-filename="25symtabsize">symtabsize</a> / <b>sizeof</b>(<a class="macro" href="tcc.h.html#357" title="Elf64_Sym" data-ref="_M/ElfW">ElfW</a>(Sym));</td></tr>
+<tr><th id="202">202</th><td>            <i>//printf("symtab: info size shndx name\n");</i></td></tr>
+<tr><th id="203">203</th><td>            <b>for</b> (<a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> = <var>1</var>; <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> &lt; <a class="local col3 ref" href="#43nsym" title='nsym' data-ref="43nsym" data-ref-filename="43nsym">nsym</a>; <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>++)</td></tr>
+<tr><th id="204">204</th><td>            {</td></tr>
+<tr><th id="205">205</th><td>                <a class="local col6 ref" href="#16sym" title='sym' data-ref="16sym" data-ref-filename="16sym">sym</a> = (<a class="macro" href="tcc.h.html#357" title="Elf64_Sym" data-ref="_M/ElfW">ElfW</a>(Sym) *) (<a class="local col3 ref" href="#23symtab" title='symtab' data-ref="23symtab" data-ref-filename="23symtab">symtab</a> + <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> * <b>sizeof</b>(<a class="macro" href="tcc.h.html#357" title="Elf64_Sym" data-ref="_M/ElfW">ElfW</a>(Sym)));</td></tr>
+<tr><th id="206">206</th><td>                <b>if</b> (<a class="local col6 ref" href="#16sym" title='sym' data-ref="16sym" data-ref-filename="16sym">sym</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::st_shndx" title='(anonymous struct)::st_shndx' data-ref="(anonymous)::st_shndx" data-ref-filename="(anonymous)..st_shndx">st_shndx</a> &amp;&amp;</td></tr>
+<tr><th id="207">207</th><td>                    (<a class="local col6 ref" href="#16sym" title='sym' data-ref="16sym" data-ref-filename="16sym">sym</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::st_info" title='(anonymous struct)::st_info' data-ref="(anonymous)::st_info" data-ref-filename="(anonymous)..st_info">st_info</a> == <var>0x10</var></td></tr>
+<tr><th id="208">208</th><td>                    || <a class="local col6 ref" href="#16sym" title='sym' data-ref="16sym" data-ref-filename="16sym">sym</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::st_info" title='(anonymous struct)::st_info' data-ref="(anonymous)::st_info" data-ref-filename="(anonymous)..st_info">st_info</a> == <var>0x11</var></td></tr>
+<tr><th id="209">209</th><td>                    || <a class="local col6 ref" href="#16sym" title='sym' data-ref="16sym" data-ref-filename="16sym">sym</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::st_info" title='(anonymous struct)::st_info' data-ref="(anonymous)::st_info" data-ref-filename="(anonymous)..st_info">st_info</a> == <var>0x12</var></td></tr>
+<tr><th id="210">210</th><td>                    )) {</td></tr>
+<tr><th id="211">211</th><td>                    <i>//printf("symtab: %2Xh %4Xh %2Xh %s\n", sym-&gt;st_info, sym-&gt;st_size, sym-&gt;st_shndx, strtab + sym-&gt;st_name);</i></td></tr>
+<tr><th id="212">212</th><td>                    <a class="local col8 ref" href="#28istrlen" title='istrlen' data-ref="28istrlen" data-ref-filename="28istrlen">istrlen</a> = <a class="ref fn" href="../include/string.h.html#strlen" title='strlen' data-ref="strlen" data-ref-filename="strlen">strlen</a>(<a class="local col4 ref" href="#24strtab" title='strtab' data-ref="24strtab" data-ref-filename="24strtab">strtab</a> + <a class="local col6 ref" href="#16sym" title='sym' data-ref="16sym" data-ref-filename="16sym">sym</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::st_name" title='(anonymous struct)::st_name' data-ref="(anonymous)::st_name" data-ref-filename="(anonymous)..st_name">st_name</a>)+<var>1</var>;</td></tr>
+<tr><th id="213">213</th><td>                    <a class="local col6 ref" href="#26anames" title='anames' data-ref="26anames" data-ref-filename="26anames">anames</a> = <a class="ref fn" href="tcc.h.html#tcc_realloc" title='tcc_realloc' data-ref="tcc_realloc" data-ref-filename="tcc_realloc">tcc_realloc</a>(<a class="local col6 ref" href="#26anames" title='anames' data-ref="26anames" data-ref-filename="26anames">anames</a>, <a class="local col9 ref" href="#29strpos" title='strpos' data-ref="29strpos" data-ref-filename="29strpos">strpos</a>+<a class="local col8 ref" href="#28istrlen" title='istrlen' data-ref="28istrlen" data-ref-filename="28istrlen">istrlen</a>);</td></tr>
+<tr><th id="214">214</th><td>                    <a class="ref fn" href="../include/string.h.html#strcpy" title='strcpy' data-ref="strcpy" data-ref-filename="strcpy">strcpy</a>(<a class="local col6 ref" href="#26anames" title='anames' data-ref="26anames" data-ref-filename="26anames">anames</a> + <a class="local col9 ref" href="#29strpos" title='strpos' data-ref="29strpos" data-ref-filename="29strpos">strpos</a>, <a class="local col4 ref" href="#24strtab" title='strtab' data-ref="24strtab" data-ref-filename="24strtab">strtab</a> + <a class="local col6 ref" href="#16sym" title='sym' data-ref="16sym" data-ref-filename="16sym">sym</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::st_name" title='(anonymous struct)::st_name' data-ref="(anonymous)::st_name" data-ref-filename="(anonymous)..st_name">st_name</a>);</td></tr>
+<tr><th id="215">215</th><td>                    <a class="local col9 ref" href="#29strpos" title='strpos' data-ref="29strpos" data-ref-filename="29strpos">strpos</a> += <a class="local col8 ref" href="#28istrlen" title='istrlen' data-ref="28istrlen" data-ref-filename="28istrlen">istrlen</a>;</td></tr>
+<tr><th id="216">216</th><td>                    <b>if</b> (++<a class="local col1 ref" href="#31funccnt" title='funccnt' data-ref="31funccnt" data-ref-filename="31funccnt">funccnt</a> &gt;= <a class="local col2 ref" href="#32funcmax" title='funcmax' data-ref="32funcmax" data-ref-filename="32funcmax">funcmax</a>) {</td></tr>
+<tr><th id="217">217</th><td>                        <a class="local col2 ref" href="#32funcmax" title='funcmax' data-ref="32funcmax" data-ref-filename="32funcmax">funcmax</a> += <var>250</var>;</td></tr>
+<tr><th id="218">218</th><td>                        <a class="local col7 ref" href="#27afpos" title='afpos' data-ref="27afpos" data-ref-filename="27afpos">afpos</a> = <a class="ref fn" href="tcc.h.html#tcc_realloc" title='tcc_realloc' data-ref="tcc_realloc" data-ref-filename="tcc_realloc">tcc_realloc</a>(<a class="local col7 ref" href="#27afpos" title='afpos' data-ref="27afpos" data-ref-filename="27afpos">afpos</a>, <a class="local col2 ref" href="#32funcmax" title='funcmax' data-ref="32funcmax" data-ref-filename="32funcmax">funcmax</a> * <b>sizeof</b> *<a class="local col7 ref" href="#27afpos" title='afpos' data-ref="27afpos" data-ref-filename="27afpos">afpos</a>); <i>// 250 func more</i></td></tr>
+<tr><th id="219">219</th><td>                    }</td></tr>
+<tr><th id="220">220</th><td>                    <a class="local col7 ref" href="#27afpos" title='afpos' data-ref="27afpos" data-ref-filename="27afpos">afpos</a>[<a class="local col1 ref" href="#31funccnt" title='funccnt' data-ref="31funccnt" data-ref-filename="31funccnt">funccnt</a>] = <a class="local col0 ref" href="#30fpos" title='fpos' data-ref="30fpos" data-ref-filename="30fpos">fpos</a>;</td></tr>
+<tr><th id="221">221</th><td>                }</td></tr>
+<tr><th id="222">222</th><td>            }</td></tr>
+<tr><th id="223">223</th><td>        }</td></tr>
+<tr><th id="224">224</th><td></td></tr>
+<tr><th id="225">225</th><td>        <a class="local col6 ref" href="#36file" title='file' data-ref="36file" data-ref-filename="36file">file</a> = <a class="local col8 ref" href="#8argv" title='argv' data-ref="8argv" data-ref-filename="8argv">argv</a>[<a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a>];</td></tr>
+<tr><th id="226">226</th><td>        <b>for</b> (<a class="local col7 ref" href="#37name" title='name' data-ref="37name" data-ref-filename="37name">name</a> = <a class="ref fn" href="../include/string.h.html#strchr" title='strchr' data-ref="strchr" data-ref-filename="strchr">strchr</a>(<a class="local col6 ref" href="#36file" title='file' data-ref="36file" data-ref-filename="36file">file</a>, <var>0</var>);</td></tr>
+<tr><th id="227">227</th><td>             <a class="local col7 ref" href="#37name" title='name' data-ref="37name" data-ref-filename="37name">name</a> &gt; <a class="local col6 ref" href="#36file" title='file' data-ref="36file" data-ref-filename="36file">file</a> &amp;&amp; <a class="local col7 ref" href="#37name" title='name' data-ref="37name" data-ref-filename="37name">name</a>[-<var>1</var>] != <kbd>'/'</kbd> &amp;&amp; <a class="local col7 ref" href="#37name" title='name' data-ref="37name" data-ref-filename="37name">name</a>[-<var>1</var>] != <kbd>'\\'</kbd>;</td></tr>
+<tr><th id="228">228</th><td>             --<a class="local col7 ref" href="#37name" title='name' data-ref="37name" data-ref-filename="37name">name</a>);</td></tr>
+<tr><th id="229">229</th><td>        <a class="local col8 ref" href="#28istrlen" title='istrlen' data-ref="28istrlen" data-ref-filename="28istrlen">istrlen</a> = <a class="ref fn" href="../include/string.h.html#strlen" title='strlen' data-ref="strlen" data-ref-filename="strlen">strlen</a>(<a class="local col7 ref" href="#37name" title='name' data-ref="37name" data-ref-filename="37name">name</a>);</td></tr>
+<tr><th id="230">230</th><td>        <b>if</b> (<a class="local col8 ref" href="#28istrlen" title='istrlen' data-ref="28istrlen" data-ref-filename="28istrlen">istrlen</a> &gt;= <b>sizeof</b>(<a class="local col0 ref" href="#10arhdro" title='arhdro' data-ref="10arhdro" data-ref-filename="10arhdro">arhdro</a>.<a class="ref field" href="#(anonymous)::ar_name" title='(anonymous struct)::ar_name' data-ref="(anonymous)::ar_name" data-ref-filename="(anonymous)..ar_name">ar_name</a>))</td></tr>
+<tr><th id="231">231</th><td>            <a class="local col8 ref" href="#28istrlen" title='istrlen' data-ref="28istrlen" data-ref-filename="28istrlen">istrlen</a> = <b>sizeof</b>(<a class="local col0 ref" href="#10arhdro" title='arhdro' data-ref="10arhdro" data-ref-filename="10arhdro">arhdro</a>.<a class="ref field" href="#(anonymous)::ar_name" title='(anonymous struct)::ar_name' data-ref="(anonymous)::ar_name" data-ref-filename="(anonymous)..ar_name">ar_name</a>) - <var>1</var>;</td></tr>
+<tr><th id="232">232</th><td>        <a class="ref fn" href="../include/string.h.html#memset" title='memset' data-ref="memset" data-ref-filename="memset">memset</a>(<a class="local col0 ref" href="#10arhdro" title='arhdro' data-ref="10arhdro" data-ref-filename="10arhdro">arhdro</a>.<a class="ref field" href="#(anonymous)::ar_name" title='(anonymous struct)::ar_name' data-ref="(anonymous)::ar_name" data-ref-filename="(anonymous)..ar_name">ar_name</a>, <kbd>' '</kbd>, <b>sizeof</b>(<a class="local col0 ref" href="#10arhdro" title='arhdro' data-ref="10arhdro" data-ref-filename="10arhdro">arhdro</a>.<a class="ref field" href="#(anonymous)::ar_name" title='(anonymous struct)::ar_name' data-ref="(anonymous)::ar_name" data-ref-filename="(anonymous)..ar_name">ar_name</a>));</td></tr>
+<tr><th id="233">233</th><td>        <a class="ref fn" href="../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy" data-ref-filename="memcpy">memcpy</a>(<a class="local col0 ref" href="#10arhdro" title='arhdro' data-ref="10arhdro" data-ref-filename="10arhdro">arhdro</a>.<a class="ref field" href="#(anonymous)::ar_name" title='(anonymous struct)::ar_name' data-ref="(anonymous)::ar_name" data-ref-filename="(anonymous)..ar_name">ar_name</a>, <a class="local col7 ref" href="#37name" title='name' data-ref="37name" data-ref-filename="37name">name</a>, <a class="local col8 ref" href="#28istrlen" title='istrlen' data-ref="28istrlen" data-ref-filename="28istrlen">istrlen</a>);</td></tr>
+<tr><th id="234">234</th><td>        <a class="local col0 ref" href="#10arhdro" title='arhdro' data-ref="10arhdro" data-ref-filename="10arhdro">arhdro</a>.<a class="ref field" href="#(anonymous)::ar_name" title='(anonymous struct)::ar_name' data-ref="(anonymous)::ar_name" data-ref-filename="(anonymous)..ar_name">ar_name</a>[<a class="local col8 ref" href="#28istrlen" title='istrlen' data-ref="28istrlen" data-ref-filename="28istrlen">istrlen</a>] = <kbd>'/'</kbd>;</td></tr>
+<tr><th id="235">235</th><td>        <a class="ref fn" href="../include/stdio.h.html#sprintf" title='sprintf' data-ref="sprintf" data-ref-filename="sprintf">sprintf</a>(<a class="local col5 ref" href="#35stmp" title='stmp' data-ref="35stmp" data-ref-filename="35stmp">stmp</a>, <q>"%-10d"</q>, <a class="local col8 ref" href="#18fsize" title='fsize' data-ref="18fsize" data-ref-filename="18fsize">fsize</a>);</td></tr>
+<tr><th id="236">236</th><td>        <a class="ref fn" href="../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy" data-ref-filename="memcpy">memcpy</a>(&amp;<a class="local col0 ref" href="#10arhdro" title='arhdro' data-ref="10arhdro" data-ref-filename="10arhdro">arhdro</a>.<a class="ref field" href="#(anonymous)::ar_size" title='(anonymous struct)::ar_size' data-ref="(anonymous)::ar_size" data-ref-filename="(anonymous)..ar_size">ar_size</a>, <a class="local col5 ref" href="#35stmp" title='stmp' data-ref="35stmp" data-ref-filename="35stmp">stmp</a>, <var>10</var>);</td></tr>
+<tr><th id="237">237</th><td>        <a class="ref fn" href="../include/stdio.h.html#fwrite" title='fwrite' data-ref="fwrite" data-ref-filename="fwrite">fwrite</a>(&amp;<a class="local col0 ref" href="#10arhdro" title='arhdro' data-ref="10arhdro" data-ref-filename="10arhdro">arhdro</a>, <b>sizeof</b>(<a class="local col0 ref" href="#10arhdro" title='arhdro' data-ref="10arhdro" data-ref-filename="10arhdro">arhdro</a>), <var>1</var>, <a class="local col3 ref" href="#13fo" title='fo' data-ref="13fo" data-ref-filename="13fo">fo</a>);</td></tr>
+<tr><th id="238">238</th><td>        <a class="ref fn" href="../include/stdio.h.html#fwrite" title='fwrite' data-ref="fwrite" data-ref-filename="fwrite">fwrite</a>(<a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a>, <a class="local col8 ref" href="#18fsize" title='fsize' data-ref="18fsize" data-ref-filename="18fsize">fsize</a>, <var>1</var>, <a class="local col3 ref" href="#13fo" title='fo' data-ref="13fo" data-ref-filename="13fo">fo</a>);</td></tr>
+<tr><th id="239">239</th><td>        <a class="ref fn" href="tcc.h.html#tcc_free" title='tcc_free' data-ref="tcc_free" data-ref-filename="tcc_free">tcc_free</a>(<a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a>);</td></tr>
+<tr><th id="240">240</th><td>        <a class="local col0 ref" href="#20i_obj" title='i_obj' data-ref="20i_obj" data-ref-filename="20i_obj">i_obj</a>++;</td></tr>
+<tr><th id="241">241</th><td>        <a class="local col0 ref" href="#30fpos" title='fpos' data-ref="30fpos" data-ref-filename="30fpos">fpos</a> += (<a class="local col8 ref" href="#18fsize" title='fsize' data-ref="18fsize" data-ref-filename="18fsize">fsize</a> + <b>sizeof</b>(<a class="local col0 ref" href="#10arhdro" title='arhdro' data-ref="10arhdro" data-ref-filename="10arhdro">arhdro</a>));</td></tr>
+<tr><th id="242">242</th><td>    }</td></tr>
+<tr><th id="243">243</th><td>    <a class="local col3 ref" href="#33hofs" title='hofs' data-ref="33hofs" data-ref-filename="33hofs">hofs</a> = <var>8</var> + <b>sizeof</b>(<a class="local col9 ref" href="#9arhdr" title='arhdr' data-ref="9arhdr" data-ref-filename="9arhdr">arhdr</a>) + <a class="local col9 ref" href="#29strpos" title='strpos' data-ref="29strpos" data-ref-filename="29strpos">strpos</a> + (<a class="local col1 ref" href="#31funccnt" title='funccnt' data-ref="31funccnt" data-ref-filename="31funccnt">funccnt</a>+<var>1</var>) * <b>sizeof</b>(<em>int</em>);</td></tr>
+<tr><th id="244">244</th><td>    <a class="local col0 ref" href="#30fpos" title='fpos' data-ref="30fpos" data-ref-filename="30fpos">fpos</a> = <var>0</var>;</td></tr>
+<tr><th id="245">245</th><td>    <b>if</b> ((<a class="local col3 ref" href="#33hofs" title='hofs' data-ref="33hofs" data-ref-filename="33hofs">hofs</a> &amp; <var>1</var>)) <i>// align</i></td></tr>
+<tr><th id="246">246</th><td>        <a class="local col3 ref" href="#33hofs" title='hofs' data-ref="33hofs" data-ref-filename="33hofs">hofs</a>++, <a class="local col0 ref" href="#30fpos" title='fpos' data-ref="30fpos" data-ref-filename="30fpos">fpos</a> = <var>1</var>;</td></tr>
+<tr><th id="247">247</th><td>    <i>// write header</i></td></tr>
+<tr><th id="248">248</th><td>    <a class="ref fn" href="../include/stdio.h.html#fwrite" title='fwrite' data-ref="fwrite" data-ref-filename="fwrite">fwrite</a>(<q>"!&lt;arch&gt;\n"</q>, <var>8</var>, <var>1</var>, <a class="local col2 ref" href="#12fh" title='fh' data-ref="12fh" data-ref-filename="12fh">fh</a>);</td></tr>
+<tr><th id="249">249</th><td>    <a class="ref fn" href="../include/stdio.h.html#sprintf" title='sprintf' data-ref="sprintf" data-ref-filename="sprintf">sprintf</a>(<a class="local col5 ref" href="#35stmp" title='stmp' data-ref="35stmp" data-ref-filename="35stmp">stmp</a>, <q>"%-10d"</q>, (<em>int</em>)(<a class="local col9 ref" href="#29strpos" title='strpos' data-ref="29strpos" data-ref-filename="29strpos">strpos</a> + (<a class="local col1 ref" href="#31funccnt" title='funccnt' data-ref="31funccnt" data-ref-filename="31funccnt">funccnt</a>+<var>1</var>) * <b>sizeof</b>(<em>int</em>)));</td></tr>
+<tr><th id="250">250</th><td>    <a class="ref fn" href="../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy" data-ref-filename="memcpy">memcpy</a>(&amp;<a class="local col9 ref" href="#9arhdr" title='arhdr' data-ref="9arhdr" data-ref-filename="9arhdr">arhdr</a>.<a class="ref field" href="#(anonymous)::ar_size" title='(anonymous struct)::ar_size' data-ref="(anonymous)::ar_size" data-ref-filename="(anonymous)..ar_size">ar_size</a>, <a class="local col5 ref" href="#35stmp" title='stmp' data-ref="35stmp" data-ref-filename="35stmp">stmp</a>, <var>10</var>);</td></tr>
+<tr><th id="251">251</th><td>    <a class="ref fn" href="../include/stdio.h.html#fwrite" title='fwrite' data-ref="fwrite" data-ref-filename="fwrite">fwrite</a>(&amp;<a class="local col9 ref" href="#9arhdr" title='arhdr' data-ref="9arhdr" data-ref-filename="9arhdr">arhdr</a>, <b>sizeof</b>(<a class="local col9 ref" href="#9arhdr" title='arhdr' data-ref="9arhdr" data-ref-filename="9arhdr">arhdr</a>), <var>1</var>, <a class="local col2 ref" href="#12fh" title='fh' data-ref="12fh" data-ref-filename="12fh">fh</a>);</td></tr>
+<tr><th id="252">252</th><td>    <a class="local col7 ref" href="#27afpos" title='afpos' data-ref="27afpos" data-ref-filename="27afpos">afpos</a>[<var>0</var>] = <a class="ref fn" href="#le2belong" title='le2belong' data-ref="le2belong" data-ref-filename="le2belong">le2belong</a>(<a class="local col1 ref" href="#31funccnt" title='funccnt' data-ref="31funccnt" data-ref-filename="31funccnt">funccnt</a>);</td></tr>
+<tr><th id="253">253</th><td>    <b>for</b> (<a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>=<var>1</var>; <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>&lt;=<a class="local col1 ref" href="#31funccnt" title='funccnt' data-ref="31funccnt" data-ref-filename="31funccnt">funccnt</a>; <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>++)</td></tr>
+<tr><th id="254">254</th><td>        <a class="local col7 ref" href="#27afpos" title='afpos' data-ref="27afpos" data-ref-filename="27afpos">afpos</a>[<a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>] = <a class="ref fn" href="#le2belong" title='le2belong' data-ref="le2belong" data-ref-filename="le2belong">le2belong</a>(<a class="local col7 ref" href="#27afpos" title='afpos' data-ref="27afpos" data-ref-filename="27afpos">afpos</a>[<a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>] + <a class="local col3 ref" href="#33hofs" title='hofs' data-ref="33hofs" data-ref-filename="33hofs">hofs</a>);</td></tr>
+<tr><th id="255">255</th><td>    <a class="ref fn" href="../include/stdio.h.html#fwrite" title='fwrite' data-ref="fwrite" data-ref-filename="fwrite">fwrite</a>(<a class="local col7 ref" href="#27afpos" title='afpos' data-ref="27afpos" data-ref-filename="27afpos">afpos</a>, (<a class="local col1 ref" href="#31funccnt" title='funccnt' data-ref="31funccnt" data-ref-filename="31funccnt">funccnt</a>+<var>1</var>) * <b>sizeof</b>(<em>int</em>), <var>1</var>, <a class="local col2 ref" href="#12fh" title='fh' data-ref="12fh" data-ref-filename="12fh">fh</a>);</td></tr>
+<tr><th id="256">256</th><td>    <a class="ref fn" href="../include/stdio.h.html#fwrite" title='fwrite' data-ref="fwrite" data-ref-filename="fwrite">fwrite</a>(<a class="local col6 ref" href="#26anames" title='anames' data-ref="26anames" data-ref-filename="26anames">anames</a>, <a class="local col9 ref" href="#29strpos" title='strpos' data-ref="29strpos" data-ref-filename="29strpos">strpos</a>, <var>1</var>, <a class="local col2 ref" href="#12fh" title='fh' data-ref="12fh" data-ref-filename="12fh">fh</a>);</td></tr>
+<tr><th id="257">257</th><td>    <b>if</b> (<a class="local col0 ref" href="#30fpos" title='fpos' data-ref="30fpos" data-ref-filename="30fpos">fpos</a>)</td></tr>
+<tr><th id="258">258</th><td>        <a class="ref fn" href="../include/stdio.h.html#fwrite" title='fwrite' data-ref="fwrite" data-ref-filename="fwrite">fwrite</a>(<q>""</q>, <var>1</var>, <var>1</var>, <a class="local col2 ref" href="#12fh" title='fh' data-ref="12fh" data-ref-filename="12fh">fh</a>);</td></tr>
+<tr><th id="259">259</th><td>    <i>// write objects</i></td></tr>
+<tr><th id="260">260</th><td>    <a class="ref fn" href="../include/stdio.h.html#fseek" title='fseek' data-ref="fseek" data-ref-filename="fseek">fseek</a>(<a class="local col3 ref" href="#13fo" title='fo' data-ref="13fo" data-ref-filename="13fo">fo</a>, <var>0</var>, <a class="macro" href="../include/fcntl.h.html#139" title="2" data-ref="_M/SEEK_END">SEEK_END</a>);</td></tr>
+<tr><th id="261">261</th><td>    <a class="local col8 ref" href="#18fsize" title='fsize' data-ref="18fsize" data-ref-filename="18fsize">fsize</a> = <a class="ref fn" href="../include/stdio.h.html#ftell" title='ftell' data-ref="ftell" data-ref-filename="ftell">ftell</a>(<a class="local col3 ref" href="#13fo" title='fo' data-ref="13fo" data-ref-filename="13fo">fo</a>);</td></tr>
+<tr><th id="262">262</th><td>    <a class="ref fn" href="../include/stdio.h.html#fseek" title='fseek' data-ref="fseek" data-ref-filename="fseek">fseek</a>(<a class="local col3 ref" href="#13fo" title='fo' data-ref="13fo" data-ref-filename="13fo">fo</a>, <var>0</var>, <a class="macro" href="../include/fcntl.h.html#137" title="0" data-ref="_M/SEEK_SET">SEEK_SET</a>);</td></tr>
+<tr><th id="263">263</th><td>    <a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a> = <a class="ref fn" href="tcc.h.html#tcc_malloc" title='tcc_malloc' data-ref="tcc_malloc" data-ref-filename="tcc_malloc">tcc_malloc</a>(<a class="local col8 ref" href="#18fsize" title='fsize' data-ref="18fsize" data-ref-filename="18fsize">fsize</a> + <var>1</var>);</td></tr>
+<tr><th id="264">264</th><td>    <a class="ref fn" href="../include/stdio.h.html#fread" title='fread' data-ref="fread" data-ref-filename="fread">fread</a>(<a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a>, <a class="local col8 ref" href="#18fsize" title='fsize' data-ref="18fsize" data-ref-filename="18fsize">fsize</a>, <var>1</var>, <a class="local col3 ref" href="#13fo" title='fo' data-ref="13fo" data-ref-filename="13fo">fo</a>);</td></tr>
+<tr><th id="265">265</th><td>    <a class="ref fn" href="../include/stdio.h.html#fwrite" title='fwrite' data-ref="fwrite" data-ref-filename="fwrite">fwrite</a>(<a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a>, <a class="local col8 ref" href="#18fsize" title='fsize' data-ref="18fsize" data-ref-filename="18fsize">fsize</a>, <var>1</var>, <a class="local col2 ref" href="#12fh" title='fh' data-ref="12fh" data-ref-filename="12fh">fh</a>);</td></tr>
+<tr><th id="266">266</th><td>    <a class="ref fn" href="tcc.h.html#tcc_free" title='tcc_free' data-ref="tcc_free" data-ref-filename="tcc_free">tcc_free</a>(<a class="local col1 ref" href="#21buf" title='buf' data-ref="21buf" data-ref-filename="21buf">buf</a>);</td></tr>
+<tr><th id="267">267</th><td>    <a class="local col8 ref" href="#38ret" title='ret' data-ref="38ret" data-ref-filename="38ret">ret</a> = <var>0</var>;</td></tr>
+<tr><th id="268">268</th><td><dfn class="lbl" id="42the_end" data-ref="42the_end" data-ref-filename="42the_end">the_end</dfn>:</td></tr>
+<tr><th id="269">269</th><td>    <b>if</b> (<a class="local col6 ref" href="#26anames" title='anames' data-ref="26anames" data-ref-filename="26anames">anames</a>)</td></tr>
+<tr><th id="270">270</th><td>        <a class="ref fn" href="tcc.h.html#tcc_free" title='tcc_free' data-ref="tcc_free" data-ref-filename="tcc_free">tcc_free</a>(<a class="local col6 ref" href="#26anames" title='anames' data-ref="26anames" data-ref-filename="26anames">anames</a>);</td></tr>
+<tr><th id="271">271</th><td>    <b>if</b> (<a class="local col7 ref" href="#27afpos" title='afpos' data-ref="27afpos" data-ref-filename="27afpos">afpos</a>)</td></tr>
+<tr><th id="272">272</th><td>        <a class="ref fn" href="tcc.h.html#tcc_free" title='tcc_free' data-ref="tcc_free" data-ref-filename="tcc_free">tcc_free</a>(<a class="local col7 ref" href="#27afpos" title='afpos' data-ref="27afpos" data-ref-filename="27afpos">afpos</a>);</td></tr>
+<tr><th id="273">273</th><td>    <b>if</b> (<a class="local col2 ref" href="#12fh" title='fh' data-ref="12fh" data-ref-filename="12fh">fh</a>)</td></tr>
+<tr><th id="274">274</th><td>        <a class="ref fn" href="../include/stdio.h.html#fclose" title='fclose' data-ref="fclose" data-ref-filename="fclose">fclose</a>(<a class="local col2 ref" href="#12fh" title='fh' data-ref="12fh" data-ref-filename="12fh">fh</a>);</td></tr>
+<tr><th id="275">275</th><td>    <b>if</b> (<a class="local col3 ref" href="#13fo" title='fo' data-ref="13fo" data-ref-filename="13fo">fo</a>)</td></tr>
+<tr><th id="276">276</th><td>        <a class="ref fn" href="../include/stdio.h.html#fclose" title='fclose' data-ref="fclose" data-ref-filename="fclose">fclose</a>(<a class="local col3 ref" href="#13fo" title='fo' data-ref="13fo" data-ref-filename="13fo">fo</a>), <a class="ref fn" href="../include/stdio.h.html#remove" title='remove' data-ref="remove" data-ref-filename="remove">remove</a>(<a class="local col4 ref" href="#34tfile" title='tfile' data-ref="34tfile" data-ref-filename="34tfile">tfile</a>);</td></tr>
+<tr><th id="277">277</th><td>    <b>return</b> <a class="local col8 ref" href="#38ret" title='ret' data-ref="38ret" data-ref-filename="38ret">ret</a>;</td></tr>
+<tr><th id="278">278</th><td>}</td></tr>
+<tr><th id="279">279</th><td></td></tr>
+<tr><th id="280">280</th><td><i>/* -------------------------------------------------------------- */</i></td></tr>
+<tr><th id="281">281</th><td><i>/*</i></td></tr>
+<tr><th id="282">282</th><td><i> * tiny_impdef creates an export definition file (.def) from a dll</i></td></tr>
+<tr><th id="283">283</th><td><i> * on MS-Windows. Usage: tiny_impdef library.dll [-o outputfile]"</i></td></tr>
+<tr><th id="284">284</th><td><i> *</i></td></tr>
+<tr><th id="285">285</th><td><i> *  Copyright (c) 2005,2007 grischka</i></td></tr>
+<tr><th id="286">286</th><td><i> *</i></td></tr>
+<tr><th id="287">287</th><td><i> * This program is free software; you can redistribute it and/or modify</i></td></tr>
+<tr><th id="288">288</th><td><i> * it under the terms of the GNU General Public License as published by</i></td></tr>
+<tr><th id="289">289</th><td><i> * the Free Software Foundation; either version 2 of the License, or</i></td></tr>
+<tr><th id="290">290</th><td><i> * (at your option) any later version.</i></td></tr>
+<tr><th id="291">291</th><td><i> *</i></td></tr>
+<tr><th id="292">292</th><td><i> * This program is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="293">293</th><td><i> * but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="294">294</th><td><i> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</i></td></tr>
+<tr><th id="295">295</th><td><i> * GNU General Public License for more details.</i></td></tr>
+<tr><th id="296">296</th><td><i> *</i></td></tr>
+<tr><th id="297">297</th><td><i> * You should have received a copy of the GNU General Public License</i></td></tr>
+<tr><th id="298">298</th><td><i> * along with this program; if not, write to the Free Software</i></td></tr>
+<tr><th id="299">299</th><td><i> * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.</i></td></tr>
+<tr><th id="300">300</th><td><i> */</i></td></tr>
+<tr><th id="301">301</th><td></td></tr>
+<tr><th id="302">302</th><td><u>#<span data-ppcond="302">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span></u></td></tr>
+<tr><th id="303">303</th><td></td></tr>
+<tr><th id="304">304</th><td>ST_FUNC <em>int</em> tcc_tool_impdef(TCCState *s1, <em>int</em> argc, <em>char</em> **argv)</td></tr>
+<tr><th id="305">305</th><td>{</td></tr>
+<tr><th id="306">306</th><td>    <em>int</em> ret, v, i;</td></tr>
+<tr><th id="307">307</th><td>    <em>char</em> infile[<var>260</var>];</td></tr>
+<tr><th id="308">308</th><td>    <em>char</em> outfile[<var>260</var>];</td></tr>
+<tr><th id="309">309</th><td></td></tr>
+<tr><th id="310">310</th><td>    <em>const</em> <em>char</em> *file;</td></tr>
+<tr><th id="311">311</th><td>    <em>char</em> *p, *q;</td></tr>
+<tr><th id="312">312</th><td>    FILE *fp, *op;</td></tr>
+<tr><th id="313">313</th><td></td></tr>
+<tr><th id="314">314</th><td><u>#ifdef _WIN32</u></td></tr>
+<tr><th id="315">315</th><td>    <em>char</em> path[<var>260</var>];</td></tr>
+<tr><th id="316">316</th><td><u>#endif</u></td></tr>
+<tr><th id="317">317</th><td></td></tr>
+<tr><th id="318">318</th><td>    infile[<var>0</var>] = outfile[<var>0</var>] = <var>0</var>;</td></tr>
+<tr><th id="319">319</th><td>    fp = op = NULL;</td></tr>
+<tr><th id="320">320</th><td>    ret = <var>1</var>;</td></tr>
+<tr><th id="321">321</th><td>    p = NULL;</td></tr>
+<tr><th id="322">322</th><td>    v = <var>0</var>;</td></tr>
+<tr><th id="323">323</th><td></td></tr>
+<tr><th id="324">324</th><td>    <b>for</b> (i = <var>1</var>; i &lt; argc; ++i) {</td></tr>
+<tr><th id="325">325</th><td>        <em>const</em> <em>char</em> *a = argv[i];</td></tr>
+<tr><th id="326">326</th><td>        <b>if</b> (<kbd>'-'</kbd> == a[<var>0</var>]) {</td></tr>
+<tr><th id="327">327</th><td>            <b>if</b> (<var>0</var> == strcmp(a, <q>"-v"</q>)) {</td></tr>
+<tr><th id="328">328</th><td>                v = <var>1</var>;</td></tr>
+<tr><th id="329">329</th><td>            } <b>else</b> <b>if</b> (<var>0</var> == strcmp(a, <q>"-o"</q>)) {</td></tr>
+<tr><th id="330">330</th><td>                <b>if</b> (++i == argc)</td></tr>
+<tr><th id="331">331</th><td>                    <b>goto</b> usage;</td></tr>
+<tr><th id="332">332</th><td>                strcpy(outfile, argv[i]);</td></tr>
+<tr><th id="333">333</th><td>            } <b>else</b></td></tr>
+<tr><th id="334">334</th><td>                <b>goto</b> usage;</td></tr>
+<tr><th id="335">335</th><td>        } <b>else</b> <b>if</b> (<var>0</var> == infile[<var>0</var>])</td></tr>
+<tr><th id="336">336</th><td>            strcpy(infile, a);</td></tr>
+<tr><th id="337">337</th><td>        <b>else</b></td></tr>
+<tr><th id="338">338</th><td>            <b>goto</b> usage;</td></tr>
+<tr><th id="339">339</th><td>    }</td></tr>
+<tr><th id="340">340</th><td></td></tr>
+<tr><th id="341">341</th><td>    <b>if</b> (<var>0</var> == infile[<var>0</var>]) {</td></tr>
+<tr><th id="342">342</th><td>usage:</td></tr>
+<tr><th id="343">343</th><td>        fprintf(stderr,</td></tr>
+<tr><th id="344">344</th><td>            <q>"usage: tcc -impdef library.dll [-v] [-o outputfile]\n"</q></td></tr>
+<tr><th id="345">345</th><td>            <q>"create export definition file (.def) from dll\n"</q></td></tr>
+<tr><th id="346">346</th><td>            );</td></tr>
+<tr><th id="347">347</th><td>        <b>goto</b> the_end;</td></tr>
+<tr><th id="348">348</th><td>    }</td></tr>
+<tr><th id="349">349</th><td></td></tr>
+<tr><th id="350">350</th><td>    <b>if</b> (<var>0</var> == outfile[<var>0</var>]) {</td></tr>
+<tr><th id="351">351</th><td>        strcpy(outfile, tcc_basename(infile));</td></tr>
+<tr><th id="352">352</th><td>        q = strrchr(outfile, <kbd>'.'</kbd>);</td></tr>
+<tr><th id="353">353</th><td>        <b>if</b> (NULL == q)</td></tr>
+<tr><th id="354">354</th><td>            q = strchr(outfile, <var>0</var>);</td></tr>
+<tr><th id="355">355</th><td>        strcpy(q, <q>".def"</q>);</td></tr>
+<tr><th id="356">356</th><td>    }</td></tr>
+<tr><th id="357">357</th><td></td></tr>
+<tr><th id="358">358</th><td>    file = infile;</td></tr>
+<tr><th id="359">359</th><td><u>#ifdef _WIN32</u></td></tr>
+<tr><th id="360">360</th><td>    <b>if</b> (SearchPath(NULL, file, <q>".dll"</q>, <b>sizeof</b> path, path, NULL))</td></tr>
+<tr><th id="361">361</th><td>        file = path;</td></tr>
+<tr><th id="362">362</th><td><u>#endif</u></td></tr>
+<tr><th id="363">363</th><td>    ret = tcc_get_dllexports(file, &amp;p);</td></tr>
+<tr><th id="364">364</th><td>    <b>if</b> (ret || !p) {</td></tr>
+<tr><th id="365">365</th><td>        fprintf(stderr, <q>"tcc: impdef: %s '%s'\n"</q>,</td></tr>
+<tr><th id="366">366</th><td>            ret == -<var>1</var> ? <q>"can't find file"</q> :</td></tr>
+<tr><th id="367">367</th><td>            ret ==  <var>1</var> ? <q>"can't read symbols"</q> :</td></tr>
+<tr><th id="368">368</th><td>            ret ==  <var>0</var> ? <q>"no symbols found in"</q> :</td></tr>
+<tr><th id="369">369</th><td>            <q>"unknown file type"</q>, file);</td></tr>
+<tr><th id="370">370</th><td>        ret = <var>1</var>;</td></tr>
+<tr><th id="371">371</th><td>        <b>goto</b> the_end;</td></tr>
+<tr><th id="372">372</th><td>    }</td></tr>
+<tr><th id="373">373</th><td></td></tr>
+<tr><th id="374">374</th><td>    <b>if</b> (v)</td></tr>
+<tr><th id="375">375</th><td>        printf(<q>"-&gt; %s\n"</q>, file);</td></tr>
+<tr><th id="376">376</th><td></td></tr>
+<tr><th id="377">377</th><td>    op = fopen(outfile, <q>"wb"</q>);</td></tr>
+<tr><th id="378">378</th><td>    <b>if</b> (NULL == op) {</td></tr>
+<tr><th id="379">379</th><td>        fprintf(stderr, <q>"tcc: impdef: could not create output file: %s\n"</q>, outfile);</td></tr>
+<tr><th id="380">380</th><td>        <b>goto</b> the_end;</td></tr>
+<tr><th id="381">381</th><td>    }</td></tr>
+<tr><th id="382">382</th><td></td></tr>
+<tr><th id="383">383</th><td>    fprintf(op, <q>"LIBRARY %s\n\nEXPORTS\n"</q>, tcc_basename(file));</td></tr>
+<tr><th id="384">384</th><td>    <b>for</b> (q = p, i = <var>0</var>; *q; ++i) {</td></tr>
+<tr><th id="385">385</th><td>        fprintf(op, <q>"%s\n"</q>, q);</td></tr>
+<tr><th id="386">386</th><td>        q += strlen(q) + <var>1</var>;</td></tr>
+<tr><th id="387">387</th><td>    }</td></tr>
+<tr><th id="388">388</th><td></td></tr>
+<tr><th id="389">389</th><td>    <b>if</b> (v)</td></tr>
+<tr><th id="390">390</th><td>        printf(<q>"&lt;- %s (%d symbol%s)\n"</q>, outfile, i, &amp;<q>"s"</q>[i&lt;<var>2</var>]);</td></tr>
+<tr><th id="391">391</th><td></td></tr>
+<tr><th id="392">392</th><td>    ret = <var>0</var>;</td></tr>
+<tr><th id="393">393</th><td></td></tr>
+<tr><th id="394">394</th><td>the_end:</td></tr>
+<tr><th id="395">395</th><td>    <i>/* cannot free memory received from tcc_get_dllexports</i></td></tr>
+<tr><th id="396">396</th><td><i>       if it came from a dll */</i></td></tr>
+<tr><th id="397">397</th><td>    <i>/* if (p)</i></td></tr>
+<tr><th id="398">398</th><td><i>        tcc_free(p); */</i></td></tr>
+<tr><th id="399">399</th><td>    <b>if</b> (fp)</td></tr>
+<tr><th id="400">400</th><td>        fclose(fp);</td></tr>
+<tr><th id="401">401</th><td>    <b>if</b> (op)</td></tr>
+<tr><th id="402">402</th><td>        fclose(op);</td></tr>
+<tr><th id="403">403</th><td>    <b>return</b> ret;</td></tr>
+<tr><th id="404">404</th><td>}</td></tr>
+<tr><th id="405">405</th><td></td></tr>
+<tr><th id="406">406</th><td><u>#<span data-ppcond="302">endif</span> /* TCC_TARGET_PE */</u></td></tr>
+<tr><th id="407">407</th><td></td></tr>
+<tr><th id="408">408</th><td><i>/* -------------------------------------------------------------- */</i></td></tr>
+<tr><th id="409">409</th><td><i>/*</i></td></tr>
+<tr><th id="410">410</th><td><i> *  TCC - Tiny C Compiler</i></td></tr>
+<tr><th id="411">411</th><td><i> *</i></td></tr>
+<tr><th id="412">412</th><td><i> *  Copyright (c) 2001-2004 Fabrice Bellard</i></td></tr>
+<tr><th id="413">413</th><td><i> *</i></td></tr>
+<tr><th id="414">414</th><td><i> * This library is free software; you can redistribute it and/or</i></td></tr>
+<tr><th id="415">415</th><td><i> * modify it under the terms of the GNU Lesser General Public</i></td></tr>
+<tr><th id="416">416</th><td><i> * License as published by the Free Software Foundation; either</i></td></tr>
+<tr><th id="417">417</th><td><i> * version 2 of the License, or (at your option) any later version.</i></td></tr>
+<tr><th id="418">418</th><td><i> *</i></td></tr>
+<tr><th id="419">419</th><td><i> * This library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="420">420</th><td><i> * but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="421">421</th><td><i> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</i></td></tr>
+<tr><th id="422">422</th><td><i> * Lesser General Public License for more details.</i></td></tr>
+<tr><th id="423">423</th><td><i> *</i></td></tr>
+<tr><th id="424">424</th><td><i> * You should have received a copy of the GNU Lesser General Public</i></td></tr>
+<tr><th id="425">425</th><td><i> * License along with this library; if not, write to the Free Software</i></td></tr>
+<tr><th id="426">426</th><td><i> * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA</i></td></tr>
+<tr><th id="427">427</th><td><i> */</i></td></tr>
+<tr><th id="428">428</th><td></td></tr>
+<tr><th id="429">429</th><td><i>/* re-execute the i386/x86_64 cross-compilers with tcc -m32/-m64: */</i></td></tr>
+<tr><th id="430">430</th><td></td></tr>
+<tr><th id="431">431</th><td><u>#<span data-ppcond="431">if</span> !defined <span class="macro" data-ref="_M/TCC_TARGET_I386">TCC_TARGET_I386</span> &amp;&amp; !defined <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="432">432</th><td></td></tr>
+<tr><th id="433">433</th><td>ST_FUNC <em>void</em> tcc_tool_cross(TCCState *s, <em>char</em> **argv, <em>int</em> option)</td></tr>
+<tr><th id="434">434</th><td>{</td></tr>
+<tr><th id="435">435</th><td>    tcc_error(<q>"-m%d not implemented."</q>, option);</td></tr>
+<tr><th id="436">436</th><td>}</td></tr>
+<tr><th id="437">437</th><td></td></tr>
+<tr><th id="438">438</th><td><u>#<span data-ppcond="431">else</span></u></td></tr>
+<tr><th id="439">439</th><td><u>#<span data-ppcond="439">ifdef</span> <span class="macro" data-ref="_M/_WIN32">_WIN32</span></u></td></tr>
+<tr><th id="440">440</th><td><u>#include &lt;process.h&gt;</u></td></tr>
+<tr><th id="441">441</th><td></td></tr>
+<tr><th id="442">442</th><td><em>static</em> <em>char</em> *str_replace(<em>const</em> <em>char</em> *str, <em>const</em> <em>char</em> *p, <em>const</em> <em>char</em> *r)</td></tr>
+<tr><th id="443">443</th><td>{</td></tr>
+<tr><th id="444">444</th><td>    <em>const</em> <em>char</em> *s, *s0;</td></tr>
+<tr><th id="445">445</th><td>    <em>char</em> *d, *d0;</td></tr>
+<tr><th id="446">446</th><td>    <em>int</em> sl, pl, rl;</td></tr>
+<tr><th id="447">447</th><td></td></tr>
+<tr><th id="448">448</th><td>    sl = strlen(str);</td></tr>
+<tr><th id="449">449</th><td>    pl = strlen(p);</td></tr>
+<tr><th id="450">450</th><td>    rl = strlen(r);</td></tr>
+<tr><th id="451">451</th><td>    <b>for</b> (d0 = NULL;; d0 = tcc_malloc(sl + <var>1</var>)) {</td></tr>
+<tr><th id="452">452</th><td>        <b>for</b> (d = d0, s = str; s0 = s, s = strstr(s, p), s; s += pl) {</td></tr>
+<tr><th id="453">453</th><td>            <b>if</b> (d) {</td></tr>
+<tr><th id="454">454</th><td>                memcpy(d, s0, sl = s - s0), d += sl;</td></tr>
+<tr><th id="455">455</th><td>                memcpy(d, r, rl), d += rl;</td></tr>
+<tr><th id="456">456</th><td>            } <b>else</b></td></tr>
+<tr><th id="457">457</th><td>                sl += rl - pl;</td></tr>
+<tr><th id="458">458</th><td>        }</td></tr>
+<tr><th id="459">459</th><td>        <b>if</b> (d) {</td></tr>
+<tr><th id="460">460</th><td>            strcpy(d, s0);</td></tr>
+<tr><th id="461">461</th><td>            <b>return</b> d0;</td></tr>
+<tr><th id="462">462</th><td>        }</td></tr>
+<tr><th id="463">463</th><td>    }</td></tr>
+<tr><th id="464">464</th><td>}</td></tr>
+<tr><th id="465">465</th><td></td></tr>
+<tr><th id="466">466</th><td><em>static</em> <em>int</em> execvp_win32(<em>const</em> <em>char</em> *prog, <em>char</em> **argv)</td></tr>
+<tr><th id="467">467</th><td>{</td></tr>
+<tr><th id="468">468</th><td>    <em>int</em> ret; <em>char</em> **p;</td></tr>
+<tr><th id="469">469</th><td>    <i>/* replace all " by \" */</i></td></tr>
+<tr><th id="470">470</th><td>    <b>for</b> (p = argv; *p; ++p)</td></tr>
+<tr><th id="471">471</th><td>        <b>if</b> (strchr(*p, <kbd>'"'</kbd>))</td></tr>
+<tr><th id="472">472</th><td>            *p = str_replace(*p, <q>"\""</q>, <q>"\\\""</q>);</td></tr>
+<tr><th id="473">473</th><td>    ret = _spawnvp(P_NOWAIT, prog, (<em>const</em> <em>char</em> *<em>const</em>*)argv);</td></tr>
+<tr><th id="474">474</th><td>    <b>if</b> (-<var>1</var> == ret)</td></tr>
+<tr><th id="475">475</th><td>        <b>return</b> ret;</td></tr>
+<tr><th id="476">476</th><td>    _cwait(&amp;ret, ret, WAIT_CHILD);</td></tr>
+<tr><th id="477">477</th><td>    exit(ret);</td></tr>
+<tr><th id="478">478</th><td>}</td></tr>
+<tr><th id="479">479</th><td><u>#define execvp execvp_win32</u></td></tr>
+<tr><th id="480">480</th><td><u>#<span data-ppcond="439">endif</span> /* _WIN32 */</u></td></tr>
+<tr><th id="481">481</th><td></td></tr>
+<tr><th id="482">482</th><td><a class="macro" href="tcc.h.html#310" title="" data-ref="_M/ST_FUNC">ST_FUNC</a> <em>void</em> <dfn class="decl def fn" id="tcc_tool_cross" title='tcc_tool_cross' data-ref="tcc_tool_cross" data-ref-filename="tcc_tool_cross">tcc_tool_cross</dfn>(<a class="typedef" href="libtcc.h.html#TCCState" title='TCCState' data-type='struct TCCState' data-ref="TCCState" data-ref-filename="TCCState">TCCState</a> *<dfn class="local col4 decl" id="44s" title='s' data-type='TCCState *' data-ref="44s" data-ref-filename="44s">s</dfn>, <em>char</em> **<dfn class="local col5 decl" id="45argv" title='argv' data-type='char **' data-ref="45argv" data-ref-filename="45argv">argv</dfn>, <em>int</em> <dfn class="local col6 decl" id="46target" title='target' data-type='int' data-ref="46target" data-ref-filename="46target">target</dfn>)</td></tr>
+<tr><th id="483">483</th><td>{</td></tr>
+<tr><th id="484">484</th><td>    <em>char</em> <dfn class="local col7 decl" id="47program" title='program' data-type='char [4096]' data-ref="47program" data-ref-filename="47program">program</dfn>[<var>4096</var>];</td></tr>
+<tr><th id="485">485</th><td>    <em>char</em> *<dfn class="local col8 decl" id="48a0" title='a0' data-type='char *' data-ref="48a0" data-ref-filename="48a0">a0</dfn> = <a class="local col5 ref" href="#45argv" title='argv' data-ref="45argv" data-ref-filename="45argv">argv</a>[<var>0</var>];</td></tr>
+<tr><th id="486">486</th><td>    <em>int</em> <dfn class="local col9 decl" id="49prefix" title='prefix' data-type='int' data-ref="49prefix" data-ref-filename="49prefix">prefix</dfn> = <a class="ref fn" href="tcc.h.html#tcc_basename" title='tcc_basename' data-ref="tcc_basename" data-ref-filename="tcc_basename">tcc_basename</a>(<a class="local col8 ref" href="#48a0" title='a0' data-ref="48a0" data-ref-filename="48a0">a0</a>) - <a class="local col8 ref" href="#48a0" title='a0' data-ref="48a0" data-ref-filename="48a0">a0</a>;</td></tr>
+<tr><th id="487">487</th><td></td></tr>
+<tr><th id="488">488</th><td>    <a class="ref fn" href="../include/stdio.h.html#snprintf" title='snprintf' data-ref="snprintf" data-ref-filename="snprintf">snprintf</a>(<a class="local col7 ref" href="#47program" title='program' data-ref="47program" data-ref-filename="47program">program</a>, <b>sizeof</b> <a class="local col7 ref" href="#47program" title='program' data-ref="47program" data-ref-filename="47program">program</a>,</td></tr>
+<tr><th id="489">489</th><td>        <q>"%.*s%s"</q></td></tr>
+<tr><th id="490">490</th><td><u>#<span data-ppcond="490">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span></u></td></tr>
+<tr><th id="491">491</th><td>        <q>"-win32"</q></td></tr>
+<tr><th id="492">492</th><td><u>#<span data-ppcond="490">endif</span></u></td></tr>
+<tr><th id="493">493</th><td>        <q>"-tcc"</q></td></tr>
+<tr><th id="494">494</th><td><u>#<span data-ppcond="494">ifdef</span> <span class="macro" data-ref="_M/_WIN32">_WIN32</span></u></td></tr>
+<tr><th id="495">495</th><td>        <q>".exe"</q></td></tr>
+<tr><th id="496">496</th><td><u>#<span data-ppcond="494">endif</span></u></td></tr>
+<tr><th id="497">497</th><td>        , <a class="local col9 ref" href="#49prefix" title='prefix' data-ref="49prefix" data-ref-filename="49prefix">prefix</a>, <a class="local col8 ref" href="#48a0" title='a0' data-ref="48a0" data-ref-filename="48a0">a0</a>, <a class="local col6 ref" href="#46target" title='target' data-ref="46target" data-ref-filename="46target">target</a> == <var>64</var> ? <q>"x86_64"</q> : <q>"i386"</q>);</td></tr>
+<tr><th id="498">498</th><td></td></tr>
+<tr><th id="499">499</th><td>    <b>if</b> (<a class="ref fn" href="../include/string.h.html#strcmp" title='strcmp' data-ref="strcmp" data-ref-filename="strcmp">strcmp</a>(<a class="local col8 ref" href="#48a0" title='a0' data-ref="48a0" data-ref-filename="48a0">a0</a>, <a class="local col7 ref" href="#47program" title='program' data-ref="47program" data-ref-filename="47program">program</a>))</td></tr>
+<tr><th id="500">500</th><td>        <a class="ref fn" href="../include/unistd.h.html#execvp" title='execvp' data-ref="execvp" data-ref-filename="execvp">execvp</a>(<a class="local col5 ref" href="#45argv" title='argv' data-ref="45argv" data-ref-filename="45argv">argv</a>[<var>0</var>] = <a class="local col7 ref" href="#47program" title='program' data-ref="47program" data-ref-filename="47program">program</a>, <a class="local col5 ref" href="#45argv" title='argv' data-ref="45argv" data-ref-filename="45argv">argv</a>);</td></tr>
+<tr><th id="501">501</th><td>    <a class="ref fn" href="tcc.h.html#tcc_error" title='tcc_error' data-ref="tcc_error" data-ref-filename="tcc_error">tcc_error</a>(<q>"could not run '%s'"</q>, <a class="local col7 ref" href="#47program" title='program' data-ref="47program" data-ref-filename="47program">program</a>);</td></tr>
+<tr><th id="502">502</th><td>}</td></tr>
+<tr><th id="503">503</th><td></td></tr>
+<tr><th id="504">504</th><td><u>#<span data-ppcond="431">endif</span> /* TCC_TARGET_I386 &amp;&amp; TCC_TARGET_X86_64 */</u></td></tr>
+<tr><th id="505">505</th><td><i>/* -------------------------------------------------------------- */</i></td></tr>
+<tr><th id="506">506</th><td><i>/* enable commandline wildcard expansion (tcc -o x.exe *.c) */</i></td></tr>
+<tr><th id="507">507</th><td></td></tr>
+<tr><th id="508">508</th><td><u>#<span data-ppcond="508">ifdef</span> <span class="macro" data-ref="_M/_WIN32">_WIN32</span></u></td></tr>
+<tr><th id="509">509</th><td><em>int</em> _CRT_glob = <var>1</var>;</td></tr>
+<tr><th id="510">510</th><td><u>#ifndef _CRT_glob</u></td></tr>
+<tr><th id="511">511</th><td><em>int</em> _dowildcard = <var>1</var>;</td></tr>
+<tr><th id="512">512</th><td><u>#endif</u></td></tr>
+<tr><th id="513">513</th><td><u>#<span data-ppcond="508">endif</span></u></td></tr>
+<tr><th id="514">514</th><td></td></tr>
+<tr><th id="515">515</th><td><i>/* -------------------------------------------------------------- */</i></td></tr>
+<tr><th id="516">516</th><td><i>/* generate xxx.d file */</i></td></tr>
+<tr><th id="517">517</th><td></td></tr>
+<tr><th id="518">518</th><td><a class="macro" href="tcc.h.html#310" title="" data-ref="_M/ST_FUNC">ST_FUNC</a> <em>void</em> <dfn class="decl def fn" id="gen_makedeps" title='gen_makedeps' data-ref="gen_makedeps" data-ref-filename="gen_makedeps">gen_makedeps</dfn>(<a class="typedef" href="libtcc.h.html#TCCState" title='TCCState' data-type='struct TCCState' data-ref="TCCState" data-ref-filename="TCCState">TCCState</a> *<dfn class="local col0 decl" id="50s" title='s' data-type='TCCState *' data-ref="50s" data-ref-filename="50s">s</dfn>, <em>const</em> <em>char</em> *<dfn class="local col1 decl" id="51target" title='target' data-type='const char *' data-ref="51target" data-ref-filename="51target">target</dfn>, <em>const</em> <em>char</em> *<dfn class="local col2 decl" id="52filename" title='filename' data-type='const char *' data-ref="52filename" data-ref-filename="52filename">filename</dfn>)</td></tr>
+<tr><th id="519">519</th><td>{</td></tr>
+<tr><th id="520">520</th><td>    <a class="typedef" href="../include/x86_64-linux-gnu/bits/types/FILE.h.html#FILE" title='FILE' data-type='struct _IO_FILE' data-ref="FILE" data-ref-filename="FILE">FILE</a> *<dfn class="local col3 decl" id="53depout" title='depout' data-type='FILE *' data-ref="53depout" data-ref-filename="53depout">depout</dfn>;</td></tr>
+<tr><th id="521">521</th><td>    <em>char</em> <dfn class="local col4 decl" id="54buf" title='buf' data-type='char [1024]' data-ref="54buf" data-ref-filename="54buf">buf</dfn>[<var>1024</var>];</td></tr>
+<tr><th id="522">522</th><td>    <em>int</em> <dfn class="local col5 decl" id="55i" title='i' data-type='int' data-ref="55i" data-ref-filename="55i">i</dfn>;</td></tr>
+<tr><th id="523">523</th><td></td></tr>
+<tr><th id="524">524</th><td>    <b>if</b> (!<a class="local col2 ref" href="#52filename" title='filename' data-ref="52filename" data-ref-filename="52filename">filename</a>) {</td></tr>
+<tr><th id="525">525</th><td>        <i>/* compute filename automatically: dir/file.o -&gt; dir/file.d */</i></td></tr>
+<tr><th id="526">526</th><td>        <a class="ref fn" href="../include/stdio.h.html#snprintf" title='snprintf' data-ref="snprintf" data-ref-filename="snprintf">snprintf</a>(<a class="local col4 ref" href="#54buf" title='buf' data-ref="54buf" data-ref-filename="54buf">buf</a>, <b>sizeof</b> <a class="local col4 ref" href="#54buf" title='buf' data-ref="54buf" data-ref-filename="54buf">buf</a>, <q>"%.*s.d"</q>,</td></tr>
+<tr><th id="527">527</th><td>            (<em>int</em>)(<a class="ref fn" href="tcc.h.html#tcc_fileextension" title='tcc_fileextension' data-ref="tcc_fileextension" data-ref-filename="tcc_fileextension">tcc_fileextension</a>(<a class="local col1 ref" href="#51target" title='target' data-ref="51target" data-ref-filename="51target">target</a>) - <a class="local col1 ref" href="#51target" title='target' data-ref="51target" data-ref-filename="51target">target</a>), <a class="local col1 ref" href="#51target" title='target' data-ref="51target" data-ref-filename="51target">target</a>);</td></tr>
+<tr><th id="528">528</th><td>        <a class="local col2 ref" href="#52filename" title='filename' data-ref="52filename" data-ref-filename="52filename">filename</a> = <a class="local col4 ref" href="#54buf" title='buf' data-ref="54buf" data-ref-filename="54buf">buf</a>;</td></tr>
+<tr><th id="529">529</th><td>    }</td></tr>
+<tr><th id="530">530</th><td></td></tr>
+<tr><th id="531">531</th><td>    <b>if</b> (<a class="local col0 ref" href="#50s" title='s' data-ref="50s" data-ref-filename="50s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::verbose" title='TCCState::verbose' data-ref="TCCState::verbose" data-ref-filename="TCCState..verbose">verbose</a>)</td></tr>
+<tr><th id="532">532</th><td>        <a class="ref fn" href="../include/stdio.h.html#printf" title='printf' data-ref="printf" data-ref-filename="printf">printf</a>(<q>"&lt;- %s\n"</q>, <a class="local col2 ref" href="#52filename" title='filename' data-ref="52filename" data-ref-filename="52filename">filename</a>);</td></tr>
+<tr><th id="533">533</th><td></td></tr>
+<tr><th id="534">534</th><td>    <i>/* XXX return err codes instead of error() ? */</i></td></tr>
+<tr><th id="535">535</th><td>    <a class="local col3 ref" href="#53depout" title='depout' data-ref="53depout" data-ref-filename="53depout">depout</a> = <a class="ref fn" href="../include/stdio.h.html#fopen" title='fopen' data-ref="fopen" data-ref-filename="fopen">fopen</a>(<a class="local col2 ref" href="#52filename" title='filename' data-ref="52filename" data-ref-filename="52filename">filename</a>, <q>"w"</q>);</td></tr>
+<tr><th id="536">536</th><td>    <b>if</b> (!<a class="local col3 ref" href="#53depout" title='depout' data-ref="53depout" data-ref-filename="53depout">depout</a>)</td></tr>
+<tr><th id="537">537</th><td>        <a class="ref fn" href="tcc.h.html#tcc_error" title='tcc_error' data-ref="tcc_error" data-ref-filename="tcc_error">tcc_error</a>(<q>"could not open '%s'"</q>, <a class="local col2 ref" href="#52filename" title='filename' data-ref="52filename" data-ref-filename="52filename">filename</a>);</td></tr>
+<tr><th id="538">538</th><td></td></tr>
+<tr><th id="539">539</th><td>    <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="local col3 ref" href="#53depout" title='depout' data-ref="53depout" data-ref-filename="53depout">depout</a>, <q>"%s: \\\n"</q>, <a class="local col1 ref" href="#51target" title='target' data-ref="51target" data-ref-filename="51target">target</a>);</td></tr>
+<tr><th id="540">540</th><td>    <b>for</b> (<a class="local col5 ref" href="#55i" title='i' data-ref="55i" data-ref-filename="55i">i</a>=<var>0</var>; <a class="local col5 ref" href="#55i" title='i' data-ref="55i" data-ref-filename="55i">i</a>&lt;<a class="local col0 ref" href="#50s" title='s' data-ref="50s" data-ref-filename="50s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_target_deps" title='TCCState::nb_target_deps' data-ref="TCCState::nb_target_deps" data-ref-filename="TCCState..nb_target_deps">nb_target_deps</a>; ++<a class="local col5 ref" href="#55i" title='i' data-ref="55i" data-ref-filename="55i">i</a>)</td></tr>
+<tr><th id="541">541</th><td>        <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="local col3 ref" href="#53depout" title='depout' data-ref="53depout" data-ref-filename="53depout">depout</a>, <q>" %s \\\n"</q>, <a class="local col0 ref" href="#50s" title='s' data-ref="50s" data-ref-filename="50s">s</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::target_deps" title='TCCState::target_deps' data-ref="TCCState::target_deps" data-ref-filename="TCCState..target_deps">target_deps</a>[<a class="local col5 ref" href="#55i" title='i' data-ref="55i" data-ref-filename="55i">i</a>]);</td></tr>
+<tr><th id="542">542</th><td>    <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="local col3 ref" href="#53depout" title='depout' data-ref="53depout" data-ref-filename="53depout">depout</a>, <q>"\n"</q>);</td></tr>
+<tr><th id="543">543</th><td>    <a class="ref fn" href="../include/stdio.h.html#fclose" title='fclose' data-ref="fclose" data-ref-filename="fclose">fclose</a>(<a class="local col3 ref" href="#53depout" title='depout' data-ref="53depout" data-ref-filename="53depout">depout</a>);</td></tr>
+<tr><th id="544">544</th><td>}</td></tr>
+<tr><th id="545">545</th><td></td></tr>
+<tr><th id="546">546</th><td><i>/* -------------------------------------------------------------- */</i></td></tr>
+<tr><th id="547">547</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='tcc.c.html'>tcc/tcc.c</a><br/>Generated on <em>2020-Apr-21</em> from project tcc revision <em>0.9.27</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,8 @@
+<dec f='tcc/x86_64-gen.c' l='58' type='0'/>
+<use f='tcc/i386-asm.c' l='140' u='r' c='parse_operand'/>
+<use f='tcc/i386-asm.c' l='140' u='r' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='140' u='r' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='140' u='w' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='140' u='r' c='asm_compute_constraints'/>
+<use f='tcc/tccgen.c' l='2408' macro='1' u='r' c='gen_cvt_ftoi1'/>
+<use f='tcc/tccgen.c' l='5230' macro='1' u='r' c='unary'/>

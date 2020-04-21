@@ -1,0 +1,3 @@
+<dec f='tcc/tcc.h' l='1402' type='void tccelf_stab_new(TCCState * s)'/>
+<use f='tcc/libtcc.c' l='968' u='c' c='tcc_set_output_type'/>
+<def f='tcc/tccelf.c' l='91' ll='100' type='void tccelf_stab_new(TCCState * s)'/>

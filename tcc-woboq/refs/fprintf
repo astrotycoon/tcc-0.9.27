@@ -1,0 +1,41 @@
+<dec f='include/stdio.h' l='312' type='int fprintf(FILE *restrict __stream, const char *restrict __format)'/>
+<doc f='include/stdio.h' l='308'>/* Write formatted output to STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='tcc/libtcc.c' l='518' u='c' c='error1'/>
+<use f='tcc/libtcc.c' l='1979' u='c' c='tcc_print_stats'/>
+<use f='tcc/tcctools.c' l='64' u='c' c='ar_usage'/>
+<use f='tcc/tcctools.c' l='65' u='c' c='ar_usage'/>
+<use f='tcc/tcctools.c' l='133' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='140' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='156' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='173' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='539' u='c' c='gen_makedeps'/>
+<use f='tcc/tcctools.c' l='541' u='c' c='gen_makedeps'/>
+<use f='tcc/tcctools.c' l='542' u='c' c='gen_makedeps'/>
+<use f='tcc/tccpp.c' l='1421' u='c' c='maybe_run_test'/>
+<use f='tcc/tccpp.c' l='3718' u='c' c='tok_print'/>
+<use f='tcc/tccpp.c' l='3723' u='c' c='tok_print'/>
+<use f='tcc/tccpp.c' l='3725' u='c' c='tok_print'/>
+<use f='tcc/tccpp.c' l='3741' u='c' c='pp_line'/>
+<use f='tcc/tccpp.c' l='3743' u='c' c='pp_line'/>
+<use f='tcc/tccpp.c' l='3759' u='c' c='define_print'/>
+<use f='tcc/tccpp.c' l='3762' u='c' c='define_print'/>
+<use f='tcc/tccpp.c' l='3765' u='c' c='define_print'/>
+<use f='tcc/tccpp.c' l='3768' u='c' c='define_print'/>
+<use f='tcc/tccpp.c' l='3770' u='c' c='define_print'/>
+<use f='tcc/tccpp.c' l='3795' u='c' c='pp_debug_defines'/>
+<use f='tcc/tccpp.c' l='3797' u='c' c='pp_debug_defines'/>
+<use f='tcc/tccpp.c' l='3799' u='c' c='pp_debug_defines'/>
+<use f='tcc/tccrun.c' l='454' u='c' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='460' u='c' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='461' u='c' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='463' u='c' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='465' u='c' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='467' u='c' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='470' u='c' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='472' u='c' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='474' u='c' c='rt_printline'/>
+<use f='tcc/tccrun.c' l='486' u='c' c='rt_error'/>
+<use f='tcc/tccrun.c' l='490' u='c' c='rt_error'/>

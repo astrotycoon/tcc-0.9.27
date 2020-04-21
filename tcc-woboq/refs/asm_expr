@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='1598' type='void asm_expr(TCCState * s1, ExprValue * pe)'/>
+<use f='tcc/i386-asm.c' l='414' u='c' c='parse_operand'/>
+<use f='tcc/i386-asm.c' l='436' u='c' c='parse_operand'/>
+<use f='tcc/i386-asm.c' l='446' u='c' c='parse_operand'/>
+<use f='tcc/tccasm.c' l='155' u='c' c='asm_expr_unary'/>
+<def f='tcc/tccasm.c' l='352' ll='355' type='void asm_expr(TCCState * s1, ExprValue * pe)'/>
+<use f='tcc/tccasm.c' l='360' u='c' c='asm_int_expr'/>
+<use f='tcc/tccasm.c' l='415' u='c' c='set_symbol'/>
+<use f='tcc/tccasm.c' l='551' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='647' u='c' c='asm_parse_directive'/>

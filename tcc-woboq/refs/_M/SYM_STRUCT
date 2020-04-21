@@ -1,0 +1,14 @@
+<dec f='tcc/tcc.h' l='535'/>
+<doc f='tcc/tcc.h' l='533'>/* -------------------------------------------------- */</doc>
+<use f='tcc/tccgen.c' l='563' u='c'/>
+<use f='tcc/tccgen.c' l='565' u='c'/>
+<use f='tcc/tccgen.c' l='566' u='c'/>
+<use f='tcc/tccgen.c' l='575' u='c'/>
+<use f='tcc/tccgen.c' l='612' u='c'/>
+<use f='tcc/tccgen.c' l='613' u='c'/>
+<use f='tcc/tccgen.c' l='614' u='c'/>
+<use f='tcc/tccgen.c' l='2928' u='c'/>
+<use f='tcc/tccgen.c' l='3649' u='c'/>
+<use f='tcc/tccgen.c' l='3795' u='c'/>
+<use f='tcc/tccgen.c' l='3889' u='c'/>
+<use f='tcc/tccgen.c' l='7180' u='c'/>

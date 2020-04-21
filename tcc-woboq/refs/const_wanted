@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='1300' type='int'/>
+<def f='tcc/tccgen.c' l='52' type='int'/>
+<use f='tcc/tccgen.c' l='241' u='w' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='1899' u='r' c='gen_opic'/>
+<use f='tcc/tccgen.c' l='1945' u='r' c='gen_opic'/>
+<use f='tcc/tccgen.c' l='1951' u='r' c='gen_opic'/>
+<use f='tcc/tccgen.c' l='2052' u='r' c='gen_opif'/>
+<use f='tcc/tccgen.c' l='4720' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='5692' u='w' c='expr_const1'/>
+<use f='tcc/tccgen.c' l='5696' u='w' c='expr_const1'/>
+<doc f='tcc/tccgen.c' l='52'>/* true if constant wanted */</doc>

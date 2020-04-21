@@ -1,0 +1,11 @@
+<dec f='include/stdio.h' l='320' type='int sprintf(char *restrict __s, const char *restrict __format)'/>
+<doc f='include/stdio.h' l='319'>/* Write formatted output to S.  */</doc>
+<use f='tcc/libtcc.c' l='777' u='c' c='tcc_new'/>
+<use f='tcc/tcctools.c' l='137' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='235' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='249' u='c' c='tcc_tool_ar'/>
+<use f='tcc/tccasm.c' l='730' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='732' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccpp.c' l='492' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='565' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='575' u='c' c='get_tok_str'/>

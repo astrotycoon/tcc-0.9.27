@@ -1,0 +1,5 @@
+<dec f='tcc/libtcc.h' l='23' type='void tcc_set_lib_path(TCCState * s, const char * path)'/>
+<doc f='tcc/libtcc.h' l='22'>/* set CONFIG_TCCDIR at runtime */</doc>
+<use f='tcc/libtcc.c' l='761' u='c' c='tcc_new'/>
+<def f='tcc/libtcc.c' l='1190' ll='1194' type='void tcc_set_lib_path(TCCState * s, const char * path)'/>
+<use f='tcc/libtcc.c' l='1749' u='c' c='tcc_parse_args'/>

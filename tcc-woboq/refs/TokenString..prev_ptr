@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='597' type='const int *'/>
+<offset>320</offset>
+<use f='tcc/tccpp.c' l='1110' u='w' c='begin_macro'/>
+<use f='tcc/tccpp.c' l='1120' u='r' c='end_macro'/>

@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='732' type='int'/>
+<offset>1920</offset>
+<use f='tcc/libtcc.c' l='911' u='a' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='980' u='a' c='tcc_set_output_type'/>
+<use f='tcc/libtcc.c' l='1133' u='r' c='tcc_add_crt'/>
+<use f='tcc/tcc.c' l='187' u='r' c='print_search_dirs'/>

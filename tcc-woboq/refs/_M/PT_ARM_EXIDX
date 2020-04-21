@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='2327'/>
+<doc f='tcc/elf.h' l='2326'>/* Processor specific values for the Phdr p_type field.  */</doc>

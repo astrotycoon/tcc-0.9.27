@@ -1,0 +1,4 @@
+<dec f='tcc/elf.h' l='117'/>
+<doc f='tcc/elf.h' l='113'>/* Fields in the e_ident array.  The EI_* macros are indices into the
+   array.  The macros under each EI_* macro are the values the byte
+   may have.  */</doc>

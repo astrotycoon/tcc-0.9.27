@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='757' type='int'/>
+<offset>4160</offset>
+<use f='tcc/libtcc.c' l='927' u='a' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='1017' u='a' c='tcc_add_file_internal'/>
+<use f='tcc/tcctools.c' l='540' u='r' c='gen_makedeps'/>
+<use f='tcc/tccpp.c' l='1853' u='a' c='preprocess'/>

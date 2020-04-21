@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1322' type='void test_lvalue()'/>
+<use f='tcc/tccasm.c' l='1119' u='c' c='parse_asm_operands'/>
+<def f='tcc/tccgen.c' l='125' ll='129' type='void test_lvalue()'/>
+<use f='tcc/tccgen.c' l='3243' u='c' c='inc'/>
+<use f='tcc/tccgen.c' l='4752' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5121' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5664' u='c' c='expr_eq'/>

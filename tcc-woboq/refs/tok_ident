@@ -1,0 +1,17 @@
+<dec f='tcc/tcc.h' l='1212' type='int'/>
+<use f='tcc/i386-asm.c' l='284' u='r' c='asm_parse_numeric_reg'/>
+<use f='tcc/libtcc.c' l='1981' u='r' c='tcc_print_stats'/>
+<use f='tcc/tccgen.c' l='534' u='r' c='struct_find'/>
+<use f='tcc/tccgen.c' l='543' u='r' c='sym_find'/>
+<def f='tcc/tccpp.c' l='38' type='int'/>
+<use f='tcc/tccpp.c' l='418' u='r' c='tok_alloc_new'/>
+<use f='tcc/tccpp.c' l='422' u='r' c='tok_alloc_new'/>
+<use f='tcc/tccpp.c' l='430' u='w' c='tok_alloc_new'/>
+<use f='tcc/tccpp.c' l='571' u='r' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='1320' u='r' c='define_undef'/>
+<use f='tcc/tccpp.c' l='1327' u='r' c='define_find'/>
+<use f='tcc/tccpp.c' l='1347' u='r' c='free_defines'/>
+<use f='tcc/tccpp.c' l='1360' u='r' c='label_find'/>
+<use f='tcc/tccpp.c' l='3665' u='w' c='tccpp_new'/>
+<use f='tcc/tccpp.c' l='3687' u='r' c='tccpp_delete'/>
+<use f='tcc/tccpp.c' l='3807' u='r' c='pp_debug_builtins'/>

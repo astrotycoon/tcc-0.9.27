@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='545'/>
+<doc f='tcc/tcc.h' l='544'>/* stored in &apos;Sym-&gt;f.func_call&apos; field */</doc>
+<use f='tcc/tccgen.c' l='260' u='c'/>
+<use f='tcc/tccgen.c' l='3379' u='c'/>

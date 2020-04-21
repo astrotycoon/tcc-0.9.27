@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1429' type='void put_stabs_r(const char * str, int type, int other, int desc, unsigned long value, Section * sec, int sym_index)'/>
+<def f='tcc/tccelf.c' l='669' ll='676' type='void put_stabs_r(const char * str, int type, int other, int desc, unsigned long value, Section * sec, int sym_index)'/>
+<use f='tcc/tccgen.c' l='168' u='c' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='170' u='c' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='188' u='c' c='tcc_debug_end'/>
+<use f='tcc/tccgen.c' l='217' u='c' c='tcc_debug_funcstart'/>

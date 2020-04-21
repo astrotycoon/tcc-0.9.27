@@ -1,0 +1,13 @@
+<def f='tcc/tcc.h' l='394' ll='403'/>
+<use f='tcc/tcc.h' l='395'/>
+<use f='tcc/tcc.h' l='394'/>
+<size>56</size>
+<doc f='tcc/tcc.h' l='393'>/* token symbol management */</doc>
+<mbr r='TokenSym::hash_next' o='0' t='struct TokenSym *'/>
+<mbr r='TokenSym::sym_define' o='64' t='struct Sym *'/>
+<mbr r='TokenSym::sym_label' o='128' t='struct Sym *'/>
+<mbr r='TokenSym::sym_struct' o='192' t='struct Sym *'/>
+<mbr r='TokenSym::sym_identifier' o='256' t='struct Sym *'/>
+<mbr r='TokenSym::tok' o='320' t='int'/>
+<mbr r='TokenSym::len' o='352' t='int'/>
+<mbr r='TokenSym::str' o='384' t='char [1]'/>

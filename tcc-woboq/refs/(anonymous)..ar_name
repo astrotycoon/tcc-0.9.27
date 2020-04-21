@@ -1,0 +1,8 @@
+<dec f='tcc/tcctools.c' l='37' type='char [16]'/>
+<use f='tcc/tcctools.c' l='230' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='231' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='232' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='232' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='233' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='234' u='w' c='tcc_tool_ar'/>
+<offset>0</offset>

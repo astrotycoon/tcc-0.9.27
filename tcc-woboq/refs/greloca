@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1419' type='void greloca(Section * s, Sym * sym, unsigned long offset, int type, Elf64_Addr addend)'/>
+<def f='tcc/tccgen.c' l='429' ll='445' type='void greloca(Section * s, Sym * sym, unsigned long offset, int type, Elf64_Addr addend)'/>
+<use f='tcc/tccgen.c' l='6594' u='c' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6609' u='c' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6996' u='c' c='decl_initializer_alloc'/>
+<doc f='tcc/tccgen.c' l='428'>/* add a new relocation entry to symbol &apos;sym&apos; in section &apos;s&apos; */</doc>

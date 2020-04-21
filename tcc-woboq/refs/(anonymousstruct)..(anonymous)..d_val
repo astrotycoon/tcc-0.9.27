@@ -1,0 +1,8 @@
+<dec f='tcc/elf.h' l='663' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='673' type='Elf64_Xword'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='663'>/* Integer value */</doc>
+<doc f='tcc/elf.h' l='673'>/* Integer value */</doc>
+<use f='tcc/tccelf.c' l='1116' u='w' c='put_dt'/>
+<use f='tcc/tccelf.c' l='2742' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2778' u='r' c='tcc_load_dll'/>

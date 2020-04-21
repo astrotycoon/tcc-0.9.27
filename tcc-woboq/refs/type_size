@@ -1,0 +1,28 @@
+<dec f='tcc/tcc.h' l='1347' type='int type_size(CType * type, int * a)'/>
+<use f='tcc/tccgen.c' l='999' u='c' c='save_reg_upstack'/>
+<use f='tcc/tccgen.c' l='1298' u='c' c='gv'/>
+<use f='tcc/tccgen.c' l='2080' u='c' c='pointed_size'/>
+<def f='tcc/tccgen.c' l='2659' ll='2721' type='int type_size(CType * type, int * a)'/>
+<use f='tcc/tccgen.c' l='2675' u='c' c='type_size'/>
+<use f='tcc/tccgen.c' l='2728' u='c' c='vla_runtime_type_size'/>
+<use f='tcc/tccgen.c' l='2731' u='c' c='vla_runtime_type_size'/>
+<use f='tcc/tccgen.c' l='3095' u='c' c='vstore'/>
+<use f='tcc/tccgen.c' l='3511' u='c' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3711' u='c' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3733' u='c' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3895' u='c' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='3919' u='c' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='4287' u='c' c='post_type'/>
+<use f='tcc/tccgen.c' l='4371' u='c' c='post_type'/>
+<use f='tcc/tccgen.c' l='4796' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5189' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5261' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5764' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='6359' u='c' c='decl_designator'/>
+<use f='tcc/tccgen.c' l='6391' u='c' c='decl_designator'/>
+<use f='tcc/tccgen.c' l='6434' u='c' c='decl_designator'/>
+<use f='tcc/tccgen.c' l='6471' u='c' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6669' u='c' c='decl_initializer'/>
+<use f='tcc/tccgen.c' l='6846' u='c' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='6880' u='c' c='decl_initializer_alloc'/>
+<doc f='tcc/tccgen.c' l='2658'>/* return type size as known at compile time. Put alignment at &apos;a&apos; */</doc>

@@ -1,0 +1,15 @@
+<dec f='tcc/tcc.h' l='463' type='unsigned int'/>
+<offset>3</offset>
+<use f='tcc/tccgen.c' l='261' u='w' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='2775' u='r' c='is_compatible_func'/>
+<use f='tcc/tccgen.c' l='2775' u='r' c='is_compatible_func'/>
+<use f='tcc/tccgen.c' l='2777' u='r' c='is_compatible_func'/>
+<use f='tcc/tccgen.c' l='2777' u='r' c='is_compatible_func'/>
+<use f='tcc/tccgen.c' l='3981' u='r' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='3981' u='r' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='3982' u='w' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='3982' u='r' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='4327' u='w' c='post_type'/>
+<use f='tcc/tccgen.c' l='4516' u='r' c='gfunc_param_typed'/>
+<use f='tcc/tccgen.c' l='5184' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='7215' u='r' c='decl0'/>

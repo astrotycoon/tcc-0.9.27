@@ -1,0 +1,15 @@
+<dec f='tcc/tcc.h' l='794' type='Section *'/>
+<offset>10560</offset>
+<doc f='tcc/tcc.h' l='793'>/* temporary dynamic symbol sections (for dll loading) */</doc>
+<use f='tcc/tccelf.c' l='74' u='w' c='tccelf_new'/>
+<use f='tcc/tccelf.c' l='1397' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1399' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1429' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1429' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1429' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1432' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1476' u='r' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='1476' u='r' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='1476' u='r' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='1477' u='r' c='bind_libs_dynsyms'/>
+<use f='tcc/tccelf.c' l='2770' u='r' c='tcc_load_dll'/>

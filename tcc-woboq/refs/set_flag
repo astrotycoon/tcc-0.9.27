@@ -1,0 +1,4 @@
+<def f='tcc/libtcc.c' l='1214' ll='1243' type='int set_flag(TCCState * s, const FlagDef * flags, const char * name)'/>
+<use f='tcc/libtcc.c' l='1845' u='c' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1861' u='c' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1870' u='c' c='tcc_parse_args'/>

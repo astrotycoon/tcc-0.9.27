@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='741' type='int'/>
+<offset>2240</offset>
+<use f='tcc/libtcc.c' l='496' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='554' u='r' c='tcc_error'/>
+<use f='tcc/libtcc.c' l='643' u='w' c='tcc_compile'/>
+<use f='tcc/libtcc.c' l='658' u='w' c='tcc_compile'/>

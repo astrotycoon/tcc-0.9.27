@@ -1,0 +1,4 @@
+<dec f='tcc/tcctok.h' l='35' type='288'/>
+<use f='tcc/tccgen.c' l='4123' c='parse_btype'/>
+<use f='tcc/tccgen.c' l='4338' u='r' c='post_type'/>
+<use f='tcc/tccgen.c' l='4426' c='type_decl'/>

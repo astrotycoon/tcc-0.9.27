@@ -1,0 +1,16 @@
+<dec f='tcc/tcc.h' l='1295' type='CType'/>
+<def f='tcc/tccgen.c' l='64' type='CType'/>
+<use f='tcc/tccgen.c' l='258' u='m' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='259' u='m' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='260' u='m' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='261' u='m' c='tccgen_compile'/>
+<use f='tcc/tccgen.c' l='937' u='m' c='external_sym'/>
+<use f='tcc/tccgen.c' l='2368' u='a' c='gen_cvt_itof1'/>
+<use f='tcc/tccgen.c' l='2371' u='a' c='gen_cvt_itof1'/>
+<use f='tcc/tccgen.c' l='2374' u='a' c='gen_cvt_itof1'/>
+<use f='tcc/tccgen.c' l='2398' u='a' c='gen_cvt_ftoi1'/>
+<use f='tcc/tccgen.c' l='2401' u='a' c='gen_cvt_ftoi1'/>
+<use f='tcc/tccgen.c' l='2404' u='a' c='gen_cvt_ftoi1'/>
+<use f='tcc/tccgen.c' l='3111' u='a' c='vstore'/>
+<use f='tcc/tccgen.c' l='5087' u='a' c='unary'/>
+<use f='tcc/tccgen.c' l='6310' u='a' c='init_putz'/>

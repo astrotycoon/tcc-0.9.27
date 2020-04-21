@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1407' type='void section_realloc(Section * sec, unsigned long new_size)'/>
+<def f='tcc/tccelf.c' l='257' ll='271' type='void section_realloc(Section * sec, unsigned long new_size)'/>
+<use f='tcc/tccelf.c' l='282' u='c' c='section_add'/>
+<use f='tcc/tccelf.c' l='301' u='c' c='section_reserve'/>
+<doc f='tcc/tccelf.c' l='256'>/* realloc section and set its content to zero */</doc>
+<use f='tcc/tccgen.c' l='6425' u='c' c='decl_designator'/>

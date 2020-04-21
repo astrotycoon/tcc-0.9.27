@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='1456' type='void minp()'/>
+<use f='tcc/tccelf.c' l='2822' u='c' c='ld_next'/>
+<use f='tcc/tccelf.c' l='2907' u='c' c='ld_next'/>
+<def f='tcc/tccpp.c' l='706' ll='711' type='void minp()'/>
+<use f='tcc/tccpp.c' l='833' u='c' c='skip_spaces'/>
+<use f='tcc/tccpp.c' l='966' u='c' c='preprocess_skip'/>
+<use f='tcc/tccpp.c' l='1770' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='833' u='c' c='next_argstream'/>
+<doc f='tcc/tccpp.c' l='703'>/* input with &apos;\[\r]\n&apos; handling. Note that this function cannot
+   handle other characters after &apos;\&apos;, so you cannot call it inside
+   strings or comments */</doc>

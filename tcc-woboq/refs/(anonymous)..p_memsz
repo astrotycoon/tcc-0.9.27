@@ -1,0 +1,9 @@
+<dec f='tcc/elf.h' l='559' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='572' type='Elf64_Xword'/>
+<offset>320</offset>
+<doc f='tcc/elf.h' l='559'>/* Segment size in memory */</doc>
+<doc f='tcc/elf.h' l='572'>/* Segment size in memory */</doc>
+<use f='tcc/tccelf.c' l='1708' u='w' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1752' u='w' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1764' u='w' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1778' u='w' c='fill_unloadable_phdr'/>

@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1400' type='void tccelf_new(TCCState * s)'/>
+<use f='tcc/libtcc.c' l='763' u='c' c='tcc_new'/>
+<def f='tcc/tccelf.c' l='55' ll='78' type='void tccelf_new(TCCState * s)'/>
+<doc f='tcc/tccelf.c' l='53'>/* ------------------------------------------------------------------------- */</doc>

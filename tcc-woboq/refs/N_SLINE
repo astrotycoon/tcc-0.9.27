@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='72' type='68'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='70'>/* Line number in text segment.  Desc is the line number;
+   value is corresponding address.  */</doc>
+<use f='tcc/tccgen.c' l='199' u='r' c='tcc_debug_line'/>
+<use f='tcc/tccgen.c' l='220' u='r' c='tcc_debug_funcstart'/>
+<use f='tcc/tccrun.c' l='394' c='rt_printline'/>

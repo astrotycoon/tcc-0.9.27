@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='835' type='char **'/>
+<offset>11584</offset>
+<use f='tcc/libtcc.c' l='929' u='a' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='1667' u='a' c='args_parser_listfile'/>
+<use f='tcc/libtcc.c' l='1668' u='w' c='args_parser_listfile'/>

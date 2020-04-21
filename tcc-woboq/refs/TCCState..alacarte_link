@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='662' type='int'/>
+<offset>224</offset>
+<doc f='tcc/tcc.h' l='662'>/* if true, only link in referenced objects from archive */</doc>
+<use f='tcc/libtcc.c' l='743' u='w' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='1419' u='w' c='tcc_set_linker'/>
+<use f='tcc/libtcc.c' l='1605' u='r' c='args_parser_add_file'/>
+<use f='tcc/tcc.c' l='323' u='w' c='main'/>
+<use f='tcc/tcc.c' l='336' u='w' c='main'/>
+<use f='tcc/tccelf.c' l='2670' u='r' c='tcc_load_archive'/>
+<use f='tcc/tccelf.c' l='2673' u='r' c='tcc_load_archive'/>

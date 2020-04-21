@@ -1,0 +1,28 @@
+<use f='tcc/tcc.h' l='471'/>
+<def f='tcc/tcc.h' l='505' ll='525'/>
+<use f='tcc/tcc.h' l='520'/>
+<use f='tcc/tcc.h' l='521'/>
+<use f='tcc/tcc.h' l='522'/>
+<use f='tcc/tcc.h' l='523'/>
+<use f='tcc/tcc.h' l='505'/>
+<size>128</size>
+<doc f='tcc/tcc.h' l='504'>/* section definition */</doc>
+<mbr r='Section::data_offset' o='0' t='unsigned long'/>
+<mbr r='Section::data' o='64' t='unsigned char *'/>
+<mbr r='Section::data_allocated' o='128' t='unsigned long'/>
+<mbr r='Section::sh_name' o='192' t='int'/>
+<mbr r='Section::sh_num' o='224' t='int'/>
+<mbr r='Section::sh_type' o='256' t='int'/>
+<mbr r='Section::sh_flags' o='288' t='int'/>
+<mbr r='Section::sh_info' o='320' t='int'/>
+<mbr r='Section::sh_addralign' o='352' t='int'/>
+<mbr r='Section::sh_entsize' o='384' t='int'/>
+<mbr r='Section::sh_size' o='448' t='unsigned long'/>
+<mbr r='Section::sh_addr' o='512' t='Elf64_Addr'/>
+<mbr r='Section::sh_offset' o='576' t='unsigned long'/>
+<mbr r='Section::nb_hashed_syms' o='640' t='int'/>
+<mbr r='Section::link' o='704' t='struct Section *'/>
+<mbr r='Section::reloc' o='768' t='struct Section *'/>
+<mbr r='Section::hash' o='832' t='struct Section *'/>
+<mbr r='Section::prev' o='896' t='struct Section *'/>
+<mbr r='Section::name' o='960' t='char [1]'/>

@@ -1,0 +1,8 @@
+<def f='tcc/tccgen.c' l='47' type='int'/>
+<use f='tcc/tccgen.c' l='2743' u='r' c='vla_sp_restore_root'/>
+<use f='tcc/tccgen.c' l='5992' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='7013' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7014' u='w' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7015' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7064' u='w' c='gen_function'/>
+<doc f='tcc/tccgen.c' l='47'>/* vla_sp_loc for SP before any VLAs were pushed */</doc>

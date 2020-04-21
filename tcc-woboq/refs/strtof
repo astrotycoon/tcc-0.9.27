@@ -1,0 +1,5 @@
+<dec f='include/stdlib.h' l='123' type='float strtof(const char *restrict __nptr, char **restrict __endptr)'/>
+<dec f='tcc/tcc.h' l='44' type='float strtof(const char * __nptr, char ** __endptr)'/>
+<doc f='tcc/tcc.h' l='43'>/* XXX: need to define this to use them in non ISOC99 context */</doc>
+<doc f='include/stdlib.h' l='122'>/* Likewise for `float&apos; and `long double&apos; sizes of floating-point numbers.  */</doc>
+<use f='tcc/tccpp.c' l='2441' u='c' c='parse_number'/>

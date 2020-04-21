@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='1108' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='1117' type='Elf64_Xword'/>
+<offset>64</offset>
+<doc f='tcc/elf.h' l='1108'>/* Size and index.  */</doc>
+<doc f='tcc/elf.h' l='1117'>/* Size and index.  */</doc>

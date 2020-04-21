@@ -1,0 +1,28 @@
+<dec f='tcc/tcc.h' l='670' type='int'/>
+<offset>480</offset>
+<doc f='tcc/tcc.h' l='669'>/* output type, see TCC_OUTPUT_XXX */</doc>
+<use f='tcc/libtcc.c' l='514' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='646' u='r' c='tcc_compile'/>
+<use f='tcc/libtcc.c' l='943' u='w' c='tcc_set_output_type'/>
+<use f='tcc/libtcc.c' l='1039' u='r' c='tcc_add_file_internal'/>
+<use f='tcc/libtcc.c' l='1779' u='r' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1781' u='w' c='tcc_parse_args'/>
+<use f='tcc/tcc.c' l='228' u='r' c='default_outputfile'/>
+<use f='tcc/tcc.c' l='289' u='r' c='main'/>
+<use f='tcc/tcc.c' l='295' u='r' c='main'/>
+<use f='tcc/tcc.c' l='310' u='r' c='main'/>
+<use f='tcc/tcc.c' l='311' u='w' c='main'/>
+<use f='tcc/tcc.c' l='312' u='r' c='main'/>
+<use f='tcc/tcc.c' l='315' u='r' c='main'/>
+<use f='tcc/tcc.c' l='316' u='r' c='main'/>
+<use f='tcc/tcc.c' l='338' u='r' c='main'/>
+<use f='tcc/tcc.c' l='344' u='r' c='main'/>
+<use f='tcc/tcc.c' l='347' u='r' c='main'/>
+<use f='tcc/tccelf.c' l='1051' u='r' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='1174' u='r' c='tcc_add_bcheck'/>
+<use f='tcc/tccelf.c' l='1205' u='r' c='tcc_add_runtime'/>
+<use f='tcc/tccelf.c' l='1574' u='r' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1868' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1983' u='r' c='tcc_write_elf_file'/>
+<use f='tcc/tccelf.c' l='2069' u='r' c='elf_output_file'/>
+<use f='tcc/tccpp.c' l='1638' u='r' c='pragma_parse'/>

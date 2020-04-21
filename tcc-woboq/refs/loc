@@ -1,0 +1,24 @@
+<dec f='tcc/tcc.h' l='1298' type='int'/>
+<def f='tcc/tccgen.c' l='31' type='int'/>
+<use f='tcc/tccgen.c' l='1000' u='w' c='save_reg_upstack'/>
+<use f='tcc/tccgen.c' l='1000' u='r' c='save_reg_upstack'/>
+<use f='tcc/tccgen.c' l='1003' u='r' c='save_reg_upstack'/>
+<use f='tcc/tccgen.c' l='1018' u='r' c='save_reg_upstack'/>
+<use f='tcc/tccgen.c' l='4371' u='w' c='post_type'/>
+<use f='tcc/tccgen.c' l='4372' u='w' c='post_type'/>
+<use f='tcc/tccgen.c' l='4373' u='r' c='post_type'/>
+<use f='tcc/tccgen.c' l='5199' u='w' c='unary'/>
+<use f='tcc/tccgen.c' l='5199' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='5204' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='5266' u='w' c='unary'/>
+<use f='tcc/tccgen.c' l='5266' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='5267' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='5768' u='w' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='5768' u='r' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='5769' u='r' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='6906' u='w' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='6909' u='w' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='6909' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='6910' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='6918' u='w' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7014' u='w' c='decl_initializer_alloc'/>

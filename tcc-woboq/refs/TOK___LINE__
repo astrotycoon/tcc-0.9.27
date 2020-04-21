@@ -1,0 +1,4 @@
+<dec f='tcc/tcctok.h' l='84' type='327'/>
+<use f='tcc/libtcc.c' l='768' u='r' c='tcc_new'/>
+<use f='tcc/tccpp.c' l='3297' u='r' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3298' u='r' c='macro_subst_tok'/>

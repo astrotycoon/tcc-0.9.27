@@ -1,0 +1,4 @@
+<def f='tcc/i386-asm.c' l='149' ll='155'/>
+<use f='tcc/i386-asm.c' l='149'/>
+<use f='tcc/i386-asm.c' l='646' c='maybe_print_stats'/>
+<size>10</size>

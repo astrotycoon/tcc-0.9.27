@@ -1,0 +1,5 @@
+<def f='tcc/tccpp.c' l='1077' ll='1092' type='int * tok_str_realloc(TokenString * s, int new_size)'/>
+<use f='tcc/tccpp.c' l='1101' u='c' c='tok_str_add'/>
+<use f='tcc/tccpp.c' l='1138' u='c' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='1162' u='c' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='3663' u='c' c='tccpp_new'/>

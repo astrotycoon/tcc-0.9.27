@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1441' type='void tcc_add_runtime(TCCState * s1)'/>
+<def f='tcc/tccelf.c' l='1188' ll='1208' type='void tcc_add_runtime(TCCState * s1)'/>
+<use f='tcc/tccelf.c' l='2079' u='c' c='elf_output_file'/>
+<doc f='tcc/tccelf.c' l='1187'>/* add tcc runtime libraries */</doc>
+<use f='tcc/tccrun.c' l='190' u='c' c='tcc_relocate_ex'/>

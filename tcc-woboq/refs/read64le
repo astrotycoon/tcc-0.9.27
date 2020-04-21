@@ -1,0 +1,2 @@
+<def f='tcc/tcc.h' l='1529' ll='1531' type='uint64_t read64le(unsigned char * p)'/>
+<use f='tcc/tcc.h' l='1536' u='c' c='add64le'/>

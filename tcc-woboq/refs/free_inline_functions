@@ -1,0 +1,3 @@
+<dec f='tcc/tcc.h' l='1317' type='void free_inline_functions(TCCState * s)'/>
+<use f='tcc/libtcc.c' l='661' u='c' c='tcc_compile'/>
+<def f='tcc/tccgen.c' l='7130' ll='7140' type='void free_inline_functions(TCCState * s)'/>

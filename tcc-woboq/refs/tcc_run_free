@@ -1,0 +1,3 @@
+<dec f='tcc/tcc.h' l='1653' type='void tcc_run_free(TCCState * s1)'/>
+<use f='tcc/libtcc.c' l='933' u='c' c='tcc_delete'/>
+<def f='tcc/tccrun.c' l='96' ll='113' type='void tcc_run_free(TCCState * s1)'/>

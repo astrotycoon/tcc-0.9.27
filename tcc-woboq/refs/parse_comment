@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1455' type='uint8_t * parse_comment(uint8_t * p)'/>
+<use f='tcc/tccelf.c' l='2824' u='c' c='ld_next'/>
+<def f='tcc/tccpp.c' l='751' ll='824' type='uint8_t * parse_comment(uint8_t * p)'/>
+<use f='tcc/tccpp.c' l='969' u='c' c='preprocess_skip'/>
+<use f='tcc/tccpp.c' l='2921' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3252' u='c' c='next_argstream'/>
+<doc f='tcc/tccpp.c' l='750'>/* C comments */</doc>

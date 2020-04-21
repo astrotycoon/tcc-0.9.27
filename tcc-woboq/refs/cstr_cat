@@ -1,0 +1,26 @@
+<dec f='tcc/tcc.h' l='1142' type='void cstr_cat(CString * cstr, const char * str, int len)'/>
+<use f='tcc/i386-asm.c' l='1492' u='c' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1501' u='c' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1505' u='c' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1513' u='c' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1525' u='c' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1586' u='c' c='subst_asm_operand'/>
+<use f='tcc/libtcc.c' l='452' u='c' c='tcc_split_path'/>
+<use f='tcc/libtcc.c' l='1882' u='c' c='tcc_parse_args'/>
+<use f='tcc/tccgen.c' l='3266' u='c' c='parse_mult_str'/>
+<def f='tcc/tccpp.c' l='349' ll='359' type='void cstr_cat(CString * cstr, const char * str, int len)'/>
+<use f='tcc/tccpp.c' l='524' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='527' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='530' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='533' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='1293' u='c' c='macro_is_equal'/>
+<use f='tcc/tccpp.c' l='2720' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3131' u='c' c='paste_tokens'/>
+<use f='tcc/tccpp.c' l='3134' u='c' c='paste_tokens'/>
+<use f='tcc/tccpp.c' l='3324' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3601' u='c' c='preprocess_start'/>
+<use f='tcc/tccpp.c' l='3602' u='c' c='preprocess_start'/>
+<use f='tcc/tccpp.c' l='3603' u='c' c='preprocess_start'/>
+<use f='tcc/tccpp.c' l='3608' u='c' c='preprocess_start'/>
+<use f='tcc/tccpp.c' l='3609' u='c' c='preprocess_start'/>
+<use f='tcc/tccpp.c' l='3610' u='c' c='preprocess_start'/>

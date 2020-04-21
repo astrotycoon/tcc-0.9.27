@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1387' type='Section *'/>
+<use f='tcc/tccasm.c' l='850' u='w' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='866' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='869' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='870' u='w' c='asm_parse_directive'/>
+<def f='tcc/tccelf.c' l='33' type='Section *'/>
+<doc f='tcc/tccelf.c' l='33'>/* to handle .previous asm directive */</doc>

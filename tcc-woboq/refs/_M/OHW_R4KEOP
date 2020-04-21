@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1554'/>
+<doc f='tcc/elf.h' l='1552'>/* Masks for `info&apos; in Elf_Options for an ODK_HWPATCH entry.  */</doc>

@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1438' type='int tcc_load_object_file(TCCState * s1, int fd, unsigned long file_offset)'/>
+<use f='tcc/libtcc.c' l='1035' u='c' c='tcc_add_file_internal'/>
+<def f='tcc/tccelf.c' l='2283' ll='2568' type='int tcc_load_object_file(TCCState * s1, int fd, unsigned long file_offset)'/>
+<use f='tcc/tccelf.c' l='2620' u='c' c='tcc_load_alacarte'/>
+<use f='tcc/tccelf.c' l='2678' u='c' c='tcc_load_archive'/>
+<doc f='tcc/tccelf.c' l='2282'>/* XXX: handle correctly stab (debug) info */</doc>

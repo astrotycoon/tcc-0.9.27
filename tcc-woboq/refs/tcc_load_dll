@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1453' type='int tcc_load_dll(TCCState * s1, int fd, const char * filename, int level)'/>
+<use f='tcc/libtcc.c' l='1046' u='c' c='tcc_add_file_internal'/>
+<def f='tcc/tccelf.c' l='2691' ll='2800' type='int tcc_load_dll(TCCState * s1, int fd, const char * filename, int level)'/>
+<doc f='tcc/tccelf.c' l='2688'>/* load a DLL and all referenced DLLs. &apos;level = 0&apos; means that the DLL
+   is referenced by the user (so it should be added as DT_NEEDED in
+   the generated ELF file) */</doc>

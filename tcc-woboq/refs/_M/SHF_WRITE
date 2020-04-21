@@ -1,0 +1,9 @@
+<dec f='tcc/elf.h' l='368'/>
+<doc f='tcc/elf.h' l='366'>/* Legal values for sh_flags (section flags).  */</doc>
+<use f='tcc/tccelf.c' l='62' u='c'/>
+<use f='tcc/tccelf.c' l='63' u='c'/>
+<use f='tcc/tccelf.c' l='914' u='c'/>
+<use f='tcc/tccelf.c' l='1634' u='c'/>
+<use f='tcc/tccelf.c' l='1638' u='c'/>
+<use f='tcc/tccelf.c' l='1639' u='c'/>
+<use f='tcc/tccelf.c' l='2104' u='c'/>

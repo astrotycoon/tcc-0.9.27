@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='1239' type='int set_idnum(int c, int val)'/>
+<use f='tcc/tccasm.c' l='990' u='c' c='tcc_assemble_inline'/>
+<use f='tcc/tccasm.c' l='998' u='c' c='tcc_assemble_inline'/>
+<def f='tcc/tccpp.c' l='826' ll='831' type='int set_idnum(int c, int val)'/>
+<use f='tcc/tccpp.c' l='1492' u='c' c='parse_define'/>
+<use f='tcc/tccpp.c' l='1520' u='c' c='parse_define'/>
+<use f='tcc/tccpp.c' l='3597' u='c' c='preprocess_start'/>
+<use f='tcc/tccpp.c' l='3598' u='c' c='preprocess_start'/>
+<use f='tcc/tccpp.c' l='3645' u='c' c='tccpp_new'/>
+<use f='tcc/tccpp.c' l='3652' u='c' c='tccpp_new'/>

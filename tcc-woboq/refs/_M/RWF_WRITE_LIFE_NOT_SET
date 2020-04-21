@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='291'/>
+<doc f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='290'>/* Hint values for F_{GET,SET}_RW_HINT.  */</doc>

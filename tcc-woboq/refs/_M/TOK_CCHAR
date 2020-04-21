@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='945'/>
+<doc f='tcc/tcc.h' l='944'>/* tokens that carry values (in additional token string space / tokc) --&gt; */</doc>
+<use f='tcc/tccasm.c' l='146' u='c'/>
+<use f='tcc/tccgen.c' l='4617' u='c'/>
+<use f='tcc/tccpp.c' l='497' u='c'/>
+<use f='tcc/tccpp.c' l='1143' u='c'/>
+<use f='tcc/tccpp.c' l='1229' u='c'/>
+<use f='tcc/tccpp.c' l='2210' u='c'/>

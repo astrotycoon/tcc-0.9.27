@@ -1,0 +1,2 @@
+<def f='tcc/tcctools.c' l='482' ll='502' type='void tcc_tool_cross(TCCState * s, char ** argv, int target)'/>
+<use f='tcc/tcc.c' l='266' u='c' c='main'/>

@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='47' type='48'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='45'>/* Global symbol in Pascal.
+   Supposedly the value is its line number; I&apos;m skeptical.  */</doc>

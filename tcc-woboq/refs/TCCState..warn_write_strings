@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='682' type='int'/>
+<offset>704</offset>
+<doc f='tcc/tcc.h' l='681'>/* warning switches */</doc>
+<use f='tcc/libtcc.c' l='1565' u='a'/>
+<use f='tcc/libtcc.c' l='1565' u='a'/>
+<use f='tcc/libtcc.c' l='1565' u='a'/>
+<use f='tcc/libtcc.c' l='1565' u='a'/>
+<use f='tcc/tccgen.c' l='4684' u='r' c='unary'/>

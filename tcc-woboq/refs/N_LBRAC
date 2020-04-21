@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='142' type='192'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='138'>/* Beginning of lexical block.
+   The desc is the nesting level in lexical blocks.
+   The value is the address of the start of the text for the block.
+   The variables declared inside the block *precede* the N_LBRAC symbol.  */</doc>

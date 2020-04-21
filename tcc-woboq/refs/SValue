@@ -1,0 +1,9 @@
+<def f='tcc/tcc.h' l='437' ll='445'/>
+<use f='tcc/tcc.h' l='437'/>
+<size>64</size>
+<doc f='tcc/tcc.h' l='436'>/* value on stack */</doc>
+<mbr r='SValue::type' o='0' t='CType'/>
+<mbr r='SValue::r' o='128' t='unsigned short'/>
+<mbr r='SValue::r2' o='144' t='unsigned short'/>
+<mbr r='SValue::c' o='256' t='CValue'/>
+<mbr r='SValue::sym' o='384' t='struct Sym *'/>

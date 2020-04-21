@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='78' type='72'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='77'>/* Similar, for bss segment.  */</doc>

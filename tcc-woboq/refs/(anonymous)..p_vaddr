@@ -1,0 +1,15 @@
+<dec f='tcc/elf.h' l='556' type='Elf32_Addr'/>
+<dec f='tcc/elf.h' l='569' type='Elf64_Addr'/>
+<offset>128</offset>
+<doc f='tcc/elf.h' l='556'>/* Segment virtual address */</doc>
+<doc f='tcc/elf.h' l='569'>/* Segment virtual address */</doc>
+<use f='tcc/tccelf.c' l='1673' u='w' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1674' u='r' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1704' u='w' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1708' u='r' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1753' u='w' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1754' u='r' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1761' u='w' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1762' u='r' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1775' u='w' c='fill_unloadable_phdr'/>
+<use f='tcc/tccelf.c' l='1776' u='r' c='fill_unloadable_phdr'/>

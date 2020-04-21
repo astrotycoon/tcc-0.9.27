@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='89' type='74'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='85'>/* GNU Modula-2 definition module dependency.  Value is the modification time
+   of the definition file.  Other is non-zero if it is imported with the
+   GNU M2 keyword %INITIALIZE.  Perhaps N_M2C can be used if there
+   are enough empty fields? */</doc>

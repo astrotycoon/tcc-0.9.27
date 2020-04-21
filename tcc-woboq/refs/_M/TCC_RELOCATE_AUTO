@@ -1,0 +1,8 @@
+<dec f='tcc/libtcc.h' l='91'/>
+<doc f='tcc/libtcc.h' l='86'>/* possible values for &apos;ptr&apos;:
+   - TCC_RELOCATE_AUTO : Allocate and manage memory internally
+   - NULL              : return required memory size for the step below
+   - memory address    : copy code to memory passed by the caller
+   returns -1 if error. */</doc>
+<use f='tcc/tccrun.c' l='64' u='c'/>
+<use f='tcc/tccrun.c' l='123' u='c'/>

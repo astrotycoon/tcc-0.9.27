@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='717' type='int'/>
+<offset>1408</offset>
+<use f='tcc/tccelf.c' l='122' u='r' c='tccelf_delete'/>
+<use f='tcc/tccelf.c' l='133' u='a' c='tccelf_delete'/>
+<use f='tcc/tccelf.c' l='2132' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2747' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2762' u='a' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2779' u='r' c='tcc_load_dll'/>

@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='716' type='DLLReference **'/>
+<offset>1344</offset>
+<doc f='tcc/tcc.h' l='715'>/* array of all loaded dlls (including those referenced by loaded dlls) */</doc>
+<use f='tcc/tccelf.c' l='123' u='r' c='tccelf_delete'/>
+<use f='tcc/tccelf.c' l='133' u='a' c='tccelf_delete'/>
+<use f='tcc/tccelf.c' l='2133' u='r' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2748' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2762' u='a' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2780' u='r' c='tcc_load_dll'/>

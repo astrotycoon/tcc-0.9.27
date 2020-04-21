@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='1425' type='void put_elf_reloc(Section * symtab, Section * s, unsigned long offset, int type, int symbol)'/>
+<def f='tcc/tccelf.c' l='607' ll='611' type='void put_elf_reloc(Section * symtab, Section * s, unsigned long offset, int type, int symbol)'/>
+<use f='tcc/tccelf.c' l='673' u='c' c='put_stabs_r'/>
+<use f='tcc/tccelf.c' l='978' u='c' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='984' u='c' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='988' u='c' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1180' u='c' c='tcc_add_bcheck'/>
+<use f='tcc/tccelf.c' l='1442' u='c' c='bind_exe_dynsyms'/>

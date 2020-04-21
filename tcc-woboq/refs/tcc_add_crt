@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1179' type='int tcc_add_crt(TCCState * s, const char * filename)'/>
+<use f='tcc/libtcc.c' l='985' u='c' c='tcc_set_output_type'/>
+<use f='tcc/libtcc.c' l='986' u='c' c='tcc_set_output_type'/>
+<def f='tcc/libtcc.c' l='1130' ll='1136' type='int tcc_add_crt(TCCState * s, const char * filename)'/>
+<use f='tcc/tccelf.c' l='1206' u='c' c='tcc_add_runtime'/>

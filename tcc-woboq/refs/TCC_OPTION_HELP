@@ -1,0 +1,14 @@
+<dec f='tcc/libtcc.c' l='1442' type='0'/>
+<use f='tcc/libtcc.c' l='1499'/>
+<use f='tcc/libtcc.c' l='1499'/>
+<use f='tcc/libtcc.c' l='1500'/>
+<use f='tcc/libtcc.c' l='1500'/>
+<use f='tcc/libtcc.c' l='1501'/>
+<use f='tcc/libtcc.c' l='1501'/>
+<use f='tcc/libtcc.c' l='1499'/>
+<use f='tcc/libtcc.c' l='1499'/>
+<use f='tcc/libtcc.c' l='1500'/>
+<use f='tcc/libtcc.c' l='1500'/>
+<use f='tcc/libtcc.c' l='1501'/>
+<use f='tcc/libtcc.c' l='1501'/>
+<use f='tcc/libtcc.c' l='1731' c='tcc_parse_args'/>

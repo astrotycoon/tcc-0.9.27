@@ -1,0 +1,6 @@
+<dec f='tcc/libtcc.h' l='39' type='int tcc_add_sysinclude_path(TCCState * s, const char * pathname)'/>
+<doc f='tcc/libtcc.h' l='38'>/* add in system include path */</doc>
+<use f='tcc/libtcc.c' l='955' u='c' c='tcc_set_output_type'/>
+<def f='tcc/libtcc.c' l='998' ll='1002' type='int tcc_add_sysinclude_path(TCCState * s, const char * pathname)'/>
+<use f='tcc/libtcc.c' l='1821' u='c' c='tcc_parse_args'/>
+<use f='tcc/tcc.c' l='198' u='c' c='set_environment'/>

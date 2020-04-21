@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='1349' type='void vstore()'/>
+<use f='tcc/tccgen.c' l='1231' u='c' c='store_packed_bf'/>
+<def f='tcc/tccgen.c' l='3069' ll='3238' type='void vstore()'/>
+<use f='tcc/tccgen.c' l='3168' u='c' c='vstore'/>
+<use f='tcc/tccgen.c' l='3253' u='c' c='inc'/>
+<use f='tcc/tccgen.c' l='4379' u='c' c='post_type'/>
+<use f='tcc/tccgen.c' l='5272' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5674' u='c' c='expr_eq'/>
+<use f='tcc/tccgen.c' l='5760' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='5773' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='6419' u='c' c='decl_designator'/>
+<use f='tcc/tccgen.c' l='6625' u='c' c='init_putv'/>
+<doc f='tcc/tccgen.c' l='3068'>/* store vtop in lvalue pushed on stack */</doc>

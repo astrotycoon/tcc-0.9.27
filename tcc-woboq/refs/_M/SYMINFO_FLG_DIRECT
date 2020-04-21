@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='433'/>
+<doc f='tcc/elf.h' l='432'>/* Possible bitmasks for si_flags.  */</doc>

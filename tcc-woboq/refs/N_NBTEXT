@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='171' type='240'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='168'>/* These STAB&apos;s are used on Gould systems for Non-Base register symbols
+   or something like that.  FIXME.  I have assigned the values at random
+   since I don&apos;t have a Gould here.  Fixups from Gould folk welcome... */</doc>

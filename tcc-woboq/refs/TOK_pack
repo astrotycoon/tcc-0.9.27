@@ -1,0 +1,3 @@
+<dec f='tcc/tcctok.h' l='157' type='380'/>
+<doc f='tcc/tcctok.h' l='156'>/* pragma */</doc>
+<use f='tcc/tccpp.c' l='1645' u='r' c='pragma_parse'/>

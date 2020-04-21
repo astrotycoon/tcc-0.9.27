@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='1731' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='1740' type='Elf64_Word'/>
+<offset>96</offset>
+<doc f='tcc/elf.h' l='1731'>/* Interface version */</doc>
+<doc f='tcc/elf.h' l='1740'>/* Interface version */</doc>

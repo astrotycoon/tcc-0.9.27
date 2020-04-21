@@ -1,0 +1,13 @@
+<dec f='tcc/libtcc.h' l='64'/>
+<use f='tcc/libtcc.c' l='946' u='c'/>
+<use f='tcc/libtcc.c' l='1777' u='c'/>
+<use f='tcc/libtcc.c' l='1818' u='c'/>
+<use f='tcc/tcc.c' l='228' u='c'/>
+<use f='tcc/tcc.c' l='295' u='c'/>
+<use f='tcc/tcc.c' l='338' u='c'/>
+<use f='tcc/tccelf.c' l='1535' u='c'/>
+<use f='tcc/tccelf.c' l='1918' u='c'/>
+<use f='tcc/tccelf.c' l='1984' u='c'/>
+<use f='tcc/tccelf.c' l='2077' u='c'/>
+<use f='tcc/tccelf.c' l='2164' u='c'/>
+<use f='tcc/tccelf.c' l='2189' u='c'/>

@@ -1,0 +1,19 @@
+<dec f='tcc/tcc.h' l='1358' type='void gexpr()'/>
+<use f='tcc/tccasm.c' l='1116' u='c' c='parse_asm_operands'/>
+<use f='tcc/tccgen.c' l='4351' u='c' c='post_type'/>
+<use f='tcc/tccgen.c' l='4557' u='r' c='parse_expr_type'/>
+<use f='tcc/tccgen.c' l='4733' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5153' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5519' u='c' c='expr_cond'/>
+<def f='tcc/tccgen.c' l='5678' ll='5687' type='void gexpr()'/>
+<use f='tcc/tccgen.c' l='5896' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='5928' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6001' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6041' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6052' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6060' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6089' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6103' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6169' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6225' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6227' u='c' c='block'/>

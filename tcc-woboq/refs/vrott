@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='1331' type='void vrott(int n)'/>
+<def f='tcc/tccgen.c' l='794' ll='797' type='void vrott(int n)'/>
+<use f='tcc/tccgen.c' l='1214' u='c' c='store_packed_bf'/>
+<use f='tcc/tccgen.c' l='2203' u='c' c='gen_op'/>
+<use f='tcc/tccgen.c' l='2375' u='c' c='gen_cvt_itof1'/>
+<use f='tcc/tccgen.c' l='2405' u='c' c='gen_cvt_ftoi1'/>
+<use f='tcc/tccgen.c' l='3159' u='c' c='vstore'/>
+<doc f='tcc/tccgen.c' l='791'>/* rotate n first stack elements to the top
+   I1 ... In -&gt; In I1 ... I(n-1)  [top is right]
+ */</doc>

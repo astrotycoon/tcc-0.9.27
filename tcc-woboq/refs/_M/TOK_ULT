@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='922'/>
+<doc f='tcc/tcc.h' l='921'>/* warning: the following compare tokens depend on i386 asm code */</doc>
+<use f='tcc/tccgen.c' l='1916' u='c'/>
+<use f='tcc/tccgen.c' l='2182' u='c'/>
+<use f='tcc/tccgen.c' l='2284' u='c'/>
+<use f='tcc/tccgen.c' l='2323' u='c'/>
+<use f='tcc/tccgen.c' l='2345' u='c'/>
+<use f='tcc/tccgen.c' l='5331' u='c'/>

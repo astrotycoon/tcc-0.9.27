@@ -1,0 +1,12 @@
+<dec f='tcc/tcc.h' l='1248' type='Sym * define_find(int v)'/>
+<use f='tcc/libtcc.c' l='710' u='c' c='tcc_undefine_symbol'/>
+<use f='tcc/tccpp.c' l='1306' u='c' c='define_push'/>
+<def f='tcc/tccpp.c' l='1324' ll='1330' type='Sym * define_find(int v)'/>
+<use f='tcc/tccpp.c' l='1444' u='c' c='expr_preprocess'/>
+<use f='tcc/tccpp.c' l='1619' u='c' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1742' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1836' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1887' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='3478' u='c' c='macro_subst'/>
+<use f='tcc/tccpp.c' l='3549' u='c' c='next'/>
+<use f='tcc/tccpp.c' l='3754' u='c' c='define_print'/>

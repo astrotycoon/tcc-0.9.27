@@ -1,0 +1,35 @@
+<dec f='tcc/tcc.h' l='510' type='int'/>
+<use f='tcc/i386-asm.c' l='504' u='r' c='gen_disp32'/>
+<use f='tcc/i386-asm.c' l='1036' u='r' c='asm_opcode'/>
+<offset>224</offset>
+<doc f='tcc/tcc.h' l='510'>/* elf section number */</doc>
+<use f='tcc/tccasm.c' l='84' u='r' c='asm_section_sym'/>
+<use f='tcc/tccasm.c' l='295' u='r' c='asm_expr_sum'/>
+<use f='tcc/tccasm.c' l='403' u='r' c='asm_new_label'/>
+<use f='tcc/tccasm.c' l='651' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccelf.c' l='65' u='w' c='tccelf_new'/>
+<use f='tcc/tccelf.c' l='220' u='w' c='new_section'/>
+<use f='tcc/tccelf.c' l='538' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='540' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='543' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='593' u='r' c='put_elf_reloca'/>
+<use f='tcc/tccelf.c' l='917' u='r' c='build_got'/>
+<use f='tcc/tccelf.c' l='1008' u='r' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='1141' u='r' c='add_init_array_defines'/>
+<use f='tcc/tccelf.c' l='1145' u='r' c='add_init_array_defines'/>
+<use f='tcc/tccelf.c' l='1169' u='r' c='tcc_add_bcheck'/>
+<use f='tcc/tccelf.c' l='1222' u='r' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1226' u='r' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1230' u='r' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1261' u='r' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1266' u='r' c='tcc_add_linker_symbols'/>
+<use f='tcc/tccelf.c' l='1282' u='r' c='resolve_common_syms'/>
+<use f='tcc/tccelf.c' l='1422' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1424' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1436' u='r' c='bind_exe_dynsyms'/>
+<use f='tcc/tccelf.c' l='1966' u='r' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2036' u='w' c='tidy_section_headers'/>
+<use f='tcc/tccelf.c' l='2462' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2493' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccgen.c' l='162' u='r' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='424' u='r' c='put_extern_sym'/>

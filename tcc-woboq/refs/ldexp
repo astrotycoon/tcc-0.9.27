@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/mathcalls.h' l='101' type='double ldexp(double __x, int __exponent)'/>
+<use f='tcc/tccpp.c' l='2379' u='c' c='parse_number'/>

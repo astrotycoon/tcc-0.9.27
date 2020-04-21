@@ -1,0 +1,20 @@
+<dec f='tcc/tcc.h' l='443' type='struct Sym *'/>
+<use f='tcc/i386-asm.c' l='1263' u='r' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='1264' u='r' c='asm_compute_constraints'/>
+<use f='tcc/i386-asm.c' l='1483' u='r' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1484' u='r' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1490' u='r' c='subst_asm_operand'/>
+<offset>384</offset>
+<doc f='tcc/tcc.h' l='443'>/* symbol, if (VT_SYM | VT_CONST), or if
+    			      result of unary() for an identifier. */</doc>
+<use f='tcc/tccgen.c' l='660' u='w' c='vsetc'/>
+<use f='tcc/tccgen.c' l='805' u='w' c='vpushsym'/>
+<use f='tcc/tccgen.c' l='4795' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='5100' u='w' c='unary'/>
+<use f='tcc/tccgen.c' l='5471' u='r' c='condition_3way'/>
+<use f='tcc/tccgen.c' l='6291' u='r' c='parse_init_elem'/>
+<use f='tcc/tccgen.c' l='6462' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6477' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6493' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6594' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6609' u='r' c='init_putv'/>

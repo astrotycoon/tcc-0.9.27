@@ -1,0 +1,17 @@
+<dec f='tcc/tcc.h' l='1342' type='void gaddrof()'/>
+<def f='tcc/tccgen.c' l='1118' ll='1126' type='void gaddrof()'/>
+<use f='tcc/tccgen.c' l='1144' u='c' c='gbound'/>
+<use f='tcc/tccgen.c' l='1159' u='c' c='incr_bf_adr'/>
+<use f='tcc/tccgen.c' l='1378' u='c' c='gv'/>
+<use f='tcc/tccgen.c' l='2170' u='c' c='gen_op'/>
+<use f='tcc/tccgen.c' l='2175' u='c' c='gen_op'/>
+<use f='tcc/tccgen.c' l='3100' u='c' c='vstore'/>
+<use f='tcc/tccgen.c' l='3117' u='c' c='vstore'/>
+<use f='tcc/tccgen.c' l='3222' u='c' c='vstore'/>
+<use f='tcc/tccgen.c' l='4754' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5122' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5605' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5607' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5638' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5640' u='c' c='expr_cond'/>
+<doc f='tcc/tccgen.c' l='1117'>/* get address of vtop (vtop MUST BE an lvalue) */</doc>

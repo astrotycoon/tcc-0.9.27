@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='751' type='11'/>
+<use f='tcc/tccpp.c' l='3847' u='r' c='tcc_preprocess'/>

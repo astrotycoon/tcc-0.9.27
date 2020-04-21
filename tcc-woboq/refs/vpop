@@ -1,0 +1,37 @@
+<dec f='tcc/tcc.h' l='1345' type='void vpop()'/>
+<use f='tcc/tccasm.c' l='1240' u='c' c='asm_instr'/>
+<def f='tcc/tccgen.c' l='678' ll='693' type='void vpop()'/>
+<use f='tcc/tccgen.c' l='1193' u='c' c='load_packed_bf'/>
+<use f='tcc/tccgen.c' l='1231' u='c' c='store_packed_bf'/>
+<use f='tcc/tccgen.c' l='1234' u='c' c='store_packed_bf'/>
+<use f='tcc/tccgen.c' l='1234' u='c' c='store_packed_bf'/>
+<use f='tcc/tccgen.c' l='1394' u='c' c='gv'/>
+<use f='tcc/tccgen.c' l='3170' u='c' c='vstore'/>
+<use f='tcc/tccgen.c' l='3255' u='c' c='inc'/>
+<use f='tcc/tccgen.c' l='4382' u='c' c='post_type'/>
+<use f='tcc/tccgen.c' l='4542' u='c' c='expr_type'/>
+<use f='tcc/tccgen.c' l='4816' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4838' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4847' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4910' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5391' u='c' c='expr_land'/>
+<use f='tcc/tccgen.c' l='5397' u='c' c='expr_land'/>
+<use f='tcc/tccgen.c' l='5432' u='c' c='expr_lor'/>
+<use f='tcc/tccgen.c' l='5438' u='c' c='expr_lor'/>
+<use f='tcc/tccgen.c' l='5475' u='c' c='condition_3way'/>
+<use f='tcc/tccgen.c' l='5511' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5684' u='c' c='gexpr'/>
+<use f='tcc/tccgen.c' l='5707' u='c' c='expr_const64'/>
+<use f='tcc/tccgen.c' l='5774' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='5789' u='c' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='5900' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='5973' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6042' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6061' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6126' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6217' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6224' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6228' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6421' u='c' c='decl_designator'/>
+<use f='tcc/tccgen.c' l='6626' u='c' c='init_putv'/>
+<doc f='tcc/tccgen.c' l='677'>/* pop stack value */</doc>

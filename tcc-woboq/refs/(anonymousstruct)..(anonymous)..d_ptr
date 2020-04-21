@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='664' type='Elf32_Addr'/>
+<dec f='tcc/elf.h' l='674' type='Elf64_Addr'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='664'>/* Address value */</doc>
+<doc f='tcc/elf.h' l='674'>/* Address value */</doc>

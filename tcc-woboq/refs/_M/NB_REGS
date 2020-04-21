@@ -1,0 +1,4 @@
+<dec f='tcc/x86_64-gen.c' l='26'/>
+<use f='tcc/tcc.h' l='1481' u='c'/>
+<doc f='tcc/x86_64-gen.c' l='25'>/* number of available registers */</doc>
+<use f='tcc/tccgen.c' l='1068' u='c'/>

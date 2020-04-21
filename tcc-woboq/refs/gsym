@@ -1,0 +1,21 @@
+<dec f='tcc/tcc.h' l='1484' type='void gsym(int t)'/>
+<use f='tcc/tccgen.c' l='690' u='c' c='vpop'/>
+<use f='tcc/tccgen.c' l='5401' u='c' c='expr_land'/>
+<use f='tcc/tccgen.c' l='5442' u='c' c='expr_lor'/>
+<use f='tcc/tccgen.c' l='5529' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5629' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5647' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5846' u='c' c='gcase'/>
+<use f='tcc/tccgen.c' l='5871' u='c' c='gcase'/>
+<use f='tcc/tccgen.c' l='5912' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='5916' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='5920' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='5938' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6063' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6070' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6088' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6094' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6115' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6132' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6203' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='7075' u='c' c='gen_function'/>

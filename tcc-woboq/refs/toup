@@ -1,0 +1,6 @@
+<def f='tcc/tcc.h' l='1279' ll='1281' type='int toup(int c)'/>
+<use f='tcc/tccpp.c' l='2380' u='c' c='parse_number'/>
+<use f='tcc/tccpp.c' l='2436' u='c' c='parse_number'/>
+<use f='tcc/tccpp.c' l='2494' u='c' c='parse_number'/>
+<use f='tcc/tccpp.c' l='2769' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3825' u='c' c='pp_check_he0xE'/>

@@ -1,0 +1,11 @@
+<dec f='include/stdio.h' l='517' type='int fputc(int __c, FILE * __stream)'/>
+<doc f='include/stdio.h' l='510'>/* Write a character to STREAM.
+
+   These functions are possible cancellation points and therefore not
+   marked with __THROW.
+
+   These functions is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='tcc/tccelf.c' l='1302' u='c' c='tcc_output_binary'/>
+<use f='tcc/tccelf.c' l='1939' u='c' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1951' u='c' c='tcc_output_elf'/>

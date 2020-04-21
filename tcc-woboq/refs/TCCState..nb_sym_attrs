@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='801' type='int'/>
+<offset>10816</offset>
+<use f='tcc/tccelf.c' l='693' u='r' c='get_sym_attr'/>
+<use f='tcc/tccelf.c' l='702' u='r' c='get_sym_attr'/>
+<use f='tcc/tccelf.c' l='703' u='r' c='get_sym_attr'/>
+<use f='tcc/tccelf.c' l='704' u='w' c='get_sym_attr'/>

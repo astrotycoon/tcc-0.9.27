@@ -1,0 +1,43 @@
+<dec f='tcc/tcc.h' l='1100' type='struct TCCState *'/>
+<use f='tcc/i386-asm.c' l='1212' u='r' c='asm_parse_regvar'/>
+<def f='tcc/libtcc.c' l='33' type='struct TCCState *'/>
+<use f='tcc/libtcc.c' l='537' u='r' c='tcc_error_noabort'/>
+<use f='tcc/libtcc.c' l='547' u='r' c='tcc_error'/>
+<use f='tcc/libtcc.c' l='564' u='r' c='tcc_warning'/>
+<use f='tcc/libtcc.c' l='719' u='r' c='tcc_cleanup'/>
+<use f='tcc/libtcc.c' l='723' u='r' c='tcc_cleanup'/>
+<use f='tcc/libtcc.c' l='724' u='w' c='tcc_cleanup'/>
+<use f='tcc/libtcc.c' l='740' u='w' c='tcc_new'/>
+<doc f='tcc/libtcc.c' l='32'>/* XXX: get rid of this ASAP */</doc>
+<use f='tcc/tccasm.c' l='1226' u='r' c='asm_instr'/>
+<use f='tcc/tccasm.c' l='1267' u='r' c='asm_global_instr'/>
+<use f='tcc/tccelf.c' l='590' u='r' c='put_elf_reloca'/>
+<use f='tcc/tccgen.c' l='353' u='r' c='put_extern_sym2'/>
+<use f='tcc/tccgen.c' l='403' u='r' c='put_extern_sym2'/>
+<use f='tcc/tccgen.c' l='3312' u='r' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3435' u='r' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3493' u='r' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3494' u='r' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3890' u='r' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='4202' u='r' c='parse_btype'/>
+<use f='tcc/tccgen.c' l='4504' u='r' c='indir'/>
+<use f='tcc/tccgen.c' l='4681' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='4684' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='5079' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='5146' u='r' c='unary'/>
+<use f='tcc/tccgen.c' l='5882' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='5883' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='6494' u='r' c='init_putv'/>
+<use f='tcc/tccgen.c' l='6829' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='6957' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7066' u='r' c='gen_function'/>
+<use f='tcc/tccgen.c' l='7085' u='r' c='gen_function'/>
+<use f='tcc/tccgen.c' l='7277' u='r' c='decl0'/>
+<use f='tcc/tccgen.c' l='7278' u='r' c='decl0'/>
+<use f='tcc/tccpp.c' l='1442' u='r' c='expr_preprocess'/>
+<use f='tcc/tccpp.c' l='1443' u='r' c='expr_preprocess'/>
+<use f='tcc/tccpp.c' l='1716' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='2595' u='r' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2624' u='r' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3137' u='r' c='paste_tokens'/>
+<use f='tcc/tccpp.c' l='3717' u='r' c='tok_print'/>

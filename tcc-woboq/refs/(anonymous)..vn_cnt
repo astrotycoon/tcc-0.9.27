@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='896' type='Elf32_Half'/>
+<dec f='tcc/elf.h' l='907' type='Elf64_Half'/>
+<offset>16</offset>
+<doc f='tcc/elf.h' l='896'>/* Number of associated aux entries */</doc>
+<doc f='tcc/elf.h' l='907'>/* Number of associated aux entries */</doc>

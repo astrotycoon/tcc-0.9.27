@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='840' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='852' type='Elf64_Word'/>
+<offset>64</offset>
+<doc f='tcc/elf.h' l='840'>/* Version name hash value */</doc>
+<doc f='tcc/elf.h' l='852'>/* Version name hash value */</doc>

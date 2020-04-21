@@ -1,0 +1,25 @@
+<dec f='tcc/tcc.h' l='1458' type='int handle_eob()'/>
+<use f='tcc/tccelf.c' l='2834' u='c' c='ld_next'/>
+<use f='tcc/tccelf.c' l='3025' u='c' c='tcc_load_ldscript'/>
+<def f='tcc/tccpp.c' l='587' ll='617' type='int handle_eob()'/>
+<use f='tcc/tccpp.c' l='625' u='c' c='inp'/>
+<use f='tcc/tccpp.c' l='664' u='c' c='handle_stray1'/>
+<use f='tcc/tccpp.c' l='726' u='c' c='parse_line_comment'/>
+<use f='tcc/tccpp.c' l='687' u='c' c='parse_line_comment'/>
+<use f='tcc/tccpp.c' l='687' u='c' c='parse_line_comment'/>
+<use f='tcc/tccpp.c' l='687' u='c' c='parse_line_comment'/>
+<use f='tcc/tccpp.c' l='687' u='c' c='parse_line_comment'/>
+<use f='tcc/tccpp.c' l='782' u='c' c='parse_comment'/>
+<use f='tcc/tccpp.c' l='687' u='c' c='parse_comment'/>
+<use f='tcc/tccpp.c' l='687' u='c' c='parse_comment'/>
+<use f='tcc/tccpp.c' l='687' u='c' c='parse_comment'/>
+<use f='tcc/tccpp.c' l='687' u='c' c='parse_comment'/>
+<use f='tcc/tccpp.c' l='812' u='c' c='parse_comment'/>
+<use f='tcc/tccpp.c' l='864' u='c' c='parse_pp_string'/>
+<use f='tcc/tccpp.c' l='687' u='c' c='parse_pp_string'/>
+<use f='tcc/tccpp.c' l='687' u='c' c='parse_pp_string'/>
+<use f='tcc/tccpp.c' l='687' u='c' c='parse_pp_string'/>
+<use f='tcc/tccpp.c' l='944' u='c' c='preprocess_skip'/>
+<use f='tcc/tccpp.c' l='3244' u='c' c='next_argstream'/>
+<doc f='tcc/tccpp.c' l='585'>/* return the current character, handling end of block if necessary
+   (but not stray) */</doc>

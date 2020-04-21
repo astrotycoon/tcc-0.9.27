@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='1359' type='int expr_const()'/>
+<use f='tcc/tccgen.c' l='3347' u='c' c='parse_attribute'/>
+<use f='tcc/tccgen.c' l='3909' u='c' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='4344' u='c' c='post_type'/>
+<def f='tcc/tccgen.c' l='5713' ll='5721' type='int expr_const()'/>
+<use f='tcc/tccgen.c' l='6346' u='c' c='decl_designator'/>
+<use f='tcc/tccgen.c' l='6349' u='c' c='decl_designator'/>
+<doc f='tcc/tccgen.c' l='5711'>/* parse an integer constant and return its value.
+   Complain if it doesn&apos;t fit 32bit (signed or unsigned).  */</doc>
+<use f='tcc/tccpp.c' l='1465' u='c' c='expr_preprocess'/>

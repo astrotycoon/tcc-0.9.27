@@ -1,0 +1,6 @@
+<dec f='tcc/config.h' l='5'/>
+<use f='tcc/libtcc.c' l='776' u='c'/>
+<use f='tcc/libtcc.c' l='1902' u='c'/>
+<use f='tcc/tcc.c' l='28' u='c'/>
+<use f='tcc/tcc.c' l='80' u='c'/>
+<use f='tcc/tcc.c' l='144' u='c'/>

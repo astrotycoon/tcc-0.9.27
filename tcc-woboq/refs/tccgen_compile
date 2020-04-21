@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1316' type='int tccgen_compile(TCCState * s1)'/>
+<use f='tcc/libtcc.c' l='655' u='c' c='tcc_compile'/>
+<def f='tcc/tccgen.c' l='235' ll='281' type='int tccgen_compile(TCCState * s1)'/>
+<doc f='tcc/tccgen.c' l='234'>/* ------------------------------------------------------------------------- */</doc>

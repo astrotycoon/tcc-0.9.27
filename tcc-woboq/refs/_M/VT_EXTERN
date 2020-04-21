@@ -1,0 +1,24 @@
+<dec f='tcc/tcc.h' l='892'/>
+<doc f='tcc/tcc.h' l='891'>/* storage */</doc>
+<use f='tcc/tccasm.c' l='51' u='c'/>
+<use f='tcc/tccasm.c' l='381' u='c'/>
+<use f='tcc/tccasm.c' l='383' u='c'/>
+<use f='tcc/tccasm.c' l='397' u='c'/>
+<use f='tcc/tccgen.c' l='836' u='c'/>
+<use f='tcc/tccgen.c' l='840' u='c'/>
+<use f='tcc/tccgen.c' l='850' u='c'/>
+<use f='tcc/tccgen.c' l='851' u='c'/>
+<use f='tcc/tccgen.c' l='853' u='c'/>
+<use f='tcc/tccgen.c' l='873' u='c'/>
+<use f='tcc/tccgen.c' l='933' u='c'/>
+<use f='tcc/tccgen.c' l='940' u='c'/>
+<use f='tcc/tccgen.c' l='2863' u='c'/>
+<use f='tcc/tccgen.c' l='4138' u='c'/>
+<use f='tcc/tccgen.c' l='4147' u='c'/>
+<use f='tcc/tccgen.c' l='7256' u='c'/>
+<use f='tcc/tccgen.c' l='7256' u='c'/>
+<use f='tcc/tccgen.c' l='7257' u='c'/>
+<use f='tcc/tccgen.c' l='7261' u='c'/>
+<use f='tcc/tccgen.c' l='7332' u='c'/>
+<use f='tcc/tccgen.c' l='7340' u='c'/>
+<use f='tcc/tccgen.c' l='7363' u='c'/>

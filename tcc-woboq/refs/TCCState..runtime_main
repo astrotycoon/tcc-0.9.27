@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='818' type='const char *'/>
+<offset>10880</offset>
+<use f='tcc/tccrun.c' l='120' u='w' c='tcc_run'/>
+<use f='tcc/tccrun.c' l='121' u='r' c='tcc_run'/>
+<use f='tcc/tccrun.c' l='125' u='r' c='tcc_run'/>

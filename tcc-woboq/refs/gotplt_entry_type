@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='1473' type='int gotplt_entry_type(int reloc_type)'/>
+<use f='tcc/tccelf.c' l='1035' u='c' c='build_got_entries'/>

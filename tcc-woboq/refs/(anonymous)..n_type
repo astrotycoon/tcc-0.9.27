@@ -1,0 +1,9 @@
+<dec f='tcc/elf.h' l='1045' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='1052' type='Elf64_Word'/>
+<dec f='tcc/tcc.h' l='1377' type='unsigned char'/>
+<offset>32</offset>
+<doc f='tcc/tcc.h' l='1377'>/* type of symbol */</doc>
+<doc f='tcc/elf.h' l='1045'>/* Type of the note.  */</doc>
+<doc f='tcc/elf.h' l='1052'>/* Type of the note.  */</doc>
+<use f='tcc/tccelf.c' l='663' u='w' c='put_stabs'/>
+<use f='tcc/tccrun.c' l='368' u='r' c='rt_printline'/>

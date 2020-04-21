@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='1159' type='void tcc_close()'/>
+<def f='tcc/libtcc.c' l='597' ll='608' type='void tcc_close()'/>
+<use f='tcc/libtcc.c' l='678' u='c' c='tcc_compile_string'/>
+<use f='tcc/libtcc.c' l='701' u='c' c='tcc_define_symbol'/>
+<use f='tcc/libtcc.c' l='722' u='c' c='tcc_cleanup'/>
+<use f='tcc/libtcc.c' l='1073' u='c' c='tcc_add_file_internal'/>
+<use f='tcc/tccasm.c' l='996' u='c' c='tcc_assemble_inline'/>
+<use f='tcc/tccpp.c' l='2628' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3151' u='c' c='paste_tokens'/>

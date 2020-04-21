@@ -1,0 +1,18 @@
+<dec f='tcc/tcc.h' l='1204' type='const int *'/>
+<use f='tcc/tccasm.c' l='635' u='w' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='989' u='r' c='tcc_assemble_inline'/>
+<use f='tcc/tccasm.c' l='994' u='w' c='tcc_assemble_inline'/>
+<use f='tcc/tccasm.c' l='999' u='w' c='tcc_assemble_inline'/>
+<use f='tcc/tccgen.c' l='6876' u='w' c='decl_initializer_alloc'/>
+<def f='tcc/tccpp.c' l='32' type='const int *'/>
+<use f='tcc/tccpp.c' l='1110' u='r' c='begin_macro'/>
+<use f='tcc/tccpp.c' l='1112' u='w' c='begin_macro'/>
+<use f='tcc/tccpp.c' l='1120' u='w' c='end_macro'/>
+<use f='tcc/tccpp.c' l='2974' u='r' c='next_nomacro_spc'/>
+<use f='tcc/tccpp.c' l='2976' u='r' c='next_nomacro_spc'/>
+<use f='tcc/tccpp.c' l='2978' u='a' c='next_nomacro_spc'/>
+<use f='tcc/tccpp.c' l='3227' u='r' c='next_argstream'/>
+<use f='tcc/tccpp.c' l='3228' u='r' c='next_argstream'/>
+<use f='tcc/tccpp.c' l='3502' u='r' c='macro_subst'/>
+<use f='tcc/tccpp.c' l='3537' u='r' c='next'/>
+<use f='tcc/tccpp.c' l='3631' u='w' c='preprocess_end'/>

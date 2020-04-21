@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='672' type='int'/>
+<offset>512</offset>
+<doc f='tcc/tcc.h' l='671'>/* output format, see TCC_OUTPUT_FORMAT_xxx */</doc>
+<use f='tcc/libtcc.c' l='947' u='w' c='tcc_set_output_type'/>
+<use f='tcc/libtcc.c' l='1362' u='w' c='tcc_set_linker'/>
+<use f='tcc/libtcc.c' l='1364' u='w' c='tcc_set_linker'/>
+<use f='tcc/tccelf.c' l='1577' u='r' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1711' u='r' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='2003' u='r' c='tcc_write_elf_file'/>

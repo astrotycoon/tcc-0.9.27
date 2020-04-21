@@ -1,0 +1,8 @@
+<dec f='tcc/tcc.h' l='1602' type='void gen_expr32(ExprValue * pe)'/>
+<def f='tcc/i386-asm.c' l='482' ll='490' type='void gen_expr32(ExprValue * pe)'/>
+<use f='tcc/i386-asm.c' l='534' u='c' c='asm_modrm'/>
+<use f='tcc/i386-asm.c' l='571' u='c' c='asm_modrm'/>
+<use f='tcc/i386-asm.c' l='1129' u='c' c='asm_opcode'/>
+<doc f='tcc/i386-asm.c' l='481'>/* XXX: unify with C code output ? */</doc>
+<doc f='tcc/tcc.h' l='1601'>/* ------------ i386-asm.c ------------ */</doc>
+<use f='tcc/tccasm.c' l='554' u='c' c='asm_parse_directive'/>

@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='571' type='struct BufferedFile *'/>
+<offset>192</offset>
+<use f='tcc/libtcc.c' l='490' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='592' u='w' c='tcc_open_bf'/>
+<use f='tcc/libtcc.c' l='606' u='r' c='tcc_close'/>

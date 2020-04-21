@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1492' type='void gjmp_addr(int a)'/>
+<use f='tcc/tccgen.c' l='5842' u='c' c='gcase'/>
+<use f='tcc/tccgen.c' l='5937' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6062' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6069' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6128' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='6186' u='c' c='block'/>

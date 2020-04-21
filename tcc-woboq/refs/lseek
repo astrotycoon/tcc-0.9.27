@@ -1,0 +1,9 @@
+<dec f='include/unistd.h' l='337' type='__off_t lseek(int __fd, __off_t __offset, int __whence)'/>
+<use f='tcc/libtcc.c' l='1026' u='c' c='tcc_add_file_internal'/>
+<use f='tcc/libtcc.c' l='1656' u='c' c='args_parser_listfile'/>
+<use f='tcc/libtcc.c' l='1658' u='c' c='args_parser_listfile'/>
+<use f='tcc/tccelf.c' l='2250' u='c' c='load_data'/>
+<use f='tcc/tccelf.c' l='2302' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2431' u='c' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2665' u='c' c='tcc_load_archive'/>
+<use f='tcc/tccelf.c' l='2682' u='c' c='tcc_load_archive'/>

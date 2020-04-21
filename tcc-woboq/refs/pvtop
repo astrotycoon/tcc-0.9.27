@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1296' type='SValue *'/>
+<def f='tcc/tccgen.c' l='50' type='SValue *'/>
+<use f='tcc/tccgen.c' l='133' u='r' c='check_vstack'/>
+<use f='tcc/tccgen.c' l='134' u='r' c='check_vstack'/>
+<use f='tcc/tccpp.c' l='3593' u='w' c='preprocess_start'/>

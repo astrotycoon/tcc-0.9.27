@@ -1,0 +1,20 @@
+<dec f='tcc/tcc.h' l='1255' type='void next_nomacro()'/>
+<use f='tcc/libtcc.c' l='699' u='c' c='tcc_define_symbol'/>
+<use f='tcc/tccpp.c' l='978' u='c' c='preprocess_skip'/>
+<use f='tcc/tccpp.c' l='1436' u='c' c='expr_preprocess'/>
+<use f='tcc/tccpp.c' l='1439' u='c' c='expr_preprocess'/>
+<use f='tcc/tccpp.c' l='1446' u='c' c='expr_preprocess'/>
+<use f='tcc/tccpp.c' l='1493' u='c' c='parse_define'/>
+<use f='tcc/tccpp.c' l='1497' u='c' c='parse_define'/>
+<use f='tcc/tccpp.c' l='1504' u='c' c='parse_define'/>
+<use f='tcc/tccpp.c' l='1516' u='c' c='parse_define'/>
+<use f='tcc/tccpp.c' l='1606' u='c' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1729' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1734' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1740' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1876' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1936' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='2009' u='c' c='preprocess'/>
+<def f='tcc/tccpp.c' l='2990' ll='2995' type='void next_nomacro()'/>
+<use f='tcc/tccpp.c' l='3363' u='c' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3535' u='c' c='next'/>

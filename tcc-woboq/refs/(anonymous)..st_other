@@ -1,0 +1,20 @@
+<dec f='tcc/elf.h' l='398' type='unsigned char'/>
+<dec f='tcc/elf.h' l='406' type='unsigned char'/>
+<offset>40</offset>
+<doc f='tcc/elf.h' l='398'>/* Symbol visibility */</doc>
+<doc f='tcc/elf.h' l='406'>/* Symbol visibility */</doc>
+<use f='tcc/tccasm.c' l='421' u='w' c='set_symbol'/>
+<use f='tcc/tccelf.c' l='174' u='r' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='406' u='w' c='put_elf_sym'/>
+<use f='tcc/tccelf.c' l='508' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='514' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='522' u='w' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='522' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='524' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='547' u='r' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='565' u='w' c='set_elf_sym'/>
+<use f='tcc/tccelf.c' l='1083' u='r' c='build_got_entries'/>
+<use f='tcc/tccelf.c' l='2500' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2771' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccgen.c' l='302' u='w' c='update_storage'/>
+<use f='tcc/tccgen.c' l='302' u='r' c='update_storage'/>

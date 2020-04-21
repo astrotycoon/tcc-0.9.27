@@ -1,0 +1,6 @@
+<dec f='tcc/i386-tok.h' l='21' macro='1' type='467'/>
+<use f='tcc/i386-asm.c' l='327' u='r' c='asm_parse_reg'/>
+<use f='tcc/i386-asm.c' l='328' u='r' c='asm_parse_reg'/>
+<use f='tcc/i386-asm.c' l='1577' u='r' c='subst_asm_operand'/>
+<use f='tcc/i386-asm.c' l='1709' u='r' c='asm_clobber'/>
+<use f='tcc/i386-asm.c' l='1710' u='r' c='asm_clobber'/>

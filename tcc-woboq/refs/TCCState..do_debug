@@ -1,0 +1,19 @@
+<dec f='tcc/tcc.h' l='690' type='int'/>
+<offset>896</offset>
+<doc f='tcc/tcc.h' l='689'>/* compile with debug symbol (and use them if error during execution) */</doc>
+<use f='tcc/libtcc.c' l='966' u='r' c='tcc_set_output_type'/>
+<use f='tcc/libtcc.c' l='1770' u='w' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1774' u='w' c='tcc_parse_args'/>
+<use f='tcc/tccasm.c' l='918' u='r' c='tcc_assemble_internal'/>
+<use f='tcc/tccelf.c' l='1534' u='r' c='alloc_sec_names'/>
+<use f='tcc/tccelf.c' l='1814' u='r' c='fill_dynamic'/>
+<use f='tcc/tccgen.c' l='156' u='r' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='186' u='r' c='tcc_debug_end'/>
+<use f='tcc/tccgen.c' l='196' u='r' c='tcc_debug_line'/>
+<use f='tcc/tccgen.c' l='210' u='r' c='tcc_debug_funcstart'/>
+<use f='tcc/tccgen.c' l='229' u='r' c='tcc_debug_funcend'/>
+<use f='tcc/tccgen.c' l='5882' u='r' c='block'/>
+<use f='tcc/tccpp.c' l='1858' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1966' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='2624' u='r' c='next_nomacro1'/>
+<use f='tcc/tccrun.c' l='128' u='r' c='tcc_run'/>

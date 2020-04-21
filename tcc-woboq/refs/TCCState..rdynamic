@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='660' type='int'/>
+<offset>160</offset>
+<doc f='tcc/tcc.h' l='660'>/* if true, all symbols are exported */</doc>
+<use f='tcc/libtcc.c' l='1377' u='w' c='tcc_set_linker'/>
+<use f='tcc/libtcc.c' l='1877' u='w' c='tcc_parse_args'/>
+<use f='tcc/tccelf.c' l='1456' u='r' c='bind_exe_dynsyms'/>

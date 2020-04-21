@@ -1,0 +1,19 @@
+<dec f='tcc/tcc.h' l='430' type='int'/>
+<offset>0</offset>
+<use f='tcc/tccasm.c' l='703' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccgen.c' l='6696' u='r' c='decl_initializer'/>
+<use f='tcc/tccgen.c' l='6698' u='r' c='decl_initializer'/>
+<use f='tcc/tccpp.c' l='511' u='r' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='515' u='r' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='1160' u='r' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='1163' u='r' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='1164' u='r' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='1247' u='w' c='TOK_GET'/>
+<use f='tcc/tccpp.c' l='1249' u='r' c='TOK_GET'/>
+<use f='tcc/tccpp.c' l='1615' u='r' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='2226' u='w' c='parse_string'/>
+<use f='tcc/tccpp.c' l='2777' u='w' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2816' u='w' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3054' u='w' c='macro_arg_subst'/>
+<use f='tcc/tccpp.c' l='3325' u='w' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3565' u='r' c='next'/>

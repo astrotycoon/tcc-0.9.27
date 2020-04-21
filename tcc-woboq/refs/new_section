@@ -1,0 +1,21 @@
+<dec f='tcc/tcc.h' l='1406' type='Section * new_section(TCCState * s1, const char * name, int sh_type, int sh_flags)'/>
+<use f='tcc/tccelf.c' l='61' u='c' c='tccelf_new'/>
+<use f='tcc/tccelf.c' l='62' u='c' c='tccelf_new'/>
+<use f='tcc/tccelf.c' l='63' u='c' c='tccelf_new'/>
+<use f='tcc/tccelf.c' l='64' u='c' c='tccelf_new'/>
+<use f='tcc/tccelf.c' l='84' u='c' c='tccelf_bounds_new'/>
+<use f='tcc/tccelf.c' l='86' u='c' c='tccelf_bounds_new'/>
+<use f='tcc/tccelf.c' l='93' u='c' c='tccelf_stab_new'/>
+<use f='tcc/tccelf.c' l='95' u='c' c='tccelf_stab_new'/>
+<def f='tcc/tccelf.c' l='192' ll='225' type='Section * new_section(TCCState * s1, const char * name, int sh_type, int sh_flags)'/>
+<use f='tcc/tccelf.c' l='235' u='c' c='new_symtab'/>
+<use f='tcc/tccelf.c' l='237' u='c' c='new_symtab'/>
+<use f='tcc/tccelf.c' l='244' u='c' c='new_symtab'/>
+<use f='tcc/tccelf.c' l='318' u='c' c='find_section'/>
+<use f='tcc/tccelf.c' l='590' u='c' c='put_elf_reloca'/>
+<use f='tcc/tccelf.c' l='914' u='c' c='build_got'/>
+<use f='tcc/tccelf.c' l='994' u='c' c='put_got_entry'/>
+<use f='tcc/tccelf.c' l='2090' u='c' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2103' u='c' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2124' u='c' c='elf_output_file'/>
+<use f='tcc/tccelf.c' l='2395' u='c' c='tcc_load_object_file'/>

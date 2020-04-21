@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='53' type='52'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='52'>/* &quot;No DST map for sym: name, ,0,type,ignored&quot;  according to Ultrix V4.0. */</doc>

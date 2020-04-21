@@ -1,0 +1,21 @@
+<dec f='tcc/tcc.h' l='1140' type='void dynarray_reset(void * pp, int * n)'/>
+<def f='tcc/libtcc.c' l='430' ll='438' type='void dynarray_reset(void * pp, int * n)'/>
+<use f='tcc/libtcc.c' l='726' u='c' c='tcc_cleanup'/>
+<use f='tcc/libtcc.c' l='910' u='c' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='911' u='c' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='914' u='c' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='915' u='c' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='916' u='c' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='917' u='c' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='926' u='c' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='927' u='c' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='928' u='c' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='929' u='c' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='1667' u='c' c='args_parser_listfile'/>
+<use f='tcc/libtcc.c' l='1970' u='c' c='tcc_set_options'/>
+<use f='tcc/tccelf.c' l='114' u='c' c='tccelf_delete'/>
+<use f='tcc/tccelf.c' l='118' u='c' c='tccelf_delete'/>
+<use f='tcc/tccelf.c' l='133' u='c' c='tccelf_delete'/>
+<use f='tcc/tccelf.c' l='3013' u='c' c='ld_add_file_list'/>
+<use f='tcc/tccgen.c' l='6129' u='c' c='block'/>
+<use f='tcc/tccgen.c' l='7139' u='c' c='free_inline_functions'/>

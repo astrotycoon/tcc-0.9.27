@@ -1,0 +1,27 @@
+<dec f='tcc/tcc.h' l='481' type='struct SymAttr'/>
+<offset>48</offset>
+<doc f='tcc/tcc.h' l='481'>/* symbol attributes */</doc>
+<use f='tcc/tccasm.c' l='683' u='m' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='685' u='m' c='asm_parse_directive'/>
+<use f='tcc/tccgen.c' l='301' u='m' c='update_storage'/>
+<use f='tcc/tccgen.c' l='303' u='m' c='update_storage'/>
+<use f='tcc/tccgen.c' l='307' u='m' c='update_storage'/>
+<use f='tcc/tccgen.c' l='908' u='m' c='patch_storage'/>
+<use f='tcc/tccgen.c' l='910' u='m' c='patch_storage'/>
+<use f='tcc/tccgen.c' l='916' u='m' c='patch_storage'/>
+<use f='tcc/tccgen.c' l='919' u='m' c='patch_storage'/>
+<use f='tcc/tccgen.c' l='934' u='w' c='external_sym'/>
+<use f='tcc/tccgen.c' l='3512' u='m' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3512' u='m' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3520' u='m' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3569' u='m' c='struct_layout'/>
+<use f='tcc/tccgen.c' l='3958' u='w' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='3977' u='m' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='3978' u='m' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='3983' u='m' c='sym_to_attr'/>
+<use f='tcc/tccgen.c' l='4329' u='w' c='post_type'/>
+<use f='tcc/tccgen.c' l='4797' u='m' c='unary'/>
+<use f='tcc/tccgen.c' l='4798' u='m' c='unary'/>
+<use f='tcc/tccgen.c' l='5471' u='m' c='condition_3way'/>
+<use f='tcc/tccgen.c' l='6935' u='w' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7317' u='w' c='decl0'/>

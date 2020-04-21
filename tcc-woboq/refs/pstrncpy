@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1105' type='char * pstrncpy(char * out, const char * in, size_t num)'/>
+<def f='tcc/libtcc.c' l='170' ll='175' type='char * pstrncpy(char * out, const char * in, size_t num)'/>
+<use f='tcc/libtcc.c' l='1327' u='c' c='copy_linker_arg'/>
+<use f='tcc/tccpp.c' l='1824' u='c' c='preprocess'/>

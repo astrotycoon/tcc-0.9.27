@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='655' type='int'/>
+<offset>0</offset>
+<doc f='tcc/tcc.h' l='655'>/* if true, display some information during compilation */</doc>
+<use f='tcc/libtcc.c' l='617' u='r' c='tcc_open'/>
+<use f='tcc/libtcc.c' l='617' u='r' c='tcc_open'/>
+<use f='tcc/libtcc.c' l='1694' u='w' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1841' u='w' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1957' u='r' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1959' u='r' c='tcc_parse_args'/>
+<use f='tcc/tcctools.c' l='531' u='r' c='gen_makedeps'/>
+<use f='tcc/tcc.c' l='267' u='r' c='main'/>
+<use f='tcc/tcc.c' l='328' u='r' c='main'/>
+<use f='tcc/tccelf.c' l='1995' u='r' c='tcc_write_elf_file'/>

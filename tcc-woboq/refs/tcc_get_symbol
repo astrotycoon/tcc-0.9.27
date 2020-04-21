@@ -1,0 +1,4 @@
+<dec f='tcc/libtcc.h' l='94' type='void * tcc_get_symbol(TCCState * s, const char * name)'/>
+<doc f='tcc/libtcc.h' l='93'>/* return symbol value or NULL if not found */</doc>
+<def f='tcc/tccelf.c' l='475' ll='478' type='void * tcc_get_symbol(TCCState * s, const char * name)'/>
+<doc f='tcc/tccelf.c' l='474'>/* return elf symbol value */</doc>

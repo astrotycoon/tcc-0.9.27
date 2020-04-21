@@ -1,0 +1,9 @@
+<dec f='tcc/tcc.h' l='773' type='int *'/>
+<offset>9856</offset>
+<use f='tcc/tccgen.c' l='3494' u='r' c='struct_layout'/>
+<use f='tcc/tccpp.c' l='1655' u='r' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1659' u='w' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1665' u='r' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1667' u='w' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1677' u='r' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='3595' u='w' c='preprocess_start'/>

@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='1338' type='void save_reg(int r)'/>
+<use f='tcc/tccgen.c' l='958' u='c' c='save_regs'/>
+<def f='tcc/tccgen.c' l='962' ll='965' type='void save_reg(int r)'/>
+<use f='tcc/tccgen.c' l='1093' u='c' c='get_reg'/>
+<use f='tcc/tccgen.c' l='1108' u='c' c='move_reg'/>
+<doc f='tcc/tccgen.c' l='961'>/* save r to the memory stack, and mark it as being free */</doc>

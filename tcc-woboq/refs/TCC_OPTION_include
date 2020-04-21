@@ -1,0 +1,6 @@
+<dec f='tcc/libtcc.c' l='1476' type='34'/>
+<use f='tcc/libtcc.c' l='1545'/>
+<use f='tcc/libtcc.c' l='1545'/>
+<use f='tcc/libtcc.c' l='1545'/>
+<use f='tcc/libtcc.c' l='1545'/>
+<use f='tcc/libtcc.c' l='1823' c='tcc_parse_args'/>

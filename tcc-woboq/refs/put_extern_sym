@@ -1,0 +1,7 @@
+<dec f='tcc/tcc.h' l='1415' type='void put_extern_sym(Sym * sym, Section * section, Elf64_Addr value, unsigned long size)'/>
+<def f='tcc/tccgen.c' l='421' ll='426' type='void put_extern_sym(Sym * sym, Section * section, Elf64_Addr value, unsigned long size)'/>
+<use f='tcc/tccgen.c' l='439' u='c' c='greloca'/>
+<use f='tcc/tccgen.c' l='818' u='c' c='get_sym_ref'/>
+<use f='tcc/tccgen.c' l='6982' u='c' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7059' u='c' c='gen_function'/>
+<use f='tcc/tccpp.c' l='1398' u='c' c='label_pop'/>

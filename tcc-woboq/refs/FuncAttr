@@ -1,0 +1,8 @@
+<def f='tcc/tcc.h' l='460' ll='465'/>
+<use f='tcc/tcc.h' l='470'/>
+<use f='tcc/tcc.h' l='488'/>
+<size>4</size>
+<doc f='tcc/tcc.h' l='459'>/* function attributes or temporary attributes for parsing */</doc>
+<mbr r='FuncAttr::func_call' o='0' t='unsigned int'/>
+<mbr r='FuncAttr::func_type' o='3' t='unsigned int'/>
+<mbr r='FuncAttr::func_args' o='5' t='unsigned int'/>

@@ -1,0 +1,6 @@
+<def f='tcc/tcc.h' l='418' ll='421'/>
+<use f='tcc/tcc.h' l='418'/>
+<size>16</size>
+<doc f='tcc/tcc.h' l='417'>/* type definition */</doc>
+<mbr r='CType::t' o='0' t='int'/>
+<mbr r='CType::ref' o='64' t='struct Sym *'/>

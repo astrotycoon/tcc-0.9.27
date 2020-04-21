@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='1237' type='void begin_macro(TokenString * str, int alloc)'/>
+<use f='tcc/tccasm.c' l='631' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccgen.c' l='5043' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='6872' u='c' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7117' u='c' c='gen_inline_functions'/>
+<def f='tcc/tccpp.c' l='1106' ll='1114' type='void begin_macro(TokenString * str, int alloc)'/>
+<use f='tcc/tccpp.c' l='1463' u='c' c='expr_preprocess'/>
+<use f='tcc/tccpp.c' l='3492' u='c' c='macro_subst'/>
+<use f='tcc/tccpp.c' l='3555' u='c' c='next'/>
+<use f='tcc/tccpp.c' l='3577' u='c' c='unget_tok'/>

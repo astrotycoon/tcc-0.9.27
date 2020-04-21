@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='594' type='int'/>
+<offset>192</offset>
+<use f='tcc/tccpp.c' l='1111' u='w' c='begin_macro'/>
+<use f='tcc/tccpp.c' l='1121' u='r' c='end_macro'/>

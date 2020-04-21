@@ -1,0 +1,33 @@
+<dec f='tcc/tcc.h' l='1104' type='char * pstrcat(char * buf, int buf_size, const char * s)'/>
+<def f='tcc/libtcc.c' l='161' ll='168' type='char * pstrcat(char * buf, int buf_size, const char * s)'/>
+<doc f='tcc/libtcc.c' l='160'>/* strcat and truncate. */</doc>
+<use f='tcc/tccasm.c' l='744' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='746' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='762' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='764' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='832' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='834' u='c' c='asm_parse_directive'/>
+<use f='tcc/tccgen.c' l='167' u='c' c='tcc_debug_start'/>
+<use f='tcc/tccgen.c' l='2864' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2866' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2868' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2870' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2872' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2874' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2881' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2920' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2927' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2930' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2932' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2937' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2941' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2944' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2946' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2957' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2959' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2961' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2966' u='c' c='type_to_str'/>
+<use f='tcc/tccgen.c' l='2967' u='c' c='type_to_str'/>
+<use f='tcc/tccpp.c' l='1788' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1831' u='c' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1834' u='c' c='preprocess'/>

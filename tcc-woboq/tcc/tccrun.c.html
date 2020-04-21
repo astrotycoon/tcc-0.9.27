@@ -1,0 +1,862 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>tccrun.c source code [tcc/tccrun.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tcc/tccrun.c'; var root_path = '..'; var data_path = '../../data'; var ecma_script_api_version = 2;</script>
+<script src='../../data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>tcc</a>/<a href='tccrun.c.html'>tccrun.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> *  TCC - Tiny C Compiler - Support for -run switch</i></td></tr>
+<tr><th id="3">3</th><td><i> *</i></td></tr>
+<tr><th id="4">4</th><td><i> *  Copyright (c) 2001-2004 Fabrice Bellard</i></td></tr>
+<tr><th id="5">5</th><td><i> *</i></td></tr>
+<tr><th id="6">6</th><td><i> * This library is free software; you can redistribute it and/or</i></td></tr>
+<tr><th id="7">7</th><td><i> * modify it under the terms of the GNU Lesser General Public</i></td></tr>
+<tr><th id="8">8</th><td><i> * License as published by the Free Software Foundation; either</i></td></tr>
+<tr><th id="9">9</th><td><i> * version 2 of the License, or (at your option) any later version.</i></td></tr>
+<tr><th id="10">10</th><td><i> *</i></td></tr>
+<tr><th id="11">11</th><td><i> * This library is distributed in the hope that it will be useful,</i></td></tr>
+<tr><th id="12">12</th><td><i> * but WITHOUT ANY WARRANTY; without even the implied warranty of</i></td></tr>
+<tr><th id="13">13</th><td><i> * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</i></td></tr>
+<tr><th id="14">14</th><td><i> * Lesser General Public License for more details.</i></td></tr>
+<tr><th id="15">15</th><td><i> *</i></td></tr>
+<tr><th id="16">16</th><td><i> * You should have received a copy of the GNU Lesser General Public</i></td></tr>
+<tr><th id="17">17</th><td><i> * License along with this library; if not, write to the Free Software</i></td></tr>
+<tr><th id="18">18</th><td><i> * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA</i></td></tr>
+<tr><th id="19">19</th><td><i> */</i></td></tr>
+<tr><th id="20">20</th><td></td></tr>
+<tr><th id="21">21</th><td><u>#include <a href="tcc.h.html">"tcc.h"</a></u></td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td><i>/* only native compiler supports -run */</i></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="24">ifdef</span> <a class="macro" href="tcc.h.html#164" data-ref="_M/TCC_IS_NATIVE">TCC_IS_NATIVE</a></u></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#<span data-ppcond="26">ifndef</span> <span class="macro" data-ref="_M/_WIN32">_WIN32</span></u></td></tr>
+<tr><th id="27">27</th><td><u># include <a href="../include/x86_64-linux-gnu/sys/mman.h.html">&lt;sys/mman.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td><u>#<span data-ppcond="26">endif</span></u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><u>#<span data-ppcond="30">ifdef</span> <a class="macro" href="tcc.h.html#173" data-ref="_M/CONFIG_TCC_BACKTRACE">CONFIG_TCC_BACKTRACE</a></u></td></tr>
+<tr><th id="31">31</th><td><u># <span data-ppcond="31">ifndef</span> <span class="macro" data-ref="_M/_WIN32">_WIN32</span></u></td></tr>
+<tr><th id="32">32</th><td><u>#  include <a href="../include/signal.h.html">&lt;signal.h&gt;</a></u></td></tr>
+<tr><th id="33">33</th><td><u>#  <span data-ppcond="33">ifndef</span> <span class="macro" data-ref="_M/__OpenBSD__">__OpenBSD__</span></u></td></tr>
+<tr><th id="34">34</th><td><u>#   include <a href="../include/x86_64-linux-gnu/sys/ucontext.h.html">&lt;sys/ucontext.h&gt;</a></u></td></tr>
+<tr><th id="35">35</th><td><u>#  <span data-ppcond="33">endif</span></u></td></tr>
+<tr><th id="36">36</th><td><u># <span data-ppcond="31">else</span></u></td></tr>
+<tr><th id="37">37</th><td><u>#  define ucontext_t CONTEXT</u></td></tr>
+<tr><th id="38">38</th><td><u># <span data-ppcond="31">endif</span></u></td></tr>
+<tr><th id="39">39</th><td><a class="macro" href="tcc.h.html#1671" title="" data-ref="_M/ST_DATA">ST_DATA</a> <em>int</em> <dfn class="decl def" id="rt_num_callers" title='rt_num_callers' data-ref="rt_num_callers" data-ref-filename="rt_num_callers">rt_num_callers</dfn> = <var>6</var>;</td></tr>
+<tr><th id="40">40</th><td><a class="macro" href="tcc.h.html#1671" title="" data-ref="_M/ST_DATA">ST_DATA</a> <em>const</em> <em>char</em> **<dfn class="decl def" id="rt_bound_error_msg" title='rt_bound_error_msg' data-ref="rt_bound_error_msg" data-ref-filename="rt_bound_error_msg">rt_bound_error_msg</dfn>;</td></tr>
+<tr><th id="41">41</th><td><a class="macro" href="tcc.h.html#1671" title="" data-ref="_M/ST_DATA">ST_DATA</a> <em>void</em> *<dfn class="decl def" id="rt_prog_main" title='rt_prog_main' data-ref="rt_prog_main" data-ref-filename="rt_prog_main">rt_prog_main</dfn>;</td></tr>
+<tr><th id="42">42</th><td><em>static</em> <em>int</em> <a class="tu decl fn" href="#rt_get_caller_pc" title='rt_get_caller_pc' data-type='int rt_get_caller_pc(Elf64_Addr * paddr, ucontext_t * uc, int level)' data-ref="rt_get_caller_pc" data-ref-filename="rt_get_caller_pc">rt_get_caller_pc</a>(<a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> *<dfn class="local col7 decl" id="137paddr" title='paddr' data-type='Elf64_Addr *' data-ref="137paddr" data-ref-filename="137paddr">paddr</dfn>, <a class="typedef" href="../include/x86_64-linux-gnu/sys/ucontext.h.html#ucontext_t" title='ucontext_t' data-type='struct ucontext_t' data-ref="ucontext_t" data-ref-filename="ucontext_t">ucontext_t</a> *<dfn class="local col8 decl" id="138uc" title='uc' data-type='ucontext_t *' data-ref="138uc" data-ref-filename="138uc">uc</dfn>, <em>int</em> <dfn class="local col9 decl" id="139level" title='level' data-type='int' data-ref="139level" data-ref-filename="139level">level</dfn>);</td></tr>
+<tr><th id="43">43</th><td><em>static</em> <em>void</em> <a class="tu decl fn" href="#rt_error" title='rt_error' data-type='void rt_error(ucontext_t * uc, const char * fmt)' data-ref="rt_error" data-ref-filename="rt_error">rt_error</a>(<a class="typedef" href="../include/x86_64-linux-gnu/sys/ucontext.h.html#ucontext_t" title='ucontext_t' data-type='struct ucontext_t' data-ref="ucontext_t" data-ref-filename="ucontext_t">ucontext_t</a> *<dfn class="local col0 decl" id="140uc" title='uc' data-type='ucontext_t *' data-ref="140uc" data-ref-filename="140uc">uc</dfn>, <em>const</em> <em>char</em> *<dfn class="local col1 decl" id="141fmt" title='fmt' data-type='const char *' data-ref="141fmt" data-ref-filename="141fmt">fmt</dfn>, ...);</td></tr>
+<tr><th id="44">44</th><td><em>static</em> <em>void</em> <a class="tu decl fn" href="#set_exception_handler" title='set_exception_handler' data-type='void set_exception_handler()' data-ref="set_exception_handler" data-ref-filename="set_exception_handler">set_exception_handler</a>(<em>void</em>);</td></tr>
+<tr><th id="45">45</th><td><u>#<span data-ppcond="30">endif</span></u></td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td><em>static</em> <em>void</em> <a class="tu decl fn" href="#set_pages_executable" title='set_pages_executable' data-type='void set_pages_executable(void * ptr, unsigned long length)' data-ref="set_pages_executable" data-ref-filename="set_pages_executable">set_pages_executable</a>(<em>void</em> *<dfn class="local col2 decl" id="142ptr" title='ptr' data-type='void *' data-ref="142ptr" data-ref-filename="142ptr">ptr</dfn>, <em>unsigned</em> <em>long</em> <dfn class="local col3 decl" id="143length" title='length' data-type='unsigned long' data-ref="143length" data-ref-filename="143length">length</dfn>);</td></tr>
+<tr><th id="48">48</th><td><em>static</em> <em>int</em> <a class="tu decl fn" href="#tcc_relocate_ex" title='tcc_relocate_ex' data-type='int tcc_relocate_ex(TCCState * s1, void * ptr, Elf64_Addr ptr_diff)' data-ref="tcc_relocate_ex" data-ref-filename="tcc_relocate_ex">tcc_relocate_ex</a>(<a class="typedef" href="libtcc.h.html#TCCState" title='TCCState' data-type='struct TCCState' data-ref="TCCState" data-ref-filename="TCCState">TCCState</a> *<dfn class="local col4 decl" id="144s1" title='s1' data-type='TCCState *' data-ref="144s1" data-ref-filename="144s1">s1</dfn>, <em>void</em> *<dfn class="local col5 decl" id="145ptr" title='ptr' data-type='void *' data-ref="145ptr" data-ref-filename="145ptr">ptr</dfn>, <a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> <dfn class="local col6 decl" id="146ptr_diff" title='ptr_diff' data-type='Elf64_Addr' data-ref="146ptr_diff" data-ref-filename="146ptr_diff">ptr_diff</dfn>);</td></tr>
+<tr><th id="49">49</th><td></td></tr>
+<tr><th id="50">50</th><td><u>#<span data-ppcond="50">ifdef</span> <span class="macro" data-ref="_M/_WIN64">_WIN64</span></u></td></tr>
+<tr><th id="51">51</th><td><em>static</em> <em>void</em> *win64_add_function_table(TCCState *s1);</td></tr>
+<tr><th id="52">52</th><td><em>static</em> <em>void</em> win64_del_function_table(<em>void</em> *);</td></tr>
+<tr><th id="53">53</th><td><u>#<span data-ppcond="50">endif</span></u></td></tr>
+<tr><th id="54">54</th><td></td></tr>
+<tr><th id="55">55</th><td><i>/* ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="56">56</th><td><i>/* Do all relocations (needed before using tcc_get_symbol())</i></td></tr>
+<tr><th id="57">57</th><td><i>   Returns -1 on error. */</i></td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td><a class="macro" href="libtcc.h.html#5" title="" data-ref="_M/LIBTCCAPI">LIBTCCAPI</a> <em>int</em> <dfn class="decl def fn" id="tcc_relocate" title='tcc_relocate' data-ref="tcc_relocate" data-ref-filename="tcc_relocate">tcc_relocate</dfn>(<a class="typedef" href="libtcc.h.html#TCCState" title='TCCState' data-type='struct TCCState' data-ref="TCCState" data-ref-filename="TCCState">TCCState</a> *<dfn class="local col7 decl" id="147s1" title='s1' data-type='TCCState *' data-ref="147s1" data-ref-filename="147s1">s1</dfn>, <em>void</em> *<dfn class="local col8 decl" id="148ptr" title='ptr' data-type='void *' data-ref="148ptr" data-ref-filename="148ptr">ptr</dfn>)</td></tr>
+<tr><th id="60">60</th><td>{</td></tr>
+<tr><th id="61">61</th><td>    <em>int</em> <dfn class="local col9 decl" id="149size" title='size' data-type='int' data-ref="149size" data-ref-filename="149size">size</dfn>;</td></tr>
+<tr><th id="62">62</th><td>    <a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> <dfn class="local col0 decl" id="150ptr_diff" title='ptr_diff' data-type='Elf64_Addr' data-ref="150ptr_diff" data-ref-filename="150ptr_diff">ptr_diff</dfn> = <var>0</var>;</td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td>    <b>if</b> (<a class="macro" href="libtcc.h.html#91" title="(void*)1" data-ref="_M/TCC_RELOCATE_AUTO">TCC_RELOCATE_AUTO</a> != <a class="local col8 ref" href="#148ptr" title='ptr' data-ref="148ptr" data-ref-filename="148ptr">ptr</a>)</td></tr>
+<tr><th id="65">65</th><td>        <b>return</b> <a class="tu ref fn" href="#tcc_relocate_ex" title='tcc_relocate_ex' data-use='c' data-ref="tcc_relocate_ex" data-ref-filename="tcc_relocate_ex">tcc_relocate_ex</a>(<a class="local col7 ref" href="#147s1" title='s1' data-ref="147s1" data-ref-filename="147s1">s1</a>, <a class="local col8 ref" href="#148ptr" title='ptr' data-ref="148ptr" data-ref-filename="148ptr">ptr</a>, <var>0</var>);</td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td>    <a class="local col9 ref" href="#149size" title='size' data-ref="149size" data-ref-filename="149size">size</a> = <a class="tu ref fn" href="#tcc_relocate_ex" title='tcc_relocate_ex' data-use='c' data-ref="tcc_relocate_ex" data-ref-filename="tcc_relocate_ex">tcc_relocate_ex</a>(<a class="local col7 ref" href="#147s1" title='s1' data-ref="147s1" data-ref-filename="147s1">s1</a>, <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>, <var>0</var>);</td></tr>
+<tr><th id="68">68</th><td>    <b>if</b> (<a class="local col9 ref" href="#149size" title='size' data-ref="149size" data-ref-filename="149size">size</a> &lt; <var>0</var>)</td></tr>
+<tr><th id="69">69</th><td>        <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td><u>#<span data-ppcond="71">ifdef</span> <span class="macro" data-ref="_M/HAVE_SELINUX">HAVE_SELINUX</span></u></td></tr>
+<tr><th id="72">72</th><td>{</td></tr>
+<tr><th id="73">73</th><td>    <i>/* Using mmap instead of malloc */</i></td></tr>
+<tr><th id="74">74</th><td>    <em>void</em> *prx;</td></tr>
+<tr><th id="75">75</th><td>    <em>char</em> tmpfname[] = <q>"/tmp/.tccrunXXXXXX"</q>;</td></tr>
+<tr><th id="76">76</th><td>    <em>int</em> fd = mkstemp(tmpfname);</td></tr>
+<tr><th id="77">77</th><td>    unlink(tmpfname);</td></tr>
+<tr><th id="78">78</th><td>    ftruncate(fd, size);</td></tr>
+<tr><th id="79">79</th><td></td></tr>
+<tr><th id="80">80</th><td>    ptr = mmap (NULL, size, PROT_READ|PROT_WRITE, MAP_SHARED, fd, <var>0</var>);</td></tr>
+<tr><th id="81">81</th><td>    prx = mmap (NULL, size, PROT_READ|PROT_EXEC, MAP_SHARED, fd, <var>0</var>);</td></tr>
+<tr><th id="82">82</th><td>    <b>if</b> (ptr == MAP_FAILED || prx == MAP_FAILED)</td></tr>
+<tr><th id="83">83</th><td>	tcc_error(<q>"tccrun: could not map memory"</q>);</td></tr>
+<tr><th id="84">84</th><td>    dynarray_add(&amp;s1-&gt;runtime_mem, &amp;s1-&gt;nb_runtime_mem, (<em>void</em>*)(addr_t)size);</td></tr>
+<tr><th id="85">85</th><td>    dynarray_add(&amp;s1-&gt;runtime_mem, &amp;s1-&gt;nb_runtime_mem, prx);</td></tr>
+<tr><th id="86">86</th><td>    ptr_diff = (<em>char</em>*)prx - (<em>char</em>*)ptr;</td></tr>
+<tr><th id="87">87</th><td>}</td></tr>
+<tr><th id="88">88</th><td><u>#<span data-ppcond="71">else</span></u></td></tr>
+<tr><th id="89">89</th><td>    <a class="local col8 ref" href="#148ptr" title='ptr' data-ref="148ptr" data-ref-filename="148ptr">ptr</a> = <a class="ref fn" href="tcc.h.html#tcc_malloc" title='tcc_malloc' data-ref="tcc_malloc" data-ref-filename="tcc_malloc">tcc_malloc</a>(<a class="local col9 ref" href="#149size" title='size' data-ref="149size" data-ref-filename="149size">size</a>);</td></tr>
+<tr><th id="90">90</th><td><u>#<span data-ppcond="71">endif</span></u></td></tr>
+<tr><th id="91">91</th><td>    <a class="tu ref fn" href="#tcc_relocate_ex" title='tcc_relocate_ex' data-use='c' data-ref="tcc_relocate_ex" data-ref-filename="tcc_relocate_ex">tcc_relocate_ex</a>(<a class="local col7 ref" href="#147s1" title='s1' data-ref="147s1" data-ref-filename="147s1">s1</a>, <a class="local col8 ref" href="#148ptr" title='ptr' data-ref="148ptr" data-ref-filename="148ptr">ptr</a>, <a class="local col0 ref" href="#150ptr_diff" title='ptr_diff' data-ref="150ptr_diff" data-ref-filename="150ptr_diff">ptr_diff</a>); <i>/* no more errors expected */</i></td></tr>
+<tr><th id="92">92</th><td>    <a class="ref fn" href="tcc.h.html#dynarray_add" title='dynarray_add' data-ref="dynarray_add" data-ref-filename="dynarray_add">dynarray_add</a>(&amp;<a class="local col7 ref" href="#147s1" title='s1' data-ref="147s1" data-ref-filename="147s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::runtime_mem" title='TCCState::runtime_mem' data-ref="TCCState::runtime_mem" data-ref-filename="TCCState..runtime_mem">runtime_mem</a>, &amp;<a class="local col7 ref" href="#147s1" title='s1' data-ref="147s1" data-ref-filename="147s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_runtime_mem" title='TCCState::nb_runtime_mem' data-ref="TCCState::nb_runtime_mem" data-ref-filename="TCCState..nb_runtime_mem">nb_runtime_mem</a>, <a class="local col8 ref" href="#148ptr" title='ptr' data-ref="148ptr" data-ref-filename="148ptr">ptr</a>);</td></tr>
+<tr><th id="93">93</th><td>    <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="94">94</th><td>}</td></tr>
+<tr><th id="95">95</th><td></td></tr>
+<tr><th id="96">96</th><td><a class="macro" href="tcc.h.html#310" title="" data-ref="_M/ST_FUNC">ST_FUNC</a> <em>void</em> <dfn class="decl def fn" id="tcc_run_free" title='tcc_run_free' data-ref="tcc_run_free" data-ref-filename="tcc_run_free">tcc_run_free</dfn>(<a class="typedef" href="libtcc.h.html#TCCState" title='TCCState' data-type='struct TCCState' data-ref="TCCState" data-ref-filename="TCCState">TCCState</a> *<dfn class="local col1 decl" id="151s1" title='s1' data-type='TCCState *' data-ref="151s1" data-ref-filename="151s1">s1</dfn>)</td></tr>
+<tr><th id="97">97</th><td>{</td></tr>
+<tr><th id="98">98</th><td>    <em>int</em> <dfn class="local col2 decl" id="152i" title='i' data-type='int' data-ref="152i" data-ref-filename="152i">i</dfn>;</td></tr>
+<tr><th id="99">99</th><td></td></tr>
+<tr><th id="100">100</th><td>    <b>for</b> (<a class="local col2 ref" href="#152i" title='i' data-ref="152i" data-ref-filename="152i">i</a> = <var>0</var>; <a class="local col2 ref" href="#152i" title='i' data-ref="152i" data-ref-filename="152i">i</a> &lt; <a class="local col1 ref" href="#151s1" title='s1' data-ref="151s1" data-ref-filename="151s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_runtime_mem" title='TCCState::nb_runtime_mem' data-ref="TCCState::nb_runtime_mem" data-ref-filename="TCCState..nb_runtime_mem">nb_runtime_mem</a>; ++<a class="local col2 ref" href="#152i" title='i' data-ref="152i" data-ref-filename="152i">i</a>) {</td></tr>
+<tr><th id="101">101</th><td><u>#<span data-ppcond="101">ifdef</span> <span class="macro" data-ref="_M/HAVE_SELINUX">HAVE_SELINUX</span></u></td></tr>
+<tr><th id="102">102</th><td>        <em>unsigned</em> size = (<em>unsigned</em>)(addr_t)s1-&gt;runtime_mem[i++];</td></tr>
+<tr><th id="103">103</th><td>        munmap(s1-&gt;runtime_mem[i++], size);</td></tr>
+<tr><th id="104">104</th><td>        munmap(s1-&gt;runtime_mem[i], size);</td></tr>
+<tr><th id="105">105</th><td><u>#<span data-ppcond="101">else</span></u></td></tr>
+<tr><th id="106">106</th><td><u>#<span data-ppcond="106">ifdef</span> <span class="macro" data-ref="_M/_WIN64">_WIN64</span></u></td></tr>
+<tr><th id="107">107</th><td>        win64_del_function_table(*(<em>void</em>**)s1-&gt;runtime_mem[i]);</td></tr>
+<tr><th id="108">108</th><td><u>#<span data-ppcond="106">endif</span></u></td></tr>
+<tr><th id="109">109</th><td>        <a class="ref fn" href="tcc.h.html#tcc_free" title='tcc_free' data-ref="tcc_free" data-ref-filename="tcc_free">tcc_free</a>(<a class="local col1 ref" href="#151s1" title='s1' data-ref="151s1" data-ref-filename="151s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::runtime_mem" title='TCCState::runtime_mem' data-ref="TCCState::runtime_mem" data-ref-filename="TCCState..runtime_mem">runtime_mem</a>[<a class="local col2 ref" href="#152i" title='i' data-ref="152i" data-ref-filename="152i">i</a>]);</td></tr>
+<tr><th id="110">110</th><td><u>#<span data-ppcond="101">endif</span></u></td></tr>
+<tr><th id="111">111</th><td>    }</td></tr>
+<tr><th id="112">112</th><td>    <a class="ref fn" href="tcc.h.html#tcc_free" title='tcc_free' data-ref="tcc_free" data-ref-filename="tcc_free">tcc_free</a>(<a class="local col1 ref" href="#151s1" title='s1' data-ref="151s1" data-ref-filename="151s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::runtime_mem" title='TCCState::runtime_mem' data-ref="TCCState::runtime_mem" data-ref-filename="TCCState..runtime_mem">runtime_mem</a>);</td></tr>
+<tr><th id="113">113</th><td>}</td></tr>
+<tr><th id="114">114</th><td></td></tr>
+<tr><th id="115">115</th><td><i>/* launch the compiled program with the given arguments */</i></td></tr>
+<tr><th id="116">116</th><td><a class="macro" href="libtcc.h.html#5" title="" data-ref="_M/LIBTCCAPI">LIBTCCAPI</a> <em>int</em> <dfn class="decl def fn" id="tcc_run" title='tcc_run' data-ref="tcc_run" data-ref-filename="tcc_run">tcc_run</dfn>(<a class="typedef" href="libtcc.h.html#TCCState" title='TCCState' data-type='struct TCCState' data-ref="TCCState" data-ref-filename="TCCState">TCCState</a> *<dfn class="local col3 decl" id="153s1" title='s1' data-type='TCCState *' data-ref="153s1" data-ref-filename="153s1">s1</dfn>, <em>int</em> <dfn class="local col4 decl" id="154argc" title='argc' data-type='int' data-ref="154argc" data-ref-filename="154argc">argc</dfn>, <em>char</em> **<dfn class="local col5 decl" id="155argv" title='argv' data-type='char **' data-ref="155argv" data-ref-filename="155argv">argv</dfn>)</td></tr>
+<tr><th id="117">117</th><td>{</td></tr>
+<tr><th id="118">118</th><td>    <em>int</em> (*<dfn class="local col6 decl" id="156prog_main" title='prog_main' data-type='int (*)(int, char **)' data-ref="156prog_main" data-ref-filename="156prog_main">prog_main</dfn>)(<em>int</em>, <em>char</em> **);</td></tr>
+<tr><th id="119">119</th><td></td></tr>
+<tr><th id="120">120</th><td>    <a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::runtime_main" title='TCCState::runtime_main' data-ref="TCCState::runtime_main" data-ref-filename="TCCState..runtime_main">runtime_main</a> = <q>"main"</q>;</td></tr>
+<tr><th id="121">121</th><td>    <b>if</b> ((<a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::dflag" title='TCCState::dflag' data-ref="TCCState::dflag" data-ref-filename="TCCState..dflag">dflag</a> &amp; <var>16</var>) &amp;&amp; !<a class="ref fn" href="tcc.h.html#find_elf_sym" title='find_elf_sym' data-ref="find_elf_sym" data-ref-filename="find_elf_sym">find_elf_sym</a>(<a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::symtab" title='TCCState::symtab' data-ref="TCCState::symtab" data-ref-filename="TCCState..symtab">symtab</a>, <a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::runtime_main" title='TCCState::runtime_main' data-ref="TCCState::runtime_main" data-ref-filename="TCCState..runtime_main">runtime_main</a>))</td></tr>
+<tr><th id="122">122</th><td>        <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="123">123</th><td>    <b>if</b> (<a class="ref fn" href="#tcc_relocate" title='tcc_relocate' data-ref="tcc_relocate" data-ref-filename="tcc_relocate">tcc_relocate</a>(<a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>, <a class="macro" href="libtcc.h.html#91" title="(void*)1" data-ref="_M/TCC_RELOCATE_AUTO">TCC_RELOCATE_AUTO</a>) &lt; <var>0</var>)</td></tr>
+<tr><th id="124">124</th><td>        <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="125">125</th><td>    <a class="local col6 ref" href="#156prog_main" title='prog_main' data-ref="156prog_main" data-ref-filename="156prog_main">prog_main</a> = <a class="ref fn" href="tcc.h.html#tcc_get_symbol_err" title='tcc_get_symbol_err' data-ref="tcc_get_symbol_err" data-ref-filename="tcc_get_symbol_err">tcc_get_symbol_err</a>(<a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>, <a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::runtime_main" title='TCCState::runtime_main' data-ref="TCCState::runtime_main" data-ref-filename="TCCState..runtime_main">runtime_main</a>);</td></tr>
+<tr><th id="126">126</th><td></td></tr>
+<tr><th id="127">127</th><td><u>#<span data-ppcond="127">ifdef</span> <a class="macro" href="tcc.h.html#173" data-ref="_M/CONFIG_TCC_BACKTRACE">CONFIG_TCC_BACKTRACE</a></u></td></tr>
+<tr><th id="128">128</th><td>    <b>if</b> (<a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::do_debug" title='TCCState::do_debug' data-ref="TCCState::do_debug" data-ref-filename="TCCState..do_debug">do_debug</a>) {</td></tr>
+<tr><th id="129">129</th><td>        <a class="tu ref fn" href="#set_exception_handler" title='set_exception_handler' data-use='c' data-ref="set_exception_handler" data-ref-filename="set_exception_handler">set_exception_handler</a>();</td></tr>
+<tr><th id="130">130</th><td>        <a class="ref" href="tcc.h.html#rt_prog_main" title='rt_prog_main' data-ref="rt_prog_main" data-ref-filename="rt_prog_main">rt_prog_main</a> = <a class="local col6 ref" href="#156prog_main" title='prog_main' data-ref="156prog_main" data-ref-filename="156prog_main">prog_main</a>;</td></tr>
+<tr><th id="131">131</th><td>    }</td></tr>
+<tr><th id="132">132</th><td><u>#<span data-ppcond="127">endif</span></u></td></tr>
+<tr><th id="133">133</th><td></td></tr>
+<tr><th id="134">134</th><td>    <a class="macro" href="../include/errno.h.html#38" title="(*__errno_location ())" data-ref="_M/errno">errno</a> = <var>0</var>; <i>/* clean errno value */</i></td></tr>
+<tr><th id="135">135</th><td></td></tr>
+<tr><th id="136">136</th><td><u>#<span data-ppcond="136">ifdef</span> <a class="macro" href="tcc.h.html#176" data-ref="_M/CONFIG_TCC_BCHECK">CONFIG_TCC_BCHECK</a></u></td></tr>
+<tr><th id="137">137</th><td>    <b>if</b> (<a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::do_bounds_check" title='TCCState::do_bounds_check' data-ref="TCCState::do_bounds_check" data-ref-filename="TCCState..do_bounds_check">do_bounds_check</a>) {</td></tr>
+<tr><th id="138">138</th><td>        <em>void</em> (*<dfn class="local col7 decl" id="157bound_init" title='bound_init' data-type='void (*)(void)' data-ref="157bound_init" data-ref-filename="157bound_init">bound_init</dfn>)(<em>void</em>);</td></tr>
+<tr><th id="139">139</th><td>        <em>void</em> (*<dfn class="local col8 decl" id="158bound_exit" title='bound_exit' data-type='void (*)(void)' data-ref="158bound_exit" data-ref-filename="158bound_exit">bound_exit</dfn>)(<em>void</em>);</td></tr>
+<tr><th id="140">140</th><td>        <em>void</em> (*<dfn class="local col9 decl" id="159bound_new_region" title='bound_new_region' data-type='void (*)(void *, Elf64_Addr)' data-ref="159bound_new_region" data-ref-filename="159bound_new_region">bound_new_region</dfn>)(<em>void</em> *<dfn class="local col0 decl" id="160p" title='p' data-type='void *' data-ref="160p" data-ref-filename="160p">p</dfn>, <a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> <dfn class="local col1 decl" id="161size" title='size' data-type='Elf64_Addr' data-ref="161size" data-ref-filename="161size">size</dfn>);</td></tr>
+<tr><th id="141">141</th><td>        <em>int</em>  (*<dfn class="local col2 decl" id="162bound_delete_region" title='bound_delete_region' data-type='int (*)(void *)' data-ref="162bound_delete_region" data-ref-filename="162bound_delete_region">bound_delete_region</dfn>)(<em>void</em> *<dfn class="local col3 decl" id="163p" title='p' data-type='void *' data-ref="163p" data-ref-filename="163p">p</dfn>);</td></tr>
+<tr><th id="142">142</th><td>        <em>int</em> <dfn class="local col4 decl" id="164i" title='i' data-type='int' data-ref="164i" data-ref-filename="164i">i</dfn>, <dfn class="local col5 decl" id="165ret" title='ret' data-type='int' data-ref="165ret" data-ref-filename="165ret">ret</dfn>;</td></tr>
+<tr><th id="143">143</th><td></td></tr>
+<tr><th id="144">144</th><td>        <i>/* set error function */</i></td></tr>
+<tr><th id="145">145</th><td>        <a class="ref" href="tcc.h.html#rt_bound_error_msg" title='rt_bound_error_msg' data-ref="rt_bound_error_msg" data-ref-filename="rt_bound_error_msg">rt_bound_error_msg</a> = <a class="ref fn" href="tcc.h.html#tcc_get_symbol_err" title='tcc_get_symbol_err' data-ref="tcc_get_symbol_err" data-ref-filename="tcc_get_symbol_err">tcc_get_symbol_err</a>(<a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>, <q>"__bound_error_msg"</q>);</td></tr>
+<tr><th id="146">146</th><td>        <i>/* XXX: use .init section so that it also work in binary ? */</i></td></tr>
+<tr><th id="147">147</th><td>        <a class="local col7 ref" href="#157bound_init" title='bound_init' data-ref="157bound_init" data-ref-filename="157bound_init">bound_init</a> = <a class="ref fn" href="tcc.h.html#tcc_get_symbol_err" title='tcc_get_symbol_err' data-ref="tcc_get_symbol_err" data-ref-filename="tcc_get_symbol_err">tcc_get_symbol_err</a>(<a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>, <q>"__bound_init"</q>);</td></tr>
+<tr><th id="148">148</th><td>        <a class="local col8 ref" href="#158bound_exit" title='bound_exit' data-ref="158bound_exit" data-ref-filename="158bound_exit">bound_exit</a> = <a class="ref fn" href="tcc.h.html#tcc_get_symbol_err" title='tcc_get_symbol_err' data-ref="tcc_get_symbol_err" data-ref-filename="tcc_get_symbol_err">tcc_get_symbol_err</a>(<a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>, <q>"__bound_exit"</q>);</td></tr>
+<tr><th id="149">149</th><td>        <a class="local col9 ref" href="#159bound_new_region" title='bound_new_region' data-ref="159bound_new_region" data-ref-filename="159bound_new_region">bound_new_region</a> = <a class="ref fn" href="tcc.h.html#tcc_get_symbol_err" title='tcc_get_symbol_err' data-ref="tcc_get_symbol_err" data-ref-filename="tcc_get_symbol_err">tcc_get_symbol_err</a>(<a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>, <q>"__bound_new_region"</q>);</td></tr>
+<tr><th id="150">150</th><td>        <a class="local col2 ref" href="#162bound_delete_region" title='bound_delete_region' data-ref="162bound_delete_region" data-ref-filename="162bound_delete_region">bound_delete_region</a> = <a class="ref fn" href="tcc.h.html#tcc_get_symbol_err" title='tcc_get_symbol_err' data-ref="tcc_get_symbol_err" data-ref-filename="tcc_get_symbol_err">tcc_get_symbol_err</a>(<a class="local col3 ref" href="#153s1" title='s1' data-ref="153s1" data-ref-filename="153s1">s1</a>, <q>"__bound_delete_region"</q>);</td></tr>
+<tr><th id="151">151</th><td></td></tr>
+<tr><th id="152">152</th><td>        <a class="local col7 ref" href="#157bound_init" title='bound_init' data-ref="157bound_init" data-ref-filename="157bound_init">bound_init</a>();</td></tr>
+<tr><th id="153">153</th><td>        <i>/* mark argv area as valid */</i></td></tr>
+<tr><th id="154">154</th><td>        <a class="local col9 ref" href="#159bound_new_region" title='bound_new_region' data-ref="159bound_new_region" data-ref-filename="159bound_new_region">bound_new_region</a>(<a class="local col5 ref" href="#155argv" title='argv' data-ref="155argv" data-ref-filename="155argv">argv</a>, <a class="local col4 ref" href="#154argc" title='argc' data-ref="154argc" data-ref-filename="154argc">argc</a>*<b>sizeof</b>(<a class="local col5 ref" href="#155argv" title='argv' data-ref="155argv" data-ref-filename="155argv">argv</a>[<var>0</var>]));</td></tr>
+<tr><th id="155">155</th><td>        <b>for</b> (<a class="local col4 ref" href="#164i" title='i' data-ref="164i" data-ref-filename="164i">i</a>=<var>0</var>; <a class="local col4 ref" href="#164i" title='i' data-ref="164i" data-ref-filename="164i">i</a>&lt;<a class="local col4 ref" href="#154argc" title='argc' data-ref="154argc" data-ref-filename="154argc">argc</a>; ++<a class="local col4 ref" href="#164i" title='i' data-ref="164i" data-ref-filename="164i">i</a>)</td></tr>
+<tr><th id="156">156</th><td>            <a class="local col9 ref" href="#159bound_new_region" title='bound_new_region' data-ref="159bound_new_region" data-ref-filename="159bound_new_region">bound_new_region</a>(<a class="local col5 ref" href="#155argv" title='argv' data-ref="155argv" data-ref-filename="155argv">argv</a>[<a class="local col4 ref" href="#164i" title='i' data-ref="164i" data-ref-filename="164i">i</a>], <a class="ref fn" href="../include/string.h.html#strlen" title='strlen' data-ref="strlen" data-ref-filename="strlen">strlen</a>(<a class="local col5 ref" href="#155argv" title='argv' data-ref="155argv" data-ref-filename="155argv">argv</a>[<a class="local col4 ref" href="#164i" title='i' data-ref="164i" data-ref-filename="164i">i</a>]) + <var>1</var>);</td></tr>
+<tr><th id="157">157</th><td></td></tr>
+<tr><th id="158">158</th><td>        <a class="local col5 ref" href="#165ret" title='ret' data-ref="165ret" data-ref-filename="165ret">ret</a> = (*<a class="local col6 ref" href="#156prog_main" title='prog_main' data-ref="156prog_main" data-ref-filename="156prog_main">prog_main</a>)(<a class="local col4 ref" href="#154argc" title='argc' data-ref="154argc" data-ref-filename="154argc">argc</a>, <a class="local col5 ref" href="#155argv" title='argv' data-ref="155argv" data-ref-filename="155argv">argv</a>);</td></tr>
+<tr><th id="159">159</th><td></td></tr>
+<tr><th id="160">160</th><td>        <i>/* unmark argv area */</i></td></tr>
+<tr><th id="161">161</th><td>        <b>for</b> (<a class="local col4 ref" href="#164i" title='i' data-ref="164i" data-ref-filename="164i">i</a>=<var>0</var>; <a class="local col4 ref" href="#164i" title='i' data-ref="164i" data-ref-filename="164i">i</a>&lt;<a class="local col4 ref" href="#154argc" title='argc' data-ref="154argc" data-ref-filename="154argc">argc</a>; ++<a class="local col4 ref" href="#164i" title='i' data-ref="164i" data-ref-filename="164i">i</a>)</td></tr>
+<tr><th id="162">162</th><td>            <a class="local col2 ref" href="#162bound_delete_region" title='bound_delete_region' data-ref="162bound_delete_region" data-ref-filename="162bound_delete_region">bound_delete_region</a>(<a class="local col5 ref" href="#155argv" title='argv' data-ref="155argv" data-ref-filename="155argv">argv</a>[<a class="local col4 ref" href="#164i" title='i' data-ref="164i" data-ref-filename="164i">i</a>]);</td></tr>
+<tr><th id="163">163</th><td>        <a class="local col2 ref" href="#162bound_delete_region" title='bound_delete_region' data-ref="162bound_delete_region" data-ref-filename="162bound_delete_region">bound_delete_region</a>(<a class="local col5 ref" href="#155argv" title='argv' data-ref="155argv" data-ref-filename="155argv">argv</a>);</td></tr>
+<tr><th id="164">164</th><td>        <a class="local col8 ref" href="#158bound_exit" title='bound_exit' data-ref="158bound_exit" data-ref-filename="158bound_exit">bound_exit</a>();</td></tr>
+<tr><th id="165">165</th><td>        <b>return</b> <a class="local col5 ref" href="#165ret" title='ret' data-ref="165ret" data-ref-filename="165ret">ret</a>;</td></tr>
+<tr><th id="166">166</th><td>    }</td></tr>
+<tr><th id="167">167</th><td><u>#<span data-ppcond="136">endif</span></u></td></tr>
+<tr><th id="168">168</th><td>    <b>return</b> (*<a class="local col6 ref" href="#156prog_main" title='prog_main' data-ref="156prog_main" data-ref-filename="156prog_main">prog_main</a>)(<a class="local col4 ref" href="#154argc" title='argc' data-ref="154argc" data-ref-filename="154argc">argc</a>, <a class="local col5 ref" href="#155argv" title='argv' data-ref="155argv" data-ref-filename="155argv">argv</a>);</td></tr>
+<tr><th id="169">169</th><td>}</td></tr>
+<tr><th id="170">170</th><td></td></tr>
+<tr><th id="171">171</th><td><u>#<span data-ppcond="171">if</span> defined <span class="macro" data-ref="_M/TCC_TARGET_I386">TCC_TARGET_I386</span> || defined <span class="macro" data-ref="_M/TCC_TARGET_X86_64">TCC_TARGET_X86_64</span></u></td></tr>
+<tr><th id="172">172</th><td> <u>#define <dfn class="macro" id="_M/RUN_SECTION_ALIGNMENT" data-ref="_M/RUN_SECTION_ALIGNMENT">RUN_SECTION_ALIGNMENT</dfn> 63</u></td></tr>
+<tr><th id="173">173</th><td><u>#<span data-ppcond="171">else</span></u></td></tr>
+<tr><th id="174">174</th><td> <u>#define RUN_SECTION_ALIGNMENT 15</u></td></tr>
+<tr><th id="175">175</th><td><u>#<span data-ppcond="171">endif</span></u></td></tr>
+<tr><th id="176">176</th><td></td></tr>
+<tr><th id="177">177</th><td><i  data-doc="tcc_relocate_ex">/* relocate code. Return -1 on error, required size if ptr is NULL,</i></td></tr>
+<tr><th id="178">178</th><td><i  data-doc="tcc_relocate_ex">   otherwise copy code into buffer passed by the caller */</i></td></tr>
+<tr><th id="179">179</th><td><em>static</em> <em>int</em> <dfn class="tu decl def fn" id="tcc_relocate_ex" title='tcc_relocate_ex' data-type='int tcc_relocate_ex(TCCState * s1, void * ptr, Elf64_Addr ptr_diff)' data-ref="tcc_relocate_ex" data-ref-filename="tcc_relocate_ex">tcc_relocate_ex</dfn>(<a class="typedef" href="libtcc.h.html#TCCState" title='TCCState' data-type='struct TCCState' data-ref="TCCState" data-ref-filename="TCCState">TCCState</a> *<dfn class="local col6 decl" id="166s1" title='s1' data-type='TCCState *' data-ref="166s1" data-ref-filename="166s1">s1</dfn>, <em>void</em> *<dfn class="local col7 decl" id="167ptr" title='ptr' data-type='void *' data-ref="167ptr" data-ref-filename="167ptr">ptr</dfn>, <a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> <dfn class="local col8 decl" id="168ptr_diff" title='ptr_diff' data-type='Elf64_Addr' data-ref="168ptr_diff" data-ref-filename="168ptr_diff">ptr_diff</dfn>)</td></tr>
+<tr><th id="180">180</th><td>{</td></tr>
+<tr><th id="181">181</th><td>    <a class="typedef" href="tcc.h.html#Section" title='Section' data-type='struct Section' data-ref="Section" data-ref-filename="Section">Section</a> *<dfn class="local col9 decl" id="169s" title='s' data-type='Section *' data-ref="169s" data-ref-filename="169s">s</dfn>;</td></tr>
+<tr><th id="182">182</th><td>    <em>unsigned</em> <dfn class="local col0 decl" id="170offset" title='offset' data-type='unsigned int' data-ref="170offset" data-ref-filename="170offset">offset</dfn>, <dfn class="local col1 decl" id="171length" title='length' data-type='unsigned int' data-ref="171length" data-ref-filename="171length">length</dfn>, <dfn class="local col2 decl" id="172fill" title='fill' data-type='unsigned int' data-ref="172fill" data-ref-filename="172fill">fill</dfn>, <dfn class="local col3 decl" id="173i" title='i' data-type='unsigned int' data-ref="173i" data-ref-filename="173i">i</dfn>, <dfn class="local col4 decl" id="174k" title='k' data-type='unsigned int' data-ref="174k" data-ref-filename="174k">k</dfn>;</td></tr>
+<tr><th id="183">183</th><td>    <a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> <dfn class="local col5 decl" id="175mem" title='mem' data-type='Elf64_Addr' data-ref="175mem" data-ref-filename="175mem">mem</dfn>;</td></tr>
+<tr><th id="184">184</th><td></td></tr>
+<tr><th id="185">185</th><td>    <b>if</b> (<span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span> == <a class="local col7 ref" href="#167ptr" title='ptr' data-ref="167ptr" data-ref-filename="167ptr">ptr</a>) {</td></tr>
+<tr><th id="186">186</th><td>        <a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_errors" title='TCCState::nb_errors' data-ref="TCCState::nb_errors" data-ref-filename="TCCState..nb_errors">nb_errors</a> = <var>0</var>;</td></tr>
+<tr><th id="187">187</th><td><u>#<span data-ppcond="187">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span></u></td></tr>
+<tr><th id="188">188</th><td>        pe_output_file(s1, NULL);</td></tr>
+<tr><th id="189">189</th><td><u>#<span data-ppcond="187">else</span></u></td></tr>
+<tr><th id="190">190</th><td>        <a class="ref fn" href="tcc.h.html#tcc_add_runtime" title='tcc_add_runtime' data-ref="tcc_add_runtime" data-ref-filename="tcc_add_runtime">tcc_add_runtime</a>(<a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>);</td></tr>
+<tr><th id="191">191</th><td>	<a class="ref fn" href="tcc.h.html#resolve_common_syms" title='resolve_common_syms' data-ref="resolve_common_syms" data-ref-filename="resolve_common_syms">resolve_common_syms</a>(<a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>);</td></tr>
+<tr><th id="192">192</th><td>        <a class="ref fn" href="tcc.h.html#build_got_entries" title='build_got_entries' data-ref="build_got_entries" data-ref-filename="build_got_entries">build_got_entries</a>(<a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>);</td></tr>
+<tr><th id="193">193</th><td><u>#<span data-ppcond="187">endif</span></u></td></tr>
+<tr><th id="194">194</th><td>        <b>if</b> (<a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_errors" title='TCCState::nb_errors' data-ref="TCCState::nb_errors" data-ref-filename="TCCState..nb_errors">nb_errors</a>)</td></tr>
+<tr><th id="195">195</th><td>            <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="196">196</th><td>    }</td></tr>
+<tr><th id="197">197</th><td></td></tr>
+<tr><th id="198">198</th><td>    <a class="local col0 ref" href="#170offset" title='offset' data-ref="170offset" data-ref-filename="170offset">offset</a> = <var>0</var>, <a class="local col5 ref" href="#175mem" title='mem' data-ref="175mem" data-ref-filename="175mem">mem</a> = (<a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a>)<a class="local col7 ref" href="#167ptr" title='ptr' data-ref="167ptr" data-ref-filename="167ptr">ptr</a>;</td></tr>
+<tr><th id="199">199</th><td>    <a class="local col2 ref" href="#172fill" title='fill' data-ref="172fill" data-ref-filename="172fill">fill</a> = -<a class="local col5 ref" href="#175mem" title='mem' data-ref="175mem" data-ref-filename="175mem">mem</a> &amp; <a class="macro" href="#172" title="63" data-ref="_M/RUN_SECTION_ALIGNMENT">RUN_SECTION_ALIGNMENT</a>;</td></tr>
+<tr><th id="200">200</th><td><u>#<span data-ppcond="200">ifdef</span> <span class="macro" data-ref="_M/_WIN64">_WIN64</span></u></td></tr>
+<tr><th id="201">201</th><td>    offset += <b>sizeof</b> (<em>void</em>*);</td></tr>
+<tr><th id="202">202</th><td><u>#<span data-ppcond="200">endif</span></u></td></tr>
+<tr><th id="203">203</th><td>    <b>for</b> (<a class="local col4 ref" href="#174k" title='k' data-ref="174k" data-ref-filename="174k">k</a> = <var>0</var>; <a class="local col4 ref" href="#174k" title='k' data-ref="174k" data-ref-filename="174k">k</a> &lt; <var>2</var>; ++<a class="local col4 ref" href="#174k" title='k' data-ref="174k" data-ref-filename="174k">k</a>) {</td></tr>
+<tr><th id="204">204</th><td>        <b>for</b>(<a class="local col3 ref" href="#173i" title='i' data-ref="173i" data-ref-filename="173i">i</a> = <var>1</var>; <a class="local col3 ref" href="#173i" title='i' data-ref="173i" data-ref-filename="173i">i</a> &lt; <a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_sections" title='TCCState::nb_sections' data-ref="TCCState::nb_sections" data-ref-filename="TCCState..nb_sections">nb_sections</a>; <a class="local col3 ref" href="#173i" title='i' data-ref="173i" data-ref-filename="173i">i</a>++) {</td></tr>
+<tr><th id="205">205</th><td>            <a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a> = <a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::sections" title='TCCState::sections' data-ref="TCCState::sections" data-ref-filename="TCCState..sections">sections</a>[<a class="local col3 ref" href="#173i" title='i' data-ref="173i" data-ref-filename="173i">i</a>];</td></tr>
+<tr><th id="206">206</th><td>            <b>if</b> (<var>0</var> == (<a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::sh_flags" title='Section::sh_flags' data-ref="Section::sh_flags" data-ref-filename="Section..sh_flags">sh_flags</a> &amp; <a class="macro" href="elf.h.html#369" title="(1 &lt;&lt; 1)" data-ref="_M/SHF_ALLOC">SHF_ALLOC</a>))</td></tr>
+<tr><th id="207">207</th><td>                <b>continue</b>;</td></tr>
+<tr><th id="208">208</th><td>            <b>if</b> (<a class="local col4 ref" href="#174k" title='k' data-ref="174k" data-ref-filename="174k">k</a> != !(<a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::sh_flags" title='Section::sh_flags' data-ref="Section::sh_flags" data-ref-filename="Section..sh_flags">sh_flags</a> &amp; <a class="macro" href="elf.h.html#370" title="(1 &lt;&lt; 2)" data-ref="_M/SHF_EXECINSTR">SHF_EXECINSTR</a>))</td></tr>
+<tr><th id="209">209</th><td>                <b>continue</b>;</td></tr>
+<tr><th id="210">210</th><td>            <a class="local col0 ref" href="#170offset" title='offset' data-ref="170offset" data-ref-filename="170offset">offset</a> += <a class="local col2 ref" href="#172fill" title='fill' data-ref="172fill" data-ref-filename="172fill">fill</a>;</td></tr>
+<tr><th id="211">211</th><td>            <b>if</b> (!<a class="local col5 ref" href="#175mem" title='mem' data-ref="175mem" data-ref-filename="175mem">mem</a>)</td></tr>
+<tr><th id="212">212</th><td>                <a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::sh_addr" title='Section::sh_addr' data-ref="Section::sh_addr" data-ref-filename="Section..sh_addr">sh_addr</a> = <var>0</var>;</td></tr>
+<tr><th id="213">213</th><td>            <b>else</b> <b>if</b> (<a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::sh_flags" title='Section::sh_flags' data-ref="Section::sh_flags" data-ref-filename="Section..sh_flags">sh_flags</a> &amp; <a class="macro" href="elf.h.html#370" title="(1 &lt;&lt; 2)" data-ref="_M/SHF_EXECINSTR">SHF_EXECINSTR</a>)</td></tr>
+<tr><th id="214">214</th><td>                <a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::sh_addr" title='Section::sh_addr' data-ref="Section::sh_addr" data-ref-filename="Section..sh_addr">sh_addr</a> = <a class="local col5 ref" href="#175mem" title='mem' data-ref="175mem" data-ref-filename="175mem">mem</a> + <a class="local col0 ref" href="#170offset" title='offset' data-ref="170offset" data-ref-filename="170offset">offset</a> + <a class="local col8 ref" href="#168ptr_diff" title='ptr_diff' data-ref="168ptr_diff" data-ref-filename="168ptr_diff">ptr_diff</a>;</td></tr>
+<tr><th id="215">215</th><td>            <b>else</b></td></tr>
+<tr><th id="216">216</th><td>                <a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::sh_addr" title='Section::sh_addr' data-ref="Section::sh_addr" data-ref-filename="Section..sh_addr">sh_addr</a> = <a class="local col5 ref" href="#175mem" title='mem' data-ref="175mem" data-ref-filename="175mem">mem</a> + <a class="local col0 ref" href="#170offset" title='offset' data-ref="170offset" data-ref-filename="170offset">offset</a>;</td></tr>
+<tr><th id="217">217</th><td><u>#<span data-ppcond="217">if</span> 0</u></td></tr>
+<tr><th id="218">218</th><td>            <b>if</b> (mem)</td></tr>
+<tr><th id="219">219</th><td>                printf(<q>"%-16s +%02lx %p %04x\n"</q>,</td></tr>
+<tr><th id="220">220</th><td>                    s-&gt;name, fill, (<em>void</em>*)s-&gt;sh_addr, (<em>unsigned</em>)s-&gt;data_offset);</td></tr>
+<tr><th id="221">221</th><td><u>#<span data-ppcond="217">endif</span></u></td></tr>
+<tr><th id="222">222</th><td>            <a class="local col0 ref" href="#170offset" title='offset' data-ref="170offset" data-ref-filename="170offset">offset</a> += <a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::data_offset" title='Section::data_offset' data-ref="Section::data_offset" data-ref-filename="Section..data_offset">data_offset</a>;</td></tr>
+<tr><th id="223">223</th><td>            <a class="local col2 ref" href="#172fill" title='fill' data-ref="172fill" data-ref-filename="172fill">fill</a> = -(<a class="local col5 ref" href="#175mem" title='mem' data-ref="175mem" data-ref-filename="175mem">mem</a> + <a class="local col0 ref" href="#170offset" title='offset' data-ref="170offset" data-ref-filename="170offset">offset</a>) &amp; <var>15</var>;</td></tr>
+<tr><th id="224">224</th><td>        }</td></tr>
+<tr><th id="225">225</th><td><u>#<span data-ppcond="225">if</span> <a class="macro" href="#172" title="63" data-ref="_M/RUN_SECTION_ALIGNMENT">RUN_SECTION_ALIGNMENT</a> &gt; 15</u></td></tr>
+<tr><th id="226">226</th><td>        <i>/* To avoid that x86 processors would reload cached instructions each time</i></td></tr>
+<tr><th id="227">227</th><td><i>           when data is written in the near, we need to make sure that code and data</i></td></tr>
+<tr><th id="228">228</th><td><i>           do not share the same 64 byte unit */</i></td></tr>
+<tr><th id="229">229</th><td>        <a class="local col2 ref" href="#172fill" title='fill' data-ref="172fill" data-ref-filename="172fill">fill</a> = -(<a class="local col5 ref" href="#175mem" title='mem' data-ref="175mem" data-ref-filename="175mem">mem</a> + <a class="local col0 ref" href="#170offset" title='offset' data-ref="170offset" data-ref-filename="170offset">offset</a>) &amp; <a class="macro" href="#172" title="63" data-ref="_M/RUN_SECTION_ALIGNMENT">RUN_SECTION_ALIGNMENT</a>;</td></tr>
+<tr><th id="230">230</th><td><u>#<span data-ppcond="225">endif</span></u></td></tr>
+<tr><th id="231">231</th><td>    }</td></tr>
+<tr><th id="232">232</th><td></td></tr>
+<tr><th id="233">233</th><td>    <i>/* relocate symbols */</i></td></tr>
+<tr><th id="234">234</th><td>    <a class="ref fn" href="tcc.h.html#relocate_syms" title='relocate_syms' data-ref="relocate_syms" data-ref-filename="relocate_syms">relocate_syms</a>(<a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>, <a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::symtab" title='TCCState::symtab' data-ref="TCCState::symtab" data-ref-filename="TCCState..symtab">symtab</a>, <var>1</var>);</td></tr>
+<tr><th id="235">235</th><td>    <b>if</b> (<a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_errors" title='TCCState::nb_errors' data-ref="TCCState::nb_errors" data-ref-filename="TCCState..nb_errors">nb_errors</a>)</td></tr>
+<tr><th id="236">236</th><td>        <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="237">237</th><td></td></tr>
+<tr><th id="238">238</th><td>    <b>if</b> (<var>0</var> == <a class="local col5 ref" href="#175mem" title='mem' data-ref="175mem" data-ref-filename="175mem">mem</a>)</td></tr>
+<tr><th id="239">239</th><td>        <b>return</b> <a class="local col0 ref" href="#170offset" title='offset' data-ref="170offset" data-ref-filename="170offset">offset</a> + <a class="macro" href="#172" title="63" data-ref="_M/RUN_SECTION_ALIGNMENT">RUN_SECTION_ALIGNMENT</a>;</td></tr>
+<tr><th id="240">240</th><td></td></tr>
+<tr><th id="241">241</th><td><u>#<span data-ppcond="241">ifdef</span> <span class="macro" data-ref="_M/TCC_TARGET_PE">TCC_TARGET_PE</span></u></td></tr>
+<tr><th id="242">242</th><td>    s1-&gt;pe_imagebase = mem;</td></tr>
+<tr><th id="243">243</th><td><u>#<span data-ppcond="241">endif</span></u></td></tr>
+<tr><th id="244">244</th><td></td></tr>
+<tr><th id="245">245</th><td>    <i>/* relocate each section */</i></td></tr>
+<tr><th id="246">246</th><td>    <b>for</b>(<a class="local col3 ref" href="#173i" title='i' data-ref="173i" data-ref-filename="173i">i</a> = <var>1</var>; <a class="local col3 ref" href="#173i" title='i' data-ref="173i" data-ref-filename="173i">i</a> &lt; <a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_sections" title='TCCState::nb_sections' data-ref="TCCState::nb_sections" data-ref-filename="TCCState..nb_sections">nb_sections</a>; <a class="local col3 ref" href="#173i" title='i' data-ref="173i" data-ref-filename="173i">i</a>++) {</td></tr>
+<tr><th id="247">247</th><td>        <a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a> = <a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::sections" title='TCCState::sections' data-ref="TCCState::sections" data-ref-filename="TCCState..sections">sections</a>[<a class="local col3 ref" href="#173i" title='i' data-ref="173i" data-ref-filename="173i">i</a>];</td></tr>
+<tr><th id="248">248</th><td>        <b>if</b> (<a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::reloc" title='Section::reloc' data-ref="Section::reloc" data-ref-filename="Section..reloc">reloc</a>)</td></tr>
+<tr><th id="249">249</th><td>            <a class="ref fn" href="tcc.h.html#relocate_section" title='relocate_section' data-ref="relocate_section" data-ref-filename="relocate_section">relocate_section</a>(<a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>, <a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>);</td></tr>
+<tr><th id="250">250</th><td>    }</td></tr>
+<tr><th id="251">251</th><td>    <a class="ref fn" href="tcc.h.html#relocate_plt" title='relocate_plt' data-ref="relocate_plt" data-ref-filename="relocate_plt">relocate_plt</a>(<a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>);</td></tr>
+<tr><th id="252">252</th><td></td></tr>
+<tr><th id="253">253</th><td>    <b>for</b>(<a class="local col3 ref" href="#173i" title='i' data-ref="173i" data-ref-filename="173i">i</a> = <var>1</var>; <a class="local col3 ref" href="#173i" title='i' data-ref="173i" data-ref-filename="173i">i</a> &lt; <a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::nb_sections" title='TCCState::nb_sections' data-ref="TCCState::nb_sections" data-ref-filename="TCCState..nb_sections">nb_sections</a>; <a class="local col3 ref" href="#173i" title='i' data-ref="173i" data-ref-filename="173i">i</a>++) {</td></tr>
+<tr><th id="254">254</th><td>        <a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a> = <a class="local col6 ref" href="#166s1" title='s1' data-ref="166s1" data-ref-filename="166s1">s1</a>-&gt;<a class="ref field" href="tcc.h.html#TCCState::sections" title='TCCState::sections' data-ref="TCCState::sections" data-ref-filename="TCCState..sections">sections</a>[<a class="local col3 ref" href="#173i" title='i' data-ref="173i" data-ref-filename="173i">i</a>];</td></tr>
+<tr><th id="255">255</th><td>        <b>if</b> (<var>0</var> == (<a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::sh_flags" title='Section::sh_flags' data-ref="Section::sh_flags" data-ref-filename="Section..sh_flags">sh_flags</a> &amp; <a class="macro" href="elf.h.html#369" title="(1 &lt;&lt; 1)" data-ref="_M/SHF_ALLOC">SHF_ALLOC</a>))</td></tr>
+<tr><th id="256">256</th><td>            <b>continue</b>;</td></tr>
+<tr><th id="257">257</th><td>        <a class="local col1 ref" href="#171length" title='length' data-ref="171length" data-ref-filename="171length">length</a> = <a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::data_offset" title='Section::data_offset' data-ref="Section::data_offset" data-ref-filename="Section..data_offset">data_offset</a>;</td></tr>
+<tr><th id="258">258</th><td>        <a class="local col7 ref" href="#167ptr" title='ptr' data-ref="167ptr" data-ref-filename="167ptr">ptr</a> = (<em>void</em>*)<a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::sh_addr" title='Section::sh_addr' data-ref="Section::sh_addr" data-ref-filename="Section..sh_addr">sh_addr</a>;</td></tr>
+<tr><th id="259">259</th><td>        <b>if</b> (<a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::sh_flags" title='Section::sh_flags' data-ref="Section::sh_flags" data-ref-filename="Section..sh_flags">sh_flags</a> &amp; <a class="macro" href="elf.h.html#370" title="(1 &lt;&lt; 2)" data-ref="_M/SHF_EXECINSTR">SHF_EXECINSTR</a>)</td></tr>
+<tr><th id="260">260</th><td>            <a class="local col7 ref" href="#167ptr" title='ptr' data-ref="167ptr" data-ref-filename="167ptr">ptr</a> = (<em>char</em>*)<a class="local col7 ref" href="#167ptr" title='ptr' data-ref="167ptr" data-ref-filename="167ptr">ptr</a> - <a class="local col8 ref" href="#168ptr_diff" title='ptr_diff' data-ref="168ptr_diff" data-ref-filename="168ptr_diff">ptr_diff</a>;</td></tr>
+<tr><th id="261">261</th><td>        <b>if</b> (<span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span> == <a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::data" title='Section::data' data-ref="Section::data" data-ref-filename="Section..data">data</a> || <a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::sh_type" title='Section::sh_type' data-ref="Section::sh_type" data-ref-filename="Section..sh_type">sh_type</a> == <a class="macro" href="elf.h.html#337" title="8" data-ref="_M/SHT_NOBITS">SHT_NOBITS</a>)</td></tr>
+<tr><th id="262">262</th><td>            <a class="ref fn" href="../include/string.h.html#memset" title='memset' data-ref="memset" data-ref-filename="memset">memset</a>(<a class="local col7 ref" href="#167ptr" title='ptr' data-ref="167ptr" data-ref-filename="167ptr">ptr</a>, <var>0</var>, <a class="local col1 ref" href="#171length" title='length' data-ref="171length" data-ref-filename="171length">length</a>);</td></tr>
+<tr><th id="263">263</th><td>        <b>else</b></td></tr>
+<tr><th id="264">264</th><td>            <a class="ref fn" href="../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy" data-ref-filename="memcpy">memcpy</a>(<a class="local col7 ref" href="#167ptr" title='ptr' data-ref="167ptr" data-ref-filename="167ptr">ptr</a>, <a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::data" title='Section::data' data-ref="Section::data" data-ref-filename="Section..data">data</a>, <a class="local col1 ref" href="#171length" title='length' data-ref="171length" data-ref-filename="171length">length</a>);</td></tr>
+<tr><th id="265">265</th><td>        <i>/* mark executable sections as executable in memory */</i></td></tr>
+<tr><th id="266">266</th><td>        <b>if</b> (<a class="local col9 ref" href="#169s" title='s' data-ref="169s" data-ref-filename="169s">s</a>-&gt;<a class="ref field" href="tcc.h.html#Section::sh_flags" title='Section::sh_flags' data-ref="Section::sh_flags" data-ref-filename="Section..sh_flags">sh_flags</a> &amp; <a class="macro" href="elf.h.html#370" title="(1 &lt;&lt; 2)" data-ref="_M/SHF_EXECINSTR">SHF_EXECINSTR</a>)</td></tr>
+<tr><th id="267">267</th><td>            <a class="tu ref fn" href="#set_pages_executable" title='set_pages_executable' data-use='c' data-ref="set_pages_executable" data-ref-filename="set_pages_executable">set_pages_executable</a>((<em>char</em>*)<a class="local col7 ref" href="#167ptr" title='ptr' data-ref="167ptr" data-ref-filename="167ptr">ptr</a> + <a class="local col8 ref" href="#168ptr_diff" title='ptr_diff' data-ref="168ptr_diff" data-ref-filename="168ptr_diff">ptr_diff</a>, <a class="local col1 ref" href="#171length" title='length' data-ref="171length" data-ref-filename="171length">length</a>);</td></tr>
+<tr><th id="268">268</th><td>    }</td></tr>
+<tr><th id="269">269</th><td></td></tr>
+<tr><th id="270">270</th><td><u>#<span data-ppcond="270">ifdef</span> <span class="macro" data-ref="_M/_WIN64">_WIN64</span></u></td></tr>
+<tr><th id="271">271</th><td>    *(<em>void</em>**)mem = win64_add_function_table(s1);</td></tr>
+<tr><th id="272">272</th><td><u>#<span data-ppcond="270">endif</span></u></td></tr>
+<tr><th id="273">273</th><td></td></tr>
+<tr><th id="274">274</th><td>    <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="275">275</th><td>}</td></tr>
+<tr><th id="276">276</th><td></td></tr>
+<tr><th id="277">277</th><td><i>/* ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="278">278</th><td><i  data-doc="set_pages_executable">/* allow to run code in memory */</i></td></tr>
+<tr><th id="279">279</th><td></td></tr>
+<tr><th id="280">280</th><td><em>static</em> <em>void</em> <dfn class="tu decl def fn" id="set_pages_executable" title='set_pages_executable' data-type='void set_pages_executable(void * ptr, unsigned long length)' data-ref="set_pages_executable" data-ref-filename="set_pages_executable">set_pages_executable</dfn>(<em>void</em> *<dfn class="local col6 decl" id="176ptr" title='ptr' data-type='void *' data-ref="176ptr" data-ref-filename="176ptr">ptr</dfn>, <em>unsigned</em> <em>long</em> <dfn class="local col7 decl" id="177length" title='length' data-type='unsigned long' data-ref="177length" data-ref-filename="177length">length</dfn>)</td></tr>
+<tr><th id="281">281</th><td>{</td></tr>
+<tr><th id="282">282</th><td><u>#<span data-ppcond="282">ifdef</span> <span class="macro" data-ref="_M/_WIN32">_WIN32</span></u></td></tr>
+<tr><th id="283">283</th><td>    <em>unsigned</em> <em>long</em> old_protect;</td></tr>
+<tr><th id="284">284</th><td>    VirtualProtect(ptr, length, PAGE_EXECUTE_READWRITE, &amp;old_protect);</td></tr>
+<tr><th id="285">285</th><td><u>#<span data-ppcond="282">else</span></u></td></tr>
+<tr><th id="286">286</th><td>    <em>void</em> <dfn class="decl fn" id="__clear_cache" title='__clear_cache' data-ref="__clear_cache" data-ref-filename="__clear_cache">__clear_cache</dfn>(<em>void</em> *<dfn class="local col8 decl" id="178beginning" title='beginning' data-type='void *' data-ref="178beginning" data-ref-filename="178beginning">beginning</dfn>, <em>void</em> *<dfn class="local col9 decl" id="179end" title='end' data-type='void *' data-ref="179end" data-ref-filename="179end">end</dfn>);</td></tr>
+<tr><th id="287">287</th><td><u># <span data-ppcond="287">ifndef</span> <span class="macro" data-ref="_M/HAVE_SELINUX">HAVE_SELINUX</span></u></td></tr>
+<tr><th id="288">288</th><td>    <a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> <dfn class="local col0 decl" id="180start" title='start' data-type='Elf64_Addr' data-ref="180start" data-ref-filename="180start">start</dfn>, <dfn class="local col1 decl" id="181end" title='end' data-type='Elf64_Addr' data-ref="181end" data-ref-filename="181end">end</dfn>;</td></tr>
+<tr><th id="289">289</th><td><u>#  <span data-ppcond="289">ifndef</span> <span class="macro" data-ref="_M/PAGESIZE">PAGESIZE</span></u></td></tr>
+<tr><th id="290">290</th><td><u>#   define <dfn class="macro" id="_M/PAGESIZE" data-ref="_M/PAGESIZE">PAGESIZE</dfn> 4096</u></td></tr>
+<tr><th id="291">291</th><td><u>#  <span data-ppcond="289">endif</span></u></td></tr>
+<tr><th id="292">292</th><td>    <a class="local col0 ref" href="#180start" title='start' data-ref="180start" data-ref-filename="180start">start</a> = (<a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a>)<a class="local col6 ref" href="#176ptr" title='ptr' data-ref="176ptr" data-ref-filename="176ptr">ptr</a> &amp; ~(<a class="macro" href="#290" title="4096" data-ref="_M/PAGESIZE">PAGESIZE</a> - <var>1</var>);</td></tr>
+<tr><th id="293">293</th><td>    <a class="local col1 ref" href="#181end" title='end' data-ref="181end" data-ref-filename="181end">end</a> = (<a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a>)<a class="local col6 ref" href="#176ptr" title='ptr' data-ref="176ptr" data-ref-filename="176ptr">ptr</a> + <a class="local col7 ref" href="#177length" title='length' data-ref="177length" data-ref-filename="177length">length</a>;</td></tr>
+<tr><th id="294">294</th><td>    <a class="local col1 ref" href="#181end" title='end' data-ref="181end" data-ref-filename="181end">end</a> = (<a class="local col1 ref" href="#181end" title='end' data-ref="181end" data-ref-filename="181end">end</a> + <a class="macro" href="#290" title="4096" data-ref="_M/PAGESIZE">PAGESIZE</a> - <var>1</var>) &amp; ~(<a class="macro" href="#290" title="4096" data-ref="_M/PAGESIZE">PAGESIZE</a> - <var>1</var>);</td></tr>
+<tr><th id="295">295</th><td>    <b>if</b> (<a class="ref fn" href="../include/x86_64-linux-gnu/sys/mman.h.html#mprotect" title='mprotect' data-ref="mprotect" data-ref-filename="mprotect">mprotect</a>((<em>void</em> *)<a class="local col0 ref" href="#180start" title='start' data-ref="180start" data-ref-filename="180start">start</a>, <a class="local col1 ref" href="#181end" title='end' data-ref="181end" data-ref-filename="181end">end</a> - <a class="local col0 ref" href="#180start" title='start' data-ref="180start" data-ref-filename="180start">start</a>, <a class="macro" href="../include/x86_64-linux-gnu/bits/mman-linux.h.html#32" title="0x1" data-ref="_M/PROT_READ">PROT_READ</a> | <a class="macro" href="../include/x86_64-linux-gnu/bits/mman-linux.h.html#33" title="0x2" data-ref="_M/PROT_WRITE">PROT_WRITE</a> | <a class="macro" href="../include/x86_64-linux-gnu/bits/mman-linux.h.html#34" title="0x4" data-ref="_M/PROT_EXEC">PROT_EXEC</a>))</td></tr>
+<tr><th id="296">296</th><td>        <a class="ref fn" href="tcc.h.html#tcc_error" title='tcc_error' data-ref="tcc_error" data-ref-filename="tcc_error">tcc_error</a>(<q>"mprotect failed: did you mean to configure --with-selinux?"</q>);</td></tr>
+<tr><th id="297">297</th><td><u># <span data-ppcond="287">endif</span></u></td></tr>
+<tr><th id="298">298</th><td><u># <span data-ppcond="298">if</span> defined <span class="macro" data-ref="_M/TCC_TARGET_ARM">TCC_TARGET_ARM</span> || defined <span class="macro" data-ref="_M/TCC_TARGET_ARM64">TCC_TARGET_ARM64</span></u></td></tr>
+<tr><th id="299">299</th><td>    __clear_cache(ptr, (<em>char</em> *)ptr + length);</td></tr>
+<tr><th id="300">300</th><td><u># <span data-ppcond="298">endif</span></u></td></tr>
+<tr><th id="301">301</th><td><u>#<span data-ppcond="282">endif</span></u></td></tr>
+<tr><th id="302">302</th><td>}</td></tr>
+<tr><th id="303">303</th><td></td></tr>
+<tr><th id="304">304</th><td><u>#<span data-ppcond="304">ifdef</span> <span class="macro" data-ref="_M/_WIN64">_WIN64</span></u></td></tr>
+<tr><th id="305">305</th><td><em>static</em> <em>void</em> *win64_add_function_table(TCCState *s1)</td></tr>
+<tr><th id="306">306</th><td>{</td></tr>
+<tr><th id="307">307</th><td>    <em>void</em> *p = NULL;</td></tr>
+<tr><th id="308">308</th><td>    <b>if</b> (s1-&gt;uw_pdata) {</td></tr>
+<tr><th id="309">309</th><td>        p = (<em>void</em>*)s1-&gt;uw_pdata-&gt;sh_addr;</td></tr>
+<tr><th id="310">310</th><td>        RtlAddFunctionTable(</td></tr>
+<tr><th id="311">311</th><td>            (RUNTIME_FUNCTION*)p,</td></tr>
+<tr><th id="312">312</th><td>            s1-&gt;uw_pdata-&gt;data_offset / <b>sizeof</b> (RUNTIME_FUNCTION),</td></tr>
+<tr><th id="313">313</th><td>            s1-&gt;pe_imagebase</td></tr>
+<tr><th id="314">314</th><td>            );</td></tr>
+<tr><th id="315">315</th><td>        s1-&gt;uw_pdata = NULL;</td></tr>
+<tr><th id="316">316</th><td>    }</td></tr>
+<tr><th id="317">317</th><td>    <b>return</b> p;</td></tr>
+<tr><th id="318">318</th><td>}</td></tr>
+<tr><th id="319">319</th><td></td></tr>
+<tr><th id="320">320</th><td><em>static</em> <em>void</em> win64_del_function_table(<em>void</em> *p)</td></tr>
+<tr><th id="321">321</th><td>{</td></tr>
+<tr><th id="322">322</th><td>    <b>if</b> (p) {</td></tr>
+<tr><th id="323">323</th><td>        RtlDeleteFunctionTable((RUNTIME_FUNCTION*)p);</td></tr>
+<tr><th id="324">324</th><td>    }</td></tr>
+<tr><th id="325">325</th><td>}</td></tr>
+<tr><th id="326">326</th><td><u>#<span data-ppcond="304">endif</span></u></td></tr>
+<tr><th id="327">327</th><td></td></tr>
+<tr><th id="328">328</th><td><i>/* ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="329">329</th><td><u>#<span data-ppcond="329">ifdef</span> <a class="macro" href="tcc.h.html#173" data-ref="_M/CONFIG_TCC_BACKTRACE">CONFIG_TCC_BACKTRACE</a></u></td></tr>
+<tr><th id="330">330</th><td></td></tr>
+<tr><th id="331">331</th><td><a class="macro" href="tcc.h.html#310" title="" data-ref="_M/ST_FUNC">ST_FUNC</a> <em>void</em> <dfn class="decl def fn" id="tcc_set_num_callers" title='tcc_set_num_callers' data-ref="tcc_set_num_callers" data-ref-filename="tcc_set_num_callers">tcc_set_num_callers</dfn>(<em>int</em> <dfn class="local col2 decl" id="182n" title='n' data-type='int' data-ref="182n" data-ref-filename="182n">n</dfn>)</td></tr>
+<tr><th id="332">332</th><td>{</td></tr>
+<tr><th id="333">333</th><td>    <a class="ref" href="tcc.h.html#rt_num_callers" title='rt_num_callers' data-ref="rt_num_callers" data-ref-filename="rt_num_callers">rt_num_callers</a> = <a class="local col2 ref" href="#182n" title='n' data-ref="182n" data-ref-filename="182n">n</a>;</td></tr>
+<tr><th id="334">334</th><td>}</td></tr>
+<tr><th id="335">335</th><td></td></tr>
+<tr><th id="336">336</th><td><i  data-doc="rt_printline">/* print the position in the source file of PC value 'pc' by reading</i></td></tr>
+<tr><th id="337">337</th><td><i  data-doc="rt_printline">   the stabs debug information */</i></td></tr>
+<tr><th id="338">338</th><td><em>static</em> <a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> <dfn class="tu decl def fn" id="rt_printline" title='rt_printline' data-type='Elf64_Addr rt_printline(Elf64_Addr wanted_pc, const char * msg)' data-ref="rt_printline" data-ref-filename="rt_printline">rt_printline</dfn>(<a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> <dfn class="local col3 decl" id="183wanted_pc" title='wanted_pc' data-type='Elf64_Addr' data-ref="183wanted_pc" data-ref-filename="183wanted_pc">wanted_pc</dfn>, <em>const</em> <em>char</em> *<dfn class="local col4 decl" id="184msg" title='msg' data-type='const char *' data-ref="184msg" data-ref-filename="184msg">msg</dfn>)</td></tr>
+<tr><th id="339">339</th><td>{</td></tr>
+<tr><th id="340">340</th><td>    <em>char</em> <dfn class="local col5 decl" id="185func_name" title='func_name' data-type='char [128]' data-ref="185func_name" data-ref-filename="185func_name">func_name</dfn>[<var>128</var>], <dfn class="local col6 decl" id="186last_func_name" title='last_func_name' data-type='char [128]' data-ref="186last_func_name" data-ref-filename="186last_func_name">last_func_name</dfn>[<var>128</var>];</td></tr>
+<tr><th id="341">341</th><td>    <a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> <dfn class="local col7 decl" id="187func_addr" title='func_addr' data-type='Elf64_Addr' data-ref="187func_addr" data-ref-filename="187func_addr">func_addr</dfn>, <dfn class="local col8 decl" id="188last_pc" title='last_pc' data-type='Elf64_Addr' data-ref="188last_pc" data-ref-filename="188last_pc">last_pc</dfn>, <dfn class="local col9 decl" id="189pc" title='pc' data-type='Elf64_Addr' data-ref="189pc" data-ref-filename="189pc">pc</dfn>;</td></tr>
+<tr><th id="342">342</th><td>    <em>const</em> <em>char</em> *<dfn class="local col0 decl" id="190incl_files" title='incl_files' data-type='const char *[32]' data-ref="190incl_files" data-ref-filename="190incl_files">incl_files</dfn>[<a class="macro" href="tcc.h.html#382" title="32" data-ref="_M/INCLUDE_STACK_SIZE">INCLUDE_STACK_SIZE</a>];</td></tr>
+<tr><th id="343">343</th><td>    <em>int</em> <dfn class="local col1 decl" id="191incl_index" title='incl_index' data-type='int' data-ref="191incl_index" data-ref-filename="191incl_index">incl_index</dfn>, <dfn class="local col2 decl" id="192len" title='len' data-type='int' data-ref="192len" data-ref-filename="192len">len</dfn>, <dfn class="local col3 decl" id="193last_line_num" title='last_line_num' data-type='int' data-ref="193last_line_num" data-ref-filename="193last_line_num">last_line_num</dfn>, <dfn class="local col4 decl" id="194i" title='i' data-type='int' data-ref="194i" data-ref-filename="194i">i</dfn>;</td></tr>
+<tr><th id="344">344</th><td>    <em>const</em> <em>char</em> *<dfn class="local col5 decl" id="195str" title='str' data-type='const char *' data-ref="195str" data-ref-filename="195str">str</dfn>, *<dfn class="local col6 decl" id="196p" title='p' data-type='const char *' data-ref="196p" data-ref-filename="196p">p</dfn>;</td></tr>
+<tr><th id="345">345</th><td></td></tr>
+<tr><th id="346">346</th><td>    <a class="typedef" href="tcc.h.html#Stab_Sym" title='Stab_Sym' data-type='struct Stab_Sym' data-ref="Stab_Sym" data-ref-filename="Stab_Sym">Stab_Sym</a> *<dfn class="local col7 decl" id="197stab_sym" title='stab_sym' data-type='Stab_Sym *' data-ref="197stab_sym" data-ref-filename="197stab_sym">stab_sym</dfn> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>, *<dfn class="local col8 decl" id="198stab_sym_end" title='stab_sym_end' data-type='Stab_Sym *' data-ref="198stab_sym_end" data-ref-filename="198stab_sym_end">stab_sym_end</dfn>, *<dfn class="local col9 decl" id="199sym" title='sym' data-type='Stab_Sym *' data-ref="199sym" data-ref-filename="199sym">sym</dfn>;</td></tr>
+<tr><th id="347">347</th><td>    <em>int</em> <dfn class="local col0 decl" id="200stab_len" title='stab_len' data-type='int' data-ref="200stab_len" data-ref-filename="200stab_len">stab_len</dfn> = <var>0</var>;</td></tr>
+<tr><th id="348">348</th><td>    <em>char</em> *<dfn class="local col1 decl" id="201stab_str" title='stab_str' data-type='char *' data-ref="201stab_str" data-ref-filename="201stab_str">stab_str</dfn> = <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="349">349</th><td></td></tr>
+<tr><th id="350">350</th><td>    <b>if</b> (<a class="ref" href="tcc.h.html#stab_section" title='stab_section' data-ref="stab_section" data-ref-filename="stab_section">stab_section</a>) {</td></tr>
+<tr><th id="351">351</th><td>        <a class="local col0 ref" href="#200stab_len" title='stab_len' data-ref="200stab_len" data-ref-filename="200stab_len">stab_len</a> = <a class="ref" href="tcc.h.html#stab_section" title='stab_section' data-ref="stab_section" data-ref-filename="stab_section">stab_section</a>-&gt;<a class="ref field" href="tcc.h.html#Section::data_offset" title='Section::data_offset' data-ref="Section::data_offset" data-ref-filename="Section..data_offset">data_offset</a>;</td></tr>
+<tr><th id="352">352</th><td>        <a class="local col7 ref" href="#197stab_sym" title='stab_sym' data-ref="197stab_sym" data-ref-filename="197stab_sym">stab_sym</a> = (<a class="typedef" href="tcc.h.html#Stab_Sym" title='Stab_Sym' data-type='struct Stab_Sym' data-ref="Stab_Sym" data-ref-filename="Stab_Sym">Stab_Sym</a> *)<a class="ref" href="tcc.h.html#stab_section" title='stab_section' data-ref="stab_section" data-ref-filename="stab_section">stab_section</a>-&gt;<a class="ref field" href="tcc.h.html#Section::data" title='Section::data' data-ref="Section::data" data-ref-filename="Section..data">data</a>;</td></tr>
+<tr><th id="353">353</th><td>        <a class="local col1 ref" href="#201stab_str" title='stab_str' data-ref="201stab_str" data-ref-filename="201stab_str">stab_str</a> = (<em>char</em> *) <a class="ref" href="tcc.h.html#stabstr_section" title='stabstr_section' data-ref="stabstr_section" data-ref-filename="stabstr_section">stabstr_section</a>-&gt;<a class="ref field" href="tcc.h.html#Section::data" title='Section::data' data-ref="Section::data" data-ref-filename="Section..data">data</a>;</td></tr>
+<tr><th id="354">354</th><td>    }</td></tr>
+<tr><th id="355">355</th><td></td></tr>
+<tr><th id="356">356</th><td>    <a class="local col5 ref" href="#185func_name" title='func_name' data-ref="185func_name" data-ref-filename="185func_name">func_name</a>[<var>0</var>] = <kbd>'\0'</kbd>;</td></tr>
+<tr><th id="357">357</th><td>    <a class="local col7 ref" href="#187func_addr" title='func_addr' data-ref="187func_addr" data-ref-filename="187func_addr">func_addr</a> = <var>0</var>;</td></tr>
+<tr><th id="358">358</th><td>    <a class="local col1 ref" href="#191incl_index" title='incl_index' data-ref="191incl_index" data-ref-filename="191incl_index">incl_index</a> = <var>0</var>;</td></tr>
+<tr><th id="359">359</th><td>    <a class="local col6 ref" href="#186last_func_name" title='last_func_name' data-ref="186last_func_name" data-ref-filename="186last_func_name">last_func_name</a>[<var>0</var>] = <kbd>'\0'</kbd>;</td></tr>
+<tr><th id="360">360</th><td>    <a class="local col8 ref" href="#188last_pc" title='last_pc' data-ref="188last_pc" data-ref-filename="188last_pc">last_pc</a> = (<a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a>)-<var>1</var>;</td></tr>
+<tr><th id="361">361</th><td>    <a class="local col3 ref" href="#193last_line_num" title='last_line_num' data-ref="193last_line_num" data-ref-filename="193last_line_num">last_line_num</a> = <var>1</var>;</td></tr>
+<tr><th id="362">362</th><td></td></tr>
+<tr><th id="363">363</th><td>    <b>if</b> (!<a class="local col7 ref" href="#197stab_sym" title='stab_sym' data-ref="197stab_sym" data-ref-filename="197stab_sym">stab_sym</a>)</td></tr>
+<tr><th id="364">364</th><td>        <b>goto</b> <a class="lbl" href="#202no_stabs" data-ref="202no_stabs" data-ref-filename="202no_stabs">no_stabs</a>;</td></tr>
+<tr><th id="365">365</th><td></td></tr>
+<tr><th id="366">366</th><td>    <a class="local col8 ref" href="#198stab_sym_end" title='stab_sym_end' data-ref="198stab_sym_end" data-ref-filename="198stab_sym_end">stab_sym_end</a> = (<a class="typedef" href="tcc.h.html#Stab_Sym" title='Stab_Sym' data-type='struct Stab_Sym' data-ref="Stab_Sym" data-ref-filename="Stab_Sym">Stab_Sym</a>*)((<em>char</em>*)<a class="local col7 ref" href="#197stab_sym" title='stab_sym' data-ref="197stab_sym" data-ref-filename="197stab_sym">stab_sym</a> + <a class="local col0 ref" href="#200stab_len" title='stab_len' data-ref="200stab_len" data-ref-filename="200stab_len">stab_len</a>);</td></tr>
+<tr><th id="367">367</th><td>    <b>for</b> (<a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a> = <a class="local col7 ref" href="#197stab_sym" title='stab_sym' data-ref="197stab_sym" data-ref-filename="197stab_sym">stab_sym</a> + <var>1</var>; <a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a> &lt; <a class="local col8 ref" href="#198stab_sym_end" title='stab_sym_end' data-ref="198stab_sym_end" data-ref-filename="198stab_sym_end">stab_sym_end</a>; ++<a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a>) {</td></tr>
+<tr><th id="368">368</th><td>        <b>switch</b>(<a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a>-&gt;<a class="ref field" href="tcc.h.html#(anonymous)::n_type" title='(anonymous struct)::n_type' data-ref="(anonymous)::n_type" data-ref-filename="(anonymous)..n_type">n_type</a>) {</td></tr>
+<tr><th id="369">369</th><td>            <i>/* function start or end */</i></td></tr>
+<tr><th id="370">370</th><td>        <b>case</b> <a class="enum" href="../include/x86_64-linux-gnu/bits/stab.def.html#32" title='N_FUN' data-ref="N_FUN" data-ref-filename="N_FUN">N_FUN</a>:</td></tr>
+<tr><th id="371">371</th><td>            <b>if</b> (<a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a>-&gt;<a class="ref field" href="tcc.h.html#(anonymous)::n_strx" title='(anonymous struct)::n_strx' data-ref="(anonymous)::n_strx" data-ref-filename="(anonymous)..n_strx">n_strx</a> == <var>0</var>) {</td></tr>
+<tr><th id="372">372</th><td>                <i>/* we test if between last line and end of function */</i></td></tr>
+<tr><th id="373">373</th><td>                <a class="local col9 ref" href="#189pc" title='pc' data-ref="189pc" data-ref-filename="189pc">pc</a> = <a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a>-&gt;<a class="ref field" href="tcc.h.html#(anonymous)::n_value" title='(anonymous struct)::n_value' data-ref="(anonymous)::n_value" data-ref-filename="(anonymous)..n_value">n_value</a> + <a class="local col7 ref" href="#187func_addr" title='func_addr' data-ref="187func_addr" data-ref-filename="187func_addr">func_addr</a>;</td></tr>
+<tr><th id="374">374</th><td>                <b>if</b> (<a class="local col3 ref" href="#183wanted_pc" title='wanted_pc' data-ref="183wanted_pc" data-ref-filename="183wanted_pc">wanted_pc</a> &gt;= <a class="local col8 ref" href="#188last_pc" title='last_pc' data-ref="188last_pc" data-ref-filename="188last_pc">last_pc</a> &amp;&amp; <a class="local col3 ref" href="#183wanted_pc" title='wanted_pc' data-ref="183wanted_pc" data-ref-filename="183wanted_pc">wanted_pc</a> &lt; <a class="local col9 ref" href="#189pc" title='pc' data-ref="189pc" data-ref-filename="189pc">pc</a>)</td></tr>
+<tr><th id="375">375</th><td>                    <b>goto</b> <a class="lbl" href="#203found" data-ref="203found" data-ref-filename="203found">found</a>;</td></tr>
+<tr><th id="376">376</th><td>                <a class="local col5 ref" href="#185func_name" title='func_name' data-ref="185func_name" data-ref-filename="185func_name">func_name</a>[<var>0</var>] = <kbd>'\0'</kbd>;</td></tr>
+<tr><th id="377">377</th><td>                <a class="local col7 ref" href="#187func_addr" title='func_addr' data-ref="187func_addr" data-ref-filename="187func_addr">func_addr</a> = <var>0</var>;</td></tr>
+<tr><th id="378">378</th><td>            } <b>else</b> {</td></tr>
+<tr><th id="379">379</th><td>                <a class="local col5 ref" href="#195str" title='str' data-ref="195str" data-ref-filename="195str">str</a> = <a class="local col1 ref" href="#201stab_str" title='stab_str' data-ref="201stab_str" data-ref-filename="201stab_str">stab_str</a> + <a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a>-&gt;<a class="ref field" href="tcc.h.html#(anonymous)::n_strx" title='(anonymous struct)::n_strx' data-ref="(anonymous)::n_strx" data-ref-filename="(anonymous)..n_strx">n_strx</a>;</td></tr>
+<tr><th id="380">380</th><td>                <a class="local col6 ref" href="#196p" title='p' data-ref="196p" data-ref-filename="196p">p</a> = <a class="ref fn" href="../include/string.h.html#strchr" title='strchr' data-ref="strchr" data-ref-filename="strchr">strchr</a>(<a class="local col5 ref" href="#195str" title='str' data-ref="195str" data-ref-filename="195str">str</a>, <kbd>':'</kbd>);</td></tr>
+<tr><th id="381">381</th><td>                <b>if</b> (!<a class="local col6 ref" href="#196p" title='p' data-ref="196p" data-ref-filename="196p">p</a>) {</td></tr>
+<tr><th id="382">382</th><td>                    <a class="ref fn" href="tcc.h.html#pstrcpy" title='pstrcpy' data-ref="pstrcpy" data-ref-filename="pstrcpy">pstrcpy</a>(<a class="local col5 ref" href="#185func_name" title='func_name' data-ref="185func_name" data-ref-filename="185func_name">func_name</a>, <b>sizeof</b>(<a class="local col5 ref" href="#185func_name" title='func_name' data-ref="185func_name" data-ref-filename="185func_name">func_name</a>), <a class="local col5 ref" href="#195str" title='str' data-ref="195str" data-ref-filename="195str">str</a>);</td></tr>
+<tr><th id="383">383</th><td>                } <b>else</b> {</td></tr>
+<tr><th id="384">384</th><td>                    <a class="local col2 ref" href="#192len" title='len' data-ref="192len" data-ref-filename="192len">len</a> = <a class="local col6 ref" href="#196p" title='p' data-ref="196p" data-ref-filename="196p">p</a> - <a class="local col5 ref" href="#195str" title='str' data-ref="195str" data-ref-filename="195str">str</a>;</td></tr>
+<tr><th id="385">385</th><td>                    <b>if</b> (<a class="local col2 ref" href="#192len" title='len' data-ref="192len" data-ref-filename="192len">len</a> &gt; <b>sizeof</b>(<a class="local col5 ref" href="#185func_name" title='func_name' data-ref="185func_name" data-ref-filename="185func_name">func_name</a>) - <var>1</var>)</td></tr>
+<tr><th id="386">386</th><td>                        <a class="local col2 ref" href="#192len" title='len' data-ref="192len" data-ref-filename="192len">len</a> = <b>sizeof</b>(<a class="local col5 ref" href="#185func_name" title='func_name' data-ref="185func_name" data-ref-filename="185func_name">func_name</a>) - <var>1</var>;</td></tr>
+<tr><th id="387">387</th><td>                    <a class="ref fn" href="../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy" data-ref-filename="memcpy">memcpy</a>(<a class="local col5 ref" href="#185func_name" title='func_name' data-ref="185func_name" data-ref-filename="185func_name">func_name</a>, <a class="local col5 ref" href="#195str" title='str' data-ref="195str" data-ref-filename="195str">str</a>, <a class="local col2 ref" href="#192len" title='len' data-ref="192len" data-ref-filename="192len">len</a>);</td></tr>
+<tr><th id="388">388</th><td>                    <a class="local col5 ref" href="#185func_name" title='func_name' data-ref="185func_name" data-ref-filename="185func_name">func_name</a>[<a class="local col2 ref" href="#192len" title='len' data-ref="192len" data-ref-filename="192len">len</a>] = <kbd>'\0'</kbd>;</td></tr>
+<tr><th id="389">389</th><td>                }</td></tr>
+<tr><th id="390">390</th><td>                <a class="local col7 ref" href="#187func_addr" title='func_addr' data-ref="187func_addr" data-ref-filename="187func_addr">func_addr</a> = <a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a>-&gt;<a class="ref field" href="tcc.h.html#(anonymous)::n_value" title='(anonymous struct)::n_value' data-ref="(anonymous)::n_value" data-ref-filename="(anonymous)..n_value">n_value</a>;</td></tr>
+<tr><th id="391">391</th><td>            }</td></tr>
+<tr><th id="392">392</th><td>            <b>break</b>;</td></tr>
+<tr><th id="393">393</th><td>            <i>/* line number info */</i></td></tr>
+<tr><th id="394">394</th><td>        <b>case</b> <a class="enum" href="../include/x86_64-linux-gnu/bits/stab.def.html#72" title='N_SLINE' data-ref="N_SLINE" data-ref-filename="N_SLINE">N_SLINE</a>:</td></tr>
+<tr><th id="395">395</th><td>            <a class="local col9 ref" href="#189pc" title='pc' data-ref="189pc" data-ref-filename="189pc">pc</a> = <a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a>-&gt;<a class="ref field" href="tcc.h.html#(anonymous)::n_value" title='(anonymous struct)::n_value' data-ref="(anonymous)::n_value" data-ref-filename="(anonymous)..n_value">n_value</a> + <a class="local col7 ref" href="#187func_addr" title='func_addr' data-ref="187func_addr" data-ref-filename="187func_addr">func_addr</a>;</td></tr>
+<tr><th id="396">396</th><td>            <b>if</b> (<a class="local col3 ref" href="#183wanted_pc" title='wanted_pc' data-ref="183wanted_pc" data-ref-filename="183wanted_pc">wanted_pc</a> &gt;= <a class="local col8 ref" href="#188last_pc" title='last_pc' data-ref="188last_pc" data-ref-filename="188last_pc">last_pc</a> &amp;&amp; <a class="local col3 ref" href="#183wanted_pc" title='wanted_pc' data-ref="183wanted_pc" data-ref-filename="183wanted_pc">wanted_pc</a> &lt; <a class="local col9 ref" href="#189pc" title='pc' data-ref="189pc" data-ref-filename="189pc">pc</a>)</td></tr>
+<tr><th id="397">397</th><td>                <b>goto</b> <a class="lbl" href="#203found" data-ref="203found" data-ref-filename="203found">found</a>;</td></tr>
+<tr><th id="398">398</th><td>            <a class="local col8 ref" href="#188last_pc" title='last_pc' data-ref="188last_pc" data-ref-filename="188last_pc">last_pc</a> = <a class="local col9 ref" href="#189pc" title='pc' data-ref="189pc" data-ref-filename="189pc">pc</a>;</td></tr>
+<tr><th id="399">399</th><td>            <a class="local col3 ref" href="#193last_line_num" title='last_line_num' data-ref="193last_line_num" data-ref-filename="193last_line_num">last_line_num</a> = <a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a>-&gt;<a class="ref field" href="tcc.h.html#(anonymous)::n_desc" title='(anonymous struct)::n_desc' data-ref="(anonymous)::n_desc" data-ref-filename="(anonymous)..n_desc">n_desc</a>;</td></tr>
+<tr><th id="400">400</th><td>            <i>/* XXX: slow! */</i></td></tr>
+<tr><th id="401">401</th><td>            <a class="ref fn" href="../include/string.h.html#strcpy" title='strcpy' data-ref="strcpy" data-ref-filename="strcpy">strcpy</a>(<a class="local col6 ref" href="#186last_func_name" title='last_func_name' data-ref="186last_func_name" data-ref-filename="186last_func_name">last_func_name</a>, <a class="local col5 ref" href="#185func_name" title='func_name' data-ref="185func_name" data-ref-filename="185func_name">func_name</a>);</td></tr>
+<tr><th id="402">402</th><td>            <b>break</b>;</td></tr>
+<tr><th id="403">403</th><td>            <i>/* include files */</i></td></tr>
+<tr><th id="404">404</th><td>        <b>case</b> <a class="enum" href="../include/x86_64-linux-gnu/bits/stab.def.html#119" title='N_BINCL' data-ref="N_BINCL" data-ref-filename="N_BINCL">N_BINCL</a>:</td></tr>
+<tr><th id="405">405</th><td>            <a class="local col5 ref" href="#195str" title='str' data-ref="195str" data-ref-filename="195str">str</a> = <a class="local col1 ref" href="#201stab_str" title='stab_str' data-ref="201stab_str" data-ref-filename="201stab_str">stab_str</a> + <a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a>-&gt;<a class="ref field" href="tcc.h.html#(anonymous)::n_strx" title='(anonymous struct)::n_strx' data-ref="(anonymous)::n_strx" data-ref-filename="(anonymous)..n_strx">n_strx</a>;</td></tr>
+<tr><th id="406">406</th><td>        <dfn class="lbl" id="204add_incl" data-ref="204add_incl" data-ref-filename="204add_incl">add_incl</dfn>:</td></tr>
+<tr><th id="407">407</th><td>            <b>if</b> (<a class="local col1 ref" href="#191incl_index" title='incl_index' data-ref="191incl_index" data-ref-filename="191incl_index">incl_index</a> &lt; <a class="macro" href="tcc.h.html#382" title="32" data-ref="_M/INCLUDE_STACK_SIZE">INCLUDE_STACK_SIZE</a>) {</td></tr>
+<tr><th id="408">408</th><td>                <a class="local col0 ref" href="#190incl_files" title='incl_files' data-ref="190incl_files" data-ref-filename="190incl_files">incl_files</a>[<a class="local col1 ref" href="#191incl_index" title='incl_index' data-ref="191incl_index" data-ref-filename="191incl_index">incl_index</a>++] = <a class="local col5 ref" href="#195str" title='str' data-ref="195str" data-ref-filename="195str">str</a>;</td></tr>
+<tr><th id="409">409</th><td>            }</td></tr>
+<tr><th id="410">410</th><td>            <b>break</b>;</td></tr>
+<tr><th id="411">411</th><td>        <b>case</b> <a class="enum" href="../include/x86_64-linux-gnu/bits/stab.def.html#133" title='N_EINCL' data-ref="N_EINCL" data-ref-filename="N_EINCL">N_EINCL</a>:</td></tr>
+<tr><th id="412">412</th><td>            <b>if</b> (<a class="local col1 ref" href="#191incl_index" title='incl_index' data-ref="191incl_index" data-ref-filename="191incl_index">incl_index</a> &gt; <var>1</var>)</td></tr>
+<tr><th id="413">413</th><td>                <a class="local col1 ref" href="#191incl_index" title='incl_index' data-ref="191incl_index" data-ref-filename="191incl_index">incl_index</a>--;</td></tr>
+<tr><th id="414">414</th><td>            <b>break</b>;</td></tr>
+<tr><th id="415">415</th><td>        <b>case</b> <a class="enum" href="../include/x86_64-linux-gnu/bits/stab.def.html#110" title='N_SO' data-ref="N_SO" data-ref-filename="N_SO">N_SO</a>:</td></tr>
+<tr><th id="416">416</th><td>            <b>if</b> (<a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a>-&gt;<a class="ref field" href="tcc.h.html#(anonymous)::n_strx" title='(anonymous struct)::n_strx' data-ref="(anonymous)::n_strx" data-ref-filename="(anonymous)..n_strx">n_strx</a> == <var>0</var>) {</td></tr>
+<tr><th id="417">417</th><td>                <a class="local col1 ref" href="#191incl_index" title='incl_index' data-ref="191incl_index" data-ref-filename="191incl_index">incl_index</a> = <var>0</var>; <i>/* end of translation unit */</i></td></tr>
+<tr><th id="418">418</th><td>            } <b>else</b> {</td></tr>
+<tr><th id="419">419</th><td>                <a class="local col5 ref" href="#195str" title='str' data-ref="195str" data-ref-filename="195str">str</a> = <a class="local col1 ref" href="#201stab_str" title='stab_str' data-ref="201stab_str" data-ref-filename="201stab_str">stab_str</a> + <a class="local col9 ref" href="#199sym" title='sym' data-ref="199sym" data-ref-filename="199sym">sym</a>-&gt;<a class="ref field" href="tcc.h.html#(anonymous)::n_strx" title='(anonymous struct)::n_strx' data-ref="(anonymous)::n_strx" data-ref-filename="(anonymous)..n_strx">n_strx</a>;</td></tr>
+<tr><th id="420">420</th><td>                <i>/* do not add path */</i></td></tr>
+<tr><th id="421">421</th><td>                <a class="local col2 ref" href="#192len" title='len' data-ref="192len" data-ref-filename="192len">len</a> = <a class="ref fn" href="../include/string.h.html#strlen" title='strlen' data-ref="strlen" data-ref-filename="strlen">strlen</a>(<a class="local col5 ref" href="#195str" title='str' data-ref="195str" data-ref-filename="195str">str</a>);</td></tr>
+<tr><th id="422">422</th><td>                <b>if</b> (<a class="local col2 ref" href="#192len" title='len' data-ref="192len" data-ref-filename="192len">len</a> &gt; <var>0</var> &amp;&amp; <a class="local col5 ref" href="#195str" title='str' data-ref="195str" data-ref-filename="195str">str</a>[<a class="local col2 ref" href="#192len" title='len' data-ref="192len" data-ref-filename="192len">len</a> - <var>1</var>] != <kbd>'/'</kbd>)</td></tr>
+<tr><th id="423">423</th><td>                    <b>goto</b> <a class="lbl" href="#204add_incl" data-ref="204add_incl" data-ref-filename="204add_incl">add_incl</a>;</td></tr>
+<tr><th id="424">424</th><td>            }</td></tr>
+<tr><th id="425">425</th><td>            <b>break</b>;</td></tr>
+<tr><th id="426">426</th><td>        }</td></tr>
+<tr><th id="427">427</th><td>    }</td></tr>
+<tr><th id="428">428</th><td></td></tr>
+<tr><th id="429">429</th><td><dfn class="lbl" id="202no_stabs" data-ref="202no_stabs" data-ref-filename="202no_stabs">no_stabs</dfn>:</td></tr>
+<tr><th id="430">430</th><td>    <i>/* second pass: we try symtab symbols (no line number info) */</i></td></tr>
+<tr><th id="431">431</th><td>    <a class="local col1 ref" href="#191incl_index" title='incl_index' data-ref="191incl_index" data-ref-filename="191incl_index">incl_index</a> = <var>0</var>;</td></tr>
+<tr><th id="432">432</th><td>    <b>if</b> (<a class="ref" href="tcc.h.html#symtab_section" title='symtab_section' data-ref="symtab_section" data-ref-filename="symtab_section">symtab_section</a>)</td></tr>
+<tr><th id="433">433</th><td>    {</td></tr>
+<tr><th id="434">434</th><td>        <a class="macro" href="tcc.h.html#357" title="Elf64_Sym" data-ref="_M/ElfW">ElfW</a>(Sym) *<dfn class="local col5 decl" id="205sym" title='sym' data-type='Elf64_Sym *' data-ref="205sym" data-ref-filename="205sym">sym</dfn>, *<dfn class="local col6 decl" id="206sym_end" title='sym_end' data-type='Elf64_Sym *' data-ref="206sym_end" data-ref-filename="206sym_end">sym_end</dfn>;</td></tr>
+<tr><th id="435">435</th><td>        <em>int</em> <dfn class="local col7 decl" id="207type" title='type' data-type='int' data-ref="207type" data-ref-filename="207type">type</dfn>;</td></tr>
+<tr><th id="436">436</th><td></td></tr>
+<tr><th id="437">437</th><td>        <a class="local col6 ref" href="#206sym_end" title='sym_end' data-ref="206sym_end" data-ref-filename="206sym_end">sym_end</a> = (<a class="macro" href="tcc.h.html#357" title="Elf64_Sym" data-ref="_M/ElfW">ElfW</a>(Sym) *)(<a class="ref" href="tcc.h.html#symtab_section" title='symtab_section' data-ref="symtab_section" data-ref-filename="symtab_section">symtab_section</a>-&gt;<a class="ref field" href="tcc.h.html#Section::data" title='Section::data' data-ref="Section::data" data-ref-filename="Section..data">data</a> + <a class="ref" href="tcc.h.html#symtab_section" title='symtab_section' data-ref="symtab_section" data-ref-filename="symtab_section">symtab_section</a>-&gt;<a class="ref field" href="tcc.h.html#Section::data_offset" title='Section::data_offset' data-ref="Section::data_offset" data-ref-filename="Section..data_offset">data_offset</a>);</td></tr>
+<tr><th id="438">438</th><td>        <b>for</b>(<a class="local col5 ref" href="#205sym" title='sym' data-ref="205sym" data-ref-filename="205sym">sym</a> = (<a class="macro" href="tcc.h.html#357" title="Elf64_Sym" data-ref="_M/ElfW">ElfW</a>(Sym) *)<a class="ref" href="tcc.h.html#symtab_section" title='symtab_section' data-ref="symtab_section" data-ref-filename="symtab_section">symtab_section</a>-&gt;<a class="ref field" href="tcc.h.html#Section::data" title='Section::data' data-ref="Section::data" data-ref-filename="Section..data">data</a> + <var>1</var>;</td></tr>
+<tr><th id="439">439</th><td>            <a class="local col5 ref" href="#205sym" title='sym' data-ref="205sym" data-ref-filename="205sym">sym</a> &lt; <a class="local col6 ref" href="#206sym_end" title='sym_end' data-ref="206sym_end" data-ref-filename="206sym_end">sym_end</a>;</td></tr>
+<tr><th id="440">440</th><td>            <a class="local col5 ref" href="#205sym" title='sym' data-ref="205sym" data-ref-filename="205sym">sym</a>++) {</td></tr>
+<tr><th id="441">441</th><td>            <a class="local col7 ref" href="#207type" title='type' data-ref="207type" data-ref-filename="207type">type</a> = <a class="macro" href="tcc.h.html#358" title="ELF64_ST_TYPE" data-ref="_M/ELFW">ELFW</a>(ST_TYPE)(<a class="local col5 ref" href="#205sym" title='sym' data-ref="205sym" data-ref-filename="205sym">sym</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::st_info" title='(anonymous struct)::st_info' data-ref="(anonymous)::st_info" data-ref-filename="(anonymous)..st_info">st_info</a>);</td></tr>
+<tr><th id="442">442</th><td>            <b>if</b> (<a class="local col7 ref" href="#207type" title='type' data-ref="207type" data-ref-filename="207type">type</a> == <a class="macro" href="elf.h.html#471" title="2" data-ref="_M/STT_FUNC">STT_FUNC</a> || <a class="local col7 ref" href="#207type" title='type' data-ref="207type" data-ref-filename="207type">type</a> == <a class="macro" href="elf.h.html#478" title="10" data-ref="_M/STT_GNU_IFUNC">STT_GNU_IFUNC</a>) {</td></tr>
+<tr><th id="443">443</th><td>                <b>if</b> (<a class="local col3 ref" href="#183wanted_pc" title='wanted_pc' data-ref="183wanted_pc" data-ref-filename="183wanted_pc">wanted_pc</a> &gt;= <a class="local col5 ref" href="#205sym" title='sym' data-ref="205sym" data-ref-filename="205sym">sym</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::st_value" title='(anonymous struct)::st_value' data-ref="(anonymous)::st_value" data-ref-filename="(anonymous)..st_value">st_value</a> &amp;&amp;</td></tr>
+<tr><th id="444">444</th><td>                    <a class="local col3 ref" href="#183wanted_pc" title='wanted_pc' data-ref="183wanted_pc" data-ref-filename="183wanted_pc">wanted_pc</a> &lt; <a class="local col5 ref" href="#205sym" title='sym' data-ref="205sym" data-ref-filename="205sym">sym</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::st_value" title='(anonymous struct)::st_value' data-ref="(anonymous)::st_value" data-ref-filename="(anonymous)..st_value">st_value</a> + <a class="local col5 ref" href="#205sym" title='sym' data-ref="205sym" data-ref-filename="205sym">sym</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::st_size" title='(anonymous struct)::st_size' data-ref="(anonymous)::st_size" data-ref-filename="(anonymous)..st_size">st_size</a>) {</td></tr>
+<tr><th id="445">445</th><td>                    <a class="ref fn" href="tcc.h.html#pstrcpy" title='pstrcpy' data-ref="pstrcpy" data-ref-filename="pstrcpy">pstrcpy</a>(<a class="local col6 ref" href="#186last_func_name" title='last_func_name' data-ref="186last_func_name" data-ref-filename="186last_func_name">last_func_name</a>, <b>sizeof</b>(<a class="local col6 ref" href="#186last_func_name" title='last_func_name' data-ref="186last_func_name" data-ref-filename="186last_func_name">last_func_name</a>),</td></tr>
+<tr><th id="446">446</th><td>                            (<em>char</em> *) <a class="ref" href="tcc.h.html#symtab_section" title='symtab_section' data-ref="symtab_section" data-ref-filename="symtab_section">symtab_section</a>-&gt;<a class="ref field" href="tcc.h.html#Section::link" title='Section::link' data-ref="Section::link" data-ref-filename="Section..link">link</a>-&gt;<a class="ref field" href="tcc.h.html#Section::data" title='Section::data' data-ref="Section::data" data-ref-filename="Section..data">data</a> + <a class="local col5 ref" href="#205sym" title='sym' data-ref="205sym" data-ref-filename="205sym">sym</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::st_name" title='(anonymous struct)::st_name' data-ref="(anonymous)::st_name" data-ref-filename="(anonymous)..st_name">st_name</a>);</td></tr>
+<tr><th id="447">447</th><td>                    <a class="local col7 ref" href="#187func_addr" title='func_addr' data-ref="187func_addr" data-ref-filename="187func_addr">func_addr</a> = <a class="local col5 ref" href="#205sym" title='sym' data-ref="205sym" data-ref-filename="205sym">sym</a>-&gt;<a class="ref field" href="elf.h.html#(anonymous)::st_value" title='(anonymous struct)::st_value' data-ref="(anonymous)::st_value" data-ref-filename="(anonymous)..st_value">st_value</a>;</td></tr>
+<tr><th id="448">448</th><td>                    <b>goto</b> <a class="lbl" href="#203found" data-ref="203found" data-ref-filename="203found">found</a>;</td></tr>
+<tr><th id="449">449</th><td>                }</td></tr>
+<tr><th id="450">450</th><td>            }</td></tr>
+<tr><th id="451">451</th><td>        }</td></tr>
+<tr><th id="452">452</th><td>    }</td></tr>
+<tr><th id="453">453</th><td>    <i>/* did not find any info: */</i></td></tr>
+<tr><th id="454">454</th><td>    <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"%s %p ???\n"</q>, <a class="local col4 ref" href="#184msg" title='msg' data-ref="184msg" data-ref-filename="184msg">msg</a>, (<em>void</em>*)<a class="local col3 ref" href="#183wanted_pc" title='wanted_pc' data-ref="183wanted_pc" data-ref-filename="183wanted_pc">wanted_pc</a>);</td></tr>
+<tr><th id="455">455</th><td>    <a class="ref fn" href="../include/stdio.h.html#fflush" title='fflush' data-ref="fflush" data-ref-filename="fflush">fflush</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>);</td></tr>
+<tr><th id="456">456</th><td>    <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="457">457</th><td> <dfn class="lbl" id="203found" data-ref="203found" data-ref-filename="203found">found</dfn>:</td></tr>
+<tr><th id="458">458</th><td>    <a class="local col4 ref" href="#194i" title='i' data-ref="194i" data-ref-filename="194i">i</a> = <a class="local col1 ref" href="#191incl_index" title='incl_index' data-ref="191incl_index" data-ref-filename="191incl_index">incl_index</a>;</td></tr>
+<tr><th id="459">459</th><td>    <b>if</b> (<a class="local col4 ref" href="#194i" title='i' data-ref="194i" data-ref-filename="194i">i</a> &gt; <var>0</var>)</td></tr>
+<tr><th id="460">460</th><td>        <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"%s:%d: "</q>, <a class="local col0 ref" href="#190incl_files" title='incl_files' data-ref="190incl_files" data-ref-filename="190incl_files">incl_files</a>[--<a class="local col4 ref" href="#194i" title='i' data-ref="194i" data-ref-filename="194i">i</a>], <a class="local col3 ref" href="#193last_line_num" title='last_line_num' data-ref="193last_line_num" data-ref-filename="193last_line_num">last_line_num</a>);</td></tr>
+<tr><th id="461">461</th><td>    <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"%s %p"</q>, <a class="local col4 ref" href="#184msg" title='msg' data-ref="184msg" data-ref-filename="184msg">msg</a>, (<em>void</em>*)<a class="local col3 ref" href="#183wanted_pc" title='wanted_pc' data-ref="183wanted_pc" data-ref-filename="183wanted_pc">wanted_pc</a>);</td></tr>
+<tr><th id="462">462</th><td>    <b>if</b> (<a class="local col6 ref" href="#186last_func_name" title='last_func_name' data-ref="186last_func_name" data-ref-filename="186last_func_name">last_func_name</a>[<var>0</var>] != <kbd>'\0'</kbd>)</td></tr>
+<tr><th id="463">463</th><td>        <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>" %s()"</q>, <a class="local col6 ref" href="#186last_func_name" title='last_func_name' data-ref="186last_func_name" data-ref-filename="186last_func_name">last_func_name</a>);</td></tr>
+<tr><th id="464">464</th><td>    <b>if</b> (--<a class="local col4 ref" href="#194i" title='i' data-ref="194i" data-ref-filename="194i">i</a> &gt;= <var>0</var>) {</td></tr>
+<tr><th id="465">465</th><td>        <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>" (included from "</q>);</td></tr>
+<tr><th id="466">466</th><td>        <b>for</b> (;;) {</td></tr>
+<tr><th id="467">467</th><td>            <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"%s"</q>, <a class="local col0 ref" href="#190incl_files" title='incl_files' data-ref="190incl_files" data-ref-filename="190incl_files">incl_files</a>[<a class="local col4 ref" href="#194i" title='i' data-ref="194i" data-ref-filename="194i">i</a>]);</td></tr>
+<tr><th id="468">468</th><td>            <b>if</b> (--<a class="local col4 ref" href="#194i" title='i' data-ref="194i" data-ref-filename="194i">i</a> &lt; <var>0</var>)</td></tr>
+<tr><th id="469">469</th><td>                <b>break</b>;</td></tr>
+<tr><th id="470">470</th><td>            <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>", "</q>);</td></tr>
+<tr><th id="471">471</th><td>        }</td></tr>
+<tr><th id="472">472</th><td>        <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>")"</q>);</td></tr>
+<tr><th id="473">473</th><td>    }</td></tr>
+<tr><th id="474">474</th><td>    <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"\n"</q>);</td></tr>
+<tr><th id="475">475</th><td>    <a class="ref fn" href="../include/stdio.h.html#fflush" title='fflush' data-ref="fflush" data-ref-filename="fflush">fflush</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>);</td></tr>
+<tr><th id="476">476</th><td>    <b>return</b> <a class="local col7 ref" href="#187func_addr" title='func_addr' data-ref="187func_addr" data-ref-filename="187func_addr">func_addr</a>;</td></tr>
+<tr><th id="477">477</th><td>}</td></tr>
+<tr><th id="478">478</th><td></td></tr>
+<tr><th id="479">479</th><td><i  data-doc="rt_error">/* emit a run time error at position 'pc' */</i></td></tr>
+<tr><th id="480">480</th><td><em>static</em> <em>void</em> <dfn class="tu decl def fn" id="rt_error" title='rt_error' data-type='void rt_error(ucontext_t * uc, const char * fmt)' data-ref="rt_error" data-ref-filename="rt_error">rt_error</dfn>(<a class="typedef" href="../include/x86_64-linux-gnu/sys/ucontext.h.html#ucontext_t" title='ucontext_t' data-type='struct ucontext_t' data-ref="ucontext_t" data-ref-filename="ucontext_t">ucontext_t</a> *<dfn class="local col8 decl" id="208uc" title='uc' data-type='ucontext_t *' data-ref="208uc" data-ref-filename="208uc">uc</dfn>, <em>const</em> <em>char</em> *<dfn class="local col9 decl" id="209fmt" title='fmt' data-type='const char *' data-ref="209fmt" data-ref-filename="209fmt">fmt</dfn>, ...)</td></tr>
+<tr><th id="481">481</th><td>{</td></tr>
+<tr><th id="482">482</th><td>    <span class='typedef' title='va_list' data-type='__gnuc_va_list' data-ref="va_list" data-ref-filename="va_list">va_list</span> <dfn class="local col0 decl" id="210ap" title='ap' data-type='va_list' data-ref="210ap" data-ref-filename="210ap">ap</dfn>;</td></tr>
+<tr><th id="483">483</th><td>    <a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> <dfn class="local col1 decl" id="211pc" title='pc' data-type='Elf64_Addr' data-ref="211pc" data-ref-filename="211pc">pc</dfn>;</td></tr>
+<tr><th id="484">484</th><td>    <em>int</em> <dfn class="local col2 decl" id="212i" title='i' data-type='int' data-ref="212i" data-ref-filename="212i">i</dfn>;</td></tr>
+<tr><th id="485">485</th><td></td></tr>
+<tr><th id="486">486</th><td>    <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"Runtime error: "</q>);</td></tr>
+<tr><th id="487">487</th><td>    <span class="macro" title="__builtin_va_start(ap, fmt)" data-ref="_M/va_start">va_start</span>(<a class="local col0 ref" href="#210ap" title='ap' data-ref="210ap" data-ref-filename="210ap">ap</a>, <a class="local col9 ref" href="#209fmt" title='fmt' data-ref="209fmt" data-ref-filename="209fmt">fmt</a>);</td></tr>
+<tr><th id="488">488</th><td>    <a class="ref fn" href="../include/stdio.h.html#vfprintf" title='vfprintf' data-ref="vfprintf" data-ref-filename="vfprintf">vfprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <a class="local col9 ref" href="#209fmt" title='fmt' data-ref="209fmt" data-ref-filename="209fmt">fmt</a>, <a class="local col0 ref" href="#210ap" title='ap' data-ref="210ap" data-ref-filename="210ap">ap</a>);</td></tr>
+<tr><th id="489">489</th><td>    <span class="macro" title="__builtin_va_end(ap)" data-ref="_M/va_end">va_end</span>(<a class="local col0 ref" href="#210ap" title='ap' data-ref="210ap" data-ref-filename="210ap">ap</a>);</td></tr>
+<tr><th id="490">490</th><td>    <a class="ref fn" href="../include/stdio.h.html#fprintf" title='fprintf' data-ref="fprintf" data-ref-filename="fprintf">fprintf</a>(<a class="macro" href="../include/stdio.h.html#141" title="stderr" data-ref="_M/stderr">stderr</a>, <q>"\n"</q>);</td></tr>
+<tr><th id="491">491</th><td></td></tr>
+<tr><th id="492">492</th><td>    <b>for</b>(<a class="local col2 ref" href="#212i" title='i' data-ref="212i" data-ref-filename="212i">i</a>=<var>0</var>;<a class="local col2 ref" href="#212i" title='i' data-ref="212i" data-ref-filename="212i">i</a>&lt;<a class="ref" href="tcc.h.html#rt_num_callers" title='rt_num_callers' data-ref="rt_num_callers" data-ref-filename="rt_num_callers">rt_num_callers</a>;<a class="local col2 ref" href="#212i" title='i' data-ref="212i" data-ref-filename="212i">i</a>++) {</td></tr>
+<tr><th id="493">493</th><td>        <b>if</b> (<a class="tu ref fn" href="#rt_get_caller_pc" title='rt_get_caller_pc' data-use='c' data-ref="rt_get_caller_pc" data-ref-filename="rt_get_caller_pc">rt_get_caller_pc</a>(&amp;<a class="local col1 ref" href="#211pc" title='pc' data-ref="211pc" data-ref-filename="211pc">pc</a>, <a class="local col8 ref" href="#208uc" title='uc' data-ref="208uc" data-ref-filename="208uc">uc</a>, <a class="local col2 ref" href="#212i" title='i' data-ref="212i" data-ref-filename="212i">i</a>) &lt; <var>0</var>)</td></tr>
+<tr><th id="494">494</th><td>            <b>break</b>;</td></tr>
+<tr><th id="495">495</th><td>        <a class="local col1 ref" href="#211pc" title='pc' data-ref="211pc" data-ref-filename="211pc">pc</a> = <a class="tu ref fn" href="#rt_printline" title='rt_printline' data-use='c' data-ref="rt_printline" data-ref-filename="rt_printline">rt_printline</a>(<a class="local col1 ref" href="#211pc" title='pc' data-ref="211pc" data-ref-filename="211pc">pc</a>, <a class="local col2 ref" href="#212i" title='i' data-ref="212i" data-ref-filename="212i">i</a> ? <q>"by"</q> : <q>"at"</q>);</td></tr>
+<tr><th id="496">496</th><td>        <b>if</b> (<a class="local col1 ref" href="#211pc" title='pc' data-ref="211pc" data-ref-filename="211pc">pc</a> == (<a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a>)<a class="ref" href="tcc.h.html#rt_prog_main" title='rt_prog_main' data-ref="rt_prog_main" data-ref-filename="rt_prog_main">rt_prog_main</a> &amp;&amp; <a class="local col1 ref" href="#211pc" title='pc' data-ref="211pc" data-ref-filename="211pc">pc</a>)</td></tr>
+<tr><th id="497">497</th><td>            <b>break</b>;</td></tr>
+<tr><th id="498">498</th><td>    }</td></tr>
+<tr><th id="499">499</th><td>}</td></tr>
+<tr><th id="500">500</th><td></td></tr>
+<tr><th id="501">501</th><td><i>/* ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="502">502</th><td><u>#<span data-ppcond="502">ifndef</span> <span class="macro" data-ref="_M/_WIN32">_WIN32</span></u></td></tr>
+<tr><th id="503">503</th><td></td></tr>
+<tr><th id="504">504</th><td><i  data-doc="sig_error">/* signal handler for fatal errors */</i></td></tr>
+<tr><th id="505">505</th><td><em>static</em> <em>void</em> <dfn class="tu decl def fn" id="sig_error" title='sig_error' data-type='void sig_error(int signum, siginfo_t * siginf, void * puc)' data-ref="sig_error" data-ref-filename="sig_error">sig_error</dfn>(<em>int</em> <dfn class="local col3 decl" id="213signum" title='signum' data-type='int' data-ref="213signum" data-ref-filename="213signum">signum</dfn>, <a class="typedef" href="../include/x86_64-linux-gnu/bits/types/siginfo_t.h.html#siginfo_t" title='siginfo_t' data-type='struct siginfo_t' data-ref="siginfo_t" data-ref-filename="siginfo_t">siginfo_t</a> *<dfn class="local col4 decl" id="214siginf" title='siginf' data-type='siginfo_t *' data-ref="214siginf" data-ref-filename="214siginf">siginf</dfn>, <em>void</em> *<dfn class="local col5 decl" id="215puc" title='puc' data-type='void *' data-ref="215puc" data-ref-filename="215puc">puc</dfn>)</td></tr>
+<tr><th id="506">506</th><td>{</td></tr>
+<tr><th id="507">507</th><td>    <a class="typedef" href="../include/x86_64-linux-gnu/sys/ucontext.h.html#ucontext_t" title='ucontext_t' data-type='struct ucontext_t' data-ref="ucontext_t" data-ref-filename="ucontext_t">ucontext_t</a> *<dfn class="local col6 decl" id="216uc" title='uc' data-type='ucontext_t *' data-ref="216uc" data-ref-filename="216uc">uc</dfn> = <a class="local col5 ref" href="#215puc" title='puc' data-ref="215puc" data-ref-filename="215puc">puc</a>;</td></tr>
+<tr><th id="508">508</th><td></td></tr>
+<tr><th id="509">509</th><td>    <b>switch</b>(<a class="local col3 ref" href="#213signum" title='signum' data-ref="213signum" data-ref-filename="213signum">signum</a>) {</td></tr>
+<tr><th id="510">510</th><td>    <b>case</b> <a class="macro" href="../include/x86_64-linux-gnu/bits/signum-generic.h.html#51" title="8" data-ref="_M/SIGFPE">SIGFPE</a>:</td></tr>
+<tr><th id="511">511</th><td>        <b>switch</b>(<a class="local col4 ref" href="#214siginf" title='siginf' data-ref="214siginf" data-ref-filename="214siginf">siginf</a>-&gt;<a class="ref field" href="../include/x86_64-linux-gnu/bits/types/siginfo_t.h.html#(anonymous)::si_code" title='(anonymous struct)::si_code' data-ref="(anonymous)::si_code" data-ref-filename="(anonymous)..si_code">si_code</a>) {</td></tr>
+<tr><th id="512">512</th><td>        <b>case</b> <a class="macro" href="../include/x86_64-linux-gnu/bits/siginfo-consts.h.html#92" title="FPE_INTDIV" data-ref="_M/FPE_INTDIV">FPE_INTDIV</a>:</td></tr>
+<tr><th id="513">513</th><td>        <b>case</b> <a class="macro" href="../include/x86_64-linux-gnu/bits/siginfo-consts.h.html#96" title="FPE_FLTDIV" data-ref="_M/FPE_FLTDIV">FPE_FLTDIV</a>:</td></tr>
+<tr><th id="514">514</th><td>            <a class="tu ref fn" href="#rt_error" title='rt_error' data-use='c' data-ref="rt_error" data-ref-filename="rt_error">rt_error</a>(<a class="local col6 ref" href="#216uc" title='uc' data-ref="216uc" data-ref-filename="216uc">uc</a>, <q>"division by zero"</q>);</td></tr>
+<tr><th id="515">515</th><td>            <b>break</b>;</td></tr>
+<tr><th id="516">516</th><td>        <b>default</b>:</td></tr>
+<tr><th id="517">517</th><td>            <a class="tu ref fn" href="#rt_error" title='rt_error' data-use='c' data-ref="rt_error" data-ref-filename="rt_error">rt_error</a>(<a class="local col6 ref" href="#216uc" title='uc' data-ref="216uc" data-ref-filename="216uc">uc</a>, <q>"floating point exception"</q>);</td></tr>
+<tr><th id="518">518</th><td>            <b>break</b>;</td></tr>
+<tr><th id="519">519</th><td>        }</td></tr>
+<tr><th id="520">520</th><td>        <b>break</b>;</td></tr>
+<tr><th id="521">521</th><td>    <b>case</b> <a class="macro" href="../include/x86_64-linux-gnu/bits/signum.h.html#35" title="7" data-ref="_M/SIGBUS">SIGBUS</a>:</td></tr>
+<tr><th id="522">522</th><td>    <b>case</b> <a class="macro" href="../include/x86_64-linux-gnu/bits/signum-generic.h.html#52" title="11" data-ref="_M/SIGSEGV">SIGSEGV</a>:</td></tr>
+<tr><th id="523">523</th><td>        <b>if</b> (<a class="ref" href="tcc.h.html#rt_bound_error_msg" title='rt_bound_error_msg' data-ref="rt_bound_error_msg" data-ref-filename="rt_bound_error_msg">rt_bound_error_msg</a> &amp;&amp; *<a class="ref" href="tcc.h.html#rt_bound_error_msg" title='rt_bound_error_msg' data-ref="rt_bound_error_msg" data-ref-filename="rt_bound_error_msg">rt_bound_error_msg</a>)</td></tr>
+<tr><th id="524">524</th><td>            <a class="tu ref fn" href="#rt_error" title='rt_error' data-use='c' data-ref="rt_error" data-ref-filename="rt_error">rt_error</a>(<a class="local col6 ref" href="#216uc" title='uc' data-ref="216uc" data-ref-filename="216uc">uc</a>, *<a class="ref" href="tcc.h.html#rt_bound_error_msg" title='rt_bound_error_msg' data-ref="rt_bound_error_msg" data-ref-filename="rt_bound_error_msg">rt_bound_error_msg</a>);</td></tr>
+<tr><th id="525">525</th><td>        <b>else</b></td></tr>
+<tr><th id="526">526</th><td>            <a class="tu ref fn" href="#rt_error" title='rt_error' data-use='c' data-ref="rt_error" data-ref-filename="rt_error">rt_error</a>(<a class="local col6 ref" href="#216uc" title='uc' data-ref="216uc" data-ref-filename="216uc">uc</a>, <q>"dereferencing invalid pointer"</q>);</td></tr>
+<tr><th id="527">527</th><td>        <b>break</b>;</td></tr>
+<tr><th id="528">528</th><td>    <b>case</b> <a class="macro" href="../include/x86_64-linux-gnu/bits/signum-generic.h.html#49" title="4" data-ref="_M/SIGILL">SIGILL</a>:</td></tr>
+<tr><th id="529">529</th><td>        <a class="tu ref fn" href="#rt_error" title='rt_error' data-use='c' data-ref="rt_error" data-ref-filename="rt_error">rt_error</a>(<a class="local col6 ref" href="#216uc" title='uc' data-ref="216uc" data-ref-filename="216uc">uc</a>, <q>"illegal instruction"</q>);</td></tr>
+<tr><th id="530">530</th><td>        <b>break</b>;</td></tr>
+<tr><th id="531">531</th><td>    <b>case</b> <a class="macro" href="../include/x86_64-linux-gnu/bits/signum-generic.h.html#50" title="6" data-ref="_M/SIGABRT">SIGABRT</a>:</td></tr>
+<tr><th id="532">532</th><td>        <a class="tu ref fn" href="#rt_error" title='rt_error' data-use='c' data-ref="rt_error" data-ref-filename="rt_error">rt_error</a>(<a class="local col6 ref" href="#216uc" title='uc' data-ref="216uc" data-ref-filename="216uc">uc</a>, <q>"abort() called"</q>);</td></tr>
+<tr><th id="533">533</th><td>        <b>break</b>;</td></tr>
+<tr><th id="534">534</th><td>    <b>default</b>:</td></tr>
+<tr><th id="535">535</th><td>        <a class="tu ref fn" href="#rt_error" title='rt_error' data-use='c' data-ref="rt_error" data-ref-filename="rt_error">rt_error</a>(<a class="local col6 ref" href="#216uc" title='uc' data-ref="216uc" data-ref-filename="216uc">uc</a>, <q>"caught signal %d"</q>, <a class="local col3 ref" href="#213signum" title='signum' data-ref="213signum" data-ref-filename="213signum">signum</a>);</td></tr>
+<tr><th id="536">536</th><td>        <b>break</b>;</td></tr>
+<tr><th id="537">537</th><td>    }</td></tr>
+<tr><th id="538">538</th><td>    <a class="ref fn" href="../include/stdlib.h.html#exit" title='exit' data-ref="exit" data-ref-filename="exit">exit</a>(<var>255</var>);</td></tr>
+<tr><th id="539">539</th><td>}</td></tr>
+<tr><th id="540">540</th><td></td></tr>
+<tr><th id="541">541</th><td><u>#<span data-ppcond="541">ifndef</span> <a class="macro" href="../include/x86_64-linux-gnu/bits/sigaction.h.html#55" data-ref="_M/SA_SIGINFO">SA_SIGINFO</a></u></td></tr>
+<tr><th id="542">542</th><td><u># define SA_SIGINFO 0x00000004u</u></td></tr>
+<tr><th id="543">543</th><td><u>#<span data-ppcond="541">endif</span></u></td></tr>
+<tr><th id="544">544</th><td></td></tr>
+<tr><th id="545">545</th><td><i  data-doc="set_exception_handler">/* Generate a stack backtrace when a CPU exception occurs. */</i></td></tr>
+<tr><th id="546">546</th><td><em>static</em> <em>void</em> <dfn class="tu decl def fn" id="set_exception_handler" title='set_exception_handler' data-type='void set_exception_handler()' data-ref="set_exception_handler" data-ref-filename="set_exception_handler">set_exception_handler</dfn>(<em>void</em>)</td></tr>
+<tr><th id="547">547</th><td>{</td></tr>
+<tr><th id="548">548</th><td>    <b>struct</b> <a class="type" href="../include/x86_64-linux-gnu/bits/sigaction.h.html#sigaction" title='sigaction' data-ref="sigaction" data-ref-filename="sigaction">sigaction</a> <dfn class="local col7 decl" id="217sigact" title='sigact' data-type='struct sigaction' data-ref="217sigact" data-ref-filename="217sigact">sigact</dfn>;</td></tr>
+<tr><th id="549">549</th><td>    <i>/* install TCC signal handlers to print debug info on fatal</i></td></tr>
+<tr><th id="550">550</th><td><i>       runtime errors */</i></td></tr>
+<tr><th id="551">551</th><td>    <a class="local col7 ref" href="#217sigact" title='sigact' data-ref="217sigact" data-ref-filename="217sigact">sigact</a>.<a class="ref field" href="../include/x86_64-linux-gnu/bits/sigaction.h.html#sigaction::sa_flags" title='sigaction::sa_flags' data-ref="sigaction::sa_flags" data-ref-filename="sigaction..sa_flags">sa_flags</a> = <a class="macro" href="../include/x86_64-linux-gnu/bits/sigaction.h.html#55" title="4" data-ref="_M/SA_SIGINFO">SA_SIGINFO</a> | <a class="macro" href="../include/x86_64-linux-gnu/bits/sigaction.h.html#64" title="0x80000000" data-ref="_M/SA_RESETHAND">SA_RESETHAND</a>;</td></tr>
+<tr><th id="552">552</th><td>    <a class="local col7 ref" href="#217sigact" title='sigact' data-ref="217sigact" data-ref-filename="217sigact">sigact</a>.<a class="macro" href="../include/x86_64-linux-gnu/bits/sigaction.h.html#37" title="__sigaction_handler.sa_sigaction" data-ref="_M/sa_sigaction">sa_sigaction</a> = <a class="tu ref fn" href="#sig_error" title='sig_error' data-use='r' data-ref="sig_error" data-ref-filename="sig_error">sig_error</a>;</td></tr>
+<tr><th id="553">553</th><td>    <a class="ref fn" href="../include/signal.h.html#sigemptyset" title='sigemptyset' data-ref="sigemptyset" data-ref-filename="sigemptyset">sigemptyset</a>(&amp;<a class="local col7 ref" href="#217sigact" title='sigact' data-ref="217sigact" data-ref-filename="217sigact">sigact</a>.<a class="ref field" href="../include/x86_64-linux-gnu/bits/sigaction.h.html#sigaction::sa_mask" title='sigaction::sa_mask' data-ref="sigaction::sa_mask" data-ref-filename="sigaction..sa_mask">sa_mask</a>);</td></tr>
+<tr><th id="554">554</th><td>    <a class="ref fn" href="../include/signal.h.html#sigaction" title='sigaction' data-ref="sigaction" data-ref-filename="sigaction">sigaction</a>(<a class="macro" href="../include/x86_64-linux-gnu/bits/signum-generic.h.html#51" title="8" data-ref="_M/SIGFPE">SIGFPE</a>, &amp;<a class="local col7 ref" href="#217sigact" title='sigact' data-ref="217sigact" data-ref-filename="217sigact">sigact</a>, <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>);</td></tr>
+<tr><th id="555">555</th><td>    <a class="ref fn" href="../include/signal.h.html#sigaction" title='sigaction' data-ref="sigaction" data-ref-filename="sigaction">sigaction</a>(<a class="macro" href="../include/x86_64-linux-gnu/bits/signum-generic.h.html#49" title="4" data-ref="_M/SIGILL">SIGILL</a>, &amp;<a class="local col7 ref" href="#217sigact" title='sigact' data-ref="217sigact" data-ref-filename="217sigact">sigact</a>, <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>);</td></tr>
+<tr><th id="556">556</th><td>    <a class="ref fn" href="../include/signal.h.html#sigaction" title='sigaction' data-ref="sigaction" data-ref-filename="sigaction">sigaction</a>(<a class="macro" href="../include/x86_64-linux-gnu/bits/signum-generic.h.html#52" title="11" data-ref="_M/SIGSEGV">SIGSEGV</a>, &amp;<a class="local col7 ref" href="#217sigact" title='sigact' data-ref="217sigact" data-ref-filename="217sigact">sigact</a>, <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>);</td></tr>
+<tr><th id="557">557</th><td>    <a class="ref fn" href="../include/signal.h.html#sigaction" title='sigaction' data-ref="sigaction" data-ref-filename="sigaction">sigaction</a>(<a class="macro" href="../include/x86_64-linux-gnu/bits/signum.h.html#35" title="7" data-ref="_M/SIGBUS">SIGBUS</a>, &amp;<a class="local col7 ref" href="#217sigact" title='sigact' data-ref="217sigact" data-ref-filename="217sigact">sigact</a>, <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>);</td></tr>
+<tr><th id="558">558</th><td>    <a class="ref fn" href="../include/signal.h.html#sigaction" title='sigaction' data-ref="sigaction" data-ref-filename="sigaction">sigaction</a>(<a class="macro" href="../include/x86_64-linux-gnu/bits/signum-generic.h.html#50" title="6" data-ref="_M/SIGABRT">SIGABRT</a>, &amp;<a class="local col7 ref" href="#217sigact" title='sigact' data-ref="217sigact" data-ref-filename="217sigact">sigact</a>, <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>);</td></tr>
+<tr><th id="559">559</th><td>}</td></tr>
+<tr><th id="560">560</th><td></td></tr>
+<tr><th id="561">561</th><td><i>/* ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="562">562</th><td><u>#<span data-ppcond="562">ifdef</span> <span class="macro" data-ref="_M/__i386__">__i386__</span></u></td></tr>
+<tr><th id="563">563</th><td></td></tr>
+<tr><th id="564">564</th><td><i>/* fix for glibc 2.1 */</i></td></tr>
+<tr><th id="565">565</th><td><u>#ifndef REG_EIP</u></td></tr>
+<tr><th id="566">566</th><td><u>#define REG_EIP EIP</u></td></tr>
+<tr><th id="567">567</th><td><u>#define REG_EBP EBP</u></td></tr>
+<tr><th id="568">568</th><td><u>#endif</u></td></tr>
+<tr><th id="569">569</th><td></td></tr>
+<tr><th id="570">570</th><td><i>/* return the PC at frame level 'level'. Return negative if not found */</i></td></tr>
+<tr><th id="571">571</th><td><em>static</em> <em>int</em> rt_get_caller_pc(addr_t *paddr, ucontext_t *uc, <em>int</em> level)</td></tr>
+<tr><th id="572">572</th><td>{</td></tr>
+<tr><th id="573">573</th><td>    addr_t fp;</td></tr>
+<tr><th id="574">574</th><td>    <em>int</em> i;</td></tr>
+<tr><th id="575">575</th><td></td></tr>
+<tr><th id="576">576</th><td>    <b>if</b> (level == <var>0</var>) {</td></tr>
+<tr><th id="577">577</th><td><u>#if defined(__APPLE__)</u></td></tr>
+<tr><th id="578">578</th><td>        *paddr = uc-&gt;uc_mcontext-&gt;__ss.__eip;</td></tr>
+<tr><th id="579">579</th><td><u>#elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)</u></td></tr>
+<tr><th id="580">580</th><td>        *paddr = uc-&gt;uc_mcontext.mc_eip;</td></tr>
+<tr><th id="581">581</th><td><u>#elif defined(__dietlibc__)</u></td></tr>
+<tr><th id="582">582</th><td>        *paddr = uc-&gt;uc_mcontext.eip;</td></tr>
+<tr><th id="583">583</th><td><u>#elif defined(__NetBSD__)</u></td></tr>
+<tr><th id="584">584</th><td>        *paddr = uc-&gt;uc_mcontext.__gregs[_REG_EIP];</td></tr>
+<tr><th id="585">585</th><td><u>#elif defined(__OpenBSD__)</u></td></tr>
+<tr><th id="586">586</th><td>        *paddr = uc-&gt;sc_eip;</td></tr>
+<tr><th id="587">587</th><td><u>#else</u></td></tr>
+<tr><th id="588">588</th><td>        *paddr = uc-&gt;uc_mcontext.gregs[REG_EIP];</td></tr>
+<tr><th id="589">589</th><td><u>#endif</u></td></tr>
+<tr><th id="590">590</th><td>        <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="591">591</th><td>    } <b>else</b> {</td></tr>
+<tr><th id="592">592</th><td><u>#if defined(__APPLE__)</u></td></tr>
+<tr><th id="593">593</th><td>        fp = uc-&gt;uc_mcontext-&gt;__ss.__ebp;</td></tr>
+<tr><th id="594">594</th><td><u>#elif defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)</u></td></tr>
+<tr><th id="595">595</th><td>        fp = uc-&gt;uc_mcontext.mc_ebp;</td></tr>
+<tr><th id="596">596</th><td><u>#elif defined(__dietlibc__)</u></td></tr>
+<tr><th id="597">597</th><td>        fp = uc-&gt;uc_mcontext.ebp;</td></tr>
+<tr><th id="598">598</th><td><u>#elif defined(__NetBSD__)</u></td></tr>
+<tr><th id="599">599</th><td>        fp = uc-&gt;uc_mcontext.__gregs[_REG_EBP];</td></tr>
+<tr><th id="600">600</th><td><u>#elif defined(__OpenBSD__)</u></td></tr>
+<tr><th id="601">601</th><td>        *paddr = uc-&gt;sc_ebp;</td></tr>
+<tr><th id="602">602</th><td><u>#else</u></td></tr>
+<tr><th id="603">603</th><td>        fp = uc-&gt;uc_mcontext.gregs[REG_EBP];</td></tr>
+<tr><th id="604">604</th><td><u>#endif</u></td></tr>
+<tr><th id="605">605</th><td>        <b>for</b>(i=<var>1</var>;i&lt;level;i++) {</td></tr>
+<tr><th id="606">606</th><td>            <i>/* XXX: check address validity with program info */</i></td></tr>
+<tr><th id="607">607</th><td>            <b>if</b> (fp &lt;= <var>0x1000</var> || fp &gt;= <var>0xc0000000</var>)</td></tr>
+<tr><th id="608">608</th><td>                <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="609">609</th><td>            fp = ((addr_t *)fp)[<var>0</var>];</td></tr>
+<tr><th id="610">610</th><td>        }</td></tr>
+<tr><th id="611">611</th><td>        *paddr = ((addr_t *)fp)[<var>1</var>];</td></tr>
+<tr><th id="612">612</th><td>        <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="613">613</th><td>    }</td></tr>
+<tr><th id="614">614</th><td>}</td></tr>
+<tr><th id="615">615</th><td></td></tr>
+<tr><th id="616">616</th><td><i>/* ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="617">617</th><td><u>#<span data-ppcond="562">elif</span> defined(<span class="macro" data-ref="_M/__x86_64__">__x86_64__</span>)</u></td></tr>
+<tr><th id="618">618</th><td></td></tr>
+<tr><th id="619">619</th><td><i  data-doc="rt_get_caller_pc">/* return the PC at frame level 'level'. Return negative if not found */</i></td></tr>
+<tr><th id="620">620</th><td><em>static</em> <em>int</em> <dfn class="tu decl def fn" id="rt_get_caller_pc" title='rt_get_caller_pc' data-type='int rt_get_caller_pc(Elf64_Addr * paddr, ucontext_t * uc, int level)' data-ref="rt_get_caller_pc" data-ref-filename="rt_get_caller_pc">rt_get_caller_pc</dfn>(<a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> *<dfn class="local col8 decl" id="218paddr" title='paddr' data-type='Elf64_Addr *' data-ref="218paddr" data-ref-filename="218paddr">paddr</dfn>, <a class="typedef" href="../include/x86_64-linux-gnu/sys/ucontext.h.html#ucontext_t" title='ucontext_t' data-type='struct ucontext_t' data-ref="ucontext_t" data-ref-filename="ucontext_t">ucontext_t</a> *<dfn class="local col9 decl" id="219uc" title='uc' data-type='ucontext_t *' data-ref="219uc" data-ref-filename="219uc">uc</dfn>, <em>int</em> <dfn class="local col0 decl" id="220level" title='level' data-type='int' data-ref="220level" data-ref-filename="220level">level</dfn>)</td></tr>
+<tr><th id="621">621</th><td>{</td></tr>
+<tr><th id="622">622</th><td>    <a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> <dfn class="local col1 decl" id="221fp" title='fp' data-type='Elf64_Addr' data-ref="221fp" data-ref-filename="221fp">fp</dfn>;</td></tr>
+<tr><th id="623">623</th><td>    <em>int</em> <dfn class="local col2 decl" id="222i" title='i' data-type='int' data-ref="222i" data-ref-filename="222i">i</dfn>;</td></tr>
+<tr><th id="624">624</th><td></td></tr>
+<tr><th id="625">625</th><td>    <b>if</b> (<a class="local col0 ref" href="#220level" title='level' data-ref="220level" data-ref-filename="220level">level</a> == <var>0</var>) {</td></tr>
+<tr><th id="626">626</th><td>        <i>/* XXX: only support linux */</i></td></tr>
+<tr><th id="627">627</th><td><u>#<span data-ppcond="627">if</span> defined(<span class="macro" data-ref="_M/__APPLE__">__APPLE__</span>)</u></td></tr>
+<tr><th id="628">628</th><td>        *paddr = uc-&gt;uc_mcontext-&gt;__ss.__rip;</td></tr>
+<tr><th id="629">629</th><td><u>#<span data-ppcond="627">elif</span> defined(<span class="macro" data-ref="_M/__FreeBSD__">__FreeBSD__</span>) || defined(<span class="macro" data-ref="_M/__FreeBSD_kernel__">__FreeBSD_kernel__</span>) || defined(<span class="macro" data-ref="_M/__DragonFly__">__DragonFly__</span>)</u></td></tr>
+<tr><th id="630">630</th><td>        *paddr = uc-&gt;uc_mcontext.mc_rip;</td></tr>
+<tr><th id="631">631</th><td><u>#<span data-ppcond="627">elif</span> defined(<span class="macro" data-ref="_M/__NetBSD__">__NetBSD__</span>)</u></td></tr>
+<tr><th id="632">632</th><td>        *paddr = uc-&gt;uc_mcontext.__gregs[_REG_RIP];</td></tr>
+<tr><th id="633">633</th><td><u>#<span data-ppcond="627">else</span></u></td></tr>
+<tr><th id="634">634</th><td>        *<a class="local col8 ref" href="#218paddr" title='paddr' data-ref="218paddr" data-ref-filename="218paddr">paddr</a> = <a class="local col9 ref" href="#219uc" title='uc' data-ref="219uc" data-ref-filename="219uc">uc</a>-&gt;<a class="ref field" href="../include/x86_64-linux-gnu/sys/ucontext.h.html#ucontext_t::uc_mcontext" title='ucontext_t::uc_mcontext' data-ref="ucontext_t::uc_mcontext" data-ref-filename="ucontext_t..uc_mcontext">uc_mcontext</a>.<a class="ref field" href="../include/x86_64-linux-gnu/sys/ucontext.h.html#135" title='(anonymous struct)::gregs' data-ref="(anonymous)::gregs" data-ref-filename="(anonymous)..gregs">gregs</a>[<a class="macro" href="../include/x86_64-linux-gnu/sys/ucontext.h.html#85" title="REG_RIP" data-ref="_M/REG_RIP">REG_RIP</a>];</td></tr>
+<tr><th id="635">635</th><td><u>#<span data-ppcond="627">endif</span></u></td></tr>
+<tr><th id="636">636</th><td>        <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="637">637</th><td>    } <b>else</b> {</td></tr>
+<tr><th id="638">638</th><td><u>#<span data-ppcond="638">if</span> defined(<span class="macro" data-ref="_M/__APPLE__">__APPLE__</span>)</u></td></tr>
+<tr><th id="639">639</th><td>        fp = uc-&gt;uc_mcontext-&gt;__ss.__rbp;</td></tr>
+<tr><th id="640">640</th><td><u>#<span data-ppcond="638">elif</span> defined(<span class="macro" data-ref="_M/__FreeBSD__">__FreeBSD__</span>) || defined(<span class="macro" data-ref="_M/__FreeBSD_kernel__">__FreeBSD_kernel__</span>) || defined(<span class="macro" data-ref="_M/__DragonFly__">__DragonFly__</span>)</u></td></tr>
+<tr><th id="641">641</th><td>        fp = uc-&gt;uc_mcontext.mc_rbp;</td></tr>
+<tr><th id="642">642</th><td><u>#<span data-ppcond="638">elif</span> defined(<span class="macro" data-ref="_M/__NetBSD__">__NetBSD__</span>)</u></td></tr>
+<tr><th id="643">643</th><td>        fp = uc-&gt;uc_mcontext.__gregs[_REG_RBP];</td></tr>
+<tr><th id="644">644</th><td><u>#<span data-ppcond="638">else</span></u></td></tr>
+<tr><th id="645">645</th><td>        <a class="local col1 ref" href="#221fp" title='fp' data-ref="221fp" data-ref-filename="221fp">fp</a> = <a class="local col9 ref" href="#219uc" title='uc' data-ref="219uc" data-ref-filename="219uc">uc</a>-&gt;<a class="ref field" href="../include/x86_64-linux-gnu/sys/ucontext.h.html#ucontext_t::uc_mcontext" title='ucontext_t::uc_mcontext' data-ref="ucontext_t::uc_mcontext" data-ref-filename="ucontext_t..uc_mcontext">uc_mcontext</a>.<a class="ref field" href="../include/x86_64-linux-gnu/sys/ucontext.h.html#135" title='(anonymous struct)::gregs' data-ref="(anonymous)::gregs" data-ref-filename="(anonymous)..gregs">gregs</a>[<a class="macro" href="../include/x86_64-linux-gnu/sys/ucontext.h.html#73" title="REG_RBP" data-ref="_M/REG_RBP">REG_RBP</a>];</td></tr>
+<tr><th id="646">646</th><td><u>#<span data-ppcond="638">endif</span></u></td></tr>
+<tr><th id="647">647</th><td>        <b>for</b>(<a class="local col2 ref" href="#222i" title='i' data-ref="222i" data-ref-filename="222i">i</a>=<var>1</var>;<a class="local col2 ref" href="#222i" title='i' data-ref="222i" data-ref-filename="222i">i</a>&lt;<a class="local col0 ref" href="#220level" title='level' data-ref="220level" data-ref-filename="220level">level</a>;<a class="local col2 ref" href="#222i" title='i' data-ref="222i" data-ref-filename="222i">i</a>++) {</td></tr>
+<tr><th id="648">648</th><td>            <i>/* XXX: check address validity with program info */</i></td></tr>
+<tr><th id="649">649</th><td>            <b>if</b> (<a class="local col1 ref" href="#221fp" title='fp' data-ref="221fp" data-ref-filename="221fp">fp</a> &lt;= <var>0x1000</var>)</td></tr>
+<tr><th id="650">650</th><td>                <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="651">651</th><td>            <a class="local col1 ref" href="#221fp" title='fp' data-ref="221fp" data-ref-filename="221fp">fp</a> = ((<a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> *)<a class="local col1 ref" href="#221fp" title='fp' data-ref="221fp" data-ref-filename="221fp">fp</a>)[<var>0</var>];</td></tr>
+<tr><th id="652">652</th><td>        }</td></tr>
+<tr><th id="653">653</th><td>        *<a class="local col8 ref" href="#218paddr" title='paddr' data-ref="218paddr" data-ref-filename="218paddr">paddr</a> = ((<a class="macro" href="tcc.h.html#371" title="Elf64_Addr" data-ref="_M/addr_t">addr_t</a> *)<a class="local col1 ref" href="#221fp" title='fp' data-ref="221fp" data-ref-filename="221fp">fp</a>)[<var>1</var>];</td></tr>
+<tr><th id="654">654</th><td>        <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="655">655</th><td>    }</td></tr>
+<tr><th id="656">656</th><td>}</td></tr>
+<tr><th id="657">657</th><td></td></tr>
+<tr><th id="658">658</th><td><i>/* ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="659">659</th><td><u>#<span data-ppcond="562">elif</span> defined(__arm__)</u></td></tr>
+<tr><th id="660">660</th><td></td></tr>
+<tr><th id="661">661</th><td><i>/* return the PC at frame level 'level'. Return negative if not found */</i></td></tr>
+<tr><th id="662">662</th><td><em>static</em> <em>int</em> rt_get_caller_pc(addr_t *paddr, ucontext_t *uc, <em>int</em> level)</td></tr>
+<tr><th id="663">663</th><td>{</td></tr>
+<tr><th id="664">664</th><td>    addr_t fp, sp;</td></tr>
+<tr><th id="665">665</th><td>    <em>int</em> i;</td></tr>
+<tr><th id="666">666</th><td></td></tr>
+<tr><th id="667">667</th><td>    <b>if</b> (level == <var>0</var>) {</td></tr>
+<tr><th id="668">668</th><td>        <i>/* XXX: only supports linux */</i></td></tr>
+<tr><th id="669">669</th><td><u>#if defined(__linux__)</u></td></tr>
+<tr><th id="670">670</th><td>        *paddr = uc-&gt;uc_mcontext.arm_pc;</td></tr>
+<tr><th id="671">671</th><td><u>#else</u></td></tr>
+<tr><th id="672">672</th><td>        <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="673">673</th><td><u>#endif</u></td></tr>
+<tr><th id="674">674</th><td>        <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="675">675</th><td>    } <b>else</b> {</td></tr>
+<tr><th id="676">676</th><td><u>#if defined(__linux__)</u></td></tr>
+<tr><th id="677">677</th><td>        fp = uc-&gt;uc_mcontext.arm_fp;</td></tr>
+<tr><th id="678">678</th><td>        sp = uc-&gt;uc_mcontext.arm_sp;</td></tr>
+<tr><th id="679">679</th><td>        <b>if</b> (sp &lt; <var>0x1000</var>)</td></tr>
+<tr><th id="680">680</th><td>            sp = <var>0x1000</var>;</td></tr>
+<tr><th id="681">681</th><td><u>#else</u></td></tr>
+<tr><th id="682">682</th><td>        <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="683">683</th><td><u>#endif</u></td></tr>
+<tr><th id="684">684</th><td>        <i>/* XXX: specific to tinycc stack frames */</i></td></tr>
+<tr><th id="685">685</th><td>        <b>if</b> (fp &lt; sp + <var>12</var> || fp &amp; <var>3</var>)</td></tr>
+<tr><th id="686">686</th><td>            <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="687">687</th><td>        <b>for</b>(i = <var>1</var>; i &lt; level; i++) {</td></tr>
+<tr><th id="688">688</th><td>            sp = ((addr_t *)fp)[-<var>2</var>];</td></tr>
+<tr><th id="689">689</th><td>            <b>if</b> (sp &lt; fp || sp - fp &gt; <var>16</var> || sp &amp; <var>3</var>)</td></tr>
+<tr><th id="690">690</th><td>                <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="691">691</th><td>            fp = ((addr_t *)fp)[-<var>3</var>];</td></tr>
+<tr><th id="692">692</th><td>            <b>if</b> (fp &lt;= sp || fp - sp &lt; <var>12</var> || fp &amp; <var>3</var>)</td></tr>
+<tr><th id="693">693</th><td>                <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="694">694</th><td>        }</td></tr>
+<tr><th id="695">695</th><td>        <i>/* XXX: check address validity with program info */</i></td></tr>
+<tr><th id="696">696</th><td>        *paddr = ((addr_t *)fp)[-<var>1</var>];</td></tr>
+<tr><th id="697">697</th><td>        <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="698">698</th><td>    }</td></tr>
+<tr><th id="699">699</th><td>}</td></tr>
+<tr><th id="700">700</th><td></td></tr>
+<tr><th id="701">701</th><td><i>/* ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="702">702</th><td><u>#elif defined(__aarch64__)</u></td></tr>
+<tr><th id="703">703</th><td></td></tr>
+<tr><th id="704">704</th><td><em>static</em> <em>int</em> rt_get_caller_pc(addr_t *paddr, ucontext_t *uc, <em>int</em> level)</td></tr>
+<tr><th id="705">705</th><td>{</td></tr>
+<tr><th id="706">706</th><td>    <b>if</b> (level &lt; <var>0</var>)</td></tr>
+<tr><th id="707">707</th><td>        <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="708">708</th><td>    <b>else</b> <b>if</b> (level == <var>0</var>) {</td></tr>
+<tr><th id="709">709</th><td>        *paddr = uc-&gt;uc_mcontext.pc;</td></tr>
+<tr><th id="710">710</th><td>        <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="711">711</th><td>    }</td></tr>
+<tr><th id="712">712</th><td>    <b>else</b> {</td></tr>
+<tr><th id="713">713</th><td>        addr_t *fp = (addr_t *)uc-&gt;uc_mcontext.regs[<var>29</var>];</td></tr>
+<tr><th id="714">714</th><td>        <em>int</em> i;</td></tr>
+<tr><th id="715">715</th><td>        <b>for</b> (i = <var>1</var>; i &lt; level; i++)</td></tr>
+<tr><th id="716">716</th><td>            fp = (addr_t *)fp[<var>0</var>];</td></tr>
+<tr><th id="717">717</th><td>        *paddr = fp[<var>1</var>];</td></tr>
+<tr><th id="718">718</th><td>        <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="719">719</th><td>    }</td></tr>
+<tr><th id="720">720</th><td>}</td></tr>
+<tr><th id="721">721</th><td></td></tr>
+<tr><th id="722">722</th><td><i>/* ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="723">723</th><td><u>#else</u></td></tr>
+<tr><th id="724">724</th><td></td></tr>
+<tr><th id="725">725</th><td><u>#warning add arch specific rt_get_caller_pc()</u></td></tr>
+<tr><th id="726">726</th><td><em>static</em> <em>int</em> rt_get_caller_pc(addr_t *paddr, ucontext_t *uc, <em>int</em> level)</td></tr>
+<tr><th id="727">727</th><td>{</td></tr>
+<tr><th id="728">728</th><td>    <b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="729">729</th><td>}</td></tr>
+<tr><th id="730">730</th><td></td></tr>
+<tr><th id="731">731</th><td><u>#<span data-ppcond="562">endif</span> /* !__i386__ */</u></td></tr>
+<tr><th id="732">732</th><td></td></tr>
+<tr><th id="733">733</th><td><i>/* ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="734">734</th><td><u>#<span data-ppcond="502">else</span> /* WIN32 */</u></td></tr>
+<tr><th id="735">735</th><td></td></tr>
+<tr><th id="736">736</th><td><em>static</em> <em>long</em> <b>__stdcall</b> cpu_exception_handler(EXCEPTION_POINTERS *ex_info)</td></tr>
+<tr><th id="737">737</th><td>{</td></tr>
+<tr><th id="738">738</th><td>    EXCEPTION_RECORD *er = ex_info-&gt;ExceptionRecord;</td></tr>
+<tr><th id="739">739</th><td>    CONTEXT *uc = ex_info-&gt;ContextRecord;</td></tr>
+<tr><th id="740">740</th><td>    <b>switch</b> (er-&gt;ExceptionCode) {</td></tr>
+<tr><th id="741">741</th><td>    <b>case</b> EXCEPTION_ACCESS_VIOLATION:</td></tr>
+<tr><th id="742">742</th><td>        <b>if</b> (rt_bound_error_msg &amp;&amp; *rt_bound_error_msg)</td></tr>
+<tr><th id="743">743</th><td>            rt_error(uc, *rt_bound_error_msg);</td></tr>
+<tr><th id="744">744</th><td>        <b>else</b></td></tr>
+<tr><th id="745">745</th><td>	    rt_error(uc, <q>"access violation"</q>);</td></tr>
+<tr><th id="746">746</th><td>        <b>break</b>;</td></tr>
+<tr><th id="747">747</th><td>    <b>case</b> EXCEPTION_STACK_OVERFLOW:</td></tr>
+<tr><th id="748">748</th><td>        rt_error(uc, <q>"stack overflow"</q>);</td></tr>
+<tr><th id="749">749</th><td>        <b>break</b>;</td></tr>
+<tr><th id="750">750</th><td>    <b>case</b> EXCEPTION_INT_DIVIDE_BY_ZERO:</td></tr>
+<tr><th id="751">751</th><td>        rt_error(uc, <q>"division by zero"</q>);</td></tr>
+<tr><th id="752">752</th><td>        <b>break</b>;</td></tr>
+<tr><th id="753">753</th><td>    <b>default</b>:</td></tr>
+<tr><th id="754">754</th><td>        rt_error(uc, <q>"exception caught"</q>);</td></tr>
+<tr><th id="755">755</th><td>        <b>break</b>;</td></tr>
+<tr><th id="756">756</th><td>    }</td></tr>
+<tr><th id="757">757</th><td>    <b>return</b> EXCEPTION_EXECUTE_HANDLER;</td></tr>
+<tr><th id="758">758</th><td>}</td></tr>
+<tr><th id="759">759</th><td></td></tr>
+<tr><th id="760">760</th><td><i>/* Generate a stack backtrace when a CPU exception occurs. */</i></td></tr>
+<tr><th id="761">761</th><td><em>static</em> <em>void</em> set_exception_handler(<em>void</em>)</td></tr>
+<tr><th id="762">762</th><td>{</td></tr>
+<tr><th id="763">763</th><td>    SetUnhandledExceptionFilter(cpu_exception_handler);</td></tr>
+<tr><th id="764">764</th><td>}</td></tr>
+<tr><th id="765">765</th><td></td></tr>
+<tr><th id="766">766</th><td><i>/* return the PC at frame level 'level'. Return non zero if not found */</i></td></tr>
+<tr><th id="767">767</th><td><em>static</em> <em>int</em> rt_get_caller_pc(addr_t *paddr, CONTEXT *uc, <em>int</em> level)</td></tr>
+<tr><th id="768">768</th><td>{</td></tr>
+<tr><th id="769">769</th><td>    addr_t fp, pc;</td></tr>
+<tr><th id="770">770</th><td>    <em>int</em> i;</td></tr>
+<tr><th id="771">771</th><td><u>#ifdef _WIN64</u></td></tr>
+<tr><th id="772">772</th><td>    pc = uc-&gt;Rip;</td></tr>
+<tr><th id="773">773</th><td>    fp = uc-&gt;Rbp;</td></tr>
+<tr><th id="774">774</th><td><u>#else</u></td></tr>
+<tr><th id="775">775</th><td>    pc = uc-&gt;Eip;</td></tr>
+<tr><th id="776">776</th><td>    fp = uc-&gt;Ebp;</td></tr>
+<tr><th id="777">777</th><td><u>#endif</u></td></tr>
+<tr><th id="778">778</th><td>    <b>if</b> (level &gt; <var>0</var>) {</td></tr>
+<tr><th id="779">779</th><td>        <b>for</b>(i=<var>1</var>;i&lt;level;i++) {</td></tr>
+<tr><th id="780">780</th><td>	    <i>/* XXX: check address validity with program info */</i></td></tr>
+<tr><th id="781">781</th><td>	    <b>if</b> (fp &lt;= <var>0x1000</var> || fp &gt;= <var>0xc0000000</var>)</td></tr>
+<tr><th id="782">782</th><td>		<b>return</b> -<var>1</var>;</td></tr>
+<tr><th id="783">783</th><td>	    fp = ((addr_t*)fp)[<var>0</var>];</td></tr>
+<tr><th id="784">784</th><td>	}</td></tr>
+<tr><th id="785">785</th><td>        pc = ((addr_t*)fp)[<var>1</var>];</td></tr>
+<tr><th id="786">786</th><td>    }</td></tr>
+<tr><th id="787">787</th><td>    *paddr = pc;</td></tr>
+<tr><th id="788">788</th><td>    <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="789">789</th><td>}</td></tr>
+<tr><th id="790">790</th><td></td></tr>
+<tr><th id="791">791</th><td><u>#<span data-ppcond="502">endif</span> /* _WIN32 */</u></td></tr>
+<tr><th id="792">792</th><td><u>#<span data-ppcond="329">endif</span> /* CONFIG_TCC_BACKTRACE */</u></td></tr>
+<tr><th id="793">793</th><td><i>/* ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="794">794</th><td><u>#<span data-ppcond="794">ifdef</span> <span class="macro" data-ref="_M/CONFIG_TCC_STATIC">CONFIG_TCC_STATIC</span></u></td></tr>
+<tr><th id="795">795</th><td></td></tr>
+<tr><th id="796">796</th><td><i>/* dummy function for profiling */</i></td></tr>
+<tr><th id="797">797</th><td>ST_FUNC <em>void</em> *dlopen(<em>const</em> <em>char</em> *filename, <em>int</em> flag)</td></tr>
+<tr><th id="798">798</th><td>{</td></tr>
+<tr><th id="799">799</th><td>    <b>return</b> NULL;</td></tr>
+<tr><th id="800">800</th><td>}</td></tr>
+<tr><th id="801">801</th><td></td></tr>
+<tr><th id="802">802</th><td>ST_FUNC <em>void</em> dlclose(<em>void</em> *p)</td></tr>
+<tr><th id="803">803</th><td>{</td></tr>
+<tr><th id="804">804</th><td>}</td></tr>
+<tr><th id="805">805</th><td></td></tr>
+<tr><th id="806">806</th><td>ST_FUNC <em>const</em> <em>char</em> *dlerror(<em>void</em>)</td></tr>
+<tr><th id="807">807</th><td>{</td></tr>
+<tr><th id="808">808</th><td>    <b>return</b> <q>"error"</q>;</td></tr>
+<tr><th id="809">809</th><td>}</td></tr>
+<tr><th id="810">810</th><td></td></tr>
+<tr><th id="811">811</th><td><b>typedef</b> <b>struct</b> TCCSyms {</td></tr>
+<tr><th id="812">812</th><td>    <em>char</em> *str;</td></tr>
+<tr><th id="813">813</th><td>    <em>void</em> *ptr;</td></tr>
+<tr><th id="814">814</th><td>} TCCSyms;</td></tr>
+<tr><th id="815">815</th><td></td></tr>
+<tr><th id="816">816</th><td></td></tr>
+<tr><th id="817">817</th><td><i>/* add the symbol you want here if no dynamic linking is done */</i></td></tr>
+<tr><th id="818">818</th><td><em>static</em> TCCSyms tcc_syms[] = {</td></tr>
+<tr><th id="819">819</th><td><u>#if !defined(CONFIG_TCCBOOT)</u></td></tr>
+<tr><th id="820">820</th><td><u>#define TCCSYM(a) { #a, &amp;a, },</u></td></tr>
+<tr><th id="821">821</th><td>    TCCSYM(printf)</td></tr>
+<tr><th id="822">822</th><td>    TCCSYM(fprintf)</td></tr>
+<tr><th id="823">823</th><td>    TCCSYM(fopen)</td></tr>
+<tr><th id="824">824</th><td>    TCCSYM(fclose)</td></tr>
+<tr><th id="825">825</th><td><u>#undef TCCSYM</u></td></tr>
+<tr><th id="826">826</th><td><u>#endif</u></td></tr>
+<tr><th id="827">827</th><td>    { NULL, NULL },</td></tr>
+<tr><th id="828">828</th><td>};</td></tr>
+<tr><th id="829">829</th><td></td></tr>
+<tr><th id="830">830</th><td>ST_FUNC <em>void</em> *dlsym(<em>void</em> *handle, <em>const</em> <em>char</em> *symbol)</td></tr>
+<tr><th id="831">831</th><td>{</td></tr>
+<tr><th id="832">832</th><td>    TCCSyms *p;</td></tr>
+<tr><th id="833">833</th><td>    p = tcc_syms;</td></tr>
+<tr><th id="834">834</th><td>    <b>while</b> (p-&gt;str != NULL) {</td></tr>
+<tr><th id="835">835</th><td>        <b>if</b> (!strcmp(p-&gt;str, symbol))</td></tr>
+<tr><th id="836">836</th><td>            <b>return</b> p-&gt;ptr;</td></tr>
+<tr><th id="837">837</th><td>        p++;</td></tr>
+<tr><th id="838">838</th><td>    }</td></tr>
+<tr><th id="839">839</th><td>    <b>return</b> NULL;</td></tr>
+<tr><th id="840">840</th><td>}</td></tr>
+<tr><th id="841">841</th><td></td></tr>
+<tr><th id="842">842</th><td><u>#<span data-ppcond="794">endif</span> /* CONFIG_TCC_STATIC */</u></td></tr>
+<tr><th id="843">843</th><td><u>#<span data-ppcond="24">endif</span> /* TCC_IS_NATIVE */</u></td></tr>
+<tr><th id="844">844</th><td><i>/* ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="845">845</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2020-Apr-21</em> from project tcc revision <em>0.9.27</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

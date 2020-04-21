@@ -1,0 +1,10 @@
+<use f='tcc/tcc.h' l='824'/>
+<def f='tcc/tcc.h' l='838' ll='842'/>
+<size>3</size>
+<mbr r='filespec::type' o='0' t='char'/>
+<mbr r='filespec::alacarte' o='8' t='char'/>
+<mbr r='filespec::name' o='16' t='char [1]'/>
+<use f='tcc/libtcc.c' l='1603' c='args_parser_add_file'/>
+<size>3</size>
+<use f='tcc/tcc.c' l='321' c='main'/>
+<size>3</size>

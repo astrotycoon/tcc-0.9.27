@@ -1,0 +1,17 @@
+<dec f='tcc/elf.h' l='288' type='Elf32_Off'/>
+<dec f='tcc/elf.h' l='302' type='Elf64_Off'/>
+<offset>192</offset>
+<doc f='tcc/elf.h' l='288'>/* Section file offset */</doc>
+<doc f='tcc/elf.h' l='302'>/* Section file offset */</doc>
+<use f='tcc/tcctools.c' l='178' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='182' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='186' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tcctools.c' l='193' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tccelf.c' l='1969' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2319' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2337' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2342' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2431' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2724' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2728' u='r' c='tcc_load_dll'/>
+<use f='tcc/tccelf.c' l='2730' u='r' c='tcc_load_dll'/>

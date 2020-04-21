@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='827' type='int'/>
+<offset>11200</offset>
+<use f='tcc/libtcc.c' l='637' u='r' c='tcc_compile'/>
+<use f='tcc/libtcc.c' l='1079' u='r' c='tcc_add_file'/>
+<use f='tcc/libtcc.c' l='1097' u='w' c='tcc_add_file'/>
+<use f='tcc/libtcc.c' l='1700' u='r' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1907' u='w' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1909' u='w' c='tcc_parse_args'/>
+<use f='tcc/libtcc.c' l='1911' u='w' c='tcc_parse_args'/>
+<use f='tcc/tcc.c' l='322' u='w' c='main'/>
+<use f='tcc/tcc.c' l='335' u='w' c='main'/>

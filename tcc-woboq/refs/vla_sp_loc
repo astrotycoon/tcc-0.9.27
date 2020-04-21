@@ -1,0 +1,7 @@
+<def f='tcc/tccgen.c' l='48' type='int'/>
+<use f='tcc/tccgen.c' l='2737' u='r' c='vla_sp_restore'/>
+<use f='tcc/tccgen.c' l='5942' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='5992' u='w' c='block'/>
+<use f='tcc/tccgen.c' l='7026' u='w' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7063' u='w' c='gen_function'/>
+<doc f='tcc/tccgen.c' l='48'>/* Pointer to variable holding location to store stack pointer on the stack when modifying stack pointer */</doc>

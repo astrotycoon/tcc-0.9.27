@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='899' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='910' type='Elf64_Word'/>
+<offset>64</offset>
+<doc f='tcc/elf.h' l='899'>/* Offset in bytes to vernaux array */</doc>
+<doc f='tcc/elf.h' l='910'>/* Offset in bytes to vernaux array */</doc>

@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1454' type='int tcc_load_ldscript(TCCState * s1)'/>
+<use f='tcc/libtcc.c' l='1064' u='c' c='tcc_add_file_internal'/>
+<def f='tcc/tccelf.c' l='3019' ll='3057' type='int tcc_load_ldscript(TCCState * s1)'/>
+<doc f='tcc/tccelf.c' l='3017'>/* interpret a subset of GNU ldscripts to handle the dummy libc.so
+   files */</doc>

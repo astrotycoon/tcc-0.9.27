@@ -1,0 +1,12 @@
+<dec f='tcc/x86_64-gen.c' l='100'/>
+<use f='tcc/tcc.h' l='433' u='c'/>
+<doc f='tcc/x86_64-gen.c' l='99'>/* long double size and alignment, in bytes */</doc>
+<use f='tcc/tccgen.c' l='2369' u='c'/>
+<use f='tcc/tccgen.c' l='2399' u='c'/>
+<use f='tcc/tccgen.c' l='2689' u='c'/>
+<use f='tcc/tccgen.c' l='6575' u='c'/>
+<use f='tcc/tccgen.c' l='6577' u='c'/>
+<use f='tcc/tccpp.c' l='1175' u='c'/>
+<use f='tcc/tccpp.c' l='1181' u='c'/>
+<use f='tcc/tccpp.c' l='1186' u='c'/>
+<use f='tcc/tccpp.c' l='1261' u='c'/>

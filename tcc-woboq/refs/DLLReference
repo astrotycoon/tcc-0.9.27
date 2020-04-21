@@ -1,0 +1,6 @@
+<def f='tcc/tcc.h' l='527' ll='531'/>
+<use f='tcc/tcc.h' l='527'/>
+<size>24</size>
+<mbr r='DLLReference::level' o='0' t='int'/>
+<mbr r='DLLReference::handle' o='64' t='void *'/>
+<mbr r='DLLReference::name' o='128' t='char [1]'/>

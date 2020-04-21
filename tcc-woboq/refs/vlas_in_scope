@@ -1,0 +1,9 @@
+<def f='tcc/tccgen.c' l='46' type='int'/>
+<use f='tcc/tccgen.c' l='2736' u='r' c='vla_sp_restore'/>
+<use f='tcc/tccgen.c' l='2742' u='r' c='vla_sp_restore_root'/>
+<use f='tcc/tccgen.c' l='5942' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='5991' u='r' c='block'/>
+<use f='tcc/tccgen.c' l='5995' u='w' c='block'/>
+<use f='tcc/tccgen.c' l='7012' u='r' c='decl_initializer_alloc'/>
+<use f='tcc/tccgen.c' l='7027' u='w' c='decl_initializer_alloc'/>
+<doc f='tcc/tccgen.c' l='46'>/* number of VLAs that are currently in scope */</doc>

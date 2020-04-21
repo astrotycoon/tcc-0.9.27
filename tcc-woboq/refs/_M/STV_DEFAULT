@@ -1,0 +1,8 @@
+<dec f='tcc/elf.h' l='499'/>
+<doc f='tcc/elf.h' l='498'>/* Symbol visibility specification encoded in the st_other field.  */</doc>
+<use f='tcc/tccelf.c' l='515' u='c'/>
+<use f='tcc/tccelf.c' l='517' u='c'/>
+<use f='tcc/tccelf.c' l='1083' u='c'/>
+<use f='tcc/tccgen.c' l='912' u='c'/>
+<use f='tcc/tccgen.c' l='914' u='c'/>
+<use f='tcc/tccgen.c' l='3331' u='c'/>

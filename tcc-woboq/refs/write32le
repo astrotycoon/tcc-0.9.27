@@ -1,0 +1,6 @@
+<def f='tcc/tcc.h' l='1523' ll='1525' type='void write32le(unsigned char * p, uint32_t x)'/>
+<use f='tcc/tcc.h' l='1527' u='c' c='add32le'/>
+<use f='tcc/tcc.h' l='1533' u='c' c='write64le'/>
+<use f='tcc/tcc.h' l='1533' u='c' c='write64le'/>
+<use f='tcc/tccelf.c' l='1179' u='c' c='tcc_add_bcheck'/>
+<use f='tcc/tccelf.c' l='2196' u='c' c='elf_output_file'/>

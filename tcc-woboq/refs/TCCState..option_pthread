@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='833' type='int'/>
+<offset>11520</offset>
+<doc f='tcc/tcc.h' l='833'>/* -pthread option */</doc>
+<use f='tcc/libtcc.c' l='1757' u='w' c='tcc_parse_args'/>
+<use f='tcc/tcc.c' l='301' u='r' c='main'/>

@@ -1,0 +1,2 @@
+<dec f='tcc/elf.h' l='1261'/>
+<doc f='tcc/elf.h' l='1259'>/* Values for Elf64_Ehdr.e_flags.  */</doc>

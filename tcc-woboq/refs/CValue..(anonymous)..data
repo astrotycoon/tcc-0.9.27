@@ -1,0 +1,31 @@
+<dec f='tcc/tcc.h' l='431' type='const void *'/>
+<use f='tcc/i386-asm.c' l='387' u='r' c='parse_operand'/>
+<offset>64</offset>
+<use f='tcc/tccasm.c' l='99' u='r' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='702' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='744' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='762' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='803' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='832' u='r' c='asm_parse_directive'/>
+<use f='tcc/tccasm.c' l='931' u='r' c='tcc_assemble_internal'/>
+<use f='tcc/tccasm.c' l='1181' u='r' c='asm_instr'/>
+<use f='tcc/tccgen.c' l='3266' u='r' c='parse_mult_str'/>
+<use f='tcc/tccgen.c' l='6711' u='r' c='decl_initializer'/>
+<use f='tcc/tccgen.c' l='6715' u='r' c='decl_initializer'/>
+<use f='tcc/tccgen.c' l='6717' u='r' c='decl_initializer'/>
+<use f='tcc/tccpp.c' l='505' u='r' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='513' u='r' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='517' u='r' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='1164' u='r' c='tok_str_add2'/>
+<use f='tcc/tccpp.c' l='1248' u='w' c='TOK_GET'/>
+<use f='tcc/tccpp.c' l='1615' u='r' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1691' u='r' c='pragma_parse'/>
+<use f='tcc/tccpp.c' l='1942' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='1956' u='r' c='preprocess'/>
+<use f='tcc/tccpp.c' l='2227' u='w' c='parse_string'/>
+<use f='tcc/tccpp.c' l='2778' u='w' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2817' u='w' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3055' u='w' c='macro_arg_subst'/>
+<use f='tcc/tccpp.c' l='3326' u='w' c='macro_subst_tok'/>
+<use f='tcc/tccpp.c' l='3562' u='r' c='next'/>
+<use f='tcc/tccpp.c' l='3565' u='r' c='next'/>

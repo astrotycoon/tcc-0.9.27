@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1287' type='void **'/>
+<use f='tcc/libtcc.c' l='726' u='a' c='tcc_cleanup'/>
+<def f='tcc/tccgen.c' l='34' type='void **'/>
+<use f='tcc/tccgen.c' l='462' u='a' c='__sym_malloc'/>

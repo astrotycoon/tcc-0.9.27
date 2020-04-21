@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/bits/stab.def' l='148' type='194'/>
+<doc f='include/x86_64-linux-gnu/bits/stab.def' l='144'>/* Place holder for deleted include file.  Replaces a N_BINCL and everything
+   up to the corresponding N_EINCL.  The Sun linker generates these when
+   it finds multiple identical copies of the symbols from an include file.
+   This appears only in output from the Sun linker.  */</doc>

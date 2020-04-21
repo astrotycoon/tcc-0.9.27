@@ -1,0 +1,4 @@
+<dec f='tcc/elf.h' l='607'/>
+<doc f='tcc/elf.h' l='605'>/* Legal values for p_flags (segment flags).  */</doc>
+<use f='tcc/tccelf.c' l='1619' u='c'/>
+<use f='tcc/tccelf.c' l='1755' u='c'/>

@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='603' type='TokenString *'/>
+<offset>0</offset>
+<use f='tcc/tccgen.c' l='7117' u='r' c='gen_inline_functions'/>
+<use f='tcc/tccgen.c' l='7137' u='r' c='free_inline_functions'/>
+<use f='tcc/tccgen.c' l='7276' u='a' c='decl0'/>

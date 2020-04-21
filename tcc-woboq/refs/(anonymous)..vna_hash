@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='925' type='Elf32_Word'/>
+<dec f='tcc/elf.h' l='935' type='Elf64_Word'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='925'>/* Hash value of dependency name */</doc>
+<doc f='tcc/elf.h' l='935'>/* Hash value of dependency name */</doc>

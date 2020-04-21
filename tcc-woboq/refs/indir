@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='1354' type='void indir()'/>
+<def f='tcc/tccgen.c' l='4488' ll='4508' type='void indir()'/>
+<use f='tcc/tccgen.c' l='4740' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4880' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='4887' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5119' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5155' u='c' c='unary'/>
+<use f='tcc/tccgen.c' l='5649' u='c' c='expr_cond'/>
+<use f='tcc/tccgen.c' l='5757' u='c' c='gfunc_return'/>
+<doc f='tcc/tccgen.c' l='4487'>/* indirection with full error checking and bound check */</doc>

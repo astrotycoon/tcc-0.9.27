@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1304' type='int'/>
+<def f='tcc/tccgen.c' l='58' type='int'/>
+<use f='tcc/tccgen.c' l='5749' u='r' c='gfunc_return'/>
+<use f='tcc/tccgen.c' l='7090' u='w' c='gen_function'/>
+<doc f='tcc/tccgen.c' l='58'>/* true if current function is variadic (used by return instruction) */</doc>

@@ -1,0 +1,4 @@
+<dec f='tcc/elf.h' l='501'/>
+<use f='tcc/tccasm.c' l='685' u='c'/>
+<use f='tcc/tccelf.c' l='535' u='c'/>
+<use f='tcc/tccgen.c' l='3333' u='c'/>

@@ -1,0 +1,16 @@
+<dec f='tcc/tcc.h' l='746' type='FILE *'/>
+<offset>3968</offset>
+<doc f='tcc/tcc.h' l='745'>/* output file for preprocessing (-E) */</doc>
+<use f='tcc/libtcc.c' l='514' u='r' c='error1'/>
+<use f='tcc/tcc.c' l='313' u='w' c='main'/>
+<use f='tcc/tccpp.c' l='1421' u='r' c='maybe_run_test'/>
+<use f='tcc/tccpp.c' l='1421' u='r' c='maybe_run_test'/>
+<use f='tcc/tccpp.c' l='3641' u='w' c='tccpp_new'/>
+<use f='tcc/tccpp.c' l='3717' u='r' c='tok_print'/>
+<use f='tcc/tccpp.c' l='3739' u='r' c='pp_line'/>
+<use f='tcc/tccpp.c' l='3741' u='r' c='pp_line'/>
+<use f='tcc/tccpp.c' l='3743' u='r' c='pp_line'/>
+<use f='tcc/tccpp.c' l='3758' u='r' c='define_print'/>
+<use f='tcc/tccpp.c' l='3789' u='r' c='pp_debug_defines'/>
+<use f='tcc/tccpp.c' l='3896' u='r' c='tcc_preprocess'/>
+<use f='tcc/tccpp.c' l='3897' u='r' c='tcc_preprocess'/>

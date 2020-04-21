@@ -1,0 +1,6 @@
+<dec f='tcc/tcc.h' l='492' type='long long'/>
+<offset>0</offset>
+<doc f='tcc/tcc.h' l='492'>/* enum constant if IS_ENUM_VAL */</doc>
+<use f='tcc/tccgen.c' l='3828' u='w' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='3855' u='r' c='struct_decl'/>
+<use f='tcc/tccgen.c' l='5105' u='r' c='unary'/>

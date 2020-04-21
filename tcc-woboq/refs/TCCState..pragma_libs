@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='774' type='char **'/>
+<offset>9920</offset>
+<use f='tcc/libtcc.c' l='928' u='a' c='tcc_delete'/>
+<use f='tcc/libtcc.c' l='1173' u='r' c='tcc_add_pragma_libs'/>
+<use f='tcc/tccpp.c' l='1696' u='a' c='pragma_parse'/>

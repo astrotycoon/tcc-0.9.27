@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='1246' type='void define_push(int v, int macro_type, int * str, Sym * first_arg)'/>
+<use f='tcc/libtcc.c' l='768' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='769' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='770' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='771' u='c' c='tcc_new'/>
+<use f='tcc/libtcc.c' l='772' u='c' c='tcc_new'/>
+<def f='tcc/tccpp.c' l='1302' ll='1314' type='void define_push(int v, int macro_type, int * str, Sym * first_arg)'/>
+<use f='tcc/tccpp.c' l='1422' u='c' c='maybe_run_test'/>
+<use f='tcc/tccpp.c' l='1557' u='c' c='parse_define'/>
+<use f='tcc/tccpp.c' l='1620' u='c' c='pragma_parse'/>
+<doc f='tcc/tccpp.c' l='1301'>/* defines handling */</doc>

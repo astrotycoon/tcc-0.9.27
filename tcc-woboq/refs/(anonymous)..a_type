@@ -1,0 +1,5 @@
+<dec f='tcc/elf.h' l='959' type='uint32_t'/>
+<dec f='tcc/elf.h' l='971' type='uint64_t'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='959'>/* Entry type */</doc>
+<doc f='tcc/elf.h' l='971'>/* Entry type */</doc>

@@ -1,0 +1,10 @@
+<dec f='tcc/tcc.h' l='569' type='uint8_t *'/>
+<offset>64</offset>
+<use f='tcc/libtcc.c' l='585' u='w' c='tcc_open_bf'/>
+<use f='tcc/libtcc.c' l='586' u='r' c='tcc_open_bf'/>
+<use f='tcc/tccpp.c' l='593' u='r' c='handle_eob'/>
+<use f='tcc/tccpp.c' l='608' u='w' c='handle_eob'/>
+<use f='tcc/tccpp.c' l='609' u='r' c='handle_eob'/>
+<use f='tcc/tccpp.c' l='611' u='r' c='handle_eob'/>
+<use f='tcc/tccpp.c' l='614' u='r' c='handle_eob'/>
+<use f='tcc/tccpp.c' l='663' u='r' c='handle_stray1'/>

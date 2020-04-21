@@ -1,0 +1,15 @@
+<dec f='tcc/elf.h' l='79' type='unsigned char [16]'/>
+<dec f='tcc/elf.h' l='97' type='unsigned char [16]'/>
+<offset>0</offset>
+<doc f='tcc/elf.h' l='79'>/* Magic number and other info */</doc>
+<doc f='tcc/elf.h' l='97'>/* Magic number and other info */</doc>
+<use f='tcc/tcctools.c' l='171' u='r' c='tcc_tool_ar'/>
+<use f='tcc/tccelf.c' l='1883' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1884' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1885' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1886' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1887' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1888' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='1889' u='w' c='tcc_output_elf'/>
+<use f='tcc/tccelf.c' l='2306' u='r' c='tcc_load_object_file'/>
+<use f='tcc/tccelf.c' l='2705' u='r' c='tcc_load_dll'/>

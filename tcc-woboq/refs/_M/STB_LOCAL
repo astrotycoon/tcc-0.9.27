@@ -1,0 +1,19 @@
+<dec f='tcc/elf.h' l='457'/>
+<doc f='tcc/elf.h' l='455'>/* Legal values for ST_BIND subfield of st_info (symbol binding).  */</doc>
+<use f='tcc/tccelf.c' l='171' u='c'/>
+<use f='tcc/tccelf.c' l='375' u='c'/>
+<use f='tcc/tccelf.c' l='415' u='c'/>
+<use f='tcc/tccelf.c' l='501' u='c'/>
+<use f='tcc/tccelf.c' l='737' u='c'/>
+<use f='tcc/tccelf.c' l='750' u='c'/>
+<use f='tcc/tccelf.c' l='963' u='c'/>
+<use f='tcc/tccelf.c' l='1084' u='c'/>
+<use f='tcc/tccelf.c' l='1456' u='c'/>
+<use f='tcc/tccelf.c' l='1481' u='c'/>
+<use f='tcc/tccelf.c' l='1503' u='c'/>
+<use f='tcc/tccelf.c' l='2481' u='c'/>
+<use f='tcc/tccelf.c' l='2767' u='c'/>
+<use f='tcc/tccgen.c' l='161' u='c'/>
+<use f='tcc/tccgen.c' l='179' u='c'/>
+<use f='tcc/tccgen.c' l='306' u='c'/>
+<use f='tcc/tccgen.c' l='388' u='c'/>

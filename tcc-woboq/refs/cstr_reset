@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='1146' type='void cstr_reset(CString * cstr)'/>
+<def f='tcc/tccpp.c' l='385' ll='388' type='void cstr_reset(CString * cstr)'/>
+<use f='tcc/tccpp.c' l='478' u='c' c='get_tok_str'/>
+<use f='tcc/tccpp.c' l='1291' u='c' c='macro_is_equal'/>
+<use f='tcc/tccpp.c' l='2201' u='c' c='parse_string'/>
+<use f='tcc/tccpp.c' l='2719' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2744' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2759' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='2809' u='c' c='next_nomacro1'/>
+<use f='tcc/tccpp.c' l='3606' u='c' c='preprocess_start'/>
+<doc f='tcc/tccpp.c' l='384'>/* reset string to empty */</doc>

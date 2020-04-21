@@ -1,0 +1,4 @@
+<dec f='tcc/tcc.h' l='1495' type='void gtst_addr(int inv, int a)'/>
+<use f='tcc/tccgen.c' l='5838' u='c' c='gcase'/>
+<use f='tcc/tccgen.c' l='5860' u='c' c='gcase'/>
+<use f='tcc/tccgen.c' l='5870' u='c' c='gcase'/>

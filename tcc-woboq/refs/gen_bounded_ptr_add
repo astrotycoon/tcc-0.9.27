@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='1549' type='void gen_bounded_ptr_add()'/>
+<use f='tcc/tccgen.c' l='1146' u='c' c='gbound'/>

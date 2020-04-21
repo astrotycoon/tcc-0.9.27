@@ -1,0 +1,6 @@
+<def f='tcc/tccelf.c' l='1549' ll='1559'/>
+<use f='tcc/tccelf.c' l='1565' c='layout_sections'/>
+<use f='tcc/tccelf.c' l='1786' c='fill_dynamic'/>
+<use f='tcc/tccelf.c' l='2063' c='elf_output_file'/>
+<size>40</size>
+<doc f='tcc/tccelf.c' l='1548'>/* Info to be copied in dynamic section */</doc>

@@ -1,0 +1,2 @@
+<dec f='tcc/tcc.h' l='1544' type='void gen_addr32(int r, Sym * sym, int c)'/>
+<use f='tcc/i386-asm.c' l='489' u='c' c='gen_expr32'/>

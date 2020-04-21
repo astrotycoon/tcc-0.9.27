@@ -1,0 +1,13 @@
+<dec f='tcc/tcc.h' l='522' type='struct Section *'/>
+<offset>832</offset>
+<doc f='tcc/tcc.h' l='522'>/* hash table for symbols */</doc>
+<use f='tcc/tccelf.c' l='148' u='r' c='tccelf_begin_file'/>
+<use f='tcc/tccelf.c' l='148' u='w' c='tccelf_begin_file'/>
+<use f='tcc/tccelf.c' l='165' u='w' c='tccelf_end_file'/>
+<use f='tcc/tccelf.c' l='246' u='w' c='new_symtab'/>
+<use f='tcc/tccelf.c' l='362' u='r' c='rebuild_hash'/>
+<use f='tcc/tccelf.c' l='364' u='r' c='rebuild_hash'/>
+<use f='tcc/tccelf.c' l='365' u='r' c='rebuild_hash'/>
+<use f='tcc/tccelf.c' l='409' u='r' c='put_elf_sym'/>
+<use f='tcc/tccelf.c' l='442' u='r' c='find_elf_sym'/>
+<use f='tcc/tccelf.c' l='1791' u='r' c='fill_dynamic'/>

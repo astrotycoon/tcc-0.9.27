@@ -1,0 +1,8 @@
+<dec f='include/stdio.h' l='136' type='struct _IO_FILE *'/>
+<doc f='include/stdio.h' l='136'>/* Standard output stream.  */</doc>
+<use f='tcc/libtcc.c' l='514' macro='1' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='516' macro='1' u='r' c='error1'/>
+<use f='tcc/libtcc.c' l='517' macro='1' u='r' c='error1'/>
+<use f='tcc/tcc.c' l='253' macro='1' u='r' c='main'/>
+<use f='tcc/tcc.c' l='368' macro='1' u='r' c='main'/>
+<use f='tcc/tccpp.c' l='3641' macro='1' u='r' c='tccpp_new'/>

@@ -1,0 +1,5 @@
+<dec f='tcc/tcc.h' l='1311' type='void tcc_debug_end(TCCState * s1)'/>
+<use f='tcc/tccasm.c' l='977' u='c' c='tcc_assemble'/>
+<def f='tcc/tccgen.c' l='184' ll='191' type='void tcc_debug_end(TCCState * s1)'/>
+<use f='tcc/tccgen.c' l='279' u='c' c='tccgen_compile'/>
+<doc f='tcc/tccgen.c' l='183'>/* put end of translation unit info */</doc>

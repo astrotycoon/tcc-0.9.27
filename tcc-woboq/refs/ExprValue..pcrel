@@ -1,0 +1,11 @@
+<dec f='tcc/tcc.h' l='623' type='int'/>
+<use f='tcc/i386-asm.c' l='453' u='w' c='parse_operand'/>
+<use f='tcc/i386-asm.c' l='484' u='r' c='gen_expr32'/>
+<offset>128</offset>
+<use f='tcc/tccasm.c' l='120' u='w' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='124' u='w' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='150' u='w' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='161' u='w' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='174' u='w' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='178' u='w' c='asm_expr_unary'/>
+<use f='tcc/tccasm.c' l='299' u='w' c='asm_expr_sum'/>
